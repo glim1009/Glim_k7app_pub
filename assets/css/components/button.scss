@@ -1,0 +1,642 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+/* button */
+a, button {
+    &[disabled], &[aria-disabled=true], &.disabled {
+        pointer-events: none !important;
+        cursor: default !important;
+        text-decoration: none !important;
+
+        * {
+            text-decoration: none !important;
+        }
+    }
+
+    /* 버튼 공통 */
+    &[class^=btn] {
+        display: inline-block;
+        box-sizing: border-box;
+        vertical-align: top;
+
+        .text {
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+        }
+    }
+
+    &[class^=link-] {
+        -webkit-touch-callout: none;
+    }
+}
+
+// button size
+
+%btnLgSize {
+    height: 54px;
+    padding: 0 18px;
+  border: 1px solid variables.$colorBlack; // Todo. (태경) scss 컬러 적용 해줘요
+
+    .text {
+        @include mixins.font_size_xl('sb');
+
+        ~ [class^=ico] {
+            margin-left: 4px;
+        }
+    }
+
+    [class^=ico] {
+        ~ .text {
+            margin-left: 4px;
+        }
+    }
+}
+
+%btnMdSize {
+    height: 44px;
+    padding: 0 16px;
+
+    .text {
+        @include mixins.font_size_md('sb');
+
+        ~ [class^=ico] {
+            margin-left: 4px;
+        }
+    }
+
+    [class^=ico] {
+        ~ .text {
+            margin-left: 4px;
+        }
+    }
+}
+
+%btnSmSize {
+    height: 36px;
+    padding: 0 12px; // 임시로 지정한 값
+
+    .text {
+        @include mixins.font_size_sm('sb');
+
+        ~ [class^=ico] {
+            margin-left: 4px;
+        }
+    }
+
+    [class^=ico] {
+        /*@include mixins.device_mobile_ios {
+            margin-top: -1px;
+        }*/
+
+        ~ .text {
+            margin-left: 4px;
+        }
+    }
+}
+
+%btnXsSize {
+    min-width: 52px;
+    height: 30px;
+    padding: 0 10px;
+
+    .text {
+        @include mixins.font_size_sm('sb');
+
+        ~ [class^=ico] {
+            margin-left: 6px;
+        }
+    }
+
+    [class^=ico] {
+        ~ .text {
+            margin-left: 6px;
+        }
+    }
+}
+
+
+// button color
+
+%colorGreen {
+    @include mixins.justify_width(center, center, row, true);
+    border-radius: 8px;
+
+    background-color: variables.$colorGreen100;
+    border: 1px solid variables.$colorGreen100;
+
+    .text {
+        color: variables.$colorWhite;
+    }
+
+    &[disabled], &[aria-disabled=true], &.disabled {
+        opacity: 0.4;
+    }
+
+    &:active {
+        background-color: variables.$colorGreen120;
+        border: 1px solid variables.$colorGreen120;
+    }
+}
+
+%colorGray {
+    @include mixins.justify_width(center, center, row, true);
+    border-radius: 8px;
+
+    background-color: variables.$colorGray70;
+    border: 1px solid variables.$colorGray70;
+
+    .text {
+        color: variables.$colorWhite;
+    }
+
+    &[disabled], &[aria-disabled=true], &.disabled {
+        opacity: 0.4;
+    }
+
+    &:active {
+        background-color: variables.$colorGray70;
+        border: 1px solid variables.$colorGray70;
+    }
+}
+
+%colorLightGray {
+    @include mixins.justify_width(center, center, row, true);
+    border-radius: 8px;
+
+    background-color: variables.$colorGray20;
+    border: 1px solid variables.$colorGray20;
+
+    .text {
+        color: variables.$colorGray80;
+    }
+
+    &[disabled], &[aria-disabled=true], &.disabled {
+        opacity: 0.3;
+    }
+
+    &:active {
+        background-color: variables.$colorGray30;
+        border: 1px solid variables.$colorGray30;
+    }
+}
+
+%colorLineGreen {
+    @include mixins.justify_width(center, center, row, true);
+    border-radius: 8px;
+
+    background-color: variables.$colorWhite;
+    border: 1px solid variables.$colorGreen100;
+
+    .text {
+        color: variables.$colorGreen100;
+    }
+
+    &[disabled], &[aria-disabled=true], &.disabled {
+        opacity: 0.4;
+    }
+
+    &:active {
+        background-color: variables.$colorGreen10;
+    }
+}
+
+%colorLineOrange {
+    @include mixins.justify_width(center, center, row, true);
+    border-radius: 8px;
+
+    background-color: variables.$colorWhite;
+    border: 1px solid variables.$colorOrange100;
+
+    .text {
+        color: variables.$colorOrange100;
+    }
+
+    &[disabled], &[aria-disabled=true], &.disabled {
+        opacity: 0.4;
+    }
+
+    &:active {
+        background-color: variables.$colorOrange10;
+    }
+}
+
+%colorLineGray {
+    @include mixins.justify_width(center, center, row, true);
+    border-radius: 8px;
+
+    background-color: variables.$colorWhite;
+    border: 1px solid variables.$colorGray60;
+
+    .text {
+        color: variables.$colorGray80;
+    }
+
+    &[disabled], &[aria-disabled=true], &.disabled {
+        opacity: 0.4;
+    }
+
+    &:active {
+        background-color: variables.$colorGray10;
+    }
+}
+
+%colorLineLightGray {
+    @include mixins.justify_width(center, center, row, true);
+    border-radius: 8px;
+
+    background-color: variables.$colorWhite;
+    border: 1px solid variables.$colorGray40;
+
+    .text {
+        color: variables.$colorGray70;
+    }
+
+    &[disabled], &[aria-disabled=true], &.disabled {
+        opacity: 0.4;
+    }
+
+    &:active {
+        background-color: variables.$colorGray10;
+    }
+}
+
+
+a.btn, button.btn {
+
+    &-green {
+
+        &-lg {
+            @extend %colorGreen;
+             @extend %btnLgSize;
+         }
+
+        &-md {
+            @extend %colorGreen;
+            @extend %btnMdSize;
+        }
+
+        &-sm {
+            @extend %colorGreen;
+            @extend %btnSmSize;
+        }
+
+        &-xs {
+            @extend %colorGreen;
+            @extend %btnXsSize;
+        }
+    }
+
+    &-gray {
+
+        &-lg {
+            @extend %colorGray;
+             @extend %btnLgSize;
+         }
+
+        &-md {
+            @extend %colorGray;
+            @extend %btnMdSize;
+        }
+
+        &-sm {
+            @extend %colorGray;
+            @extend %btnSmSize;
+        }
+
+        &-xs {
+            @extend %colorGray;
+            @extend %btnXsSize;
+        }
+    }
+
+    &-light-gray {
+
+        &-lg {
+            @extend %colorLightGray;
+             @extend %btnLgSize;
+         }
+
+        &-md {
+            @extend %colorLightGray;
+            @extend %btnMdSize;
+        }
+
+        &-sm {
+            @extend %colorLightGray;
+            @extend %btnSmSize;
+        }
+
+        &-xs {
+            @extend %colorLightGray;
+            @extend %btnXsSize;
+        }
+    }
+
+    &-line-green {
+        @extend %colorLineGreen;
+
+        &-lg {
+            @extend %colorLineGreen;
+            @extend %btnLgSize;
+         }
+
+        &-md {
+            @extend %colorLineGreen;
+            @extend %btnMdSize;
+        }
+
+        &-sm {
+            @extend %colorLineGreen;
+            @extend %btnSmSize;
+        }
+
+        &-xs {
+            @extend %colorLineGreen;
+            @extend %btnXsSize;
+        }
+    }
+
+    &-line-orange {
+
+        &-lg {
+            @extend %colorLineOrange;
+             @extend %btnLgSize;
+         }
+
+        &-md {
+            @extend %colorLineOrange;
+            @extend %btnMdSize;
+        }
+
+        &-sm {
+            @extend %colorLineOrange;
+            @extend %btnSmSize;
+        }
+
+        &-xs {
+            @extend %colorLineOrange;
+            @extend %btnXsSize;
+        }
+    }
+
+    &-line-gray {
+
+        &-lg {
+            @extend %colorLineGray;
+             @extend %btnLgSize;
+         }
+
+        &-md {
+            @extend %colorLineGray;
+            @extend %btnMdSize;
+        }
+
+        &-sm {
+            @extend %colorLineGray;
+            @extend %btnSmSize;
+        }
+
+        &-xs {
+            @extend %colorLineGray;
+            @extend %btnXsSize;
+        }
+    }
+
+    &-line-light-gray {
+
+        &-lg {
+            @extend %colorLineLightGray;
+             @extend %btnLgSize;
+         }
+
+        &-md {
+            @extend %colorLineLightGray;
+            @extend %btnMdSize;
+        }
+
+        &-sm {
+            @extend %colorLineLightGray;
+            @extend %btnSmSize;
+        }
+
+        &-xs {
+            @extend %colorLineLightGray;
+            @extend %btnXsSize;
+        }
+    }
+}
+
+/* text button */
+.tbtn {
+    &-md {
+        display: inline-block;
+        vertical-align: top;
+
+        .text {
+            display: inline-block;
+            color: variables.$colorGray80;
+            @include mixins.font_size_xl(sb);
+            vertical-align: top;
+
+            ~ [class^=ico] {
+                margin: {
+                    top: 2px;
+                    left: 2px;
+                }
+            }
+        }
+
+        [class^=ico] {
+            ~ .text {
+                margin-left: 2px;
+            }
+        }
+    }
+
+    &-sm {
+        display: inline-block;
+        vertical-align: top;
+
+        .text {
+            display: inline-block;
+            color: variables.$colorGray80;
+            @include mixins.font_size_lg;
+            vertical-align: top;
+
+            ~ [class^=ico] {
+                margin: {
+                    top: 2px;
+                    left: 2px;
+                }
+            }
+        }
+
+        [class^=ico] {
+            ~ .text {
+                margin-left: 2px;
+            }
+        }
+    }
+
+    &-xs {
+        display: inline-block;
+        vertical-align: top;
+
+        .text {
+            display: inline-block;
+            color: variables.$colorGray80;
+            @include mixins.font_size_md(md);
+            vertical-align: top;
+
+            ~ [class^=ico] {
+                margin: {
+                    top: 1px;
+                    left: 2px;
+                }
+            }
+        }
+
+        [class^=ico] {
+            ~ .text {
+                margin-left: 2px;
+            }
+        }
+    }
+}
+
+/* text button gap */
+[class^=tbtn] {
+    + [class^=tbtn] {
+        margin-top: 10px;
+    }
+}
+
+/* btn-wrap */
+%btnFlexWrap {
+    @include mixins.justify_width(start, start);
+
+    [class^=btn] {
+        flex: 1;
+        width: 100%;
+        min-width: auto;
+
+        ~ [class^=btn] {
+            margin-left: 6px;
+        }
+    }
+}
+
+.btn-flex-wrap {
+    &-xl {
+        @extend %btnFlexWrap;
+        margin-top: 30px;
+    }
+    &-lg {
+        @extend %btnFlexWrap;
+        margin-top: 24px;
+    }
+    &-md {
+        @extend %btnFlexWrap;
+        margin-top: 16px;
+    }
+    &-sm {
+        @extend %btnFlexWrap;
+        margin-top: 10px;
+    }
+}
+
+%btnAutoWrap {
+    @include mixins.justify_width(start, start);
+
+    [class^=btn] {
+        flex: none;
+        width: auto;
+
+        ~ [class^=btn] {
+            margin-left: 6px;
+        }
+    }
+}
+
+.btn-auto-wrap {
+    &-xl {
+        @extend %btnAutoWrap;
+        margin-top: 30px;
+    }
+    &-lg {
+        @extend %btnAutoWrap;
+        margin-top: 24px;
+    }
+    &-md {
+        @extend %btnAutoWrap;
+        margin-top: 16px;
+    }
+    &-sm {
+        @extend %btnAutoWrap;
+        margin-top: 10px;
+    }
+}
+
+%btnAutoRightWrap {
+    @include mixins.justify_width(start, start);
+
+    [class^=btn], [class^=tbtn] {
+        flex: none;
+        width: auto;
+        margin-left: auto;
+
+        ~ [class^=btn], [class^=tbtn] {
+            margin-left: 6px;
+        }
+    }
+}
+
+.btn-auto-right-wrap {
+    &-xl {
+        @extend %btnAutoRightWrap;
+        margin-top: 30px;
+    }
+    &-lg {
+        @extend %btnAutoRightWrap;
+        margin-top: 24px;
+    }
+    &-md {
+        @extend %btnAutoRightWrap;
+        margin-top: 16px;
+    }
+    &-sm {
+        @extend %btnAutoRightWrap;
+        margin-top: 10px;
+    }
+}
+
+%btnAutoCenterWrap {
+    @include mixins.justify_width(start, start);
+
+    [class^=btn], [class^=tbtn] {
+        flex: none;
+        width: auto;
+        margin: 0 auto;
+    }
+}
+
+.btn-auto-center-wrap {
+    &-xl {
+        @extend %btnAutoCenterWrap;
+        margin-top: 30px;
+    }
+    &-lg {
+        @extend %btnAutoCenterWrap;
+        margin-top: 24px;
+    }
+    &-md {
+        @extend %btnAutoCenterWrap;
+        margin-top: 16px;
+    }
+    &-sm {
+        @extend %btnAutoCenterWrap;
+        margin-top: 10px;
+    }
+}

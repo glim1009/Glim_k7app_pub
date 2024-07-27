@@ -1,0 +1,23 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.cont-docker-wrap {
+  z-index: 31;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: variables.$colorWhite;
+  padding: 0 15px 16px;
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+  }
+}

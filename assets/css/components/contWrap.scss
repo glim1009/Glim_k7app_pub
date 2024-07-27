@@ -1,0 +1,67 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+/* s: contWrap */
+
+$contType: ('white', 'divier'); // white - bg-color: white, divider - 추후 추가 예정
+$contDirsSize: ('zero', 'md', 'lg'); // zero - top/bottom: 0, md - top: 20px/bottom: 30px, lg - top: 30px
+
+%contBoxCommon {
+  padding: {
+    top: 20px;
+    left: 15px;
+    bottom: 30px;
+    right: 15px;
+  }
+
+  @each $size in $contDirsSize {
+    @if($size == 'zero') {
+      &[class*=#{to-lower-case($size)}] {
+        padding-top: 0 !important;
+      }
+    }
+    @else if($size == 'lg') {
+      &[class*=#{to-lower-case($size)}] {
+        padding-top: 30px !important;
+      }
+    }
+  }
+
+  &[class*="bz-"] {
+    padding-bottom: 0 !important;
+  }
+
+  &.side-zero {
+    padding: {
+      left: 0;
+      right: 0;
+    }
+  }
+
+  &:last-child {
+    flex: 1 0 auto;
+  }
+}
+
+// cont style type
+@mixin cont_type_style($type: 'gray') {
+  @if ($type == 'gray') {
+    background-color: variables.$colorGray20;
+  }
+  @else if ($type == 'white') {
+    background-color: variables.$colorWhite;
+  }
+  @else if ($type == 'divider') { /*추후 추가 예정 */ }
+}
+
+[class^=cont][class$=wrap] {
+  @extend %contBoxCommon;
+  @include cont_type_style;
+}
+
+[class^=cont-white][class$=wrap] {
+  @extend %contBoxCommon;
+  @include cont_type_style('white');
+}
+/* e: contWrap */

@@ -1,0 +1,67 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+$listGapSize: ('xs': 4px, 'sm': 6px, 'md': 10px, 'lg': 16px, 'xl': 24px);
+$wrapSize: ('2xs': 6px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
+/* list */
+@each $size, $px in $wrapSize {
+  .rlist-#{$size}-wrap {
+    &:not(:first-child) {
+      margin-top: $px;
+    }
+  }
+}
+
+%rowListComm {
+  @include mixins.justify_width(stretch, start, column);
+  /* li 스타일 추가 */
+
+
+}
+
+@each $gap, $px in $listGapSize {
+  .row-#{$gap}-list {
+    @extend %rowListComm;
+    row-gap: $px;
+  }
+}
+
+.row-line-list {
+  @extend %rowListComm;
+
+  :deep(.item) {
+    border-bottom: 1px solid variables.$colorGray20;
+  }
+
+}
+
+/* list */
+
+/* 주문 정보 리스트 _ LTK 추가 */
+.row-lg-list {
+  @extend %rowListComm;
+
+  .order-info-item {
+
+    .flex-center-group {
+
+      .flex-left , .flex-right {
+
+        .stext-lg {
+          font-weight: variables.$fontWeightSemibold;
+          color: variables.$colorGray90;
+        }
+
+      }
+    }
+
+    ul {
+
+      .sub-info-item {
+        color: variables.$colorGray60;
+      }
+    }
+  }
+}
+

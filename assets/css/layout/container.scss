@@ -1,0 +1,29 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+
+/*  container */
+/* 터치 가능한 환경에서 적용한 CSS */
+
+.wrapper {
+  &:has(.docker-wrapper) {
+    .container-wrapper {
+      padding-bottom: calc(#{variables.$dockerHeight} + env(safe-area-inset-bottom));
+    }
+  }
+
+  &:has(.header-wrapper) {
+    .container-wrapper {
+      min-height: calc( 100dvh - #{variables.$headerHeight} );
+      //padding-top: calc(#{variables.$headerHeight} + env(safe-area-inset-top));
+    }
+  }
+}
+
+.container-wrapper {
+  min-height: 100dvh;
+  @include mixins.justify_width(stretch, start, column);
+}
+
+/* // container */

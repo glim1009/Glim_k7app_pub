@@ -1,0 +1,341 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+
+/* s: Typography */
+
+/* s: font 컬러 */
+.fc-black {
+  color: variables.$colorBlack !important;
+}
+.fc-spot {
+  color: variables.$colorGreen100 !important;
+}
+.fc-red{
+  color: variables.$colorRed100 !important;
+}
+.fc-orange {
+  color: variables.$colorOrange100 !important;
+}
+/* e: font 컬러 */
+
+
+/* s: font 굵기 */
+.fw-rgl {
+  font-weight: variables.$fontWeightRegular !important;
+}
+
+.fw-md {
+  font-weight: variables.$fontWeightMedium !important;
+}
+
+.fw-sb {
+  font-weight: variables.$fontWeightSemibold !important;
+}
+
+.fw-bold {
+  font-weight: variables.$fontWeightBold !important;
+}
+/* e: font 굵기 */
+
+
+/* s: text 정렬 */
+.ta-center {
+  text-align: center !important;
+}
+
+.ta-left {
+  text-align: left !important;
+}
+
+.ta-right {
+  text-align: right !important;
+}
+
+/* e: text 정렬 */
+
+/* s : text 줄바꿈 */
+.ellipsis {
+  @include mixins.ellipsis(variables.$fontSizeSmLineHeight);
+  font-weight: inherit;
+}
+
+.multi-ellipsis {
+  @include mixins.multi_ellipsis(variables.$fontSizeSmLineHeight);
+  font-weight: inherit;
+}
+/* e : text 줄바꿈 */
+
+
+/* s: stext */
+%textBreak {
+  @include mixins.word_break;
+  color: variables.$colorGray80;
+}
+
+.stext-sm { // 12px
+  @extend %textBreak;
+  @include mixins.font_size_sm;
+
+}
+
+.stext { // 13px
+  @extend %textBreak;
+  @include mixins.font_size_md;
+}
+
+.stext-lg { // 14px
+  @extend %textBreak;
+  @include mixins.font_size_lg('lt');
+}
+
+.stext-xl { // 18px
+  @extend %textBreak;
+  @include mixins.font_size_3xl;
+}
+
+/* e: stext */
+
+
+/* s: bar-group */
+%barStyle {
+  display: inline-block;
+  @include mixins.font_size_lg('lt');
+  color: variables.$colorGray90;
+  vertical-align: top;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    margin: 5px 10px 0;
+    background-color: variables.$colorGray30;
+    vertical-align: top;
+  }
+
+  &:last-child {
+    &:after {
+      content: initial;
+    }
+  }
+}
+
+.bar-group {
+  @include mixins.justify_width(center, start, row, true);
+  flex-wrap: wrap;
+  margin-top: 10px;
+
+  .bar-text {
+    @extend %barStyle;
+
+    &-sm {
+      @extend %barStyle;
+      @include mixins.font_size_md;
+    }
+
+    &-xs {
+      @extend %barStyle;
+      @include mixins.font_size_sm;
+
+      &:after {
+        margin: 3px 10px 0;
+      }
+    }
+  }
+}
+
+/* e: bar-group */
+
+
+/* s: goods */
+%goodsComm{
+  @include mixins.justify_width(start, center, row, true);
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+
+  .val {
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    font-weight: inherit;
+    color: inherit;
+  }
+
+  .unit {
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    font-weight: inherit;
+    color: inherit;
+  }
+
+  &.origin {
+    color: variables.$colorGray60;
+    text-decoration: line-through;
+  }
+
+  &.percent {
+    color: variables.$colorGreen100;
+    font-weight: variables.$fontWeightSemibold;
+  }
+}
+.goods-sm { // 12px
+  @extend %goodsComm;
+  @include mixins.font_size_sm;
+}
+
+.goods-md { // 13px
+  @extend %goodsComm;
+  @include mixins.font_size_md;
+}
+
+.goods-lg { // 14px
+  @extend %goodsComm;
+  @include mixins.font_size_lg(lt);
+}
+
+/* 라벨 + 재화/수량 [ex. 월 4,000원] */
+/*.goods-group {
+  @include mixins.justify_width(center, center, row, true);
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  font-weight: inherit;
+  @include mixins.font_size_md;
+
+  .label {
+    margin-right: 3px;
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    font-weight: inherit;
+  }
+
+  // 12px
+  &.size-xs {
+    @include mixins.font_size_xs('md');
+
+    .label {
+      margin-right: 2px;
+      font-weight: variables.$fontWeightRegular;
+    }
+  }
+
+  // 13px
+  &.size-sm {
+    @include mixins.font_size_sm;
+  }
+
+  // 15px
+  &.size-lg {
+    @include mixins.font_size_lg('sb');
+  }
+
+  // 16px
+  &.size-xl {
+    @include mixins.font_size_xl;
+  }
+}*/
+/* e: goods */
+
+/* s: text list */
+.dot-text, .dot-text-green, .dot-text-sm, .dot-text-sm-green, .info-text, .info-text-sm {
+  position: relative;
+  display: block;
+  @include mixins.word_break;
+}
+
+// dot text
+%dotText {
+  padding: {
+    left: 8px;
+  }
+
+  &:before {
+    display: block;
+    position: absolute;
+    left: 0;
+    content: '';
+    top: 8px;
+    width: 2px;
+    height: 2px;
+    border-radius: 2px;
+  }
+}
+
+.dot-text {
+  @extend %dotText;
+  color: variables.$colorGray70;
+  @include mixins.font_size_md;
+
+  &:before {
+    background-color: variables.$colorGray70;
+  }
+}
+.dot-text-green {
+  @extend %dotText;
+  color: variables.$colorGreen100;
+  @include mixins.font_size_md;
+
+  &:before {
+    background-color: variables.$colorGreen100;
+  }
+}
+
+.dot-text-sm {
+  @extend %dotText;
+  color: variables.$colorGray70;
+  @include mixins.font_size_sm;
+
+  &:before {
+    background-color: variables.$colorGray70;
+  }
+}
+
+.dot-text-sm-green {
+  @extend %dotText;
+  color: variables.$colorGreen100;
+  @include mixins.font_size_sm;
+
+  &:before {
+    background-color: variables.$colorGreen100;
+  }
+}
+
+/*%dashText {
+    padding: {
+        left: 8px;
+    }
+
+    &:before {
+        display: block;
+        position: absolute;
+        left: 0;
+        content: '-';
+        top: 0;
+    }
+}
+
+.decimal-text {
+    padding-left: 15px;
+    font-weight: variables.$fontWeightRegular;
+    color: variables.$colorBlack;
+    text-indent: -15px;
+}*/
+
+// text-list
+.info-text-list{
+  [class^=dot-] {
+    ~ [class^=dot-] {
+      margin-top: 6px;
+    }
+  }
+}
+
+/* e: text-list */
+
+
+/* e: Typography */

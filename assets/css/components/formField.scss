@@ -1,0 +1,34 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.form-field {
+  .form-title {
+    .ftitle {
+      @include mixins.font_size_lg('heading');
+    }
+
+    .stext-sm {
+      margin-top: 6px;
+    }
+  }
+
+  .form-cont {
+    @include mixins.justify_width(stretch, start, column);
+    margin-top: 10px;
+    row-gap: 10px;
+
+    .form-input-group {
+      @include mixins.justify_width(stretch, start, column);
+      row-gap: 6px;
+
+      .input-guide {
+        margin-top: -2px;
+      }
+    }
+
+    [class^=btn-auto-wrap] {
+      margin-top: 0;
+    }
+  }
+}

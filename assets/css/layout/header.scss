@@ -1,0 +1,81 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+/*  header */
+.header-wrapper {
+  position: relative;
+  z-index: 27;
+  padding-top: variables.$headerHeight;
+
+  .header-box {
+    @include mixins.justify_width(center);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: variables.$headerHeight;
+    padding: {
+      top: 16px;
+      right: 15px;
+      left: 20px;
+      bottom: 16px;
+    }
+    background: variables.$colorWhite;
+
+    .header-left {
+      width: 100%;
+      overflow: hidden;
+      flex: 1;
+      @include mixins.justify_width(center);
+
+      .btn-header-back {
+        flex-shrink: 0;
+        margin-right: 14px;
+      }
+
+      .ptitle {
+        @include mixins.font_size_3xl(sb);
+        @include mixins.ellipsis(false);
+        color: variables.$colorBlack;
+        padding-right: 5px;
+      }
+    }
+
+    .header-right {
+      margin-left: auto;
+      @include mixins.justify_width(center);
+
+      .btn-header-util {
+        padding: 0 5px;
+
+        &.cart {
+          position: relative;
+
+          .count {
+            overflow: hidden;
+            position: absolute;
+            z-index: 2;
+            top: -4px;
+            left: 20px;
+            display: inline-block;
+            padding: 2px 6px 3px;
+            border-radius: 9px;
+            background-color: #FF6C00;
+            box-shadow: 0 2px 6px 0 rgba(255, 108, 0, .2);
+            @include mixins.font_size_2xs;
+            color: variables.$colorWhite;
+            vertical-align: top;
+          }
+        }
+
+        ~ .btn-header-util {
+          margin-left: 4px;
+        }
+      }
+
+    }
+  }
+}
+
+/* // header */

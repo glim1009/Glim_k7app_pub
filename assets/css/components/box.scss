@@ -1,0 +1,50 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+/* s: box */
+
+%ColorBoxComm {
+    border-radius: 10px;
+
+    &.box-scroll {
+        overflow-y: auto;
+        max-height: 134px;
+    }
+
+    // size
+    &[class$=-xs-box] {
+        padding: 10px;
+        border-radius: 8px;
+    }
+    &[class$=-sm-box] {
+        padding: 12px;
+    }
+    &[class$=-md-box] {
+        padding: 16px;
+    }
+    &[class$=-lg-box] {
+        padding: 20px;
+        border-radius: 15px;
+    }
+}
+
+
+// bg color
+[class^=line-light-gray][class$=box] {
+    @extend %ColorBoxComm;
+    background: variables.$colorWhite;
+    border: 1px solid variables.$colorGray30;
+}
+
+[class^=light-gray][class$=box] {
+    @extend %ColorBoxComm;
+    background: variables.$colorGray20;
+}
+
+[class^=white][class$=box] {
+    @extend %ColorBoxComm;
+    background: variables.$colorWhite;
+}
+
+/* e: box */

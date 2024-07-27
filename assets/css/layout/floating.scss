@@ -1,0 +1,58 @@
+@use 'sass:map';
+@use '../components/keyframes';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+/* S: floating */
+.floating-wrapper {
+  position: fixed;
+  z-index: 20;
+  right: 10px;
+  bottom: calc(#{variables.$dockerHeight + 24px} + env(safe-area-inset-bottom));
+
+  .btn-go-top {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(variables.$colorWhite, 0.95);
+    border: 1px solid rgba(variables.$colorBlack, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(variables.$colorBlack, 0.1);
+
+    .ico-top {
+      @include mixins.prefix(transform, translateY(0));
+    }
+  }
+}
+
+.floating-enter-active, .floating-leave-active {
+  transition: opacity 0.5s variables.$transEaseBounceBack;
+
+  .ico-top {
+    @include mixins.prefix(animation, goTopIcoActive 0.35s 0.25s variables.$transEaseBounceBack forwards);
+    @include mixins.prefix(transform, translateY(0));
+  }
+}
+
+.floating-enter-from, .floating-leave-to {
+  opacity: 0;
+}
+
+.floating-enter-to {
+
+  .ico-top {
+    opacity: 0;
+    @include mixins.prefix(transform, translateY(0));
+  }
+}
+
+
+@keyframes goTopIcoActive {
+  0% {
+    opacity: 0;
+    @include mixins.prefix(transform, translateY(12px));
+  }
+  100% {
+    opacity: 1;
+    @include mixins.prefix(transform, translateY(0));
+  }
+}

@@ -1,0 +1,354 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+@use '../base/reset';
+
+// row 타입, col 타입
+%tblComm {
+    border-collapse: separate;
+
+    thead {
+        tr th {
+            padding: {
+                top: 11px;
+                bottom: 12px;
+            }
+            background-color: variables.$colorGray20;
+        }
+    }
+
+    tr {
+        th, td {
+            @include mixins.font_size_md;
+            vertical-align: middle;
+            padding: {
+                top: 14px;
+                bottom: 14px;
+            }
+
+            &.va-top {
+                vertical-align: top;
+            }
+        }
+
+        th {
+            font-weight: variables.$fontWeightSemibold;
+            color: variables.$colorGray90;
+        }
+
+        td {
+            background-color: variables.$colorWhite;
+            color: variables.$colorGray90;
+        }
+    }
+}
+
+// info 타입
+%tblInfo {
+    tr {
+        th, td {
+            text-align: left;
+            vertical-align: top;
+            word-break: break-all;
+            color: variables.$colorBlack;
+        }
+
+        th {
+            font-weight: variables.$fontWeightSemibold;
+            color: variables.$colorGray90;
+            @include mixins.word_break;
+        }
+
+        td {
+            font-weight: variables.$fontWeightRegular;
+            color: variables.$colorGray80;
+        }
+
+        ~ tr {
+            th {
+                padding: {
+                    top: 10px;
+                    right: 16px;
+                }
+            }
+
+            td {
+                padding-top: 10px;
+            }
+        }
+    }
+
+    &.info-right {
+        tr {
+            td {
+                .bar-group {
+                    justify-content: flex-end;
+                }
+
+            }
+        }
+    }
+}
+
+.tbl-row-wrap {
+
+    border: {
+        top: 1px solid variables.$colorGray40;
+        bottom: 1px solid variables.$colorGray30;
+    }
+
+    .tbl-row {
+        @extend %tblComm;
+
+        tr {
+            th, td {
+                text-align: left;
+                padding-left: 14px;
+            }
+
+            td {
+                ~ td {
+                    border-left: 1px solid variables.$colorGray30;
+                }
+            }
+
+            ~ tr {
+                th, td {
+                    border-top: 1px solid variables.$colorGray30;
+                }
+            }
+        }
+    }
+}
+
+.tbl-col-wrap {
+
+    border: {
+        top: 1px solid variables.$colorGray40;
+        bottom: 1px solid variables.$colorGray30;
+    }
+
+    .tbl-col {
+        @extend %tblComm;
+
+        tr {
+            th, td {
+                text-align: center;
+                padding: {
+                    left: 12px;
+                    right: 12px;
+                }
+            }
+
+            ~ tr {
+                td {
+                    border-top: 1px solid variables.$colorGray30;
+                }
+            }
+
+            th {
+                ~ th {
+                    border-left: 1px solid variables.$colorGray30;
+                }
+            }
+
+            td {
+                ~ td {
+                    border-left: 1px solid variables.$colorGray30;
+                }
+            }
+        }
+    }
+}
+
+.tbl-info-wrap {
+    .tbl-info-md {
+        @extend %tblInfo;
+
+        tr {
+            ~ tr {
+                th {
+                    padding: {
+                        top: 10px;
+                        right: 16px;
+                    }
+                }
+
+                td {
+                    padding-top: 10px;
+                }
+            }
+
+            th, td {
+                &.va-mid {
+                    vertical-align: middle;
+                }
+            }
+
+            th {
+                @include mixins.font_size_md(sb);
+            }
+
+            td {
+                @include mixins.font_size_md;
+
+                > span {
+                    font-size: inherit;
+                    font-weight: inherit;
+                }
+            }
+
+        }
+
+        &.info-right {
+
+            tr td {
+                text-align: right;
+            }
+        }
+    }
+
+    .tbl-info-sm { // 위계형
+        @extend %tblInfo;
+
+        thead {
+            tr {
+                th, td {
+                    @include mixins.font_size_md(sb);
+                    color: variables.$colorGray90;
+                }
+            }
+        }
+        tbody {
+            tr {
+                th, td {
+                    @include mixins.font_size_md;
+                    color: variables.$colorGray80;
+                }
+
+                th {
+                    padding: {
+                        top: 6px;
+                        right: 0;
+                    }
+                }
+
+                td {
+                    padding-top: 6px;
+                }
+            }
+        }
+        tr {
+            th, td {
+                &.va-mid {
+                    vertical-align: middle;
+                }
+            }
+
+            th {
+                @include mixins.word_break;
+            }
+            td {
+                text-align: right;
+            }
+        }
+
+        &.info-right {
+
+            tr {
+                td {
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    .tbl-info-xs {
+        @extend %tblInfo;
+
+        tr {
+            ~ tr {
+                th {
+                    padding: {
+                        top: 4px;
+                        right: 10px
+                    }
+                }
+
+                td {
+                    padding-top: 4px;
+                }
+            }
+
+            th, td {
+                &.va-mid {
+                    vertical-align: middle;
+                }
+            }
+
+            th {
+                @include mixins.font_size_sm(sb);
+            }
+
+            td {
+                @include mixins.font_size_sm;
+            }
+        }
+
+        &.info-right {
+
+            tr {
+                td {
+                    text-align: right;
+                }
+            }
+        }
+    }
+    /*
+    .price-info-footer {
+        margin-top: variables.$contGapSm;
+    }
+
+    &.line-top {
+        padding-top: 20px;
+        border-top: 1px solid variables.$colorGray50;
+    }
+
+    ~ .box-fold-wrap {
+        margin-top: 20px;
+    }
+
+    ~ .info-text-list {
+        margin-top: 20px;
+    }*/
+}
+
+/*.tbl-no-line-wrap {
+    border-bottom: 1px solid variables.$colorGray50;
+
+    .tbl-col {
+        @extend %tblComm;
+
+        th, td {
+            text-align: center;
+            border-top: 1px solid variables.$colorGray50;
+        }
+
+        tfoot {
+            td {
+                border: {
+                    top: 1px solid variables.$colorBlack;
+                    bottom: 1px solid variables.$colorBlack;
+                };
+                @include mixins.font_size_xl;
+            }
+        }
+    }
+}*/
+
+// tbl-info 여백
+.tbl-info-wrap {
+    ~ .tbl-info-wrap {
+        margin-top: 16px;
+    }
+}

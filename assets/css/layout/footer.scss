@@ -1,0 +1,211 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+/*  footer */
+.footer-wrapper {
+    position: relative;
+    //margin-top: -71px;
+    // padding: 40px 20px 130px;
+    padding: 40px 20px 60px;
+    border-top: 1px solid variables.$colorGray50;
+
+    .footer-ci {
+        width: 98px;
+        height: 21px;
+
+        .link-ci {
+            display: block;
+        }
+    }
+
+    .footer-info-wrap {
+        margin-top: 30px;
+
+        .info-row {
+            @include mixins.font_size_sm;
+            color: variables.$colorBlack;
+
+            + .info-row {
+                margin-top: 2px;
+            }
+
+            &.cs-contact {
+                @include mixins.font_size_lg;
+                color: variables.$colorBlack;
+
+                a {
+                    display: inline-block;
+                    @include mixins.font_size_lg;
+                    color: variables.$colorBlack;
+                    vertical-align: top;
+                }
+
+                .cs-link-udl {
+                    text-decoration: underline;
+                    margin-top: -1px;
+                }
+            }
+        }
+    }
+
+    .fold-wrap {
+        margin-top: 30px;
+
+        .fold-item {
+            border-bottom: 0;
+
+            .fold-header {
+                display: inline-block;
+                @include mixins.font_size_lg;
+                padding: {
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 25px;
+                }
+                position: relative;
+                vertical-align: top;
+
+                .btn-fold {
+                    padding-right: 0;
+
+                    &:after {
+                        content: '';
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        vertical-align: top;
+                        @include mixins.ratio_images('../images/common/comm_ico_fold_arr_black');
+                        @include mixins.prefix(transform, rotateZ(0));
+                        @include mixins.prefix(transition, transform 0.15s variables.$transEaseBounceBack);
+                    }
+                }
+            }
+
+            .fold-content {
+                margin-top: 10px;
+                padding: 0;
+                border-top: 0;
+                background-color: transparent;
+
+                .business-info {
+                    @include mixins.font_size_sm('body', 22px);
+                    color: variables.$colorBlack;
+                    @include mixins.word_break;
+
+                    .link-text-udl {
+                        .text {
+                            line-height: variables.$fontSize4xl;
+                        }
+                    }
+                }
+
+                .link-text-udl {
+                    @include mixins.font_size_xs('md');
+                    color: variables.$colorBlack;
+                }
+
+                .footer-desc {
+                    @include mixins.font_size_sm;
+                    color: variables.$colorBlack;
+                    margin-top: 10px;
+                }
+            }
+
+            &.expanded {
+                .btn-fold:after {
+                    @include mixins.prefix(transform, rotate(180deg));
+                }
+            }
+        }
+    }
+
+    .cs-info-list {
+        margin: {
+            top: 30px;
+            bottom: -2px;
+        }
+
+        .cs-info-item {
+            display: inline-block;
+            margin: {
+                right: 20px;
+                bottom: 2px;
+            }
+            vertical-align: top;
+
+            .cs-link, .cs-link-udl {
+                display: inline-block;
+                @include mixins.font_size_md('md', variables.$fontSizeLgLineHeight);
+                vertical-align: top;
+            }
+
+            .cs-link-udl {
+                text-decoration: underline;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+
+    %snsLinkStyle {
+        display: inline-block;
+        width: 38px;
+        height: 38px;
+        border-radius: 38px;
+    }
+
+    .sns-link-list {
+        font-size: 0;
+        margin: {
+            top: 30px;
+            bottom: -8px;
+        }
+
+        .sns-link-item {
+            display: inline-block;
+            vertical-align: top;
+            margin-bottom: 8px;
+
+            .sns-link-youtube {
+                @extend %snsLinkStyle;
+                @include mixins.ratio_images('../images/common/comm_footer_sns_youtube', 18px 14px, center, #F0F0F0);
+            }
+
+            .sns-link-ntv {
+                @extend %snsLinkStyle;
+                @include mixins.ratio_images('../images/common/comm_footer_sns_naver_tv', 20px, center, #F0F0F0);
+            }
+
+            .sns-link-fb {
+                @extend %snsLinkStyle;
+                @include mixins.ratio_images('../images/common/comm_footer_sns_fb', 20px, center, #F0F0F0);
+            }
+
+            .sns-link-insta {
+                @extend %snsLinkStyle;
+                @include mixins.ratio_images('../images/common/comm_footer_sns_insta', 20px, center, #F0F0F0);
+            }
+
+            .sns-link-kakao {
+                @extend %snsLinkStyle;
+                @include mixins.ratio_images('../images/common/comm_footer_sns_kakao', 20px, center, #F0F0F0);
+            }
+
+            &:not(:last-child) {
+                margin-right: 14px;
+            }
+        }
+    }
+
+    .copyright {
+        margin-top: 20px;
+        @include mixins.font_size_2xs;
+        color: variables.$colorGray90;
+    }
+}
+
+/* // footer */

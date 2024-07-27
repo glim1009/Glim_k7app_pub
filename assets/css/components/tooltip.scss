@@ -1,0 +1,27 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.tooltip-group {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  line-height: 1;
+
+  .btn-tooltip {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 1;
+  }
+
+  .tooltip-box {
+    z-index: 30;
+    position: absolute;
+    top: calc( 100% + 10px );
+    padding: 12px;
+    background: variables.$colorWhite;
+    border: 1px solid variables.$colorGray70;
+    border-radius: 10px;
+    @include mixins.font_size_sm;
+  }
+}

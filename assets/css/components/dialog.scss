@@ -1,0 +1,151 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+@use '../components/keyframes';
+
+%dialogDefault {
+  position: fixed;
+  display: none;
+  /*display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;*/
+  overflow: hidden;
+  background-color: variables.$colorWhite;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 15px;
+
+  &[data-state=open] {
+    @include mixins.justify_width(normal, start, column);
+  }
+
+  .dialog-header {
+    position: relative;
+    padding: 22px 58px 22px 20px;
+
+    .dialog-title {
+      @include mixins.font_size_2xl('sb');
+      color: variables.$colorBlack;
+    }
+
+    .dialog-close {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+    }
+  }
+
+  .dialog-body {
+    flex: 1 1 auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    .dialog-inner {
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+  }
+
+  .dialog-footer {
+    position: relative;
+    padding: 1px 15px 16px;
+    background-color: variables.$colorWhite;
+
+    &:before {
+      content: '';
+      height: 40px;
+      left: 0;
+      right: 0;
+      position: absolute;
+      top: -39px;
+      background: linear-gradient(rgba(variables.$colorWhite, 0), rgba(variables.$colorWhite, 1));
+    }
+
+    .dialog-btn-wrap {
+      @include mixins.justify_width(center);
+
+      [class^=btn] {
+        width: 100%;
+
+        ~ [class^=btn] {
+          margin-left: 6px;
+        }
+      }
+    }
+  }
+
+  .dialog-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.ui-dialog {
+  @extend %dialogDefault;
+  /*max-width: 335px;*/
+  max-height: 90dvh;
+  width: calc(100% - 40px);
+  margin: 0 20px;
+  left: 50%;
+  top: 50%;
+  @include mixins.prefix(transform, translate(calc(-50% - 20px), -50%));
+
+  .dialog-footer {
+    padding-top: 16px;
+
+    &:before {
+      content: initial;
+    }
+  }
+}
+
+.ui-dialog-full {
+  @extend %dialogDefault;
+  border-radius: 0;
+  height: 100dvh;
+  left: 0;
+  top: 0;
+
+  .dialog-header {
+    padding: {
+      top: 16px;
+      bottom: 17px;
+    }
+
+    .dialog-title {
+      @include mixins.font_size_3xl('sb');
+    }
+  }
+
+  .dialog-body {
+    .dialog-inner {
+      min-height: 100%;
+      @include mixins.justify_width(stretch, start, column);
+    }
+  }
+
+  .dialog-footer {
+    padding-bottom: calc(16px + env(safe-area-inset-bottom));
+  }
+}
+
+.ui-dialog-bottom {
+  @extend %dialogDefault;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  max-height: calc(100dvh - 100px);
+  bottom: 0;
+  margin-bottom: calc( 100vh / 5 * -1 );
+  opacity: 1;
+
+  .dialog-footer {
+    padding-bottom: calc(16px + env(safe-area-inset-bottom));
+  }
+
+  &[data-state=open] {
+    @include mixins.prefix(animation, bottomPopAnimation .2s variables.$easeInOutQuad forwards);
+  }
+}
+
+/* e: custom popup */

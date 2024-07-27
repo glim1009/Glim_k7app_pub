@@ -1,0 +1,24 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+
+$groupAlign: ('start', 'center', 'end');
+
+@each $align in $groupAlign {
+  .flex-#{$align}-group {
+    @include mixins.justify_width(#{$align});
+    flex-wrap: nowrap;
+    overflow-wrap: anywhere;
+
+    :deep(.flex-left) {
+      flex-wrap: wrap;
+      @include mixins.justify_width(#{$align}, start);
+    }
+    :deep(.flex-right) {
+      flex-wrap: wrap;
+      flex: 1 0 auto;
+      @include mixins.justify_width(#{$align}, end);
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+/* s : keyframes */
+@keyframes bottomPopAnimation {
+  0% {
+    margin-bottom: calc( 100vh / 5 * -1 );
+  }
+  100% {
+    margin-bottom: 0;
+  }
+}
+
+@keyframes scaleAnimation {
+  0% {
+    @include mixins.prefix(transform, scale(0.85));
+  }
+  100% {
+    @include mixins.prefix(transform, scale(1));
+  }
+}
+
+/* e: keyframes */

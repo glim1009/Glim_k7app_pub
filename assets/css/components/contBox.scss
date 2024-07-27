@@ -1,0 +1,19 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+
+/* s: contBox */
+// size - top, bottom 중 size별 지정
+
+$contSize: ('xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
+
+@each $size, $px in $contSize {
+  .cont-#{$size}-box {
+    &:not(:first-child) {
+      margin-top: $px;
+    }
+  }
+}
+
+/* e: contBox */

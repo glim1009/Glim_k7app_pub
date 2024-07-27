@@ -1,0 +1,97 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+// ctitle
+%ctitleCommon {
+  span {
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+  }
+}
+
+.ctitle-xs { // 14px
+  @extend %ctitleCommon;
+  @include mixins.font_size_lg(sb);
+  color: variables.$colorBlack;
+}
+
+.ctitle-sm { // 15px
+  @extend %ctitleCommon;
+  @include mixins.font_size_xl(sb);
+  color: variables.$colorBlack;
+}
+
+.ctitle { // 16px
+  @extend %ctitleCommon;
+  @include mixins.font_size_2xl(sb);
+  color: variables.$colorBlack;
+}
+
+.ctitle-lg { // 18px
+  @extend %ctitleCommon;
+  @include mixins.font_size_3xl(sb);
+  color: variables.$colorBlack;
+}
+
+.ctitle-xl { // 22px
+  @extend %ctitleCommon;
+  @include mixins.font_size_4xl(sb);
+  color: variables.$colorBlack;
+}
+
+// ctitle-wrap size
+
+%ctitleWrapZero {
+  margin-bottom: 0!important;
+}
+
+%ctitleWrapSm {
+  margin-bottom: 10px;
+}
+
+%ctitleWrapMd {
+  margin-bottom: 16px;
+}
+
+%ctitleWrapLg {
+  margin-bottom: 24px;
+}
+
+// ctitle-wrap 및 텍스트간 여백
+.ctitle-zero-wrap {
+  @extend %ctitleWrapZero;
+}
+
+.ctitle-sm-wrap {
+  @extend %ctitleWrapSm;
+}
+
+.ctitle-md-wrap {
+  @extend %ctitleWrapMd;
+}
+
+.ctitle-lg-wrap {
+  @extend %ctitleWrapLg;
+}
+
+[class^=ctitle][class$=wrap] {
+
+  .ctitle-xs, .ctitle-sm {
+    + .stext-sm {
+      margin-top: 4px;
+    }
+  }
+
+  .ctitle, .ctitle-lg, .ctitle-xl {
+    + .stext {
+      margin-top: 6px;
+    }
+  }
+
+  // badge, badge-group 하단 여백
+  /*[class^=badge-][class$=group] {
+    margin-bottom: 10px;
+  }*/
+}

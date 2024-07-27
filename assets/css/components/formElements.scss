@@ -1,0 +1,432 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+/* form - input */
+
+%inputBox {
+  overflow: hidden;
+  @include mixins.justify_width;
+  height: 44px;
+  padding: {
+    top: 6px;
+    right: 13px;
+    bottom: 6px;
+    left: 13px;
+  }
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background-color: variables.$colorGray20;
+
+  .ui-input {
+    height: 100%;
+    padding-right: 10px;
+    background-color: inherit;
+
+    &[type=number] {
+      + .btn-input-del {
+        display: none;
+      }
+    }
+  }
+
+  [class^=btn] {
+    flex-shrink: 0;
+
+    &[class$=xs] {
+      margin-right: -7px;
+    }
+  }
+
+  .btn-input-del {
+    flex-shrink: 0;
+    display: none;
+    width: 18px;
+    height: 18px;
+    margin: {
+      top: 6px;
+      bottom: 6px;
+    }
+    @include mixins.ratio_images('~/assets/images/common/comm_ico_clear_gray_sm');
+  }
+
+  .btn-input-search {
+    width: 24px;
+    height: 24px;
+    margin: {
+      top: 2px;
+      bottom: 2px;
+    }
+    @include mixins.ratio_images('~/assets/images/common/comm_ico_search_black_header');
+  }
+
+  .text {
+    flex-shrink: 0;
+    display: inline-block;
+    margin: {
+      top: 6px;
+      bottom: 6px;
+    };
+    @include mixins.font_size_md('md');
+    color: variables.$colorGray70;
+    vertical-align: top;
+  }
+
+  &.is-focus {
+    border-color: variables.$colorGreen100;
+    background-color: variables.$colorWhite;
+    @include mixins.prefix(transition, border 0.2s ease-out);
+  }
+
+  &.has-value {
+    .btn-input-del {
+      display: block;
+
+      ~ [class^=btn] {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  &.is-disabled {
+    border-color: variables.$colorGray30;
+    background-color: variables.$colorWhite;
+
+    .ui-input {
+      color: variables.$colorGray50;
+    }
+
+    .btn-input-del {
+      display: none;
+    }
+  }
+}
+
+// input
+.ui-input {
+
+  @include mixins.clear_focus;
+  @include mixins.font_size_lg('lt');
+  color: variables.$colorBlack;
+  width: 100%;
+
+  &::placeholder {
+    color: variables.$colorGray50;
+  }
+}
+
+// default
+.input-box {
+  @extend %inputBox;
+}
+
+// input-guide
+.input-guide {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  @include mixins.font_size_sm;
+  color: variables.$colorGray70;
+}
+
+.valid-check {
+  .input-box {
+    border-color: variables.$colorRed100;
+  }
+
+  .valid-desc {
+    display: none;
+    margin-top: 4px;
+    @include mixins.font_size_sm;
+    color: variables.$colorRed100;
+  }
+
+  &.fail {
+    .valid-desc {
+      display: block;
+    }
+  }
+}
+
+.flex-center-group {
+  .input-box, .ui-select {
+    flex: 1;
+  }
+
+  .gap {
+    display: inline-block;
+    margin: 0 6px;
+    vertical-align: top;
+  }
+}
+
+/* ////////////////////////////////////////////////////////////////////////// */
+
+/* form - select */
+
+// default
+.ui-select {
+  width: 100%;
+
+  select {
+    @include mixins.clear_focus;
+    width: 100%;
+    height: 44px;
+    padding: 12px 42px 12px 13px;
+    border-radius: 10px;
+    border: 1px solid variables.$colorGray40;
+    background-color: variables.$colorWhite;
+    @include mixins.font_size_lg('lt');
+    color: variables.$colorBlack;
+    @include mixins.no_select_text;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    @include mixins.ratio_images('~/assets/images/common/comm_ico_arwdown_black_sm', 18px, right 14px center);
+
+    &:focus {
+      border-color: variables.$colorGreen100;
+      @include mixins.prefix(transition, border 0.2s ease-out);
+    }
+
+    &[disabled], &[aria-disabled], &[readonly] {
+      border-color: variables.$colorGray30;
+      @include mixins.ratio_images_change('~/assets/images/common/comm_ico_arwdown_black_sm_disabled');
+      color: variables.$colorGray50;
+    }
+  }
+
+  &.type-text {
+    width: auto;
+
+    select {
+      width: auto;
+      height: 17px;
+      padding: 0 18px 0 0;
+      border: 0;
+      @include mixins.ratio_images('~/assets/images/common/comm_ico_arwdown_black_sm', 16px, right center);
+      @include mixins.font_size_md('md');
+
+      text-align-last: right;
+      text-align: right;
+      -ms-text-align-last: right;
+      -moz-text-align-last: right;
+
+      option {
+        text-align-last: left;
+        text-align: left;
+        -ms-text-align-last: left;
+        -moz-text-align-last: left;
+      }
+    }
+  }
+}
+
+/* ////////////////////////////////////////////////////////////////////////// */
+
+/* form - radio, checkbox */
+%rdoChkReset {
+  position: relative;
+  display: inline-block;
+  font-size: 0;
+  vertical-align: top;
+
+  input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+
+    + label {
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+      vertical-align: top;
+      @include mixins.no_select_text;
+    }
+  }
+}
+
+// default
+.ui-chk,
+.ui-rdo {
+  @extend %rdoChkReset;
+  min-height: 20px;
+
+  input {
+    + label {
+      padding-left: 20px;
+      min-height: 20px;
+
+      &:before,
+      &:after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        @include mixins.prefix(transform, translateY(-50%));
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+      }
+
+      .text {
+        display: inline-block;
+        margin: {
+          top: 1px;
+          left: 6px;
+          bottom: 1px;
+        }
+        @include mixins.font_size_md('md');
+        color: variables.$colorBlack;
+        vertical-align: top;
+      }
+    }
+
+    &[disabled], &[aria-disabled], &[readonly] {
+      & + label {
+        pointer-events: none;
+        opacity: 0.5;
+      }
+    }
+
+    &:checked {
+      & + label {
+        &:before {
+          background-color: variables.$colorGreen100;
+          border-color: variables.$colorGreen100;
+        }
+      }
+    }
+  }
+}
+
+/* radio */
+.ui-rdo {
+  input {
+    & + label {
+      &:before, &:after {
+        border-radius: 10px;
+      }
+
+      &:before {
+        background-color: variables.$colorGray40;
+      }
+
+      &:after {
+        top: 10px;
+        left: 6px;
+        width: 8px;
+        height: 8px;
+        background-color: variables.$colorWhite;
+        border: none;
+      }
+    }
+
+    &:checked + label {
+      &:before {
+        @include mixins.prefix(transition, background-color 0.15s);
+      }
+
+      &:after {
+        animation: none;
+      }
+    }
+  }
+}
+
+/* checkbox */
+.ui-chk {
+  input {
+    & + label {
+      &:before {
+        border-radius: 4px;
+        background-color: variables.$colorGray40;
+        left: 0;
+      }
+
+      &:after {
+        @include mixins.ratio_images('~/assets/images/form/ico_check', 10px 8px, 5px 6px);
+      }
+    }
+
+    &:checked + label {
+      &:before {
+        @include mixins.prefix(transition, background-color 0.15s);
+      }
+    }
+  }
+}
+
+.attach-box {
+  position: relative;
+  display: inline-block;
+  width: 76px !important;
+  height: 76px;
+  border-radius: 12px;
+  background-color: variables.$colorGray20;
+  overflow: hidden;
+
+  & ~ .attach-box {
+    margin-left: 5px;
+  }
+
+  input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+
+  label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    @include mixins.ratio_images('~/assets/images/common/comm_ico_plus_black_sm', 18px, center);
+  }
+
+  .attach-img-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    .attach-img {
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .btn-remove {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      width: 18px;
+      height: 18px;
+    }
+  }
+}

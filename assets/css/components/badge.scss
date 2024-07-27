@@ -1,0 +1,306 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+/* badge common style */
+%badgeCommonStyle {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    border: solid 1px transparent;
+    border-radius: 6px;
+
+    .text {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+
+/* badge size */
+%badgeMd {
+    @extend %badgeCommonStyle;
+    padding: 4px 6px;
+    height: 22px;
+
+    .text {
+        @include mixins.font_size_2xs(sb, 12px);
+    }
+}
+%badgeSm {
+    @extend %badgeCommonStyle;
+    padding: 3px 6px;
+    height: 18px;
+
+    .text {
+        @include mixins.font_size_2xs(sb, 10px);
+    }
+
+    @include mixins.device_mobile_aos {
+        padding-top: 2px;
+    }
+}
+
+/* badge color*/
+%badgeGreen {
+    background: variables.$colorGreen100;
+    border-color: variables.$colorGreen100;
+
+    .text{
+        color: variables.$colorWhite;
+    }
+}
+%badgeLightGreen {
+    background: variables.$colorGreen10;
+    border-color: variables.$colorGreen10;
+
+    .text{
+        color: variables.$colorGreen100;
+    }
+}
+%badgeLineGreen {
+    background: variables.$colorWhite;
+    border-color: variables.$colorGreen100;
+
+    .text{
+        color: variables.$colorGreen100;
+    }
+}
+%badgeOrange {
+    background: variables.$colorOrange100;
+    border-color: variables.$colorOrange100;
+
+    .text{
+        color: variables.$colorWhite;
+    }
+}
+%badgeLightOrange {
+    background: variables.$colorOrange10;
+    border-color: variables.$colorOrange10;
+
+    .text{
+        color: variables.$colorOrange100;
+    }
+}
+%badgeLineOrange {
+    background: variables.$colorWhite;
+    border-color: variables.$colorOrange100;
+
+    .text{
+        color: variables.$colorOrange100;
+    }
+}
+%badgeRed {
+    background: variables.$colorRed100;
+    border-color: variables.$colorRed100;
+
+    .text{
+        color: variables.$colorWhite;
+    }
+}
+%badgeLightRed {
+    background: variables.$colorRed10;
+    border-color: variables.$colorRed10;
+
+    .text{
+        color: variables.$colorRed100;
+    }
+}
+%badgeLineRed {
+    background: variables.$colorWhite;
+    border-color: variables.$colorRed100;
+
+    .text{
+        color: variables.$colorRed100;
+    }
+}
+%badgeGray {
+    background: variables.$colorGray70;
+    border-color: variables.$colorGray70;
+
+    .text{
+        color: variables.$colorWhite;
+    }
+}
+%badgeLightGray {
+    background: variables.$colorGray20;
+    border-color: variables.$colorGray20;
+
+    .text{
+        color: variables.$colorGray70;
+    }
+}
+%badgeLineGray {
+    background: variables.$colorWhite;
+    border-color: variables.$colorGray60;
+
+    .text{
+        color: variables.$colorGray60;
+    }
+}
+
+.badge {
+    // green type
+    &-green {
+        &-md {
+            @extend %badgeMd;
+            @extend %badgeGreen;
+        }
+        &-sm {
+            @extend %badgeSm;
+            @extend %badgeGreen;
+        }
+    }
+    &-light-green {
+        &-md {
+            @extend %badgeMd;
+            @extend %badgeLightGreen;
+        }
+        &-sm {
+            @extend %badgeSm;
+            @extend %badgeLightGreen;
+        }
+    }
+    &-line-green {
+        &-md {
+            @extend %badgeMd;
+            @extend %badgeLineGreen;
+        }
+        &-sm {
+            @extend %badgeSm;
+            @extend %badgeLineGreen;
+        }
+    }
+
+    // orange type
+    &-orange {
+        &-md {
+            @extend %badgeMd;
+            @extend %badgeOrange;
+        }
+        &-sm {
+            @extend %badgeSm;
+            @extend %badgeOrange;
+        }
+    }
+    &-light-orange {
+        &-md {
+            @extend %badgeMd;
+            @extend %badgeLightOrange;
+        }
+        &-sm {
+            @extend %badgeSm;
+            @extend %badgeLightOrange;
+        }
+    }
+    &-line-orange {
+        &-md {
+            @extend %badgeMd;
+            @extend %badgeLineOrange;
+        }
+        &-sm {
+            @extend %badgeSm;
+            @extend %badgeLineOrange;
+        }
+    }
+
+    // red type
+    &-red {
+        &-md {
+            @extend %badgeMd;
+            @extend %badgeRed;
+        }
+        &-sm {
+            @extend %badgeSm;
+            @extend %badgeRed;
+        }
+    }
+    &-light-red {
+        &-md {
+            @extend %badgeMd;
+            @extend %badgeLightRed;
+        }
+        &-sm {
+            @extend %badgeSm;
+            @extend %badgeLightRed;
+        }
+    }
+    &-line-red {
+        &-md {
+            @extend %badgeMd;
+            @extend %badgeLineRed;
+        }
+        &-sm {
+            @extend %badgeSm;
+            @extend %badgeLineRed;
+        }
+    }
+
+    // gray type
+    &-gray {
+        &-md {
+            @extend %badgeMd;
+            @extend %badgeGray;
+        }
+        &-sm {
+            @extend %badgeSm;
+            @extend %badgeGray;
+        }
+    }
+    &-light-gray {
+        &-md {
+            @extend %badgeMd;
+            @extend %badgeLightGray;
+        }
+        &-sm {
+            @extend %badgeSm;
+            @extend %badgeLightGray;
+        }
+    }
+    &-line-gray {
+        &-md {
+            @extend %badgeMd;
+            @extend %badgeLineGray;
+        }
+        &-sm {
+            @extend %badgeSm;
+            @extend %badgeLineGray;
+        }
+    }
+}
+
+/* // badge */
+
+/* badge-group */
+%badgeGroup {
+    @include mixins.justify_width;
+    flex-wrap: wrap;
+    font-size: 0;
+}
+
+.badge-md-group {
+    @extend %badgeGroup;
+    margin-right: -4px;
+    margin-bottom: -4px;
+
+    [class^=badge-] {
+        margin: {
+            right: 4px;
+            bottom: 4px;
+        }
+    }
+}
+
+.badge-sm-group {
+    @extend %badgeGroup;
+    margin-right: -2px;
+    margin-bottom: -2px;
+
+    [class^=badge-] {
+        margin: {
+            right: 2px;
+            bottom: 2px;
+        }
+    }
+}
+/* // badge-group */
