@@ -63,4 +63,10 @@ export default defineNuxtConfig({
   ],
 
   ssr: false,
+  build: {
+    rollupOptions: {
+      external: ['lucide-vue-next']
+    }
+  }
+
 });
