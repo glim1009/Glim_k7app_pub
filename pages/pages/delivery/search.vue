@@ -324,6 +324,7 @@
 
 <script setup lang="ts">
 definePageMeta({
+  layout: 'no-docker',
   title: '택배',
   hideRightHeader: ['home'],
 });
