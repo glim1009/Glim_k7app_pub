@@ -22,3 +22,30 @@ $groupAlign: ('start', 'center', 'end');
     }
   }
 }
+
+// Usage 주소록 box
+
+:deep(.info-flex-left) {
+  display: block;
+  font-size: 0;
+
+  [class^=ctitle][class*=wrap] {
+    [class^=ctitle] {
+      display: inline-block;
+      vertical-align: top;
+      ~ [class^=badge] {
+        margin-left: 6px;
+      }
+    }
+
+    ~ .bar-group {
+      margin-top: 0;
+    }
+  }
+
+  .ui-rdo {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+  }
+}

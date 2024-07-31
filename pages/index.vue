@@ -7,8 +7,7 @@
 <script setup lang="ts">
   definePageMeta({
     title: '서브페이지',
-    hideRightHeader: ['chat', 'search'],
-    //hideDocker: true,
+    hideRightHeader: ['chat', 'search']
   })
 
 </script>

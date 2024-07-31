@@ -1,3 +1,663 @@
-@import url('~/assets/css/pages/delivery/delivery_ltk.scss');
-@import url('~/assets/css/pages/delivery/delivery_ljy.scss');
-@import url('~/assets/css/pages/delivery/delivery_sjy.scss');
+@use 'sass:map';
+@use '../../abstracts/variables';
+@use '../../abstracts/mixins';
+@use '../../base/components';
+
+
+// 배송 상품 선택
+.glist-wrap {
+  .grid-col4-list.gap-sm {
+    .item-grid {
+      width: 100%;
+
+      .btn-light-gray-sm {
+        width: 100%;
+        padding: 0 5px;
+      }
+
+      &.is-active {
+        .btn-light-gray-sm {
+          border-color: variables.$colorGreen100;
+          background-color: variables.$colorWhite;
+
+          .text {
+            color: variables.$colorGreen100;
+          }
+        }
+      }
+    }
+  }
+}
+
+.prod-price-list-wrap {
+  .swiper-auto-wrap {
+    margin: 0 -20px;
+
+    :deep(.swiper-wrapper) {
+      padding: 0 20px;
+
+      .swiper-slide {
+        width: auto;
+      }
+    }
+  }
+}
+
+// 할인수단 list item
+.row-line-list {
+  .item-pay-discount {
+    padding: 10px 0;
+
+    .flex-center-group {
+      .flex-right {
+        .btn-line-light-gray-xs {
+          margin-left: 10px;
+        }
+      }
+    }
+
+    .pay-discount-box {
+      margin-top: 10px;
+      padding: 9px 16px 8px;
+      border-radius: 10px;
+      background-color: variables.$colorGray10;
+
+      .goods {
+        @include mixins.font_size_md('md');
+        color: variables.$colorBlack;
+      }
+
+      .btn-delete {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        vertical-align: top;
+      }
+    }
+
+    &:first-child {
+      padding-top: 0;
+    }
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+  }
+
+  .item-order-pay {
+    padding: 16px 0;
+
+    .ui-rdo {
+      width: 100%;
+
+      input + label {
+        width: 100%;
+      }
+    }
+
+    .order-pay-cont {
+      margin-top: 16px;
+
+      .btn-flex-wrap {
+        .btn-line-light-gray-md {
+          padding: 0 5px;
+        }
+      }
+    }
+
+    &:first-child {
+      padding-top: 0;
+    }
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+  }
+}
+
+// 현금영수증 정보
+.cash-receipt-info-wrap {
+  margin-top: 30px;
+
+  .white-md-box {
+    margin-top: 16px;
+
+    .ctitle-md-wrap {
+      margin-bottom: 0;
+
+      :deep(.flex-right) {
+        .glist-wrap {
+          .grid-col2-list {
+            justify-items: end;
+          }
+        }
+      }
+    }
+
+    .light-gray-sm-box {
+      margin-top: 16px;
+    }
+  }
+}
+
+// 배송 조회 리스트 type col
+.delivery-step-col-list {
+  position: relative;
+  @include mixins.justify_width(center, between);
+  overflow: hidden;
+  padding-top: 2px;
+  margin-top: -2px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    left: 0;
+    top: 4px;
+    height: 2px;
+    background-color: variables.$colorGray30;
+    border-radius: 2px;
+    vertical-align: top;
+  }
+
+  &:has(:not(.is-active)) {
+    .delivery-item {
+      .status, .sub-status {
+        color: variables.$colorGray60;
+      }
+      &:after {
+        border: 2px solid variables.$colorGray30;
+      }
+    }
+  }
+
+  &:has(.is-active) {
+    .delivery-item {
+      .status {
+        color: variables.$colorGray90;
+      }
+      &:after {
+        border: 2px solid variables.$colorGreen100;
+      }
+    }
+  }
+
+  &:has(.delivery-item:nth-child(1).is-active) {
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 4px;
+      height: 2px;
+      width: calc(33% / 4);
+      background-color: variables.$colorGreen100;
+      border-radius: 2px;
+    }
+  }
+
+  &:has(.delivery-item:nth-child(2).is-active) {
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 4px;
+      height: 2px;
+      width: calc(50% - 13%);
+      background-color: variables.$colorGreen100;
+      border-radius: 2px;
+    }
+  }
+
+  &:has(.delivery-item:nth-child(3).is-active) {
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 4px;
+      height: 2px;
+      width: 66%;
+      background-color: variables.$colorGreen100;
+      border-radius: 2px;
+    }
+  }
+
+  &:has(.delivery-item:nth-child(4).is-active) {
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 4px;
+      height: 2px;
+      width: 100%;
+      background-color: variables.$colorGreen100;
+      border-radius: 2px;
+    }
+  }
+
+  .delivery-item {
+    position: relative;
+    padding-top: 16px;
+    font-size: 0;
+    @include mixins.justify_width(center, center, column);
+
+    .status {
+      display: block;
+      @include mixins.font_size_md;
+      color: variables.$colorBlack;
+    }
+
+    .sub-status {
+      display: block;
+      margin-top: 1px;
+      @include mixins.font_size_xs;
+      color: variables.$colorGray60;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 2px;
+      display: block;
+      height: 2px;
+      vertical-align: top;
+    }
+
+    &:after {
+      content: '';
+      z-index: 9;
+      position: absolute;
+      top: -1px;
+      left: 50%;
+      @include mixins.prefix(transform, translateX(-50%));
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 4px;
+      vertical-align: top;
+      background-color: variables.$colorWhite;
+    }
+
+    &.is-active {
+      &:before {
+        width: calc(100% * 3);
+        right: initial;
+        background-color: variables.$colorGray30;
+        z-index: 9;
+        left: 50%;
+      }
+      .status {
+        color: variables.$colorGreen100;
+      }
+
+      ~ .delivery-item {
+        .status, .sub-status {
+          color: variables.$colorGray60;
+        }
+        // 그레이로
+        &:after {
+          border: 2px solid variables.$colorGray30;
+        }
+      }
+
+      &:last-child {
+        &:before {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  ~ .fold-overflow-box,
+  ~ .light-gray-md-box {
+    margin-top: 16px;
+  }
+}
+
+// 배송 조회 리스트 type row
+.delivery-step-row-list {
+  .delivery-item {
+    position: relative;
+    padding-left: 35px;
+    padding-bottom: 16px;
+    font-size: 0;
+
+    .stext {
+      width: 100%;
+      font-weight: variables.$fontWeightMedium;
+    }
+
+    .date {
+      display: block;
+      width: 100%;
+      margin-top: 4px;
+      @include mixins.font_size_sm;
+      color: variables.$colorGray60;
+    }
+
+    .sub-status {
+      display: block;
+      width: 100%;
+      margin-top: 4px;
+      @include mixins.font_size_sm;
+      color: variables.$colorGray70;
+    }
+
+    .status {
+      @include mixins.font_size_sm('md');
+      color: variables.$colorGray70;
+    }
+
+    &.is-completed {
+      .stext {
+        color: variables.$colorBlack;
+      }
+
+      .status {
+        color: variables.$colorGreen100;
+      }
+
+      &:after {
+        top: 0;
+        left: 0;
+        width: 15px;
+        height: 15px;
+        border-radius: 8px;
+        @include mixins.ratio_images('~/assets/images/delivery/ico_check_white_2xs', 7px 5px, center);
+        background-color: variables.$colorGreen100;
+      }
+    }
+
+    &.is-incomplete {
+      .stext {
+        color: variables.$colorRed100;
+      }
+
+      .status {
+        color: variables.$colorRed100;
+      }
+
+      .sub-status {
+        color: variables.$colorGray60;
+      }
+
+      &:after {
+        top: 0;
+        left: 0;
+        width: 15px;
+        height: 15px;
+        border-radius: 8px;
+        @include mixins.ratio_images('~/assets/images/delivery/ico_check_white_2xs', 7px 5px, center);
+        background-color: variables.$colorRed100;
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      vertical-align: top;
+      left: 7px;
+      top: 6px;
+      width: 1px;
+      height: 100%;
+      border-left: 1px solid variables.$colorGray30;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      vertical-align: top;
+      left: 4px;
+      top: 5px;
+      width: 6px;
+      height: 6px;
+      border-radius: 3px;
+      background-color: variables.$colorGray40;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+
+      &:before {
+        content: initial;
+      }
+    }
+  }
+}
+
+.scroll-box {
+  overflow-y: scroll;
+  max-height: 292px;
+  padding: {
+    left: 16px;
+    right: 16px;
+    top: 16px;
+    bottom: 16px;
+  }
+  margin: -16px;
+}
+
+// card box header
+.box-info-header {
+  .ctitle-md-wrap {
+    .box-info-desc {
+      font-size: 0;
+      margin-top: 6px;
+
+      .title {
+        @include mixins.font_size_sm('md');
+        color: variables.$colorGray90;
+
+        ~ .stext-sm {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+
+.text-align-box {
+  @include mixins.justify_width(center, center);
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  font-weight: inherit;
+  color: inherit;
+
+  [class^=stext] {
+    ~ .btn-line-light-gray-xs {
+      margin-left: 6px;
+    }
+  }
+}
+
+.attach-box-wrap {
+  .swiper-auto-wrap {
+    margin: 0 -20px;
+
+    :deep(.swiper-wrapper) {
+      padding: 0 20px;
+    }
+  }
+}
+
+
+
+// 예약현황 상세 팝업
+.line-light-gray-lg-box {
+  .barcode-box {
+    width: 100%;
+    text-align: center;
+    img {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+}
+
+[class^=ctitle][class$=wrap] {
+
+  .ctitle-sub-lg {
+    margin-bottom: 10px;
+
+    .badge-md-group {
+      display: inline-block;
+      vertical-align: top;
+      [class^=badge] {
+        margin-bottom: 0;
+      }
+      + .tooltip-group {
+        display: inline-block;
+        margin: {
+          top: 4px;
+          left: 4px;
+          bottom: 2px;
+        }
+        vertical-align: top;
+      }
+    }
+  }
+
+  [class^=ctitle] {
+
+    + .box-info-desc {
+      margin-top: 6px;
+
+      .stext-sm {
+        ~ .stext-sm {
+          margin-left: 10px;
+        }
+      }
+
+    }
+
+  }
+
+  + .tbl-info-wrap {
+    margin-top: 6px;
+  }
+
+}
+
+// foldOverflowBox
+.fold-overflow-box {
+  .fold-cont {
+    .light-gray-md-box {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.row-line-list {
+  .item-gap-lg:not(:last-child) {
+    border-bottom: 1px solid variables.$colorGray30;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+// goods ~ goods 사이 여백
+.tbl-info-md, .tbl-row {
+  td {
+    [class^=goods] {
+      + [class^=goods] {
+        margin-left: 4px;
+      }
+    }
+  }
+}
+
+// main bg
+.cs-center-box {
+  @include mixins.justify_width(center,start);
+
+  &.bg-cs-7eleven, &.bg-cs-kind-delivery {
+    min-height: 60px;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      left: 0;
+      top: 50%;
+      @include mixins.prefix(transform, translateY(-50%));
+      width: 60px;
+      height: 60px;
+      vertical-align: top;
+    }
+  }
+
+  &.bg-cs-7eleven {
+    &:before {
+      //@include mixins.ratio_images('~/assets/images/common/comm_ico_h60_kind_delivery'); // TBD
+      @include mixins.ratio_images('~/assets/images/common/comm_ico_h60_TBD');
+    }
+  }
+
+  &.bg-cs-kind-delivery {
+    &:before {
+      //@include mixins.ratio_images('~/assets/images/common/comm_ico_h60_kind_delivery'); // TBD
+      @include mixins.ratio_images('~/assets/images/common/comm_ico_h60_TBD');
+    }
+  }
+
+  .ctitle-zero-wrap {
+    padding-left: 70px;
+
+    .stext-lg {
+      margin: 0;
+      +.ctitle-sm {
+        margin-top: 4px;
+      }
+    }
+  }
+
+}
+
+
+// 메인
+.alert-count-group {
+  &:before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 10px;
+    overflow: hidden;
+    @include mixins.ratio_images('~/assets/images/common/comm_ico_h60_TBD');
+    //@include mixins.ratio_images('~/assets/images/delivery/bg_alert_reservation'); //TBD
+  }
+
+  &.type-delivery {
+    &:before {
+      //@include mixins.ratio_images_change('~/assets/images/delivery/bg_alert_delivery');//TBD
+    }
+  }
+
+  &.type-history {
+    &:before {
+      //@include mixins.ratio_images_change('~/assets/images/delivery/bg_alert_history');//TBD
+    }
+  }
+
+  .stext {
+    display: inline-block;
+    margin: {
+      top: 1px;
+      right: 4px;
+    }
+    vertical-align: top;
+  }
+
+  .goods-lg {
+    color: variables.$colorGray90;
+    font-weight: 600;
+  }
+}

@@ -8,7 +8,7 @@
   position: fixed;
   z-index: 20;
   right: 10px;
-  bottom: calc(#{variables.$dockerHeight + 24px} + env(safe-area-inset-bottom));
+  bottom: calc( 16px + env(safe-area-inset-bottom) );
 
   .btn-go-top {
     width: 40px;
@@ -20,6 +20,14 @@
 
     .ico-top {
       @include mixins.prefix(transform, translateY(0));
+    }
+  }
+}
+
+.wrapper {
+  &:has(.docker-wrapper, .cont-docker-wrap) {
+    .floating-wrapper {
+      bottom: calc(#{variables.$dockerHeight + 24px} + env(safe-area-inset-bottom));
     }
   }
 }

@@ -20,12 +20,11 @@
             <ColorBox color="white" size="lg">
               <div class="box-info-header">
                 <FlexGroup align="start">
-                  <div class="flex-left">
+                  <div class="info-flex-left">
                     <span class="ui-rdo">
                       <input type="radio" id="demoRdo01" name="demoRdo01">
                       <label for="demoRdo01"><span class="text-xl fw-sb">사무실</span></label>
                     </span>
-                    <EBadge color="light-gray" size="md" badge-text="기본주소지" />
                     <div class="bar-group">
                       <span class="bar-text-sm fc-black">홍*동</span>
                       <span class="bar-text-sm fc-black">010-4554-8785</span>
@@ -68,7 +67,7 @@
             <ColorBox color="white" size="lg">
               <div class="box-info-header">
                 <FlexGroup align="start">
-                  <div class="flex-left">
+                  <div class="info-flex-left">
                     <span class="ui-rdo">
                       <input type="radio" id="demoRdo02" name="demoRdo01">
                       <label for="demoRdo02"><span class="text-xl fw-sb">엄마집</span></label>
@@ -115,7 +114,7 @@
             <ColorBox color="white" size="lg">
               <div class="box-info-header">
                 <FlexGroup align="start">
-                  <div class="flex-left">
+                  <div class="info-flex-left">
                     <span class="ui-rdo">
                       <input type="radio" id="demoRdo03" name="demoRdo01">
                       <label for="demoRdo03"><span class="text-xl fw-sb">우리집</span></label>

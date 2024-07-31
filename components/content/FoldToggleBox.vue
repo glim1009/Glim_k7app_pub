@@ -1,6 +1,6 @@
 <template>
   <div :class="className">
-    <FoldHeader @toggle-click="toggle">
+    <FoldHeader @toggle-click="toggle" :class="{ 'is-active' : isOpen }">
       <slot name="header"></slot>
     </FoldHeader>
     <Transition @enter="onEnter" name="fold">
@@ -15,8 +15,10 @@
 
 const props = withDefaults(defineProps<{
   type?: 'cont' | 'box';
+  open?: boolean
 }>(), {
-  type: 'box'
+  type: 'box',
+  open: false
 });
 
 const className = computed(() => {
@@ -46,6 +48,11 @@ const customStyle = () => {
     '--content-height' : FoldContHeight.value + 'px'
   }
 };
+
+onMounted(() => {
+  console.log(isOpen.value);
+  if( props.open ) isOpen.value = props.open;
+});
 
 </script>
 

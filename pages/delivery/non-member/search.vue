@@ -20,7 +20,7 @@
           </div>
         </CtitleWrap>
       </div>
-      <ul class="delivery-status-col-list">
+      <ul class="delivery-step-col-list">
         <li class="delivery-item">
           <span class="status">접수완료</span>
           <span class="sub-status">점포입고</span>
@@ -39,7 +39,7 @@
         </li>
       </ul>
       <ColorBox color="light-gray">
-        <ul class="delivery-status-row-list">
+        <ul class="delivery-step-row-list">
           <li class="delivery-item is-completed">
             <FlexGroup align="start">
               <div class="flex-left">
@@ -119,7 +119,7 @@
 <script setup lang="ts">
 definePageMeta({
   title: '비회원 배송조회',
-  hideDocker: true,
+  layout: 'no-docker',
 });
 </script>
 

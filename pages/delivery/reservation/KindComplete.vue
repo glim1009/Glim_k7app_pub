@@ -38,7 +38,7 @@
 <script setup lang="ts">
 definePageMeta({
   title: '착한 택배예약',
-  hideDocker: true,
+  layout: 'no-docker',
 });
 
 const isMember = ref(true);

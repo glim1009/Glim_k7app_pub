@@ -48,7 +48,7 @@
 <script setup lang="ts">
 definePageMeta({
   title: '택배 예약/배송 조회',
-  hideDocker: true,
+  layout: 'no-docker',
 });
 
 // 접수 여부에 따른 링크 이동 경로

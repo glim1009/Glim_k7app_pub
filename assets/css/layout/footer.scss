@@ -203,7 +203,7 @@
 
     .copyright {
         margin-top: 20px;
-        @include mixins.font_size_2xs;
+        @include mixins.font_size_xs;
         color: variables.$colorGray90;
     }
 }

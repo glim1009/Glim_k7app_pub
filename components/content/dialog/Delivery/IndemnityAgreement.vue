@@ -32,35 +32,35 @@
             <ColorBox color="white" size="md">
               <CtitleWrap>
                 <div class="ctitle-2xs">현금화 가능 물품</div>
-                <div class="stext-sm">현금, 어음, 상품권, 수표 유가증권, 공연티켓 등 현금화 사용 가능 물품</div>
+                <div class="stext">현금, 어음, 상품권, 수표 유가증권, 공연티켓 등 현금화 사용 가능 물품</div>
               </CtitleWrap>
               <CtitleWrap>
                 <div class="ctitle-2xs">변질 및 부패성 물품</div>
-                <div class="stext-sm">생선, 육류, 화훼류, 살아있는 동·식물 및 사체류, 기타 변질 및 부패가능 물품</div>
+                <div class="stext">생선, 육류, 화훼류, 살아있는 동·식물 및 사체류, 기타 변질 및 부패가능 물품</div>
               </CtitleWrap>
               <CtitleWrap>
                 <div class="ctitle-2xs">파손 우려 물품</div>
-                <div class="stext-sm">그릇, 유리, 컵, 도자기 등 유리, 사기재질로 구성된 물품</div>
+                <div class="stext">그릇, 유리, 컵, 도자기 등 유리, 사기재질로 구성된 물품</div>
               </CtitleWrap>
               <CtitleWrap>
                 <div class="ctitle-2xs">전자제품</div>
-                <div class="stext-sm">노트북, 컴퓨터, 모니터, TV, 프린터 등</div>
+                <div class="stext">노트북, 컴퓨터, 모니터, TV, 프린터 등</div>
               </CtitleWrap>
               <CtitleWrap>
                 <div class="ctitle-2xs">서신류</div>
-                <div class="stext-sm">우편법상의 제한물품<br>(예 : 편지, 긴급을 요하는 서류 화물 등)</div>
+                <div class="stext">우편법상의 제한물품<br>(예 : 편지, 긴급을 요하는 서류 화물 등)</div>
               </CtitleWrap>
               <CtitleWrap>
                 <div class="ctitle-2xs">재생불가 및 시한성 물품</div>
-                <div class="stext-sm">서류, 필름 등 원본재생불가 화물, 입학원서, 입사서류 등 시한 초과시 가치 상실물품</div>
+                <div class="stext">서류, 필름 등 원본재생불가 화물, 입학원서, 입사서류 등 시한 초과시 가치 상실물품</div>
               </CtitleWrap>
               <CtitleWrap>
                 <div class="ctitle-2xs">위험물품</div>
-                <div class="stext-sm">독극물, 농약류, 마약류, 화약류, 총포(도검류), 인화성 물질, 페인트류, 자동차 배터리</div>
+                <div class="stext">독극물, 농약류, 마약류, 화약류, 총포(도검류), 인화성 물질, 페인트류, 자동차 배터리</div>
               </CtitleWrap>
               <CtitleWrap size="zero">
                 <div class="ctitle-2xs">중량물</div>
-                <div class="stext-sm">중량 20kg 초과 (생물, 곡물류, 도서류, 이삿짐의 경우 20kg 이상) / 세변의합이 160cm 이상 / 한 변의 길이가 120cm를 초과하는 물품</div>
+                <div class="stext">중량 20kg 초과 (생물, 곡물류, 도서류, 이삿짐의 경우 20kg 이상) / 세변의합이 160cm 이상 / 한 변의 길이가 120cm를 초과하는 물품</div>
               </CtitleWrap>
             </ColorBox>
           </ContBox>
@@ -133,7 +133,7 @@
                     <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="포장상태 이미지">
                   </div>
                   <div class="info-box">
-                    <div class="stext-sm">서류봉투</div>
+                    <div class="stext">서류봉투</div>
                   </div>
                 </li>
                 <li class="item-grid-package">
@@ -141,7 +141,7 @@
                     <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="포장상태 이미지">
                   </div>
                   <div class="info-box">
-                    <div class="stext-sm">마대자루</div>
+                    <div class="stext">마대자루</div>
                   </div>
                 </li>
                 <li class="item-grid-package">
@@ -149,7 +149,7 @@
                     <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="포장상태 이미지">
                   </div>
                   <div class="info-box">
-                    <div class="stext-sm">쇼핑백</div>
+                    <div class="stext">쇼핑백</div>
                   </div>
                 </li>
                 <li class="item-grid-package">
@@ -157,7 +157,7 @@
                     <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="포장상태 이미지">
                   </div>
                   <div class="info-box">
-                    <div class="stext-sm">나체품</div>
+                    <div class="stext">나체품</div>
                   </div>
                 </li>
                 <li class="item-grid-package">
@@ -165,7 +165,7 @@
                     <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="포장상태 이미지">
                   </div>
                   <div class="info-box">
-                    <div class="stext-sm">비닐포장</div>
+                    <div class="stext">비닐포장</div>
                   </div>
                 </li>
                 <li class="item-grid-package">
@@ -173,7 +173,7 @@
                     <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="포장상태 이미지">
                   </div>
                   <div class="info-box">
-                    <div class="stext-sm">결박화</div>
+                    <div class="stext">결박화</div>
                   </div>
                 </li>
                 <li class="item-grid-package">
@@ -181,7 +181,7 @@
                     <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="포장상태 이미지">
                   </div>
                   <div class="info-box">
-                    <div class="stext-sm">이형화물</div>
+                    <div class="stext">이형화물</div>
                   </div>
                 </li>
               </GridListWrap>
@@ -276,7 +276,7 @@
         <EBtn color="line-light-gray" size="lg" @click="closeDialog">
           <span class="text">동의안함</span>
         </EBtn>
-        <EBtn color="green" size="lg" @click="closeDialog">
+        <EBtn color="green" size="lg" @click="closeDialog" disabled>
           <span class="text">파손면책 동의</span>
         </EBtn>
       </div>

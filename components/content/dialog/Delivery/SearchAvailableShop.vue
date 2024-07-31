@@ -6,7 +6,7 @@
     <template #body>
       <div class="dialog-inner">
         <ContWrap>
-          <div style="height: 100dvh; background: #E0F8EE; color: #00BB78; font-weight: 600; padding: 20px;">기획 확정 후 반영 예정</div>
+          <div style="height: 100dvh; background: #E0F8EE; color: #00BB78; font-weight: 600; padding: 20px;">확정 후 반영 예정</div>
         </ContWrap>
       </div>
     </template>

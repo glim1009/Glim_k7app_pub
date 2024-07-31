@@ -49,7 +49,7 @@
             text-align: left;
             vertical-align: top;
             word-break: break-all;
-            color: variables.$colorBlack;
+            color: variables.$colorGray90;
         }
 
         th {
@@ -92,7 +92,7 @@
 .tbl-row-wrap {
 
     border: {
-        top: 1px solid variables.$colorGray40;
+        top: 1px solid variables.$colorGray60;
         bottom: 1px solid variables.$colorGray30;
     }
 
@@ -126,7 +126,7 @@
 .tbl-col-wrap {
 
     border: {
-        top: 1px solid variables.$colorGray40;
+        top: 1px solid variables.$colorGray60;
         bottom: 1px solid variables.$colorGray30;
     }
 
@@ -171,13 +171,13 @@
             ~ tr {
                 th {
                     padding: {
-                        top: 10px;
+                        top: 12px;
                         right: 16px;
                     }
                 }
 
                 td {
-                    padding-top: 10px;
+                    padding-top: 12px;
                 }
             }
 
@@ -210,7 +210,7 @@
         }
     }
 
-    .tbl-info-sm { // 위계형
+    .tbl-info-sm {
         @extend %tblInfo;
 
         thead {
@@ -230,13 +230,13 @@
 
                 th {
                     padding: {
-                        top: 6px;
+                        top: 8px;
                         right: 0;
                     }
                 }
 
                 td {
-                    padding-top: 6px;
+                    padding-top: 8px;
                 }
             }
         }
@@ -272,13 +272,13 @@
             ~ tr {
                 th {
                     padding: {
-                        top: 4px;
+                        top: 6px;
                         right: 10px
                     }
                 }
 
                 td {
-                    padding-top: 4px;
+                    padding-top: 6px;
                 }
             }
 
@@ -289,11 +289,11 @@
             }
 
             th {
-                @include mixins.font_size_sm(sb);
+                @include mixins.font_size_md(sb);
             }
 
             td {
-                @include mixins.font_size_sm;
+                @include mixins.font_size_md;
             }
         }
 

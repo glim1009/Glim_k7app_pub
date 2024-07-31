@@ -90,21 +90,15 @@
 }
 
 [class^=ctitle][class$=wrap] {
-
-
-  .ctitle-2xs, .ctitle-xs, .ctitle-sm {
-    + .stext-sm {
-      margin-top: 4px;
-    }
+  .stext-lg {
+    margin-top: 6px;
   }
 
-  .ctitle, .ctitle-lg, .ctitle-xl {
-    + .stext {
-      margin-top: 6px;
-    }
+  .stext {
+    margin-top: 4px;
   }
 
-  .stext-sm {
+  .stext {
     + .ctitle-xs {
       margin-top: 2px;
     }

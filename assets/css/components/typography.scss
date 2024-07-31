@@ -22,6 +22,47 @@
   color: variables.$colorOrange100 !important;
 }
 
+.fc-gray90 {
+  color: variables.$colorGray90 !important;
+}
+
+.fc-gray80 {
+  color: variables.$colorGray80 !important;
+}
+
+.fc-gray70 {
+  color: variables.$colorGray70 !important;
+}
+
+.fc-gray60 {
+  color: variables.$colorGray60 !important;
+}
+
+.fc-gray50 {
+  color: variables.$colorGray50 !important;
+
+}
+
+.fc-gray40 {
+  color: variables.$colorGray40 !important;
+
+}
+
+.fc-gray30 {
+  color: variables.$colorGray30 !important;
+
+}
+
+.fc-gray20 {
+  color: variables.$colorGray20 !important;
+
+}
+
+.fc-gray10 {
+  color: variables.$colorGray10 !important;
+
+}
+
 /* e: font 컬러 */
 
 
@@ -80,12 +121,6 @@
   color: variables.$colorGray80;
 }
 
-.stext-sm { // 12px
-  @extend %textBreak;
-  @include mixins.font_size_sm;
-
-}
-
 .stext { // 13px
   @extend %textBreak;
   @include mixins.font_size_md;
@@ -136,6 +171,7 @@
   .bar-text, .bar-item {
     @extend %barStyle;
   }
+
   .bar-text {
 
     &-sm {
@@ -156,7 +192,6 @@
 
 %barFlexStyle {
   @include mixins.justify_width(center);
-  min-height: 40px;
 
   .bar-item {
     position: relative;
@@ -164,6 +199,7 @@
     flex: 1;
     gap: 1px;
     text-align: center;
+    line-height: 1;
 
     .bar-text {
       display: block;
@@ -175,12 +211,11 @@
       &:before {
         content: '';
         position: absolute;
-        top: 50%;
+        top: 0;
+        bottom: 0;
         left: -1px;
         display: block;
         width: 1px;
-        height: 40px;
-        margin-top: -20px;
         background-color: variables.$colorGray30;
         vertical-align: top;
       }

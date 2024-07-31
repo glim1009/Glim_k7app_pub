@@ -13,7 +13,7 @@
                   </div>
                   <div class="ctitle-sm">의류 청바지</div>
                   <div class="box-info-desc">
-                    <span class="stext-sm fw-md">예약일시</span>
+                    <span class="title">예약일시</span>
                     <span class="stext-sm">2024.06.30 15:34</span>
                   </div>
                 </CtitleWrap>
@@ -39,7 +39,7 @@
                   </div>
                   <div class="ctitle-sm">의류 청바지</div>
                   <div class="box-info-desc">
-                    <span class="stext-sm fw-md">예약일시</span>
+                    <span class="title">예약일시</span>
                     <span class="stext-sm">2024.06.30 15:34</span>
                   </div>
                 </CtitleWrap>
@@ -64,7 +64,7 @@
                   </div>
                   <div class="ctitle-sm">의류 청바지</div>
                   <div class="box-info-desc">
-                    <span class="stext-sm fw-md">예약일시</span>
+                    <span class="title">예약일시</span>
                     <span class="stext-sm">2024.06.30 15:34</span>
                   </div>
                 </CtitleWrap>
@@ -86,7 +86,7 @@
                   </div>
                   <div class="ctitle-sm">의류 청바지</div>
                   <div class="box-info-desc">
-                    <span class="stext-sm fw-md">예약일시</span>
+                    <span class="title">예약일시</span>
                     <span class="stext-sm">2024.06.30 15:34</span>
                   </div>
                 </CtitleWrap>

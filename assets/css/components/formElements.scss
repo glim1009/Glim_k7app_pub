@@ -126,9 +126,6 @@
 }
 
 .valid-check {
-  .input-box {
-    border-color: variables.$colorRed100;
-  }
 
   .valid-desc {
     display: none;
@@ -138,6 +135,9 @@
   }
 
   &.fail {
+    .input-box {
+      border-color: variables.$colorRed100;
+    }
     .valid-desc {
       display: block;
     }

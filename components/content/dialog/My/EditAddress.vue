@@ -51,8 +51,8 @@
                       <div class="ctitle-xs">주소<span class="required"><span class="offscreen">필수입력</span></span></div>
                     </div>
                     <div class="flex-right">
-                      <ETBtn tag="button" size="xs">
-                        <EIco name="location" size="sm"></EIco>
+                      <ETBtn tag="button" size="xs" @click="openCurrentAddress">
+                        <EIco name="current-location" size="sm"></EIco>
                         <span class="text">현재 위치 주소에 추가</span>
                       </ETBtn>
                     </div>
@@ -61,7 +61,9 @@
                 <div class="form-cont">
                   <div class="form-input-group">
                     <EInputBox type="search" enterkeyhint="search" title="주소 검색" placeholder="주소를 검색해주세요." value="(04684) 서울 강동구 상암로 15길" readonly>
-                      <button type="button" class="btn-input-search"><span class="offscreen">검색</span></button>
+                      <button type="button" class="btn-input-search" @click="openSearchAddress">
+                        <span class="offscreen">검색</span>
+                      </button>
                     </EInputBox>
                     <EInputBox title="상세주소 입력" placeholder="상세주소 입력" value="101동 203호"/>
                   </div>
@@ -85,6 +87,14 @@
           </BtnWrap>
         </ContWrap>
       </div>
+
+      <!-- pop : 주소검색 -->
+      <PopMySearchAddress v-model:sta="popSearchAddress" />
+      <!-- // pop : 주소검색 -->
+
+      <!-- pop :현재 위치 주소 추가 -->
+      <PopMySearchAddress v-model:sta="popCurrentAddress" />
+      <!-- // pop :현재 위치 주소 추가 -->
     </template>
   </ContDialog>
 </template>
@@ -112,4 +122,12 @@ const isOpen = computed({
 const closeDialog = () => {
   isOpen.value = false;
 };
+
+// 주소검색 팝업
+const popSearchAddress = ref({ open: false });
+const openSearchAddress = () => popSearchAddress.value.open = true;
+
+// 현재 위치 주소 추가 팝업
+const popCurrentAddress = ref({ open: false });
+const openCurrentAddress = () => popCurrentAddress.value.open = true;
 </script>

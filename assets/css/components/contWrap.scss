@@ -4,14 +4,14 @@
 
 /* s: contWrap */
 
-$contType: ('gray', 'white', 'divier'); // white - bg-color: white, divider - 추후 추가 예정
-//$contDirsSize: ('zero', 'sm' , 'md', 'lg'); // zero - top/bottom: 0, sm - 10px , md - top: 20px/bottom: 30px, lg - top: 30px
+$contType: ('gray', 'white', 'divider'); // white - bg-color: white, divider - 추후 추가 예정
 $contDirsSize: ('zero': 0, 'sm' : 10px, 'md': 20px, 'lg': 30px);
 
-.container-wrapper:has(.cont-docker-wrap:last-child) {
-  .cont-wrap:nth-of-type(2) {
+
+.container-wrapper:has(.cont-docker-wrap) {
+  [class*="cont-"]:nth-of-type(2) {
     flex: 1 0 auto;
-    padding-bottom: #{variables.$contDockerHeight + 20px};
+    padding-bottom: #{variables.$contDockerHeight + 30px};
   }
 }
 
@@ -42,12 +42,15 @@ $contDirsSize: ('zero': 0, 'sm' : 10px, 'md': 20px, 'lg': 30px);
 @mixin cont_type_style($type: 'gray') {
   @if ($type == 'gray') {
     background-color: variables.$colorGray20;
-  } @else if ($type == 'white') {
+  }
+  @else if ($type == 'divider') {
     background-color: variables.$colorWhite;
-  } @else if ($type == 'divider') { /*추후 추가 예정 */
+    border-top: 20px solid variables.$colorGray20;
+  }
+  @else if ($type == 'white') {
+    background-color: variables.$colorWhite;
   }
 }
-
 
 @each $size, $px in $contDirsSize {
   // md 제외
@@ -60,7 +63,8 @@ $contDirsSize: ('zero': 0, 'sm' : 10px, 'md': 20px, 'lg': 30px);
           padding-top: $px;
           @include cont_type_style($type);
         }
-      } @else {
+      }
+      @else {
         .cont-#{$size}-wrap, .cont-#{$size}bz-wrap {
           @extend %contBoxCommon;
           padding-top: $px;

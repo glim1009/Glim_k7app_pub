@@ -63,7 +63,7 @@
             border-radius: 9px;
             background-color: #FF6C00;
             box-shadow: 0 2px 6px 0 rgba(255, 108, 0, .2);
-            @include mixins.font_size_2xs;
+            @include mixins.font_size_xs;
             color: variables.$colorWhite;
             vertical-align: top;
           }

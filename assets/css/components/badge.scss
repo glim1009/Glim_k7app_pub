@@ -9,7 +9,8 @@
   text-align: center;
   border: solid 1px transparent;
 
-  .text {
+  .text { // 뱃지 텍스트 공통
+    @include mixins.font_size_xs(sb);
     position: relative;
     display: inline-block;
     vertical-align: top;
@@ -19,24 +20,16 @@
 /* badge size */
 %badgeMd {
   @extend %badgeCommonStyle;
-  padding: 4px 8px;
+  padding: 1px 8px;
   height: 22px;
   border-radius: 11px;
-
-  .text {
-    @include mixins.font_size_2xs(sb, 12px);
-  }
 }
 
 %badgeSm {
   @extend %badgeCommonStyle;
-  padding: 3px 6px;
+  padding: 0 4px;
   height: 18px;
   border-radius: 9px;
-
-  .text {
-    @include mixins.font_size_2xs(sb, 10px);
-  }
 
   @include mixins.device_mobile_aos {
     padding-top: 2px;
@@ -126,8 +119,8 @@
 }
 
 %badgeGray {
-  background: variables.$colorGray70;
-  border-color: variables.$colorGray70;
+  background: variables.$colorGray80;
+  border-color: variables.$colorGray80;
 
   .text {
     color: variables.$colorWhite;
@@ -139,16 +132,16 @@
   border-color: variables.$colorGray20;
 
   .text {
-    color: variables.$colorGray70;
+    color: variables.$colorGray80;
   }
 }
 
 %badgeLineGray {
   background: variables.$colorWhite;
-  border-color: variables.$colorGray60;
+  border-color: variables.$colorGray80;
 
   .text {
-    color: variables.$colorGray60;
+    color: variables.$colorGray80;
   }
 }
 
@@ -320,19 +313,6 @@
     margin: {
       right: 4px;
       bottom: 4px;
-    }
-  }
-}
-
-.badge-sm-group {
-  @extend %badgeGroup;
-  margin-right: -2px;
-  margin-bottom: -2px;
-
-  [class^=badge-] {
-    margin: {
-      right: 2px;
-      bottom: 2px;
     }
   }
 }

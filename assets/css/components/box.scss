@@ -16,49 +16,48 @@
   &[class*=-xs-box] {
     padding: 10px;
     border-radius: 8px;
+    &.size-zero {
+      padding: {
+        left: 0;
+        right: 0;
+      }
+    }
   }
 
   &[class*=-sm-box] {
     padding: 12px;
+    &.size-zero {
+      padding: {
+        left: 0;
+        right: 0;
+      }
+    }
   }
 
   &[class*=-md-box] {
     padding: 16px;
+    &.size-zero {
+      padding: {
+        left: 0;
+        right: 0;
+      }
+    }
   }
 
   &[class*=-lg-box] {
     padding: 20px;
     border-radius: 15px;
+
+    &.size-zero {
+      padding: {
+        left: 0;
+        right: 0;
+      }
+    }
   }
 
   .box-info-header {
     width: 100%;
-
-    [class^=flex-][class*=group] {
-      .flex-left {
-        display: block;
-        font-size: 0;
-
-        .ctitle-sm-wrap {
-          [class^=ctitle] {
-            display: inline-block;
-            vertical-align: top;
-
-            ~ [class^=badge] {
-              margin-left: 6px;
-            }
-          }
-
-          ~ .bar-group {
-            margin-top: 0;
-          }
-        }
-      }
-
-      .flex-right {
-
-      }
-    }
   }
 }
 
@@ -94,11 +93,11 @@
 
 
 // 택배 임시 scss _LTK
-.light-gray-md-box, .white-md-box {
+.light-gray-lg-box, .white-lg-box {
 
   &.bg-normal-delivery, &.bg-kind-delivery {
     position: relative;
-    min-height: 138px;
+    padding-bottom: 90px !important;
 
     &:after {
       content: '';
@@ -114,13 +113,15 @@
 
   &.bg-kind-delivery {
     &:after {
-      @include mixins.ratio_images('~/assets/images/common/comm_ico_h60_kind_delivery');
+      //@include mixins.ratio_images('~/assets/images/common/comm_ico_h60_kind_delivery'); // TBD
+      @include mixins.ratio_images('~/assets/images/common/comm_ico_h60_TBD');
     }
   }
 
   &.bg-normal-delivery {
     &:after {
-      @include mixins.ratio_images('~/assets/images/common/comm_ico_h60_normal_delivery');
+      //@include mixins.ratio_images('~/assets/images/common/comm_ico_h60_normal_delivery'); // TBD
+      @include mixins.ratio_images('~/assets/images/common/comm_ico_h60_TBD');
     }
   }
 }

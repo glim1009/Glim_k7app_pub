@@ -195,7 +195,7 @@
     height: 18px;
     @include mixins.ratio_images('~/assets/images/common/comm_ico_check_green_sm');
 }
-.ico-location-sm {
+.ico-current-location-sm {
   @extend %icon;
   width: 18px;
   height: 18px;

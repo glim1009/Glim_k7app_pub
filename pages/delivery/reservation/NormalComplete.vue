@@ -20,11 +20,13 @@
       sub-desc="아래 예약번호를 꼭 기억해주세요.<br/>예약내역 관리 및 배송조회 시 사용됩니다."
     />
     <RowListWrap size="lg">
-      <ColorBox color="light-gray" size="lg">
-        <span class="stext-lg">예약번호 : 68429106806</span>
-        <EBtn color="line-light-gray" size="xs">
-          <span class="text">복사</span>
-        </EBtn>
+      <ColorBox color="light-gray" size="md" class="ta-center">
+        <div class="text-align-box">
+          <span class="stext-lg fc-gray90">예약번호 : 68429106806</span>
+          <EBtn color="line-light-gray" size="xs">
+            <span class="text">복사</span>
+          </EBtn>
+        </div>
       </ColorBox>
     </RowListWrap>
     <BtnWrap size="sm">
@@ -38,7 +40,7 @@
 <script setup lang="ts">
 definePageMeta({
   title: '일반 택배예약',
-  hideDocker: true,
+  layout: 'no-docker',
 });
 
 const isMember = ref(true);

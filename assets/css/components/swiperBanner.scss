@@ -4,7 +4,63 @@
 
 /* swiper banner */
 .swiper-banner-wrap {
+  position: relative;
   overflow: hidden;
   border-radius: 15px;
+
+  .swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: auto;
+    right: 10px;
+    width: auto;
+    height: 26px;
+    border-radius: 13px;
+    padding: 6px 10px;
+    background: rgba(variables.$colorBlack, 20%);
+    font-size: 0;
+    cursor: pointer;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      margin: {
+        top: 2px;
+        left: 4px;
+      }
+      @include mixins.ratio_images('~/assets/images/common/comm_ico_h8_swiper_more');
+    }
+
+    :deep(.swiper-pagination-current), :deep(.swiper-pagination-total) {
+      color: variables.$colorWhite;
+      @include mixins.font_size_xs;
+    }
+
+    :deep(.swiper-pagination-current) {
+
+    }
+
+    :deep(.swiper-pagination-total) {
+      position: relative;
+      opacity: 0.5;
+      padding-left: 10px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        left: 4px;
+        top: 50%;
+        margin-top: -1px;
+        width: 2px;
+        height: 2px;
+        border-radius: 2px;
+        background-color: variables.$colorWhite;
+      }
+    }
+  }
 }
+
 /* // swiper banner */

@@ -10,7 +10,7 @@
     width: 100%;
     padding-right: 28px;
 
-    .fold-title {
+    :deep(.fold-title) {
       width: 100%;
       color: variables.$colorBlack;
 
@@ -36,6 +36,16 @@
         height: 18px;
         vertical-align: top;
         @include mixins.ratio_images('~/assets/images/common/comm_ico_arwdown_black_sm');
+        @include mixins.prefix(transform, rotateZ(0));
+        @include mixins.prefix(transition, transform 0.25s 0.12s variables.$transEaseBounceBack);
+      }
+    }
+
+    &.is-active {
+      .btn-fold {
+        &:after {
+          @include mixins.prefix(transform, rotateZ(180deg));
+        }
       }
     }
   }
@@ -53,8 +63,13 @@
 .fold-box {
   .fold-header {
     .fold-title {
-      .goods {
-        @include mixins.font_size_3xl('sb');
+      padding-left: 5px;
+
+      :deep(.flex-right) {
+
+        :deep(.goods) {
+          @include mixins.font_size_3xl('sb');
+        }
       }
     }
   }
@@ -67,8 +82,8 @@
 }
 
 .fold-cont-box {
-  background-color: variables.$colorWhite;
   border-radius: 15px;
+  background-color: variables.$colorWhite;
 
   .fold-header {
     padding: 20px 48px 20px 20px;

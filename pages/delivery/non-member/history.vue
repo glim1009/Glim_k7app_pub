@@ -120,7 +120,7 @@
 <script setup lang="ts">
 definePageMeta({
   title: '비회원 예약내역',
-  hideDocker: true,
+  layout: 'no-docker',
 });
 </script>
 

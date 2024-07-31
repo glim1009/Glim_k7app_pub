@@ -46,88 +46,90 @@
                 </div>
                 <div class="form-cont">
                   <div class="form-input-group valid-check fail">
-                    <SwiperAutoWrap>
-                      <!-- 첨부파일 등록되지 않은 경우 -->
-                      <swiper-slide>
-                        <div class="attach-box">
-                          <input id="attach01" type="file" />
-                          <label for="attach01"><span class="offscreen">첨부파일 추가</span></label>
-                        </div>
-                      </swiper-slide>
-                      <!-- // 첨부파일 등록되지 않은 경우 -->
-                      <!-- 첨부파일 등록된 경우 -->
-                      <swiper-slide>
-                        <div class="attach-box">
-                          <input id="attach02" type="file" />
-                          <label for="attach02"><span class="offscreen">첨부파일 추가</span></label>
-                          <div class="attach-img-wrap">
-                            <div class="attach-img">
-                              <img src="/assets/images/temp/temp_attach_img_01.png" alt="임시 이미지" />
-                            </div>
-                            <button type="button" class="btn-remove">
-                              <EIco name="clear" size="sm">
-                                <span class="offscreen">첨부파일 삭제</span>
-                              </EIco>
-                            </button>
+                    <div class="attach-box-wrap">
+                      <SwiperAutoWrap>
+                        <!-- 첨부파일 등록되지 않은 경우 -->
+                        <swiper-slide>
+                          <div class="attach-box">
+                            <input id="attach01" type="file" />
+                            <label for="attach01"><span class="offscreen">첨부파일 추가</span></label>
                           </div>
-                        </div>
-                      </swiper-slide>
-                      <!-- // 첨부파일 등록된 경우 -->
-                      <!-- 첨부파일 등록된 경우 -->
-                      <swiper-slide>
-                        <div class="attach-box">
-                          <input id="attach03" type="file" />
-                          <label for="attach03"><span class="offscreen">첨부파일 추가</span></label>
-                          <div class="attach-img-wrap">
-                            <div class="attach-img">
-                              <img src="/assets/images/temp/temp_attach_img_01.png" alt="임시 이미지" />
+                        </swiper-slide>
+                        <!-- // 첨부파일 등록되지 않은 경우 -->
+                        <!-- 첨부파일 등록된 경우 -->
+                        <swiper-slide>
+                          <div class="attach-box">
+                            <input id="attach02" type="file" />
+                            <label for="attach02"><span class="offscreen">첨부파일 추가</span></label>
+                            <div class="attach-img-wrap">
+                              <div class="attach-img">
+                                <img src="/assets/images/temp/temp_attach_img_01.png" alt="임시 이미지" />
+                              </div>
+                              <button type="button" class="btn-remove">
+                                <EIco name="clear" size="sm">
+                                  <span class="offscreen">첨부파일 삭제</span>
+                                </EIco>
+                              </button>
                             </div>
-                            <button type="button" class="btn-remove">
-                              <EIco name="clear" size="sm">
-                                <span class="offscreen">첨부파일 삭제</span>
-                              </EIco>
-                            </button>
                           </div>
-                        </div>
-                      </swiper-slide>
-                      <!-- 첨부파일 등록된 경우 -->
-                      <!-- // 첨부파일 등록된 경우 -->
-                      <swiper-slide>
-                        <div class="attach-box">
-                          <input id="attach03" type="file" />
-                          <label for="attach03"><span class="offscreen">첨부파일 추가</span></label>
-                          <div class="attach-img-wrap">
-                            <div class="attach-img">
-                              <img src="/assets/images/temp/temp_attach_img_01.png" alt="임시 이미지" />
+                        </swiper-slide>
+                        <!-- // 첨부파일 등록된 경우 -->
+                        <!-- 첨부파일 등록된 경우 -->
+                        <swiper-slide>
+                          <div class="attach-box">
+                            <input id="attach03" type="file" />
+                            <label for="attach03"><span class="offscreen">첨부파일 추가</span></label>
+                            <div class="attach-img-wrap">
+                              <div class="attach-img">
+                                <img src="/assets/images/temp/temp_attach_img_01.png" alt="임시 이미지" />
+                              </div>
+                              <button type="button" class="btn-remove">
+                                <EIco name="clear" size="sm">
+                                  <span class="offscreen">첨부파일 삭제</span>
+                                </EIco>
+                              </button>
                             </div>
-                            <button type="button" class="btn-remove">
-                              <EIco name="clear" size="sm">
-                                <span class="offscreen">첨부파일 삭제</span>
-                              </EIco>
-                            </button>
                           </div>
-                        </div>
-                      </swiper-slide>
-                      <!-- // 첨부파일 등록된 경우 -->
-                      <!-- 첨부파일 등록된 경우 -->
-                      <swiper-slide>
-                        <div class="attach-box">
-                          <input id="attach03" type="file" />
-                          <label for="attach03"><span class="offscreen">첨부파일 추가</span></label>
-                          <div class="attach-img-wrap">
-                            <div class="attach-img">
-                              <img src="/assets/images/temp/temp_attach_img_01.png" alt="임시 이미지" />
+                        </swiper-slide>
+                        <!-- 첨부파일 등록된 경우 -->
+                        <!-- // 첨부파일 등록된 경우 -->
+                        <swiper-slide>
+                          <div class="attach-box">
+                            <input id="attach03" type="file" />
+                            <label for="attach03"><span class="offscreen">첨부파일 추가</span></label>
+                            <div class="attach-img-wrap">
+                              <div class="attach-img">
+                                <img src="/assets/images/temp/temp_attach_img_01.png" alt="임시 이미지" />
+                              </div>
+                              <button type="button" class="btn-remove">
+                                <EIco name="clear" size="sm">
+                                  <span class="offscreen">첨부파일 삭제</span>
+                                </EIco>
+                              </button>
                             </div>
-                            <button type="button" class="btn-remove">
-                              <EIco name="clear" size="sm">
-                                <span class="offscreen">첨부파일 삭제</span>
-                              </EIco>
-                            </button>
                           </div>
-                        </div>
-                      </swiper-slide>
-                      <!-- // 첨부파일 등록된 경우 -->
-                    </SwiperAutoWrap>
+                        </swiper-slide>
+                        <!-- // 첨부파일 등록된 경우 -->
+                        <!-- 첨부파일 등록된 경우 -->
+                        <swiper-slide>
+                          <div class="attach-box">
+                            <input id="attach03" type="file" />
+                            <label for="attach03"><span class="offscreen">첨부파일 추가</span></label>
+                            <div class="attach-img-wrap">
+                              <div class="attach-img">
+                                <img src="/assets/images/temp/temp_attach_img_01.png" alt="임시 이미지" />
+                              </div>
+                              <button type="button" class="btn-remove">
+                                <EIco name="clear" size="sm">
+                                  <span class="offscreen">첨부파일 삭제</span>
+                                </EIco>
+                              </button>
+                            </div>
+                          </div>
+                        </swiper-slide>
+                        <!-- // 첨부파일 등록된 경우 -->
+                      </SwiperAutoWrap>
+                    </div>
                     <p class="valid-desc">
                       사업자등록증 이미지를 입력해주세요.
                     </p>
@@ -157,9 +159,9 @@
 
 <script setup lang="ts">
 definePageMeta({
+  layout: 'no-docker',
   title: '사업자회원 증빙',
   hideRightHeader: ['home'],
-  hideDocker: false,
 });
 </script>
 

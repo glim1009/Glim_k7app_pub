@@ -390,25 +390,6 @@
     }
 }
 
-// 2xs - font-size: 10px
-@mixin font_size_2xs($type : 'body', $lineHeight : 'default') {
-    font-size: variables.$fontSize2Xs;
-    line-height: variables.$fontSize2XsLineHeight;
-    letter-spacing: variables.$letterSpacing;
-
-    @if ($type == 'sb') {
-        font-weight: variables.$fontWeightSemibold;
-    } @else if ($type == 'md') {
-        font-weight: variables.$fontWeightMedium;
-    } @else if ($type == 'body') {
-        font-weight: variables.$fontWeightRegular;
-    }
-
-    @if not($lineHeight == 'default') {
-        line-height: $lineHeight;
-    }
-}
-
 // size : breakpoint mobile
 @mixin size_wrap_width {
     width: 100%;

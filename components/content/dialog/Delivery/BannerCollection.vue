@@ -6,30 +6,46 @@
     <template #body>
       <div class="dialog-inner">
         <ContWrap>
-          <RowListWrap gap="lg">
-            <li class="item">
-              <div style="height: 90px; background: rgba(255, 0, 0, .1);">컨텐츠 영역 확인을 위한 임시 div 입니다.</div>
+          <RowListWrap gap="md">
+            <li class="item-banner">
+              <div class="thumb-box">
+                <img src="/assets/images/temp/temp_banner_marketing_1.png" alt="배너 이미지">
+              </div>
             </li>
-            <li class="item">
-              <div style="height: 90px; background: rgba(255, 0, 0, .1);">컨텐츠 영역 확인을 위한 임시 div 입니다.</div>
+            <li class="item-banner">
+              <div class="thumb-box">
+                <img src="/assets/images/temp/temp_banner_marketing_2.png" alt="배너 이미지">
+              </div>
             </li>
-            <li class="item">
-              <div style="height: 90px; background: rgba(255, 0, 0, .1);">컨텐츠 영역 확인을 위한 임시 div 입니다.</div>
+            <li class="item-banner">
+              <div class="thumb-box">
+                <img src="/assets/images/temp/temp_banner_marketing_1.png" alt="배너 이미지">
+              </div>
             </li>
-            <li class="item">
-              <div style="height: 90px; background: rgba(255, 0, 0, .1);">컨텐츠 영역 확인을 위한 임시 div 입니다.</div>
+            <li class="item-banner">
+              <div class="thumb-box">
+                <img src="/assets/images/temp/temp_banner_marketing_2.png" alt="배너 이미지">
+              </div>
             </li>
-            <li class="item">
-              <div style="height: 90px; background: rgba(255, 0, 0, .1);">컨텐츠 영역 확인을 위한 임시 div 입니다.</div>
+            <li class="item-banner">
+              <div class="thumb-box">
+                <img src="/assets/images/temp/temp_banner_marketing_1.png" alt="배너 이미지">
+              </div>
             </li>
-            <li class="item">
-              <div style="height: 90px; background: rgba(255, 0, 0, .1);">컨텐츠 영역 확인을 위한 임시 div 입니다.</div>
+            <li class="item-banner">
+              <div class="thumb-box">
+                <img src="/assets/images/temp/temp_banner_marketing_2.png" alt="배너 이미지">
+              </div>
             </li>
-            <li class="item">
-              <div style="height: 90px; background: rgba(255, 0, 0, .1);">컨텐츠 영역 확인을 위한 임시 div 입니다.</div>
+            <li class="item-banner">
+              <div class="thumb-box">
+                <img src="/assets/images/temp/temp_banner_marketing_1.png" alt="배너 이미지">
+              </div>
             </li>
-            <li class="item">
-              <div style="height: 90px; background: rgba(255, 0, 0, .1);">컨텐츠 영역 확인을 위한 임시 div 입니다.</div>
+            <li class="item-banner">
+              <div class="thumb-box">
+                <img src="/assets/images/temp/temp_banner_marketing_2.png" alt="배너 이미지">
+              </div>
             </li>
           </RowListWrap>
         </ContWrap>
@@ -62,3 +78,7 @@ const closeDialog = () => {
   isOpen.value = false;
 };
 </script>
+
+<style lang="scss" scoped>
+@import url('assets/css/pages/delivery/delivery.scss');
+</style>

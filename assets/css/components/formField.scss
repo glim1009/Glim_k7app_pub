@@ -4,12 +4,15 @@
 
 .form-field {
   .form-title {
-    .ftitle {
-      @include mixins.font_size_lg('heading');
+    .ctitle-xs {
+      color: variables.$colorGray90;
     }
 
-    .stext-sm {
-      margin-top: 6px;
+    .stext {
+      margin-top: 4px;
+    }
+    .stext-lg {
+      margin-top: 4px;
     }
   }
 

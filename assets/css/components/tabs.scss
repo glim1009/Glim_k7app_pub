@@ -113,15 +113,12 @@
   .swiper-auto-line-wrap {
     .swiper-wrapper {
       position: relative;
-      padding: 0 20px;
-
-      &:after {
-      }
+      padding: 0 5px;
     }
 
     .tab-item {
       .tab-link {
-        padding: 14px 14px 13px;
+        padding: 14px 15px 13px;
 
         .tab-text {
           @include mixins.font_size_xl;
@@ -194,25 +191,5 @@
   }
 }
 
-%swiperCommon {
-  position: relative;
-  overflow: hidden;
-
-  .swiper-slide {
-    width: auto;
-    font-size: 0;
-  }
-}
-
-/* swiper */
-.swiper-auto-wrap {
-  @extend %swiperCommon;
-}
-.swiper-auto-line-wrap {
-  @extend %swiperCommon;
-}
-.swiper-auto-bar-wrap {
-  @extend %swiperCommon;
-}
 
 /* E: tabWrap */

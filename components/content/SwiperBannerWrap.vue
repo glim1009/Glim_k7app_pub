@@ -1,7 +1,7 @@
 <template>
   <div class="swiper-banner-wrap">
     <Swiper
-        :modules="[SwiperEffectFade]"
+        :modules="[SwiperEffectFade, SwiperPagination]"
         :effect="'fade'"
         :slides-per-view="1"
         :resistance="true"
@@ -13,15 +13,20 @@
         :all-touch-move="true"
         :touch-start-force-prevent-default="true"
         :touch-release-on-edgeds="true"
+        :pagination="{
+        type: 'fraction',
+        el: '.swiper-pagination',
+      }"
     >
       <slot/>
+      <div class="swiper-pagination" @click="$emit('click-emit')"></div>
     </Swiper>
   </div>
 </template>
 
 <script setup lang="ts">
-import Swiper from 'swiper';
-import { EffectFade } from 'swiper/modules';
+import {EffectFade} from 'swiper/modules';
+const emit = defineEmits(['click-emit']);
 
 const SwiperEffectFade = EffectFade;
 
