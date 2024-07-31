@@ -9,7 +9,7 @@
             <span class="text">주소지 추가</span>
           </EBtn>
           <ETBtn tag="button" size="xs" @click="openAddAddress">
-            <EIco name="location" size="sm"></EIco>
+            <EIco name="current-location" size="sm"></EIco>
             <span class="text">현재 위치 주소에 추가</span>
           </ETBtn>
         </BtnWrap>
@@ -182,7 +182,7 @@
               <span class="text">주소지 추가</span>
             </EBtn>
             <ETBtn tag="button" size="xs">
-              <EIco name="location" size="sm"></EIco>
+              <EIco name="current-location" size="sm"></EIco>
               <span class="text">현재 위치 주소에 추가</span>
             </ETBtn>
           </BtnWrap>

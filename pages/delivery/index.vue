@@ -81,7 +81,7 @@
             <span class="text">이용안내</span>
           </EBtn>
           <EBtn color="line-light-gray" @click="openSearchAvailableShop">
-            <EIco name="location" size="sm" />
+            <EIco name="current-location" size="sm" />
             <span class="text">이용가능매장</span>
           </EBtn>
         </BtnWrap>

@@ -62,7 +62,7 @@
                           <label for="attach02"><span class="offscreen">첨부파일 추가</span></label>
                           <div class="attach-img-wrap">
                             <div class="attach-img">
-                              <img src="../../assets/images/temp/temp_attach_img_01.png" alt="임시 이미지" />
+                              <img src="/assets/images/temp/temp_attach_img_01.png" alt="임시 이미지" />
                             </div>
                             <button type="button" class="btn-remove">
                               <EIco name="clear" size="sm">
@@ -80,7 +80,7 @@
                           <label for="attach03"><span class="offscreen">첨부파일 추가</span></label>
                           <div class="attach-img-wrap">
                             <div class="attach-img">
-                              <img src="../../assets/images/temp/temp_attach_img_01.png" alt="임시 이미지" />
+                              <img src="/assets/images/temp/temp_attach_img_01.png" alt="임시 이미지" />
                             </div>
                             <button type="button" class="btn-remove">
                               <EIco name="clear" size="sm">
@@ -98,7 +98,7 @@
                           <label for="attach03"><span class="offscreen">첨부파일 추가</span></label>
                           <div class="attach-img-wrap">
                             <div class="attach-img">
-                              <img src="../../assets/images/temp/temp_attach_img_01.png" alt="임시 이미지" />
+                              <img src="/assets/images/temp/temp_attach_img_01.png" alt="임시 이미지" />
                             </div>
                             <button type="button" class="btn-remove">
                               <EIco name="clear" size="sm">
@@ -116,7 +116,7 @@
                           <label for="attach03"><span class="offscreen">첨부파일 추가</span></label>
                           <div class="attach-img-wrap">
                             <div class="attach-img">
-                              <img src="../../assets/images/temp/temp_attach_img_01.png" alt="임시 이미지" />
+                              <img src="/assets/images/temp/temp_attach_img_01.png" alt="임시 이미지" />
                             </div>
                             <button type="button" class="btn-remove">
                               <EIco name="clear" size="sm">
