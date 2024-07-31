@@ -20,25 +20,15 @@
 </template>
 
 <script setup lang="ts">
+import Swiper from 'swiper';
 import { EffectFade } from 'swiper/modules';
 
 const SwiperEffectFade = EffectFade;
-/*
-const props = withDefaults(defineProps<{
-  type?: 'line' | 'bar';
-  gap? : number;
-}>(), {
-  gap: 6
-});
-*/
-
-/*const className = computed(() => {
-  let cNm = 'swiper-auto';
-  if( props.type ) cNm += '-' + props.type;
-  cNm += '-wrap';
-  return cNm;
-});*/
 
 </script>
+
+<style lang="scss" scoped>
+@import url('/assets/css/components/swiperBanner.scss');
+</style>
 
 

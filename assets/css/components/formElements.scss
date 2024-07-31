@@ -249,8 +249,8 @@
 }
 
 // default
-.ui-md-chk,
-.ui-md-rdo {
+.ui-chk,
+.ui-rdo {
   @extend %rdoChkReset;
   min-height: 20px;
 
@@ -274,7 +274,7 @@
         -webkit-box-sizing: border-box;
       }
 
-      .text , .text-lg, .text-xl{
+      .text-md , .text-lg, .text-xl{
         display: inline-block;
         margin: {
           top: 1px;
@@ -284,7 +284,7 @@
         color: variables.$colorBlack;
         vertical-align: top;
       }
-      .text { // 13px
+      .text-md { // 13px
         @include mixins.font_size_md('md', 18px);
       }
       .text-lg { // 14px
@@ -315,7 +315,7 @@
 }
 
 /* radio */
-.ui-md-rdo {
+.ui-rdo {
   input {
     & + label {
       &:before, &:after {
@@ -363,7 +363,7 @@
 
 
 /* checkbox */
-.ui-md-chk {
+.ui-chk {
   input {
     & + label {
       &:before {

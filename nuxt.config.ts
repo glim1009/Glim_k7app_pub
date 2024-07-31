@@ -28,6 +28,7 @@ export default defineNuxtConfig({
   },
 
   devtools: {enabled: true},
+
   modules: [
     '@nuxtjs/tailwindcss',
     'shadcn-nuxt',
@@ -87,4 +88,5 @@ export default defineNuxtConfig({
   ],
 
   ssr: false,
+  compatibilityDate: '2024-07-31',
 });

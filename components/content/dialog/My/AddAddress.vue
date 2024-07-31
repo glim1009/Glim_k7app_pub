@@ -67,9 +67,9 @@
                     <EInputBox title="상세주소 입력" placeholder="상세주소 입력" />
                   </div>
                   <RowListWrap gap="sm">
-                    <div class="ui-md-chk">
+                    <div class="ui-chk">
                       <input type="checkbox" id="demoChk01">
-                      <label for="demoChk01"><span class="text">기본주소지로 설정</span></label>
+                      <label for="demoChk01"><span class="text-md">기본주소지로 설정</span></label>
                     </div>
                   </RowListWrap>
                 </div>

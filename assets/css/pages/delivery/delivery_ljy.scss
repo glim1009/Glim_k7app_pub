@@ -252,11 +252,11 @@
     padding: 10px 0;
 
     .flex-center-group {
-     .flex-right {
-       .btn-line-light-gray-xs {
-         margin-left: 10px;
-       }
-     }
+      .flex-right {
+        .btn-line-light-gray-xs {
+          margin-left: 10px;
+        }
+      }
     }
 
     .pay-discount-box {
@@ -289,6 +289,14 @@
 
   .item-order-pay {
     padding: 16px 0;
+
+    .ui-rdo {
+      width: 100%;
+
+      input + label {
+        width: 100%;
+      }
+    }
 
     .order-pay-cont {
       margin-top: 16px;

@@ -1,0 +1,10 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+/* swiper banner */
+.swiper-banner-wrap {
+  overflow: hidden;
+  border-radius: 15px;
+}
+/* // swiper banner */

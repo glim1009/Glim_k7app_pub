@@ -1,9 +1,9 @@
 <template>
   <NuxtLink v-if="tag === 'a'" :to="to" :class="className">
-    <slot></slot>
+    <slot />
   </NuxtLink>
-  <component :is="tag" v-else :class="className">
-    <slot></slot>
+  <component v-else :is="tag" :class="className">
+    <slot />
   </component>
 </template>
 
@@ -21,11 +21,9 @@ const props = withDefaults(defineProps<{
 
 const className = computed(() => {
   let cNm = 'tbtn';
-  if (props.name)
-    cNm += `-${props.name}`;
-  if (props.color)
-    cNm += `-${props.color}`; // color 지정 안했을때 X
-  cNm += `-${props.size}`;
+  if(props.name) cNm += '-' + props.name;
+  if(props.color) cNm += '-' + props.color; // color 지정 안했을때 X
+  cNm += '-' + props.size;
   return cNm;
 });
 </script>

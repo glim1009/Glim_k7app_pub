@@ -76,3 +76,13 @@
   }
 }
 
+// goods ~ goods 사이 여백
+.tbl-info-md, .tbl-row {
+  td {
+    [class^=goods] {
+      + [class^=goods] {
+        margin-left: 4px;
+      }
+    }
+  }
+}

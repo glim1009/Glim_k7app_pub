@@ -22,7 +22,8 @@
       @include mixins.justify_width(stretch, start, column);
       row-gap: 6px;
 
-      .input-guide {
+      .input-guide,
+      .valid-desc {
         margin-top: -2px;
       }
     }

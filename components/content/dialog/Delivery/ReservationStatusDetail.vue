@@ -43,22 +43,22 @@
                     <col style="width: auto;">
                   </colgroup>
                   <tbody>
-                  <tr>
-                    <th scope="row">결제금액</th>
-                    <td>3,400원</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">예약일시</th>
-                    <td>2024.06.15 15:32</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">물품금액</th>
-                    <td>5만원</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">배송상품</th>
-                    <td>의류</td>
-                  </tr>
+                    <tr>
+                      <th scope="row">결제금액</th>
+                      <td>3,400원</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">예약일시</th>
+                      <td>2024.06.15 15:32</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">물품금액</th>
+                      <td>5만원</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">배송상품</th>
+                      <td>의류</td>
+                    </tr>
                   </tbody>
                 </TableWrap>
               </ColorBox>
@@ -71,22 +71,22 @@
                     <col style="width: auto;">
                   </colgroup>
                   <tbody>
-                  <tr>
-                    <th scope="row">보내는 분</th>
-                    <td>홍*동</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">휴대폰번호</th>
-                    <td>010-6548-7742</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">주소(반송처)</th>
-                    <td>서울시 중구 충무로 23가길 ***<br>***동 ****호</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">접수매장</th>
-                    <td>세븐일레븐 을지로점</td>
-                  </tr>
+                    <tr>
+                      <th scope="row">보내는 분</th>
+                      <td>홍*동</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">휴대폰번호</th>
+                      <td>010-6548-7742</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">주소(반송처)</th>
+                      <td>서울시 중구 충무로 23가길 ***<br>***동 ****호</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">접수매장</th>
+                      <td>세븐일레븐 을지로점</td>
+                    </tr>
                   </tbody>
                 </TableWrap>
               </ColorBox>
@@ -99,22 +99,22 @@
                     <col style="width: auto;">
                   </colgroup>
                   <tbody>
-                  <tr>
-                    <th scope="row">받는 분</th>
-                    <td>김*븐</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">휴대폰번호</th>
-                    <td>010-1234-5678</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">주소(반송처)</th>
-                    <td>서울시 중구 충무로 23가길 234<br>127동 2301호</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">수령매장</th>
-                    <td>세븐일레븐 광화문점</td>
-                  </tr>
+                    <tr>
+                      <th scope="row">받는 분</th>
+                      <td>김*븐</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">휴대폰번호</th>
+                      <td>010-1234-5678</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">주소(반송처)</th>
+                      <td>서울시 중구 충무로 23가길 234<br>127동 2301호</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">수령매장</th>
+                      <td>세븐일레븐 광화문점</td>
+                    </tr>
                   </tbody>
                 </TableWrap>
               </ColorBox>
@@ -152,5 +152,5 @@ const closeDialog = () => {
 </script>
 
 <style lang="scss" scoped>
-@import url('/assets/css/pages/delivery/delivery.scss');
+  @import url('/assets/css/pages/delivery/delivery.scss');
 </style>

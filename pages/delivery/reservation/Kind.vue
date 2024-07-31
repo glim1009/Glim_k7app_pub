@@ -77,28 +77,41 @@
                       </div>
                     </div>
                     <div class="form-cont">
-                      <div class="form-input-group">
-                        <EInputBox title="물품금액 입력" type="number" placeholder="숫자만 입력해주세요. (ex.7)">
+                      <div class="form-input-group valid-check fail">
+                        <EInputBox title="물품금액 입력" type="number" placeholder="숫자만 입력해주세요. (ex.7)" maxlength="3">
                           <span class="unit">만원</span>
                         </EInputBox>
+                        <div class="valid-desc">
+                          물품금액을 입력해주세요.
+                        </div>
                       </div>
-                      <BtnWrap type="auto">
-                        <EBtn color="light-gray" size="xs">
-                          <span class="text">1만원</span>
-                        </EBtn>
-                        <EBtn color="light-gray" size="xs">
-                          <span class="text">3만원</span>
-                        </EBtn>
-                        <EBtn color="light-gray" size="xs">
-                          <span class="text">5만원</span>
-                        </EBtn>
-                        <EBtn color="light-gray" size="xs">
-                          <span class="text">10만원</span>
-                        </EBtn>
-                        <EBtn color="light-gray" size="xs">
-                          <span class="text">50만원</span>
-                        </EBtn>
-                      </BtnWrap>
+                      <SwiperAutoWrap gap="6">
+                        <swiper-slide>
+                          <EBtn color="light-gray" size="xs">
+                            <span class="text">1만원</span>
+                          </EBtn>
+                        </swiper-slide>
+                        <swiper-slide>
+                          <EBtn color="light-gray" size="xs">
+                            <span class="text">3만원</span>
+                          </EBtn>
+                        </swiper-slide>
+                        <swiper-slide>
+                          <EBtn color="light-gray" size="xs">
+                            <span class="text">5만원</span>
+                          </EBtn>
+                        </swiper-slide>
+                        <swiper-slide>
+                          <EBtn color="light-gray" size="xs">
+                            <span class="text">10만원</span>
+                          </EBtn>
+                        </swiper-slide>
+                        <swiper-slide>
+                          <EBtn color="light-gray" size="xs">
+                            <span class="text">50만원</span>
+                          </EBtn>
+                        </swiper-slide>
+                      </SwiperAutoWrap>
                       <RowListWrap gap="sm">
                         <li class="dot-text">
                           50만원 초과할 경우 소정의 할증운임을 받습니다.
@@ -121,10 +134,13 @@
                       </div>
                     </div>
                     <div class="form-cont">
-                      <div class="form-input-group">
+                      <div class="form-input-group valid-check fail">
                         <EInputBox title="물품명 입력" type="text" placeholder="물품명을 입력해주세요.(ex.청바지)" />
                         <div class="input-guide">
                           최대 10자만 입력하실 수 있습니다.
+                        </div>
+                        <div class="valid-desc">
+                          물품명을 입력해주세요.
                         </div>
                       </div>
                     </div>
@@ -155,7 +171,12 @@
                       </div>
                     </div>
                     <div class="form-cont">
-                      <EInputBox title="이름 입력" placeholder="이름을 입력해주세요." />
+                      <div class="form-input-group valid-check">
+                        <EInputBox title="이름 입력" placeholder="이름을 입력해주세요." />
+                        <div class="valid-desc">
+                          이름을 입력해주세요.
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </li>
@@ -196,18 +217,21 @@
                       </FlexGroup>
                     </div>
                     <div class="form-cont">
-                      <div class="form-input-group">
+                      <div class="form-input-group valid-check fail">
                         <EInputBox type="search" enterkeyhint="search" title="주소 검색" placeholder="주소를 검색해보세요." readonly>
                           <button type="button" class="btn-input-search">
                             <span class="offscreen">검색</span>
                           </button>
                         </EInputBox>
                         <EInputBox title="상세주소 입력" placeholder="상세주소 입력" />
+                        <div class="valid-desc">
+                          주소를 검색해주세요.
+                        </div>
                       </div>
                       <RowListWrap gap="sm">
-                        <span class="ui-md-chk">
+                        <span class="ui-chk">
                           <input id="formChk01" type="checkbox" />
-                          <label for="formChk01"><span class="text">기본주소지와 동일</span></label>
+                          <label for="formChk01"><span class="text-md">기본주소지와 동일</span></label>
                         </span>
                       </RowListWrap>
                     </div>
@@ -230,18 +254,20 @@
                       </FlexGroup>
                     </div>
                     <div class="form-cont">
-                      <div class="form-input-group">
-                        <EInputBox type="search" enterkeyhint="search" title="주소 검색" placeholder="주소를 검색해보세요." readonly>
+                      <div class="form-input-group valid-check fail">
+                        <EInputBox type="search" enterkeyhint="search" title="주소 검색" placeholder="매장을 검색해보세요." readonly>
                           <button type="button" class="btn-input-search">
                             <span class="offscreen">검색</span>
                           </button>
                         </EInputBox>
-                        <EInputBox title="상세주소 입력" placeholder="상세주소 입력" />
+                        <div class="valid-desc">
+                          매장을 검색해주세요.
+                        </div>
                       </div>
                       <RowListWrap gap="sm">
-                        <span class="ui-md-chk">
+                        <span class="ui-chk">
                           <input id="formChk02" type="checkbox" />
-                          <label for="formChk02"><span class="text">단골매장 저장</span></label>
+                          <label for="formChk02"><span class="text-md">단골매장 저장</span></label>
                         </span>
                       </RowListWrap>
                     </div>
@@ -272,7 +298,12 @@
                       </div>
                     </div>
                     <div class="form-cont">
-                      <EInputBox title="이름 입력" placeholder="이름을 입력해주세요." />
+                      <div class="form-input-group valid-check fail">
+                        <EInputBox title="이름 입력" placeholder="이름을 입력해주세요." />
+                        <div class="valid-desc">
+                          이름을 검색해주세요.
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </li>
@@ -294,7 +325,85 @@
                           <span class="unit">05:34</span>
                         </EInputBox>
                         <BtnWrap>
+                          <EBtn color="line-green" size="md" disabled>
+                            <span class="text">인증하기</span>
+                          </EBtn>
+                        </BtnWrap>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="item-form">
+                  <div class="form-field">
+                    <div class="form-title">
+                      <div class="ctitle-xs">
+                        휴대폰번호<span class="required"><span class="offscreen">필수입력</span></span>
+                      </div>
+                    </div>
+                    <div class="form-cont">
+                      <div class="form-input-group">
+                        <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호를 입력해주세요." value="01012345678" disabled>
+                          <EBtn color="line-light-gray" size="xs">
+                            <span class="text">재발송</span>
+                          </EBtn>
+                        </EInputBox>
+                        <EInputBox title="인증번호 입력" type="number" placeholder="인증번호를 입력해주세요.">
+                          <span class="unit fc-red">05:34</span>
+                        </EInputBox>
+                        <BtnWrap>
+                          <EBtn color="line-green" size="md" disabled>
+                            <span class="text">인증하기</span>
+                          </EBtn>
+                        </BtnWrap>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="item-form">
+                  <div class="form-field">
+                    <div class="form-title">
+                      <div class="ctitle-xs">
+                        휴대폰번호<span class="required"><span class="offscreen">필수입력</span></span>
+                      </div>
+                    </div>
+                    <div class="form-cont">
+                      <div class="form-input-group">
+                        <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호를 입력해주세요." value="01012345678" disabled>
+                          <EBtn color="line-light-gray" size="xs">
+                            <span class="text">재발송</span>
+                          </EBtn>
+                        </EInputBox>
+                        <EInputBox title="인증번호 입력" type="number" placeholder="인증번호를 입력해주세요." value="12345">
+                          <span class="unit">05:34</span>
+                        </EInputBox>
+                        <BtnWrap>
                           <EBtn color="line-green" size="md">
+                            <span class="text">인증하기</span>
+                          </EBtn>
+                        </BtnWrap>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="item-form">
+                  <div class="form-field">
+                    <div class="form-title">
+                      <div class="ctitle-xs">
+                        휴대폰번호<span class="required"><span class="offscreen">필수입력</span></span>
+                      </div>
+                    </div>
+                    <div class="form-cont">
+                      <div class="form-input-group">
+                        <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호를 입력해주세요." value="01012341234">
+                          <EBtn color="line-light-gray" size="xs">
+                            <span class="text">재발송</span>
+                          </EBtn>
+                        </EInputBox>
+                        <EInputBox title="인증번호 입력" type="number" placeholder="인증번호를 입력해주세요." value="12345">
+                          <span class="unit">00:00</span>
+                        </EInputBox>
+                        <BtnWrap>
+                          <EBtn color="line-green" size="md" disabled>
                             <span class="text">인증하기</span>
                           </EBtn>
                         </BtnWrap>
@@ -310,16 +419,19 @@
                       </div>
                     </div>
                     <div class="form-cont">
-                      <div class="form-input-group">
+                      <div class="form-input-group valid-check fail">
                         <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호를 입력해주세요." />
                         <div class="input-guide">
                           공백 없이 숫자만 입력해 주세요.
                         </div>
+                        <div class="valid-desc">
+                          휴대폰번호를 입력해주세요.
+                        </div>
                       </div>
                       <RowListWrap gap="sm">
-                        <span class="ui-md-chk">
-                          <input id="formChk03" type="checkbox" />
-                          <label for="formChk03"><span class="text">휴대폰번호와 동일</span></label>
+                        <span class="ui-chk">
+                          <input id="demoChk01" type="checkbox" />
+                          <label for="demoChk01"><span class="text-md">휴대폰번호와 동일</span></label>
                         </span>
                       </RowListWrap>
                     </div>
@@ -333,46 +445,15 @@
                       </div>
                     </div>
                     <div class="form-cont">
-                      <div class="form-input-group">
+                      <div class="form-input-group valid-check fail">
                         <EInputBox title="예약 비밀번호 입력" type="number" placeholder="예약 비밀번호를 입력해주세요." />
                         <div class="input-guide">
                           숫자 4-8자로 입력해주세요.
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="item-form">
-                  <div class="form-field">
-                    <div class="form-title">
-                      <FlexGroup align="end">
-                        <div class="flex-left">
-                          <div class="ctitle-xs">
-                            주소(반송처)<span class="required"><span class="offscreen">필수입력</span></span>
-                          </div>
+                        <div class="valid-desc">
+                          예약 비밀번호를 입력해주세요.
                         </div>
-                        <div class="flex-right">
-                          <EBtn size="xs" color="line-light-gray" disabled>
-                            <span class="text">주소록 불러오기</span>
-                          </EBtn>
-                        </div>
-                      </FlexGroup>
-                    </div>
-                    <div class="form-cont">
-                      <div class="form-input-group">
-                        <EInputBox type="search" enterkeyhint="search" title="주소 검색" placeholder="주소를 검색해보세요." readonly>
-                          <button type="button" class="btn-input-search">
-                            <span class="offscreen">검색</span>
-                          </button>
-                        </EInputBox>
-                        <EInputBox title="상세주소 입력" placeholder="상세주소 입력" />
                       </div>
-                      <RowListWrap gap="sm">
-                        <span class="ui-md-chk">
-                          <input id="formChk04" type="checkbox" disabled />
-                          <label for="formChk04"><span class="text">기본주소지와 동일</span></label>
-                        </span>
-                      </RowListWrap>
                     </div>
                   </div>
                 </li>
@@ -386,24 +467,27 @@
                           </div>
                         </div>
                         <div class="flex-right">
-                          <EBtn size="xs" color="line-light-gray" disabled>
+                          <EBtn size="xs" color="line-light-gray">
                             <span class="text">단골매장 불러오기</span>
                           </EBtn>
                         </div>
                       </FlexGroup>
                     </div>
                     <div class="form-cont">
-                      <div class="form-input-group">
-                        <EInputBox type="search" enterkeyhint="search" title="매장 검색" placeholder="매장을 검색해보세요." readonly>
+                      <div class="form-input-group valid-check fail">
+                        <EInputBox type="search" enterkeyhint="search" title="주소 검색" placeholder="매장을 검색해보세요." readonly>
                           <button type="button" class="btn-input-search">
                             <span class="offscreen">검색</span>
                           </button>
                         </EInputBox>
+                        <div class="valid-desc">
+                          매장을 검색해주세요.
+                        </div>
                       </div>
                       <RowListWrap gap="sm">
-                        <span class="ui-md-chk">
-                          <input id="formChk04" type="checkbox" disabled />
-                          <label for="formChk04"><span class="text">단골매장 저장</span></label>
+                        <span class="ui-chk">
+                          <input id="formChk02" type="checkbox" />
+                          <label for="formChk02"><span class="text-md">단골매장 저장</span></label>
                         </span>
                       </RowListWrap>
                     </div>
@@ -434,7 +518,12 @@
                       </div>
                     </div>
                     <div class="form-cont">
-                      <EInputBox title="이름 입력" placeholder="이름을 입력해주세요." />
+                      <div class="form-input-group valid-check fail">
+                        <EInputBox title="이름 입력" placeholder="이름을 입력해주세요." />
+                        <p class="valid-desc">
+                          이름을 입력해주세요
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </li>
@@ -446,11 +535,14 @@
                       </div>
                     </div>
                     <div class="form-cont">
-                      <div class="form-input-group">
+                      <div class="form-input-group valid-check fail">
                         <EInputBox title="휴대폰번호 입력" type="number" placeholder="휴대폰번호를 입력해주세요." />
                         <div class="input-guide">
                           공백 없이 숫자만 입력해 주세요.
                         </div>
+                        <p class="valid-desc">
+                          휴대폰번호를 입력해주세요
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -463,12 +555,15 @@
                       </div>
                     </div>
                     <div class="form-cont">
-                      <div class="form-input-group">
+                      <div class="form-input-group valid-check fail">
                         <EInputBox type="search" enterkeyhint="search" title="매장 검색" placeholder="매장을 검색해보세요." readonly>
                           <button type="button" class="btn-input-search">
                             <span class="offscreen">검색</span>
                           </button>
                         </EInputBox>
+                        <p class="valid-desc">
+                          매장을 입력해주세요.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -505,7 +600,12 @@
                             </div>
                           </div>
                           <div class="form-cont">
-                            <EInputBox title="이름 입력" placeholder="이름을 입력해주세요." />
+                            <div class="form-input-group valid-check fail">
+                              <EInputBox title="이름 입력" placeholder="이름을 입력해주세요." />
+                              <p class="valid-desc">
+                                이름을 입력해주세요.
+                              </p>
+                            </div>
                           </div>
                         </div>
                       </li>
@@ -517,11 +617,14 @@
                             </div>
                           </div>
                           <div class="form-cont">
-                            <div class="form-input-group">
+                            <div class="form-input-group valid-check fail">
                               <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호를 입력해주세요." />
                               <div class="input-guide">
                                 공백 없이 숫자만 입력해 주세요.
                               </div>
+                              <p class="valid-desc">
+                                휴대폰번호를 입력해주세요.
+                              </p>
                             </div>
                           </div>
                         </div>
@@ -534,12 +637,15 @@
                             </div>
                           </div>
                           <div class="form-cont">
-                            <div class="form-input-group">
+                            <div class="form-input-group valid-check fail">
                               <EInputBox type="search" enterkeyhint="search" title="매장 검색" placeholder="매장을 검색해보세요." readonly>
                                 <button type="button" class="btn-input-search">
                                   <span class="offscreen">검색</span>
                                 </button>
                               </EInputBox>
+                              <p class="valid-desc">
+                                매장을 입력해주세요.
+                              </p>
                             </div>
                           </div>
                         </div>
@@ -577,7 +683,12 @@
                             </div>
                           </div>
                           <div class="form-cont">
-                            <EInputBox title="이름 입력" placeholder="이름을 입력해주세요." />
+                            <div class="form-input-group valid-check fail">
+                              <EInputBox title="이름 입력" placeholder="이름을 입력해주세요." />
+                              <p class="valid-desc">
+                                주소를 입력해주세요.
+                              </p>
+                            </div>
                           </div>
                         </div>
                       </li>
@@ -589,11 +700,14 @@
                             </div>
                           </div>
                           <div class="form-cont">
-                            <div class="form-input-group">
+                            <div class="form-input-group valid-check fail">
                               <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호를 입력해주세요." />
                               <div class="input-guide">
                                 공백 없이 숫자만 입력해 주세요.
                               </div>
+                              <p class="valid-desc">
+                                주소를 입력해주세요.
+                              </p>
                             </div>
                           </div>
                         </div>
@@ -606,12 +720,15 @@
                             </div>
                           </div>
                           <div class="form-cont">
-                            <div class="form-input-group">
+                            <div class="form-input-group valid-check fail">
                               <EInputBox type="search" enterkeyhint="search" title="매장 검색" placeholder="매장을 검색해보세요." readonly>
                                 <button type="button" class="btn-input-search">
                                   <span class="offscreen">검색</span>
                                 </button>
                               </EInputBox>
+                              <p class="valid-desc">
+                                매장을 입력해주세요.
+                              </p>
                             </div>
                           </div>
                         </div>
@@ -650,7 +767,12 @@
                       </div>
                     </div>
                     <div class="form-cont">
-                      <EInputBox title="이름 입력" placeholder="이름을 입력해주세요." />
+                      <div class="form-input-group valid-check fail">
+                        <EInputBox title="이름 입력" placeholder="이름을 입력해주세요." />
+                        <p class="valid-desc">
+                          이름을 입력해주세요.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </li>
@@ -662,11 +784,14 @@
                       </div>
                     </div>
                     <div class="form-cont">
-                      <div class="form-input-group">
+                      <div class="form-input-group valid-check fail">
                         <EInputBox title="휴대폰번호 입력" type="number" placeholder="휴대폰번호를 입력해주세요." />
                         <div class="input-guide">
                           공백 없이 숫자만 입력해 주세요.
                         </div>
+                        <p class="valid-desc">
+                          휴대폰번호를 입력해주세요.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -679,12 +804,15 @@
                       </div>
                     </div>
                     <div class="form-cont">
-                      <div class="form-input-group">
+                      <div class="form-input-group valid-check fail">
                         <EInputBox type="search" enterkeyhint="search" title="매장 검색" placeholder="매장을 검색해보세요." readonly>
                           <button type="button" class="btn-input-search">
                             <span class="offscreen">검색</span>
                           </button>
                         </EInputBox>
+                        <p class="valid-desc">
+                          매장을 입력해주세요.
+                        </p>
                       </div>
                     </div>
                     <RowListWrap size="md">
@@ -894,6 +1022,109 @@
                 </li>
               </RowListWrap>
             </ColorBox>
+            <div class="cash-receipt-info-wrap">
+              <div class="ctitle-lg">
+                현금영수증
+              </div>
+              <ColorBox color="white">
+                <CtitleWrap>
+                  <FlexGroup>
+                    <div class="flex-left">
+                      <div class="ctitle-sm">
+                        현금영수증
+                      </div>
+                    </div>
+                    <div class="flex-right">
+                      <GridListWrap col="2">
+                        <li class="item-grid">
+                          <span class="ui-rdo">
+                            <input id="cashReceipt01" v-model="cashReceiptRadio" type="radio" name="cashReceipt01" value="receiptApply" />
+                            <label for="cashReceipt01"><span class="text-md">신청</span></label>
+                          </span>
+                        </li>
+                        <li class="item-grid">
+                          <span class="ui-rdo">
+                            <input id="cashReceipt02" v-model="cashReceiptRadio" type="radio" name="cashReceipt01" value="receiptNotApply" />
+                            <label for="cashReceipt02"><span class="text-md">미신청</span></label>
+                          </span>
+                        </li>
+                      </GridListWrap>
+                    </div>
+                  </FlexGroup>
+                </CtitleWrap>
+                <div v-show="cashReceiptRadio === 'receiptApply'">
+                  <ColorBox color="light-gray" size="sm">
+                    <FlexGroup>
+                      <div class="flex-left">
+                        <div class="stext fw-sb">
+                          개인 소득공제
+                        </div>
+                      </div>
+                      <div class="flex-right">
+                        <GridListWrap col="2">
+                          <li class="item-grid">
+                            <div class="stext">
+                              313-31-12345
+                            </div>
+                          </li>
+                          <li class="item-grid">
+                            <EBtn color="line-light-gray" size="xs">
+                              <span class="text">변경</span>
+                            </EBtn>
+                          </li>
+                        </GridListWrap>
+                      </div>
+                    </FlexGroup>
+                  </ColorBox>
+                  <ColorBox color="light-gray" size="sm">
+                    <FlexGroup>
+                      <div class="flex-left">
+                        <div class="stext fw-sb">
+                          사업자 소득공제
+                        </div>
+                      </div>
+                      <div class="flex-right">
+                        <GridListWrap col="2">
+                          <li class="item-grid">
+                            <div class="stext">
+                              313-31-12345
+                            </div>
+                          </li>
+                          <li class="item-grid">
+                            <EBtn color="line-light-gray" size="xs">
+                              <span class="text">변경</span>
+                            </EBtn>
+                          </li>
+                        </GridListWrap>
+                      </div>
+                    </FlexGroup>
+                  </ColorBox>
+                  <ColorBox color="light-gray" size="sm">
+                    <BtnWrap type="full">
+                      <EBtn color="line-light-gray" size="xs">
+                        <span class="text">현금영수증 발급정보 등록</span>
+                      </EBtn>
+                    </BtnWrap>
+                  </ColorBox>
+                </div>
+                <div v-show="cashReceiptRadio === 'receiptNotApply'">
+                  <ColorBox color="light-gray" size="sm">
+                    <FlexGroup>
+                      <div class="flex-left">
+                        <div class="stext fw-sb">
+                          현금영수증 신청 안함
+                        </div>
+                      </div>
+                      <div class="flex-right">
+                        <EBtn color="line-light-gray" size="xs">
+                          <span class="text">변경</span>
+                        </EBtn>
+                      </div>
+                    </FlexGroup>
+                  </ColorBox>
+                </div>
+              </ColorBox>
+            </div>
           </template>
         </FoldToggleBox>
       </li>
@@ -910,9 +1141,9 @@
             <ColorBox color="white">
               <RowListWrap gap="line">
                 <li class="item-order-pay">
-                  <span class="ui-md-rdo">
+                  <span class="ui-rdo">
                     <input id="orderPayRdo01" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payCard" />
-                    <label for="orderPayRdo01"><span class="text">신용(체크)카드</span></label>
+                    <label for="orderPayRdo01"><span class="text-md">신용(체크)카드</span></label>
                   </span>
                   <div v-show="orderPayRadio === 'payCard'" class="order-pay-cont">
                     <div class="ui-select">
@@ -925,15 +1156,15 @@
                   </div>
                 </li>
                 <li class="item-order-pay">
-                  <span class="ui-md-rdo">
+                  <span class="ui-rdo">
                     <input id="orderPayRdo02" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payLpay" />
-                    <label for="orderPayRdo02"><span class="text">L.PAY</span></label>
+                    <label for="orderPayRdo02"><span class="text-md">L.PAY</span></label>
                   </span>
                 </li>
                 <li class="item-order-pay">
-                  <span class="ui-md-rdo">
+                  <span class="ui-rdo">
                     <input id="orderPayRdo03" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payNaver" />
-                    <label for="orderPayRdo03"><span class="text">네이버 간편결제</span></label>
+                    <label for="orderPayRdo03"><span class="text-md">네이버 간편결제</span></label>
                   </span>
                   <div v-show="orderPayRadio === 'payNaver'" class="order-pay-cont">
                     <BtnWrap>
@@ -947,21 +1178,21 @@
                   </div>
                 </li>
                 <li class="item-order-pay">
-                  <span class="ui-md-rdo">
+                  <span class="ui-rdo">
                     <input id="orderPayRdo04" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payKakao" />
-                    <label for="orderPayRdo04"><span class="text">카카오페이</span></label>
+                    <label for="orderPayRdo04"><span class="text-md">카카오페이</span></label>
                   </span>
                 </li>
                 <li class="item-order-pay">
-                  <span class="ui-md-chk">
+                  <span class="ui-chk">
                     <input id="orderPayChk01" type="checkbox" />
-                    <label for="orderPayChk01"><span class="text">선택한 결제수단 다음에도 사용</span></label>
+                    <label for="orderPayChk01"><span class="text-md">선택한 결제수단 다음에도 사용</span></label>
                   </span>
                 </li>
               </RowListWrap>
               <RowListWrap size="sm">
                 <ColorBox color="light-green" size="xs">
-                  <p class="stext ta-center">
+                  <p class="stext ta-center fc-spot">
                     삼성카드 결제 시 1,000원 캐시백
                   </p>
                 </ColorBox>
@@ -1098,9 +1329,9 @@
       <li class="ui-col-item">
         <FlexGroup>
           <div class="flex-left">
-            <span class="ui-md-chk">
+            <span class="ui-chk">
               <input id="agreeChk01" type="checkbox" />
-              <label for="agreeChk01"><span class="text">택배 이용약관<span class="required"><span class="offscreen">필수체크</span></span></span></label>
+              <label for="agreeChk01"><span class="text-md">택배 이용약관<span class="required"><span class="offscreen">필수체크</span></span></span></label>
             </span>
           </div>
           <div class="flex-right">
@@ -1114,9 +1345,9 @@
       <li class="ui-col-item">
         <FlexGroup>
           <div class="flex-left">
-            <span class="ui-md-chk">
+            <span class="ui-chk">
               <input id="agreeChk02" type="checkbox" />
-              <label for="agreeChk02"><span class="text">개인정보 수집 및 이용동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
+              <label for="agreeChk02"><span class="text-md">개인정보 수집 및 이용동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
             </span>
           </div>
           <div class="flex-right">
@@ -1150,6 +1381,7 @@ definePageMeta({
 const isMember = ref(true);
 const isNonMember = ref(true);
 const orderPayRadio = ref();
+const cashReceiptRadio = ref();
 </script>
 
 <style lang="scss" scoped>

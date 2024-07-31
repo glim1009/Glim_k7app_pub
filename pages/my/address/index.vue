@@ -21,7 +21,7 @@
               <div class="box-info-header">
                 <FlexGroup align="start">
                   <div class="flex-left">
-                    <span class="ui-md-rdo">
+                    <span class="ui-rdo">
                       <input type="radio" id="demoRdo01" name="demoRdo01">
                       <label for="demoRdo01"><span class="text-xl fw-sb">사무실</span></label>
                     </span>
@@ -69,7 +69,7 @@
               <div class="box-info-header">
                 <FlexGroup align="start">
                   <div class="flex-left">
-                    <span class="ui-md-rdo">
+                    <span class="ui-rdo">
                       <input type="radio" id="demoRdo02" name="demoRdo01">
                       <label for="demoRdo02"><span class="text-xl fw-sb">엄마집</span></label>
                     </span>
@@ -116,7 +116,7 @@
               <div class="box-info-header">
                 <FlexGroup align="start">
                   <div class="flex-left">
-                    <span class="ui-md-rdo">
+                    <span class="ui-rdo">
                       <input type="radio" id="demoRdo03" name="demoRdo01">
                       <label for="demoRdo03"><span class="text-xl fw-sb">우리집</span></label>
                     </span>

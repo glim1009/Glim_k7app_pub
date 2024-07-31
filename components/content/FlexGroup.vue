@@ -21,5 +21,5 @@ const className = computed(() => {
 </script>
 
 <style lang="scss" scoped>
-@import url('@/assets/css/components/flexGroup.scss');
+@import url('/assets/css/components/flexGroup.scss');
 </style>

@@ -1,0 +1,31 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.grid-list-header {
+
+  .goods-group {
+    display: inline-block;
+    vertical-align: top;
+    line-height: variables.$fontSizeLgLineHeight;
+
+    .label {
+      @include mixins.font_size_lg('sb');
+
+      ~ .goods-lg {
+        display: inline-block;
+        margin-left: 4px;
+      }
+    }
+  }
+
+  .bar-group {
+    margin-top: 0;
+  }
+
+  .ui-select.type-text {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+}

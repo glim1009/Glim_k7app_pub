@@ -19,5 +19,5 @@ const props = withDefaults(defineProps<{
 </script>
 
 <style lang="scss" scoped>
-@import url("@/assets/css/components/infoGuideWrap.scss");
+@import url("/assets/css/components/infoGuideWrap.scss");
 </style>
