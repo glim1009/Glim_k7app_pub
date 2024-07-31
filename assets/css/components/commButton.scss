@@ -1,0 +1,34 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+/* button */
+a, button {
+  &[disabled], &[aria-disabled=true], &.disabled {
+    pointer-events: none !important;
+    cursor: default !important;
+    text-decoration: none !important;
+
+    * {
+      text-decoration: none !important;
+    }
+  }
+
+  /* 버튼 공통 */
+  &[class^=btn] {
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+
+    .text {
+      display: inline-block;
+      vertical-align: top;
+      text-align: center;
+    }
+  }
+
+  &[class^=link-] {
+    -webkit-touch-callout: none;
+  }
+}
+// button size
