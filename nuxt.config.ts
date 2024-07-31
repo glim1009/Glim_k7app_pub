@@ -28,7 +28,13 @@ export default defineNuxtConfig({
   },
 
   devtools: {enabled: true},
-  modules: ['@nuxtjs/tailwindcss', 'shadcn-nuxt', '@pinia/nuxt', '@vueuse/nuxt'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    'shadcn-nuxt',
+    '@pinia/nuxt',
+    '@vueuse/nuxt',
+    'nuxt-swiper',
+  ],
 
   shadcn: {
     prefix: 'Ui',
@@ -39,12 +45,12 @@ export default defineNuxtConfig({
     '~/assets/css/base/reset.scss',
     '~/assets/css/base/common.scss',
     '~/assets/css/base/components.scss',
+    'swiper/css/effect-fade'
   ],
 
   components: [
     {
       path: './components',
-      pathPrefix: true,
       extensions: ['.vue'],
       ignore: ['**/.*', '**/types.ts', '**/types.js', '**/types/index.ts', '**/types/index.js'],
     },
@@ -55,8 +61,26 @@ export default defineNuxtConfig({
       extensions: ['.vue'],
     },
     {
+      path: './components/layout',
+      prefix: 'Layout',
+      global: true,
+      extensions: ['.vue'],
+    },
+    {
       path: './components/content',
       pathPrefix: false,
+      global: true,
+      extensions: ['.vue'],
+    },
+    {
+      path: './components/page',
+      prefix: '',
+      global: true,
+      extensions: ['.vue'],
+    },
+    {
+      path: './components/content/dialog',
+      prefix: 'Pop',
       global: true,
       extensions: ['.vue'],
     },

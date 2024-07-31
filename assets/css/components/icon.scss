@@ -135,6 +135,12 @@
     height: 18px;
     @include mixins.ratio_images('~/assets/images/common/comm_ico_plus_black_sm');
 }
+.ico-plus-white-sm { // white
+  @extend %icon;
+  width: 18px;
+  height: 18px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_plus_white_sm');
+}
 .ico-search-sm {
     @extend %icon;
     width: 18px;
@@ -189,6 +195,24 @@
     height: 18px;
     @include mixins.ratio_images('~/assets/images/common/comm_ico_check_green_sm');
 }
+.ico-location-sm {
+  @extend %icon;
+  width: 18px;
+  height: 18px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_location_black_sm_delivery');
+}
+.ico-info-sm {
+  @extend %icon;
+  width: 18px;
+  height: 18px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_info_sm');
+}
+.ico-location-sm {
+  @extend %icon;
+  width: 18px;
+  height: 18px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_location_sm');
+}
 
 // size - xs / h16
 
@@ -203,6 +227,12 @@
     width: 16px;
     height: 16px;
     @include mixins.ratio_images('~/assets/images/common/comm_ico_arwdown_black_xs');
+}
+.ico-arwdown-gray-xs {
+    @extend %icon;
+    width: 16px;
+    height: 16px;
+    @include mixins.ratio_images('~/assets/images/common/comm_ico_arwdown_gray80_xs');
 }
 .ico-arwup-xs {
     @extend %icon;
@@ -263,23 +293,7 @@
   }
 }
 
-
-/* 임시 - 수정예정 */
-
-/* info-guide-wrap_temp / 삭제예정 LTK */
-.ico-info-guide-temp {
-  @extend %icon;
-  width: 103px;
-  height: 103px;
-  @include mixins.ratio_images('~/assets/images/temp/temp_ico_h103_delivery');
-}
-.ico-no-data-temp {
-  @extend %icon;
-  width: 64px;
-  height: 64px;
-  @include mixins.ratio_images('~/assets/images/temp/temp_ico_h64_delivery');
-}
-
+/* RowListWrap - sub item */
 .ico-bullet-order-list {
   @extend %icon;
   width: 13px;
@@ -288,6 +302,44 @@
   @include mixins.ratio_images('~/assets/images/common/comm_ico_bullet_order_info_list');
 }
 
+/* 택배 > 메인 */
+.ico-inquiry-guide {
+  @extend %icon;
+  width: 42px;
+  height: 42px;
+  @include mixins.ratio_images('~/assets/images/delivery/ico_inquiry_guide');
+}
+
+/* MY > 주소록 관리 */
+.ico-access-location-green {
+  @extend %icon;
+  width: 24px;
+  height: 24px;
+  @include mixins.ratio_images('~/assets/images/my/ico_access_location_green_my');
+}
+
+.ico-current-marker {
+  @extend %icon;
+  width: 52px;
+  height: 60px;
+  @include mixins.ratio_images('~/assets/images/my/ico_current_marker_my');
+}
+
+/* 임시 - 수정예정 */
+
+/* info-guide-wrap_temp / 삭제예정 LTK */
+.ico-info-guide-temp {
+  @extend %icon;
+  width: 103px;
+  height: 103px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_h103_info_guide');
+}
+.ico-no-data-temp {
+  @extend %icon;
+  width: 64px;
+  height: 64px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_h64_no_data');
+}
 /*.ico-delivery-common {
     @extend %icon;
     flex-shrink: 0;

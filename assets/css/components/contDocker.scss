@@ -8,8 +8,10 @@
   bottom: 0;
   right: 0;
   left: 0;
+  height: calc(env(safe-area-inset-bottom) + #{variables.$contDockerHeight});
   background: variables.$colorWhite;
-  padding: 0 15px 16px;
+  padding: 0 15px calc(env(safe-area-inset-bottom) + 16px);
+
   &:after {
     display: block;
     content: '';

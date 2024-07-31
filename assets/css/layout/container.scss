@@ -13,6 +13,12 @@
     }
   }
 
+  &:has(.cont-docker-wrap) {
+    .container-wrapper {
+      padding-bottom: calc(#{variables.$contDockerHeight} + env(safe-area-inset-bottom));
+    }
+  }
+
   &:has(.header-wrapper) {
     .container-wrapper {
       min-height: calc( 100dvh - #{variables.$headerHeight} );

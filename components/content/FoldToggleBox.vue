@@ -3,13 +3,16 @@
     <FoldHeader @toggle-click="toggle">
       <slot name="header"></slot>
     </FoldHeader>
-    <FoldCont :is-open="isOpen">
-      <slot name="content"></slot>
-    </FoldCont>
+    <Transition @enter="onEnter" name="fold">
+      <FoldCont ref="FoldContRef" :style="customStyle" :is-open="isOpen" v-if="isOpen">
+        <slot name="content" />
+      </FoldCont>
+    </Transition>
   </div>
 </template>
 
 <script setup lang="ts">
+
 const props = withDefaults(defineProps<{
   type?: 'cont' | 'box';
 }>(), {
@@ -24,8 +27,25 @@ const className = computed(() => {
 });
 
 const isOpen = ref(false);
+const FoldContRef = ref<HTMLElement | null>(null);
+const FoldContHeight = ref();
 
-const toggle = () => { isOpen.value = !isOpen.value; };
+const toggle = () => {
+  isOpen.value = !isOpen.value;
+};
+
+const onEnter = (el, customStyle) => {
+  const {  height } = useElementSize(el);
+  console.log( el, height.value );
+  FoldContHeight.value = height.value;
+  customStyle();
+}
+
+const customStyle = () => {
+  return {
+    '--content-height' : FoldContHeight.value + 'px'
+  }
+};
 
 </script>
 

@@ -1,17 +1,16 @@
 <template>
   <div :class="className">
     <Swiper
-      resistance="100%"
-      resistance-ratio="0"
-      observer="true"
-      observe-parents="true"
-      slides-per-view="auto"
-      watch-overflow="true"
-      free-mode="true"
-      touch-ratio="0.3"
-      all-touch-move="true"
-      touch-start-force-prevent-default="true"
-      touch-release-on-edgeds="true"
+      :resistance="true"
+      :resistance-ratio="0"
+      :observer="true"
+      :observe-parents="true"
+      :slides-per-view="'auto'"
+      :watch-overflow="true"
+      :touch-ratio="0.3"
+      :all-touch-move="true"
+      :touch-start-force-prevent-default="true"
+      :touch-release-on-edgeds="true"
       :space-between="props.type === 'bar' ? 0 : props.gap"
     >
       <slot/>
@@ -36,6 +35,4 @@ const className = computed(() => {
 
 </script>
 
-<style lang="scss" scoped>
-@import url('/assets/css/components/swiper.scss');
-</style>
+

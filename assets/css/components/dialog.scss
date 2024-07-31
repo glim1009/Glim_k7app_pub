@@ -6,8 +6,6 @@
 %dialogDefault {
   position: fixed;
   display: none;
-  /*display: grid;
-  grid-template-rows: auto minmax(0, 1fr) auto;*/
   overflow: hidden;
   background-color: variables.$colorWhite;
   width: 100%;
@@ -83,13 +81,14 @@
 
 .ui-dialog {
   @extend %dialogDefault;
-  /*max-width: 335px;*/
-  max-height: 90dvh;
+  max-height: calc(100% - 40px);
+  max-width: calc(100% - 40px);
   width: calc(100% - 40px);
-  margin: 0 20px;
+  height: auto;
+  margin: 20px;
   left: 50%;
   top: 50%;
-  @include mixins.prefix(transform, translate(calc(-50% - 20px), -50%));
+  @include mixins.prefix(transform, translate(calc(-50% - 20px), calc(-50% - 20px)));
 
   .dialog-footer {
     padding-top: 16px;

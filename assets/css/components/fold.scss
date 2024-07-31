@@ -13,7 +13,7 @@
       width: 100%;
       color: variables.$colorBlack;
 
-      [class^=btn][class$=xs]{
+      [class^=btn][class$=xs] {
         position: relative;
         z-index: 2;
       }
@@ -40,7 +40,7 @@
   }
 
   .fold-cont {
-    background-color: variables.$colorWhite;
+    margin-top: 16px;
   }
 }
 
@@ -59,6 +59,7 @@
   }
 
   .fold-cont {
+    overflow: hidden;
     margin-top: 16px;
     border-radius: 15px;
   }
@@ -84,25 +85,52 @@
   }
 }
 
-.fold-list {
-  .fold-item {
-    ~ .fold-item {
-      margin-top: 30px;
+.fold-overflow-box {
+  .fold-cont {
+    overflow: hidden;
+    height: var(--content-min-height);
 
-      .fold-cont-box {
-        margin-top: -14px;
+    &.is-active {
+      height: auto;
+    }
+  }
+
+  .fold-header {
+    .btn-fold-toggle {
+      width: 100%;
+
+      .ico-arwdown-gray-xs {
+        @include mixins.prefix(transform, rotateZ(0));
+        @include mixins.prefix(transition, transform 0.25s 0.12s variables.$transEaseBounceBack);
+      }
+
+      &.is-active {
+        .ico-arwdown-gray-xs {
+          @include mixins.prefix(transform, rotateZ(180deg));
+        }
       }
     }
   }
 }
 
-@keyframes goTopIcoActive {
-  0% {
-    opacity: 0;
-    @include mixins.prefix(transform, translateY(12px));
-  }
-  100% {
-    opacity: 1;
-    @include mixins.prefix(transform, translateY(0));
-  }
+.fold-enter-active {
+  //@include mixins.prefix(animation, accordion-down 0.45s ease-in-out);
 }
+
+.fold-enter-from, .fold-leave-to {
+  //height: 0;
+}
+
+.fold-enter-to {
+  //height: var(--content-height);
+}
+
+/*@keyframes accordion-down {
+  0% {
+    height: 0
+  }
+
+  to {
+    height: var(--content-height);
+  }
+}*/

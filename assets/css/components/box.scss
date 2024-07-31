@@ -5,46 +5,122 @@
 /* s: box */
 
 %ColorBoxComm {
-    border-radius: 10px;
+  border-radius: 10px;
 
-    &.box-scroll {
-        overflow-y: auto;
-        max-height: 134px;
-    }
+  &.box-scroll {
+    overflow-y: auto;
+    max-height: 134px;
+  }
 
-    // size
-    &[class$=-xs-box] {
-        padding: 10px;
-        border-radius: 8px;
+  // size
+  &[class*=-xs-box] {
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  &[class*=-sm-box] {
+    padding: 12px;
+  }
+
+  &[class*=-md-box] {
+    padding: 16px;
+  }
+
+  &[class*=-lg-box] {
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  .box-info-header {
+    width: 100%;
+
+    [class^=flex-][class*=group] {
+      .flex-left {
+        display: block;
+        font-size: 0;
+
+        .ctitle-sm-wrap {
+          [class^=ctitle] {
+            display: inline-block;
+            vertical-align: top;
+
+            ~ [class^=badge] {
+              margin-left: 6px;
+            }
+          }
+
+          ~ .bar-group {
+            margin-top: 0;
+          }
+        }
+      }
+
+      .flex-right {
+
+      }
     }
-    &[class$=-sm-box] {
-        padding: 12px;
-    }
-    &[class$=-md-box] {
-        padding: 16px;
-    }
-    &[class$=-lg-box] {
-        padding: 20px;
-        border-radius: 15px;
-    }
+  }
 }
 
 
 // bg color
-[class^=line-light-gray][class$=box] {
-    @extend %ColorBoxComm;
-    background: variables.$colorWhite;
-    border: 1px solid variables.$colorGray30;
+[class^=line-light-gray][class*=box] {
+  @extend %ColorBoxComm;
+  background: variables.$colorWhite;
+  border: 1px solid variables.$colorGray30;
 }
 
-[class^=light-gray][class$=box] {
-    @extend %ColorBoxComm;
-    background: variables.$colorGray20;
+[class^=light-gray][class*=box] {
+  @extend %ColorBoxComm;
+  background: variables.$colorGray20;
 }
 
-[class^=white][class$=box] {
-    @extend %ColorBoxComm;
-    background: variables.$colorWhite;
+[class^=white][class*=box] {
+  @extend %ColorBoxComm;
+  background: variables.$colorWhite;
+}
+
+[class^=light-green][class*=box] {
+  @extend %ColorBoxComm;
+  background: variables.$colorGreen10;
+
+  .stext {
+    color: variables.$colorGreen100;
+  }
+
 }
 
 /* e: box */
+
+
+// 택배 임시 scss _LTK
+.light-gray-md-box, .white-md-box {
+
+  &.bg-normal-delivery, &.bg-kind-delivery {
+    position: relative;
+    min-height: 138px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      right: 20px;
+      bottom: 20px;
+      width: 60px;
+      height: 60px;
+      vertical-align: top;
+    }
+  }
+
+  &.bg-kind-delivery {
+    &:after {
+      @include mixins.ratio_images('~/assets/images/common/comm_ico_h60_kind_delivery');
+    }
+  }
+
+  &.bg-normal-delivery {
+    &:after {
+      @include mixins.ratio_images('~/assets/images/common/comm_ico_h60_normal_delivery');
+    }
+  }
+}

@@ -24,7 +24,3 @@ function setActiveTab(tabName: string) {
 provide('activeTab', activeTab);
 provide('setActiveTab', setActiveTab);
 </script>
-
-<style scoped>
-@import url('/assets/css/components/tabs.scss');
-</style>

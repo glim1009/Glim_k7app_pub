@@ -1,5 +1,5 @@
 <template>
-  <div class="fold-cont" v-if="isOpen">
+  <div class="fold-cont">
     <slot />
   </div>
 </template>

@@ -2,24 +2,4 @@
 @use '../abstracts/variables';
 @use '../abstracts/mixins';
 
-%swiperCommon {
-  position: relative;
-  overflow: hidden;
-
-  .swiper-slide {
-    width: auto;
-    font-size: 0;
-  }
-}
-
-/* swiper */
-.swiper-auto-wrap {
-  @extend %swiperCommon;
-}
-.swiper-auto-line-wrap {
-  @extend %swiperCommon;
-}
-.swiper-auto-bar-wrap {
-  @extend %swiperCommon;
-}
 /* // swiper */

@@ -2,7 +2,7 @@
 @use '../abstracts/variables';
 @use '../abstracts/mixins';
 
-$listGapSize: ('xs': 4px, 'sm': 6px, 'md': 10px, 'lg': 16px, 'xl': 24px);
+$listGapSize: ('xs': 4px, 'sm': 6px, 'md': 10px, 'lg': 16px, 'xl': 24px, '2xl': 30px);
 $wrapSize: ('2xs': 6px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
 /* list */
 @each $size, $px in $wrapSize {
@@ -17,7 +17,30 @@ $wrapSize: ('2xs': 6px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
   @include mixins.justify_width(stretch, start, column);
   /* li 스타일 추가 */
 
+  // 택배 > 주소록 선택
+  .is-selected {
+    .white-lg-box {
+      .box-info-header {
+        .ctitle-lg {
+          position: relative;
+          padding-left: 22px;
+          color: variables.$colorGreen100;
 
+          &:before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 0;
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            @include mixins.ratio_images('~/assets/images/common/comm_ico_check_green_xs');
+            vertical-align: top;
+          }
+        }
+      }
+    }
+  }
 }
 
 @each $gap, $px in $listGapSize {
@@ -30,7 +53,7 @@ $wrapSize: ('2xs': 6px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
 .row-line-list {
   @extend %rowListComm;
 
-  :deep(.item) {
+  :deep([class^=item]) {
     border-bottom: 1px solid variables.$colorGray20;
   }
 

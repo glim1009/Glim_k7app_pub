@@ -11,5 +11,5 @@
 </script>
 
 <style lang="scss" scoped>
-
+@import url('/assets/css/components/fold.scss');
 </style>

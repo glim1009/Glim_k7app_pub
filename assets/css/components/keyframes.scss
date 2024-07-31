@@ -21,4 +21,16 @@
   }
 }
 
+
+@keyframes chkAnimation {
+  0% {
+    opacity: 0;
+    rotate: 12deg;
+  }
+
+  100% {
+    rotate: 0;
+  }
+}
+
 /* e: keyframes */

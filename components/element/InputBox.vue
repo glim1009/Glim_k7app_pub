@@ -1,14 +1,15 @@
 <template>
-  <div class="input-box" :class="[{ 'is-disabled': disabled }, { 'has-value': isValue }]">
+  <div class="input-box" :class="[{ 'is-disabled': disabled || readonly }, { 'has-value': isValue }, { 'is-focus': isFocused }]">
     <input
       v-model="inputValue"
       class="ui-input"
-      :class="{ 'is-focus': isFocused }"
       :type="props.type"
       :title="props.title"
       :placeholder="props.placeholder"
       :disabled="props.disabled"
+      :readonly="props.readonly"
       :inputmode="props.inputmode"
+      :maxlength="props.maxlength"
       :enterkeyhint="props.enterkeyhint"
       @focus="inputFocus"
       @blur="inputFocusout"
@@ -27,8 +28,10 @@ const props = withDefaults(defineProps<{
   placeholder?: string;
   value?: string;
   inputmode?: 'enterkey' | 'numeric' | 'tel';
+  maxlength?: number;
   enterkeyhint?: 'search';
   disabled?: boolean;
+  readonly?: boolean;
 }>(), {
   type: 'text',
   modelValue: '',
@@ -53,10 +56,13 @@ function clearInput() {
   emit('clear');
 }
 
-function setInputStatus() { isValue.value = inputValue.value.length > 0; }
+function setInputStatus(value = inputValue.value) {
+  const newVal = typeof value === 'string' ? value : JSON.stringify(value);
+  isValue.value = newVal.length > 0;
+}
 
 watch(inputValue, (newValue) => {
-  setInputStatus();
+  setInputStatus(newValue);
   emit('input', newValue);
 });
 

@@ -103,7 +103,10 @@
         tr {
             th, td {
                 text-align: left;
-                padding-left: 14px;
+                padding: {
+                    left: 14px;
+                    right: 14px;
+                };
             }
 
             td {
@@ -350,5 +353,11 @@
 .tbl-info-wrap {
     ~ .tbl-info-wrap {
         margin-top: 16px;
+    }
+}
+
+[class^=tbl][class$=wrap] { // usage : 택배이용안내 팝업 _LTK (임시)
+    + .dot-text-sm {
+        margin-top: 14px;
     }
 }

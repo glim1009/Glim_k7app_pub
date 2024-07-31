@@ -1,8 +1,13 @@
-@import url('~/assets/css/components/typography.scss');
-@import url('~/assets/css/components/title.scss');
-@import url('~/assets/css/components/formElements.scss');
-@import url('~/assets/css/components/button.scss');
-@import url('~/assets/css/components/badge.scss');
-@import url('~/assets/css/components/icon.scss');
-@import url('~/assets/css/components/formField.scss');
-@import url('~/assets/css/components/button.scss');
+// html 공통
+@import url('/assets/css/components/typography.scss');
+@import url('/assets/css/components/title.scss');
+@import url('/assets/css/components/formElements.scss');
+@import url('/assets/css/components/formField.scss');
+@import url('/assets/css/components/table.scss');
+@import url('/assets/css/components/commButton.scss');
+
+
+
+///
+@import url('/assets/css/components/tabs.scss');
+@import url('/assets/css/components/swiper.scss');
