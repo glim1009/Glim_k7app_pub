@@ -4,9 +4,26 @@
 
 $listGapSize: ('xs': 4px, 'sm': 6px, 'md': 10px, 'lg': 16px, 'xl': 24px, '2xl': 30px);
 $wrapSize: ('2xs': 8px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
+
+.rlist-wrap {
+  :deep([class^=ctitle][class$=-wrap]) {
+    padding: {
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
 /* list */
 @each $size, $px in $wrapSize {
   .rlist-#{$size}-wrap {
+    [class^=ctitle][class$=wrap] {
+      padding: {
+        left: 0;
+        right: 0;
+      }
+    }
+
     &:not(:first-child) {
       margin-top: $px;
     }
@@ -83,7 +100,7 @@ $wrapSize: ('2xs': 8px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
 
     .flex-center-group {
 
-      .flex-left , .flex-right {
+      .flex-left, .flex-right {
 
         .stext-lg {
           font-weight: variables.$fontWeightSemibold;
