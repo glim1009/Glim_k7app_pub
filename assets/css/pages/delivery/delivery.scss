@@ -443,22 +443,26 @@
   margin: -16px;
 }
 
-// card box header
-.box-info-header {
-  .ctitle-md-wrap {
-    .box-info-desc {
-      font-size: 0;
-      margin-top: 6px;
+.attach-box-wrap {
+  .swiper-auto-wrap {
+    margin: 0 -20px;
 
-      .title {
-        @include mixins.font_size_sm('md');
-        color: variables.$colorGray90;
+    :deep(.swiper) {
+      padding: 0 20px;
 
-        ~ .stext-sm {
-          margin-left: 10px;
-        }
+      .swiper-slide {
+        width: auto;
       }
     }
+  }
+}
+
+// card box header
+.box-info-header {
+  + .box-info-cont {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid variables.$colorGray30;
   }
 }
 
@@ -476,18 +480,6 @@
     }
   }
 }
-
-.attach-box-wrap {
-  .swiper-auto-wrap {
-    margin: 0 -20px;
-
-    :deep(.swiper-wrapper) {
-      padding: 0 20px;
-    }
-  }
-}
-
-
 
 // 예약현황 상세 팝업
 .line-light-gray-lg-box {
@@ -509,9 +501,11 @@
     .badge-md-group {
       display: inline-block;
       vertical-align: top;
+
       [class^=badge] {
         margin-bottom: 0;
       }
+
       + .tooltip-group {
         display: inline-block;
         margin: {
@@ -524,23 +518,12 @@
     }
   }
 
-  [class^=ctitle] {
-
-    + .box-info-desc {
-      margin-top: 6px;
-
-      .stext-sm {
-        ~ .stext-sm {
-          margin-left: 10px;
-        }
-      }
-
-    }
-
-  }
-
   + .tbl-info-wrap {
-    margin-top: 6px;
+    margin-top: 10px;
+
+    th {
+      font-weight: variables.$fontWeightMedium;
+    }
   }
 
 }

@@ -8,7 +8,7 @@
     @include mixins.justify_width(center);
     position: relative;
     width: 100%;
-    padding-right: 28px;
+    padding-right: 35px;
 
     :deep(.fold-title) {
       width: 100%;
@@ -31,6 +31,8 @@
 
       &:after {
         content: '';
+        position: absolute;
+        right: 5px;
         display: inline-block;
         width: 18px;
         height: 18px;
@@ -61,14 +63,16 @@
 }
 
 .fold-box {
-  .fold-header {
+  :deep(.fold-header) {
     .fold-title {
       padding-left: 5px;
 
-      :deep(.flex-right) {
+      :deep(.flex-center-group) {
+        .flex-right {
 
-        :deep(.goods) {
-          @include mixins.font_size_3xl('sb');
+          .goods {
+            @include mixins.font_size_3xl('sb');
+          }
         }
       }
     }

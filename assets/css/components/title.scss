@@ -90,6 +90,10 @@
 }
 
 [class^=ctitle][class$=wrap] {
+  padding: {
+    left: 5px;
+    right: 5px;
+  }
   .stext-lg {
     margin-top: 6px;
   }

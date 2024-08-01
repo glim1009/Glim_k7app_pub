@@ -7,11 +7,27 @@
 $contType: ('gray', 'white', 'divider'); // white - bg-color: white, divider - 추후 추가 예정
 $contDirsSize: ('zero': 0, 'sm' : 10px, 'md': 20px, 'lg': 30px);
 
+.wrapper {
+  &:not(:has(.docker-wrapper)) {
+    [class*="cont-"][class$=-wrap] {
+      &:last-of-type {
+        &:after{
+          content: '';
+          display: block;
+          height: env(safe-area-inset-bottom);
+        }
+      }
+    }
+  }
+}
 
-.container-wrapper:has(.cont-docker-wrap) {
-  [class*="cont-"]:nth-of-type(2) {
-    flex: 1 0 auto;
-    padding-bottom: #{variables.$contDockerHeight + 30px};
+.container-wrapper {
+  &:has(.cont-docker-wrap) {
+    [class*="cont-"]:nth-last-of-type(2) {
+      flex: 1 0 auto;
+      padding-bottom: 90px;
+      //padding-bottom: #{variables.$contDockerHeight + 30px};
+    }
   }
 }
 
@@ -45,7 +61,7 @@ $contDirsSize: ('zero': 0, 'sm' : 10px, 'md': 20px, 'lg': 30px);
   }
   @else if ($type == 'divider') {
     background-color: variables.$colorWhite;
-    border-top: 20px solid variables.$colorGray20;
+    border-top: 10px solid variables.$colorGray20;
   }
   @else if ($type == 'white') {
     background-color: variables.$colorWhite;

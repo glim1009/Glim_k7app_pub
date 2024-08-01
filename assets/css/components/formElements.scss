@@ -1,7 +1,6 @@
 @use 'sass:map';
 @use '../abstracts/variables';
 @use '../abstracts/mixins';
-
 /* form - input */
 
 %inputBox {
@@ -27,10 +26,6 @@
 
   [class^=btn] {
     flex-shrink: 0;
-
-    /*&[class$=xs] {
-      margin-right: -7px;
-    }*/
   }
 
   .btn-input-del {
@@ -63,6 +58,7 @@
     @include mixins.font_size_md('md');
     color: variables.$colorGray70;
     vertical-align: top;
+
     &:last-child {
       margin-right: 13px;
     }
@@ -100,7 +96,6 @@
 
 // input
 .ui-input {
-
   @include mixins.clear_focus;
   @include mixins.font_size_lg('lt');
   color: variables.$colorBlack;
@@ -125,6 +120,7 @@
   color: variables.$colorGray70;
 }
 
+// valide-check
 .valid-check {
 
   .valid-desc {
@@ -202,7 +198,7 @@
       padding: 0 18px 0 0;
       border: 0;
       @include mixins.ratio_images('~/assets/images/common/comm_ico_arwdown_black_sm', 16px, right center);
-      @include mixins.font_size_md('md');
+      @include mixins.font_size_lg;
 
       text-align-last: right;
       text-align: right;
@@ -252,12 +248,12 @@
 .ui-chk,
 .ui-rdo {
   @extend %rdoChkReset;
-  min-height: 20px;
+  min-height: 24px;
 
   input {
     + label {
-      padding-left: 20px;
-      min-height: 20px;
+      padding-left: 24px;
+      min-height: 24px;
 
       &:before,
       &:after {
@@ -267,31 +263,33 @@
         left: 0;
         top: 50%;
         @include mixins.prefix(transform, translateY(-50%));
-        width: 20px;
-        height: 20px;
+        width: 24px;
+        height: 24px;
         text-align: center;
         box-sizing: border-box;
         -webkit-box-sizing: border-box;
       }
 
-      .text-md , .text-lg, .text-xl{
+      .text-sm,
+      .text-md,
+      .text-lg {
         display: inline-block;
         margin: {
-          top: 1px;
+          top: 2px;
           left: 6px;
-          bottom: 1px;
+          bottom: 2px;
         }
         color: variables.$colorBlack;
         vertical-align: top;
       }
-      .text-md { // 13px
-        @include mixins.font_size_md('md', 18px);
+      .text-sm { // 13px
+        @include mixins.font_size_md('md');
       }
-      .text-lg { // 14px
-        @include mixins.font_size_lg('md', 18px);
+      .text-md { // 14px
+        @include mixins.font_size_lg;
       }
-      .text-xl { // 15px
-        @include mixins.font_size_xl('md', 18px);
+      .text-lg { // 15px
+        @include mixins.font_size_xl;
       }
 
     }
@@ -319,7 +317,7 @@
   input {
     & + label {
       &:before, &:after {
-        border-radius: 10px;
+        border-radius: 12px;
       }
 
       &:before {
@@ -328,10 +326,9 @@
       }
 
       &:after {
-        top: 10px;
-        left: 6px;
-        width: 8px;
-        height: 8px;
+        left: 7px;
+        width: 10px;
+        height: 10px;
         background-color: variables.$colorGray40;
         border: none;
         transform-origin: top;
@@ -357,7 +354,7 @@
   }
 
   100% {
-    transform: scale(1) translateY(-4px);
+    transform: scale(1) translateY(-5px);
   }
 }
 
@@ -374,7 +371,7 @@
       }
 
       &:after {
-        @include mixins.ratio_images('~/assets/images/form/ico_check_def', 10px 8px, 5px 6px);
+        @include mixins.ratio_images('~/assets/images/form/ico_check_def', 12px 10px, 6px 7px);
       }
     }
 
@@ -384,7 +381,7 @@
       }
       &:after {
         animation: chkAnimation 0.5s variables.$transEaseBounceBack;
-        @include mixins.ratio_images('~/assets/images/form/ico_check_sel', 10px 8px, 5px 6px);
+        @include mixins.ratio_images('~/assets/images/form/ico_check_sel', 12px 10px, 6px 7px);
       }
     }
   }

@@ -33,7 +33,7 @@
         <ColorBox color="white" size="lg">
           <TableWrap type="info" size="md" table-name="결제금액">
             <colgroup>
-              <col style="width: 96px;">
+              <col style="width: 78px;">
               <col style="width: auto;">
             </colgroup>
             <tbody>
@@ -61,7 +61,7 @@
         <ColorBox color="white" size="lg">
           <TableWrap type="info" size="md" table-name="보내는 분">
             <colgroup>
-              <col style="width: 96px;">
+              <col style="width: 78px;">
               <col style="width: auto;">
             </colgroup>
             <tbody>
@@ -89,7 +89,7 @@
         <ColorBox color="white" size="lg">
           <TableWrap type="info" size="md" table-name="받는 분">
             <colgroup>
-              <col style="width: 96px;">
+              <col style="width: 78px;">
               <col style="width: auto;">
             </colgroup>
             <tbody>

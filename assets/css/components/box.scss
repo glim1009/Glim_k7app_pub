@@ -56,8 +56,9 @@
     }
   }
 
-  .box-info-header {
+  :deep(.box-info-header) {
     width: 100%;
+    margin-bottom: 16px;
   }
 }
 
@@ -85,6 +86,13 @@
 
   .stext {
     color: variables.$colorGreen100;
+  }
+
+  [class^=ctitle][class$=wrap] {
+    padding: {
+      left: 0;
+      right: 0;
+    };
   }
 
 }

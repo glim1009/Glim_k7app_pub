@@ -10,10 +10,11 @@
     line-height: variables.$fontSizeLgLineHeight;
 
     .label {
-      @include mixins.font_size_lg('sb');
+      @include mixins.font_size_xl('sb');
 
-      ~ .goods-lg {
+      ~ .goods {
         display: inline-block;
+        @include mixins.font_size_xl('sb');
         margin-left: 4px;
       }
     }

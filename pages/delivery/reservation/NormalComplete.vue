@@ -6,7 +6,7 @@
       desc="택배 예약이 완료되었습니다."
       sub-desc="예약현황에서 예약하신 내역을 확인하실 수 있습니다."
     />
-    <BtnWrap size="lg">
+    <BtnWrap type="full" size="lg">
       <EBtn tag="a" color="line-green" size="md" to="to">
         <span class="text">예약현황</span>
       </EBtn>
@@ -29,7 +29,7 @@
         </div>
       </ColorBox>
     </RowListWrap>
-    <BtnWrap size="sm">
+    <BtnWrap type="full" size="sm">
       <EBtn tag="a" color="line-green" size="md" to="to">
         <span class="text">비회원 예약 및 배송조회</span>
       </EBtn>

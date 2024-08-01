@@ -46,16 +46,16 @@
 
   .dialog-footer {
     position: relative;
-    padding: 1px 15px 16px;
+    padding: 1px 15px calc( env(safe-area-inset-bottom) + 16px );
     background-color: variables.$colorWhite;
 
     &:before {
       content: '';
-      height: 40px;
+      height: 30px;
       left: 0;
       right: 0;
       position: absolute;
-      top: -39px;
+      bottom: 100%;
       background: linear-gradient(rgba(variables.$colorWhite, 0), rgba(variables.$colorWhite, 1));
     }
 

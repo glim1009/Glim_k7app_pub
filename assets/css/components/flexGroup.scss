@@ -33,6 +33,7 @@ $groupAlign: ('start', 'center', 'end');
     [class^=ctitle] {
       display: inline-block;
       vertical-align: top;
+
       ~ [class^=badge] {
         margin-left: 6px;
       }
@@ -43,9 +44,19 @@ $groupAlign: ('start', 'center', 'end');
     }
   }
 
-  .ui-rdo {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
+  .box-rdo-group {
+
+    .ui-rdo {
+      .text-lg {
+        @include mixins.font_size_2xl('sb');
+      }
+      + [class^=badge] {
+        margin: {
+          left: 6px;
+          top: 2px;
+        }
+      }
+    }
   }
+
 }

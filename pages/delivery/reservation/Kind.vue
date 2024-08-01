@@ -1,6 +1,6 @@
 <template>
-  <ContWrap>
-    <ContBox size="xs">
+  <ContWrap in-top="lg">
+    <ContBox>
       <RowListWrap gap="2xl">
         <li class="item">
           <FoldToggleBox open>
@@ -463,6 +463,43 @@
                         <FlexGroup align="end">
                           <div class="flex-left">
                             <div class="ctitle-xs">
+                              주소(반송처)<span class="required"><span class="offscreen">필수입력</span></span>
+                            </div>
+                          </div>
+                          <div class="flex-right">
+                            <EBtn size="xs" color="line-light-gray" @click="openAddressList">
+                              <span class="text">주소록 불러오기</span>
+                            </EBtn>
+                          </div>
+                        </FlexGroup>
+                      </div>
+                      <div class="form-cont">
+                        <div class="form-input-group valid-check">
+                          <EInputBox type="search" enterkeyhint="search" title="주소 검색" placeholder="주소를 검색해보세요." readonly>
+                            <button type="button" class="btn-input-search" @click="openSearchAddress">
+                              <span class="offscreen">검색</span>
+                            </button>
+                          </EInputBox>
+                          <EInputBox title="상세주소 입력" placeholder="상세주소 입력" />
+                          <div class="valid-desc">
+                            주소를 검색해주세요.
+                          </div>
+                        </div>
+                        <RowListWrap gap="sm">
+                          <span class="ui-chk">
+                            <input id="demoChk01" type="checkbox" />
+                            <label for="demoChk01"><span class="text-md">기본주소지와 동일</span></label>
+                          </span>
+                        </RowListWrap>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-form">
+                    <div class="form-field">
+                      <div class="form-title">
+                        <FlexGroup align="end">
+                          <div class="flex-left">
+                            <div class="ctitle-xs">
                               접수매장<span class="required"><span class="offscreen">필수입력</span></span>
                             </div>
                           </div>
@@ -486,7 +523,7 @@
                         </div>
                         <RowListWrap gap="sm">
                           <span class="ui-chk">
-                            <input id="formChk02" type="checkbox" />
+                            <input id="formChk02" type="checkbox" disabled />
                             <label for="formChk02"><span class="text-md">단골매장 저장</span></label>
                           </span>
                         </RowListWrap>
@@ -816,7 +853,7 @@
                         </div>
                       </div>
                       <RowListWrap size="md">
-                        <p class="dot-text-sm fc-spot">
+                        <p class="dot-text-sm-green">
                           로그인 하시면 [받는 분]을 최대 10명까지 추가하여 예약하실 수 있습니다.
                         </p>
                       </RowListWrap>
@@ -1135,7 +1172,7 @@
                   <li class="item-order-pay">
                     <span class="ui-rdo">
                       <input id="orderPayRdo01" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payCard" />
-                      <label for="orderPayRdo01"><span class="text-md">신용(체크)카드</span></label>
+                      <label for="orderPayRdo01"><span class="text-lg">신용(체크)카드</span></label>
                     </span>
                     <div v-show="orderPayRadio === 'payCard'" class="order-pay-cont">
                       <div class="ui-select">
@@ -1150,13 +1187,13 @@
                   <li class="item-order-pay">
                     <span class="ui-rdo">
                       <input id="orderPayRdo02" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payLpay" />
-                      <label for="orderPayRdo02"><span class="text-md">L.PAY</span></label>
+                      <label for="orderPayRdo02"><span class="text-lg">L.PAY</span></label>
                     </span>
                   </li>
                   <li class="item-order-pay">
                     <span class="ui-rdo">
                       <input id="orderPayRdo03" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payNaver" />
-                      <label for="orderPayRdo03"><span class="text-md">네이버 간편결제</span></label>
+                      <label for="orderPayRdo03"><span class="text-lg">네이버 간편결제</span></label>
                     </span>
                     <div v-show="orderPayRadio === 'payNaver'" class="order-pay-cont">
                       <BtnWrap>
@@ -1172,13 +1209,13 @@
                   <li class="item-order-pay">
                     <span class="ui-rdo">
                       <input id="orderPayRdo04" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payKakao" />
-                      <label for="orderPayRdo04"><span class="text-md">카카오페이</span></label>
+                      <label for="orderPayRdo04"><span class="text-lg">카카오페이</span></label>
                     </span>
                   </li>
                   <li class="item-order-pay">
                     <span class="ui-chk">
                       <input id="orderPayChk01" type="checkbox" />
-                      <label for="orderPayChk01"><span class="text-md">선택한 결제수단 다음에도 사용</span></label>
+                      <label for="orderPayChk01"><span class="text-lg">선택한 결제수단 다음에도 사용</span></label>
                     </span>
                   </li>
                 </RowListWrap>
@@ -1332,7 +1369,7 @@
             <div class="flex-left">
               <span class="ui-chk">
                 <input id="agreeChk01" type="checkbox" />
-                <label for="agreeChk01"><span class="text-md">택배 이용약관<span class="required"><span class="offscreen">필수체크</span></span></span></label>
+                <label for="agreeChk01"><span class="text-lg">택배 이용약관<span class="required"><span class="offscreen">필수체크</span></span></span></label>
               </span>
             </div>
             <div class="flex-right">
@@ -1348,7 +1385,7 @@
             <div class="flex-left">
               <span class="ui-chk">
                 <input id="agreeChk02" type="checkbox" />
-                <label for="agreeChk02"><span class="text-md">개인정보 수집 및 이용동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
+                <label for="agreeChk02"><span class="text-lg">개인정보 수집 및 이용동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
               </span>
             </div>
             <div class="flex-right">
@@ -1363,7 +1400,7 @@
     </ContBox>
   </ContWrap>
   <ContDocker>
-    <BtnWrap type="flex">
+    <BtnWrap type="auto">
       <EBtn color="line-light-gray" size="lg">
         <span class="text">취소</span>
       </EBtn>

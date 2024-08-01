@@ -15,8 +15,8 @@
               </BadgeGroup>
               <TooltipGroup>택배수거불가 및 기타 사유로 매장에서 접수 처리를 취소했습니다.</TooltipGroup>
             </div>
-            <div class="ctitle-lg">반팔티 3팩</div>
-            <div class="stext">매장의 택배접수기에 바코드를 스캔하여<br>택배를 접수해주세요.</div>
+            <div class="ctitle-xl">반팔티 3팩</div>
+            <div class="stext-lg">매장의 택배접수기에 바코드를 스캔하여<br>택배를 접수해주세요.</div>
           </CtitleWrap>
           <ColorBox color="line-light-gray" size="lg">
             <div class="barcode-box">
@@ -45,19 +45,19 @@
                   <tbody>
                     <tr>
                       <th scope="row">결제금액</th>
-                      <td>3,400원</td>
+                      <td class="fc-gray90">3,400원</td>
                     </tr>
                     <tr>
                       <th scope="row">예약일시</th>
-                      <td>2024.06.15 15:32</td>
+                      <td class="fc-gray90">2024.06.15 15:32</td>
                     </tr>
                     <tr>
                       <th scope="row">물품금액</th>
-                      <td>5만원</td>
+                      <td class="fc-gray90">5만원</td>
                     </tr>
                     <tr>
                       <th scope="row">배송상품</th>
-                      <td>의류</td>
+                      <td class="fc-gray90">의류</td>
                     </tr>
                   </tbody>
                 </TableWrap>
@@ -73,19 +73,19 @@
                   <tbody>
                     <tr>
                       <th scope="row">보내는 분</th>
-                      <td>홍*동</td>
+                      <td class="fc-gray90">홍*동</td>
                     </tr>
                     <tr>
                       <th scope="row">휴대폰번호</th>
-                      <td>010-6548-7742</td>
+                      <td class="fc-gray90">010-6548-7742</td>
                     </tr>
                     <tr>
                       <th scope="row">주소(반송처)</th>
-                      <td>서울시 중구 충무로 23가길 ***<br>***동 ****호</td>
+                      <td class="fc-gray90">서울시 중구 충무로 23가길 ***<br>***동 ****호</td>
                     </tr>
                     <tr>
                       <th scope="row">접수매장</th>
-                      <td>세븐일레븐 을지로점</td>
+                      <td class="fc-gray90">세븐일레븐 을지로점</td>
                     </tr>
                   </tbody>
                 </TableWrap>
@@ -101,19 +101,19 @@
                   <tbody>
                     <tr>
                       <th scope="row">받는 분</th>
-                      <td>김*븐</td>
+                      <td class="fc-gray90">김*븐</td>
                     </tr>
                     <tr>
                       <th scope="row">휴대폰번호</th>
-                      <td>010-1234-5678</td>
+                      <td class="fc-gray90">010-1234-5678</td>
                     </tr>
                     <tr>
                       <th scope="row">주소(반송처)</th>
-                      <td>서울시 중구 충무로 23가길 234<br>127동 2301호</td>
+                      <td class="fc-gray90">서울시 중구 충무로 23가길 234<br>127동 2301호</td>
                     </tr>
                     <tr>
                       <th scope="row">수령매장</th>
-                      <td>세븐일레븐 광화문점</td>
+                      <td class="fc-gray90">세븐일레븐 광화문점</td>
                     </tr>
                   </tbody>
                 </TableWrap>

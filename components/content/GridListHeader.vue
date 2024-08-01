@@ -4,7 +4,7 @@
       <div class="flex-left">
         <div class="goods-group">
           <span class="label">총</span>
-          <EGoods size="lg" :val="props.listValue" unit="건" class="fw-sb" />
+          <EGoods :val="props.listValue" unit="건" class="fw-sb" />
         </div>
       </div>
       <div class="flex-right">

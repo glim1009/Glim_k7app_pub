@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 const props = withDefaults(defineProps<{
-  size?: 'xs' | 'sm' | 'md' | 'lg'; // xs - 10px, sm - 16px, md - 24px, lg - 30px
+  size?: 'zero' | 'xs' | 'sm' | 'md' | 'lg'; // zero - 0, xs - 10px, sm - 16px, md - 24px, lg - 30px
 }>(), {
   size: 'md',
 });

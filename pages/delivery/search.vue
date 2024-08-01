@@ -1,31 +1,47 @@
 <template>
   <DeliveryHomeTab>
     <ContWrap>
+      <ContBox>
+        <GridListHeader list-value="8" select-title="배송상태 정렬">
+          <option selected>
+            배송상태 순
+          </option>
+          <option>예약일시 순</option>
+          <option>택배명</option>
+        </GridListHeader>
+      </ContBox>
+
       <!-- 데이터가 있는 경우 -->
-      <div v-if="isData">
+      <ContBox v-if="isData" size="sm">
         <RowListWrap>
           <li class="item">
             <ColorBox color="white" size="lg">
               <div class="box-info-header">
-                <CtitleWrap>
+                <CtitleWrap size="sm">
                   <div class="ctitle-sub-lg">
                     <badge-group>
                       <EBadge color="gray" size="md" badge-text="일반택배" />
                       <EBadge color="light-gray" size="md" badge-text="반송" />
                     </badge-group>
                   </div>
-                  <div class="ctitle-sm">
+                  <div class="ctitle">
                     의류 청바지
                   </div>
-                  <div class="box-info-desc">
-                    <span class="title">
-                      송장번호
-                    </span>
-                    <span class="stext-sm">
-                      1234567890987
-                    </span>
-                  </div>
                 </CtitleWrap>
+                <TableWrap type="info" size="xs" table-name="배송정보">
+                  <colgroup>
+                    <col style="width: 55px;" />
+                    <col style="width: auto;" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        송장번호
+                      </th>
+                      <td>1234567890987</td>
+                    </tr>
+                  </tbody>
+                </TableWrap>
               </div>
               <ul class="delivery-step-col-list">
                 <li class="delivery-item">
@@ -124,7 +140,7 @@
           <li class="item">
             <ColorBox color="white" size="lg">
               <div class="box-info-header">
-                <CtitleWrap>
+                <CtitleWrap size="sm">
                   <div class="ctitle-sub-lg">
                     <badge-group>
                       <EBadge color="gray" size="md" badge-text="일반택배" />
@@ -134,15 +150,21 @@
                   <div class="ctitle-sm">
                     의류 청바지
                   </div>
-                  <div class="box-info-desc">
-                    <span class="title">
-                      송장번호
-                    </span>
-                    <span class="stext-sm">
-                      1234567890987
-                    </span>
-                  </div>
                 </CtitleWrap>
+                <TableWrap type="info" size="xs" table-name="배송정보">
+                  <colgroup>
+                    <col style="width: 55px;" />
+                    <col style="width: auto;" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        송장번호
+                      </th>
+                      <td>1234567890987</td>
+                    </tr>
+                  </tbody>
+                </TableWrap>
               </div>
               <ul class="delivery-step-col-list">
                 <li class="delivery-item">
@@ -186,7 +208,7 @@
           <li class="item">
             <ColorBox color="white" size="lg">
               <div class="box-info-header">
-                <CtitleWrap>
+                <CtitleWrap size="sm">
                   <div class="ctitle-sub-lg">
                     <badge-group>
                       <EBadge color="gray" size="md" badge-text="일반택배" />
@@ -196,15 +218,21 @@
                   <div class="ctitle-sm">
                     의류 청바지
                   </div>
-                  <div class="box-info-desc">
-                    <span class="title">
-                      송장번호
-                    </span>
-                    <span class="stext-sm">
-                      1234567890987
-                    </span>
-                  </div>
                 </CtitleWrap>
+                <TableWrap type="info" size="xs" table-name="배송정보">
+                  <colgroup>
+                    <col style="width: 55px;" />
+                    <col style="width: auto;" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        송장번호
+                      </th>
+                      <td>1234567890987</td>
+                    </tr>
+                  </tbody>
+                </TableWrap>
               </div>
               <ul class="delivery-step-col-list">
                 <li class="delivery-item">
@@ -249,7 +277,7 @@
           <li class="item">
             <ColorBox color="white" size="lg">
               <div class="box-info-header">
-                <CtitleWrap>
+                <CtitleWrap size="sm">
                   <div class="ctitle-sub-lg">
                     <badge-group>
                       <EBadge color="green" size="md" badge-text="착한택배" />
@@ -258,15 +286,21 @@
                   <div class="ctitle-sm">
                     의류 청바지
                   </div>
-                  <div class="box-info-desc">
-                    <span class="title">
-                      송장번호
-                    </span>
-                    <span class="stext-sm">
-                      1234567890987
-                    </span>
-                  </div>
                 </CtitleWrap>
+                <TableWrap type="info" size="xs" table-name="배송정보">
+                  <colgroup>
+                    <col style="width: 55px;" />
+                    <col style="width: auto;" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        송장번호
+                      </th>
+                      <td>1234567890987</td>
+                    </tr>
+                  </tbody>
+                </TableWrap>
               </div>
               <ul class="delivery-step-col-list">
                 <li class="delivery-item is-active">
@@ -369,7 +403,7 @@
           <li class="item">
             <ColorBox color="white" size="lg">
               <div class="box-info-header">
-                <CtitleWrap>
+                <CtitleWrap size="sm">
                   <div class="ctitle-sub-lg">
                     <badge-group>
                       <EBadge color="gray" size="md" badge-text="일반택배" />
@@ -378,15 +412,21 @@
                   <div class="ctitle-sm">
                     김치 한박스
                   </div>
-                  <div class="box-info-desc">
-                    <span class="title">
-                      송장번호
-                    </span>
-                    <span class="stext-sm">
-                      1234567890987
-                    </span>
-                  </div>
                 </CtitleWrap>
+                <TableWrap type="info" size="xs" table-name="배송정보">
+                  <colgroup>
+                    <col style="width: 55px;" />
+                    <col style="width: auto;" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        송장번호
+                      </th>
+                      <td>1234567890987</td>
+                    </tr>
+                  </tbody>
+                </TableWrap>
               </div>
               <ul class="delivery-step-col-list">
                 <li class="delivery-item">
@@ -489,7 +529,7 @@
           <li class="item">
             <ColorBox color="white" size="lg">
               <div class="box-info-header">
-                <CtitleWrap>
+                <CtitleWrap size="sm">
                   <div class="ctitle-sub-lg">
                     <badge-group>
                       <EBadge color="gray" size="md" badge-text="일반택배" />
@@ -498,15 +538,21 @@
                   <div class="ctitle-sm">
                     배추 한박스
                   </div>
-                  <div class="box-info-desc">
-                    <span class="title">
-                      배추 한박스
-                    </span>
-                    <span class="stext-sm">
-                      1234567890987
-                    </span>
-                  </div>
                 </CtitleWrap>
+                <TableWrap type="info" size="xs" table-name="배송정보">
+                  <colgroup>
+                    <col style="width: 55px;" />
+                    <col style="width: auto;" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        송장번호
+                      </th>
+                      <td>1234567890987</td>
+                    </tr>
+                  </tbody>
+                </TableWrap>
               </div>
               <ul class="delivery-step-col-list">
                 <li class="delivery-item">
@@ -609,7 +655,7 @@
           <li class="item">
             <ColorBox color="white" size="lg">
               <div class="box-info-header">
-                <CtitleWrap>
+                <CtitleWrap size="sm">
                   <div class="ctitle-sub-lg">
                     <badge-group>
                       <EBadge color="gray" size="md" badge-text="일반택배" />
@@ -619,15 +665,21 @@
                   <div class="ctitle-sm">
                     배추 한박스
                   </div>
-                  <div class="box-info-desc">
-                    <span class="title">
-                      송장번호
-                    </span>
-                    <span class="stext-sm">
-                      1234567890987
-                    </span>
-                  </div>
                 </CtitleWrap>
+                <TableWrap type="info" size="xs" table-name="배송정보">
+                  <colgroup>
+                    <col style="width: 55px;" />
+                    <col style="width: auto;" />
+                  </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row">
+                        송장번호
+                      </th>
+                      <td>1234567890987</td>
+                    </tr>
+                  </tbody>
+                </TableWrap>
               </div>
               <ul class="delivery-step-col-list">
                 <li class="delivery-item">
@@ -672,17 +724,17 @@
             </ColorBox>
           </li>
         </RowListWrap>
-      </div>
+      </ContBox>
       <!-- // 데이터가 있는 경우 -->
 
       <!-- 데이터가 없는 경우  -->
-      <div v-if="isNoData">
+      <ContBox v-if="isNoData" size="zero">
         <InfoGuideWrap
           type="no-data"
           name="temp"
           sub-desc="배송조회 내역이 없습니다."
         />
-      </div>
+      </ContBox>
       <!-- // 데이터가 없는 경우  -->
     </ContWrap>
   </DeliveryHomeTab>

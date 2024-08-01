@@ -1,5 +1,5 @@
 <template>
-  <ContWrap>
+  <ContWrap in-top="lg">
     <RowListWrap gap="xl">
       <li class="item">
         <div class="ctitle">택배예약 시 발급된 예약번호와<br>설정한 비밀번호를 입력해주세요.</div>
@@ -38,7 +38,7 @@
       <EBtn color="line-light-gray" size="lg">
         <span class="text">취소</span>
       </EBtn>
-      <EBtn tag="a" color="green" size="lg" to="/delivery/non-user/history">
+      <EBtn tag="a" color="green" size="lg" to="javascript:">
         <span class="text">조회</span>
       </EBtn>
     </BtnWrap>
@@ -47,15 +47,10 @@
 
 <script setup lang="ts">
 definePageMeta({
-  title: '택배 예약/배송 조회',
   layout: 'no-docker',
+  title: '택배 예약/배송 조회',
+  hideRightHeader: ['home'],
 });
-
-// 접수 여부에 따른 링크 이동 경로
-// 접수 X = /delivery/non-user/history
-// 접수 O = /delivery/non-user/search
-const isReceipt = ref(true);
-
 
 </script>
 

@@ -6,7 +6,7 @@
 /* s: contBox */
 // size - top, bottom 중 size별 지정
 
-$contSize: ('xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
+$contSize: ('zero': 0px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
 
 @each $size, $px in $contSize {
   .cont-#{$size}-box {
