@@ -259,10 +259,6 @@
   }
 }
 
-
-// size - default / h14
-
-/* 34px size 가이드 확인 필요 by ljy */
 .ico-tooltip {
   @extend %icon;
   width: 18px;
@@ -326,12 +322,12 @@
 // type) info-guide
 
 // type) no-data
-.ico-no-data-store { // 매장없음 아이콘
+/*.ico-no-data-store { // 매장없음 아이콘
   @extend %icon;
   width: 80px;
   height: 80px;
   @include mixins.ratio_images('~/assets/images/common/comm_ico_no_data_store');
-}
+}*/
 
 .ico-no-data-history { // 내역없음 아이콘
   @extend %icon;
