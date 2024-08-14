@@ -7,7 +7,7 @@
             <button class="btn-header-back">
               <EIco name="back"/>
             </button>
-            <EInputBox v-model="boxActive" type="search" enterkeyhint="search" title="검색" placeholder="텍스트 입력 전">
+            <EInputBox type="search" enterkeyhint="search" title="검색" placeholder="텍스트 입력 전">
               <button type="button" class="btn-input-search">
                 <span class="offscreen">검색</span>
               </button>
