@@ -261,13 +261,6 @@
 
 
 // size - default / h14
-.ico-barcode {
-  @extend %icon;
-  width: 34px;
-  height: 34px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_barcode_docker');
-}
-
 /* 34px size 가이드 확인 필요 by ljy */
 .ico-tooltip {
   @extend %icon;
