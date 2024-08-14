@@ -212,7 +212,7 @@
   @extend %icon;
   width: 16px;
   height: 16px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_delete_black_xs');
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_delete_gray_xs');
 }
 .ico-edit-green-xs { //green
   @extend %icon;
