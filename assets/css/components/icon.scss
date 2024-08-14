@@ -364,19 +364,19 @@
   @include mixins.ratio_images('~/assets/images/common/comm_ico_no_data_address');
 }
 
-.ico-no-data-coupon { // 쿠폰없음 아이콘
+/*.ico-no-data-coupon { // 쿠폰없음 아이콘
   @extend %icon;
   width: 80px;
   height: 80px;
   @include mixins.ratio_images('~/assets/images/common/comm_ico_no_data_coupon');
-}
+}*/
 
-.ico-no-data-review { // 리뷰없음 아이콘
+/*.ico-no-data-review { // 리뷰없음 아이콘
   @extend %icon;
   width: 80px;
   height: 80px;
   @include mixins.ratio_images('~/assets/images/common/comm_ico_no_data_review');
-}
+}*/
 
 /* e : info-guide-wrap */
 
