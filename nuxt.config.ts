@@ -44,7 +44,6 @@ export default defineNuxtConfig({
 
   css: [
     '~/assets/css/base/reset.scss',
-    '~/assets/css/base/common.scss',
     '~/assets/css/base/components.scss',
     'swiper/css/effect-fade'
   ],

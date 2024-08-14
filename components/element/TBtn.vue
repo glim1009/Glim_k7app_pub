@@ -27,7 +27,3 @@ const className = computed(() => {
   return cNm;
 });
 </script>
-
-<style lang="scss" scoped>
-@import url('/assets/css/components/button.scss');
-</style>

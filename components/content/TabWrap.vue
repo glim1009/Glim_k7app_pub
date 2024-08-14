@@ -12,9 +12,11 @@
 <script setup lang="ts">
 const props = withDefaults(defineProps<{
   firActive?: string;
+  inTop?: 'zero' | 'sm' | 'md' | 'lg'; // zero - 0, sm - 10px , md - 20px, lg - 30px
 }>(), {
   firActive: '',
 });
+
 const activeTab = ref(props.firActive);
 
 function setActiveTab(tabName: string) {
@@ -23,4 +25,9 @@ function setActiveTab(tabName: string) {
 
 provide('activeTab', activeTab);
 provide('setActiveTab', setActiveTab);
+
 </script>
+
+<style lang="scss" scoped>
+@import url('/assets/css/components/swiper.scss');
+</style>

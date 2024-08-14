@@ -1,0 +1,26 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.board-detail-wrap {
+  .board-detail-header {
+    padding: 20px;
+  }
+}
+
+.container-wrapper {
+  .board-detail-wrap:last-child {
+    @include mixins.justify_width(stretch, start, column);
+    flex: 1 0 auto;
+
+    .board-detail-content {
+      @include mixins.justify_width(stretch, start, column);
+      flex: 1 0 auto;
+      :deep([class^=cont][class$=-wrap]) {
+        &:last-child {
+          flex: 1 0 auto;
+        }
+      }
+    }
+  }
+}

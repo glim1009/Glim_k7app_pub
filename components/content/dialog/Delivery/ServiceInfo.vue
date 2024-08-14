@@ -25,10 +25,10 @@
             </SwiperAutoWrap>
           </template>
           <template #default="{ activeTab }">
-            <ContWrap type="white" in-top="sm" v-if="activeTab === 'normal'">
+            <ContWrap class="side-zero" in-top="sm" type="white" v-if="activeTab === 'normal'">
               <PopDeliveryTabInfoNormal />
             </ContWrap>
-            <ContWrap type="white" in-top="sm" v-if="activeTab === 'kind'">
+            <ContWrap class="side-zero" in-top="sm" type="white" v-if="activeTab === 'kind'">
               <PopDeliveryTabInfoKind />
             </ContWrap>
           </template>

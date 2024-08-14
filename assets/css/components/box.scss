@@ -6,6 +6,10 @@
 
 %ColorBoxComm {
   border-radius: 10px;
+  margin: {
+    left: -5px;
+    right: -5px;
+  }
 
   &.box-scroll {
     overflow-y: auto;
@@ -60,8 +64,17 @@
     width: 100%;
     margin-bottom: 16px;
   }
+  :deep(.box-prod-header) {
+    padding: 16px 20px;
+    border-bottom: 1px solid variables.$colorGray30;
+  }
 }
 
+[class*=lg-box] {
+  :deep(.box-prod-header) {
+    margin: -20px -20px 20px;
+  }
+}
 
 // bg color
 [class^=line-light-gray][class*=box] {
@@ -94,13 +107,14 @@
       right: 0;
     };
   }
+}
 
+[class^=orange][class*=box] {
+  @extend %ColorBoxComm;
+  background: variables.$colorOrange10;
 }
 
 /* e: box */
-
-
-// 택배 임시 scss _LTK
 .light-gray-lg-box, .white-lg-box {
 
   &.bg-normal-delivery, &.bg-kind-delivery {
@@ -133,3 +147,4 @@
     }
   }
 }
+

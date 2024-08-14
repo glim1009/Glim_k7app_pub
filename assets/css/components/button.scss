@@ -10,7 +10,7 @@
   border: 1px solid variables.$colorBlack;
   border-radius: 27px;
 
-  :deep(.text) {
+  .text {
     @include mixins.font_size_xl('sb');
 
     ~ [class^=ico] {
@@ -18,7 +18,7 @@
     }
   }
 
-  :deep([class^=ico]) {
+  [class^=ico] {
     ~ .text {
       margin-left: 4px;
     }
@@ -30,15 +30,15 @@
   padding: 0 20px;
   border-radius: 22px;
 
-  :deep(.text) {
-    @include mixins.font_size_md('sb');
+  .text {
+    @include mixins.font_size_lg;
 
     ~ [class^=ico] {
       margin-left: 4px;
     }
   }
 
-  :deep([class^=ico]) {
+  [class^=ico] {
     ~ .text {
       margin-left: 4px;
     }
@@ -47,10 +47,10 @@
 
 %btnSmSize {
   height: 36px;
-  padding: 0 12px;
-  border-radius: 18px;
+  padding: 0 16px;
+  border-radius: 22px;
 
-  :deep(.text) {
+  .text {
     @include mixins.font_size_sm('sb');
 
     ~ [class^=ico] {
@@ -58,7 +58,7 @@
     }
   }
 
-  :deep([class^=ico]) {
+  [class^=ico] {
     ~ .text {
       margin-left: 4px;
     }
@@ -71,15 +71,15 @@
   padding: 0 12px;
   border-radius: 15px;
 
-  :deep(.text) {
-    @include mixins.font_size_md('sb');
+  .text {
+    @include mixins.font_size_md('md');
 
     ~ [class^=ico] {
       margin-left: 2px;
     }
   }
 
-  :deep([class^=ico]) {
+  [class^=ico] {
     ~ .text {
       margin-left: 2px;
     }
@@ -95,7 +95,7 @@
   background-color: variables.$colorGreen100;
   border: 1px solid variables.$colorGreen100;
 
-  :deep(.text) {
+  .text {
     color: variables.$colorWhite;
   }
 
@@ -115,7 +115,7 @@
   background-color: variables.$colorGreen10;
   border: 1px solid variables.$colorGreen10;
 
-  :deep(.text) {
+  .text {
     color: variables.$colorGreen100;
   }
 
@@ -135,7 +135,7 @@
   background-color: variables.$colorGray90;
   border: 1px solid variables.$colorGray90;
 
-  :deep(.text) {
+  .text {
     color: variables.$colorWhite;
   }
 
@@ -155,7 +155,7 @@
   background-color: variables.$colorGray20;
   border: 1px solid variables.$colorGray20;
 
-  :deep(.text) {
+  .text {
     color: variables.$colorGray80;
   }
 
@@ -175,7 +175,7 @@
   background-color: variables.$colorWhite;
   border: 1px solid variables.$colorGreen100;
 
-  :deep(.text) {
+  .text {
     color: variables.$colorGreen100;
   }
 
@@ -194,7 +194,7 @@
   background-color: variables.$colorWhite;
   border: 1px solid variables.$colorOrange100;
 
-  :deep(.text) {
+  .text {
     color: variables.$colorOrange100;
   }
 
@@ -213,7 +213,7 @@
   background-color: variables.$colorWhite;
   border: 1px solid variables.$colorGray60;
 
-  :deep(.text) {
+  .text {
     color: variables.$colorGray80;
   }
 
@@ -232,7 +232,7 @@
   background-color: variables.$colorWhite;
   border: 1px solid variables.$colorGray40;
 
-  :deep(.text) {
+  .text {
     color: variables.$colorGray70;
   }
 
@@ -438,7 +438,7 @@ a.btn, button.btn {
     vertical-align: top;
     line-height: 1;
 
-    :deep(.text) {
+    .text {
       display: inline-block;
       color: variables.$colorGray80;
       @include mixins.font_size_xl(sb);
@@ -453,7 +453,7 @@ a.btn, button.btn {
     }
 
     [class^=ico] {
-      ~ :deep(.text) {
+      ~ .text {
         margin-left: 6px;
       }
     }
@@ -464,23 +464,29 @@ a.btn, button.btn {
     vertical-align: top;
     line-height: 1;
 
-    :deep(.text) {
+    .text {
       display: inline-block;
       color: variables.$colorGray80;
-      @include mixins.font_size_lg('heading', 14px);
+      @include mixins.font_size_lg('md');
       vertical-align: top;
 
       ~ [class^=ico] {
         margin: {
-          top: 2px;
-          left: 2px;
+          left: 6px;
         }
       }
     }
 
     [class^=ico] {
-      ~ :deep(.text) {
-        margin-left: 6px;
+      margin: {
+        top: 1px;
+        bottom: 1px;
+      }
+
+      ~ .text {
+        margin: {
+          left: 6px;
+        }
       }
     }
   }
@@ -490,7 +496,7 @@ a.btn, button.btn {
     vertical-align: top;
     line-height: 1;
 
-    :deep(.text) {
+    .text {
       display: inline-block;
       color: variables.$colorGray80;
       @include mixins.font_size_md(md, 18px);
@@ -503,7 +509,7 @@ a.btn, button.btn {
       }
     }
 
-    :deep([class^=ico]) {
+    [class^=ico] {
       ~ .text {
         margin-left: 6px;
       }
@@ -514,7 +520,7 @@ a.btn, button.btn {
     }
 
     [class^=ico] {
-      ~ :deep(.text) {
+      ~ .text {
         margin-left: 2px;
       }
     }
@@ -595,6 +601,7 @@ a.btn, button.btn {
         left: 0;
       }
     }
+
     ~ [class^=btn][class*=lg], ~ [class^=tbtn][class*=lg] {
       margin: {
         top: 10px;
@@ -608,6 +615,10 @@ $btntSize: ('sm': 10px, 'md': 16px, 'lg': 24px, 'xl': 30px);
 
 .btn-flex-wrap {
   @extend %btnFlexWrap;
+  margin: {
+    left: -5px;
+    right: -5px;
+  }
 }
 
 .btn-auto-wrap {
@@ -630,7 +641,11 @@ $btntSize: ('sm': 10px, 'md': 16px, 'lg': 24px, 'xl': 30px);
 @each $size, $px in $btntSize {
   .btn-flex-#{$size}-wrap {
     @extend %btnFlexWrap;
-    margin-top: $px;
+    margin: {
+      top: $px;
+      left: -5px;
+      right: -5px;
+    }
   }
   .btn-auto-#{$size}-wrap {
     @extend %btnAutoWrap;

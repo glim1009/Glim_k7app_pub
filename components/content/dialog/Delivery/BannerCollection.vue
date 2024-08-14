@@ -5,8 +5,8 @@
     </template>
     <template #body>
       <div class="dialog-inner">
-        <ContWrap>
-          <RowListWrap gap="md">
+        <ContWrap in-top="zero">
+          <RowListWrap gap="md" class="side-box">
             <li class="item-banner">
               <div class="thumb-box">
                 <img src="/assets/images/temp/temp_banner_marketing_1.png" alt="배너 이미지">
@@ -80,5 +80,5 @@ const closeDialog = () => {
 </script>
 
 <style lang="scss" scoped>
-@import url('assets/css/pages/delivery/delivery.scss');
+@import url('assets/css/pages/delivery.scss');
 </style>

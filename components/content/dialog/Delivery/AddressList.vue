@@ -9,9 +9,11 @@
           <ContBox>
             <BtnWrap type="full">
               <EBtn color="gray" @click="openAddAddress">
-                <EIco name="plus" size="sm" color="white"></EIco>
+                <EIco name="plus" color="white" size="sm"></EIco>
                 <span class="text">주소지 추가</span>
               </EBtn>
+            </BtnWrap>
+            <BtnWrap type="auto-center" size="md">
               <ETBtn tag="button" size="xs" @click="openSearchAddress">
                 <EIco name="current-location" size="sm"></EIco>
                 <span class="text">현재 위치 주소에 추가</span>
@@ -30,8 +32,8 @@
                           <EBadge color="light-gray" size="md" badge-text="기본주소지" />
                         </CtitleWrap>
                         <div class="bar-group">
-                          <span class="bar-text-sm fc-black">홍*동</span>
-                          <span class="bar-text-sm fc-black">010-4554-8785</span>
+                          <span class="bar-text fc-black">홍*동</span>
+                          <span class="bar-text fc-black">010-4554-8785</span>
                         </div>
                       </div>
                       <div class="flex-right">
@@ -44,18 +46,18 @@
                   </div>
                   <RowListWrap size="xs">
                     <p class="stext fw-md fc-black">085421</p>
-                    <TableWrap type="info" size="xs" table-name="정보성 테이블">
+                    <TableWrap type="info" gap="sm" size="md" table-name="정보성 테이블">
                       <colgroup>
-                        <col style="width: 42px;">
+                        <col style="width: 44px;">
                         <col style="width: auto;">
                       </colgroup>
                       <tbody>
                         <tr>
-                          <th scope="row">도로명</th>
+                          <th scope="row" class="fc-black fw-md">도로명</th>
                           <td>서울 강동구 상암로 **길 ***호 </td>
                         </tr>
                         <tr>
-                          <th scope="row">지번</th>
+                          <th scope="row" class="fc-black fw-md">지번</th>
                           <td>서울 강동구 암사동 265-5번지 203호 서울 강동구 암사동 265-5번지 ***호</td>
                         </tr>
                       </tbody>
@@ -70,11 +72,10 @@
                       <div class="info-flex-left">
                         <CtitleWrap size="sm">
                           <div class="ctitle-lg">엄마집</div>
-                          <EBadge color="light-gray" size="md" badge-text="기본주소지" />
                         </CtitleWrap>
                         <div class="bar-group">
-                          <span class="bar-text-sm fc-black">홍*동</span>
-                          <span class="bar-text-sm fc-black">010-4554-8785</span>
+                          <span class="bar-text fc-black">홍*동</span>
+                          <span class="bar-text fc-black">010-4554-8785</span>
                         </div>
                       </div>
                       <div class="flex-right">
@@ -87,18 +88,18 @@
                   </div>
                   <RowListWrap size="xs">
                     <p class="stext fw-md fc-black">085421</p>
-                    <TableWrap type="info" size="xs" table-name="정보성 테이블">
+                    <TableWrap type="info" gap="sm" size="md" table-name="정보성 테이블">
                       <colgroup>
-                        <col style="width: 42px;">
+                        <col style="width: 44px;">
                         <col style="width: auto;">
                       </colgroup>
                       <tbody>
                         <tr>
-                          <th scope="row">도로명</th>
+                          <th scope="row" class="fc-black fw-md">도로명</th>
                           <td>서울 강동구 상암로 **길 ***호 </td>
                         </tr>
                         <tr>
-                          <th scope="row">지번</th>
+                          <th scope="row" class="fc-black fw-md">지번</th>
                           <td>서울 강동구 암사동 265-5번지 203호 서울 강동구 암사동 265-5번지 ***호</td>
                         </tr>
                       </tbody>
@@ -113,11 +114,10 @@
                       <div class="info-flex-left">
                         <CtitleWrap size="sm">
                           <div class="ctitle-lg">우리집</div>
-                          <EBadge color="light-gray" size="md" badge-text="기본주소지" />
                         </CtitleWrap>
                         <div class="bar-group">
-                          <span class="bar-text-sm fc-black">홍*동</span>
-                          <span class="bar-text-sm fc-black">010-4554-8785</span>
+                          <span class="bar-text fc-black">홍*동</span>
+                          <span class="bar-text fc-black">010-4554-8785</span>
                         </div>
                       </div>
                       <div class="flex-right">
@@ -130,18 +130,18 @@
                   </div>
                   <RowListWrap size="xs">
                     <p class="stext fw-md fc-black">085421</p>
-                    <TableWrap type="info" size="xs" table-name="정보성 테이블">
+                    <TableWrap type="info" gap="sm" size="md" table-name="정보성 테이블">
                       <colgroup>
-                        <col style="width: 42px;">
+                        <col style="width: 44px;">
                         <col style="width: auto;">
                       </colgroup>
                       <tbody>
                         <tr>
-                          <th scope="row">도로명</th>
+                          <th scope="row" class="fc-black fw-md">도로명</th>
                           <td>서울 강동구 상암로 **길 ***호 </td>
                         </tr>
                         <tr>
-                          <th scope="row">지번</th>
+                          <th scope="row" class="fc-black fw-md">지번</th>
                           <td>서울 강동구 암사동 265-5번지 203호 서울 강동구 암사동 265-5번지 ***호</td>
                         </tr>
                       </tbody>

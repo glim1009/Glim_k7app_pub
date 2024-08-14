@@ -7,15 +7,34 @@ $wrapSize: ('xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
 
 /* list */
 // Wrap
-@each $size, $px in $wrapSize {
-  .glist-#{$size}-wrap {
-    &:not(:first-child) {
-      margin-top: $px;
+%gridWrapComm {
+  &.side-box {
+    margin: {
+      left: -5px;
+      right: -5px;
     }
   }
 }
 
-%rowListComm {
+.glist-wrap {
+  @extend %gridWrapComm;
+}
+
+@each $size, $px in $wrapSize {
+  .glist-#{$size}-wrap {
+    @extend %gridWrapComm;
+
+    &:not(:first-child) {
+      margin-top: $px;
+    }
+
+
+  }
+}
+
+
+// List
+%gridListComm {
   display: grid;
   gap: 10px;
   @each $size, $px in $listGapSize {
@@ -23,29 +42,40 @@ $wrapSize: ('xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
       gap: $px;
     }
   }
-}
 
-// List
-@for $i from 2 through 6 {
-  .grid-col#{$i}-list {
-    @extend %rowListComm;
-    grid-template-columns: repeat(#{$i}, 1fr);
-    :deep(.item-grid) {
-      position: relative;
+  :deep(.item-grid) {
+    position: relative;
+  }
+
+  :deep(.item-grid-package) {
+    text-align: center;
+
+    .info-box {
+      margin-top: 4px;
     }
-    :deep(.item-grid-full) {
-      position: relative;
-      grid-column: 1 / span #{$i};
+  }
+
+  :deep(:is([class^=line-light-gray], [class^=light-gray-], [class^=white], [class^=light-green])[class*=box]) {
+    margin: {
+      left: 0;
+      right: 0;
     }
   }
 }
 
-/* list */
-.grid-col2-list {
+@for $i from 2 through 6 {
+  .grid-col#{$i}-list {
+    @extend %gridListComm;
+    grid-template-columns: repeat(#{$i}, 1fr);
 
-  :deep(.item-grid) {
-    // .btn-link 사용 시 (임시)
-    position: relative;
+    :deep(.item-grid) {
+      position: relative;
+    }
+
+    :deep(.item-grid-full) {
+      position: relative;
+      grid-column: 1 / span #{$i};
+    }
   }
 }
 

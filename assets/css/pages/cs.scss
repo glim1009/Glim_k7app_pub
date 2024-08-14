@@ -1,0 +1,98 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+// cs main
+
+[class^=item-board] {
+  .board-info-wrap {
+    position: relative;
+    padding-right: 38px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      display: block;
+      width: 16px;
+      height: 16px;
+      @include mixins.ratio_images('~/assets/images/common/comm_ico_arw_right_gray_xs');
+      @include mixins.prefix(transform, translateY(-50%));
+    }
+
+  }
+
+  &[class$=full] {
+    .board-info-wrap {
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        display: block;
+        width: 18px;
+        height: 18px;
+        @include mixins.ratio_images('~/assets/images/common/comm_ico_arw_right_gray_sm');
+        @include mixins.prefix(transform, translateY(-50%));
+      }
+    }
+  }
+}
+
+.cs-contact-wrap {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 42px;
+    height: 42px;
+    background: variables.$colorWhite;
+    border-radius: 21px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 9px;
+    left: 9px;
+    width: 24px;
+    height: 24px;
+    @include mixins.ratio_images('~/assets/images/common/comm_ico_headphone_gray_cs');
+  }
+
+  .ctitle-zero-wrap {
+    padding-left: 52px;
+  }
+
+}
+
+.flex-center-group {
+  :deep(.flex-faq-left) {
+
+    .bar-group {
+      .bar-item {
+        &:has(.ctitle-lg) { // ctitle 18px
+          &::after {
+            margin-top: 6px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// 임시
+.ctitle-zero-wrap { // ctitle 15px ~ tbtn 13px 여백
+  .ctitle-md {
+    + .tbtn-xs {
+      margin-top: 6px;
+    }
+  }
+}

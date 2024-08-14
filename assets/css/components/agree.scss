@@ -1,0 +1,9 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.all-agree-wrap {
+  .all-check {
+    margin-bottom: 10px;
+  }
+}

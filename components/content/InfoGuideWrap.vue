@@ -1,21 +1,23 @@
 <template>
   <div class="info-guide-wrap">
     <EIco :name="`${props.type}` + `-` + `${props.name}`" />
-    <p v-if="props.type === 'info-guide'" class="stext-xl" v-html="desc"></p>
-    <p v-if="props.type === 'info-guide'" class="stext" v-html="subDesc"></p>
-    <p v-if="props.type === 'no-data'" class="stext-lg" v-html="subDesc"></p>
+    <p v-if="props.type" :class="tyepInfo ? 'info-guide-desc' : 'no-data-desc'" v-html="desc"></p>
+    <p v-if="props.subDesc" class="sub-desc" v-html="subDesc"></p>
   </div>
 </template>
 
 <script setup lang="ts">
 const props = withDefaults(defineProps<{
-  type?: 'info-guide' | 'no-data'; // info-guide h103 , no-data h64
+  type?: 'info-guide' | 'no-data';
   name?: string;
   desc?: string;
   subDesc?: string;
 }>(), {
   type: 'info-guide',
 });
+
+// 타입 체크
+const tyepInfo = computed(() => props.type === 'info-guide');
 </script>
 
 <style lang="scss" scoped>

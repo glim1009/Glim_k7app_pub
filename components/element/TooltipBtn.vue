@@ -18,6 +18,3 @@ const toggleClick = () => {
 }
 </script>
 
-<style lang="scss" scoped>
-@import url('/assets/css/components/tooltip.scss');
-</style>

@@ -9,8 +9,8 @@
     thead {
         tr th {
             padding: {
-                top: 11px;
-                bottom: 12px;
+                top: 14px;
+                bottom: 14px;
             }
             background-color: variables.$colorGray20;
         }
@@ -37,7 +37,7 @@
 
         td {
             background-color: variables.$colorWhite;
-            color: variables.$colorGray90;
+            color: variables.$colorGray80;
         }
     }
 }
@@ -49,42 +49,16 @@
             text-align: left;
             vertical-align: top;
             word-break: break-all;
-            color: variables.$colorGray90;
         }
 
         th {
-            font-weight: variables.$fontWeightSemibold;
+            padding-right: 10px;
             color: variables.$colorGray90;
             @include mixins.word_break;
         }
 
         td {
-            font-weight: variables.$fontWeightRegular;
             color: variables.$colorGray80;
-        }
-
-        ~ tr {
-            th {
-                padding: {
-                    top: 10px;
-                    right: 10px;
-                }
-            }
-
-            td {
-                padding-top: 10px;
-            }
-        }
-    }
-
-    &.info-right {
-        tr {
-            td {
-                .bar-group {
-                    justify-content: flex-end;
-                }
-
-            }
         }
     }
 }
@@ -102,13 +76,16 @@
         tr {
             th, td {
                 text-align: left;
+            }
+            th {
                 padding: {
                     left: 14px;
-                    right: 14px;
-                };
+                    right: 10px;
+                }
             }
 
             td {
+                padding-right: 14px;
                 ~ td {
                     border-left: 1px solid variables.$colorGray30;
                 }
@@ -137,9 +114,13 @@
             th, td {
                 text-align: center;
                 padding: {
-                    left: 12px;
-                    right: 12px;
+                    left: 14px;
+                    right: 14px;
                 }
+            }
+
+            td {
+                color: variables.$colorGray90;
             }
 
             ~ tr {
@@ -148,146 +129,40 @@
                 }
             }
 
-            th {
-                ~ th {
-                    border-left: 1px solid variables.$colorGray30;
-                }
-            }
-
-            td {
-                ~ td {
-                    border-left: 1px solid variables.$colorGray30;
-                }
+            th ~ th, td ~ td{
+                border-left: 1px solid variables.$colorGray30;
             }
         }
     }
 }
 
-.tbl-info-wrap {
-    .tbl-info-md {
+// tbl-info-{gap}-wrap
+.tbl-info-md-wrap { // md 12px
+    [class^=tbl-info] {
         @extend %tblInfo;
-
-        tr {
-            ~ tr {
-                th {
-                    padding: {
-                        top: 12px;
-                        right: 10px;
-                    }
-                }
-
-                td {
-                    padding-top: 12px;
-                }
-            }
-
+        tr ~ tr {
             th, td {
-                &.va-mid {
-                    vertical-align: middle;
-                }
-            }
-
-            th {
-                @include mixins.font_size_md(sb);
-            }
-
-            td {
-                @include mixins.font_size_md;
-
-                > span {
-                    font-size: inherit;
-                    font-weight: inherit;
-                }
-            }
-
-        }
-
-        &.info-right {
-
-            tr td {
-                text-align: right;
+                padding-top: 12px;
             }
         }
     }
+}
 
-    .tbl-info-sm {
+.tbl-info-sm-wrap { // sm 6px
+    [class^=tbl-info] {
         @extend %tblInfo;
-
-        thead {
-            tr {
-                th, td {
-                    @include mixins.font_size_md(sb);
-                    color: variables.$colorGray90;
-                }
-            }
-        }
-        tbody {
-            tr {
-                th, td {
-                    @include mixins.font_size_md;
-                    color: variables.$colorGray80;
-                }
-
-                th {
-                    padding: {
-                        top: 8px;
-                        right: 0;
-                    }
-                }
-
-                td {
-                    padding-top: 8px;
-                }
-            }
-        }
-        tr {
+        tr ~ tr {
             th, td {
-                &.va-mid {
-                    vertical-align: middle;
-                }
-            }
-
-            th {
-                @include mixins.word_break;
-            }
-            td {
-                text-align: right;
-            }
-        }
-
-        &.info-right {
-
-            tr {
-                td {
-                    text-align: right;
-                }
+                padding-top: 6px;
             }
         }
     }
+}
 
-    .tbl-info-xs {
-        @extend %tblInfo;
+[class^=tbl-info][class*=wrap] {
 
+    .tbl-info-md { // 13px
         tr {
-            ~ tr {
-                th {
-                    padding: {
-                        top: 6px;
-                        right: 10px
-                    }
-                }
-
-                td {
-                    padding-top: 6px;
-                }
-            }
-
-            th, td {
-                &.va-mid {
-                    vertical-align: middle;
-                }
-            }
-
             th {
                 @include mixins.font_size_md(sb);
             }
@@ -296,67 +171,24 @@
                 @include mixins.font_size_md;
             }
         }
+    }
 
-        &.info-right {
-
-            tr {
-                td {
-                    text-align: right;
-                }
+    .tbl-info-lg { // 14px
+        tr {
+            th {
+                @include mixins.font_size_lg(heading);
             }
-        }
-    }
-    /*
-    .price-info-footer {
-        margin-top: variables.$contGapSm;
-    }
 
-    &.line-top {
-        padding-top: 20px;
-        border-top: 1px solid variables.$colorGray50;
-    }
-
-    ~ .box-fold-wrap {
-        margin-top: 20px;
-    }
-
-    ~ .info-text-list {
-        margin-top: 20px;
-    }*/
-}
-
-/*.tbl-no-line-wrap {
-    border-bottom: 1px solid variables.$colorGray50;
-
-    .tbl-col {
-        @extend %tblComm;
-
-        th, td {
-            text-align: center;
-            border-top: 1px solid variables.$colorGray50;
-        }
-
-        tfoot {
             td {
-                border: {
-                    top: 1px solid variables.$colorBlack;
-                    bottom: 1px solid variables.$colorBlack;
-                };
-                @include mixins.font_size_xl;
+                @include mixins.font_size_lg(lt);
             }
         }
     }
-}*/
+}
 
 // tbl-info 여백
-.tbl-info-wrap {
-    ~ .tbl-info-wrap {
+[class^=tbl-info][class*=wrap] {
+    ~ [class^=tbl-info][class*=wrap] {
         margin-top: 16px;
-    }
-}
-
-[class^=tbl][class$=wrap] { // usage : 택배이용안내 팝업 _LTK (임시)
-    + .dot-text-sm {
-        margin-top: 14px;
     }
 }

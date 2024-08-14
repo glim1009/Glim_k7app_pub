@@ -6,14 +6,17 @@
 
 <script setup lang="ts">
 const props = withDefaults(defineProps<{
-  size?: 'md'; // gap | md - 4px, lg 추가 예정
+  gap?: 'md'; // gap | md - 4px, lg - 6px 추가 예정
+  size?: 'md' | 'lg' | 'xl' | undefined; // 하단여백 md - 4px, lg - 6px, xl - 10px, 미지정 - 0
 }>(), {
-  size: 'md',
+  gap: 'md',
 });
 
 const className = computed(() => {
   let cNm = 'badge-';
-  cNm += props.size;
+  cNm += props.gap;
+  if (props.size !== undefined)
+    cNm += '-b' + props.size;
   cNm += '-group';
   return cNm;
 });

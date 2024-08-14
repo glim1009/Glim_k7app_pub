@@ -35,7 +35,7 @@
       }
 
       .ptitle {
-        @include mixins.font_size_3xl(sb);
+        @include mixins.font_size_3xl;
         @include mixins.ellipsis(false);
         color: variables.$colorBlack;
         padding-right: 5px;
@@ -74,6 +74,11 @@
         }
       }
 
+    }
+
+    .input-box {
+      flex: 1 0 auto;
+      margin-right: 9px;
     }
   }
 }

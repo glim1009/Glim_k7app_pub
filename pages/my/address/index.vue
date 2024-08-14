@@ -37,7 +37,7 @@
                 <div class="flex-right">
                   <BtnWrap>
                     <EBtn color="light-gray" size="xs">
-                      <EIco name="delete" size="xs"><span class="offscreen">삭제</span></EIco>
+                      <EIco name="delete" color="gray" size="xs"><span class="offscreen">삭제</span></EIco>
                     </EBtn>
                     <EBtn color="light-green" size="xs" @click="openEditAddress">
                       <EIco name="write" color="green" size="xs"><span class="offscreen">수정</span></EIco>
@@ -48,18 +48,18 @@
             </div>
             <RowListWrap size="xs">
               <p class="stext fw-md fc-black">085421</p>
-              <TableWrap type="info" size="xs" table-name="정보성 테이블">
+              <TableWrap type="info" gap="sm" size="md" table-name="정보성 테이블">
                 <colgroup>
-                  <col style="width: 42px;">
+                  <col style="width: 44px;">
                   <col style="width: auto;">
                 </colgroup>
                 <tbody>
                 <tr>
-                  <th scope="row">도로명</th>
+                  <th scope="row" class="fc-black fw-md">도로명</th>
                   <td>서울 강동구 상암로 **길 ***호</td>
                 </tr>
                 <tr>
-                  <th scope="row">지번</th>
+                  <th scope="row" class="fc-black fw-md">지번</th>
                   <td>서울 강동구 암사동 265-5번지 203호 서울 강동구 암사동 265-5번지 ***호</td>
                 </tr>
                 </tbody>
@@ -86,7 +86,7 @@
                 <div class="flex-right">
                   <BtnWrap>
                     <EBtn color="light-gray" size="xs">
-                      <EIco name="delete" size="xs"><span class="offscreen">삭제</span></EIco>
+                      <EIco name="delete" color="gray" size="xs"><span class="offscreen">삭제</span></EIco>
                     </EBtn>
                     <EBtn color="light-green" size="xs" @click="openEditAddress">
                       <EIco name="write" color="green" size="xs"><span class="offscreen">수정</span></EIco>
@@ -97,18 +97,18 @@
             </div>
             <RowListWrap size="xs">
               <p class="stext fw-md fc-black">085421</p>
-              <TableWrap type="info" size="xs" table-name="정보성 테이블">
+              <TableWrap type="info" gap="sm" size="md" table-name="정보성 테이블">
                 <colgroup>
-                  <col style="width: 42px;">
+                  <col style="width: 44px;">
                   <col style="width: auto;">
                 </colgroup>
                 <tbody>
                 <tr>
-                  <th scope="row">도로명</th>
+                  <th scope="row" class="fc-black fw-md">도로명</th>
                   <td>서울 강동구 상암로 **길 ***호</td>
                 </tr>
                 <tr>
-                  <th scope="row">지번</th>
+                  <th scope="row" class="fc-black fw-md">지번</th>
                   <td>서울 강동구 암사동 265-5번지 203호 서울 강동구 암사동 265-5번지 ***호</td>
                 </tr>
                 </tbody>
@@ -135,7 +135,7 @@
                 <div class="flex-right">
                   <BtnWrap>
                     <EBtn color="light-gray" size="xs">
-                      <EIco name="delete" size="xs"><span class="offscreen">삭제</span></EIco>
+                      <EIco name="delete" color="gray" size="xs"><span class="offscreen">삭제</span></EIco>
                     </EBtn>
                     <EBtn color="light-green" size="xs" @click="openEditAddress">
                       <EIco name="write" color="green" size="xs"><span class="offscreen">수정</span></EIco>
@@ -146,18 +146,18 @@
             </div>
             <RowListWrap size="xs">
               <p class="stext fw-md fc-black">085421</p>
-              <TableWrap type="info" size="xs" table-name="정보성 테이블">
+              <TableWrap type="info" gap="sm" size="md" table-name="정보성 테이블">
                 <colgroup>
-                  <col style="width: 42px;">
+                  <col style="width: 44px;">
                   <col style="width: auto;">
                 </colgroup>
                 <tbody>
                 <tr>
-                  <th scope="row">도로명</th>
+                  <th scope="row" class="fc-black fw-md">도로명</th>
                   <td>서울 강동구 상암로 **길 ***호</td>
                 </tr>
                 <tr>
-                  <th scope="row">지번</th>
+                  <th scope="row" class="fc-black fw-md">지번</th>
                   <td>서울 강동구 암사동 265-5번지 203호 서울 강동구 암사동 265-5번지 ***호</td>
                 </tr>
                 </tbody>
@@ -173,8 +173,8 @@
     <ContBox size="zero" v-if="isNoData">
       <InfoGuideWrap
         type="no-data"
-        name="temp"
-        sub-desc="추가된 주소지가 없습니다."
+        name="address"
+        desc="추가된 주소지가 없습니다."
       />
     </ContBox>
     <!-- // 데이터가 없는 경우  -->
@@ -203,7 +203,6 @@
 definePageMeta({
   title: '주소록 관리',
   hideRightHeader: ['home'],
-  layout: 'no-docker',
 })
 
 const isData = ref(true);
@@ -217,6 +216,6 @@ const openEditAddress = () => popEditAddress.value.open = true;
 
 </script>
 
-<style scoped>
-@import url("assets/css/pages/my/my.scss");
+<style lang="scss" scoped>
+@import url("assets/css/pages/my.scss");
 </style>

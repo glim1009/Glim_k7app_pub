@@ -8,7 +8,7 @@
 const props = withDefaults(defineProps<{
   type?: 'default' | 'white' | 'divider'; // default - gray, white, divider - 미정
   inTop?: 'zero' | 'sm' | 'md' | 'lg'; // zero - 0, sm - 10px , md - 20px, lg - 30px
-  inBottom?: 'zero' | 'md'; // zero - 0, md - 30px
+  inBottom?: 'zero' | 'md' | 'sm'; // zero - 0, md - 30px, 'sm' - 20px
 }>(), {
   type: 'default',
   inTop: 'md',
@@ -20,7 +20,7 @@ const props = withDefaults(defineProps<{
 // cont-white-lgbz-
 const className = computed(() => {
   let cNm = 'cont';
-  let bottomClass = 'bz';
+  let bottomClass = props.inBottom === 'zero' ? 'bz' : 'bs';
 
   if (props.type !== 'default') cNm += '-' + props.type;
 
@@ -31,7 +31,6 @@ const className = computed(() => {
   else {
     bottomClass = '-' + bottomClass;
   }
-
   if (props.inBottom !== 'md') cNm += bottomClass;
 
   cNm += '-wrap';

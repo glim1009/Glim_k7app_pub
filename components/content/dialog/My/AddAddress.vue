@@ -10,7 +10,7 @@
             <li class="item-form">
               <div class="form-field">
                 <div class="form-title">
-                  <div class="ctitle-xs">주소별칭<span class="required"><span class="offscreen">필수입력</span></span></div>
+                  <ETit type="form">주소별칭<span class="required"><span class="offscreen">필수입력</span></span></ETit>
                 </div>
                 <div class="form-cont">
                   <div class="form-input-group">
@@ -22,7 +22,7 @@
             <li class="item-form">
               <div class="form-field">
                 <div class="form-title">
-                  <div class="ctitle-xs">이름<span class="required"><span class="offscreen">필수입력</span></span></div>
+                  <ETit type="form">이름<span class="required"><span class="offscreen">필수입력</span></span></ETit>
                 </div>
                 <div class="form-cont">
                   <div class="form-input-group">
@@ -34,7 +34,7 @@
             <li class="item-form">
               <div class="form-field">
                 <div class="form-title">
-                  <div class="ctitle-xs">휴대폰 번호<span class="required"><span class="offscreen">필수입력</span></span></div>
+                  <ETit type="form">휴대폰 번호<span class="required"><span class="offscreen">필수입력</span></span></ETit>
                 </div>
                 <div class="form-cont">
                   <div class="form-input-group valid-check fail">
@@ -49,7 +49,7 @@
                 <div class="form-title">
                   <FlexGroup align="end">
                     <div class="flex-left">
-                      <div class="ctitle-xs">주소<span class="required"><span class="offscreen">필수입력</span></span></div>
+                      <ETit type="form">주소<span class="required"><span class="offscreen">필수입력</span></span></ETit>
                     </div>
                     <div class="flex-right">
                       <ETBtn tag="button" size="xs" @click="openSearchAddress">
@@ -68,12 +68,10 @@
                     </EInputBox>
                     <EInputBox title="상세주소 입력" placeholder="상세주소 입력" />
                   </div>
-                  <RowListWrap gap="sm">
-                    <div class="ui-chk">
-                      <input type="checkbox" id="demoChk01">
-                      <label for="demoChk01"><span class="text-md">기본주소지로 설정</span></label>
-                    </div>
-                  </RowListWrap>
+                  <span class="ui-chk">
+                    <input type="checkbox" id="demoChk01">
+                    <label for="demoChk01"><span class="text-md">기본주소지로 설정</span></label>
+                  </span>
                 </div>
               </div>
             </li>

@@ -4,6 +4,10 @@
 
 /* swiper banner */
 .swiper-banner-wrap {
+  margin: {
+    left: -5px;
+    right: -5px;
+  }
   position: relative;
   overflow: hidden;
   border-radius: 15px;

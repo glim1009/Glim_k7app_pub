@@ -5,13 +5,7 @@
 /* S: tab-wrap */
 //기본 스타일 정의
 %tabCommon {
-  overflow: hidden;
-
   .tab-item {
-    width: auto;
-    position: relative;
-    margin: 0;
-
     .tab-link {
       display: inline-block;
       font-size: 0;
@@ -52,6 +46,15 @@
       }
     }
   }
+
+  .tabs {
+    &:has(.swiper-auto-wrap) {
+      margin: {
+        left: -5px;
+        right: -5px;
+      }
+    }
+  }
 }
 
 .tab-wrap {
@@ -61,9 +64,6 @@
     position: relative;
 
     .swiper-auto-line-wrap {
-      margin: 0 -20px;
-      padding: 0 20px;
-
       &:after {
         content: '';
         display: inline-block;
@@ -78,19 +78,24 @@
   }
 
   // default (type box)
-  .swiper-auto-wrap {
+  .swiper-auto-tab-wrap {
+    .swiper {
+      position: relative;
+      padding: 0 15px;
+    }
+
     .tab-item {
-      min-height: 36px;
+      min-height: 40px;
 
       .tab-link {
-        padding: 8px 14px 9px;
+        padding: 9px 16px;
         border-radius: 20px;
         border: 1px solid transparent;
         background-color: variables.$colorGray20;
 
         .tab-text {
-          @include mixins.font_size_md('md');
-          color: #545D6B;
+          @include mixins.font_size_lg('lt');
+          color: variables.$colorGray80;
         }
 
         &[disabled], &[aria-disabled=true], &.disabled {
@@ -98,11 +103,12 @@
         }
 
         &.is-active {
-          border-color: #00A661;
+          border-color: variables.$colorGreen100;
           background-color: variables.$colorWhite;
 
           .tab-text {
-            color: #00A661;
+            color: variables.$colorGreen100;
+            font-weight: variables.$fontWeightSemibold;
           }
         }
       }
@@ -111,18 +117,18 @@
 
   // type line
   .swiper-auto-line-wrap {
-    .swiper-wrapper {
+    .swiper {
       position: relative;
-      padding: 0 5px;
+      padding: 0 10px;
     }
 
     .tab-item {
       .tab-link {
-        padding: 14px 15px 13px;
+        padding: 14px 10px 14px;
 
         .tab-text {
-          @include mixins.font_size_xl;
-          color: variables.$colorGray70;
+          @include mixins.font_size_2xl;
+          color: variables.$colorGray60;
         }
 
         &.is-active {
@@ -137,7 +143,7 @@
               height: 2px;
               border-radius: 1px;
               position: absolute;
-              bottom: -13px;
+              bottom: -14px;
               left: 0;
               right: 0;
               z-index: 1;

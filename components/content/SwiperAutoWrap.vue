@@ -11,7 +11,7 @@
       :all-touch-move="true"
       :touch-start-force-prevent-default="true"
       :touch-release-on-edgeds="true"
-      :space-between="props.type === 'bar' ? 0 : props.gap"
+      :space-between=" ( props.type !== 'tab' && props.type ) ? 0 : props.gap"
     >
       <slot/>
     </Swiper>
@@ -20,12 +20,11 @@
 
 <script setup lang="ts">
 const props = withDefaults(defineProps<{
-  type?: 'line' | 'bar';
-  gap? : number;
+  type?: 'line' | 'bar' | 'tab';
+  gap? : number | string;
 }>(), {
   gap: 6
 });
-
 const className = computed(() => {
   let cNm = 'swiper-auto';
   if( props.type ) cNm += '-' + props.type;
@@ -34,5 +33,10 @@ const className = computed(() => {
 });
 
 </script>
+
+<style lang="scss" scoped>
+@import url('/assets/css/components/swiper.scss');
+</style>
+
 
 

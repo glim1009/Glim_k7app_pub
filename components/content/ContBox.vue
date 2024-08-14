@@ -1,5 +1,5 @@
 <template>
-  <div :class="className">
+  <div :class="[className, {'deco-tline' : deco === 't-line'}]">
     <slot />
   </div>
 </template>
@@ -7,6 +7,7 @@
 <script setup lang="ts">
 const props = withDefaults(defineProps<{
   size?: 'zero' | 'xs' | 'sm' | 'md' | 'lg'; // zero - 0, xs - 10px, sm - 16px, md - 24px, lg - 30px
+  deco?: 't-line'
 }>(), {
   size: 'md',
 });

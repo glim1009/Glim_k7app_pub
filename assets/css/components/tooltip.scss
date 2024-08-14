@@ -2,7 +2,7 @@
 @use '../abstracts/variables';
 @use '../abstracts/mixins';
 
-.tooltip-group {
+.tooltip {
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -20,8 +20,8 @@
     top: calc( 100% + 10px );
     padding: 12px;
     background: variables.$colorWhite;
-    border: 1px solid variables.$colorGray70;
+    border: 1px solid variables.$colorGray40;
     border-radius: 10px;
-    @include mixins.font_size_sm;
+    @include mixins.font_size_md;
   }
 }

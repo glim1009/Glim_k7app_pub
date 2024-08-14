@@ -21,6 +21,3 @@ const className = computed(() => {
 
 </script>
 
-<style lang="scss" scoped>
-@import url('assets/css/components/icon.scss');
-</style>

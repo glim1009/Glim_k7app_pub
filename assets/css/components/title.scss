@@ -11,16 +11,22 @@
   }
 }
 
-.ctitle-2xs { // 13px
+[class^=ctitle-2xs] { // 13px
   @extend %ctitleCommon;
   @include mixins.font_size_md(sb);
   color: variables.$colorGray90;
 }
 
+.ctitle-2xs-gray {
+  @include mixins.font_size_md(body);
+  color: variables.$colorGray70;
+
+}
+
 .ctitle-xs { // 14px
   @extend %ctitleCommon;
-  @include mixins.font_size_lg(sb);
-  color: variables.$colorBlack;
+  @include mixins.font_size_lg;
+  color: variables.$colorGray90;
 
   .ico-arwright-xs {
     margin: {
@@ -32,30 +38,61 @@
 
 .ctitle-sm { // 15px
   @extend %ctitleCommon;
-  @include mixins.font_size_xl(sb);
+  @include mixins.font_size_xl;
   color: variables.$colorBlack;
+
+  [class^=badge][class$=sm] {
+    margin: {
+      top: 2px;
+      right: 6px;
+    }
+  }
 }
 
-.ctitle { // 16px
+.ctitle-md { // 16px
   @extend %ctitleCommon;
-  @include mixins.font_size_2xl(sb);
+  @include mixins.font_size_2xl;
   color: variables.$colorBlack;
 }
 
 .ctitle-lg { // 18px
   @extend %ctitleCommon;
-  @include mixins.font_size_3xl(sb);
+  @include mixins.font_size_3xl;
   color: variables.$colorBlack;
 }
 
-.ctitle-xl { // 22px
+.ctitle-xl { // 20px
   @extend %ctitleCommon;
-  @include mixins.font_size_4xl(sb);
+  @include mixins.font_size_4xl;
+  color: variables.$colorBlack;
+}
+
+.ctitle-2xl { // 22px
+  @extend %ctitleCommon;
+  @include mixins.font_size_5xl;
   color: variables.$colorBlack;
 }
 
 // ctitle-wrap size
 
+%ctitleWrapZero {
+  margin-bottom: 0 !important;
+}
+
+%ctitleWrapSm {
+  margin-bottom: 10px;
+}
+
+%ctitleWrapMd {
+  margin-bottom: 16px;
+}
+
+%ctitleWrapLg {
+  margin-bottom: 24px;
+}
+
+
+// ctitle-wrap size
 %ctitleWrapZero {
   margin-bottom: 0 !important;
 }
@@ -90,16 +127,28 @@
 }
 
 [class^=ctitle][class$=wrap] {
-  padding: {
-    left: 5px;
-    right: 5px;
+  .title-sub {
+    @include mixins.font_size_md('md');
+    margin-bottom: 4px;
+
+    &-gray {
+      @include mixins.font_size_md('md');
+      margin-bottom: 4px;
+      color: variables.$colorGray70;
+    }
   }
+
+
   .stext-lg {
     margin-top: 6px;
   }
 
   .stext {
     margin-top: 4px;
+
+    &.board-date {
+      color: variables.$colorGray70;
+    }
   }
 
   .stext {
@@ -108,9 +157,6 @@
     }
   }
 
-  // badge, badge-group 하단 여백
-  /*[class^=badge-][class$=group] {
-    margin-bottom: 10px;
-  }*/
 }
+
 

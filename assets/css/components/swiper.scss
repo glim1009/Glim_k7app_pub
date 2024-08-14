@@ -2,4 +2,36 @@
 @use '../abstracts/variables';
 @use '../abstracts/mixins';
 
-/* // swiper */
+$swiperType: ('', '-line', '-bar', '-tab');
+//swiper-auto-line-wrap
+
+
+@each $type in $swiperType {
+  /* // swiper */
+  .swiper-auto#{$type}-wrap {
+    :deep(.swiper-slide) {
+      width: auto;
+      position: relative;
+      margin: 0;
+
+      :is([class^=line-light-gray], [class^=light-gray-], [class^=white], [class^=light-green])[class*=box] {
+        margin: {
+          left: 0;
+          right: 0;
+        }
+      }
+
+      // 고객센터
+      .question-box {
+        width: 150px;
+
+        .stext {
+          @include mixins.multi_ellipsis(variables.$fontSizeMdLineHeight, 4, true);
+        }
+      }
+    }
+  }
+
+
+
+}

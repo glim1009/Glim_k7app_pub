@@ -298,23 +298,53 @@
 /* // badge */
 
 /* badge-group */
+// $badgeGap: ( 'md', 'lg');
+$groupSize: ('bmd': 4px, 'blg': 6px, 'bxl': 10px);
+
 %badgeGroup {
   @include mixins.justify_width;
   flex-wrap: wrap;
   font-size: 0;
 }
 
-.badge-md-group {
-  @extend %badgeGroup;
-  margin-right: -4px;
-  margin-bottom: -4px;
+%badgeGapStyle {
+  &[class*=-md][class$=group] {
+    margin-top: -4px;
+    margin-left: -4px;
 
-  [class^=badge-] {
-    margin: {
-      right: 4px;
-      bottom: 4px;
+    [class^=badge-] {
+      margin: {
+        top: 4px;
+        left: 4px;
+      }
     }
+  }
+  &[class*=-lg][class$=group] {
+    // 작업 예정
+  }
+}
+
+
+[class^=badge][class*=group] {
+  @extend %badgeGapStyle;
+}
+
+@each $size, $px in $groupSize {
+  .badge-md-#{$size}-group, .badge-lg-#{$size}-group {
+    @extend %badgeGroup;
+    margin-bottom: $px;
   }
 }
 
 /* // badge-group */
+
+// badge-group > tooltip
+
+[class^=badge-md][class*=group] {
+  .tooltip {
+    margin: {
+      top: 4px;
+      left: 4px;
+    }
+  }
+}

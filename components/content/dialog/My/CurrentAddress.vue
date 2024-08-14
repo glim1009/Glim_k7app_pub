@@ -60,5 +60,5 @@ const closeDialog = () => {
 </script>
 
 <style lang="scss" scoped>
-  @import url('assets/css/pages/my/my.scss');
+  @import url('assets/css/pages/my.scss');
 </style>

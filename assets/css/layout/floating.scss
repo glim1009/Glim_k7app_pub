@@ -8,7 +8,7 @@
   position: fixed;
   z-index: 20;
   right: 10px;
-  bottom: calc( 16px + env(safe-area-inset-bottom) );
+  bottom: calc( 16px + var(--sab) );
 
   .btn-go-top {
     width: 40px;
@@ -25,9 +25,9 @@
 }
 
 .wrapper {
-  &:has(.docker-wrapper, .cont-docker-wrap) {
+  &:has(.cont-docker-wrap) {
     .floating-wrapper {
-      bottom: calc(#{variables.$dockerHeight + 24px} + env(safe-area-inset-bottom));
+      bottom: #{variables.$contDockerHeight + 24px};
     }
   }
 }

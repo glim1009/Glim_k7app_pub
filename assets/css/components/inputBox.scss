@@ -1,0 +1,145 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+/* form - input */
+
+%inputBox {
+  overflow: hidden;
+  @include mixins.justify_width(center);
+  height: 44px;
+  padding: {
+    top: 6px;
+    right: 7px;
+    bottom: 6px;
+    left: 18px;
+  }
+  border: 1px solid transparent;
+  border-radius: 22px;
+  background-color: variables.$colorGray20;
+
+  .ui-input {
+    height: 100%;
+    padding-right: 10px;
+    background-color: inherit;
+
+  }
+
+  [class^=btn] {
+    flex-shrink: 0;
+  }
+
+  .btn-input-del {
+    display: none;
+    width: 24px;
+    height: 24px;
+    @include mixins.ratio_images('~/assets/images/common/comm_ico_clear_gray_sm', 18px, center);
+    margin: {
+      left: -3px;
+      right: 7px;
+    }
+    padding: 3px;
+  }
+
+  .btn-input-search {
+    width: 24px;
+    height: 24px;
+    margin: {
+      right: 10px;
+    }
+    @include mixins.ratio_images('~/assets/images/common/comm_ico_search_header', 24px, center);
+  }
+
+  .unit {
+    flex-shrink: 0;
+    display: inline-block;
+    margin: {
+      top: 6px;
+      bottom: 6px;
+    };
+    @include mixins.font_size_md('md');
+    color: variables.$colorGray70;
+    vertical-align: top;
+
+    &:last-child {
+      margin-right: 13px;
+    }
+  }
+
+  .byte-check {
+    align-self: center;
+    @include mixins.justify_width(center, center);
+    margin-right: 13px;
+  }
+
+  .btn-toggle-pw {
+    width: 18px;
+    height: 18px;
+    margin: {
+      right: 10px;
+    }
+    @include mixins.ratio_images('~/assets/images/common/comm_ico_toggle_password_hide', 18px, center);
+
+    &.is-active {
+      @include mixins.ratio_images('~/assets/images/common/comm_ico_toggle_password_show', 18px, center);
+    }
+  }
+
+  &.is-focus {
+    border-color: variables.$colorGreen100;
+    background-color: variables.$colorWhite;
+    @include mixins.prefix(transition, border 0.2s ease-out);
+  }
+
+  &.has-value {
+    .btn-input-del {
+      display: block;
+
+      ~ [class^=btn],
+      ~ .byte-check {
+      }
+    }
+  }
+
+  &.is-disabled {
+    border-color: variables.$colorGray30;
+    background-color: variables.$colorWhite;
+
+    .ui-input {
+      color: variables.$colorGray50;
+    }
+
+    .btn-input-del {
+      display: none;
+    }
+  }
+}
+
+// input
+.ui-input {
+  @include mixins.clear_focus;
+  @include mixins.font_size_lg('lt');
+  color: variables.$colorBlack;
+  width: 100%;
+
+  &::placeholder {
+    color: variables.$colorGray50;
+  }
+}
+
+// default
+.input-box {
+  @extend %inputBox;
+}
+
+.flex-center-group {
+  .input-box, .ui-select {
+    flex: 1;
+  }
+
+  .gap {
+    display: inline-block;
+    margin: 0 6px;
+    vertical-align: top;
+  }
+}

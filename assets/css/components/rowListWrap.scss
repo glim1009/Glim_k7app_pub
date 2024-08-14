@@ -6,6 +6,13 @@ $listGapSize: ('xs': 4px, 'sm': 6px, 'md': 10px, 'lg': 16px, 'xl': 24px, '2xl': 
 $wrapSize: ('2xs': 8px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
 
 .rlist-wrap {
+  &.side-box {
+    margin: {
+      left: -5px;
+      right: -5px;
+    }
+  }
+
   :deep([class^=ctitle][class$=-wrap]) {
     padding: {
       left: 0;
@@ -32,8 +39,15 @@ $wrapSize: ('2xs': 8px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
 
 %rowListComm {
   @include mixins.justify_width(stretch, start, column);
-  /* li 스타일 추가 */
 
+  &.side-box {
+    margin: {
+      left: -5px;
+      right: -5px;
+    }
+  }
+
+  /* li 스타일 추가 */
   :deep(.item) {
     &.is-selected {
       // 택배 > 주소록 선택
@@ -59,6 +73,13 @@ $wrapSize: ('2xs': 8px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
         }
       }
     }
+
+    .fold-box {
+      margin: {
+        left: -5px;
+        right: -5px;
+      }
+    }
   }
 
   // 배너 전체보기 팝업
@@ -70,6 +91,41 @@ $wrapSize: ('2xs': 8px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
       img {
         width: 100%;
       }
+    }
+  }
+
+  // 주문 정보 리스트
+  :deep(.item-order-info) {
+    .flex-center-group {
+      .flex-right {
+        font-weight: variables.$fontWeightSemibold;
+        color: variables.$colorGray90;
+      }
+    }
+  }
+
+  :deep(.item-sub-order-info) {
+    .flex-center-group {
+      .flex-right {
+        @include mixins.font_size_md;
+        color: variables.$colorGray70;
+      }
+    }
+  }
+
+  :deep(.item-board), :deep(.item-board-full), :deep(.item-member-info) {
+    position: relative;
+  }
+}
+
+%listItemGapClear {
+  :deep([class^=item]) {
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
     }
   }
 }
@@ -85,36 +141,179 @@ $wrapSize: ('2xs': 8px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
   @extend %rowListComm;
 
   :deep([class^=item]) {
-    border-bottom: 1px solid variables.$colorGray20;
+    position: relative;
+
+    ~ [class^=item] {
+      border-top: 1px solid variables.$colorGray30;
+    }
   }
 
+  // item inner 여백 - 10px
+  :deep(.item-sm) {
+    padding: 10px 0;
+
+    // 할인수단 컨텐츠
+    .cont-discount-info {
+      margin-top: 10px;
+      padding: 12px;
+      border-radius: 10px;
+      background-color: variables.$colorGray10;
+
+      .flex-center-group {
+        .flex-left {
+          :deep(.goods-sm) {
+            font-weight: variables.$fontWeightMedium;
+          }
+        }
+
+        .flex-right {
+          .btn-delete {
+            display: inline-block;
+            padding: 4px;
+            margin: -4px;
+            font-size: 0;
+            vertical-align: top;
+          }
+        }
+      }
+    }
+  }
+
+  // item inner 여백 - 16px
+  :deep(.item-md) {
+    padding: 16px 0;
+
+    .ui-rdo {
+      width: 100%;
+
+      input + label {
+        width: 100%;
+      }
+    }
+
+    // 결제수단 컨텐츠
+    .cont-pay-info {
+      margin-top: 16px;
+
+      .btn-flex-wrap {
+        [class^=btn] {
+          padding: 0 5px;
+        }
+      }
+    }
+  }
+
+  // item inner 여백 - 20px
+  :deep(.item-lg) {
+    padding: 20px 0;
+  }
+
+  // line item sm/md/lg 상하단 여백 공통 삭제
+  &:has(.item-sm, .item-md, .item-lg, .item-thumb-prod) {
+    @extend %listItemGapClear;
+  }
+
+  :deep(.item-member-info), :deep(.item-member-account) {
+    padding: 16px 0;
+  }
+
+  // 상품 아이템
+  :deep(.item-thumb-prod) {
+    position: relative;
+    padding: 16px 0;
+    flex-wrap: wrap;
+    @include mixins.justify_width;
+
+    .ui-chk {
+      margin-right: 8px;
+    }
+
+    .btn-delete {
+      font-size: 0;
+    }
+
+    .thumb-prod-flex {
+      flex: 1;
+      flex-wrap: wrap;
+      width: calc(100% - 48px);
+
+      [class^=thumb-prod] {
+        flex-shrink: 0;
+      }
+
+      .flex-end-group {
+        width: 100%;
+        margin-top: 10px;
+
+        .flex-right {
+          @include mixins.justify_width(start, end);
+
+          .goods-group {
+            text-align: right;
+
+            .origin {
+              display: block;
+            }
+
+            .percent {
+              margin-right: 4px;
+              font-weight: variables.$fontWeightSemibold;
+              color: variables.$colorRed100;
+            }
+
+            .goods-md {
+              font-weight: variables.$fontWeightSemibold;
+            }
+          }
+        }
+      }
+
+      // thumb size별 width값 지정 필요
+      .thumb-prod-md-box {
+        ~ .info-box {
+          width: calc(100% - 60px);
+        }
+      }
+    }
+
+    [class*=-xs-box], [class*=-sm-box] {
+      width: 100%;
+      margin-top: 16px;
+
+      .flex-start-group {
+        .flex-right {
+          margin-left: 16px;
+        }
+      }
+    }
+
+    .ui-col-md-group {
+      margin-top: 10px;
+    }
+  }
+
+  :deep(.item-board) {
+    padding: 20px 0;
+  }
+
+  :deep(.item-board-full) {
+    padding: 20px;
+
+    &:last-child {
+      padding-bottom: -20px;
+    }
+  }
+
+  // 상하단 여백 clear
+  &:has(.item-board, .item-member-info, .item-member-account ) {
+    @extend %listItemGapClear;
+  }
+}
+
+.row-bline-list {
+  :deep([class^=item]) {
+    border-bottom: 1px solid variables.$colorGray30;
+  }
 }
 
 /* list */
-
-/* 주문 정보 리스트 _ LTK 추가 */
-.row-lg-list {
-  @extend %rowListComm;
-
-  :deep(.order-info-item) {
-
-    .flex-center-group {
-
-      .flex-left, .flex-right {
-
-        .stext-lg {
-          font-weight: variables.$fontWeightSemibold;
-          color: variables.$colorGray90;
-        }
-
-      }
-    }
-
-    ul {
-      .sub-info-item {
-        color: variables.$colorGray70;
-      }
-    }
-  }
-}
-

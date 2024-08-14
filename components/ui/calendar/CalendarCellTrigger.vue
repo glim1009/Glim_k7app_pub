@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { type HTMLAttributes, computed } from 'vue'
 import { CalendarCellTrigger, type CalendarCellTriggerProps, useForwardProps } from 'radix-vue'
-import { buttonVariants } from '@/lib/registry/default/ui/button'
+import { buttonVariants } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 
 const props = defineProps<CalendarCellTriggerProps & { class?: HTMLAttributes['class'] }>()
@@ -20,15 +20,15 @@ const forwardedProps = useForwardProps(delegatedProps)
     :class="cn(
       buttonVariants({ variant: 'ghost' }),
       'h-9 w-9 p-0 font-normal',
-      '[&[data-today]:not([data-selected])]:bg-accent [&[data-today]:not([data-selected])]:text-accent-foreground',
+      '[&[data-today]:not([data-selected])]:bg-zinc-100 [&[data-today]:not([data-selected])]:text-zinc-900 dark:[&[data-today]:not([data-selected])]:bg-zinc-800 dark:[&[data-today]:not([data-selected])]:text-zinc-50',
       // Selected
-      'data-[selected]:bg-primary data-[selected]:text-primary-foreground data-[selected]:opacity-100 data-[selected]:hover:bg-primary data-[selected]:hover:text-primary-foreground data-[selected]:focus:bg-primary data-[selected]:focus:text-primary-foreground',
+      'data-[selected]:bg-zinc-900 data-[selected]:text-zinc-50 data-[selected]:opacity-100 data-[selected]:hover:bg-zinc-900 data-[selected]:hover:text-zinc-50 data-[selected]:focus:bg-zinc-900 data-[selected]:focus:text-zinc-50 dark:data-[selected]:bg-zinc-50 dark:data-[selected]:text-zinc-900 dark:data-[selected]:hover:bg-zinc-50 dark:data-[selected]:hover:text-zinc-900 dark:data-[selected]:focus:bg-zinc-50 dark:data-[selected]:focus:text-zinc-900',
       // Disabled
-      'data-[disabled]:text-muted-foreground data-[disabled]:opacity-50',
+      'data-[disabled]:text-zinc-500 data-[disabled]:opacity-50 dark:data-[disabled]:text-zinc-400',
       // Unavailable
-      'data-[unavailable]:text-destructive-foreground data-[unavailable]:line-through',
+      'data-[unavailable]:text-zinc-50 data-[unavailable]:line-through dark:data-[unavailable]:text-zinc-50',
       // Outside months
-      'data-[outside-month]:pointer-events-none data-[outside-month]:text-muted-foreground data-[outside-month]:opacity-50 [&[data-outside-month][data-selected]]:bg-accent/50 [&[data-outside-month][data-selected]]:text-muted-foreground [&[data-outside-month][data-selected]]:opacity-30',
+      'data-[outside-view]:text-zinc-500 data-[outside-view]:opacity-50 [&[data-outside-view][data-selected]]:bg-zinc-100/50 [&[data-outside-view][data-selected]]:text-zinc-500 [&[data-outside-view][data-selected]]:opacity-30 dark:data-[outside-view]:text-zinc-400 dark:[&[data-outside-view][data-selected]]:bg-zinc-800/50 dark:[&[data-outside-view][data-selected]]:text-zinc-400',
       props.class,
     )"
     v-bind="forwardedProps"

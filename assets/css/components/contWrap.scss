@@ -7,20 +7,6 @@
 $contType: ('gray', 'white', 'divider'); // white - bg-color: white, divider - 추후 추가 예정
 $contDirsSize: ('zero': 0, 'sm' : 10px, 'md': 20px, 'lg': 30px);
 
-.wrapper {
-  &:not(:has(.docker-wrapper)) {
-    [class*="cont-"][class$=-wrap] {
-      &:last-of-type {
-        &:after{
-          content: '';
-          display: block;
-          height: env(safe-area-inset-bottom);
-        }
-      }
-    }
-  }
-}
-
 .container-wrapper {
   &:has(.cont-docker-wrap) {
     [class*="cont-"]:nth-last-of-type(2) {
@@ -33,13 +19,17 @@ $contDirsSize: ('zero': 0, 'sm' : 10px, 'md': 20px, 'lg': 30px);
 
 %contBoxCommon {
   padding: {
-    left: 15px;
+    left: 20px;
     bottom: 30px;
-    right: 15px;
+    right: 20px;
   }
 
   &[class*="bz-"] {
     padding-bottom: 0 !important;
+  }
+
+  &[class*="bs-"] {
+    padding-bottom: 20px !important;
   }
 
   &.side-zero {
@@ -49,21 +39,36 @@ $contDirsSize: ('zero': 0, 'sm' : 10px, 'md': 20px, 'lg': 30px);
     }
   }
 
+  &:not(.side-zero) {
+    :deep(.swiper-auto-wrap.side-zero) {
+      margin: {
+        left: -20px;
+        right: -20px;
+      }
+
+      .swiper {
+        padding: {
+          left: 20px;
+          right: 20px;
+        }
+      }
+    }
+  }
+
   &:last-of-type {
     flex: 1 0 auto;
   }
+
 }
 
 // cont style type
 @mixin cont_type_style($type: 'gray') {
   @if ($type == 'gray') {
     background-color: variables.$colorGray20;
-  }
-  @else if ($type == 'divider') {
+  } @else if ($type == 'divider') {
     background-color: variables.$colorWhite;
     border-top: 10px solid variables.$colorGray20;
-  }
-  @else if ($type == 'white') {
+  } @else if ($type == 'white') {
     background-color: variables.$colorWhite;
   }
 }
@@ -74,14 +79,13 @@ $contDirsSize: ('zero': 0, 'sm' : 10px, 'md': 20px, 'lg': 30px);
     @each $type in $contType {
       // gray 제외
       @if ($type != 'gray') {
-        .cont-#{$type}-#{$size}-wrap, .cont-#{$type}-#{$size}bz-wrap {
+        .cont-#{$type}-#{$size}-wrap, .cont-#{$type}-#{$size}bz-wrap, .cont-#{$type}-#{$size}bs-wrap {
           @extend %contBoxCommon;
           padding-top: $px;
           @include cont_type_style($type);
         }
-      }
-      @else {
-        .cont-#{$size}-wrap, .cont-#{$size}bz-wrap {
+      } @else {
+        .cont-#{$size}-wrap, .cont-#{$size}bz-wrap, .cont-#{$size}bs-wrap {
           @extend %contBoxCommon;
           padding-top: $px;
           @include cont_type_style($type);
@@ -93,7 +97,7 @@ $contDirsSize: ('zero': 0, 'sm' : 10px, 'md': 20px, 'lg': 30px);
   @else {
     @each $type in $contType {
       @if ($type != 'gray') {
-        .cont-#{$type}-wrap, .cont-#{$type}bz-wrap {
+        .cont-#{$type}-wrap, .cont-#{$type}-bz-wrap, .cont-#{$type}-bs-wrap {
           @extend %contBoxCommon;
           padding-top: $px;
           @include cont_type_style($type);
@@ -101,7 +105,7 @@ $contDirsSize: ('zero': 0, 'sm' : 10px, 'md': 20px, 'lg': 30px);
       }
         // gray
       @else {
-        .cont-wrap, .cont-bz-wrap {
+        .cont-wrap, .cont-bz-wrap, .cont-bs-wrap {
           @extend %contBoxCommon;
           padding-top: $px;
           @include cont_type_style($type);

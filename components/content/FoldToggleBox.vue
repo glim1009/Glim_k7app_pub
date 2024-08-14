@@ -38,7 +38,7 @@ const toggle = () => {
 
 const onEnter = (el, customStyle) => {
   const {  height } = useElementSize(el);
-  console.log( el, height.value );
+  //console.log( el, height.value );
   FoldContHeight.value = height.value;
   customStyle();
 }
@@ -50,7 +50,7 @@ const customStyle = () => {
 };
 
 onMounted(() => {
-  console.log(isOpen.value);
+  //console.log(isOpen.value);
   if( props.open ) isOpen.value = props.open;
 });
 

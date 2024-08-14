@@ -37,7 +37,7 @@
         width: 18px;
         height: 18px;
         vertical-align: top;
-        @include mixins.ratio_images('~/assets/images/common/comm_ico_arwdown_black_sm');
+        @include mixins.ratio_images('~/assets/images/common/comm_ico_arw_down_gray_sm');
         @include mixins.prefix(transform, rotateZ(0));
         @include mixins.prefix(transition, transform 0.25s 0.12s variables.$transEaseBounceBack);
       }
@@ -60,6 +60,13 @@
 .fold-box,
 .fold-cont-box {
   @extend %foldBoxComm;
+  :deep([class^=btn-flex][class$=wrap]),
+  :deep(:is([class^=line-light-gray], [class^=light-gray-], [class^=white], [class^=light-green])[class$=box]) {
+    margin: {
+      left: 0;
+      right: 0;
+    }
+  }
 }
 
 .fold-box {
@@ -76,12 +83,29 @@
         }
       }
     }
+
   }
 
   .fold-cont {
     overflow: hidden;
     margin-top: 16px;
-    border-radius: 15px;
+  }
+}
+
+
+.row-bline-list {
+  .fold-box {
+    :deep(.fold-header) {
+      padding: 20px 50px 20px 20px;
+      .btn-fold {
+        &:after {
+          right: 20px;
+        }
+      }
+    }
+    :deep(.fold-cont) {
+      margin-top: 0;
+    }
   }
 }
 
@@ -107,12 +131,20 @@
 }
 
 .fold-overflow-box {
+  :deep(:is([class^=line-light-gray], [class^=light-gray-], [class^=white], [class^=light-green])[class*=box]) {
+    margin: {
+      left: 0;
+      right: 0;
+    }
+  }
+
   .fold-cont {
     overflow: hidden;
     height: var(--content-min-height);
 
     &.is-active {
       height: auto;
+      padding-bottom: 16px;
     }
   }
 
@@ -120,19 +152,22 @@
     .btn-fold-toggle {
       width: 100%;
 
-      .ico-arwdown-gray-xs {
+      .ico-arw-down-gray-xs {
         @include mixins.prefix(transform, rotateZ(0));
         @include mixins.prefix(transition, transform 0.25s 0.12s variables.$transEaseBounceBack);
       }
 
       &.is-active {
-        .ico-arwdown-gray-xs {
+        .ico-arw-down-gray-xs {
           @include mixins.prefix(transform, rotateZ(180deg));
         }
       }
     }
   }
 }
+
+
+
 
 .fold-enter-active {
   //@include mixins.prefix(animation, accordion-down 0.45s ease-in-out);

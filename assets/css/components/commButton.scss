@@ -30,3 +30,54 @@ a, button {
   }
 }
 
+// 필터 버튼
+.btn-filter {
+  position: relative;
+  padding: 5px 11px 4px;
+  border-radius: 15px;
+  border: 1px solid variables.$colorGray40;
+  background-color: variables.$colorWhite;
+
+  &.is-active {
+    &:after {
+      content: '';
+      position: absolute;
+      top: 1px;
+      right: 1px;
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 3px;
+      background-color: variables.$colorOrange100;
+      vertical-align: top;
+    }
+  }
+}
+
+.btn-store {
+  @include mixins.justify_width(center);
+  width: 100%;
+  padding: 13px 15px;
+  border-radius: 15px;
+  border: 1px solid variables.$colorGreen100;
+  background-color: variables.$colorWhite;
+
+  [class^=badge] {
+    flex-shrink: 0;
+    margin-right: 6px;
+  }
+
+  .store {
+    display: inline-block;
+    margin-right: 10px;
+    @include mixins.font_size_xl;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  [class^=ico] {
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+}
+

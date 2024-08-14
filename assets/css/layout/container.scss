@@ -7,22 +7,15 @@
 /* 터치 가능한 환경에서 적용한 CSS */
 
 .wrapper {
-  &:has(.docker-wrapper) {
-    .container-wrapper {
-      padding-bottom: calc(#{variables.$dockerHeight} + env(safe-area-inset-bottom));
-    }
-  }
-
   &:has(.cont-docker-wrap) {
     .container-wrapper {
-      padding-bottom: calc(#{variables.$contDockerHeight} + env(safe-area-inset-bottom));
+      padding-bottom: #{variables.$contDockerHeight};
     }
   }
 
   &:has(.header-wrapper) {
     .container-wrapper {
       min-height: calc( 100dvh - #{variables.$headerHeight} );
-      //padding-top: calc(#{variables.$headerHeight} + env(safe-area-inset-top));
     }
   }
 }

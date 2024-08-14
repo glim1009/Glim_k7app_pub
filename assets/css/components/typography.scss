@@ -151,7 +151,6 @@
     display: inline-block;
     width: 1px;
     height: 12px;
-    margin: 3px 10px 0;
     background-color: variables.$colorGray30;
     vertical-align: top;
   }
@@ -161,19 +160,39 @@
       content: initial;
     }
   }
+
+  [class^=ctitle] {
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+%barTextStyle {
+  &:after {
+    margin: 3px 10px 0;
+  }
+}
+
+%barTBtnMdStyle {
+  padding: 0 5px;
+  &:after {
+    margin: {
+      top: 5px;
+      left: 10px;
+    }
+  }
 }
 
 .bar-group {
   @include mixins.justify_width(center, start, row, true);
   flex-wrap: wrap;
-  margin-top: 10px;
 
   .bar-text, .bar-item {
     @extend %barStyle;
+    @extend %barTextStyle;
   }
 
   .bar-text {
-
     &-sm {
       @extend %barStyle;
       @include mixins.font_size_md;
@@ -182,11 +201,12 @@
     &-xs {
       @extend %barStyle;
       @include mixins.font_size_sm;
-
-      &:after {
-        margin: 3px 10px 0;
-      }
     }
+  }
+
+  .tbtn-md {
+    @extend %barStyle;
+    @extend %barTBtnMdStyle;
   }
 }
 
@@ -270,19 +290,30 @@
   @extend %goodsComm;
 }
 
-.goods-sm { // 12px
-  @extend %goodsComm;
-  @include mixins.font_size_sm;
-}
-
-.goods-md { // 13px
+.goods-sm { // 13px
   @extend %goodsComm;
   @include mixins.font_size_md;
 }
 
-.goods-lg { // 14px
+.goods-md { // 14px
   @extend %goodsComm;
   @include mixins.font_size_lg(lt);
+}
+
+.goods-lg { // 16px
+  @extend %goodsComm;
+  @include mixins.font_size_2xl;
+}
+
+.goods-xl { // 18px
+  @extend %goodsComm;
+  @include mixins.font_size_3xl;
+}
+
+.goods-group { // 원가 + 할인가 case
+  [class^=goods][class$=origin] + [class^=goods] {
+    margin-left: 4px;
+  }
 }
 
 /* 라벨 + 재화/수량 [ex. 월 4,000원] */

@@ -25,6 +25,17 @@
       @include mixins.justify_width(stretch, start, column);
       row-gap: 6px;
 
+      .flex-center-group {
+        .flex-left {
+          flex: 1;
+
+          ~ .flex-right {
+            flex: 1;
+            margin-left: 6px;
+          }
+        }
+      }
+
       .input-guide,
       .valid-desc {
         margin-top: -2px;

@@ -1,0 +1,37 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.login-wrap {
+
+  .rlist-wrap {
+    + .ui-col-md-group {
+      margin-top: 0;
+    }
+  }
+
+
+  .btn-flex-wrap { // 간편 로그인 버튼
+    margin: 0;
+
+     .btn-easy-login {
+      width: 44px;
+      height: 44px;
+
+      + .btn-easy-login {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .btn-auto-center-md-wrap {
+    // .tbtn 정렬
+    .bar-group {
+      margin: 0 auto;
+    }
+  }
+
+}
+
+
+

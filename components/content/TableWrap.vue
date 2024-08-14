@@ -10,8 +10,9 @@
 <script setup lang="ts">
 const props = withDefaults(defineProps<{
   type?: 'row' | 'col' | 'info';
-  size?: 'xs' | 'sm' | 'md'; // gap xs 4px, sm 6px , md 10px
-  tableName: string,
+  gap?: 'sm' | 'md'; // gap sm 6px, md 12px
+  size?: 'md' | 'lg'; // font md 13px, lg 14px
+  tableName: string;
 }>(), {
   type: 'row',
 });
@@ -19,13 +20,14 @@ const props = withDefaults(defineProps<{
 const className = computed(() => {
   let cNm = 'tbl';
   cNm += '-' + props.type;
+  if (props.type === 'info') cNm += '-' + props.gap;
   cNm += '-wrap';
   return cNm;
 });
 const tblName = computed(() => {
   let tNm = 'tbl';
   tNm += '-' + props.type;
-  if(props.size) tNm += '-' + props.size;
+  if (props.type === 'info') tNm += '-' + props.size;
   return tNm;
 });
 </script>

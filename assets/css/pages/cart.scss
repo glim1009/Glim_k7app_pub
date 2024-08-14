@@ -1,0 +1,31 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+// 당일픽업
+.pickup-info-wrap {
+  .btn-store {
+    margin-bottom: 24px;
+  }
+
+  .today {
+    position: relative;
+    display: inline-block;
+    padding-left: 21px;
+    @include mixins.font_size_md('md');
+    color: variables.$colorGray80;
+    vertical-align: top;
+
+    &:before {
+      position: absolute;
+      top: 2px;
+      left: 0;
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      vertical-align: top;
+      @include mixins.ratio_images('~/assets/images/common/comm_ico_calendar_gray_sm', 16px, center);
+    }
+  }
+}

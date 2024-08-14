@@ -13,11 +13,7 @@ body {
 .wrapper {
   background: variables.$colorWhite;
   min-height: var(--reVh, 1vh);
-  padding-bottom: calc(#{variables.$dockerHeight} + env(safe-area-inset-bottom));
 
-  &.no-docker {
-    padding-bottom: 0;
-  }
 }
 
 /* e: container */

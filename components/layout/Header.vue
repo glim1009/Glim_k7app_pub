@@ -31,13 +31,9 @@
 <script setup lang="ts">
 const props = defineProps<{
   title?: string | undefined;
-  hideRightHeader?: string[]; ///  ['chat', 'search']
+  hideRightHeader?: string[] | boolean | undefined; ///  ['chat', 'search']
 }>();
 
-/*
-const isRightHidden = computed(() => !(props.headerType === 'hide-right'));
-const isTitleHidden = computed(() => !(props.headerType === 'hide-title'));
-*/
 
 function isIconVisible(name: string) {
   let view = true;

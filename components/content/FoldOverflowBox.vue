@@ -9,7 +9,7 @@
       <EBtn color="light-gray" size="sm" :class="['btn-fold-toggle', { 'is-active' : isOpen }]" @click="toggle">
         <span v-if="isOpen" class="text">접기</span>
         <span v-if="!isOpen" class="text">펼치기</span>
-        <EIco name="arwdown-gray" size="xs" />
+        <EIco name="arw-down" color="gray" size="xs" />
       </EBtn>
     </div>
   </div>

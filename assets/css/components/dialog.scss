@@ -10,7 +10,7 @@
   background-color: variables.$colorWhite;
   width: 100%;
   max-width: 100%;
-  border-radius: 15px;
+  border-radius: 20px;
 
   &[data-state=open] {
     @include mixins.justify_width(normal, start, column);
@@ -18,10 +18,10 @@
 
   .dialog-header {
     position: relative;
-    padding: 22px 58px 22px 20px;
+    padding: 21px 58px 21px 20px;
 
     .dialog-title {
-      @include mixins.font_size_2xl('sb');
+      @include mixins.font_size_2xl;
       color: variables.$colorBlack;
     }
 
@@ -46,7 +46,7 @@
 
   .dialog-footer {
     position: relative;
-    padding: 1px 15px calc( env(safe-area-inset-bottom) + 16px );
+    padding: 1px 15px 16px;
     background-color: variables.$colorWhite;
 
     &:before {
@@ -77,6 +77,14 @@
     top: 0;
     right: 0;
   }
+
+  &:not(:has(.dialog-footer)) {
+    .dialog-body {
+      .cont-wrap:last-child {
+        padding-bottom: 20px;
+      }
+    }
+  }
 }
 
 .ui-dialog {
@@ -99,6 +107,7 @@
   }
 }
 
+// type full
 .ui-dialog-full {
   @extend %dialogDefault;
   border-radius: 0;
@@ -125,25 +134,87 @@
   }
 
   .dialog-footer {
-    padding-bottom: calc(16px + env(safe-area-inset-bottom));
+    padding-bottom: 16px;
   }
 }
 
+// type bottom
 .ui-dialog-bottom {
   @extend %dialogDefault;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   max-height: calc(100dvh - 100px);
   bottom: 0;
-  margin-bottom: calc( 100vh / 5 * -1 );
+  margin-bottom: calc(100vh / 5 * -1);
   opacity: 1;
 
   .dialog-footer {
-    padding-bottom: calc(16px + env(safe-area-inset-bottom));
+    padding-bottom: 16px;
   }
 
   &[data-state=open] {
     @include mixins.prefix(animation, bottomPopAnimation .2s variables.$easeInOutQuad forwards);
+  }
+}
+
+// type alert
+.ui-dialog-alert {
+  @extend %dialogDefault;
+  width: calc(100% - 40px);
+  height: auto;
+  margin: 20px;
+  left: 50%;
+  top: 50%;
+  @include mixins.prefix(transform, translate(calc(-50% - 20px), calc(-50% - 20px)));
+
+  .dialog-header {
+    padding: 24px 16px 10px 16px;
+
+    .dialog-title {
+      text-align: center;
+    }
+
+    .dialog-close {
+      display: none;
+    }
+
+    ~ .dialog-body {
+      .dialog-inner {
+        .cont-white-wrap {
+          padding-top: 0;
+        }
+      }
+    }
+  }
+
+  .dialog-body {
+    .dialog-inner {
+      .cont-white-wrap {
+        padding: {
+          top: 24px;
+          left: 16px;
+          right: 16px;
+          bottom: 24px;
+        };
+      }
+
+      .alert-desc {
+        @include mixins.font_size_lg('lt');
+        text-align: center;
+        word-break: keep-all;
+      }
+    }
+  }
+
+  .dialog-footer {
+    padding: {
+      top: 0;
+      left: 16px;
+      right: 16px;
+    }
+    &:before {
+      content: initial;
+    }
   }
 }
 

@@ -4,10 +4,10 @@
 
 
 %icon {
-    display: inline-block;
-    position: relative;
-    vertical-align: top;
-    overflow: hidden;
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  overflow: hidden;
 }
 
 /* s : 아이콘 */
@@ -15,110 +15,52 @@
 /* icon comm */
 // size - default / h24
 .ico-back {
-    @extend %icon;
-    width: 24px;
-    height: 24px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_back_black_header');
+  @extend %icon;
+  width: 24px;
+  height: 24px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_back_header');
 }
 
 .ico-home {
-    @extend %icon;
-    width: 24px;
-    height: 24px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_home_black_header');
-}
-
-.ico-box {
-    @extend %icon;
-    width: 24px;
-    height: 24px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_box_black_header');
-}
-
-.ico-user {
-    @extend %icon;
-    width: 24px;
-    height: 24px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_user_black_header');
-}
-
-.ico-menu {
-    @extend %icon;
-    width: 24px;
-    height: 24px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_menu_black_header_sel');
-}
-
-.is-active {
-  .ico-home {
-    @extend %icon;
-    width: 24px;
-    height: 24px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_home_black_header_sel');
-  }
-
-  .ico-box {
-    @extend %icon;
-    width: 24px;
-    height: 24px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_box_black_header_sel');
-  }
-
-  .ico-user {
-    @extend %icon;
-    width: 24px;
-    height: 24px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_user_black_header_sel');
-  }
-
-  .ico-menu {
-    @extend %icon;
-    width: 24px;
-    height: 24px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_menu_black_header_sel');
-  }
+  @extend %icon;
+  width: 24px;
+  height: 24px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_home_header');
 }
 
 .ico-chat {
-    @extend %icon;
-    width: 24px;
-    height: 24px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_chat_black_header');
+  @extend %icon;
+  width: 24px;
+  height: 24px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_chat_header');
 }
 
 .ico-alarm {
-    @extend %icon;
-    width: 24px;
-    height: 24px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_alarm_black_header');
+  @extend %icon;
+  width: 24px;
+  height: 24px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_alarm_header');
 }
 
 .ico-cart {
-    @extend %icon;
-    width: 24px;
-    height: 24px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_cart_black_header');
+  @extend %icon;
+  width: 24px;
+  height: 24px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_cart_header');
 }
 
 .ico-search {
-    @extend %icon;
-    width: 24px;
-    height: 24px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_search_black_header');
+  @extend %icon;
+  width: 24px;
+  height: 24px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_search_header');
 }
 
 .ico-close {
-    @extend %icon;
-    width: 24px;
-    height: 24px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_close_black_header');
-}
-
-.ico-arwdown {
-    @extend %icon;
-    width: 24px;
-    height: 24px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_arwdown_black_folding');
+  @extend %icon;
+  width: 24px;
+  height: 24px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_close_header');
 }
 
 .ico-top {
@@ -128,12 +70,19 @@
   @include mixins.ratio_images('~/assets/images/common/comm_ico_top');
 }
 
+.ico-headphone-gray {
+  @extend %icon;
+  width: 24px;
+  height: 24px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_headphone_gray_cs');
+}
+
 // size - sm / h18
-.ico-plus-sm {
-    @extend %icon;
-    width: 18px;
-    height: 18px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_plus_black_sm');
+.ico-plus-gray-sm {
+  @extend %icon;
+  width: 18px;
+  height: 18px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_plus_gray_sm');
 }
 .ico-plus-white-sm { // white
   @extend %icon;
@@ -141,59 +90,60 @@
   height: 18px;
   @include mixins.ratio_images('~/assets/images/common/comm_ico_plus_white_sm');
 }
-.ico-search-sm {
-    @extend %icon;
-    width: 18px;
-    height: 18px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_search_black_sm');
+.ico-search-gray-sm {
+  @extend %icon;
+  width: 18px;
+  height: 18px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_search_gray_sm');
 }
-.ico-calendar-sm {
-    @extend %icon;
-    width: 18px;
-    height: 18px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_calendar_black_sm');
+.ico-calendar-gray-sm {
+  @extend %icon;
+  width: 18px;
+  height: 18px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_calendar_gray_sm');
 }
-.ico-arwdown-sm {
-    @extend %icon;
-    width: 18px;
-    height: 18px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_arwdown_black_sm');
+.ico-arw-down-sm {
+  @extend %icon;
+  width: 18px;
+  height: 18px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_arw_down_gray_sm');
 }
-.ico-arwright-sm {
-    @extend %icon;
-    width: 18px;
-    height: 18px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_arwright_black_sm');
+.ico-arw-right-gray-sm {
+  @extend %icon;
+  width: 18px;
+  height: 18px;
+  //@include mixins.ratio_images('~/assets/images/common/comm_ico_arw_right_gray_sm');
+  @include mixins.svg_mask('~/assets/images/common/comm_ico_arw_right_gray_sm', variables.$colorGray80);
 }
-.ico-clear-sm {
-    @extend %icon;
-    width: 18px;
-    height: 18px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_clear_black_sm');
+.ico-clear-black-sm {
+  @extend %icon;
+  width: 18px;
+  height: 18px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_clear_black_sm');
 }
-.ico-clear-gray-sm { //gray
-    @extend %icon;
-    width: 18px;
-    height: 18px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_clear_gray_sm');
+.ico-clear-gray-sm {
+  @extend %icon;
+  width: 18px;
+  height: 18px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_clear_gray_sm');
 }
-.ico-filter-sm {
-    @extend %icon;
-    width: 18px;
-    height: 18px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_filter_black_sm');
+.ico-filter-gray-sm {
+  @extend %icon;
+  width: 18px;
+  height: 18px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_filter_gray_sm');
 }
-.ico-delete-sm {
-    @extend %icon;
-    width: 18px;
-    height: 18px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_delete_black_sm');
+.ico-delete-gray-sm {
+  @extend %icon;
+  width: 18px;
+  height: 18px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_delete_gray_sm');
 }
 .ico-check-green-sm { //green
-    @extend %icon;
-    width: 18px;
-    height: 18px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_check_green_sm');
+  @extend %icon;
+  width: 18px;
+  height: 18px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_check_green_sm');
 }
 .ico-current-location-sm {
   @extend %icon;
@@ -201,75 +151,114 @@
   height: 18px;
   @include mixins.ratio_images('~/assets/images/common/comm_ico_location_black_sm_delivery');
 }
-.ico-info-sm {
+.ico-info-gray-sm {
   @extend %icon;
   width: 18px;
   height: 18px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_info_sm');
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_info_gray_sm');
 }
-.ico-location-sm {
+.ico-location-gray-sm {
   @extend %icon;
   width: 18px;
   height: 18px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_location_sm');
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_location_gray_sm');
 }
+.ico-edit-gray-sm {
+  @extend %icon;
+  width: 18px;
+  height: 18px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_edit_gray_sm');
+}
+.ico-call-gray-sm {
+  @extend %icon;
+  width: 18px;
+  height: 18px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_call_gray_sm');
+}
+
 
 // size - xs / h16
-
-.ico-arwright-xs {
-    @extend %icon;
-    width: 16px;
-    height: 16px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_arwright_black_xs');
+.ico-arw-right-gray-xs {
+  @extend %icon;
+  width: 16px;
+  height: 16px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_arw_right_gray_xs');
 }
-.ico-arwdown-xs {
-    @extend %icon;
-    width: 16px;
-    height: 16px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_arwdown_black_xs');
+.ico-arw-down-gray-xs {
+  @extend %icon;
+  width: 16px;
+  height: 16px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_arw_down_gray_xs');
 }
-.ico-arwdown-gray-xs {
-    @extend %icon;
-    width: 16px;
-    height: 16px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_arwdown_gray80_xs');
+.ico-arw-up-gray-xs {
+  @extend %icon;
+  width: 16px;
+  height: 16px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_arw_up_gray_xs');
 }
-.ico-arwup-xs {
-    @extend %icon;
-    width: 16px;
-    height: 16px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_arwup_black_xs');
-}
-.ico-close-xs {
-    @extend %icon;
-    width: 16px;
-    height: 16px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_close_black_xs');
+.ico-close-gray-xs {
+  @extend %icon;
+  width: 16px;
+  height: 16px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_close_gray_xs');
 }
 .ico-check-green-xs { //green
-    @extend %icon;
-    width: 16px;
-    height: 16px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_check_green_xs');
+  @extend %icon;
+  width: 16px;
+  height: 16px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_check_green_xs');
 }
-.ico-delete-xs {
-    @extend %icon;
-    width: 16px;
-    height: 16px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_delete_black_xs');
+.ico-delete-gray-xs {
+  @extend %icon;
+  width: 16px;
+  height: 16px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_delete_black_xs');
 }
 .ico-edit-green-xs { //green
-    @extend %icon;
-    width: 16px;
-    height: 16px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_edit_green_xs');
+  @extend %icon;
+  width: 16px;
+  height: 16px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_edit_green_xs');
 }
 .ico-write-green-xs { //green
-    @extend %icon;
-    width: 16px;
-    height: 16px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_write_green_xs');
+  @extend %icon;
+  width: 16px;
+  height: 16px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_write_green_xs');
 }
+.ico-filter-gray-xs {
+  @extend %icon;
+  width: 16px;
+  height: 16px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_filter_gray_xs');
+}
+.ico-delete-gray-xs {
+  @extend %icon;
+  width: 16px;
+  height: 16px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_delete_gray_xs');
+}
+.ico-rating-gray-xs {
+  @extend %icon;
+  width: 16px;
+  height: 16px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_rating_gray_xs');
+}
+
+.ico-wish-sm {
+  @extend %icon;
+  width: 18px;
+  height: 18px;
+  @include mixins.svg_mask('~/assets/images/common/comm_ico_wish_sm', rgba( variables.$colorBlack, 20% ));
+  opacity: 0.8;
+}
+
+.is-active {
+  .ico-wish-sm {
+    background-color: variables.$colorRed100;
+  }
+}
+
 
 // size - default / h14
 .ico-barcode {
@@ -282,8 +271,8 @@
 /* 34px size 가이드 확인 필요 by ljy */
 .ico-tooltip {
   @extend %icon;
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 18px;
   @include mixins.ratio_images('~/assets/images/common/comm_ico_tooltip_def');
 }
 
@@ -325,8 +314,83 @@
   @include mixins.ratio_images('~/assets/images/my/ico_current_marker_my');
 }
 
-/* 임시 - 수정예정 */
+/* sns icon - usage: 회원, 공통팝업 */
+.ico-sns-kakao-sm {
+  @extend %icon;
+  width: 44px;
+  height: 44px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_sns_kakao_sm_member');
+}
+.ico-sns-naver-sm {
+  @extend %icon;
+  width: 44px;
+  height: 44px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_sns_naver_sm_member');
+}
+/* s : info-guide-wrap */
 
+// type) info-guide
+
+// type) no-data
+.ico-no-data-store { // 매장없음 아이콘
+  @extend %icon;
+  width: 80px;
+  height: 80px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_no_data_store');
+}
+
+.ico-no-data-history { // 내역없음 아이콘
+  @extend %icon;
+  width: 80px;
+  height: 80px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_no_data_history');
+}
+
+.ico-no-data-search-result { // 검색결과 없음 아이콘
+  @extend %icon;
+  width: 80px;
+  height: 80px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_no_data_history');
+}
+
+.ico-no-data-filter-result { // 필터결과 없음 아이콘
+  @extend %icon;
+  width: 80px;
+  height: 80px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_no_data_filter_result');
+}
+
+.ico-no-data-cart { // 장바구니 없음 아이콘
+  @extend %icon;
+  width: 80px;
+  height: 80px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_no_data_cart');
+}
+
+.ico-no-data-address { // 주소없음 아이콘
+  @extend %icon;
+  width: 80px;
+  height: 80px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_no_data_address');
+}
+
+.ico-no-data-coupon { // 쿠폰없음 아이콘
+  @extend %icon;
+  width: 80px;
+  height: 80px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_no_data_coupon');
+}
+
+.ico-no-data-review { // 리뷰없음 아이콘
+  @extend %icon;
+  width: 80px;
+  height: 80px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_no_data_review');
+}
+
+/* e : info-guide-wrap */
+
+/* 임시 - 수정예정 */
 /* info-guide-wrap_temp / 삭제예정 LTK */
 .ico-info-guide-temp {
   @extend %icon;
@@ -340,6 +404,15 @@
   height: 64px;
   @include mixins.ratio_images('~/assets/images/common/comm_ico_h64_no_data');
 }
+
+/* 고객센터 임시 아이콘 / 삭제예정 LTK */
+.ico-grade-benefit-temp {
+  @extend %icon;
+  width: 67px;
+  height: 67px;
+  @include mixins.ratio_images('~/assets/images/cs/ico_grade_benefit_h67_cs');
+}
+
 /*.ico-delivery-common {
     @extend %icon;
     flex-shrink: 0;
