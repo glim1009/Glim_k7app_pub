@@ -557,7 +557,7 @@
     .ui-input {
       width: 100%;
       height: 34px;
-      @include mixins.font_size_sm('md');
+      @include mixins.font_size_md('md');
       color: variables.$colorBlack;
       text-align: center;
       box-sizing: border-box;

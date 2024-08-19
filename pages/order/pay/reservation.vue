@@ -507,7 +507,7 @@
             </ColorBox>
             <div class="cash-receipt-info-wrap">
               <CtitleWrap>
-                <ETit text="현금영수증" type="form" />
+                <ETit text="현금영수증" type="xlCont" />
               </CtitleWrap>
               <ColorBox color="white" size="lg">
                 <CtitleWrap size="zero">
@@ -675,7 +675,7 @@
                   <ETit text="결제금액" type="fold" />
                 </div>
                 <div class="flex-right">
-                  <EGoods size="xl" val="6,400" unit="원" class="fw-md fc-spot" />
+                  <EGoods size="xl" val="6,400" unit="원" class="fc-spot" />
                 </div>
               </FlexGroup>
             </div>

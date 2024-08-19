@@ -6,7 +6,7 @@
           <div class="flex-left">
             <span class="ui-chk">
               <input id="prdAllChk01" type="checkbox" />
-              <label for="prdAllChk01"><span class="text-md">전체선택</span></label>
+              <label for="prdAllChk01"><span class="text-lg">전체선택</span></label>
             </span>
           </div>
           <div class="flex-right">
@@ -28,12 +28,16 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지"/>
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
                 </template>
               </EThumbProdBox>
               <div class="info-box">
-                <ETit type="prod">7월 모닝 구독</ETit>
-                <div class="stext">(31일간, 월1회 / 총 20회)</div>
+                <ETit type="prod">
+                  7월 모닝 구독
+                </ETit>
+                <div class="stext">
+                  (31일간, 월1회 / 총 20회)
+                </div>
                 <div class="goods-group">
                   <span class="label">월</span>
                   <EGoods size="md" val="2,700" unit="원" />
@@ -56,12 +60,16 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지"/>
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
                 </template>
               </EThumbProdBox>
               <div class="info-box">
-                <ETit type="prod">7월 모닝 구독</ETit>
-                <div class="stext">(31일간, 월1회 / 총 20회)</div>
+                <ETit type="prod">
+                  7월 모닝 구독
+                </ETit>
+                <div class="stext">
+                  (31일간, 월1회 / 총 20회)
+                </div>
                 <div class="goods-group">
                   <span class="label">월</span>
                   <EGoods size="md" val="2,700" unit="원" />
@@ -84,12 +92,16 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지"/>
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
                 </template>
               </EThumbProdBox>
               <div class="info-box">
-                <ETit type="prod">7월 모닝 구독</ETit>
-                <div class="stext">(31일간, 월1회 / 총 20회)</div>
+                <ETit type="prod">
+                  7월 모닝 구독
+                </ETit>
+                <div class="stext">
+                  (31일간, 월1회 / 총 20회)
+                </div>
                 <div class="goods-group">
                   <span class="label">월</span>
                   <EGoods size="md" val="2,700" unit="원" />
@@ -113,12 +125,16 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md" dim="soldOut">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지"/>
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
                 </template>
               </EThumbProdBox>
               <div class="info-box">
-                <ETit type="prod">7월 모닝 구독</ETit>
-                <div class="stext">(31일간, 월1회 / 총 20회)</div>
+                <ETit type="prod">
+                  7월 모닝 구독
+                </ETit>
+                <div class="stext">
+                  (31일간, 월1회 / 총 20회)
+                </div>
                 <div class="goods-group">
                   <span class="label">월</span>
                   <EGoods size="md" val="2,700" unit="원" />
@@ -143,12 +159,16 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md" dim="구매불가">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지"/>
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
                 </template>
               </EThumbProdBox>
               <div class="info-box">
-                <ETit type="prod">7월 모닝 구독</ETit>
-                <div class="stext">(31일간, 월1회 / 총 20회)</div>
+                <ETit type="prod">
+                  7월 모닝 구독
+                </ETit>
+                <div class="stext">
+                  (31일간, 월1회 / 총 20회)
+                </div>
                 <div class="goods-group">
                   <span class="label">월</span>
                   <EGoods size="md" val="2,700" unit="원" />
@@ -179,7 +199,7 @@
             <ETit text="결제예정금액" type="cont" />
           </div>
           <div class="flex-right">
-            <EGoods size="lg" val="39,200" unit="원" class="fw-md fc-spot" />
+            <EGoods size="lg" val="39,200" unit="원" class="fc-spot" />
           </div>
         </FlexGroup>
       </ColorBox>

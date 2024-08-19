@@ -79,7 +79,7 @@
           <div class="flex-left">
             <span class="ui-chk">
               <input id="prdAllChk01" type="checkbox" />
-              <label for="prdAllChk01"><span class="text-md">전체선택</span></label>
+              <label for="prdAllChk01"><span class="text-lg">전체선택</span></label>
             </span>
           </div>
           <div class="flex-right">
@@ -411,13 +411,13 @@
                 <ETit type="prod">
                   바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
                 </ETit>
+                <div class="stock">
+                  <EGoods size="sm" val="N" unit="개" /> 남음
+                </div>
                 <div class="goods-group">
                   <EGoods type="origin" size="sm" val="3,000" unit="원" />
                   <EGoods type="percent" size="md" val="10" unit="%" />
                   <EGoods size="md" val="2,700" unit="원" />
-                </div>
-                <div class="stock">
-                  <EGoods size="sm" val="N" unit="개" /> 남음
                 </div>
                 <div class="rating">
                   <EIco name="rating" color="gray" size="xs">
@@ -452,13 +452,13 @@
                 <ETit type="prod">
                   바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
                 </ETit>
+                <div class="stock">
+                  <EGoods size="sm" val="N" unit="개" /> 남음
+                </div>
                 <div class="goods-group">
                   <EGoods type="origin" size="sm" val="3,000" unit="원" />
                   <EGoods type="percent" size="md" val="10" unit="%" />
                   <EGoods size="md" val="2,700" unit="원" />
-                </div>
-                <div class="stock">
-                  <EGoods size="sm" val="N" unit="개" /> 남음
                 </div>
               </div>
             </div>
@@ -487,11 +487,11 @@
                 <ETit type="prod">
                   바리스타 로슈거 250ml
                 </ETit>
-                <div class="goods-group">
-                  <EGoods size="md" val="2,700" unit="원" />
-                </div>
                 <div class="stock">
                   <EGoods size="sm" val="N" unit="개" /> 남음
+                </div>
+                <div class="goods-group">
+                  <EGoods size="md" val="2,700" unit="원" />
                 </div>
                 <div class="rating">
                   <EIco name="rating" color="gray" size="xs">
@@ -526,13 +526,13 @@
                 <ETit type="prod">
                   바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
                 </ETit>
+                <div class="stock">
+                  <EGoods size="sm" val="N" unit="개" /> 남음
+                </div>
                 <div class="goods-group">
                   <EGoods type="origin" size="sm" val="3,000" unit="원" />
                   <EGoods type="percent" size="md" val="10" unit="%" />
                   <EGoods size="md" val="2,700" unit="원" />
-                </div>
-                <div class="stock">
-                  <EGoods size="sm" val="N" unit="개" /> 남음
                 </div>
                 <div class="rating">
                   <EIco name="rating" color="gray" size="xs">
@@ -567,13 +567,13 @@
                 <ETit type="prod">
                   바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
                 </ETit>
+                <div class="stock">
+                  <EGoods size="sm" val="N" unit="개" /> 남음
+                </div>
                 <div class="goods-group">
                   <EGoods type="origin" size="sm" val="3,000" unit="원" />
                   <EGoods type="percent" size="md" val="10" unit="%" />
                   <EGoods size="md" val="2,700" unit="원" />
-                </div>
-                <div class="stock">
-                  <EGoods size="sm" val="N" unit="개" /> 남음
                 </div>
                 <div class="rating">
                   <EIco name="rating" color="gray" size="xs">
@@ -634,7 +634,7 @@
                   <ETit text="결제예정금액" type="fold" />
                 </div>
                 <div class="flex-right">
-                  <EGoods size="xl" val="38,200" unit="원" class="fw-md fc-spot" />
+                  <EGoods size="xl" val="38,200" unit="원" class="fc-spot" />
                 </div>
               </FlexGroup>
             </div>

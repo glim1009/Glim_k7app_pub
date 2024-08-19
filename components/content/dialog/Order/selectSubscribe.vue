@@ -57,7 +57,7 @@
                 </div>
               </ColorBox>
             </li>
-            <li class="item-select-box" :class="{ 'is-disabled': isDisabled }">
+            <li class="item-select-box is-disabled" :class="{ 'is-disabled': isDisabled }">
               <ColorBox color="white">
                 <div class="box-info-select">
                   <!-- thumb-prod-flex -->

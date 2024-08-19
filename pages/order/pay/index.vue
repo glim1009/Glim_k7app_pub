@@ -101,22 +101,6 @@
                         </div>
                       </FlexGroup>
                     </div>
-                    <ColorBox color="light-gray" size="sm" class="ta-center">
-                      <TableWrap type="info" gap="sm" size="md" table-name="픽업정보">
-                        <colgroup>
-                          <col style="width: 55px;" />
-                          <col style="width: auto;" />
-                        </colgroup>
-                        <tbody>
-                          <tr>
-                            <th scope="row">
-                              픽업일시
-                            </th>
-                            <td>2024.06.29(수) 15:00 ~ 18:00</td>
-                          </tr>
-                        </tbody>
-                      </TableWrap>
-                    </ColorBox>
                   </div>
                   <!-- // thumb-prod-flex -->
                 </li>
@@ -146,22 +130,6 @@
                         </div>
                       </FlexGroup>
                     </div>
-                    <ColorBox color="light-gray" size="sm" class="ta-center">
-                      <TableWrap type="info" gap="sm" size="md" table-name="픽업정보">
-                        <colgroup>
-                          <col style="width: 55px;" />
-                          <col style="width: auto;" />
-                        </colgroup>
-                        <tbody>
-                          <tr>
-                            <th scope="row">
-                              픽업일시
-                            </th>
-                            <td>2024.06.29(수) 15:00 ~ 18:00</td>
-                          </tr>
-                        </tbody>
-                      </TableWrap>
-                    </ColorBox>
                   </div>
                   <!-- // thumb-prod-flex -->
                 </li>
@@ -301,7 +269,7 @@
                   <ETit text="결제금액" type="fold" />
                 </div>
                 <div class="flex-right">
-                  <EGoods size="xl" val="6,400" unit="원" class="fw-md fc-spot" />
+                  <EGoods size="xl" val="6,400" unit="원" class="fc-spot" />
                 </div>
               </FlexGroup>
             </div>

@@ -6,7 +6,7 @@
           <div class="flex-left">
             <span class="ui-chk">
               <input id="prdAllChk01" type="checkbox" />
-              <label for="prdAllChk01"><span class="text-md">전체선택</span></label>
+              <label for="prdAllChk01"><span class="text-lg">전체선택</span></label>
             </span>
           </div>
           <div class="flex-right">
@@ -29,14 +29,16 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지"/>
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
                 </template>
               </EThumbProdBox>
               <div class="info-box">
                 <BadgeGroup gap="md">
                   <EBadge color="gray" size="sm" badge-text="할인" />
                 </BadgeGroup>
-                <ETit type="prod">바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml</ETit>
+                <ETit type="prod">
+                  바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
+                </ETit>
                 <div class="stock">
                   <EGoods size="sm" val="N" unit="개" /> 남음
                 </div>
@@ -72,14 +74,16 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지"/>
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
                 </template>
               </EThumbProdBox>
               <div class="info-box">
                 <BadgeGroup gap="md">
                   <EBadge color="gray" size="sm" badge-text="1+1" />
                 </BadgeGroup>
-                <ETit type="prod">바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml</ETit>
+                <ETit type="prod">
+                  바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
+                </ETit>
                 <div class="stock">
                   <EGoods size="sm" val="N" unit="개" /> 남음
                 </div>
@@ -102,7 +106,9 @@
               </EIco>
             </button>
             <ColorBox color="light-gray" size="sm" class="ta-center">
-              <p class="stext fw-md">증정품을 선택해 주세요.</p>
+              <p class="stext fw-md">
+                증정품을 선택해 주세요.
+              </p>
               <BtnWrap size="sm">
                 <EBtn color="line-light-gray" size="sm" @click="openSelectFreeGift">
                   <span class="text">증정품 선택</span>
@@ -121,14 +127,16 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지"/>
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
                 </template>
               </EThumbProdBox>
               <div class="info-box">
                 <BadgeGroup gap="md">
                   <EBadge color="gray" size="sm" badge-text="1+1" />
                 </BadgeGroup>
-                <ETit type="prod">바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml</ETit>
+                <ETit type="prod">
+                  바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
+                </ETit>
                 <div class="stock">
                   <EGoods size="sm" val="N" unit="개" /> 남음
                 </div>
@@ -157,14 +165,16 @@
               <div class="thumb-prod-flex">
                 <EThumbProdBox size="md">
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지"/>
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
                   <BadgeGroup gap="md">
                     <EBadge color="gray" size="sm" badge-text="증정" />
                   </BadgeGroup>
-                  <ETit type="prod">바리스타 로슈거 250ml</ETit>
+                  <ETit type="prod">
+                    바리스타 로슈거 250ml
+                  </ETit>
                 </div>
               </div>
               <!-- // thumb-prod-flex -->
@@ -186,14 +196,16 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지"/>
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
                 </template>
               </EThumbProdBox>
               <div class="info-box">
                 <BadgeGroup gap="md">
                   <EBadge color="gray" size="sm" badge-text="2+1" />
                 </BadgeGroup>
-                <ETit type="prod">바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml</ETit>
+                <ETit type="prod">
+                  바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
+                </ETit>
                 <div class="stock">
                   <EGoods size="sm" val="N" unit="개" /> 남음
                 </div>
@@ -218,7 +230,9 @@
               </EIco>
             </button>
             <ColorBox color="orange" size="sm" class="ta-center">
-              <p class="stext fc-orange fw-md">하나를 더 담으시면 1개를 더 드려요</p>
+              <p class="stext fc-orange fw-md">
+                하나를 더 담으시면 1개를 더 드려요
+              </p>
             </ColorBox>
           </li>
           <!-- // N+N 증정 상품 (증정 가능 상품 안내) -->
@@ -239,7 +253,9 @@
                 <BadgeGroup gap="md">
                   <EBadge color="gray" size="sm" badge-text="할인" />
                 </BadgeGroup>
-                <ETit type="prod">드보밀레짐빈티지14</ETit>
+                <ETit type="prod">
+                  드보밀레짐빈티지14
+                </ETit>
                 <div class="goods-group">
                   <EGoods type="origin" size="sm" val="3,000" unit="원" />
                   <EGoods type="percent" size="md" val="10" unit="%" />
@@ -284,14 +300,16 @@
               </EThumbProdBox>
               <!-- // thumb-prod-2xl -->
               <div class="info-box">
-                <ETit type="prod">바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml</ETit>
+                <ETit type="prod">
+                  바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
+                </ETit>
+                <div class="stock">
+                  <EGoods size="sm" val="N" unit="개" /> 남음
+                </div>
                 <div class="goods-group">
                   <EGoods type="origin" size="sm" val="3,000" unit="원" />
                   <EGoods type="percent" size="md" val="10" unit="%" />
                   <EGoods size="md" val="2,700" unit="원" />
-                </div>
-                <div class="stock">
-                  <EGoods size="sm" val="N" unit="개" /> 남음
                 </div>
                 <div class="rating">
                   <EIco name="rating" color="gray" size="xs">
@@ -323,14 +341,16 @@
               </EThumbProdBox>
               <!-- // thumb-prod-2xl -->
               <div class="info-box">
-                <ETit type="prod">바리스타 로슈거 250ml</ETit>
+                <ETit type="prod">
+                  바리스타 로슈거 250ml
+                </ETit>
+                <div class="stock">
+                  <EGoods size="sm" val="N" unit="개" /> 남음
+                </div>
                 <div class="goods-group">
                   <EGoods type="origin" size="sm" val="3,000" unit="원" />
                   <EGoods type="percent" size="md" val="10" unit="%" />
                   <EGoods size="md" val="2,700" unit="원" />
-                </div>
-                <div class="stock">
-                  <EGoods size="sm" val="N" unit="개" /> 남음
                 </div>
               </div>
             </div>
@@ -356,12 +376,14 @@
               </EThumbProdBox>
               <!-- // thumb-prod-2xl -->
               <div class="info-box">
-                <ETit type="prod">바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml</ETit>
-                <div class="goods-group">
-                  <EGoods size="md" val="2,700" unit="원" />
-                </div>
+                <ETit type="prod">
+                  바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
+                </ETit>
                 <div class="stock">
                   <EGoods size="sm" val="N" unit="개" /> 남음
+                </div>
+                <div class="goods-group">
+                  <EGoods size="md" val="2,700" unit="원" />
                 </div>
                 <div class="rating">
                   <EIco name="rating" color="gray" size="xs">
@@ -393,14 +415,16 @@
               </EThumbProdBox>
               <!-- // thumb-prod-2xl -->
               <div class="info-box">
-                <ETit type="prod">바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml</ETit>
+                <ETit type="prod">
+                  바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
+                </ETit>
+                <div class="stock">
+                  <EGoods size="sm" val="N" unit="개" /> 남음
+                </div>
                 <div class="goods-group">
                   <EGoods type="origin" size="sm" val="3,000" unit="원" />
                   <EGoods type="percent" size="md" val="10" unit="%" />
                   <EGoods size="md" val="2,700" unit="원" />
-                </div>
-                <div class="stock">
-                  <EGoods size="sm" val="N" unit="개" /> 남음
                 </div>
                 <div class="rating">
                   <EIco name="rating" color="gray" size="xs">
@@ -432,14 +456,16 @@
               </EThumbProdBox>
               <!-- // thumb-prod-2xl -->
               <div class="info-box">
-                <ETit type="prod">바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml</ETit>
+                <ETit type="prod">
+                  바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
+                </ETit>
+                <div class="stock">
+                  <EGoods size="sm" val="N" unit="개" /> 남음
+                </div>
                 <div class="goods-group">
                   <EGoods type="origin" size="sm" val="3,000" unit="원" />
                   <EGoods type="percent" size="md" val="10" unit="%" />
                   <EGoods size="md" val="2,700" unit="원" />
-                </div>
-                <div class="stock">
-                  <EGoods size="sm" val="N" unit="개" /> 남음
                 </div>
                 <div class="rating">
                   <EIco name="rating" color="gray" size="xs">
@@ -472,7 +498,7 @@
                 <ETit text="결제예정금액" type="fold" />
               </div>
               <div class="flex-right">
-                <EGoods size="xl" val="38,200" unit="원" class="fw-md fc-spot" />
+                <EGoods size="xl" val="38,200" unit="원" class="fc-spot" />
               </div>
             </FlexGroup>
           </div>

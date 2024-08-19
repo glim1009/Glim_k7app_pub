@@ -6,7 +6,7 @@
           <div class="flex-left">
             <span class="ui-chk">
               <input id="prodAllChk" type="checkbox" />
-              <label for="prodAllChk"><span class="text-md">전체선택</span></label>
+              <label for="prodAllChk"><span class="text-lg">전체선택</span></label>
             </span>
           </div>
           <div class="flex-right">
@@ -28,14 +28,16 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지"/>
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
                 </template>
               </EThumbProdBox>
               <div class="info-box">
                 <BadgeGroup gap="md">
                   <EBadge color="gray" size="sm" badge-text="할인" />
                 </BadgeGroup>
-                <ETit type="prod">모바일 상품권 7,000원</ETit>
+                <ETit type="prod">
+                  모바일 상품권 7,000원
+                </ETit>
               </div>
               <FlexGroup align="end">
                 <div class="flex-left">
@@ -66,11 +68,13 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지"/>
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
                 </template>
               </EThumbProdBox>
               <div class="info-box">
-                <ETit type="prod">모바일 상품권 10,000원</ETit>
+                <ETit type="prod">
+                  모바일 상품권 10,000원
+                </ETit>
               </div>
               <FlexGroup align="end">
                 <div class="flex-left">
@@ -99,11 +103,13 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지"/>
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
                 </template>
               </EThumbProdBox>
               <div class="info-box">
-                <ETit type="prod">모바일 전용 금액권 3,000원</ETit>
+                <ETit type="prod">
+                  모바일 전용 금액권 3,000원
+                </ETit>
               </div>
               <FlexGroup align="end">
                 <div class="flex-left">
@@ -132,11 +138,13 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지"/>
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
                 </template>
               </EThumbProdBox>
               <div class="info-box">
-                <ETit type="prod">푸드 전용 금액권 50,000원</ETit>
+                <ETit type="prod">
+                  푸드 전용 금액권 50,000원
+                </ETit>
               </div>
               <FlexGroup align="end">
                 <div class="flex-left">
@@ -174,7 +182,7 @@
                 <ETit text="결제예정금액" type="fold" />
               </div>
               <div class="flex-right">
-                <EGoods size="xl" val="38,200" unit="원" class="fw-md fc-spot" />
+                <EGoods size="xl" val="38,200" unit="원" class="fc-spot" />
               </div>
             </FlexGroup>
           </div>

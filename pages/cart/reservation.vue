@@ -7,7 +7,7 @@
           <div class="flex-left">
             <span class="ui-chk">
               <input id="prdAllChk01" type="checkbox" />
-              <label for="prdAllChk01"><span class="text-md">전체선택</span></label>
+              <label for="prdAllChk01"><span class="text-lg">전체선택</span></label>
             </span>
           </div>
           <div class="flex-right">
@@ -478,7 +478,7 @@
                 <ETit text="결제예정금액" type="fold" />
               </div>
               <div class="flex-right">
-                <EGoods size="xl" val="38,200" unit="원" class="fw-md fc-spot" />
+                <EGoods size="xl" val="38,200" unit="원" class="fc-spot" />
               </div>
             </FlexGroup>
           </div>
