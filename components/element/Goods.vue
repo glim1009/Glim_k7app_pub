@@ -1,8 +1,7 @@
 <template>
   <span :class="className">
     <span class="val">
-      {{ val }}
-      <slot v-if="!val" />
+      {{ val }}<slot v-if="!val" />
     </span>
     <span class="unit">{{ unit }}</span>
   </span>

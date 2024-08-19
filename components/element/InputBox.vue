@@ -23,9 +23,10 @@
 
 <script setup lang="ts">
 
-interface boxClass {
-  isClassValue: boolean;
-  isClassFocus: boolean;
+interface ClassStates {
+  value: boolean;
+  focused: boolean;
+  disabled: boolean;
 }
 
 const props = withDefaults(defineProps<{
@@ -38,57 +39,60 @@ const props = withDefaults(defineProps<{
   enterkeyhint?: 'search';
   disabled?: boolean;
   readonly?: boolean;
-  modelValue?: boxClass;
+  initialStates?: Partial<ClassStates>;
 }>(), {
   type: 'text',
 });
 
+
 const emit = defineEmits<{
   (e: 'input', value: string): void;
   (e: 'clear'): void;
-  (e: 'update:modelValue', value: boxClass): void;
+  (e: 'classChange', className: keyof ClassStates, isActive: boolean): void;
 }>();
 
 const inputValue = ref(props.value || '');
-const isFocused = ref(props.modelValue?.isClassFocus || false);
-const isValue = ref(props.modelValue?.isClassValue || false);
+const isValue = ref(props.initialStates?.value || false);
+const isFocused = ref(props.initialStates?.focused || false);
 
-function inputFocus() { isFocused.value = true; }
-function inputFocusout() { isFocused.value = false; }
-
-watch( () => props.modelValue, (newValue:any) => {
-  isFocused.value = newValue.inputFocus;
-  isValue.value = newValue.isClassValue;
-}, {deep: true});
-
-const updateClassSta = () => {
-  emit('update:modelValue', {
-    isClassValue: isValue.value,
-    isClassFocus: isFocused.value
-  });
+const changeClass = (className: keyof ClassStates) => {
+  switch (className) {
+    case 'value':
+      emit('classChange', 'value', isValue.value);
+      break;
+    case 'focused':
+      emit('classChange', 'focused', isFocused.value);
+      break;
+    case 'disabled':
+      emit('classChange', 'disabled', props.disabled || props.readonly);
+      break;
+  }
 };
+
+function inputFocus() { isFocused.value = true; changeClass('focused');}
+function inputFocusout() { isFocused.value = false; changeClass('focused');}
 
 function clearInput() {
   inputValue.value = '';
   isValue.value = false;
   emit('clear');
-  updateClassSta();
+  changeClass('value');
 }
 
 function setInputStatus(value = inputValue.value) {
   const newVal = (typeof value === 'string') ? value : JSON.stringify(value);
   isValue.value = newVal.length > 0;
-  updateClassSta();
+  changeClass('value');
 }
 
 watch(inputValue, (newValue) => {
   setInputStatus(newValue);
   emit('input', newValue);
-  updateClassSta();
 });
 
 onMounted(() => {
   setInputStatus();
+  changeClass('disabled');
 });
 </script>
 

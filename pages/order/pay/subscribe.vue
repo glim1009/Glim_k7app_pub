@@ -1,6 +1,42 @@
 <template>
-  <ContWrap>
-    <RowListWrap gap="2xl">
+  <ContWrap in-top="lg">
+    <ContBox size="lg">
+      <CtitleWrap>
+        <ETit text="구매상품" type="lgCont" />
+      </CtitleWrap>
+      <ColorBox color="white" size="lg">
+        <div class="item-thumb-prod">
+          <!-- thumb-prod-flex -->
+          <div class="thumb-prod-flex">
+            <EThumbProdBox size="md">
+              <template #thumb>
+                <img src="../../../assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+              </template>
+            </EThumbProdBox>
+            <div class="info-box">
+              <FlexGroup>
+                <div class="flex-left">
+                  <ETit type="prod">
+                    7월 도시락 구독
+                  </ETit>
+                  <div class="stext">
+                    (30일간, 일 1회/총 30회)
+                  </div>
+                </div>
+                <div class="flex-right">
+                  <div class="goods-group">
+                    <span class="label">월</span>
+                    <EGoods size="md" val="2,700" unit="원" />
+                  </div>
+                </div>
+              </FlexGroup>
+            </div>
+          </div>
+          <!-- // thumb-prod-flex -->
+        </div>
+      </ColorBox>
+    </ContBox>
+    <RowListWrap size="lg" gap="2xl">
       <li class="item">
         <FoldToggleBox open>
           <template #header>
@@ -11,12 +47,12 @@
           <template #content>
             <ColorBox color="white" size="lg">
               <RowListWrap gap="line">
-                <li class="item-order-pay">
+                <li class="item-md">
                   <span class="ui-rdo">
                     <input id="orderPayRdo01" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payCard" />
                     <label for="orderPayRdo01"><span class="text-lg">신용(체크)카드</span></label>
                   </span>
-                  <div v-show="orderPayRadio === 'payCard'" class="order-pay-cont">
+                  <div v-show="orderPayRadio === 'payCard'" class="cont-pay-info">
                     <div class="ui-select">
                       <select title="신용(체크)카드 선택">
                         <option>롯데카드</option>
@@ -26,42 +62,42 @@
                     </div>
                   </div>
                 </li>
-                <li class="item-order-pay">
+                <li class="item-md">
                   <span class="ui-rdo">
                     <input id="orderPayRdo02" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payLpay" />
                     <label for="orderPayRdo02"><span class="text-lg">L.PAY</span></label>
                   </span>
                 </li>
-                <li class="item-order-pay">
+                <li class="item-md">
                   <span class="ui-rdo">
                     <input id="orderPayRdo03" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payNaver" />
                     <label for="orderPayRdo03"><span class="text-lg">네이버 간편결제</span></label>
                   </span>
-                  <div v-show="orderPayRadio === 'payNaver'" class="order-pay-cont">
+                  <div v-show="orderPayRadio === 'payNaver'" class="cont-pay-info">
                     <BtnWrap>
                       <EBtn color="line-light-gray" size="md">
-                        <span class="text">네이버페이 카드 결제</span>
+                        <span class="text">네이버 카드 결제</span>
                       </EBtn>
                       <EBtn color="line-light-gray" size="md">
-                        <span class="text">네이버페이 포인트 결제</span>
+                        <span class="text">네이버 포인트 결제</span>
                       </EBtn>
                     </BtnWrap>
                   </div>
                 </li>
-                <li class="item-order-pay">
+                <li class="item-md">
                   <span class="ui-rdo">
-                    <input id="orderPayRdo04" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payKakao" />
+                    <input id="orderPayRdo04" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payKakao" disabled />
                     <label for="orderPayRdo04"><span class="text-lg">카카오페이</span></label>
                   </span>
                 </li>
-                <li class="item-order-pay">
+                <li class="item-md">
                   <span class="ui-chk">
                     <input id="orderPayChk01" type="checkbox" />
                     <label for="orderPayChk01"><span class="text-sm fc-gray70">선택한 결제수단 다음에도 사용</span></label>
                   </span>
                 </li>
               </RowListWrap>
-              <div class="pay-info-wrap">
+              <div class="pay-benefit-info-wrap">
                 <ColorBox color="light-green" size="sm" class="ta-center">
                   <p class="stext fw-md fc-spot">
                     삼성카드 결제 시 1,000원 캐시백
@@ -81,7 +117,7 @@
                   <ETit text="매월결제금액" type="fold" />
                 </div>
                 <div class="flex-right">
-                  <EGoods val="6,400" unit="원" class="fw-md fc-spot" />
+                  <EGoods size="xl" val="6,400" unit="원" class="fw-md fc-spot" />
                 </div>
               </FlexGroup>
             </div>
@@ -121,20 +157,109 @@
         </FoldToggleBox>
       </li>
     </RowListWrap>
+    <ContBox size="lg">
+      <AllAgreeWrap v-model:checkCount="checkCheckBox" :index="1" :total-count="totalCheckBox">
+        <ColorBox color="white" size="md">
+          <div ref="agreeListRef">
+            <RowListWrap gap="md">
+              <li class="ui-col-item">
+                <FlexGroup>
+                  <div class="flex-left">
+                    <span class="ui-chk">
+                      <input id="agreeChk01" type="checkbox" />
+                      <label for="agreeChk01"><span class="text-md">개인정보 수집 및 이용동의</span></label>
+                    </span>
+                  </div>
+                  <div class="flex-right">
+                    <ETBtn size="xs" @click="openPersonalInfoAgree">
+                      <span class="text">상세보기</span>
+                      <EIco name="arw-right" color="gray" size="xs" />
+                    </ETBtn>
+                  </div>
+                </FlexGroup>
+              </li>
+              <li class="ui-col-item">
+                <span class="ui-chk">
+                  <input id="agreeChk02" type="checkbox" />
+                  <label for="agreeChk02"><span class="text-md">매월 정기 결제 동의</span></label>
+                </span>
+              </li>
+            </RowListWrap>
+          </div>
+        </ColorBox>
+      </AllAgreeWrap>
+      <RowListWrap size="xs">
+        <li class="dot-text-sm">
+          구매조건을 확인했으며 결제 진행에 동의합니다.
+        </li>
+      </RowListWrap>
+    </ContBox>
   </ContWrap>
   <ContDocker>
-    <BtnWrap type="full">
+    <BtnWrap type="auto">
+      <EBtn color="line-light-gray" size="lg">
+        <span class="text">취소</span>
+      </EBtn>
       <EBtn color="green" size="lg">
         <span class="text"><EGoods val="6,400" unit="원" /> 결제하기</span>
       </EBtn>
     </BtnWrap>
   </ContDocker>
+
+  <!-- pop : 개인정보 수집 및 이용약관 -->
+  <PopDeliveryPersonalInfoAgree v-model:sta="popPersonalInfoAgree" />
+  <!-- // pop : 개인정보 수집 및 이용약관 -->
 </template>
 
 <script setup lang="ts">
 definePageMeta({
-  title: '상품 결제',
+  title: '정기구독',
 });
+
+const orderPayRadio = ref();
+// 전체동의
+const agreeListRef = ref<HTMLInputElement | null>(null);
+const totalCheckBox = ref<number>(0);
+const checkCheckBox = ref<number>(0);
+let checkboxes: NodeListOf<HTMLInputElement>;
+
+function updateCheckCount(): void {
+  checkCheckBox.value = Array.from(checkboxes).filter(checkbox => checkbox.checked).length;
+}
+
+watch(() => checkCheckBox.value, (newValue) => {
+  totalCheckBox.value = checkboxes.length;
+  if (newValue === totalCheckBox.value) {
+    checkboxes.forEach(checkbox => checkbox.checked = true);
+  } else if (newValue === 0) {
+    checkboxes.forEach(checkbox => checkbox.checked = false);
+  }
+  updateCheckCount();
+});
+
+onMounted(() => {
+  if (agreeListRef.value instanceof Element) {
+    checkboxes = agreeListRef.value.querySelectorAll<HTMLInputElement>('input[type="checkbox"]');
+    totalCheckBox.value = checkboxes.length;
+    checkboxes.forEach((checkbox) => {
+      checkbox.addEventListener('change', updateCheckCount);
+    });
+
+    updateCheckCount();
+  }
+});
+
+onUnmounted(() => {
+  if (agreeListRef.value instanceof Element) {
+    checkboxes.forEach((checkbox) => {
+      checkbox.removeEventListener('change', updateCheckCount);
+    });
+  }
+});
+
+// 개인정보 수집 및 이용약관 팝업
+const popPersonalInfoAgree = ref({ open: false });
+const openPersonalInfoAgree = () => popPersonalInfoAgree.value.open = true;
 </script>
 
 <style lang="scss" scoped>

@@ -1,3 +1,21 @@
 @use 'sass:map';
 @use '../abstracts/variables';
 @use '../abstracts/mixins';
+
+
+// 상품 수 총 카운팅
+.total-prod-count {
+  font-size: 0;
+
+  .prod-name {
+    @include mixins.ellipsis;
+    max-width: 112px;
+    @include mixins.font_size_lg('md');
+    color: variables.$colorGray80;
+    width: auto;
+  }
+
+  .goods-md {
+    color: variables.$colorGray80;
+  }
+}

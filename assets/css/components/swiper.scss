@@ -24,12 +24,17 @@ $swiperType: ('', '-line', '-bar', '-tab');
       // 고객센터
       .question-box {
         width: 150px;
-
         .stext {
           @include mixins.multi_ellipsis(variables.$fontSizeMdLineHeight, 4, true);
         }
       }
+      // 상품
+      .thumb-prod {
+
+      }
     }
+
+
   }
 
 

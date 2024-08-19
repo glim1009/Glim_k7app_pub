@@ -2,7 +2,7 @@
   <ContWrap type="white" in-top="zero">
     <InfoGuideWrap
       type="info-guide"
-      name="temp"
+      name="order"
       desc="주문(결제)이 완료되었습니다."
       sub-desc="선물한 상품은 문자로 전달되며<br />전달된 선물내역은 주문내역에서 확인 하실 수 있습니다."
     />
@@ -43,7 +43,7 @@
                 <th scope="row">
                   주문상품
                 </th>
-                <td>모바일 상품권 10,000원</td>
+                <td>비비고 사골컵만둣국</td>
               </tr>
             </tbody>
           </TableWrap>
@@ -64,7 +64,7 @@
                 <th scope="row">
                   주문일
                 </th>
-                <td>모바일 상품권 10,000원</td>
+                <td>2024.07.02</td>
               </tr>
               <tr>
                 <th scope="row">
@@ -83,7 +83,7 @@
                   총 결제금액
                 </th>
                 <td>
-                  <span class="fw-md">
+                  <span class="fw-md fc-gray90">
                     9,500원
                   </span>
                 </td>
@@ -93,11 +93,8 @@
         </ColorBox>
       </li>
     </RowListWrap>
-    <BtnWrap type="flex" size="xl">
+    <BtnWrap type="full" size="xl">
       <EBtn tag="a" color="line-light-gray" size="md" to="to">
-        <span class="text">쏘옥보관</span>
-      </EBtn>
-      <EBtn tag="a" color="line-green" size="md" to="to">
         <span class="text">주문내역</span>
       </EBtn>
     </BtnWrap>

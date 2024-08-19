@@ -70,6 +70,10 @@ $wrapSize: ('xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
 
     :deep(.item-grid) {
       position: relative;
+
+      .ui-rdo-button {
+        width: 100%;
+      }
     }
 
     :deep(.item-grid-full) {

@@ -184,23 +184,25 @@
   .white-lg-box {
     margin-top: 16px;
 
-    .ctitle-md-wrap {
-      :deep(.flex-right) {
-        .glist-wrap {
-          .grid-col2-list {
-            justify-items: end;
-          }
-        }
-      }
-    }
-
     .light-gray-sm-box {
       margin-top: 16px;
     }
   }
+
+  .flex-center-group {
+    .flex-right {
+      .align-group {
+        [class^=stext] {
+          ~ [class^=btn] {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
 }
 
-.pay-info-wrap {
+.pay-benefit-info-wrap {
   margin-top: 16px;
 }
 
@@ -212,29 +214,13 @@
 
 .align-group {
   @include mixins.justify_width(center, center);
-  font-size: inherit;
-  line-height: inherit;
-  letter-spacing: inherit;
-  font-weight: inherit;
-  color: inherit;
 
   [class^=stext] {
-    ~ [class^=btn] {
-      margin-left: 6px;
+    ~ [class^=stext] {
+      margin-left: 10px;
     }
-  }
-}
 
-.text-align-box {
-  @include mixins.justify_width(center, center);
-  font-size: inherit;
-  line-height: inherit;
-  letter-spacing: inherit;
-  font-weight: inherit;
-  color: inherit;
-
-  [class^=stext] {
-    ~ .btn-line-light-gray-xs {
+    ~ [class^=btn] {
       margin-left: 6px;
     }
   }
@@ -314,6 +300,12 @@
   }
 }
 
+.scont-top-sm {
+  margin-top: 10px !important;
+}
+.scont-top-md {
+  margin-top: 16px !important;
+}
 
 .in-top-xs {
   padding-top: 10px !important;

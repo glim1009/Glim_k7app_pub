@@ -113,6 +113,36 @@ $wrapSize: ('2xs': 8px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
     }
   }
 
+  // 구독할인 선택
+  :deep(.item-select-box) {
+    &.is-disabled {
+      position: relative;
+
+      .box-info-select {
+        .ui-rdo {
+          input {
+            &[disabled], &[aria-disabled], &[readonly] {
+              & + label {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: -5px;
+        right: -5px;
+        top: 0;
+        bottom: 0;
+        z-index: 2;
+        background-color: rgba(variables.$colorGray20, 0.4);
+      }
+    }
+  }
+
   :deep(.item-board), :deep(.item-board-full), :deep(.item-member-info) {
     position: relative;
   }
@@ -152,30 +182,21 @@ $wrapSize: ('2xs': 8px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
   :deep(.item-sm) {
     padding: 10px 0;
 
-    // 할인수단 컨텐츠
-    .cont-discount-info {
-      margin-top: 10px;
-      padding: 12px;
-      border-radius: 10px;
-      background-color: variables.$colorGray10;
-
-      .flex-center-group {
-        .flex-left {
-          :deep(.goods-sm) {
-            font-weight: variables.$fontWeightMedium;
-          }
-        }
-
-        .flex-right {
-          .btn-delete {
-            display: inline-block;
-            padding: 4px;
-            margin: -4px;
-            font-size: 0;
-            vertical-align: top;
+    .flex-center-group {
+      .flex-right {
+        .align-group {
+          [class^=stext] {
+            ~ [class^=btn] {
+              margin-left: 10px;
+            }
           }
         }
       }
+    }
+
+    // 할인수단 컨텐츠
+    .cont-discount-info {
+      margin-top: 10px;
     }
   }
 
@@ -219,77 +240,7 @@ $wrapSize: ('2xs': 8px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
 
   // 상품 아이템
   :deep(.item-thumb-prod) {
-    position: relative;
     padding: 16px 0;
-    flex-wrap: wrap;
-    @include mixins.justify_width;
-
-    .ui-chk {
-      margin-right: 8px;
-    }
-
-    .btn-delete {
-      font-size: 0;
-    }
-
-    .thumb-prod-flex {
-      flex: 1;
-      flex-wrap: wrap;
-      width: calc(100% - 48px);
-
-      [class^=thumb-prod] {
-        flex-shrink: 0;
-      }
-
-      .flex-end-group {
-        width: 100%;
-        margin-top: 10px;
-
-        .flex-right {
-          @include mixins.justify_width(start, end);
-
-          .goods-group {
-            text-align: right;
-
-            .origin {
-              display: block;
-            }
-
-            .percent {
-              margin-right: 4px;
-              font-weight: variables.$fontWeightSemibold;
-              color: variables.$colorRed100;
-            }
-
-            .goods-md {
-              font-weight: variables.$fontWeightSemibold;
-            }
-          }
-        }
-      }
-
-      // thumb size별 width값 지정 필요
-      .thumb-prod-md-box {
-        ~ .info-box {
-          width: calc(100% - 60px);
-        }
-      }
-    }
-
-    [class*=-xs-box], [class*=-sm-box] {
-      width: 100%;
-      margin-top: 16px;
-
-      .flex-start-group {
-        .flex-right {
-          margin-left: 16px;
-        }
-      }
-    }
-
-    .ui-col-md-group {
-      margin-top: 10px;
-    }
   }
 
   :deep(.item-board) {
@@ -313,6 +264,120 @@ $wrapSize: ('2xs': 8px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
 .row-bline-list {
   :deep([class^=item]) {
     border-bottom: 1px solid variables.$colorGray30;
+  }
+}
+
+
+// 상품 아이템
+:deep(.item-thumb-prod) {
+  flex-wrap: wrap;
+  @include mixins.justify_width;
+
+  .ui-chk {
+    position: relative;
+    z-index: 2;
+    margin-right: 8px;
+  }
+
+  &:has(.btn-delete) {
+    .thumb-prod-flex {
+      .flex-end-group {
+        width: calc(100% + 16px);
+        margin-right: -16px;
+      }
+    }
+  }
+
+  .btn-delete {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: -4px;
+    padding: 4px;
+    font-size: 0;
+    vertical-align: top;
+  }
+
+  .thumb-prod-flex {
+    position: relative;
+    flex: 1;
+    flex-wrap: wrap;
+    width: calc(100% - 48px);
+
+    [class^=thumb-prod] {
+      flex-shrink: 0;
+    }
+
+    .flex-end-group {
+      width: 100%;
+      margin: {
+        top: 10px;
+      }
+
+      .flex-left {
+        .ui-spinner-box {
+          position: relative;
+          z-index: 2;
+        }
+      }
+
+      .flex-right {
+        @include mixins.justify_width(start, end);
+
+        .goods-group {
+          text-align: right;
+
+          .origin {
+            display: block;
+          }
+
+          .percent {
+            margin-right: 4px;
+            font-weight: variables.$fontWeightSemibold;
+            color: variables.$colorRed100;
+          }
+
+          .goods-md {
+            font-weight: variables.$fontWeightSemibold;
+          }
+        }
+      }
+    }
+
+    // thumb size별 width값 지정 필요
+    .thumb-prod-md-box {
+      ~ .info-box {
+        width: calc(100% - 60px);
+      }
+    }
+  }
+
+  [class^=light-gray][class*=box],
+  [class^=orange][class*=box] {
+    width: 100%;
+    margin: {
+      left: 0 !important;
+      right: 0 !important;
+      top: 16px;
+    }
+
+    .thumb-prod-flex {
+      width: 100%;
+    }
+  }
+
+  [class^=light-gray][class*=-md-box] {
+    .flex-start-group {
+      .flex-right {
+        margin-left: 16px;
+      }
+    }
+  }
+
+  .ui-col-md-group {
+    margin-top: 10px;
   }
 }
 

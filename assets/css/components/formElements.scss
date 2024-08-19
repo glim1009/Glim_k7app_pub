@@ -155,6 +155,28 @@
       cursor: pointer;
       vertical-align: top;
       @include mixins.no_select_text;
+
+      .text-sm,
+      .text-md,
+      .text-lg {
+        display: inline-block;
+        padding: {
+          top: 2px;
+          left: 6px;
+          bottom: 2px;
+        }
+        color: variables.$colorBlack;
+        vertical-align: top;
+      }
+      .text-sm { // 13px
+        @include mixins.font_size_md('md');
+      }
+      .text-md { // 14px
+        @include mixins.font_size_lg;
+      }
+      .text-lg { // 15px
+        @include mixins.font_size_xl;
+      }
     }
   }
 }
@@ -184,29 +206,6 @@
         box-sizing: border-box;
         -webkit-box-sizing: border-box;
       }
-
-      .text-sm,
-      .text-md,
-      .text-lg {
-        display: inline-block;
-        padding: {
-          top: 2px;
-          left: 6px;
-          bottom: 2px;
-        }
-        color: variables.$colorBlack;
-        vertical-align: top;
-      }
-      .text-sm { // 13px
-        @include mixins.font_size_md('md');
-      }
-      .text-md { // 14px
-        @include mixins.font_size_lg;
-      }
-      .text-lg { // 15px
-        @include mixins.font_size_xl;
-      }
-
     }
 
     &[disabled], &[aria-disabled], &[readonly] {
@@ -261,28 +260,6 @@
       }
     }
   }
-
-  &.type-button {
-    input {
-      width: 100%;
-
-      + label {
-        width: 100%;
-        padding: 7px;
-        border-radius: 18px;
-        background-color: variables.$colorGray20;
-
-        [class^=text] {
-          padding: 0;
-        }
-
-        &:before,
-        &:after {
-          content: initial;
-        }
-      }
-    }
-  }
 }
 
 @keyframes rdoAnimation {
@@ -292,6 +269,53 @@
 
   100% {
     transform: scale(1) translateY(-5px);
+  }
+}
+
+.ui-rdo-button {
+  @extend %rdoChkReset;
+
+  input {
+    width: 100%;
+
+    & + label {
+      width: 100%;
+      padding: 7px;
+      border-radius: 18px;
+      border: 1px solid transparent;
+      background-color: variables.$colorGray20;
+      text-align: center;
+
+      [class^=text] {
+        padding: 0;
+        color: variables.$colorGray80;
+        font-weight: variables.$fontWeightSemibold;
+      }
+
+      &:before,
+      &:after {
+        content: initial;
+      }
+    }
+
+    &[disabled], &[aria-disabled], &[readonly] {
+      & + label {
+        [class^=text] {
+          padding: 0;
+          color: variables.$colorGray50;
+        }
+      }
+    }
+
+    &:checked + label {
+      border-color: variables.$colorGreen100;
+      background-color: variables.$colorWhite;
+      @include mixins.prefix(transition, all 0.15s);
+
+      [class^=text] {
+        color: variables.$colorGreen100;
+      }
+    }
   }
 }
 
@@ -568,19 +592,17 @@
 
 /* ui-col-group */
 
-$itemGap: ('md': 10px); // md - 10px
+$itemGap: ('md': 10px, 'lg': 16px); // md - 10px
 @each $gap, $px in $itemGap {
-  @if ( $gap == 'md') {
-    .ui-col-#{$gap}-group {
-      margin-bottom: -10px;
+  .ui-col-#{$gap}-group {
+    margin-bottom: -10px;
 
-      [class^=ui-] {
-        margin-bottom: 10px;
-        margin-right: $px;
+    [class^=ui-] {
+      margin-bottom: 10px;
+      margin-right: $px;
 
-        &:last-child {
-          margin-right: 0;
-        }
+      &:last-child {
+        margin-right: 0;
       }
     }
   }

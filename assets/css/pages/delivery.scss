@@ -350,21 +350,6 @@
   margin: -16px;
 }
 
-.attach-box-wrap {
-  .swiper-auto-wrap {
-    margin: 0 -20px;
-
-    :deep(.swiper) {
-      padding: 0 20px;
-
-      .swiper-slide {
-        width: auto;
-        font-size: 0;
-      }
-    }
-  }
-}
-
 // card box header
 .box-info-header {
   + .box-info-cont {

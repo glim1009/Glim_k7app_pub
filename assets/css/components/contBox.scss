@@ -7,6 +7,7 @@
 // size - top, bottom 중 size별 지정
 
 $contSize: ('zero': 0px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
+$contGap: ('sm': 10px, 'md': 16px);
 
 @each $size, $px in $contSize {
   .cont-#{$size}-box {
@@ -16,6 +17,16 @@ $contSize: ('zero': 0px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
 
     &.deco-tline {
       border-top: 1px solid variables.$colorGray30;
+    }
+
+    @each $gap, $px in $contGap {
+      &.gap-#{$gap} {
+        :deep(:is([class^=white])[class*=box]) {
+          ~ [class^=white][class*=box] {
+            margin-top: $px;
+          }
+        }
+      }
     }
   }
 }

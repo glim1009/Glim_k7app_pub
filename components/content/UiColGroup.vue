@@ -1,12 +1,12 @@
 <template>
   <div :class="className">
-    <slot />
+    <slot></slot>
   </div>
 </template>
 
 <script setup lang="ts">
 const props = withDefaults(defineProps<{
-  gap?: 'md'; // md - 10px
+  gap?: 'md' | 'lg'; // md - 10px, lg - 16px
 }>(), {
   gap: 'md',
 });
@@ -18,7 +18,6 @@ const className = computed(() => {
   cNm += '-group';
   return cNm;
 });
-
 </script>
 
 <style lang="scss" scoped>

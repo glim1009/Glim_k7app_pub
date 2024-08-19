@@ -28,7 +28,7 @@
     <CtitleWrap size="md">
       <ETit text="예약정보" type="cont" />
     </CtitleWrap>
-    <ContBox size="zero">
+    <ContBox size="zero" gap="sm">
       <ColorBox color="white" size="lg">
         <TableWrap type="info" gap="md" size="md" table-name="결제금액">
           <colgroup>

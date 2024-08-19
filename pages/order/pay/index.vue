@@ -1,6 +1,175 @@
 <template>
-  <ContWrap>
-    <RowListWrap gap="2xl">
+  <ContWrap in-top="lg">
+    <RowListWrap size="lg" gap="2xl">
+      <li v-if="isPresent" class="item">
+        <CtitleWrap size="zero">
+          <FlexGroup>
+            <div class="flex-left">
+              <ETit text="받는사람" type="xlCont" />
+            </div>
+            <div class="flex-right">
+              <div class="stext-lg fw-md">
+                010-1234-5678
+              </div>
+            </div>
+          </FlexGroup>
+        </CtitleWrap>
+      </li>
+      <li v-if="isPresent" class="item">
+        <CtitleWrap>
+          <ETit text="구매상품" type="xlCont" />
+        </CtitleWrap>
+        <ColorBox color="white" size="lg">
+          <div class="item-thumb-prod">
+            <!-- thumb-prod-flex -->
+            <div class="thumb-prod-flex">
+              <EThumbProdBox size="md">
+                <template #thumb>
+                  <img src="../../../assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                </template>
+              </EThumbProdBox>
+              <div class="info-box">
+                <FlexGroup>
+                  <div class="flex-left">
+                    <BadgeGroup gap="md">
+                      <EBadge color="gray" size="sm" badge-text="할인" />
+                    </BadgeGroup>
+                    <ETit type="prod">
+                      비비고 사골컵만두국
+                    </ETit>
+                    <div class="stock">
+                      수량 <EGoods val="2" unit="개" />
+                    </div>
+                  </div>
+                  <div class="flex-right">
+                    <div class="goods-group">
+                      <EGoods type="origin" size="sm" val="3,000" unit="원" />
+                      <EGoods size="md" val="2,700" unit="원" />
+                    </div>
+                  </div>
+                </FlexGroup>
+              </div>
+            </div>
+            <!-- // thumb-prod-flex -->
+          </div>
+        </ColorBox>
+      </li>
+      <li v-if="isNormal" class="item">
+        <FoldToggleBox>
+          <template #header>
+            <div class="fold-title">
+              <FlexGroup>
+                <div class="flex-left">
+                  <ETit text="구매상품" type="fold" />
+                </div>
+                <div class="flex-right">
+                  <div class="total-prod-count">
+                    <span class="prod-name">비비고 사골컵만두국</span>
+                    <span class="stext-lg">외 </span>
+                    <EGoods size="md" val="3" unit="건" />
+                  </div>
+                </div>
+              </FlexGroup>
+            </div>
+          </template>
+          <template #content>
+            <ColorBox color="white" size="lg">
+              <RowListWrap gap="line">
+                <li class="item-thumb-prod">
+                  <!-- thumb-prod-flex -->
+                  <div class="thumb-prod-flex">
+                    <EThumbProdBox size="md">
+                      <template #thumb>
+                        <img src="../../../assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                      </template>
+                    </EThumbProdBox>
+                    <div class="info-box">
+                      <FlexGroup>
+                        <div class="flex-left">
+                          <ETit type="prod">
+                            7월 도시락 구독
+                          </ETit>
+                          <div class="stext">
+                            (30일간, 일 1회/총 30회)
+                          </div>
+                        </div>
+                        <div class="flex-right">
+                          <div class="goods-group">
+                            <span class="label">월</span>
+                            <EGoods size="md" val="2,700" unit="원" />
+                          </div>
+                        </div>
+                      </FlexGroup>
+                    </div>
+                    <ColorBox color="light-gray" size="sm" class="ta-center">
+                      <TableWrap type="info" gap="sm" size="md" table-name="픽업정보">
+                        <colgroup>
+                          <col style="width: 55px;" />
+                          <col style="width: auto;" />
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th scope="row">
+                              픽업일시
+                            </th>
+                            <td>2024.06.29(수) 15:00 ~ 18:00</td>
+                          </tr>
+                        </tbody>
+                      </TableWrap>
+                    </ColorBox>
+                  </div>
+                  <!-- // thumb-prod-flex -->
+                </li>
+                <li class="item-thumb-prod">
+                  <!-- thumb-prod-flex -->
+                  <div class="thumb-prod-flex">
+                    <EThumbProdBox size="md">
+                      <template #thumb>
+                        <img src="../../../assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                      </template>
+                    </EThumbProdBox>
+                    <div class="info-box">
+                      <FlexGroup>
+                        <div class="flex-left">
+                          <ETit type="prod">
+                            7월 도시락 구독
+                          </ETit>
+                          <div class="stext">
+                            (30일간, 일 1회/총 30회)
+                          </div>
+                        </div>
+                        <div class="flex-right">
+                          <div class="goods-group">
+                            <span class="label">월</span>
+                            <EGoods size="md" val="2,700" unit="원" />
+                          </div>
+                        </div>
+                      </FlexGroup>
+                    </div>
+                    <ColorBox color="light-gray" size="sm" class="ta-center">
+                      <TableWrap type="info" gap="sm" size="md" table-name="픽업정보">
+                        <colgroup>
+                          <col style="width: 55px;" />
+                          <col style="width: auto;" />
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <th scope="row">
+                              픽업일시
+                            </th>
+                            <td>2024.06.29(수) 15:00 ~ 18:00</td>
+                          </tr>
+                        </tbody>
+                      </TableWrap>
+                    </ColorBox>
+                  </div>
+                  <!-- // thumb-prod-flex -->
+                </li>
+              </RowListWrap>
+            </ColorBox>
+          </template>
+        </FoldToggleBox>
+      </li>
       <li class="item">
         <FoldToggleBox open>
           <template #header>
@@ -10,7 +179,7 @@
                   <ETit text="할인수단" type="fold" />
                 </div>
                 <div class="flex-right">
-                  <EGoods size="md" val="-0" unit="원" class="fw-md fc-red" />
+                  <EGoods size="md" val="-6,500" unit="원" class="fw-md fc-red" />
                 </div>
               </FlexGroup>
             </div>
@@ -18,19 +187,21 @@
           <template #content>
             <ColorBox color="white" size="lg">
               <RowListWrap gap="line">
-                <li class="item-pay-discount">
+                <li class="item-sm">
                   <FlexGroup>
                     <div class="flex-left">
-                      <ETit text="L.POINT" type="goods" />
+                      <ETit text="L.POINT" type="form" />
                     </div>
                     <div class="flex-right">
-                      <span class="stext">사용가능 <EGoods val="10,000" unit="P" /></span>
-                      <EBtn color="line-light-gray" size="xs">
-                        <span class="text">사용</span>
-                      </EBtn>
+                      <div class="align-group">
+                        <span class="stext">사용가능 <EGoods val="10,000" unit="P" /></span>
+                        <EBtn color="line-light-gray" size="xs" @click="openPayLPoint">
+                          <span class="text">사용</span>
+                        </EBtn>
+                      </div>
                     </div>
                   </FlexGroup>
-                  <div class="pay-discount-box">
+                  <ColorBox color="light-gray" size="sm" class="cont-discount-info">
                     <FlexGroup align="center">
                       <div class="flex-left">
                         <EGoods size="sm" val="1,000" unit="원" />
@@ -43,7 +214,7 @@
                         </button>
                       </div>
                     </FlexGroup>
-                  </div>
+                  </ColorBox>
                 </li>
               </RowListWrap>
             </ColorBox>
@@ -60,12 +231,12 @@
           <template #content>
             <ColorBox color="white" size="lg">
               <RowListWrap gap="line">
-                <li class="item-order-pay">
+                <li class="item-md">
                   <span class="ui-rdo">
                     <input id="orderPayRdo01" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payCard" />
                     <label for="orderPayRdo01"><span class="text-lg">신용(체크)카드</span></label>
                   </span>
-                  <div v-show="orderPayRadio === 'payCard'" class="order-pay-cont">
+                  <div v-show="orderPayRadio === 'payCard'" class="cont-pay-info">
                     <div class="ui-select">
                       <select title="신용(체크)카드 선택">
                         <option>롯데카드</option>
@@ -75,42 +246,42 @@
                     </div>
                   </div>
                 </li>
-                <li class="item-order-pay">
+                <li class="item-md">
                   <span class="ui-rdo">
                     <input id="orderPayRdo02" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payLpay" />
                     <label for="orderPayRdo02"><span class="text-lg">L.PAY</span></label>
                   </span>
                 </li>
-                <li class="item-order-pay">
+                <li class="item-md">
                   <span class="ui-rdo">
                     <input id="orderPayRdo03" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payNaver" />
                     <label for="orderPayRdo03"><span class="text-lg">네이버 간편결제</span></label>
                   </span>
-                  <div v-show="orderPayRadio === 'payNaver'" class="order-pay-cont">
+                  <div v-show="orderPayRadio === 'payNaver'" class="cont-pay-info">
                     <BtnWrap>
                       <EBtn color="line-light-gray" size="md">
-                        <span class="text">네이버페이 카드 결제</span>
+                        <span class="text">네이버 카드 결제</span>
                       </EBtn>
                       <EBtn color="line-light-gray" size="md">
-                        <span class="text">네이버페이 포인트 결제</span>
+                        <span class="text">네이버 포인트 결제</span>
                       </EBtn>
                     </BtnWrap>
                   </div>
                 </li>
-                <li class="item-order-pay">
+                <li class="item-md">
                   <span class="ui-rdo">
-                    <input id="orderPayRdo04" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payKakao" />
+                    <input id="orderPayRdo04" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payKakao" disabled />
                     <label for="orderPayRdo04"><span class="text-lg">카카오페이</span></label>
                   </span>
                 </li>
-                <li class="item-order-pay">
+                <li class="item-md">
                   <span class="ui-chk">
                     <input id="orderPayChk01" type="checkbox" />
                     <label for="orderPayChk01"><span class="text-sm fc-gray70">선택한 결제수단 다음에도 사용</span></label>
                   </span>
                 </li>
               </RowListWrap>
-              <div class="pay-info-wrap">
+              <div class="pay-benefit-info-wrap">
                 <ColorBox color="light-green" size="sm" class="ta-center">
                   <p class="stext fw-md fc-spot">
                     삼성카드 결제 시 1,000원 캐시백
@@ -130,7 +301,7 @@
                   <ETit text="결제금액" type="fold" />
                 </div>
                 <div class="flex-right">
-                  <EGoods val="6,400" unit="원" class="fw-md fc-spot" />
+                  <EGoods size="xl" val="6,400" unit="원" class="fw-md fc-spot" />
                 </div>
               </FlexGroup>
             </div>
@@ -154,20 +325,6 @@
                   <FlexGroup align="center">
                     <div class="flex-left">
                       <div class="flex-left">
-                        <ETit text="포장봉투" type="goods" />
-                      </div>
-                    </div>
-                    <div class="flex-right">
-                      <ETit type="goods">
-                        <EGoods val="200" unit="원" />
-                      </ETit>
-                    </div>
-                  </FlexGroup>
-                </li>
-                <li class="item-order-info">
-                  <FlexGroup align="center">
-                    <div class="flex-left">
-                      <div class="flex-left">
                         <ETit text="할인금액" type="goods" />
                       </div>
                     </div>
@@ -177,19 +334,6 @@
                       </ETit>
                     </div>
                   </FlexGroup>
-                  <RowListWrap gap="sm" size="2xs">
-                    <li class="item-sub-order-info">
-                      <FlexGroup align="center">
-                        <div class="flex-left">
-                          <EIco name="bullet-order-list" />
-                          <ETit text="상품할인" type="sGoods" />
-                        </div>
-                        <div class="flex-right">
-                          <EGoods val="1,000" unit="원" />
-                        </div>
-                      </FlexGroup>
-                    </li>
-                  </RowListWrap>
                 </li>
               </RowListWrap>
             </ColorBox>
@@ -197,14 +341,42 @@
         </FoldToggleBox>
       </li>
     </RowListWrap>
+    <ContBox size="lg">
+      <FlexGroup>
+        <div class="flex-left">
+          <span class="ui-chk">
+            <input id="agreeChk01" type="checkbox" />
+            <label for="agreeChk01"><span class="text-lg">개인정보 수집 및 이용동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
+          </span>
+        </div>
+        <div class="flex-right">
+          <ETBtn size="xs">
+            <span class="text">상세보기</span>
+            <EIco name="arw-right" color="gray" size="xs" />
+          </ETBtn>
+        </div>
+      </FlexGroup>
+      <RowListWrap size="xs">
+        <li class="dot-text-sm">
+          구매조건을 확인했으며 결제 진행에 동의합니다.
+        </li>
+      </RowListWrap>
+    </ContBox>
   </ContWrap>
   <ContDocker>
-    <BtnWrap type="full">
+    <BtnWrap type="auto">
+      <EBtn color="line-light-gray" size="lg">
+        <span class="text">취소</span>
+      </EBtn>
       <EBtn color="green" size="lg">
         <span class="text"><EGoods val="6,400" unit="원" /> 결제하기</span>
       </EBtn>
     </BtnWrap>
   </ContDocker>
+
+  <!-- pop : L.POINT -->
+  <popOrderPayLPoint v-model:sta="popPayLPoint" />
+  <!-- // pop : L.POINT -->
 </template>
 
 <script setup lang="ts">
@@ -213,8 +385,15 @@ definePageMeta({
 });
 
 const orderPayRadio = ref();
-const cashReceiptRadio = ref();
+
+const isNormal = ref(true);
+const isPresent = ref(true);
+
+// L.POINT 팝업
+const popPayLPoint = ref({ open: false });
+const openPayLPoint = () => popPayLPoint.value.open = true;
 </script>
 
 <style lang="scss" scoped>
+@import url("assets/css/pages/order.scss");
 </style>

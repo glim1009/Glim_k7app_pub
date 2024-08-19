@@ -131,6 +131,11 @@
     @include mixins.font_size_md('md');
     margin-bottom: 4px;
 
+    &-md {
+      @include mixins.font_size_lg('md');
+      margin-bottom: 4px;
+    }
+
     &-gray {
       @include mixins.font_size_md('md');
       margin-bottom: 4px;

@@ -86,35 +86,33 @@
                             물품금액을 입력해주세요.
                           </div>
                         </div>
-                        <div class="prod-price-list-wrap">
-                          <SwiperAutoWrap gap="6">
-                            <swiper-slide>
-                              <EBtn color="light-gray" size="xs">
-                                <span class="text">1만원</span>
-                              </EBtn>
-                            </swiper-slide>
-                            <swiper-slide>
-                              <EBtn color="light-gray" size="xs">
-                                <span class="text">3만원</span>
-                              </EBtn>
-                            </swiper-slide>
-                            <swiper-slide>
-                              <EBtn color="light-gray" size="xs">
-                                <span class="text">5만원</span>
-                              </EBtn>
-                            </swiper-slide>
-                            <swiper-slide>
-                              <EBtn color="light-gray" size="xs">
-                                <span class="text">10만원</span>
-                              </EBtn>
-                            </swiper-slide>
-                            <swiper-slide>
-                              <EBtn color="light-gray" size="xs">
-                                <span class="text">50만원</span>
-                              </EBtn>
-                            </swiper-slide>
-                          </SwiperAutoWrap>
-                        </div>
+                        <SwiperAutoWrap class="side-zero">
+                          <swiper-slide>
+                            <EBtn color="light-gray" size="xs">
+                              <span class="text">1만원</span>
+                            </EBtn>
+                          </swiper-slide>
+                          <swiper-slide>
+                            <EBtn color="light-gray" size="xs">
+                              <span class="text">3만원</span>
+                            </EBtn>
+                          </swiper-slide>
+                          <swiper-slide>
+                            <EBtn color="light-gray" size="xs">
+                              <span class="text">5만원</span>
+                            </EBtn>
+                          </swiper-slide>
+                          <swiper-slide>
+                            <EBtn color="light-gray" size="xs">
+                              <span class="text">10만원</span>
+                            </EBtn>
+                          </swiper-slide>
+                          <swiper-slide>
+                            <EBtn color="light-gray" size="xs">
+                              <span class="text">50만원</span>
+                            </EBtn>
+                          </swiper-slide>
+                        </SwiperAutoWrap>
                         <RowListWrap gap="sm">
                           <li class="dot-text">
                             50만원 초과할 경우 소정의 할증운임을 받습니다.
@@ -763,7 +761,7 @@
               </RowListWrap>
               <BtnWrap size="md">
                 <EBtn color="line-light-gray" size="md">
-                  <EIco name="plus" size="sm" />
+                  <EIco name="plus" color="gray" size="sm" />
                   <span class="text">받는분 추가</span>
                 </EBtn>
               </BtnWrap>
@@ -925,70 +923,70 @@
               </div>
             </template>
             <template #content>
-              <ColorBox color="white">
+              <ColorBox color="white" size="lg">
                 <RowListWrap gap="line">
                   <li class="item-sm">
                     <FlexGroup>
                       <div class="flex-left">
-                        <ETit text="구독할인" type="goods" />
+                        <ETit text="구독할인" type="form" />
                       </div>
                       <div class="flex-right">
                         <div class="align-group">
-                          <span class="stext"><span class="fc-black">가능 1개</span> / 전체 2개</span>
+                          <span class="stext">가능 1개 / <span class="fc-gray60">전체 2개</span></span>
                           <EBtn color="line-light-gray" size="xs">
                             <span class="text">사용</span>
                           </EBtn>
                         </div>
                       </div>
                     </FlexGroup>
-                    <div class="cont-discount-info">
-                    <FlexGroup align="center">
-                      <div class="flex-left">
-                        <EGoods size="sm" val="1,000" unit="원" />
-                      </div>
-                      <div class="flex-right">
-                        <button type="button" class="btn-delete">
-                          <EIco name="close" color="gray" size="xs">
-                            <span class="offscreen">할인 취소</span>
-                          </EIco>
-                        </button>
-                      </div>
-                    </FlexGroup>
-                  </div>
+                    <ColorBox color="light-gray" size="sm" class="cont-discount-info">
+                      <FlexGroup align="center">
+                        <div class="flex-left">
+                          <EGoods size="sm" val="1,000" unit="원" />
+                        </div>
+                        <div class="flex-right">
+                          <button type="button" class="btn-delete">
+                            <EIco name="close" color="gray" size="xs">
+                              <span class="offscreen">할인 취소</span>
+                            </EIco>
+                          </button>
+                        </div>
+                      </FlexGroup>
+                    </ColorBox>
                   </li>
                   <li class="item-sm">
                     <FlexGroup>
                       <div class="flex-left">
-                        <ETit text="쿠폰" type="goods" />
+                        <ETit text="쿠폰" type="form" />
                       </div>
                       <div class="flex-right">
                         <div class="align-group">
-                          <span class="stext"><span class="fc-black">가능 1개</span> / 전체 7개</span>
+                          <span class="stext">가능 1개 / <span class="fc-gray60">전체 7개</span></span>
                           <EBtn color="line-light-gray" size="xs">
                             <span class="text">사용</span>
                           </EBtn>
                         </div>
                       </div>
                     </FlexGroup>
-                    <div class="cont-discount-info">
-                    <FlexGroup align="center">
-                      <div class="flex-left">
-                        <EGoods size="sm" val="1,000" unit="원" />
-                      </div>
-                      <div class="flex-right">
-                        <button type="button" class="btn-delete">
-                          <EIco name="close" color="gray" size="xs">
-                            <span class="offscreen">할인 취소</span>
-                          </EIco>
-                        </button>
-                      </div>
-                    </FlexGroup>
-                  </div>
+                    <ColorBox color="light-gray" size="sm" class="cont-discount-info">
+                      <FlexGroup align="center">
+                        <div class="flex-left">
+                          <EGoods size="sm" val="1,000" unit="원" />
+                        </div>
+                        <div class="flex-right">
+                          <button type="button" class="btn-delete">
+                            <EIco name="close" color="gray" size="xs">
+                              <span class="offscreen">할인 취소</span>
+                            </EIco>
+                          </button>
+                        </div>
+                      </FlexGroup>
+                    </ColorBox>
                   </li>
                   <li class="item-sm">
                     <FlexGroup>
                       <div class="flex-left">
-                        <ETit text="L.POINT" type="goods" />
+                        <ETit text="L.POINT" type="form" />
                       </div>
                       <div class="flex-right">
                         <div class="align-group">
@@ -999,7 +997,7 @@
                         </div>
                       </div>
                     </FlexGroup>
-                    <div class="cont-discount-info">
+                    <ColorBox color="light-gray" size="sm" class="cont-discount-info">
                       <FlexGroup align="center">
                         <div class="flex-left">
                           <EGoods size="sm" val="1,000" unit="원" />
@@ -1012,12 +1010,12 @@
                           </button>
                         </div>
                       </FlexGroup>
-                    </div>
+                    </ColorBox>
                   </li>
                   <li class="item-sm">
                     <FlexGroup>
                       <div class="flex-left">
-                        <ETit text="금액권" type="goods" />
+                        <ETit text="금액권" type="form" />
                       </div>
                       <div class="flex-right">
                         <div class="align-group">
@@ -1028,7 +1026,7 @@
                         </div>
                       </div>
                     </FlexGroup>
-                    <div class="cont-discount-info">
+                    <ColorBox color="light-gray" size="sm" class="cont-discount-info">
                       <FlexGroup align="center">
                         <div class="flex-left">
                           <EGoods size="sm" val="1,000" unit="원" />
@@ -1041,35 +1039,31 @@
                           </button>
                         </div>
                       </FlexGroup>
-                    </div>
+                    </ColorBox>
                   </li>
                 </RowListWrap>
               </ColorBox>
               <div class="cash-receipt-info-wrap">
                 <CtitleWrap>
-                  <ETit text="현금영수증" type="fold" />
+                  <ETit text="현금영수증" type="xlCont" />
                 </CtitleWrap>
-                <ColorBox color="white">
+                <ColorBox color="white" size="lg">
                   <CtitleWrap size="zero">
                     <FlexGroup>
                       <div class="flex-left">
                         <ETit text="현금영수증" type="form" />
                       </div>
                       <div class="flex-right">
-                        <GridListWrap col="2">
-                          <li class="item-grid">
-                            <span class="ui-rdo">
-                              <input id="cashReceiptRdo01" v-model="cashReceiptRadio" type="radio" name="cashReceiptRdo01" value="receiptApply" />
-                              <label for="cashReceiptRdo01"><span class="text-md">신청</span></label>
-                            </span>
-                          </li>
-                          <li class="item-grid">
-                            <span class="ui-rdo">
-                              <input id="cashReceiptRdo02" v-model="cashReceiptRadio" type="radio" name="cashReceiptRdo01" value="receiptNotApply" />
-                              <label for="cashReceiptRdo02"><span class="text-md">미신청</span></label>
-                            </span>
-                          </li>
-                        </GridListWrap>
+                        <UiColGroup gap="lg">
+                          <span class="ui-rdo">
+                            <input id="cashReceiptRdo01" v-model="cashReceiptRadio" type="radio" name="cashReceiptRdo01" value="receiptApply" />
+                            <label for="cashReceiptRdo01"><span class="text-md">신청</span></label>
+                          </span>
+                          <span class="ui-rdo">
+                            <input id="cashReceiptRdo02" v-model="cashReceiptRadio" type="radio" name="cashReceiptRdo01" value="receiptNotApply" />
+                            <label for="cashReceiptRdo02"><span class="text-md">미신청</span></label>
+                          </span>
+                        </UiColGroup>
                       </div>
                     </FlexGroup>
                   </CtitleWrap>
@@ -1077,12 +1071,12 @@
                     <ColorBox color="light-gray" size="sm">
                       <FlexGroup>
                         <div class="flex-left">
-                          <div class="stext fw-sb">
+                          <div class="stext fw-sb fc-gray90">
                             개인 소득공제
                           </div>
                         </div>
                         <div class="flex-right">
-                          <div class="text-align-box">
+                          <div class="align-group">
                             <div class="stext">
                               313-31-12345
                             </div>
@@ -1096,12 +1090,12 @@
                     <ColorBox color="light-gray" size="sm">
                       <FlexGroup>
                         <div class="flex-left">
-                          <div class="stext fw-sb">
+                          <div class="stext fw-sb fc-gray90">
                             사업자 소득공제
                           </div>
                         </div>
                         <div class="flex-right">
-                          <div class="text-align-box">
+                          <div class="align-group">
                             <div class="stext">
                               313-31-12345
                             </div>
@@ -1112,19 +1106,17 @@
                         </div>
                       </FlexGroup>
                     </ColorBox>
-                    <ColorBox color="light-gray" size="sm">
-                      <BtnWrap type="full">
-                        <EBtn color="line-light-gray" size="xs">
-                          <span class="text">현금영수증 발급정보 등록</span>
-                        </EBtn>
-                      </BtnWrap>
-                    </ColorBox>
+                    <BtnWrap type="full" size="md">
+                      <EBtn color="line-light-gray" size="sm">
+                        <span class="text">현금영수증 발급정보 등록</span>
+                      </EBtn>
+                    </BtnWrap>
                   </div>
                   <div v-show="cashReceiptRadio === 'receiptNotApply'">
                     <ColorBox color="light-gray" size="sm">
                       <FlexGroup>
                         <div class="flex-left">
-                          <div class="stext fw-sb">
+                          <div class="stext fw-sb fc-gray90">
                             현금영수증 신청 안함
                           </div>
                         </div>
@@ -1157,14 +1149,14 @@
                       <label for="orderPayRdo01"><span class="text-lg">신용(체크)카드</span></label>
                     </span>
                     <div v-show="orderPayRadio === 'payCard'" class="cont-pay-info">
-                    <div class="ui-select">
-                      <select title="신용(체크)카드 선택">
-                        <option>롯데카드</option>
-                        <option>현대카드</option>
-                        <option>국민카드</option>
-                      </select>
+                      <div class="ui-select">
+                        <select title="신용(체크)카드 선택">
+                          <option>롯데카드</option>
+                          <option>현대카드</option>
+                          <option>국민카드</option>
+                        </select>
+                      </div>
                     </div>
-                  </div>
                   </li>
                   <li class="item-md">
                     <span class="ui-rdo">
@@ -1201,7 +1193,7 @@
                     </span>
                   </li>
                 </RowListWrap>
-                <div class="pay-info-wrap">
+                <div class="pay-benefit-info-wrap">
                   <ColorBox color="light-green" size="sm" class="ta-center">
                     <p class="stext fw-md fc-spot">
                       삼성카드 결제 시 1,000원 캐시백
@@ -1333,7 +1325,7 @@
       </RowListWrap>
     </ContBox>
     <ContBox size="lg">
-      <AllAgreeWrap :index="1" :totalCount="totalCheckBox" v-model:checkCount="checkCheckBox">
+      <AllAgreeWrap v-model:checkCount="checkCheckBox" :index="1" :total-count="totalCheckBox">
         <ColorBox color="white" size="md">
           <div ref="agreeListRef">
             <RowListWrap gap="md">
@@ -1342,7 +1334,7 @@
                   <div class="flex-left">
                     <span class="ui-chk">
                       <input id="agreeChk01" type="checkbox" />
-                      <label for="agreeChk01"><span class="text-lg">택배 이용약관<span class="required"><span class="offscreen">필수체크</span></span></span></label>
+                      <label for="agreeChk01"><span class="text-md">택배 이용약관<span class="required"><span class="offscreen">필수체크</span></span></span></label>
                     </span>
                   </div>
                   <div class="flex-right">
@@ -1358,7 +1350,7 @@
                   <div class="flex-left">
                     <span class="ui-chk">
                       <input id="agreeChk02" type="checkbox" />
-                      <label for="agreeChk02"><span class="text-lg">개인정보 수집 및 이용동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
+                      <label for="agreeChk02"><span class="text-md">개인정보 수집 및 이용동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
                     </span>
                   </div>
                   <div class="flex-right">
@@ -1412,7 +1404,6 @@
 </template>
 
 <script setup lang="ts">
-
 definePageMeta({
   title: '착한 택배예약',
   hideRightHeader: ['home'],
@@ -1453,7 +1444,7 @@ const totalCheckBox = ref<number>(0);
 const checkCheckBox = ref<number>(0);
 let checkboxes: NodeListOf<HTMLInputElement>;
 
-const updateCheckCount = (): void => {
+function updateCheckCount(): void {
   checkCheckBox.value = Array.from(checkboxes).filter(checkbox => checkbox.checked).length;
 }
 
@@ -1471,7 +1462,7 @@ onMounted(() => {
   if (agreeListRef.value instanceof Element) {
     checkboxes = agreeListRef.value.querySelectorAll<HTMLInputElement>('input[type="checkbox"]');
     totalCheckBox.value = checkboxes.length;
-    checkboxes.forEach(checkbox => {
+    checkboxes.forEach((checkbox) => {
       checkbox.addEventListener('change', updateCheckCount);
     });
 
@@ -1481,12 +1472,11 @@ onMounted(() => {
 
 onUnmounted(() => {
   if (agreeListRef.value instanceof Element) {
-    checkboxes.forEach(checkbox => {
+    checkboxes.forEach((checkbox) => {
       checkbox.removeEventListener('change', updateCheckCount);
     });
   }
 });
-
 </script>
 
 <style lang="scss" scoped>

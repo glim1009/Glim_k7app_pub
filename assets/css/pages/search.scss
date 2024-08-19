@@ -1,0 +1,12 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+
+.auto-complete-layer {
+  position: fixed;
+  top: variables.$headerHeight;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

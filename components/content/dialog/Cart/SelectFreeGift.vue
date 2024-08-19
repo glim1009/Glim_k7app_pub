@@ -6,6 +6,216 @@
     <template #body>
       <div class="dialog-inner">
         <ContWrap type="white">
+          <RowListWrap gap="line">
+            <!-- 일반 상품 -->
+            <li class="item-thumb-prod">
+              <!-- thumb-prod-flex -->
+              <div class="thumb-prod-flex">
+                <EThumbProdBox size="md">
+                  <template #thumb>
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지"/>
+                  </template>
+                </EThumbProdBox>
+                <div class="info-box">
+                  <FlexGroup>
+                    <div class="flex-left">
+                      <ETit type="prod">제육&콘 참치마요 덮밥</ETit>
+                      <div class="stock">
+                        <EGoods size="sm" val="5" unit="개" /> 남음
+                      </div>
+                    </div>
+                    <div class="flex-right">
+                      <ESpinner />
+                    </div>
+                  </FlexGroup>
+                </div>
+              </div>
+              <!-- // thumb-prod-flex -->
+            </li>
+            <!-- // 일반 상품 -->
+            <!-- 일반 상품 -->
+            <li class="item-thumb-prod">
+              <!-- thumb-prod-flex -->
+              <div class="thumb-prod-flex">
+                <EThumbProdBox size="md">
+                  <template #thumb>
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지"/>
+                  </template>
+                </EThumbProdBox>
+                <div class="info-box">
+                  <FlexGroup>
+                    <div class="flex-left">
+                      <ETit type="prod">제육&콘 참치마요 덮밥</ETit>
+                      <div class="stock">
+                        <EGoods size="sm" val="5" unit="개" /> 남음
+                      </div>
+                    </div>
+                    <div class="flex-right">
+                      <ESpinner />
+                    </div>
+                  </FlexGroup>
+                </div>
+              </div>
+              <!-- // thumb-prod-flex -->
+            </li>
+            <!-- // 일반 상품 -->
+            <!-- 일반 상품 -->
+            <li class="item-thumb-prod">
+              <!-- thumb-prod-flex -->
+              <div class="thumb-prod-flex">
+                <EThumbProdBox size="md">
+                  <template #thumb>
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지"/>
+                  </template>
+                </EThumbProdBox>
+                <div class="info-box">
+                  <FlexGroup>
+                    <div class="flex-left">
+                      <ETit type="prod">제육&콘 참치마요 덮밥</ETit>
+                      <div class="stock">
+                        <EGoods size="sm" val="5" unit="개" /> 남음
+                      </div>
+                    </div>
+                    <div class="flex-right">
+                      <ESpinner />
+                    </div>
+                  </FlexGroup>
+                </div>
+              </div>
+              <!-- // thumb-prod-flex -->
+            </li>
+            <!-- // 일반 상품 -->
+            <!-- 일반 상품 -->
+            <li class="item-thumb-prod">
+              <!-- thumb-prod-flex -->
+              <div class="thumb-prod-flex">
+                <EThumbProdBox size="md">
+                  <template #thumb>
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지"/>
+                  </template>
+                </EThumbProdBox>
+                <div class="info-box">
+                  <FlexGroup>
+                    <div class="flex-left">
+                      <ETit type="prod">제육&콘 참치마요 덮밥</ETit>
+                      <div class="stock">
+                        <EGoods size="sm" val="5" unit="개" /> 남음
+                      </div>
+                    </div>
+                    <div class="flex-right">
+                      <ESpinner />
+                    </div>
+                  </FlexGroup>
+                </div>
+              </div>
+              <!-- // thumb-prod-flex -->
+            </li>
+            <!-- // 일반 상품 -->
+            <!-- 일반 상품 -->
+            <li class="item-thumb-prod">
+              <!-- thumb-prod-flex -->
+              <div class="thumb-prod-flex">
+                <EThumbProdBox size="md">
+                  <template #thumb>
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지"/>
+                  </template>
+                </EThumbProdBox>
+                <div class="info-box">
+                  <FlexGroup>
+                    <div class="flex-left">
+                      <ETit type="prod">제육&콘 참치마요 덮밥</ETit>
+                      <div class="stock">
+                        <EGoods size="sm" val="5" unit="개" /> 남음
+                      </div>
+                    </div>
+                    <div class="flex-right">
+                      <ESpinner />
+                    </div>
+                  </FlexGroup>
+                </div>
+              </div>
+              <!-- // thumb-prod-flex -->
+            </li>
+            <!-- // 일반 상품 -->
+            <!-- 일반 상품 -->
+            <li class="item-thumb-prod">
+              <!-- thumb-prod-flex -->
+              <div class="thumb-prod-flex">
+                <EThumbProdBox size="md">
+                  <template #thumb>
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지"/>
+                  </template>
+                </EThumbProdBox>
+                <div class="info-box">
+                  <FlexGroup>
+                    <div class="flex-left">
+                      <ETit type="prod">제육&콘 참치마요 덮밥</ETit>
+                      <div class="stock">
+                        <EGoods size="sm" val="5" unit="개" /> 남음
+                      </div>
+                    </div>
+                    <div class="flex-right">
+                      <ESpinner />
+                    </div>
+                  </FlexGroup>
+                </div>
+              </div>
+              <!-- // thumb-prod-flex -->
+            </li>
+            <!-- // 일반 상품 -->
+            <!-- 일반 상품 -->
+            <li class="item-thumb-prod">
+              <!-- thumb-prod-flex -->
+              <div class="thumb-prod-flex">
+                <EThumbProdBox size="md">
+                  <template #thumb>
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지"/>
+                  </template>
+                </EThumbProdBox>
+                <div class="info-box">
+                  <FlexGroup>
+                    <div class="flex-left">
+                      <ETit type="prod">제육&콘 참치마요 덮밥</ETit>
+                      <div class="stock">
+                        <EGoods size="sm" val="5" unit="개" /> 남음
+                      </div>
+                    </div>
+                    <div class="flex-right">
+                      <ESpinner />
+                    </div>
+                  </FlexGroup>
+                </div>
+              </div>
+              <!-- // thumb-prod-flex -->
+            </li>
+            <!-- // 일반 상품 -->
+            <!-- 일반 상품 -->
+            <li class="item-thumb-prod">
+              <!-- thumb-prod-flex -->
+              <div class="thumb-prod-flex">
+                <EThumbProdBox size="md">
+                  <template #thumb>
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지"/>
+                  </template>
+                </EThumbProdBox>
+                <div class="info-box">
+                  <FlexGroup>
+                    <div class="flex-left">
+                      <ETit type="prod">제육&콘 참치마요 덮밥</ETit>
+                      <div class="stock">
+                        <EGoods size="sm" val="5" unit="개" /> 남음
+                      </div>
+                    </div>
+                    <div class="flex-right">
+                      <ESpinner />
+                    </div>
+                  </FlexGroup>
+                </div>
+              </div>
+              <!-- // thumb-prod-flex -->
+            </li>
+            <!-- // 일반 상품 -->
+          </RowListWrap>
         </ContWrap>
       </div>
     </template>

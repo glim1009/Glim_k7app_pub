@@ -1,6 +1,6 @@
 <template>
   <ContWrap v-if="isData">
-    <ContBox>
+    <ContBox size="lg">
       <div class="list-header">
         <FlexGroup>
           <div class="flex-left">
@@ -35,7 +35,7 @@
                 <ETit type="prod">7월 모닝 구독</ETit>
                 <div class="stext">(31일간, 월1회 / 총 20회)</div>
                 <div class="goods-group">
-                  <!-- TODO : 라벨 작업 필요 (월 N,NNN원) -->
+                  <span class="label">월</span>
                   <EGoods size="md" val="2,700" unit="원" />
                 </div>
               </div>
@@ -63,7 +63,7 @@
                 <ETit type="prod">7월 모닝 구독</ETit>
                 <div class="stext">(31일간, 월1회 / 총 20회)</div>
                 <div class="goods-group">
-                  <!-- TODO : 라벨 작업 필요 (월 N,NNN원) -->
+                  <span class="label">월</span>
                   <EGoods size="md" val="2,700" unit="원" />
                 </div>
               </div>
@@ -91,7 +91,7 @@
                 <ETit type="prod">7월 모닝 구독</ETit>
                 <div class="stext">(31일간, 월1회 / 총 20회)</div>
                 <div class="goods-group">
-                  <!-- TODO : 라벨 작업 필요 (월 N,NNN원) -->
+                  <span class="label">월</span>
                   <EGoods size="md" val="2,700" unit="원" />
                 </div>
               </div>
@@ -120,7 +120,7 @@
                 <ETit type="prod">7월 모닝 구독</ETit>
                 <div class="stext">(31일간, 월1회 / 총 20회)</div>
                 <div class="goods-group">
-                  <!-- TODO : 라벨 작업 필요 (월 N,NNN원) -->
+                  <span class="label">월</span>
                   <EGoods size="md" val="2,700" unit="원" />
                 </div>
               </div>
@@ -150,7 +150,7 @@
                 <ETit type="prod">7월 모닝 구독</ETit>
                 <div class="stext">(31일간, 월1회 / 총 20회)</div>
                 <div class="goods-group">
-                  <!-- TODO : 라벨 작업 필요 (월 N,NNN원) -->
+                  <span class="label">월</span>
                   <EGoods size="md" val="2,700" unit="원" />
                 </div>
               </div>
@@ -176,10 +176,10 @@
       <ColorBox color="white" size="lg">
         <FlexGroup>
           <div class="flex-left">
-            <ETit text="결제예정금액" type="fold" />
+            <ETit text="결제예정금액" type="cont" />
           </div>
           <div class="flex-right">
-            <EGoods size="xl" val="39,200" unit="원" class="fw-md fc-spot" />
+            <EGoods size="lg" val="39,200" unit="원" class="fw-md fc-spot" />
           </div>
         </FlexGroup>
       </ColorBox>
@@ -213,7 +213,7 @@
   </ContDocker>
 
   <!-- 데이터가 없는 경우  -->
-  <ContBox v-if="isNoData" size="sm">
+  <ContWrap v-if="isNoData" in-top="zero">
     <InfoGuideWrap
       type="no-data"
       name="cart"
@@ -224,7 +224,7 @@
         <span class="text">구독할인 상품 둘러보기</span>
       </EBtn>
     </BtnWrap>
-  </ContBox>
+  </ContWrap>
   <!-- // 데이터가 없는 경우  -->
 </template>
 

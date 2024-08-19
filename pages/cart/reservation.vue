@@ -1,7 +1,7 @@
 <template>
   <!-- 데이터가 있는 경우 -->
   <ContWrap v-if="isData">
-    <ContBox>
+    <ContBox size="lg" gap="md">
       <div class="list-header">
         <FlexGroup>
           <div class="flex-left">
@@ -55,9 +55,7 @@
               </div>
               <FlexGroup align="end">
                 <div class="flex-left">
-                  <div style="width: 94px; height: 36px; background: rgba(255, 0, 0, .1);">
-                    spinner
-                  </div>
+                  <ESpinner />
                 </div>
                 <div class="flex-right">
                   <div class="goods-group">
@@ -72,7 +70,7 @@
                 <span class="offscreen">상품 삭제</span>
               </EIco>
             </button>
-            <ColorBox color="light-gray" size="sm">
+            <ColorBox color="light-gray" size="md">
               <FlexGroup align="start">
                 <div class="flex-left">
                   <TableWrap type="info" gap="sm" size="md" table-name="픽업정보">
@@ -85,13 +83,17 @@
                         <th scope="row">
                           픽업일시
                         </th>
-                        <td>2024.06.29(수) 15:00 ~ 18:00</td>
+                        <td class="fc-gray70">
+                          2024.06.29(수) 15:00 ~ 18:00
+                        </td>
                       </tr>
                       <tr>
                         <th scope="row">
                           결제기한
                         </th>
-                        <td>2024.06.30(목) 15:00 까지</td>
+                        <td class="fc-gray70">
+                          2024.06.30(목) 15:00 까지
+                        </td>
                       </tr>
                     </tbody>
                   </TableWrap>
@@ -131,9 +133,7 @@
               </div>
               <FlexGroup align="end">
                 <div class="flex-left">
-                  <div style="width: 94px; height: 36px; background: rgba(255, 0, 0, .1);">
-                    spinner
-                  </div>
+                  <ESpinner />
                 </div>
                 <div class="flex-right">
                   <div class="goods-group">
@@ -150,7 +150,7 @@
                 <span class="offscreen">상품 삭제</span>
               </EIco>
             </button>
-            <ColorBox color="light-gray" size="sm">
+            <ColorBox color="light-gray" size="md">
               <FlexGroup align="start">
                 <div class="flex-left">
                   <TableWrap type="info" gap="sm" size="md" table-name="픽업정보">
@@ -163,13 +163,17 @@
                         <th scope="row">
                           픽업일시
                         </th>
-                        <td>2024.06.29(수) 15:00 ~ 18:00</td>
+                        <td class="fc-gray70">
+                          2024.06.29(수) 15:00 ~ 18:00
+                        </td>
                       </tr>
                       <tr>
                         <th scope="row">
                           결제기한
                         </th>
-                        <td>2024.06.30(목) 15:00 까지</td>
+                        <td class="fc-gray70">
+                          2024.06.30(목) 15:00 까지
+                        </td>
                       </tr>
                     </tbody>
                   </TableWrap>
@@ -208,8 +212,8 @@
           <!-- 일반 상품 -->
           <li class="item-thumb-prod">
             <span class="ui-chk">
-              <input id="prodChk01" type="checkbox" />
-              <label for="prodChk01"><span class="offscreen">상품 선택</span></label>
+              <input id="prodChk03" type="checkbox" />
+              <label for="prodChk03"><span class="offscreen">상품 선택</span></label>
             </span>
             <!-- thumb-prod-flex -->
             <div class="thumb-prod-flex">
@@ -220,7 +224,7 @@
               </EThumbProdBox>
               <div class="info-box">
                 <ETit type="prod">
-                  바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
+                  바리스타 로슈거 250ml 바리스타 로슈거 250ml
                 </ETit>
                 <div class="stock">
                   <EGoods size="sm" val="N" unit="개" /> 남음
@@ -228,9 +232,7 @@
               </div>
               <FlexGroup align="end">
                 <div class="flex-left">
-                  <div style="width: 94px; height: 36px; background: rgba(255, 0, 0, .1);">
-                    spinner
-                  </div>
+                  <ESpinner />
                 </div>
                 <div class="flex-right">
                   <div class="goods-group">
@@ -245,7 +247,7 @@
                 <span class="offscreen">상품 삭제</span>
               </EIco>
             </button>
-            <ColorBox color="light-gray" size="sm">
+            <ColorBox color="light-gray" size="md">
               <FlexGroup align="start">
                 <div class="flex-left">
                   <TableWrap type="info" gap="sm" size="md" table-name="픽업정보">
@@ -258,13 +260,17 @@
                         <th scope="row">
                           픽업일시
                         </th>
-                        <td>2024.06.29(수) 15:00 ~ 18:00</td>
+                        <td class="fc-gray70">
+                          2024.06.29(수) 15:00 ~ 18:00
+                        </td>
                       </tr>
                       <tr>
                         <th scope="row">
                           결제기한
                         </th>
-                        <td>2024.06.30(목) 15:00 까지</td>
+                        <td class="fc-gray70">
+                          2024.06.30(목) 15:00 까지
+                        </td>
                       </tr>
                     </tbody>
                   </TableWrap>
@@ -281,8 +287,8 @@
           <!-- 할인 상품 -->
           <li class="item-thumb-prod">
             <span class="ui-chk">
-              <input id="prodChk02" type="checkbox" />
-              <label for="prodChk02"><span class="offscreen">상품 선택</span></label>
+              <input id="prodChk04" type="checkbox" />
+              <label for="prodChk04"><span class="offscreen">상품 선택</span></label>
             </span>
             <!-- thumb-prod-flex -->
             <div class="thumb-prod-flex">
@@ -296,7 +302,7 @@
                   <EBadge color="gray" size="sm" badge-text="할인" />
                 </BadgeGroup>
                 <ETit type="prod">
-                  바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
+                  바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
                 </ETit>
                 <div class="stock">
                   <EGoods size="sm" val="N" unit="개" /> 남음
@@ -304,9 +310,7 @@
               </div>
               <FlexGroup align="end">
                 <div class="flex-left">
-                  <div style="width: 94px; height: 36px; background: rgba(255, 0, 0, .1);">
-                    spinner
-                  </div>
+                  <ESpinner />
                 </div>
                 <div class="flex-right">
                   <div class="goods-group">
@@ -323,7 +327,7 @@
                 <span class="offscreen">상품 삭제</span>
               </EIco>
             </button>
-            <ColorBox color="light-gray" size="sm">
+            <ColorBox color="light-gray" size="md">
               <FlexGroup align="start">
                 <div class="flex-left">
                   <TableWrap type="info" gap="sm" size="md" table-name="픽업정보">
@@ -336,13 +340,17 @@
                         <th scope="row">
                           픽업일시
                         </th>
-                        <td>2024.06.29(수) 15:00 ~ 18:00</td>
+                        <td class="fc-gray70">
+                          2024.06.29(수) 15:00 ~ 18:00
+                        </td>
                       </tr>
                       <tr>
                         <th scope="row">
                           결제기한
                         </th>
-                        <td>2024.06.30(목) 15:00 까지</td>
+                        <td class="fc-gray70">
+                          2024.06.30(목) 15:00 까지
+                        </td>
                       </tr>
                     </tbody>
                   </TableWrap>
@@ -375,8 +383,8 @@
           <!-- 주류/와인 상품 -->
           <li class="item-thumb-prod">
             <span class="ui-chk">
-              <input id="prodChk02" type="checkbox" />
-              <label for="prodChk02"><span class="offscreen">상품 선택</span></label>
+              <input id="prodChk05" type="checkbox" />
+              <label for="prodChk05"><span class="offscreen">상품 선택</span></label>
             </span>
             <!-- thumb-prod-flex -->
             <div class="thumb-prod-flex">
@@ -392,15 +400,22 @@
                 <ETit type="prod">
                   드보밀레짐빈티지14
                 </ETit>
-                <div class="goods-group">
-                  <EGoods type="origin" size="sm" val="3,000" unit="원" />
-                  <EGoods type="percent" size="md" val="10" unit="%" />
-                  <EGoods size="md" val="2,700" unit="원" />
-                </div>
                 <div class="stock">
                   <EGoods size="sm" val="N" unit="개" /> 남음
                 </div>
               </div>
+              <FlexGroup align="end">
+                <div class="flex-left">
+                  <ESpinner />
+                </div>
+                <div class="flex-right">
+                  <div class="goods-group">
+                    <EGoods type="origin" size="sm" val="3,000" unit="원" />
+                    <EGoods type="percent" size="md" val="10" unit="%" />
+                    <EGoods size="md" val="2,700" unit="원" />
+                  </div>
+                </div>
+              </FlexGroup>
             </div>
             <!-- // thumb-prod-flex -->
             <button type="button" class="btn-delete">
@@ -408,7 +423,7 @@
                 <span class="offscreen">상품 삭제</span>
               </EIco>
             </button>
-            <ColorBox color="light-gray" size="sm">
+            <ColorBox color="light-gray" size="md">
               <FlexGroup align="start">
                 <div class="flex-left">
                   <TableWrap type="info" gap="sm" size="md" table-name="픽업정보">
@@ -421,13 +436,17 @@
                         <th scope="row">
                           픽업일시
                         </th>
-                        <td>2024.06.29(수) 15:00 ~ 18:00</td>
+                        <td class="fc-gray70">
+                          2024.06.29(수) 15:00 ~ 18:00
+                        </td>
                       </tr>
                       <tr>
                         <th scope="row">
                           결제기한
                         </th>
-                        <td>2024.06.30(목) 15:00 까지</td>
+                        <td class="fc-gray70">
+                          2024.06.30(목) 15:00 까지
+                        </td>
                       </tr>
                     </tbody>
                   </TableWrap>
@@ -470,11 +489,11 @@
               <li class="item-order-info">
                 <FlexGroup align="center">
                   <div class="flex-left">
-                    <span class="stext-lg fw-sb">주문금액</span>
+                    <ETit text="주문금액" type="goods" />
                   </div>
                   <div class="flex-right">
                     <ETit type="goods">
-                      <EGoods val="40,000" unit="원" />
+                      <EGoods val="133,300" unit="원" />
                     </ETit>
                   </div>
                 </FlexGroup>
@@ -482,11 +501,11 @@
               <li class="item-order-info">
                 <FlexGroup align="center">
                   <div class="flex-left">
-                    <span class="stext-lg fw-sb">할인금액</span>
+                    <ETit text="할인금액" type="goods" />
                   </div>
                   <div class="flex-right">
                     <ETit type="goods">
-                      <EGoods val="6,500" unit="원" class="fc-red" />
+                      <EGoods val="3,000" unit="원" class="fc-red" />
                     </ETit>
                   </div>
                 </FlexGroup>
@@ -534,9 +553,9 @@
   </ContWrap>
   <!-- // 데이터가 없는 경우  -->
 
-  <!-- pop : 주소검색 -->
+  <!-- pop : 픽업정보변경 -->
   <popCartChangePickupInfo v-model:sta="popChangePickupInfo" />
-  <!-- // pop : 주소검색 -->
+  <!-- // pop : 픽업정보변경 -->
 </template>
 
 <script setup lang="ts">

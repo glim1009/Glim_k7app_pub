@@ -320,14 +320,27 @@
 /* s : info-guide-wrap */
 
 // type) info-guide
+.ico-info-guide-order { // 주문 완료 아이콘
+  @extend %icon;
+  width: 100px;
+  height: 100px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_info_guide_order_complete');
+}
+
+.ico-info-guide-delivery { // 배송 완료 아이콘
+  @extend %icon;
+  width: 100px;
+  height: 100px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_info_guide_delivery_complete');
+}
 
 // type) no-data
-/*.ico-no-data-store { // 매장없음 아이콘
+.ico-no-data-store { // 매장없음 아이콘
   @extend %icon;
   width: 80px;
   height: 80px;
   @include mixins.ratio_images('~/assets/images/common/comm_ico_no_data_store');
-}*/
+}
 
 .ico-no-data-history { // 내역없음 아이콘
   @extend %icon;
@@ -343,12 +356,12 @@
   @include mixins.ratio_images('~/assets/images/common/comm_ico_no_data_history');
 }
 
-/*.ico-no-data-filter-result { // 필터결과 없음 아이콘
+.ico-no-data-filter-result { // 필터결과 없음 아이콘
   @extend %icon;
   width: 80px;
   height: 80px;
   @include mixins.ratio_images('~/assets/images/common/comm_ico_no_data_filter_result');
-}*/
+}
 
 .ico-no-data-cart { // 장바구니 없음 아이콘
   @extend %icon;
@@ -364,19 +377,26 @@
   @include mixins.ratio_images('~/assets/images/common/comm_ico_no_data_address');
 }
 
-/*.ico-no-data-coupon { // 쿠폰없음 아이콘
+.ico-no-data-coupon { // 쿠폰없음 아이콘
   @extend %icon;
   width: 80px;
   height: 80px;
   @include mixins.ratio_images('~/assets/images/common/comm_ico_no_data_coupon');
-}*/
+}
 
-/*.ico-no-data-review { // 리뷰없음 아이콘
+.ico-no-data-review { // 리뷰없음 아이콘
   @extend %icon;
   width: 80px;
   height: 80px;
   @include mixins.ratio_images('~/assets/images/common/comm_ico_no_data_review');
-}*/
+}
+
+.ico-no-data-alert { // 리뷰없음 아이콘
+  @extend %icon;
+  width: 80px;
+  height: 80px;
+  @include mixins.ratio_images('~/assets/images/common/comm_ico_no_data_alert');
+}
 
 /* e : info-guide-wrap */
 

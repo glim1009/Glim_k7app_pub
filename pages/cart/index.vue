@@ -1,76 +1,76 @@
 <template>
   <!-- 데이터가 있는 경우 -->
   <ContWrap v-if="isData" type="white">
-    <div class="pickup-info-wrap">
+    <ContBox>
       <button type="button" class="btn-store">
         <EBadge color="green" size="md" badge-text="픽업매장" />
         <span class="store">세븐일레븐 강남점</span>
         <EIco name="arw-right" color="gray" size="sm" />
       </button>
-      <RowListWrap gap="line">
-        <li class="item-md">
-          <FlexGroup align="start">
-            <div class="flex-left">
-              <CtitleWrap size="zero">
-                <ETit text="추천매장 스마트 매칭" type="form" />
-                <div class="stext">
-                  재고가 있는 가까운 매장을 추천해드릴까요?
+    </ContBox>
+    <ContBox>
+      <SContLineBox>
+        <FlexGroup align="start">
+          <div class="flex-left">
+            <CtitleWrap size="zero">
+              <ETit text="추천매장 스마트 매칭" type="form" />
+              <div class="stext">
+                재고가 있는 가까운 매장을 추천해드릴까요?
+              </div>
+            </CtitleWrap>
+          </div>
+          <div class="flex-right">
+            <span class="ui-toggle">
+              <input id="recommendToggle01" type="checkbox" />
+              <label for="recommendToggle01"></label>
+            </span>
+          </div>
+        </FlexGroup>
+      </SContLineBox>
+      <SContLineBox>
+        <div class="form-field">
+          <div class="form-title">
+            <FlexGroup align="center">
+              <div class="flex-left">
+                <ETit text="픽업시간선택" type="form" />
+              </div>
+              <div class="flex-right">
+                <div class="pickup-today">
+                  오늘 2024년 7월 20일
                 </div>
-              </CtitleWrap>
-            </div>
-            <div class="flex-right">
-              <span class="ui-toggle">
-                <input id="recommendToggle01" type="checkbox" checked />
-                <label for="recommendToggle01"></label>
-              </span>
-            </div>
-          </FlexGroup>
-        </li>
-        <li class="item-md">
-          <div class="form-field">
-            <div class="form-title">
-              <FlexGroup align="center">
+              </div>
+            </FlexGroup>
+          </div>
+          <div class="form-cont">
+            <div class="form-input-group">
+              <FlexGroup>
                 <div class="flex-left">
-                  <ETit text="픽업시간선택" type="form" />
+                  <div class="ui-select">
+                    <select title="픽업시간선택">
+                      <option>10시</option>
+                      <option>11시</option>
+                      <option>12시</option>
+                    </select>
+                  </div>
                 </div>
                 <div class="flex-right">
-                  <div class="today">
-                    오늘 2024년 7월 20일
+                  <div class="ui-select">
+                    <select title="픽업시간선택">
+                      <option>20분</option>
+                      <option>30분</option>
+                      <option>40분</option>
+                    </select>
                   </div>
                 </div>
               </FlexGroup>
             </div>
-            <div class="form-cont">
-              <div class="form-input-group">
-                <FlexGroup>
-                  <div class="flex-left">
-                    <div class="ui-select">
-                      <select title="픽업시간선택">
-                        <option>10시</option>
-                        <option>11시</option>
-                        <option>12시</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="flex-right">
-                    <div class="ui-select">
-                      <select title="픽업시간선택">
-                        <option>20분</option>
-                        <option>30분</option>
-                        <option>40분</option>
-                      </select>
-                    </div>
-                  </div>
-                </FlexGroup>
-              </div>
-              <p class="dot-text-sm">
-                결제 후에는 픽업시간을 변경할 수 없습니다.
-              </p>
-            </div>
+            <p class="dot-text-sm">
+              결제 후에는 픽업시간을 변경할 수 없습니다.
+            </p>
           </div>
-        </li>
-      </RowListWrap>
-    </div>
+        </div>
+      </SContLineBox>
+    </ContBox>
   </ContWrap>
   <ContWrap v-if="isData">
     <ContBox>
@@ -90,14 +90,13 @@
           </div>
         </FlexGroup>
       </div>
-      <GridListWrap col="1" /><!-- TODO : 확인필요 (일단 삭제 안했어욥) -->
       <ColorBox color="white" size="lg">
         <RowListWrap gap="line">
           <!-- 일반 상품 -->
           <li class="item-thumb-prod">
             <span class="ui-chk">
               <input id="prodChk01" type="checkbox" />
-              <label for="prodChk01"><span class="offscreen">상품 선택</span></label>
+              <label for="prodChk01"><span class="offscreen">상품 전체선택</span></label>
             </span>
             <!-- thumb-prod-flex -->
             <div class="thumb-prod-flex">
@@ -108,7 +107,7 @@
               </EThumbProdBox>
               <div class="info-box">
                 <ETit type="prod">
-                  바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
+                  바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
                 </ETit>
                 <div class="stock">
                   <EGoods size="sm" val="N" unit="개" /> 남음
@@ -193,7 +192,7 @@
               </EThumbProdBox>
               <div class="info-box">
                 <BadgeGroup gap="md">
-                  <EBadge color="gray" size="sm" badge-text="1+1" />
+                  <EBadge color="gray" size="sm" badge-text="2+1" />
                 </BadgeGroup>
                 <ETit type="prod">
                   바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
@@ -204,7 +203,7 @@
               </div>
               <FlexGroup align="end">
                 <div class="flex-left">
-                  <ESpinner />
+                  <ESpinner default-value="2" />
                 </div>
                 <div class="flex-right">
                   <div class="goods-group">
@@ -220,11 +219,11 @@
               </EIco>
             </button>
             <ColorBox color="light-gray" size="sm" class="ta-center">
-              <p class="stext">
+              <p class="stext fw-md">
                 증정품을 선택해 주세요.
               </p>
               <BtnWrap size="sm">
-                <EBtn color="line-light-gray" size="sm">
+                <EBtn color="line-light-gray" size="sm" @click="openSelectFreeGift">
                   <span class="text">증정품 선택</span>
                 </EBtn>
               </BtnWrap>
@@ -281,7 +280,7 @@
               </div>
               <!-- // thumb-prod-flex -->
               <BtnWrap size="sm">
-                <EBtn color="line-light-gray" size="sm">
+                <EBtn color="line-light-gray" size="sm" @click="openSelectFreeGift">
                   <span class="text">증정품 변경</span>
                 </EBtn>
               </BtnWrap>
@@ -303,7 +302,7 @@
               </EThumbProdBox>
               <div class="info-box">
                 <BadgeGroup gap="md">
-                  <EBadge color="gray" size="sm" badge-text="2+1" />
+                  <EBadge color="gray" size="sm" badge-text="1+1" />
                 </BadgeGroup>
                 <ETit type="prod">
                   바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
@@ -332,7 +331,7 @@
               </EIco>
             </button>
             <ColorBox color="orange" size="sm" class="ta-center">
-              <p class="stext fc-orange">
+              <p class="stext fc-orange fw-md">
                 하나를 더 담으시면 1개를 더 드려요
               </p>
             </ColorBox>
@@ -341,8 +340,8 @@
           <!-- 주류/와인 상품 -->
           <li class="item-thumb-prod">
             <span class="ui-chk">
-              <input id="prodChk02" type="checkbox" />
-              <label for="prodChk02"><span class="offscreen">상품 선택</span></label>
+              <input id="prodChk06" type="checkbox" />
+              <label for="prodChk06"><span class="offscreen">상품 선택</span></label>
             </span>
             <!-- thumb-prod-flex -->
             <div class="thumb-prod-flex">
@@ -358,15 +357,22 @@
                 <ETit type="prod">
                   드보밀레짐빈티지14
                 </ETit>
-                <div class="goods-group">
-                  <EGoods type="origin" size="sm" val="3,000" unit="원" />
-                  <EGoods type="percent" size="md" val="10" unit="%" />
-                  <EGoods size="md" val="2,700" unit="원" />
-                </div>
                 <div class="stock">
                   <EGoods size="sm" val="N" unit="개" /> 남음
                 </div>
               </div>
+              <FlexGroup align="end">
+                <div class="flex-left">
+                  <ESpinner />
+                </div>
+                <div class="flex-right">
+                  <div class="goods-group">
+                    <EGoods type="origin" size="sm" val="3,000" unit="원" />
+                    <EGoods type="percent" size="md" val="10" unit="%" />
+                    <EGoods size="md" val="2,700" unit="원" />
+                  </div>
+                </div>
+              </FlexGroup>
             </div>
             <!-- // thumb-prod-flex -->
             <button type="button" class="btn-delete">
@@ -380,42 +386,212 @@
       </ColorBox>
     </ContBox>
     <ContBox size="sm">
-      <ColorBox color="white">
+      <ColorBox color="white" size="lg">
         <CtitleWrap>
           <ETit text="당일픽업 추천상품" type="lgCont" />
         </CtitleWrap>
-        <div class="prod-list-swiper-wrap">
-          <SwiperAutoWrap gap="12">
-            <swiper-slide>
-              <div style="width:120px; height:200px; background: #E0F8EE; color: #00BB78;">
-                TODO : col타입 상품
+        <SwiperAutoWrap gap="12" class="side-zero">
+          <swiper-slide>
+            <!-- thumb-prod -->
+            <div class="thumb-prod">
+              <!-- thumb-prod-2xl -->
+              <EThumbProdBox size="2xl">
+                <!-- DESC :: 활성화시 is-active 클래스 추가 -->
+                <button type="button" class="btn-wish">
+                  <EIco name="wish" size="sm">
+                    <span class="offscreen">관심 등록</span>
+                  </EIco>
+                </button>
+                <template #thumb>
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                </template>
+              </EThumbProdBox>
+              <!-- // thumb-prod-2xl -->
+              <div class="info-box">
+                <ETit type="prod">
+                  바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
+                </ETit>
+                <div class="goods-group">
+                  <EGoods type="origin" size="sm" val="3,000" unit="원" />
+                  <EGoods type="percent" size="md" val="10" unit="%" />
+                  <EGoods size="md" val="2,700" unit="원" />
+                </div>
+                <div class="stock">
+                  <EGoods size="sm" val="N" unit="개" /> 남음
+                </div>
+                <div class="rating">
+                  <EIco name="rating" color="gray" size="xs">
+                    <span class="offscreen">별점</span>
+                  </EIco>
+                  <span class="score">4.0 (10)</span>
+                </div>
               </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div style="width:120px; height:200px; background: #E0F8EE; color: #00BB78;">
-                TODO : col타입 상품
+            </div>
+            <!-- // thumb-prod -->
+            <NuxtLink class="btn-link" to="javascript:">
+              <span class="offscreen">바로가기</span>
+            </NuxtLink>
+          </swiper-slide>
+          <swiper-slide>
+            <!-- thumb-prod -->
+            <div class="thumb-prod">
+              <!-- thumb-prod-2xl -->
+              <EThumbProdBox size="2xl">
+                <!-- DESC :: 활성화시 is-active 클래스 추가 -->
+                <button type="button" class="btn-wish">
+                  <EIco name="wish" size="sm">
+                    <span class="offscreen">관심 등록</span>
+                  </EIco>
+                </button>
+                <template #thumb>
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                </template>
+              </EThumbProdBox>
+              <!-- // thumb-prod-2xl -->
+              <div class="info-box">
+                <ETit type="prod">
+                  바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
+                </ETit>
+                <div class="goods-group">
+                  <EGoods type="origin" size="sm" val="3,000" unit="원" />
+                  <EGoods type="percent" size="md" val="10" unit="%" />
+                  <EGoods size="md" val="2,700" unit="원" />
+                </div>
+                <div class="stock">
+                  <EGoods size="sm" val="N" unit="개" /> 남음
+                </div>
               </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div style="width:120px; height:200px; background: #E0F8EE; color: #00BB78;">
-                TODO : col타입 상품
+            </div>
+            <!-- // thumb-prod -->
+            <NuxtLink class="btn-link" to="javascript:">
+              <span class="offscreen">바로가기</span>
+            </NuxtLink>
+          </swiper-slide>
+          <swiper-slide>
+            <!-- thumb-prod -->
+            <div class="thumb-prod">
+              <!-- thumb-prod-2xl -->
+              <EThumbProdBox size="2xl">
+                <!-- DESC :: 활성화시 is-active 클래스 추가 -->
+                <button type="button" class="btn-wish">
+                  <EIco name="wish" size="sm">
+                    <span class="offscreen">관심 등록</span>
+                  </EIco>
+                </button>
+                <template #thumb>
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                </template>
+              </EThumbProdBox>
+              <!-- // thumb-prod-2xl -->
+              <div class="info-box">
+                <ETit type="prod">
+                  바리스타 로슈거 250ml
+                </ETit>
+                <div class="goods-group">
+                  <EGoods size="md" val="2,700" unit="원" />
+                </div>
+                <div class="stock">
+                  <EGoods size="sm" val="N" unit="개" /> 남음
+                </div>
+                <div class="rating">
+                  <EIco name="rating" color="gray" size="xs">
+                    <span class="offscreen">별점</span>
+                  </EIco>
+                  <span class="score">4.0 (10)</span>
+                </div>
               </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div style="width:120px; height:200px; background: #E0F8EE; color: #00BB78;">
-                TODO : col타입 상품
+            </div>
+            <!-- // thumb-prod -->
+            <NuxtLink class="btn-link" to="javascript:">
+              <span class="offscreen">바로가기</span>
+            </NuxtLink>
+          </swiper-slide>
+          <swiper-slide>
+            <!-- thumb-prod -->
+            <div class="thumb-prod">
+              <!-- thumb-prod-2xl -->
+              <EThumbProdBox size="2xl">
+                <!-- DESC :: 활성화시 is-active 클래스 추가 -->
+                <button type="button" class="btn-wish">
+                  <EIco name="wish" size="sm">
+                    <span class="offscreen">관심 등록</span>
+                  </EIco>
+                </button>
+                <template #thumb>
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                </template>
+              </EThumbProdBox>
+              <!-- // thumb-prod-2xl -->
+              <div class="info-box">
+                <ETit type="prod">
+                  바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
+                </ETit>
+                <div class="goods-group">
+                  <EGoods type="origin" size="sm" val="3,000" unit="원" />
+                  <EGoods type="percent" size="md" val="10" unit="%" />
+                  <EGoods size="md" val="2,700" unit="원" />
+                </div>
+                <div class="stock">
+                  <EGoods size="sm" val="N" unit="개" /> 남음
+                </div>
+                <div class="rating">
+                  <EIco name="rating" color="gray" size="xs">
+                    <span class="offscreen">별점</span>
+                  </EIco>
+                  <span class="score">4.0 (10)</span>
+                </div>
               </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div style="width:120px; height:200px; background: #E0F8EE; color: #00BB78;">
-                TODO : col타입 상품
+            </div>
+            <!-- // thumb-prod -->
+            <NuxtLink class="btn-link" to="javascript:">
+              <span class="offscreen">바로가기</span>
+            </NuxtLink>
+          </swiper-slide>
+          <swiper-slide>
+            <!-- thumb-prod -->
+            <div class="thumb-prod">
+              <!-- thumb-prod-2xl -->
+              <EThumbProdBox size="2xl">
+                <!-- DESC :: 활성화시 is-active 클래스 추가 -->
+                <button type="button" class="btn-wish">
+                  <EIco name="wish" size="sm">
+                    <span class="offscreen">관심 등록</span>
+                  </EIco>
+                </button>
+                <template #thumb>
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                </template>
+              </EThumbProdBox>
+              <!-- // thumb-prod-2xl -->
+              <div class="info-box">
+                <ETit type="prod">
+                  바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
+                </ETit>
+                <div class="goods-group">
+                  <EGoods type="origin" size="sm" val="3,000" unit="원" />
+                  <EGoods type="percent" size="md" val="10" unit="%" />
+                  <EGoods size="md" val="2,700" unit="원" />
+                </div>
+                <div class="stock">
+                  <EGoods size="sm" val="N" unit="개" /> 남음
+                </div>
+                <div class="rating">
+                  <EIco name="rating" color="gray" size="xs">
+                    <span class="offscreen">별점</span>
+                  </EIco>
+                  <span class="score">4.0 (10)</span>
+                </div>
               </div>
-            </swiper-slide>
-          </SwiperAutoWrap>
-        </div>
+            </div>
+            <!-- // thumb-prod -->
+            <NuxtLink class="btn-link" to="javascript:">
+              <span class="offscreen">바로가기</span>
+            </NuxtLink>
+          </swiper-slide>
+        </SwiperAutoWrap>
       </ColorBox>
       <BtnWrap size="md">
-        <EBtn color="line-light-gray" size="md">
+        <EBtn tag="a" color="line-light-gray" size="md" to="javascript:">
           <EIco name="plus" color="gray" size="sm" />
           <span class="text">상품 더 담기</span>
         </EBtn>
@@ -443,7 +619,7 @@
             <li class="item-md">
               <span class="ui-rdo">
                 <input id="orderPayRdo03" type="radio" name="orderPayRdo01" />
-                <label for="orderPayRdo03"><span class="text-lg">봉투 미사용</span></label>
+                <label for="orderPayRdo03"><span class="text-lg">봉투 미사용 (개인장바구니사용)</span></label>
               </span>
             </li>
           </RowListWrap>
@@ -469,11 +645,11 @@
                 <li class="item-order-info">
                   <FlexGroup align="center">
                     <div class="flex-left">
-                      <span class="stext-lg fw-sb">주문금액</span>
+                      <ETit text="주문금액" type="goods" />
                     </div>
                     <div class="flex-right">
                       <ETit type="goods">
-                        <EGoods val="40,000" unit="원" />
+                        <EGoods val="133,300" unit="원" />
                       </ETit>
                     </div>
                   </FlexGroup>
@@ -481,7 +657,7 @@
                 <li class="item-order-info">
                   <FlexGroup align="center">
                     <div class="flex-left">
-                      <span class="stext-lg fw-sb">포장봉투</span>
+                      <ETit text="포장봉투" type="goods" />
                     </div>
                     <div class="flex-right">
                       <ETit type="goods">
@@ -493,11 +669,11 @@
                 <li class="item-order-info">
                   <FlexGroup align="center">
                     <div class="flex-left">
-                      <span class="stext-lg fw-sb">할인금액</span>
+                      <ETit text="할인금액" type="goods" />
                     </div>
                     <div class="flex-right">
                       <ETit type="goods">
-                        <EGoods val="6,500" unit="원" class="fc-red" />
+                        <EGoods val="3,000" unit="원" class="fc-red" />
                       </ETit>
                     </div>
                   </FlexGroup>
@@ -548,6 +724,10 @@
     </BtnWrap>
   </ContWrap>
   <!-- // 데이터가 없는 경우  -->
+
+  <!-- pop : 증정품선택 -->
+  <popCartSelectFreeGift v-model:sta="popSelectFreeGift" />
+  <!-- // pop : 증정품선택 -->
 </template>
 
 <script setup lang="ts">
@@ -558,6 +738,10 @@ definePageMeta({
 
 const isData = ref(true);
 const isNoData = ref(true);
+
+// 증정품선택 팝업
+const popSelectFreeGift = ref({ open: false });
+const openSelectFreeGift = () => popSelectFreeGift.value.open = true;
 </script>
 
 <style lang="scss" scoped>

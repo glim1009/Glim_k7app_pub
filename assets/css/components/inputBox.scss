@@ -64,6 +64,10 @@
     &:last-child {
       margin-right: 13px;
     }
+
+    ~ .btn-line-light-gray-xs {
+      margin-left: 10px;
+    }
   }
 
   .byte-check {

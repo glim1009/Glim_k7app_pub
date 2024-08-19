@@ -116,17 +116,31 @@ $ProdSize: ('2xl': 120px, 'xl': 100px, 'lg': 80px, 'md': 60px);
 
   .ctitle-xs {
     @include mixins.ellipsis;
+    @include mixins.font_size_lg('lt');
+    color: variables.$colorBlack;
   }
 
   .stext {
     margin-top: 4px;
     color: variables.$colorGray70;
+
+    ~ .stext {
+      margin-top: 0;
+    }
   }
 
   .goods-group {
     @include mixins.justify_width(start);
     flex-wrap: wrap;
     margin-top: 4px;
+
+    .label {
+      display: inline-block;
+      margin-right: 4px;
+      @include mixins.font_size_lg;
+      color: variables.$colorBlack;
+      vertical-align: top;
+    }
 
     .percent {
       margin-left: 0;
@@ -143,8 +157,9 @@ $ProdSize: ('2xl': 120px, 'xl': 100px, 'lg': 80px, 'md': 60px);
   }
 
   .stock {
-    @include mixins.font_size_md('md');
+    width: 100%;
     margin-top: 4px;
+    @include mixins.font_size_md('md');
     color: variables.$colorGray80;
   }
 
@@ -226,6 +241,11 @@ $ProdSize: ('2xl': 120px, 'xl': 100px, 'lg': 80px, 'md': 60px);
 }
 
 .thumb-prod {
+  @each $size, $px in $ProdSize {
+    &:has(.thumb-prod-#{$size}-box) {
+      width: $px;
+    }
+  }
   .info-box {
     @extend %prodInfoCommon;
     margin-top: 10px;
@@ -257,6 +277,35 @@ $ProdSize: ('2xl': 120px, 'xl': 100px, 'lg': 80px, 'md': 60px);
 
       .origin {
         margin-right: 4px;
+      }
+    }
+
+    .flex-center-group {
+      width: 100%;
+
+      .flex-left {
+        flex: 1;
+        width: calc(100% - 22px);
+      }
+
+      .flex-right {
+        flex: 0 0 auto;
+        margin-left: 22px;
+
+        .goods-group {
+          margin-top: 0;
+          align-items: end;
+          text-align: right;
+          justify-content: flex-end;
+
+          &:has(.origin) {
+            flex-direction: column;
+          }
+
+          .origin {
+            margin-right: 0;
+          }
+        }
       }
     }
   }

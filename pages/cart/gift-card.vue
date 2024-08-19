@@ -1,12 +1,12 @@
 <template>
   <ContWrap>
-    <ContBox>
+    <ContBox size="lg">
       <div class="list-header">
         <FlexGroup>
           <div class="flex-left">
             <span class="ui-chk">
-              <input id="prdAllChk01" type="checkbox" />
-              <label for="prdAllChk01"><span class="text-md">전체선택</span></label>
+              <input id="prodAllChk" type="checkbox" />
+              <label for="prodAllChk"><span class="text-md">전체선택</span></label>
             </span>
           </div>
           <div class="flex-right">
@@ -21,8 +21,8 @@
         <RowListWrap gap="line">
           <li class="item-thumb-prod">
             <span class="ui-chk">
-              <input id="prodChk02" type="checkbox" />
-              <label for="prodChk02"><span class="offscreen">상품 선택</span></label>
+              <input id="prodChk01" type="checkbox" />
+              <label for="prodChk01"><span class="offscreen">상품 선택</span></label>
             </span>
             <!-- thumb-prod-flex -->
             <div class="thumb-prod-flex">
@@ -39,7 +39,7 @@
               </div>
               <FlexGroup align="end">
                 <div class="flex-left">
-                  <div style="width: 94px; height: 36px; background: rgba(255, 0, 0, .1);">spinner</div>
+                  <ESpinner />
                 </div>
                 <div class="flex-right">
                   <div class="goods-group">
@@ -59,8 +59,8 @@
           </li>
           <li class="item-thumb-prod">
             <span class="ui-chk">
-              <input id="prodChk01" type="checkbox" />
-              <label for="prodChk01"><span class="offscreen">상품 선택</span></label>
+              <input id="prodChk02" type="checkbox" />
+              <label for="prodChk02"><span class="offscreen">상품 선택</span></label>
             </span>
             <!-- thumb-prod-flex -->
             <div class="thumb-prod-flex">
@@ -74,7 +74,7 @@
               </div>
               <FlexGroup align="end">
                 <div class="flex-left">
-                  <div style="width: 94px; height: 36px; background: rgba(255, 0, 0, .1);">spinner</div>
+                  <ESpinner />
                 </div>
                 <div class="flex-right">
                   <div class="goods-group">
@@ -92,8 +92,8 @@
           </li>
           <li class="item-thumb-prod">
             <span class="ui-chk">
-              <input id="prodChk01" type="checkbox" />
-              <label for="prodChk01"><span class="offscreen">상품 선택</span></label>
+              <input id="prodChk03" type="checkbox" />
+              <label for="prodChk03"><span class="offscreen">상품 선택</span></label>
             </span>
             <!-- thumb-prod-flex -->
             <div class="thumb-prod-flex">
@@ -107,7 +107,7 @@
               </div>
               <FlexGroup align="end">
                 <div class="flex-left">
-                  <div style="width: 94px; height: 36px; background: rgba(255, 0, 0, .1);">spinner</div>
+                  <ESpinner />
                 </div>
                 <div class="flex-right">
                   <div class="goods-group">
@@ -125,8 +125,8 @@
           </li>
           <li class="item-thumb-prod">
             <span class="ui-chk">
-              <input id="prodChk01" type="checkbox" />
-              <label for="prodChk01"><span class="offscreen">상품 선택</span></label>
+              <input id="prodChk04" type="checkbox" />
+              <label for="prodChk04"><span class="offscreen">상품 선택</span></label>
             </span>
             <!-- thumb-prod-flex -->
             <div class="thumb-prod-flex">
@@ -140,7 +140,7 @@
               </div>
               <FlexGroup align="end">
                 <div class="flex-left">
-                  <div style="width: 94px; height: 36px; background: rgba(255, 0, 0, .1);">spinner</div>
+                  <ESpinner />
                 </div>
                 <div class="flex-right">
                   <div class="goods-group">
@@ -174,9 +174,7 @@
                 <ETit text="결제예정금액" type="fold" />
               </div>
               <div class="flex-right">
-                <ETit type="goods">
-                  <EGoods size="xl" val="126,800" unit="원" class="fw-md fc-spot" />
-                </ETit>
+                <EGoods size="xl" val="38,200" unit="원" class="fw-md fc-spot" />
               </div>
             </FlexGroup>
           </div>
@@ -187,7 +185,7 @@
               <li class="item-order-info">
                 <FlexGroup align="center">
                   <div class="flex-left">
-                    <span class="stext-lg fw-sb">주문금액</span>
+                    <ETit text="주문금액" type="goods" />
                   </div>
                   <div class="flex-right">
                     <ETit type="goods">
@@ -199,7 +197,7 @@
               <li class="item-order-info">
                 <FlexGroup align="center">
                   <div class="flex-left">
-                    <span class="stext-lg fw-sb">할인금액</span>
+                    <ETit text="할인금액" type="goods" />
                   </div>
                   <div class="flex-right">
                     <ETit type="goods">
@@ -242,7 +240,7 @@
   </ContDocker>
 
   <!-- 데이터가 없는 경우  -->
-  <ContBox v-if="isNoData" size="sm">
+  <ContWrap v-if="isNoData" in-top="zero">
     <InfoGuideWrap
       type="no-data"
       name="cart"
@@ -253,7 +251,7 @@
         <span class="text">상품권 둘러보기</span>
       </EBtn>
     </BtnWrap>
-  </ContBox>
+  </ContWrap>
   <!-- // 데이터가 없는 경우  -->
 </template>
 
