@@ -5,7 +5,6 @@
         <FlexGroup align="center">
           <div class="flex-left">
             <div class="goods-group">
-              <span class="label">총 </span>
               <EGoods val="8" unit="건" />
             </div>
           </div>
@@ -18,7 +17,8 @@
                 <option>택배명 순</option>
               </select>
             </div>
-            <button type="button" class="btn-filter is-active">
+            <!-- DESC :: 활성화시 is-active 클래스 추가 -->
+            <button type="button" class="btn-filter is-active" @click="openDeliveryFilterOption">
               <EIco name="filter" color="gray" size="xs" />
             </button>
           </div>
@@ -175,6 +175,89 @@
   <!-- pop : 예약현황 상세 -->
   <PopDeliveryReservationStatusDetail v-model:sta="popReservationStatusDetail" />
   <!-- // pop : 예약현황 상세 -->
+
+  <!-- pop : 택배 - 필터 옵션 -->
+  <PopCommFilterOption v-model:sta="popDeliveryFilterOption">
+    <!-- 필터옵션목록 -->
+    <template #option>
+      <li class="item-xl">
+        <div class="form-field">
+          <div class="form-cont">
+            <div class="form-input-group">
+              <UiColGroup gap="sm">
+                <span class="ui-rdo-button">
+                  <input id="filterProdType01" type="radio" name="filterStatus01" />
+                  <label for="filterProdType01"><span class="text-sm">전체</span></label>
+                </span>
+                <span class="ui-rdo-button">
+                  <input id="filterProdType02" type="radio" name="filterStatus01" />
+                  <label for="filterProdType02"><span class="text-sm">사용가능</span></label>
+                </span>
+                <span class="ui-rdo-button">
+                  <input id="filterProdType03" type="radio" name="filterStatus01" />
+                  <label for="filterProdType03"><span class="text-sm">사용완료</span></label>
+                </span>
+                <span class="ui-rdo-button">
+                  <input id="filterProdType04" type="radio" name="filterStatus01" />
+                  <label for="filterProdType04"><span class="text-sm">기간만료</span></label>
+                </span>
+              </UiColGroup>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="item-xl">
+        <div class="form-field">
+          <div class="form-title">
+            <ETit text="조회기간" type="cont" />
+          </div>
+          <div class="form-cont">
+            <div class="form-input-group">
+              <UiColGroup gap="sm">
+                <span class="ui-rdo-button">
+                  <input id="filterOptionDate01" v-model="periodPicked" value="periodDate01" type="radio" />
+                  <label for="filterOptionDate01"><span class="text-sm">최근3개월</span></label>
+                </span>
+                <span class="ui-rdo-button">
+                  <input id="filterOptionDate02" v-model="periodPicked" value="periodDate02" type="radio" />
+                  <label for="filterOptionDate02"><span class="text-sm">6개월</span></label>
+                </span>
+                <span class="ui-rdo-button">
+                  <input id="filterOptionDate03" v-model="periodPicked" value="periodDate03" type="radio" />
+                  <label for="filterOptionDate03"><span class="text-sm">1년</span></label>
+                </span>
+                <span class="ui-rdo-button">
+                  <input id="filterOptionDate04" v-model="periodPicked" value="periodDateInput" type="radio" />
+                  <label for="filterOptionDate04"><span class="text-sm">직접입력</span></label>
+                </span>
+              </UiColGroup>
+              <FlexGroup>
+                <div class="flex-left">
+                  <EDatePicker :disabled="isDateInputDisabled" placeholder="시작일" />
+                </div>
+                <span class="gap">~</span>
+                <div class="flex-right">
+                  <EDatePicker :disabled="isDateInputDisabled" placeholder="종료일" />
+                </div>
+              </FlexGroup>
+            </div>
+          </div>
+        </div>
+      </li>
+    </template>
+    <!-- // 필터옵션목록 -->
+    <template #footer>
+      <div class="dialog-btn-auto-wrap">
+        <EBtn color="line-light-gray" size="lg">
+          <span class="text">초기화</span>
+        </EBtn>
+        <EBtn color="green" size="lg" @click="popDeliveryFilterOption.open = false">
+          <span class="text">적용</span>
+        </EBtn>
+      </div>
+    </template>
+  </PopCommFilterOption>
+  <!-- // pop : 택배 - 필터 옵션 -->
 </template>
 
 <script setup lang="ts">
@@ -189,6 +272,18 @@ const isNoData = ref(true);
 // 예약현황 상세 팝업
 const popReservationStatusDetail = ref({ open: false });
 const openReservationStatusDetail = () => popReservationStatusDetail.value.open = true;
+
+// 상품필터옵션 팝업
+const popDeliveryFilterOption = ref({ open: false });
+const openDeliveryFilterOption = () => popDeliveryFilterOption.value.open = true;
+
+// 기간 날짜 조회
+const periodPicked = ref();
+const isDateInputDisabled = ref<boolean>(true);
+
+watch(periodPicked, (value) => {
+  isDateInputDisabled.value = value !== 'periodDateInput';
+});
 </script>
 
 <style lang="scss" scoped>

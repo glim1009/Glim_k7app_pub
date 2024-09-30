@@ -1,5 +1,5 @@
 <template>
-  <ContWrap v-if="isMember" type="white" in-top="zero">
+  <ContWrap v-if="isMember" type="white" in-top="zero" class="not-navbar">
     <InfoGuideWrap
       type="info-guide"
       name="delivery"
@@ -7,12 +7,12 @@
       sub-desc="예약현황에서 예약하신 내역을 확인하실 수 있습니다."
     />
     <BtnWrap type="full" size="lg">
-      <EBtn tag="a" color="line-green" size="md" to="to">
+      <EBtn tag="a" color="line-green" size="md" to="javascript:">
         <span class="text">예약현황</span>
       </EBtn>
     </BtnWrap>
   </ContWrap>
-  <ContWrap v-if="isNonMember" type="white" in-top="zero">
+  <ContWrap v-if="isNonMember" type="white" in-top="zero" class="not-navbar">
     <InfoGuideWrap
       type="info-guide"
       name="delivery"
@@ -22,7 +22,7 @@
     <ContBox size="lg">
       <ColorBox color="light-gray" size="md" class="ta-center">
         <div class="align-group">
-          <span class="stext-lg fc-gray90">예약번호 : 68429106806</span>
+          <span class="stext-lg-gray90">예약번호 : 68429106806</span>
           <EBtn color="line-light-gray" size="xs">
             <span class="text">복사</span>
           </EBtn>

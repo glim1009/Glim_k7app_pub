@@ -11,7 +11,7 @@
   width: 100%;
   margin-top: 4px;
   @include mixins.font_size_sm;
-  color: variables.$colorGray70;
+  color: var(--Grayscale-70);
 }
 
 // valid-check
@@ -20,13 +20,15 @@
     display: none;
     margin-top: 4px;
     @include mixins.font_size_sm;
-    color: variables.$colorRed100;
+    color: var(--Primary-Red-100);
   }
 
   &.fail {
-    .input-box {
-      border-color: variables.$colorRed100;
+    .input-box,
+    .textarea-box {
+      border-color: var(--Primary-Red-100);
     }
+
     .valid-desc {
       display: block;
     }
@@ -36,23 +38,24 @@
 // 입력 제한
 .byte-check {
   flex-shrink: 0;
+  font-size: 0;
 
   .count {
     display: inline-block;
     @include mixins.font_size_sm('md');
-    color: variables.$colorBlack;
+    color: var(--Grayscale-100);
     vertical-align: top;
   }
 
   .total {
     display: inline-block;
     @include mixins.font_size_sm('md');
-    color: variables.$colorGray50;
+    color: var(--Grayscale-50);
     vertical-align: top;
 
     &:before {
       content: '/';
-      color: variables.$colorGray50;
+      color: var(--Grayscale-50);
     }
   }
 }
@@ -60,11 +63,14 @@
 .is-focus {
   .byte-check {
     .count {
-      color: variables.$colorGreen100;
+      color: var(--Primary-Green-100);
       @include mixins.prefix(transition, color 0.2s ease-out);
     }
   }
 }
+
+
+/* ////////////////////////////////////////////////////////////////////////// */
 
 
 /* form - select */
@@ -79,26 +85,26 @@
     height: 44px;
     padding: 12px 42px 12px 18px;
     border-radius: 22px;
-    border: 1px solid variables.$colorGray40;
-    background-color: variables.$colorWhite;
+    border: 1px solid var(--Grayscale-40);
     @include mixins.font_size_lg('lt');
-    color: variables.$colorBlack;
+    color: var(--Grayscale-100);
     @include mixins.no_select_text;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     outline: 0;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_arw_down_gray_sm', 18px, right 18px center);
+    @include mixins.ratio_images('/assets/images/common/comm_ico_arw_down_sm', 18px, right 18px center);
+    background-color: var(--Grayscale-0);
 
     &:focus {
-      border-color: variables.$colorGreen100;
+      border-color: var(--Primary-Green-100);
       @include mixins.prefix(transition, border 0.2s ease-out);
     }
 
     &[disabled], &[aria-disabled], &[readonly] {
-      border-color: variables.$colorGray30;
-      @include mixins.ratio_images_change('~/assets/images/common/comm_ico_arw_down_gray_sm_disabled');
-      color: variables.$colorGray50;
+      border-color: var(--Grayscale-30);
+      @include mixins.ratio_images_change('/assets/images/common/comm_ico_arw_down_sm_disabled');
+      color: var(--Grayscale-50);
     }
   }
 
@@ -110,7 +116,7 @@
       height: 17px;
       padding: 0 18px 0 0;
       border: 0;
-      @include mixins.ratio_images('~/assets/images/common/comm_ico_arw_down_gray_xs', 16px, right center);
+      @include mixins.ratio_images('/assets/images/common/comm_ico_arw_down_xs', 16px, right center);
       @include mixins.font_size_lg('md');
 
       text-align-last: right;
@@ -123,6 +129,20 @@
         text-align: left;
         -ms-text-align-last: left;
         -moz-text-align-last: left;
+      }
+    }
+  }
+}
+
+[class^=cont][class*=wrap] {
+  [class^=cont][class$=box] {
+    &:not(:has(.form-field)) {
+      .ui-select {
+        width: calc(100% + 10px);
+        margin: {
+          left: -5px;
+          right: -5px;
+        }
       }
     }
   }
@@ -156,26 +176,42 @@
       vertical-align: top;
       @include mixins.no_select_text;
 
-      .text-sm,
-      .text-md,
-      .text-lg {
+      [class^=text-] {
         display: inline-block;
         padding: {
           top: 2px;
           left: 6px;
           bottom: 2px;
         }
-        color: variables.$colorBlack;
+        color: var(--Grayscale-100);
+        word-break: break-all;
         vertical-align: top;
       }
+
       .text-sm { // 13px
         @include mixins.font_size_md('md');
       }
+
       .text-md { // 14px
         @include mixins.font_size_lg;
       }
+
       .text-lg { // 15px
         @include mixins.font_size_xl;
+      }
+
+      &.align-top {
+        [class^=text-] {
+          padding-top: 0;
+        }
+
+        &:before {
+          top: 0;
+          transform: initial;
+        }
+        &:after {
+          transform: initial;
+        }
       }
     }
   }
@@ -183,7 +219,9 @@
 
 // default
 .ui-chk,
-.ui-rdo {
+.ui-rdo,
+.ui-rdo-prod,
+.ui-chk-prod {
   @extend %rdoChkReset;
   min-height: 24px;
 
@@ -218,8 +256,8 @@
     &:checked {
       & + label {
         &:before {
-          background-color: variables.$colorGreen100;
-          border-color: variables.$colorGreen100;
+          background-color: var(--Primary-Green-100);
+          border-color: var(--Primary-Green-100);
         }
       }
     }
@@ -227,7 +265,8 @@
 }
 
 /* radio */
-.ui-rdo {
+.ui-rdo,
+.ui-rdo-prod {
   input {
     & + label {
       &:before, &:after {
@@ -235,17 +274,23 @@
       }
 
       &:before {
-        background-color: variables.$colorWhite;
-        border: 1px solid variables.$colorGray40;
+        background-color: var(--Grayscale-0);
+        border: 1px solid var(--Grayscale-40);
       }
 
       &:after {
         left: 7px;
         width: 10px;
         height: 10px;
-        background-color: variables.$colorGray40;
+        background-color: var(--Grayscale-40);
         border: none;
         transform-origin: top;
+      }
+
+      &.align-top {
+        &:after {
+          top: 7px;
+        }
       }
     }
 
@@ -256,14 +301,20 @@
 
       &:after {
         animation: rdoAnimation 0.35s variables.$easeInOutQuad forwards;
-        background-color: variables.$colorWhite;
+        background-color: var(--Grayscale-0);
+      }
+
+      &.align-top {
+        &:after {
+          animation: rdoTopAnimation 0.35s variables.$easeInOutQuad forwards;
+        }
       }
     }
   }
 }
 
 @keyframes rdoAnimation {
-  0%{
+  0% {
     transform: scale(0);
   }
 
@@ -272,66 +323,65 @@
   }
 }
 
-.ui-rdo-button {
-  @extend %rdoChkReset;
+.ui-rdo-prod, .ui-chk-prod {
+  width: 100%;
 
   input {
-    width: 100%;
-
-    & + label {
-      width: 100%;
-      padding: 7px;
-      border-radius: 18px;
-      border: 1px solid transparent;
-      background-color: variables.$colorGray20;
-      text-align: center;
-
-      [class^=text] {
-        padding: 0;
-        color: variables.$colorGray80;
-        font-weight: variables.$fontWeightSemibold;
-      }
-
-      &:before,
-      &:after {
-        content: initial;
-      }
+    + label {
+      z-index: 2;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
     }
-
     &[disabled], &[aria-disabled], &[readonly] {
       & + label {
-        [class^=text] {
-          padding: 0;
-          color: variables.$colorGray50;
+        opacity: 1;
+
+        &:after,
+        &:before {
+          opacity: 0.5;
         }
       }
     }
+  }
 
-    &:checked + label {
-      border-color: variables.$colorGreen100;
-      background-color: variables.$colorWhite;
-      @include mixins.prefix(transition, all 0.15s);
+  .thumb-prod-flex {
+    padding-left: 34px;
+  }
+}
 
-      [class^=text] {
-        color: variables.$colorGreen100;
-      }
-    }
+@keyframes rdoTopAnimation {
+  0% {
+    transform: scale(0) translateY(7px);
+  }
+
+  100% {
+    transform: scale(1) translateY(0);
   }
 }
 
 /* checkbox */
-.ui-chk {
+.ui-chk,
+.ui-chk-prod {
   input {
     & + label {
       &:before {
         border-radius: 6px;
-        background-color: variables.$colorWhite;
-        border: 1px solid variables.$colorGray40;
+        background-color: var(--Grayscale-0);
+        border: 1px solid var(--Grayscale-40);
         left: 0;
       }
 
       &:after {
-        @include mixins.ratio_images('~/assets/images/form/ico_check_def', 12px 10px, 6px 7px);
+        @include mixins.ratio_images('/assets/images/form/ico_check_def', 12px 10px, 6px 7px);
+      }
+
+      &.align-top {
+        &:after {
+          top: 0;
+        }
       }
     }
 
@@ -339,9 +389,16 @@
       &:before {
         @include mixins.prefix(transition, background-color 0.15s);
       }
+
       &:after {
         animation: chkAnimation 0.5s variables.$transEaseBounceBack;
-        @include mixins.ratio_images('~/assets/images/form/ico_check_sel', 12px 10px, 6px 7px);
+        @include mixins.ratio_images('/assets/images/form/ico_check_sel', 12px 10px, 6px 7px);
+      }
+
+      &.align-top {
+        &:after {
+          animation: chkTopAnimation 0.5s variables.$transEaseBounceBack;
+        }
       }
     }
   }
@@ -363,6 +420,124 @@
   }
 }
 
+@keyframes chkTopAnimation {
+  0% {
+    opacity: 0;
+    rotate: 12deg;
+  }
+
+  50% {
+    opacity: 1;
+    rotate: -10deg;
+    transform: translateX(-2px);
+  }
+
+  100% {
+    rotate: 0;
+    transform: translateX(0);
+  }
+}
+
+// type button
+.ui-rdo-button,
+.ui-chk-button {
+  @extend %rdoChkReset;
+
+  input {
+    width: 100%;
+
+    & + label {
+      width: 100%;
+      padding: 7px 14px;
+      border-radius: 18px;
+      border: 1px solid transparent;
+      background-color: var(--Grayscale-20);
+      text-align: center;
+
+      [class^=text] {
+        padding: 0;
+        color: var(--Grayscale-80);
+        font-weight: variables.$fontWeightSemibold;
+      }
+
+      &:before,
+      &:after {
+        content: initial;
+      }
+    }
+
+    &[disabled], &[aria-disabled], &[readonly] {
+      & + label {
+        [class^=text] {
+          padding: 0;
+          color: var(--Grayscale-50);
+        }
+      }
+    }
+
+    &:checked + label {
+      border-color: var(--Primary-Green-100);
+      background-color: var(--Grayscale-0);
+      @include mixins.prefix(transition, all 0.15s);
+
+      [class^=text] {
+        color: var(--Primary-Green-100);
+      }
+    }
+  }
+}
+
+.ui-chk-bookmark {
+  @extend %rdoChkReset;
+  width: 24px;
+  height: 24px;
+  input {
+    + label {
+      padding-left: 24px;
+      min-height: 24px;
+
+      &:before,
+      &:after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 24px;
+        height: 24px;
+        text-align: center;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        vertical-align: top;
+      }
+
+      &:before {
+        @include mixins.svg_mask('/assets/images/common/comm_ico_bookmark', var(--Grayscale-40));
+      }
+    }
+
+    &[disabled], &[aria-disabled], &[readonly] {
+      & + label {
+        pointer-events: none;
+        opacity: 0.5;
+      }
+    }
+
+    &:checked {
+      & + label {
+        &:before {
+          background-color: #FFC634;
+          animation: bookmarkAnimation 0.2s variables.$easeInOutQuad forwards;
+        }
+      }
+    }
+  }
+
+  .ico-bookmark {
+
+  }
+}
+
 
 /* ////////////////////////////////////////////////////////////////////////// */
 
@@ -374,8 +549,8 @@
   width: 76px !important;
   height: 76px;
   border-radius: 12px;
-  background-color: variables.$colorGray20;
-  border: 1px solid variables.$colorGray30;
+  background-color: var(--Grayscale-20);
+  border: 1px solid var(--Grayscale-30);
   overflow: hidden;
 
   & ~ .attach-box {
@@ -398,7 +573,7 @@
     width: 100%;
     height: 100%;
     cursor: pointer;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_plus_gray_sm', 18px, center);
+    @include mixins.svg_mask('/assets/images/common/comm_ico_plus_sm', #B4BDC5, 18px, center);
   }
 
   .attach-img-wrap {
@@ -467,7 +642,7 @@
       [class^=text-] {
         display: inline-block;
         padding: 3px 0 3px 8px;
-        color: variables.$colorBlack;
+        color: var(--Grayscale-100);
         vertical-align: top;
         cursor: pointer;
       }
@@ -483,7 +658,7 @@
       &:before {
         content: '';
         position: absolute;
-        background-color: variables.$colorGray40;
+        background-color: var(--Grayscale-40);
         border-radius: 21px;
         left: 0;
         top: 0;
@@ -497,7 +672,7 @@
       &:after {
         content: '';
         position: absolute;
-        background-color: variables.$colorWhite;
+        background-color: var(--Grayscale-0);
         border-radius: 50%;
         left: 3px;
         top: 3px;
@@ -511,8 +686,9 @@
     &:checked {
       & + label {
         &:before {
-          background: variables.$colorGreen100;
+          background: var(--Primary-Green-100);
         }
+
         &:after {
           left: 25px;
         }
@@ -526,7 +702,7 @@
         }
 
         [class^=text-] {
-          color: variables.$colorGray60;
+          color: var(--Grayscale-60);
           cursor: inherit;
         }
       }
@@ -544,8 +720,8 @@
   overflow: hidden;
   display: inline-block;
   border-radius: 18px;
-  background-color: variables.$colorWhite;
-  border: 1px solid variables.$colorGray40;
+  background-color: var(--Grayscale-0);
+  border: 1px solid var(--Grayscale-40);
   width: 94px;
   height: 36px;
   vertical-align: top;
@@ -558,7 +734,7 @@
       width: 100%;
       height: 34px;
       @include mixins.font_size_md('md');
-      color: variables.$colorBlack;
+      color: var(--Grayscale-100);
       text-align: center;
       box-sizing: border-box;
       vertical-align: top;
@@ -575,13 +751,19 @@
       width: 24px;
       height: 24px;
     }
+
     .btn-minus {
       left: 5px;
-      @include mixins.ratio_images('~/assets/images/form/ico_spinner_minus', 24px, center);
+      @include mixins.ratio_images('/assets/images/form/ico_spinner_minus', 24px, center);
     }
+
     .btn-plus {
       right: 5px;
-      @include mixins.ratio_images('~/assets/images/form/ico_spinner_plus', 24px, center);
+      @include mixins.ratio_images('/assets/images/form/ico_spinner_plus', 24px, center);
+    }
+
+    &:has(.ui-input[disabled]) {
+      opacity: 0.4;
     }
   }
 }
@@ -592,7 +774,7 @@
 
 /* ui-col-group */
 
-$itemGap: ('md': 10px, 'lg': 16px); // md - 10px
+$itemGap: ('sm': 6px, 'md': 10px, 'lg': 16px); // sm - 6px / md - 10px / lg - 16px
 @each $gap, $px in $itemGap {
   .ui-col-#{$gap}-group {
     margin-bottom: -10px;
@@ -607,3 +789,169 @@ $itemGap: ('md': 10px, 'lg': 16px); // md - 10px
     }
   }
 }
+
+
+/* rating-group */
+.rating-group {
+  @include mixins.justify_width(stretch);
+  gap: 10px;
+
+  .rating {
+    position: relative;
+
+    .rating-label {
+      display: block;
+
+      &.is-active {
+        .ico-rating-lg {
+          background-color: var(--Primary-Green-100);
+        }
+      }
+      &.is-click {
+        .ico-rating-lg {
+          animation: ratingAnimation 0.35s variables.$easeInOutQuad forwards;
+        }
+      }
+
+      .ico-rating-lg {
+        cursor: pointer;
+        background-color: var(--Grayscale-30);
+        @include mixins.prefix(transition, all 0.35s variables.$easeOutExpo);
+      }
+    }
+  }
+}
+
+@keyframes ratingAnimation {
+  0%, 100% {
+    @include mixins.prefix(transform, scale(1));
+  }
+
+  40% {
+    @include mixins.prefix(transform, scale(1.1));
+  }
+}
+
+.ico-rating-lg {
+  display: block;
+  width: 30px;
+  height: 30px;
+  @include mixins.svg_mask('/assets/images/common/comm_ico_rating_lg');
+}
+
+.datepicker-box {
+  .btn-date {
+    @include mixins.justify_width(center, between);
+    width: 100%;
+    height: 44px;
+    padding: 12px 18px;
+    border-radius: 22px;
+    border: 1px solid transparent;
+    background-color: var(--Grayscale-20);
+    @include mixins.font_size_lg('lt');
+    color: var(--Grayscale-50);
+
+    &[disabled] {
+      background-color: var(--Grayscale-0);
+      border-color: var(--Grayscale-30);
+    }
+
+    &[data-state='open'] {
+      border-color: var(--Primary-Green-100);
+      background-color: var(--Grayscale-0);
+      color: var(--Grayscale-100);
+    }
+  }
+}
+
+.ui-datepicker {
+  padding: 20px;
+  border-radius: 15px;
+  background-color: var(--Grayscale-0);
+
+  .calendar-group {
+    height: auto;
+
+    .calendar-header {
+      width: calc(100% + 16px);
+      margin: {
+        left: -8px;
+        right: -8px;
+      };
+      justify-content: space-between;
+
+      .calendar-heading {
+        @include mixins.justify_width(center, center);
+        font-weight: variables.$fontWeightMedium;
+
+        .ui-select {
+          &.type-text {
+            select {
+              height: 22px;
+              @include mixins.ratio_images('/assets/images/form/ico_datepicker_arw', 18px, right center);
+              @include mixins.font_size_2xl();
+            }
+          }
+
+          ~ .ui-select {
+            margin-left: 6px;
+          }
+        }
+      }
+    }
+
+    table {
+      tr {
+        td {
+          .date {
+            &[data-today] {
+              background-color: transparent;
+              color: var(--Primary-Green-100);
+
+              &[data-selected] {
+                background-color: var(--Primary-Green-100);
+                color: var(--Grayscale-0);
+                font-weight: 500;
+              }
+            }
+
+            &[data-selected] {
+              color: var(--Grayscale-0);
+              font-weight: variables.$fontWeightRegular;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 단순 정보성 form
+.input-info-box {
+  display: block;
+  width: 100%;
+  @include mixins.justify_width(center);
+  height: 44px;
+  padding: {
+    top: 6px;
+    right: 17px;
+    bottom: 6px;
+    left: 18px;
+  }
+  border: 1px solid  var(--Grayscale-30);
+  border-radius: 22px;
+  background-color: var(--Grayscale-0);
+
+  .unit {
+    flex-shrink: 0;
+    display: inline-block;
+    margin: {
+      top: 6px;
+      bottom: 6px;
+    };
+    @include mixins.font_size_md('md');
+    color: var(--Grayscale-50);
+    vertical-align: top;
+  }
+}
+

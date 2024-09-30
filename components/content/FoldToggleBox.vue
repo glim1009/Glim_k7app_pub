@@ -1,29 +1,33 @@
 <template>
   <div :class="className">
-    <FoldHeader @toggle-click="toggle" :class="{ 'is-active' : isOpen }">
+    <FoldHeader :class="{ 'is-active': isOpen }" @toggle-click="toggle">
       <slot name="header"></slot>
     </FoldHeader>
-    <Transition @enter="onEnter" name="fold">
-      <FoldCont ref="FoldContRef" :style="customStyle" :is-open="isOpen" v-if="isOpen">
-        <slot name="content" />
+    <Transition name="fold" @enter="onEnter">
+      <FoldCont v-if="isOpen" ref="FoldContRef" :style="customStyle" :cont-color="contColor" :is-open="isOpen">
+        <slot name="content"></slot>
       </FoldCont>
     </Transition>
   </div>
 </template>
 
 <script setup lang="ts">
-
 const props = withDefaults(defineProps<{
-  type?: 'cont' | 'box';
-  open?: boolean
+  type?: 'scont' | 'cont' | 'box';
+  color?: 'line-light-gray'; // border
+  contColor?: 'light-gray'; // content
+  open?: boolean;
 }>(), {
   type: 'box',
-  open: false
+  open: false,
 });
 
 const className = computed(() => {
   let cNm = 'fold';
-  if( props.type !== 'box' ) cNm += '-' + props.type;
+  if (props.type !== 'box')
+    cNm += `-${props.type}`;
+  if (props.type === 'scont' && props.color)
+    cNm += `-${props.color}`;
   cNm += '-box';
   return cNm;
 });
@@ -32,28 +36,28 @@ const isOpen = ref(false);
 const FoldContRef = ref<HTMLElement | null>(null);
 const FoldContHeight = ref();
 
-const toggle = () => {
+function toggle() {
   isOpen.value = !isOpen.value;
-};
+}
 
-const onEnter = (el, customStyle) => {
-  const {  height } = useElementSize(el);
-  //console.log( el, height.value );
+function onEnter(el, customStyle) {
+  const { height } = useElementSize(el);
+  // console.log( el, height.value );
   FoldContHeight.value = height.value;
   customStyle();
 }
 
-const customStyle = () => {
+function customStyle() {
   return {
-    '--content-height' : FoldContHeight.value + 'px'
-  }
-};
+    '--content-height': `${FoldContHeight.value}px`,
+  };
+}
 
 onMounted(() => {
-  //console.log(isOpen.value);
-  if( props.open ) isOpen.value = props.open;
+  // console.log(isOpen.value);
+  if (props.open)
+    isOpen.value = props.open;
 });
-
 </script>
 
 <style lang="scss" scoped>

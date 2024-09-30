@@ -19,8 +19,8 @@
     position: absolute;
     top: calc( 100% + 10px );
     padding: 12px;
-    background: variables.$colorWhite;
-    border: 1px solid variables.$colorGray40;
+    background: var(--Grayscale-0);
+    border: 1px solid var(--Grayscale-40);
     border-radius: 10px;
     @include mixins.font_size_md;
   }

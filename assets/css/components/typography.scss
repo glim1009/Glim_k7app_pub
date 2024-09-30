@@ -7,59 +7,59 @@
 
 /* s: font 컬러 */
 .fc-black {
-  color: variables.$colorBlack !important;
+  color: var(--Grayscale-100) !important;
 }
 
 .fc-spot {
-  color: variables.$colorGreen100 !important;
+  color: var(--Primary-Green-100) !important;
 }
 
 .fc-red {
-  color: variables.$colorRed100 !important;
+  color: var(--Primary-Red-100) !important;
 }
 
 .fc-orange {
-  color: variables.$colorOrange100 !important;
+  color: var(--Primary-Orange-100) !important;
 }
 
 .fc-gray90 {
-  color: variables.$colorGray90 !important;
+  color: var(--Grayscale-90) !important;
 }
 
 .fc-gray80 {
-  color: variables.$colorGray80 !important;
+  color: var(--Grayscale-80) !important;
 }
 
 .fc-gray70 {
-  color: variables.$colorGray70 !important;
+  color: var(--Grayscale-70) !important;
 }
 
 .fc-gray60 {
-  color: variables.$colorGray60 !important;
+  color: var(--Grayscale-60) !important;
 }
 
 .fc-gray50 {
-  color: variables.$colorGray50 !important;
+  color: var(--Grayscale-50) !important;
 
 }
 
 .fc-gray40 {
-  color: variables.$colorGray40 !important;
+  color: var(--Grayscale-40) !important;
 
 }
 
 .fc-gray30 {
-  color: variables.$colorGray30 !important;
+  color: var(--Grayscale-30) !important;
 
 }
 
 .fc-gray20 {
-  color: variables.$colorGray20 !important;
+  color: var(--Grayscale-20) !important;
 
 }
 
 .fc-gray10 {
-  color: variables.$colorGray10 !important;
+  color: var(--Grayscale-10) !important;
 
 }
 
@@ -97,6 +97,10 @@
 
 .ta-right {
   text-align: right !important;
+
+  .align-group {
+    justify-content: flex-end;
+  }
 }
 
 /* e: text 정렬 */
@@ -104,7 +108,7 @@
 /* s : text 줄바꿈 */
 .ellipsis {
   @include mixins.ellipsis(variables.$fontSizeSmLineHeight);
-  font-weight: inherit;
+  //font-weight: inherit;
 }
 
 .multi-ellipsis {
@@ -118,24 +122,57 @@
 /* s: stext */
 %textBreak {
   @include mixins.word_break;
-  color: variables.$colorGray80;
+  color: var(--Grayscale-80);
+}
+
+%typoStext {
+  @extend %textBreak;
+  @include mixins.font_size_md;
+
+  &.board-date {
+    color: var(--Grayscale-70);
+  }
+}
+
+%typoStextLg {
+  @extend %textBreak;
+  @include mixins.font_size_lg('lt');
+
+  &.board-date {
+    color: var(--Grayscale-70);
+  }
 }
 
 .stext { // 13px
-  @extend %textBreak;
-  @include mixins.font_size_md;
+  @extend %typoStext;
+
+  &-black, &-gray90, &-gray70, &-white {
+    @extend %typoStext;
+  }
 }
 
 .stext-lg { // 14px
-  @extend %textBreak;
-  @include mixins.font_size_lg('lt');
+  @extend %typoStextLg;
+
+  &-black, &-gray90, &-gray70, &-white {
+    @extend %typoStextLg;
+  }
 }
 
-.stext-xl { // 18px
-  @extend %textBreak;
-  @include mixins.font_size_3xl;
+.stext, .stext-lg { // color
+  &-black {
+    color: var(--Grayscale-100);
+  }
+  &-gray90 {
+    color: var(--Grayscale-90);
+  }
+  &-gray70 {
+    color: var(--Grayscale-70);
+  }
+  &-white {
+    color: var(--Grayscale-0);
+  }
 }
-
 /* e: stext */
 
 
@@ -143,21 +180,25 @@
 %barStyle {
   display: inline-block;
   @include mixins.font_size_lg('lt');
-  color: variables.$colorGray90;
+  color: var(--Grayscale-90);
   vertical-align: top;
 
-  &:after {
-    content: '';
-    display: inline-block;
-    width: 1px;
-    height: 12px;
-    background-color: variables.$colorGray30;
-    vertical-align: top;
-  }
+  &:not(:last-child) {
+    position: relative;
+    padding-right: 11px;
+    margin-right: 10px;
 
-  &:last-child {
     &:after {
-      content: initial;
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      @include mixins.prefix(transform, translateY(-50%));
+      display: inline-block;
+      width: 1px;
+      height: 12px;
+      background-color: var(--Grayscale-30);
+      vertical-align: top;
     }
   }
 
@@ -167,46 +208,64 @@
   }
 }
 
-%barTextStyle {
-  &:after {
-    margin: 3px 10px 0;
+%barLgStyle {
+  @extend %barStyle;
+  &:not(:last-child) {
+    padding-right: 25px;
+    margin-right: 24px;
+    &:after {
+      height: 14px;
+      background-color: var(--Grayscale-40);
+    }
   }
 }
 
 %barTBtnMdStyle {
   padding: 0 5px;
-  &:after {
-    margin: {
-      top: 5px;
-      left: 10px;
-    }
-  }
 }
 
-.bar-group {
+.bar-group, .bar-lg-group {
   @include mixins.justify_width(center, start, row, true);
   flex-wrap: wrap;
-
-  .bar-text, .bar-item {
-    @extend %barStyle;
-    @extend %barTextStyle;
-  }
-
   .bar-text {
     &-sm {
-      @extend %barStyle;
       @include mixins.font_size_md;
     }
 
     &-xs {
-      @extend %barStyle;
       @include mixins.font_size_sm;
     }
+  }
+}
+
+.bar-group { // gap 10px
+  [class^=bar-text], .bar-item {
+    @extend %barStyle;
   }
 
   .tbtn-md {
     @extend %barStyle;
     @extend %barTBtnMdStyle;
+  }
+}
+
+.bar-lg-group { // gap 24px
+
+  [class^=bar-text], .bar-item {
+    @extend %barLgStyle;
+  }
+
+  .tbtn-sm {
+    @extend %barLgStyle;
+    padding: 0 24px;
+
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+  }
+
+  [class^=tbtn] {
+    margin-top: 0;
   }
 }
 
@@ -224,7 +283,7 @@
     .bar-text {
       display: block;
       @include mixins.font_size_lg('lt');
-      color: variables.$colorGray90;
+      color: var(--Grayscale-90);
     }
 
     ~ .bar-item {
@@ -236,7 +295,7 @@
         left: -1px;
         display: block;
         width: 1px;
-        background-color: variables.$colorGray30;
+        background-color: var(--Grayscale-30);
         vertical-align: top;
       }
     }
@@ -276,12 +335,12 @@
   }
 
   &.origin {
-    color: variables.$colorGray60;
+    color: var(--Grayscale-60);
     text-decoration: line-through;
   }
 
   &.percent {
-    color: variables.$colorGreen100;
+    color: var(--Primary-Green-100);
     font-weight: variables.$fontWeightSemibold;
   }
 }
@@ -315,53 +374,10 @@
     margin-left: 4px;
   }
 }
-
-/* 라벨 + 재화/수량 [ex. 월 4,000원] */
-/*.goods-group {
-  @include mixins.justify_width(center, center, row, true);
-  font-size: inherit;
-  line-height: inherit;
-  letter-spacing: inherit;
-  font-weight: inherit;
-  @include mixins.font_size_md;
-
-  .label {
-    margin-right: 3px;
-    font-size: inherit;
-    line-height: inherit;
-    letter-spacing: inherit;
-    font-weight: inherit;
-  }
-
-  // 12px
-  &.size-xs {
-    @include mixins.font_size_xs('md');
-
-    .label {
-      margin-right: 2px;
-      font-weight: variables.$fontWeightRegular;
-    }
-  }
-
-  // 13px
-  &.size-sm {
-    @include mixins.font_size_sm;
-  }
-
-  // 15px
-  &.size-lg {
-    @include mixins.font_size_lg('sb');
-  }
-
-  // 16px
-  &.size-xl {
-    @include mixins.font_size_xl;
-  }
-}*/
 /* e: goods */
 
 /* s: text list */
-.dot-text, .dot-text-green, .dot-text-sm, .dot-text-sm-green, .info-text, .info-text-sm {
+.dot-text, .dot-text-green, .dot-text-sm, .dot-text-sm-green {
   position: relative;
   display: block;
   @include mixins.word_break;
@@ -387,75 +403,75 @@
 
 .dot-text {
   @extend %dotText;
-  color: variables.$colorGray70;
+  color: var(--Grayscale-70);
   @include mixins.font_size_md;
 
   &:before {
-    background-color: variables.$colorGray70;
+    background-color: var(--Grayscale-70);
   }
 }
 
 .dot-text-green {
   @extend %dotText;
-  color: variables.$colorGreen100;
+  color: var(--Primary-Green-100);
   @include mixins.font_size_md;
 
   &:before {
-    background-color: variables.$colorGreen100;
+    background-color: var(--Primary-Green-100);
   }
 }
 
 .dot-text-sm {
   @extend %dotText;
-  color: variables.$colorGray70;
+  color: var(--Grayscale-70);
   @include mixins.font_size_sm;
 
   &:before {
-    background-color: variables.$colorGray70;
+    background-color: var(--Grayscale-70);
   }
 }
 
 .dot-text-sm-green {
   @extend %dotText;
-  color: variables.$colorGreen100;
+  color: var(--Primary-Green-100);
   @include mixins.font_size_sm;
 
   &:before {
-    background-color: variables.$colorGreen100;
+    background-color: var(--Primary-Green-100);
   }
 }
-
-/*%dashText {
-    padding: {
-        left: 8px;
-    }
-
-    &:before {
-        display: block;
-        position: absolute;
-        left: 0;
-        content: '-';
-        top: 0;
-    }
-}
-
-.decimal-text {
-    padding-left: 15px;
-    font-weight: variables.$fontWeightRegular;
-    color: variables.$colorBlack;
-    text-indent: -15px;
-}*/
-
-// text-list
-.info-text-list {
-  [class^=dot-] {
-    ~ [class^=dot-] {
-      margin-top: 6px;
-    }
-  }
-}
-
 /* e: text-list */
+
+// 별점
+.rating {
+  @include mixins.justify_width(center);
+
+  [class^=ico-][class*=xs] {
+    margin-right: 2px;
+  }
+  [class^=ico-][class*=sm] {
+    margin: {
+      top: -1px;
+      right: 4px;
+    }
+  }
+
+  [class^=score] {
+    display: inline-block;
+    color: var(--Grayscale-100);
+    vertical-align: top;
+  }
+  .score-sm {
+    @include mixins.font_size_md('md');
+  }
+  .score-md {
+    @include mixins.font_size_lg('md');
+  }
+  .score-lg {
+    @include mixins.font_size_5xl;
+    font-weight: variables.$fontWeightBold;
+  }
+}
 
 
 /* e: Typography */

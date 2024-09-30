@@ -9,8 +9,8 @@
 
 <script setup lang="ts">
 const props = withDefaults(defineProps<{
-  color?: string;
-  size?: 'md' | 'sm' | 'xs'; // xs - 13px, sm - 14px, md - 15px
+  type?: 'underline' | 'right-arw';
+  size?: 'lg' | 'md' | 'sm' | 'xs'; // xs - 13px, sm - 14px, md - 15px, lg - 16px
   tag?: 'button' | 'a';
   name?: string;
   to?: string;
@@ -22,8 +22,9 @@ const props = withDefaults(defineProps<{
 const className = computed(() => {
   let cNm = 'tbtn';
   if(props.name) cNm += '-' + props.name;
-  if(props.color) cNm += '-' + props.color; // color 지정 안했을때 X
   cNm += '-' + props.size;
+  if(props.type === 'underline') cNm += '-udl';
+  if(props.type === 'right-arw') cNm += '-right-arw';
   return cNm;
 });
 </script>

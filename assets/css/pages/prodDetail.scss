@@ -1,0 +1,100 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.prod-detail-wrap {
+  .prod-detail-header {
+    .flex-center-group {
+      margin-bottom: 18px;
+
+      .flex-right {
+        .btn-flex-wrap {
+          margin: {
+            left: 0;
+            right: 0;
+          };
+
+          [class^=btn] {
+            ~ [class^=btn] {
+              margin-left: 15px;
+            }
+          }
+        }
+      }
+    }
+
+    [class^=ctitle][class*=wrap] {
+      ~ [class^=badge][class*=group] {
+        margin-top: 12px;
+      }
+    }
+
+    .goods-group {
+      @include mixins.justify_width;
+      flex-wrap: wrap;
+
+      :deep([class^=goods]) {
+        &:not(.origin) {
+          @include mixins.font_size_5xl;
+        }
+      }
+      .origin {
+        display: flex;
+        display: -webkit-flex;
+        justify-content: flex-start;
+        width: 100%;
+        margin-bottom: 4px;
+      }
+
+      .percent {
+        margin: {
+          left: 0;
+          right: 4px;
+        }
+        color: var(--Primary-Red-100);
+      }
+    }
+
+    .bar-group {
+      margin-top: 10px;
+    }
+  }
+
+  :deep(.fold-overflow-box) {
+    &.prod-detail-info-wrap {
+      .fold-header {
+        width: calc(100% + 40px);
+        margin: -16px -20px 0;
+        padding: 16px 15px 0;
+        background-color: var(--Grayscale-0);
+        position: relative;
+
+        .btn-fold-toggle {
+          height: 42px;
+          background-color: var(--Grayscale-0);
+          border: 1px solid var(--Grayscale-40);
+
+          .text {
+            @include mixins.font_size_lg;
+          }
+        }
+
+        &:after {
+          display: block;
+          content: '';
+          position: absolute;
+          bottom: 100%;
+          left: 0;
+          right: 0;
+          height: 30px;
+          background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+        }
+      }
+    }
+  }
+}
+
+.docker-opt-wrap {
+  z-index: 55;
+  pointer-events: auto;
+}

@@ -5,6 +5,16 @@
 .board-detail-wrap {
   .board-detail-header {
     padding: 20px;
+
+    :deep(.ctitle-zero-wrap) {
+      [class^=flex][class$=-group] {
+        .flex-right {
+          .btn-share {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -19,8 +29,18 @@
       :deep([class^=cont][class$=-wrap]) {
         &:last-child {
           flex: 1 0 auto;
+          /*padding-bottom: 30px;
+
+          &[class*="bz-"] {
+            padding-bottom: 0 !important;
+          }
+
+          &[class*="bs-"] {
+            padding-bottom: 20px !important;
+          }*/
         }
       }
     }
   }
 }
+

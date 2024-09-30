@@ -10,7 +10,7 @@
           <div class="thumb-prod-flex">
             <EThumbProdBox size="md">
               <template #thumb>
-                <img src="../../../assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
               </template>
             </EThumbProdBox>
             <div class="info-box">
@@ -20,7 +20,7 @@
                     7월 도시락 구독
                   </ETit>
                   <div class="stext">
-                    (30일간, 일 1회/총 30회)
+                    (31일간, 월 1회 30% / 총 20회)
                   </div>
                 </div>
                 <div class="flex-right">
@@ -166,8 +166,8 @@
                 <FlexGroup>
                   <div class="flex-left">
                     <span class="ui-chk">
-                      <input id="agreeChk01" type="checkbox" />
-                      <label for="agreeChk01"><span class="text-md">개인정보 수집 및 이용동의</span></label>
+                      <input id="agreeChk02" type="checkbox" />
+                      <label for="agreeChk02"><span class="text-md">개인정보 수집 및 이용동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
                     </span>
                   </div>
                   <div class="flex-right">
@@ -179,10 +179,52 @@
                 </FlexGroup>
               </li>
               <li class="ui-col-item">
-                <span class="ui-chk">
-                  <input id="agreeChk02" type="checkbox" />
-                  <label for="agreeChk02"><span class="text-md">매월 정기 결제 동의</span></label>
-                </span>
+                <FlexGroup>
+                  <div class="flex-left">
+                    <span class="ui-chk">
+                      <input id="agreeChk01" type="checkbox" />
+                      <label for="agreeChk01"><span class="text-md">PG사 전자금융거래 약관동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
+                    </span>
+                  </div>
+                  <div class="flex-right">
+                    <ETBtn tag="a" size="xs" to="javascript:">
+                      <span class="text">상세보기</span>
+                      <EIco name="arw-right" color="gray" size="xs" />
+                    </ETBtn>
+                  </div>
+                </FlexGroup>
+              </li>
+              <li class="ui-col-item">
+                <FlexGroup>
+                  <div class="flex-left">
+                    <span class="ui-chk">
+                      <input id="agreeChk01" type="checkbox" />
+                      <label for="agreeChk01"><span class="text-md">PG사 개인정보 수집 및 이용동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
+                    </span>
+                  </div>
+                  <div class="flex-right">
+                    <ETBtn tag="a" size="xs" to="javascript:">
+                      <span class="text">상세보기</span>
+                      <EIco name="arw-right" color="gray" size="xs" />
+                    </ETBtn>
+                  </div>
+                </FlexGroup>
+              </li>
+              <li class="ui-col-item">
+                <FlexGroup>
+                  <div class="flex-left">
+                    <span class="ui-chk">
+                      <input id="agreeChk01" type="checkbox" />
+                      <label for="agreeChk01"><span class="text-md">PG사 개인정보 제3자 제공동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
+                    </span>
+                  </div>
+                  <div class="flex-right">
+                    <ETBtn tag="a" size="xs" to="javascript:">
+                      <span class="text">상세보기</span>
+                      <EIco name="arw-right" color="gray" size="xs" />
+                    </ETBtn>
+                  </div>
+                </FlexGroup>
               </li>
             </RowListWrap>
           </div>
@@ -207,7 +249,7 @@
   </ContDocker>
 
   <!-- pop : 개인정보 수집 및 이용약관 -->
-  <PopDeliveryPersonalInfoAgree v-model:sta="popPersonalInfoAgree" />
+  <PopTermsPersonalInfoAgree v-model:sta="popPersonalInfoAgree" />
   <!-- // pop : 개인정보 수집 및 이용약관 -->
 </template>
 
@@ -237,24 +279,17 @@ watch(() => checkCheckBox.value, (newValue) => {
   updateCheckCount();
 });
 
-onMounted(() => {
-  if (agreeListRef.value instanceof Element) {
-    checkboxes = agreeListRef.value.querySelectorAll<HTMLInputElement>('input[type="checkbox"]');
-    totalCheckBox.value = checkboxes.length;
-    checkboxes.forEach((checkbox) => {
-      checkbox.addEventListener('change', updateCheckCount);
-    });
+watch(() => agreeListRef.value, (newValue) => {
+  if (!newValue)
+    return;
+  checkboxes = newValue.querySelectorAll<HTMLInputElement>("input[type=\"checkbox\"]");
+  totalCheckBox.value = checkboxes.length;
+  checkboxes.forEach((checkbox) => {
+    checkbox.removeEventListener("change", updateCheckCount);
+    checkbox.addEventListener("change", updateCheckCount);
+  });
 
-    updateCheckCount();
-  }
-});
-
-onUnmounted(() => {
-  if (agreeListRef.value instanceof Element) {
-    checkboxes.forEach((checkbox) => {
-      checkbox.removeEventListener('change', updateCheckCount);
-    });
-  }
+  updateCheckCount();
 });
 
 // 개인정보 수집 및 이용약관 팝업

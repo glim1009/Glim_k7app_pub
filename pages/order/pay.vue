@@ -5,7 +5,7 @@
 <script setup lang="ts">
 definePageMeta({
   title: '주문결제',
-  hideRightHeader: ['chat', 'search', 'cart'],
+  hideRightHeader: false,
 })
 
 </script>

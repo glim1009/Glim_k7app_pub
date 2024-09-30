@@ -3,13 +3,11 @@
 @use '../abstracts/mixins';
 
 .login-wrap {
-
   .rlist-wrap {
     + .ui-col-md-group {
-      margin-top: 0;
+      margin-top: 10px;
     }
   }
-
 
   .btn-flex-wrap { // 간편 로그인 버튼
     margin: 0;
@@ -30,7 +28,6 @@
       margin: 0 auto;
     }
   }
-
 }
 
 

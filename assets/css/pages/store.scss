@@ -1,0 +1,10 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.thumb-store-detail {
+  margin: {
+    left: -20px;
+    right: -20px;
+  };
+}

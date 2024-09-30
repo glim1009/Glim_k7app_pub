@@ -30,7 +30,7 @@
               </div>
               <div class="form-cont">
                 <div class="form-input-group valid-check">
-                  <EInputBox title="사업자등록번호 입력" placeholder="사업자등록번호 입력" />
+                  <EInputBox type="number" title="사업자등록번호 입력" placeholder="사업자등록번호 입력" />
                   <p class="valid-desc">
                     사업자등록번호를 입력해주세요.
                   </p>
@@ -63,7 +63,7 @@
                         <label for="attach02"><span class="offscreen">첨부파일 추가</span></label>
                         <div class="attach-img-wrap">
                           <div class="attach-img">
-                            <img src="/assets/images/temp/temp_attach_img_01.png" alt="임시 이미지" />
+                            <img src="/assets/images/temp/temp_attach_img_01.png" alt="첨부파일 이미지" />
                           </div>
                           <button type="button" class="btn-remove">
                             <EIco name="clear" color="black" size="sm">
@@ -81,7 +81,7 @@
                         <label for="attach03"><span class="offscreen">첨부파일 추가</span></label>
                         <div class="attach-img-wrap">
                           <div class="attach-img">
-                            <img src="/assets/images/temp/temp_attach_img_01.png" alt="임시 이미지" />
+                            <img src="/assets/images/temp/temp_attach_img_01.png" alt="첨부파일 이미지" />
                           </div>
                           <button type="button" class="btn-remove">
                             <EIco name="clear" color="black" size="sm">
@@ -99,7 +99,7 @@
                         <label for="attach03"><span class="offscreen">첨부파일 추가</span></label>
                         <div class="attach-img-wrap">
                           <div class="attach-img">
-                            <img src="/assets/images/temp/temp_attach_img_01.png" alt="임시 이미지" />
+                            <img src="/assets/images/temp/temp_attach_img_01.png" alt="첨부파일 이미지" />
                           </div>
                           <button type="button" class="btn-remove">
                             <EIco name="clear" color="black" size="sm">
@@ -117,7 +117,7 @@
                         <label for="attach03"><span class="offscreen">첨부파일 추가</span></label>
                         <div class="attach-img-wrap">
                           <div class="attach-img">
-                            <img src="/assets/images/temp/temp_attach_img_01.png" alt="임시 이미지" />
+                            <img src="/assets/images/temp/temp_attach_img_01.png" alt="첨부파일 이미지" />
                           </div>
                           <button type="button" class="btn-remove">
                             <EIco name="clear" color="black" size="sm">

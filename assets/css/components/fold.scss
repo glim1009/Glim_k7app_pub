@@ -4,6 +4,11 @@
 @use '../abstracts/mixins';
 
 %foldBoxComm {
+  margin: {
+    left: -5px;
+    right: -5px;
+  }
+
   .fold-header {
     @include mixins.justify_width(center);
     position: relative;
@@ -12,12 +17,16 @@
 
     :deep(.fold-title) {
       width: 100%;
-      color: variables.$colorBlack;
+      color: var(--Grayscale-100);
 
       [class^=btn][class$=xs] {
         position: relative;
         z-index: 2;
       }
+    }
+
+    :deep(.flex-center-group) {
+      width: 100%;
     }
 
     .btn-fold {
@@ -37,7 +46,7 @@
         width: 18px;
         height: 18px;
         vertical-align: top;
-        @include mixins.ratio_images('~/assets/images/common/comm_ico_arw_down_gray_sm');
+        @include mixins.svg_mask('/assets/images/common/comm_ico_arw_down_sm', var(--Grayscale-80));
         @include mixins.prefix(transform, rotateZ(0));
         @include mixins.prefix(transition, transform 0.25s 0.12s variables.$transEaseBounceBack);
       }
@@ -52,14 +61,16 @@
     }
   }
 
-  .fold-cont {
+  [class^=fold-cont] {
     margin-top: 16px;
   }
 }
 
 .fold-box,
-.fold-cont-box {
+.fold-cont-box,
+[class^=fold-scont][class*=box] {
   @extend %foldBoxComm;
+
   :deep([class^=btn-flex][class$=wrap]),
   :deep(:is([class^=line-light-gray], [class^=light-gray-], [class^=white], [class^=light-green])[class$=box]) {
     margin: {
@@ -71,20 +82,21 @@
 
 .fold-box {
   :deep(.fold-header) {
-    .fold-title {
-      :deep(.flex-center-group) {
-        .flex-right {
 
+    .fold-title {
+      margin-left: 5px;
+
+      .flex-center-group {
+        .flex-right {
           .goods {
             @include mixins.font_size_3xl('sb');
           }
         }
       }
     }
-
   }
 
-  .fold-cont {
+  [class^=fold-cont] {
     overflow: hidden;
     margin-top: 16px;
   }
@@ -101,7 +113,7 @@
         }
       }
     }
-    :deep(.fold-cont) {
+    :deep([class^=fold-cont]) {
       margin-top: 0;
     }
   }
@@ -109,10 +121,14 @@
 
 .fold-cont-box {
   border-radius: 15px;
-  background-color: variables.$colorWhite;
+  background-color: var(--Grayscale-0);
 
   .fold-header {
     padding: 20px 48px 20px 20px;
+
+    :deep(.fold-title) {
+      margin-left: 0;
+    }
 
     .btn-fold {
       &:after {
@@ -121,10 +137,43 @@
     }
   }
 
-  .fold-cont {
+  [class^=fold-cont] {
     margin-top: -20px;
     padding: 20px;
     border-radius: 15px;
+  }
+}
+
+[class^=fold-scont][class*=box] {
+  border-radius: 10px;
+  background-color: var(--Grayscale-0);
+
+  .fold-header {
+    padding: 15px 44px 15px 16px;
+
+    :deep(.fold-title) {
+      margin-left: 0;
+    }
+
+    .btn-fold {
+      &:after {
+        margin-right: 16px;
+      }
+    }
+  }
+
+  [class^=fold-cont] {
+    margin-top: 0;
+    padding: 16px;
+    border-top: 1px solid var(--Grayscale-30);
+  }
+}
+
+.fold-scont-line-light-gray-box {
+  border: 1px solid var(--Grayscale-30);
+
+  [class^=fold-cont-light-gray] {
+    background-color: var(--Grayscale-20);
   }
 }
 
@@ -136,9 +185,12 @@
     }
   }
 
-  .fold-cont {
+  [class^=fold-cont] {
     overflow: hidden;
-    height: var(--content-min-height);
+
+    &.is-mini {
+      height: var(--content-min-height);
+    }
 
     &.is-active {
       height: auto;

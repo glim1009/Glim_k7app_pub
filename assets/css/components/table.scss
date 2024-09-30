@@ -4,191 +4,207 @@
 
 // row 타입, col 타입
 %tblComm {
-    border-collapse: separate;
+  border-collapse: separate;
 
-    thead {
-        tr th {
-            padding: {
-                top: 14px;
-                bottom: 14px;
-            }
-            background-color: variables.$colorGray20;
-        }
+  thead {
+    tr th {
+      padding: {
+        top: 14px;
+        bottom: 14px;
+      }
+      background-color: var(--Grayscale-20);
+    }
+  }
+
+  tr {
+    th, td {
+      @include mixins.font_size_md;
+      vertical-align: middle;
+      padding: {
+        top: 14px;
+        bottom: 14px;
+      }
+
+      &.va-top {
+        vertical-align: top;
+      }
     }
 
-    tr {
-        th, td {
-            @include mixins.font_size_md;
-            vertical-align: middle;
-            padding: {
-                top: 14px;
-                bottom: 14px;
-            }
-
-            &.va-top {
-                vertical-align: top;
-            }
-        }
-
-        th {
-            font-weight: variables.$fontWeightSemibold;
-            color: variables.$colorGray90;
-        }
-
-        td {
-            background-color: variables.$colorWhite;
-            color: variables.$colorGray80;
-        }
+    th {
+      font-weight: variables.$fontWeightSemibold;
+      color: var(--Grayscale-90);
     }
+
+    td {
+      background-color: var(--Grayscale-0);
+      color: var(--Grayscale-80);
+    }
+  }
 }
 
 // info 타입
 %tblInfo {
-    tr {
-        th, td {
-            text-align: left;
-            vertical-align: top;
-            word-break: break-all;
-        }
+  tr {
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      word-break: break-all;
 
-        th {
-            padding-right: 10px;
-            color: variables.$colorGray90;
-            @include mixins.word_break;
-        }
-
-        td {
-            color: variables.$colorGray80;
-        }
+      &.va-mid {
+        vertical-align: middle;
+      }
     }
+
+    th {
+      padding-right: 10px;
+      color: var(--Grayscale-90);
+      @include mixins.word_break;
+    }
+
+    td {
+      color: var(--Grayscale-80);
+    }
+  }
 }
 
 .tbl-row-wrap {
 
-    border: {
-        top: 1px solid variables.$colorGray60;
-        bottom: 1px solid variables.$colorGray30;
-    }
+  border: {
+    top: 1px solid var(--Grayscale-60);
+    bottom: 1px solid var(--Grayscale-30);
+  }
 
-    .tbl-row {
-        @extend %tblComm;
+  .tbl-row {
+    @extend %tblComm;
 
-        tr {
-            th, td {
-                text-align: left;
-            }
-            th {
-                padding: {
-                    left: 14px;
-                    right: 10px;
-                }
-            }
-
-            td {
-                padding-right: 14px;
-                ~ td {
-                    border-left: 1px solid variables.$colorGray30;
-                }
-            }
-
-            ~ tr {
-                th, td {
-                    border-top: 1px solid variables.$colorGray30;
-                }
-            }
+    tr {
+      th, td {
+        text-align: left;
+      }
+      th {
+        padding: {
+          left: 14px;
+          right: 10px;
         }
+      }
+
+      td {
+        padding-right: 14px;
+        ~ td {
+          border-left: 1px solid var(--Grayscale-30);
+        }
+      }
+
+      ~ tr {
+        th, td {
+          border-top: 1px solid var(--Grayscale-30);
+        }
+      }
     }
+  }
 }
 
 .tbl-col-wrap {
 
-    border: {
-        top: 1px solid variables.$colorGray60;
-        bottom: 1px solid variables.$colorGray30;
-    }
+  border: {
+    top: 1px solid var(--Grayscale-60);
+    bottom: 1px solid var(--Grayscale-30);
+  }
 
-    .tbl-col {
-        @extend %tblComm;
+  .tbl-col {
+    @extend %tblComm;
 
-        tr {
-            th, td {
-                text-align: center;
-                padding: {
-                    left: 14px;
-                    right: 14px;
-                }
-            }
-
-            td {
-                color: variables.$colorGray90;
-            }
-
-            ~ tr {
-                td {
-                    border-top: 1px solid variables.$colorGray30;
-                }
-            }
-
-            th ~ th, td ~ td{
-                border-left: 1px solid variables.$colorGray30;
-            }
+    tr {
+      th, td {
+        text-align: center;
+        padding: {
+          left: 14px;
+          right: 14px;
         }
+      }
+
+      td {
+        color: var(--Grayscale-90);
+      }
+
+      ~ tr {
+        td {
+          border-top: 1px solid var(--Grayscale-30);
+        }
+      }
+
+      th ~ th, td ~ td{
+        border-left: 1px solid var(--Grayscale-30);
+      }
     }
+  }
 }
 
 // tbl-info-{gap}-wrap
-.tbl-info-md-wrap { // md 12px
-    [class^=tbl-info] {
-        @extend %tblInfo;
-        tr ~ tr {
-            th, td {
-                padding-top: 12px;
-            }
-        }
+.tbl-info-lg-wrap { // lg 12px
+  [class^=tbl-info] {
+    @extend %tblInfo;
+    tr ~ tr {
+      th, td {
+        padding-top: 12px;
+      }
     }
+  }
+}
+
+// tbl-info-{gap}-wrap
+.tbl-info-md-wrap { // md 8px
+  [class^=tbl-info] {
+    @extend %tblInfo;
+    tr ~ tr {
+      th, td {
+        padding-top: 8px;
+      }
+    }
+  }
 }
 
 .tbl-info-sm-wrap { // sm 6px
-    [class^=tbl-info] {
-        @extend %tblInfo;
-        tr ~ tr {
-            th, td {
-                padding-top: 6px;
-            }
-        }
+  [class^=tbl-info] {
+    @extend %tblInfo;
+    tr ~ tr {
+      th, td {
+        padding-top: 6px;
+      }
     }
+  }
 }
 
 [class^=tbl-info][class*=wrap] {
 
-    .tbl-info-md { // 13px
-        tr {
-            th {
-                @include mixins.font_size_md(sb);
-            }
+  .tbl-info-md { // 13px
+    tr {
+      th {
+        @include mixins.font_size_md(sb);
+      }
 
-            td {
-                @include mixins.font_size_md;
-            }
-        }
+      td {
+        @include mixins.font_size_md;
+      }
     }
+  }
 
-    .tbl-info-lg { // 14px
-        tr {
-            th {
-                @include mixins.font_size_lg(heading);
-            }
+  .tbl-info-lg { // 14px
+    tr {
+      th {
+        @include mixins.font_size_lg(heading);
+      }
 
-            td {
-                @include mixins.font_size_lg(lt);
-            }
-        }
+      td {
+        @include mixins.font_size_lg(lt);
+      }
     }
+  }
 }
 
-// tbl-info 여백
-[class^=tbl-info][class*=wrap] {
-    ~ [class^=tbl-info][class*=wrap] {
-        margin-top: 16px;
-    }
+// table 여백
+[class^=tbl][class*=wrap] {
+  + [class^=tbl][class*=wrap] {
+    margin-top: 16px;
+  }
 }

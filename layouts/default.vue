@@ -4,11 +4,12 @@
   </div>
   <div class="wrapper">
     <slot name="header">
-      <LayoutHeader :title="changeTitle" :hideRightHeader="changeRightHeader" />
+      <LayoutHeader :title="changeTitle" :hideRightHeader="changeRightHeader" :notBack="notBack" />
     </slot>
     <LayoutContainer id="container">
       <slot />
     </LayoutContainer>
+    <slot name="footer" />
     <LayoutFloating />
   </div>
 </template>
@@ -17,20 +18,30 @@
 
 interface RouteMetaWithLayout {
   hideRightHeader?: string[] | boolean;
-  title?: string | undefined;
+  title?: string | undefined | (() => string | undefined);
+  notBack?: boolean | undefined;
 }
-const routeMeta = useRoute().meta as RouteMetaWithLayout;
-
 
 const route = useRoute();
+const routeMeta = computed(() => route.meta as RouteMetaWithLayout);
 
-const changeTitle = ref<any>(routeMeta?.title || '');
-const changeRightHeader = ref<any>( routeMeta?.hideRightHeader || '');
+const changeTitle = ref<any>("");
+const notBack = ref<any>("");
+const changeRightHeader = ref<any>( "" || routeMeta?.value.hideRightHeader );
 
-watch( () => route.path, () => {
-  changeTitle.value = route.meta.title;
+watch(() => route.path, () => {
+  const metaTitle = routeMeta.value.title;
+  changeTitle.value = typeof metaTitle === "function" ? metaTitle(route) : (metaTitle || "");
+  notBack.value = routeMeta.value.notBack || false;
   if( route.meta.hideRightHeader ) changeRightHeader.value = route.meta.hideRightHeader;
+}, { immediate: true });
+
+watch(changeTitle, (newTitle) => {
+  if (newTitle) {
+    document.title = newTitle;
+  }
 });
+
 
 </script>
 

@@ -14,19 +14,19 @@
 [class^=ctitle-2xs] { // 13px
   @extend %ctitleCommon;
   @include mixins.font_size_md(sb);
-  color: variables.$colorGray90;
+  color: var(--Grayscale-90);
 }
 
 .ctitle-2xs-gray {
   @include mixins.font_size_md(body);
-  color: variables.$colorGray70;
+  color: var(--Grayscale-70);
 
 }
 
 .ctitle-xs { // 14px
   @extend %ctitleCommon;
   @include mixins.font_size_lg;
-  color: variables.$colorGray90;
+  color: var(--Grayscale-90);
 
   .ico-arwright-xs {
     margin: {
@@ -39,7 +39,7 @@
 .ctitle-sm { // 15px
   @extend %ctitleCommon;
   @include mixins.font_size_xl;
-  color: variables.$colorBlack;
+  color: var(--Grayscale-100);
 
   [class^=badge][class$=sm] {
     margin: {
@@ -52,25 +52,25 @@
 .ctitle-md { // 16px
   @extend %ctitleCommon;
   @include mixins.font_size_2xl;
-  color: variables.$colorBlack;
+  color: var(--Grayscale-100);
 }
 
 .ctitle-lg { // 18px
   @extend %ctitleCommon;
   @include mixins.font_size_3xl;
-  color: variables.$colorBlack;
+  color: var(--Grayscale-100);
 }
 
 .ctitle-xl { // 20px
   @extend %ctitleCommon;
   @include mixins.font_size_4xl;
-  color: variables.$colorBlack;
+  color: var(--Grayscale-100);
 }
 
 .ctitle-2xl { // 22px
   @extend %ctitleCommon;
   @include mixins.font_size_5xl;
-  color: variables.$colorBlack;
+  color: var(--Grayscale-100);
 }
 
 // ctitle-wrap size
@@ -120,6 +120,35 @@
 
 .ctitle-md-wrap {
   @extend %ctitleWrapMd;
+
+  .flex-end-group {
+    .flex-left {
+      .ctitle-md {
+        ~ .stext {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .flex-center-group {
+    .flex-left {
+      .ctitle-xl {
+        ~ [class^=stext-lg] {
+          margin: {
+            top: 0;
+            left: 6px;
+          }
+        }
+      }
+    }
+
+    .flex-right {
+      [class^=stext-lg] {
+        margin-top: 0;
+      }
+    }
+  }
 }
 
 .ctitle-lg-wrap {
@@ -139,24 +168,20 @@
     &-gray {
       @include mixins.font_size_md('md');
       margin-bottom: 4px;
-      color: variables.$colorGray70;
+      color: var(--Grayscale-70);
     }
   }
 
+  [class^=stext] {
+    margin-top: 4px;
 
-  .stext-lg {
+  }
+
+  [class^=stext-lg] {
     margin-top: 6px;
   }
 
-  .stext {
-    margin-top: 4px;
-
-    &.board-date {
-      color: variables.$colorGray70;
-    }
-  }
-
-  .stext {
+  .stext, .stext-black, .stext-gray90, .stext-gray70 {
     + .ctitle-xs {
       margin-top: 2px;
     }

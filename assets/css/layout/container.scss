@@ -4,22 +4,19 @@
 
 
 /*  container */
-/* 터치 가능한 환경에서 적용한 CSS */
-
 .wrapper {
-  &:has(.cont-docker-wrap) {
-    .container-wrapper {
-      padding-bottom: #{variables.$contDockerHeight};
-    }
-  }
-
   &:has(.header-wrapper) {
     .container-wrapper {
-      min-height: calc( 100dvh - #{variables.$headerHeight} );
+      padding-top: variables.$headerHeight;
+      min-height: 100dvh;
+    }
+  }
+  &:has(.header-wrapper.header-main) {
+    .container-wrapper {
+      padding-top: 0;
     }
   }
 }
-
 .container-wrapper {
   min-height: 100dvh;
   @include mixins.justify_width(stretch, start, column);

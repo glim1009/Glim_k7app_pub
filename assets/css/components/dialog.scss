@@ -7,7 +7,7 @@
   position: fixed;
   display: none;
   overflow: hidden;
-  background-color: variables.$colorWhite;
+  background-color: var(--Grayscale-0);
   width: 100%;
   max-width: 100%;
   border-radius: 20px;
@@ -22,12 +22,12 @@
 
     .dialog-title {
       @include mixins.font_size_2xl;
-      color: variables.$colorBlack;
+      color: var(--Grayscale-100);
     }
 
     .dialog-close {
       position: absolute;
-      top: 15px;
+      top: 20px;
       right: 20px;
     }
   }
@@ -47,7 +47,7 @@
   .dialog-footer {
     position: relative;
     padding: 1px 15px 16px;
-    background-color: variables.$colorWhite;
+    background-color: var(--Grayscale-0);
 
     &:before {
       content: '';
@@ -56,17 +56,45 @@
       right: 0;
       position: absolute;
       bottom: 100%;
-      background: linear-gradient(rgba(variables.$colorWhite, 0), rgba(variables.$colorWhite, 1));
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+    }
+
+    .dialog-btn-wrap,
+    .dialog-btn-auto-wrap {
+      @include mixins.justify_width(center);
     }
 
     .dialog-btn-wrap {
-      @include mixins.justify_width(center);
-
       [class^=btn] {
         width: 100%;
 
         ~ [class^=btn] {
           margin-left: 6px;
+        }
+      }
+    }
+
+    .dialog-btn-auto-wrap {
+      [class^=btn] {
+        ~ [class^=btn] {
+          flex: 1;
+          width: 100%;
+          margin-left: 6px;
+        }
+      }
+    }
+
+    &.not-gradient {
+      padding: 16px 15px;
+      &:before {
+        content: initial;
+      }
+
+      .dialog-banner-wrap {
+        margin: -16px -15px;
+
+        .thumb-box {
+          width: 100%;
         }
       }
     }
@@ -80,7 +108,7 @@
 
   &:not(:has(.dialog-footer)) {
     .dialog-body {
-      .cont-wrap:last-child {
+      [class^=cont][class*=-wrap]:last-child {
         padding-bottom: 20px;
       }
     }
@@ -105,6 +133,11 @@
       content: initial;
     }
   }
+
+  &:has(.has-promotion) {
+    max-height: calc(100% - 40px - 120px);
+    @include mixins.prefix(transform, translate(calc(-50% - 20px), calc(-50% - 80px)));
+  }
 }
 
 // type full
@@ -124,12 +157,35 @@
     .dialog-title {
       @include mixins.font_size_3xl('sb');
     }
+
+    &:has(.input-box) {
+      padding: {
+        top: 5px;
+        bottom: 5px;
+      }
+      .dialog-close {
+        top: 15px;
+      }
+    }
   }
 
   .dialog-body {
     .dialog-inner {
       min-height: 100%;
       @include mixins.justify_width(stretch, start, column);
+
+      .cont-wrap:last-child {
+        // 상품 cta 간격
+        &.has-prod-cta {
+          padding-bottom: 180px;
+        }
+      }
+    }
+  }
+
+  &:has(.has-prod-cta) {
+    .dialog-footer {
+      display: none;
     }
   }
 
@@ -147,6 +203,48 @@
   bottom: 0;
   margin-bottom: calc(100vh / 5 * -1);
   opacity: 1;
+
+
+  &:not(:has(.dialog-footer)) {
+    .dialog-body {
+      .cont-wrap:last-child {
+        padding-bottom: 20px;
+
+      }
+    }
+  }
+
+  .dialog-body {
+    .dialog-inner {
+      &.prod-opt-wrap {
+        overflow: hidden;
+        @include mixins.justify_width(stretch, start, column);
+
+        .cont-prod-opt {
+          @include mixins.justify_width(stretch, start, column);
+          flex: 1;
+          overflow: hidden;
+
+          .white-lg-box {
+            @include mixins.justify_width(stretch, start, column);
+            flex: 1;
+            max-height: 100%;
+            overflow: hidden;
+
+            .scroll-box {
+              flex: 1;
+              max-height: 100%;
+            }
+          }
+        }
+
+        &:has(.has-prod-cta) {
+          padding-bottom: 120px;
+        }
+      }
+    }
+  }
+
 
   .dialog-footer {
     padding-bottom: 16px;
@@ -212,10 +310,12 @@
       left: 16px;
       right: 16px;
     }
+
     &:before {
       content: initial;
     }
   }
 }
+
 
 /* e: custom popup */

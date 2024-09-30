@@ -8,9 +8,8 @@
   bottom: 0;
   right: 0;
   left: 0;
-  //height: calc(var(--sab) + #{variables.$contDockerHeight});
-  background: variables.$colorWhite;
-  padding: 0 15px calc(var(--sab) + 10px);
+  background: var(--Grayscale-0);
+  padding: 0 20px 10px;
 
   :deep(.btn-auto-wrap) {
     [class^=btn] {
@@ -32,5 +31,18 @@
     right: 0;
     height: 30px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+  }
+
+  :deep(.cont-docker-info) {
+    padding: 16px 0 6px;
+    @include mixins.justify_width(center, center);
+
+    [class^=ico] {
+      margin-right: 10px;
+    }
+
+    .stext-lg-black {
+      font-weight: variables.$fontWeightMedium;
+    }
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <NumberField :default-value="props.value" :min="props.min" :max="props.max">
+  <NumberField :default-value="value" :min="min" :max="max" :disabled="disabled">
     <NumberFieldContent>
       <NumberFieldDecrement />
       <NumberFieldInput />
@@ -18,9 +18,10 @@ import {
 } from '@/components/ui/number-field';
 
 const props = withDefaults(defineProps<{
-  value?: string | number;
-  min?: string | number;
-  max?: string | number;
+  value?: number | undefined;
+  min?: number | undefined;
+  max?: number | undefined;
+  disabled?: boolean;
 }>(), {
   value: 1,
   min: 1,

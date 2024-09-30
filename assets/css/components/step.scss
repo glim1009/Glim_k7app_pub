@@ -1,0 +1,140 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.step-list-wrap {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+  overflow: hidden;
+
+  .step-col-list {
+    width: 100%;
+    position: relative;
+    @include mixins.justify_width(center, between);
+
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      left: 0;
+      top: 4px;
+      height: 2px;
+      background-color: var(--Grayscale-30);
+      border-radius: 2px;
+      vertical-align: top;
+    }
+
+    &:has(.step-item:last-child.is-active) {
+      &:before {
+        background-color: var(--Primary-Green-100);
+      }
+    }
+
+    .step-item {
+      position: relative;
+      text-align: center;
+      padding-top: 16px;
+      flex: 1 0 auto;
+
+      .status {
+        @include mixins.font_size_md;
+        color: var(--Grayscale-90);
+      }
+
+      .sub-status {
+        display: block;
+        margin-top: -2px;
+        @include mixins.font_size_xs;
+        color: var(--Grayscale-60);
+      }
+
+      &:first-child {
+        flex: 0 0 auto;
+      }
+      &:last-child {
+        flex: 0 0 auto;
+      }
+
+      // green color 셋팅
+      &:before {
+        content: '';
+        position: absolute;
+        top: 4px;
+        display: block;
+        width: 100%;
+        height: 2px;
+        right: calc(50% + 2px);
+        background-color: var(--Primary-Green-100);
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        z-index: 10;
+        top: 1px;
+        left: 50%;
+        @include mixins.prefix(transform, translateX(-50%));
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 4px;
+        vertical-align: top;
+        background-color: var(--Grayscale-0);
+        border: 2px solid var(--Primary-Green-100);
+      }
+
+      &.is-active {
+        .status {
+          color: var(--Primary-Green-100);
+          font-weight: variables.$fontWeightSemibold;
+        }
+
+        // is-active 다음 gray로 초기화
+        ~ .step-item {
+          &:before {
+            width: 50%;
+            background-color: var(--Grayscale-30);
+          }
+          &:after {
+            border-color: var(--Grayscale-40);
+          }
+          .status, .sub-status{
+            color:  var(--Grayscale-60);
+          }
+        }
+      }
+    }
+  }
+
+  &:not(:has(.is-active)) {
+    &:before {
+      background-color: var(--Grayscale-30);
+    }
+
+    .step-col-list {
+      &:before {
+        background-color: var(--Grayscale-30);
+      }
+
+      .step-item {
+        &:after {
+          border-color: var(--Grayscale-40);
+        }
+        &:before {
+          background-color: var(--Grayscale-30);
+        }
+
+        .status {
+          color: var(--Grayscale-60);
+        }
+      }
+    }
+  }
+
+  ~ .fold-overflow-box,
+  ~ .light-gray-md-box {
+    margin-top: 16px;
+  }
+}

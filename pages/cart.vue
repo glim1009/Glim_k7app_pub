@@ -1,45 +1,37 @@
 <template>
   <TabWrap>
     <template #tabs>
-      <SwiperAutoWrap type="line">
-        <swiper-slide class="tab-item">
-          <NuxtLink class="tab-link" to="/cart" exact-active-class="is-active">
-            <span class="tab-text">당일픽업</span>
-          </NuxtLink>
-        </swiper-slide>
-        <swiper-slide class="tab-item">
-          <NuxtLink class="tab-link" to="/cart/reservation" exact-active-class="is-active">
-            <span class="tab-text">사전예약</span>
-          </NuxtLink>
-        </swiper-slide>
-        <swiper-slide class="tab-item">
-          <NuxtLink class="tab-link" to="/cart/discount" exact-active-class="is-active">
-            <span class="tab-text">구독할인</span>
-          </NuxtLink>
-        </swiper-slide>
-        <swiper-slide class="tab-item">
-          <NuxtLink class="tab-link" to="/cart/one-plus-one" exact-active-class="is-active">
-            <span class="tab-text">1+1</span>
-          </NuxtLink>
-        </swiper-slide>
-        <swiper-slide class="tab-item">
-          <NuxtLink class="tab-link" to="/cart/gift-card" exact-active-class="is-active">
-            <span class="tab-text">상품권</span>
+      <SwiperAutoWrap type="line" @swiper="onSwiper">
+        <swiper-slide v-for="(tab, index) in tabs" :key="index" class="tab-item">
+          <NuxtLink :class="['tab-link', {'is-active' : tab.path !== '' ? $route.path.includes( basePath + tab.path) : false }]" :to="basePath + tab.path" exact-active-class="is-active">
+            <span class="tab-text">{{ tab.text }}</span>
           </NuxtLink>
         </swiper-slide>
       </SwiperAutoWrap>
     </template>
     <NuxtPage />
   </TabWrap>
-
 </template>
 
 <script setup lang="ts">
+import { useLinkTabSwiper } from '~/composables/useFrontPub';
+
 definePageMeta({
-  title: '장바구니',
+  title: "장바구니",
   hideRightHeader: false,
 });
+const basePath = "/cart";
+const tabs = [
+  { path: "", text: "당일픽업" },
+  { path: "/reservation", text: "사전예약" },
+  { path: "/gift-card", text: "교환권" },
+  { path: "/discount", text: "구독할인" },
+  { path: "/voucher", text: "금액권" },
+];
+
+const { onSwiper } = useLinkTabSwiper(tabs, basePath);
 </script>
+
 
 <style lang="scss" scoped>
 

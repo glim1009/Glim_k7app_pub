@@ -9,67 +9,65 @@
       </button>
     </ContBox>
     <ContBox>
-      <SContLineBox>
-        <FlexGroup align="start">
-          <div class="flex-left">
-            <CtitleWrap size="zero">
-              <ETit text="추천매장 스마트 매칭" type="form" />
-              <div class="stext">
-                재고가 있는 가까운 매장을 추천해드릴까요?
+      <FlexGroup align="start">
+        <div class="flex-left">
+          <CtitleWrap size="zero">
+            <ETit text="추천매장 스마트 매칭" type="form" />
+            <div class="stext">
+              재고가 있는 가까운 매장을 추천해드릴까요?
+            </div>
+          </CtitleWrap>
+        </div>
+        <div class="flex-right">
+          <span class="ui-toggle">
+            <input id="recommendToggle01" type="checkbox" />
+            <label for="recommendToggle01"></label>
+          </span>
+        </div>
+      </FlexGroup>
+    </ContBox>
+    <ContBox size="sm" deco="t-line">
+      <div class="form-field">
+        <div class="form-title">
+          <FlexGroup align="center">
+            <div class="flex-left">
+              <ETit text="픽업시간선택" type="form" />
+            </div>
+            <div class="flex-right">
+              <div class="pickup-today">
+                오늘 2024년 7월 20일
               </div>
-            </CtitleWrap>
-          </div>
-          <div class="flex-right">
-            <span class="ui-toggle">
-              <input id="recommendToggle01" type="checkbox" />
-              <label for="recommendToggle01"></label>
-            </span>
-          </div>
-        </FlexGroup>
-      </SContLineBox>
-      <SContLineBox>
-        <div class="form-field">
-          <div class="form-title">
-            <FlexGroup align="center">
+            </div>
+          </FlexGroup>
+        </div>
+        <div class="form-cont">
+          <div class="form-input-group">
+            <FlexGroup>
               <div class="flex-left">
-                <ETit text="픽업시간선택" type="form" />
+                <div class="ui-select">
+                  <select title="픽업시간선택">
+                    <option>10시</option>
+                    <option>11시</option>
+                    <option>12시</option>
+                  </select>
+                </div>
               </div>
               <div class="flex-right">
-                <div class="pickup-today">
-                  오늘 2024년 7월 20일
+                <div class="ui-select">
+                  <select title="픽업시간선택">
+                    <option>20분</option>
+                    <option>30분</option>
+                    <option>40분</option>
+                  </select>
                 </div>
               </div>
             </FlexGroup>
           </div>
-          <div class="form-cont">
-            <div class="form-input-group">
-              <FlexGroup>
-                <div class="flex-left">
-                  <div class="ui-select">
-                    <select title="픽업시간선택">
-                      <option>10시</option>
-                      <option>11시</option>
-                      <option>12시</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="flex-right">
-                  <div class="ui-select">
-                    <select title="픽업시간선택">
-                      <option>20분</option>
-                      <option>30분</option>
-                      <option>40분</option>
-                    </select>
-                  </div>
-                </div>
-              </FlexGroup>
-            </div>
-            <p class="dot-text-sm">
-              결제 후에는 픽업시간을 변경할 수 없습니다.
-            </p>
-          </div>
+          <p class="dot-text-sm">
+            결제 후에는 픽업시간을 변경할 수 없습니다.
+          </p>
         </div>
-      </SContLineBox>
+      </div>
     </ContBox>
   </ContWrap>
   <ContWrap v-if="isData">
@@ -102,7 +100,7 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -130,6 +128,9 @@
                 <span class="offscreen">상품 삭제</span>
               </EIco>
             </button>
+            <NuxtLink class="btn-link" to="javascript:">
+              <span class="offscreen">바로가기</span>
+            </NuxtLink>
           </li>
           <!-- // 일반 상품 -->
           <!-- 할인 상품 -->
@@ -140,9 +141,9 @@
             </span>
             <!-- thumb-prod-flex -->
             <div class="thumb-prod-flex">
-              <EThumbProdBox size="md">
+              <EThumbProdBox size="md" dim="SOLD OUT">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -152,9 +153,6 @@
                 <ETit type="prod">
                   바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
                 </ETit>
-                <div class="stock">
-                  <EGoods size="sm" val="N" unit="개" /> 남음
-                </div>
               </div>
               <FlexGroup align="end">
                 <div class="flex-left">
@@ -175,6 +173,9 @@
                 <span class="offscreen">상품 삭제</span>
               </EIco>
             </button>
+            <NuxtLink class="btn-link" to="javascript:">
+              <span class="offscreen">바로가기</span>
+            </NuxtLink>
           </li>
           <!-- // 할인 상품 -->
           <!-- N+N 증정 상품 (증정품 미선택) -->
@@ -187,7 +188,7 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -203,7 +204,7 @@
               </div>
               <FlexGroup align="end">
                 <div class="flex-left">
-                  <ESpinner default-value="2" />
+                  <ESpinner :default-value="2" />
                 </div>
                 <div class="flex-right">
                   <div class="goods-group">
@@ -228,6 +229,9 @@
                 </EBtn>
               </BtnWrap>
             </ColorBox>
+            <NuxtLink class="btn-link" to="javascript:">
+              <span class="offscreen">바로가기</span>
+            </NuxtLink>
           </li>
           <!-- // N+N 증정 상품 (증정품 미선택) -->
           <!-- N+N 증정 상품 (증정품 선택) -->
@@ -240,7 +244,7 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -266,7 +270,7 @@
               <div class="thumb-prod-flex">
                 <EThumbProdBox size="md">
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -285,6 +289,9 @@
                 </EBtn>
               </BtnWrap>
             </ColorBox>
+            <NuxtLink class="btn-link" to="javascript:">
+              <span class="offscreen">바로가기</span>
+            </NuxtLink>
           </li>
           <!-- // N+N 증정 상품 (증정품 선택) -->
           <!-- N+N 증정 상품 (증정 가능 상품 안내) -->
@@ -297,7 +304,7 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -335,6 +342,9 @@
                 하나를 더 담으시면 1개를 더 드려요
               </p>
             </ColorBox>
+            <NuxtLink class="btn-link" to="javascript:">
+              <span class="offscreen">바로가기</span>
+            </NuxtLink>
           </li>
           <!-- // N+N 증정 상품 (증정 가능 상품 안내) -->
           <!-- 주류/와인 상품 -->
@@ -347,7 +357,7 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md" dim="19">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -380,6 +390,9 @@
                 <span class="offscreen">상품 삭제</span>
               </EIco>
             </button>
+            <NuxtLink class="btn-link" to="javascript:">
+              <span class="offscreen">바로가기</span>
+            </NuxtLink>
           </li>
           <!-- 주류/와인 상품 -->
         </RowListWrap>
@@ -403,7 +416,7 @@
                   </EIco>
                 </button>
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
                 </template>
               </EThumbProdBox>
               <!-- // thumb-prod-2xl -->
@@ -420,10 +433,10 @@
                   <EGoods size="md" val="2,700" unit="원" />
                 </div>
                 <div class="rating">
-                  <EIco name="rating" color="gray" size="xs">
+                  <EIco name="rating" color="gray50" size="xs">
                     <span class="offscreen">별점</span>
                   </EIco>
-                  <span class="score">4.0 (10)</span>
+                  <span class="score-sm">4.0 (10)</span>
                 </div>
               </div>
             </div>
@@ -444,7 +457,7 @@
                   </EIco>
                 </button>
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
                 </template>
               </EThumbProdBox>
               <!-- // thumb-prod-2xl -->
@@ -479,7 +492,7 @@
                   </EIco>
                 </button>
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
                 </template>
               </EThumbProdBox>
               <!-- // thumb-prod-2xl -->
@@ -494,10 +507,10 @@
                   <EGoods size="md" val="2,700" unit="원" />
                 </div>
                 <div class="rating">
-                  <EIco name="rating" color="gray" size="xs">
+                  <EIco name="rating" color="gray50" size="xs">
                     <span class="offscreen">별점</span>
                   </EIco>
-                  <span class="score">4.0 (10)</span>
+                  <span class="score-sm">4.0 (10)</span>
                 </div>
               </div>
             </div>
@@ -518,7 +531,7 @@
                   </EIco>
                 </button>
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
                 </template>
               </EThumbProdBox>
               <!-- // thumb-prod-2xl -->
@@ -535,10 +548,10 @@
                   <EGoods size="md" val="2,700" unit="원" />
                 </div>
                 <div class="rating">
-                  <EIco name="rating" color="gray" size="xs">
+                  <EIco name="rating" color="gray50" size="xs">
                     <span class="offscreen">별점</span>
                   </EIco>
-                  <span class="score">4.0 (10)</span>
+                  <span class="score-sm">4.0 (10)</span>
                 </div>
               </div>
             </div>
@@ -559,7 +572,7 @@
                   </EIco>
                 </button>
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
                 </template>
               </EThumbProdBox>
               <!-- // thumb-prod-2xl -->
@@ -576,10 +589,10 @@
                   <EGoods size="md" val="2,700" unit="원" />
                 </div>
                 <div class="rating">
-                  <EIco name="rating" color="gray" size="xs">
+                  <EIco name="rating" color="gray50" size="xs">
                     <span class="offscreen">별점</span>
                   </EIco>
-                  <span class="score">4.0 (10)</span>
+                  <span class="score-sm">4.0 (10)</span>
                 </div>
               </div>
             </div>
@@ -591,7 +604,7 @@
         </SwiperAutoWrap>
       </ColorBox>
       <BtnWrap size="md">
-        <EBtn tag="a" color="line-light-gray" size="md" to="javascript:">
+        <EBtn tag="a" color="line-gray" size="md" to="javascript:">
           <EIco name="plus" color="gray" size="sm" />
           <span class="text">상품 더 담기</span>
         </EBtn>
@@ -711,7 +724,7 @@
   <!-- // 데이터가 없는 경우 -->
 
   <!-- 데이터가 없는 경우  -->
-  <ContWrap v-if="isNoData" in-top="zero">
+  <ContWrap v-if="isNoData" in-top="zero" class="not-navbar">
     <InfoGuideWrap
       type="no-data"
       name="cart"
@@ -719,7 +732,7 @@
     />
     <BtnWrap type="auto-center" size="xl">
       <EBtn tag="a" color="line-light-gray" size="md" to="javascript:">
-        <span class="text">당일상품 픽업 둘러보기</span>
+        <span class="text">당일픽업 상품보기</span>
       </EBtn>
     </BtnWrap>
   </ContWrap>
@@ -731,11 +744,6 @@
 </template>
 
 <script setup lang="ts">
-definePageMeta({
-  title: '장바구니',
-  hideRightHeader: false,
-});
-
 const isData = ref(true);
 const isNoData = ref(true);
 
@@ -745,5 +753,5 @@ const openSelectFreeGift = () => popSelectFreeGift.value.open = true;
 </script>
 
 <style lang="scss" scoped>
-@import url("assets/css/pages/cart.scss");
+
 </style>

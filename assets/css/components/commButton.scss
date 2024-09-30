@@ -35,8 +35,8 @@ a, button {
   position: relative;
   padding: 5px 11px 4px;
   border-radius: 15px;
-  border: 1px solid variables.$colorGray40;
-  background-color: variables.$colorWhite;
+  border: 1px solid var(--Grayscale-40);
+  background-color: var(--Grayscale-0);
 
   &.is-active {
     &:after {
@@ -48,19 +48,24 @@ a, button {
       width: 6px;
       height: 6px;
       border-radius: 3px;
-      background-color: variables.$colorOrange100;
+      background-color: var(--Primary-Orange-100);
       vertical-align: top;
     }
   }
 }
 
+// 픽업매장선택 버튼
 .btn-store {
   @include mixins.justify_width(center);
-  width: 100%;
+  width: calc(100% + 10px);
+  margin: {
+    left: -5px;
+    right: -5px;
+  };
   padding: 13px 15px;
   border-radius: 15px;
-  border: 1px solid variables.$colorGreen100;
-  background-color: variables.$colorWhite;
+  border: 1px solid var(--Primary-Green-100);
+  background-color: var(--Grayscale-0);
 
   [class^=badge] {
     flex-shrink: 0;
@@ -78,6 +83,33 @@ a, button {
   [class^=ico] {
     flex-shrink: 0;
     margin-left: auto;
+  }
+}
+// 공유하기 버튼
+.btn-share {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.btn-bookmark {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  vertical-align: top;
+
+  .ico-bookmark {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: top;
+    @include mixins.svg_mask('/assets/images/common/comm_ico_bookmark', var(--Grayscale-40));
+  }
+
+  &.is-active {
+    .ico-bookmark {
+      background-color: #FFC634;
+      animation: bookmarkAnimation 0.2s variables.$easeInOutQuad forwards;
+    }
   }
 }
 

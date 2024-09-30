@@ -2,77 +2,132 @@
 @use '../abstracts/variables';
 @use '../abstracts/mixins';
 
-// 주소 검색 팝업
-.map-area {
-  position: relative;
-  width: 100%;
-  height: 100%;
 
-  .pin-location-state {
-    position: absolute;
-    text-align: center;
+// 결제수단관리
+.payment-info-box {
+  background: var(--Grayscale-0);
 
-    .info-area {
-      position: relative;
-      z-index: 10;
-      background-color: #333;
-      padding: 12px 20px;
-      border-radius: 20px;
-
-      &:before {
-        content: '';
-        position: absolute;
-        display: block;
-        left: 50%;
-        bottom: -6px;
-        width: 9px;
-        height: 6px;
-        transform: translateX(-50%);
-        @include mixins.ratio_images('/assets/images/my/bg_map_union_my');
+  .flex-right {
+    min-width: 68px;
+  }
+  .ctitle-sm-wrap {
+    .ui-chk-bookmark {
+      ~ .ctitle-sm {
+        margin-left: 6px;
       }
-
-      .location {
-        @include mixins.font_size_sm('rgl');
-        color: variables.$colorWhite;
-      }
-
-    }
-
-    .ico-current-marker {
-      display: inline-block;
-      max-width: 100%;
-      margin-top: 2px;
-      vertical-align: top;
     }
   }
 
-  .btn-access-location {
-    position: absolute;
-    z-index: 10;
+  .btn-auto-wrap {
+    margin-left: 16px;
+
+    .btn-payment-move {
+      margin-left: 16px;
+    }
+  }
+
+  .payment-info-area {
+
+    .flex-info-right {
+      margin-left: 10px;
+      .bar-group {
+        + [class^=stext] {
+          margin-top: 6px;
+        }
+      }
+    }
+  }
+}
+
+// 결제수단 리스트 내 아이템
+.item-payment {
+  padding: 20px 0;
+  margin: 0 20px;
+
+  + .item-payment {
+    border-top: 1px solid var(--Grayscale-30);
+  }
+}
+
+// 모바일 영수증
+.ctitle-md-wrap {
+  .receipt-date {
+    @include mixins.font_size_md;
+    color: var(--Grayscale-70);
+
+    ~ .ctitle-sm {
+      margin-top: 6px;
+    }
+  }
+}
+
+// 월별 선택
+.month-picker-wrap {
+  @include mixins.justify_width(center, center);
+  height: 51px;
+  gap: 11px;
+
+  .btn-month-prev,
+  .btn-month-next {
     display: block;
-    right: 20px;
-    bottom: 20px;
-    width: 50px;
-    height: 50px;
-    padding: 13px;
-    border-radius: 50%;
-    background: variables.$colorWhite;
-    box-shadow: 0 0 4px 0 rgba(variables.$colorBlack, .2);
+    width: 40px;
+    height: 100%;
+    padding: 0 11px;
+    @include mixins.svg_mask('/assets/images/common/comm_ico_arw_right_sm', var(--Grayscale-80), 18px 18px, center, no-repeat);
+
+    &[disabled] {
+      opacity: 0.4;
+    }
+  }
+  .btn-month-prev {
+    transform-origin: center;
+    @include mixins.prefix(transform, rotate(180deg));
   }
 
-}
-
-// 내 정보 관리
-.cont-md-box {
-  .tbl-col-wrap {
-    ~ .light-gray-lg-box { // 임시_컬러박스 상단여백 공통 규칙 적용예정
-      margin-top: 16px;
+  .date-group {
+    .year, .month {
+      @include mixins.font_size_2xl('md');
+      color: var(--Grayscale-100);
+    }
+    .month {
+      margin-left: 6px;
     }
   }
 }
 
-[class^=cont][class$=box] {
-  ~ .all-agree-wrap {
-    margin-top: 30px;
+// 마이페이지 메인
+.my-point-box {
+  margin: {
+    left: -5px;
+    right: -5px;
+  };
+  padding: 20px;
+  border-radius: 15px;
+  background: var(--Primary-Green-100);
+
+  [class^=ico] {
+    ~ .stext-lg-white {
+      margin-left: 4px;
+    }
+  }
+  .goods-xl {
+    color: var(--Grayscale-0);
   }
 }
+
+.my-service-link {
+  display: block;
+  width: 100%;
+
+  [class^=ico] {
+    ~ .stext-lg-black {
+      display: inline-block;
+      margin: {
+        top: 2px;
+        left: 10px;
+        bottom: 2px;
+      }
+    }
+  }
+}
+

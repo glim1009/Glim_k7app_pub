@@ -12,18 +12,6 @@ export default antfu({
     "no-alert": "off",
     "no-console": "off",
     "new-cap": "off",
-    "vue/html-self-closing": [
-      "warn",
-      {
-        html: {
-          void: 'always',
-          normal: 'never',
-          component: 'always',
-        },
-        svg: 'always',
-        math: 'always',
-      },
-    ],
     "prefer-promise-reject-errors": "off",
     "unused-imports/no-unused-vars": "off",
     "vue/block-order": ["error", {

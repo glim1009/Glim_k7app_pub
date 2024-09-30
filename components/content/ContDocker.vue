@@ -13,5 +13,5 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-@import url('~/assets/css/components/contDocker.scss');
+@import url('assets/css/components/contDocker.scss');
 </style>

@@ -20,19 +20,6 @@
     }
   }
 
-  &.justify-tab {
-    .tabs {
-      .tab-item {
-        flex: 1;
-        width: 100%;
-
-        .tab-link {
-          width: 100%;
-        }
-      }
-    }
-  }
-
   &:last-child {
     @include mixins.justify_width(stretch, start, column);
     flex: 1 0 auto;
@@ -54,35 +41,29 @@
         right: -5px;
       }
     }
+
+    &:has(.scroll-fix) {
+      position: sticky;
+      top: 55px;
+      z-index: 26;
+      background-color: var(--Grayscale-0);
+    }
   }
 }
 
 .tab-wrap {
   @extend %tabCommon;
 
-  .tabs {
-    position: relative;
-
-    .swiper-auto-line-wrap {
-      &:after {
-        content: '';
-        display: inline-block;
-        width: 100%;
-        height: 1px;
-        background-color: variables.$colorGray30;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-      }
-    }
+  .tab-list,
+  .tab-line-list {
+    @include mixins.justify_width;
   }
 
   // default (type box)
-  .swiper-auto-tab-wrap {
-    .swiper {
-      position: relative;
-      padding: 0 15px;
-    }
+  .swiper-auto-tab-wrap,
+  .tab-list {
+    position: relative;
+    padding: 0 15px;
 
     .tab-item {
       min-height: 40px;
@@ -91,23 +72,23 @@
         padding: 9px 16px;
         border-radius: 20px;
         border: 1px solid transparent;
-        background-color: variables.$colorGray20;
+        background-color: var(--Grayscale-20);
 
         .tab-text {
           @include mixins.font_size_lg('lt');
-          color: variables.$colorGray80;
+          color: var(--Grayscale-80);
         }
 
         &[disabled], &[aria-disabled=true], &.disabled {
-          background-color: variables.$colorGray30;
+          background-color: var(--Grayscale-30);
         }
 
         &.is-active {
-          border-color: variables.$colorGreen100;
-          background-color: variables.$colorWhite;
+          border-color: var(--Primary-Green-100);
+          background-color: var(--Grayscale-0);
 
           .tab-text {
-            color: variables.$colorGreen100;
+            color: var(--Primary-Green-100);
             font-weight: variables.$fontWeightSemibold;
           }
         }
@@ -115,11 +96,28 @@
     }
   }
 
+  .tab-list {
+    .tab-item {
+      .tab-link {
+        background-color: var(--Grayscale-30);
+      }
+    }
+  }
+
   // type line
-  .swiper-auto-line-wrap {
-    .swiper {
-      position: relative;
-      padding: 0 10px;
+  .swiper-auto-line-wrap,
+  .tab-line-list {
+    position: relative;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 100%;
+      height: 1px;
+      background-color: var(--Grayscale-30);
+      position: absolute;
+      bottom: 0;
+      left: 0;
     }
 
     .tab-item {
@@ -128,15 +126,15 @@
 
         .tab-text {
           @include mixins.font_size_2xl;
-          color: variables.$colorGray60;
+          color: var(--Grayscale-60);
         }
 
         &.is-active {
           .tab-text {
             position: relative;
-            color: variables.$colorGreen100;
+            color: var(--Primary-Green-100);
 
-            &:after {
+            &:before {
               content: '';
               display: inline-block;
               width: 100%;
@@ -147,12 +145,22 @@
               left: 0;
               right: 0;
               z-index: 1;
-              background-color: variables.$colorGreen100;
+              background-color: var(--Primary-Green-100);
             }
           }
         }
       }
     }
+  }
+
+  .swiper-auto-line-wrap {
+    .swiper {
+      padding: 0 10px;
+    }
+  }
+
+  .tab-line-list {
+    padding: 0 10px;
   }
 
   // type bar
@@ -164,13 +172,13 @@
 
         .tab-text {
           @include mixins.font_size_lg;
-          color: variables.$colorGray60;
+          color: var(--Grayscale-60);
         }
 
         &.is-active {
           .tab-text {
             font-weight: variables.$fontWeightSemibold;
-            color: variables.$colorGray90;
+            color: var(--Grayscale-90);
           }
         }
       }
@@ -183,8 +191,79 @@
           display: inline-block;
           width: 1px;
           height: 12px;
-          background-color: variables.$colorGray40;
+          background-color: var(--Grayscale-40);
           vertical-align: top;
+        }
+      }
+    }
+  }
+
+  &.justify-tab {
+    .tabs {
+
+      // default (box type)
+      .tab-list {
+        /*padding: 0 12px;*/
+        padding: 0 15px; // 디자인 검수
+
+        .tab-item {
+          padding: 0 3px;
+        }
+      }
+
+      // line type
+      .tab-line-list {
+        padding: 0 20px;
+      }
+
+      .swiper-auto-line-wrap,
+      .tab-line-list {
+        .tab-item {
+          .tab-link {
+            &.is-active {
+              position: relative;
+
+              &:before {
+                content: '';
+                display: inline-block;
+                width: 100%;
+                height: 2px;
+                border-radius: 1px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 1;
+                background-color: var(--Primary-Green-100);
+              }
+            }
+
+            .tab-text {
+              position: initial;
+
+              &:before {
+                content: initial;
+              }
+            }
+          }
+        }
+      }
+
+      .tab-item {
+        flex: 1;
+        width: 100%;
+
+        .tab-link {
+          @include mixins.justify_width(center, center);
+          width: 100%;
+        }
+      }
+
+      .tab-list {
+        gap: 6px;
+
+        .tab-item {
+          padding: 0;
         }
       }
     }

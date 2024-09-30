@@ -7,7 +7,7 @@
       sub-desc="선물한 상품은 문자로 전달되며<br />전달된 선물내역은 주문내역에서 확인 하실 수 있습니다."
     />
   </ContWrap>
-  <ContWrap>
+  <ContWrap class="not-navbar">
     <RowListWrap gap="2xl">
       <li class="item">
         <CtitleWrap>
@@ -16,12 +16,12 @@
         <ColorBox color="white" size="lg">
           <RowListWrap>
             <li class="item">
-              <span class="stext fw-md fc-gray90">
+              <span class="stext-gray90 fw-md">
                 010-2345-6789
               </span>
             </li>
             <li class="item">
-              <span class="stext fw-md fc-gray90">
+              <span class="stext-gray90 fw-md">
                 010-5678-9012
               </span>
             </li>
@@ -94,7 +94,7 @@
       </li>
     </RowListWrap>
     <BtnWrap type="full" size="xl">
-      <EBtn tag="a" color="line-light-gray" size="md" to="to">
+      <EBtn tag="a" color="line-light-gray" size="md" to="javascript:">
         <span class="text">주문내역</span>
       </EBtn>
     </BtnWrap>

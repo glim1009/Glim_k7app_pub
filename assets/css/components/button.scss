@@ -7,7 +7,7 @@
 %btnLgSize {
   height: 54px;
   padding: 0 24px;
-  border: 1px solid variables.$colorBlack;
+  border: 1px solid var(--Grayscale-100);
   border-radius: 27px;
 
   .text {
@@ -51,7 +51,7 @@
   border-radius: 22px;
 
   .text {
-    @include mixins.font_size_sm('sb');
+    @include mixins.font_size_md('sb');
 
     ~ [class^=ico] {
       margin-left: 4px;
@@ -66,7 +66,6 @@
 }
 
 %btnXsSize {
-  min-width: 52px;
   height: 30px;
   padding: 0 12px;
   border-radius: 15px;
@@ -92,11 +91,11 @@
 %colorGreen {
   @include mixins.justify_width(center, center, row, true);
 
-  background-color: variables.$colorGreen100;
-  border: 1px solid variables.$colorGreen100;
+  background-color: var(--Primary-Green-100);
+  border: 1px solid var(--Primary-Green-100);
 
   .text {
-    color: variables.$colorWhite;
+    color: var(--Grayscale-0);
   }
 
   &[disabled], &[aria-disabled=true], &.disabled {
@@ -104,19 +103,19 @@
   }
 
   &:active {
-    background-color: variables.$colorGreen120;
-    border: 1px solid variables.$colorGreen120;
+    background-color: var(--Primary-Green-120);
+    border: 1px solid var(--Primary-Green-120);
   }
 }
 
 %colorLightGreen {
   @include mixins.justify_width(center, center, row, true);
 
-  background-color: variables.$colorGreen10;
-  border: 1px solid variables.$colorGreen10;
+  background-color: var(--Primary-Green-10);
+  border: 1px solid var(--Primary-Green-10);
 
   .text {
-    color: variables.$colorGreen100;
+    color: var(--Primary-Green-100);
   }
 
   &[disabled], &[aria-disabled=true], &.disabled {
@@ -124,19 +123,19 @@
   }
 
   &:active {
-    background-color: variables.$colorGreen120;
-    border: 1px solid variables.$colorGreen120;
+    background-color: var(--Primary-Green-120);
+    border: 1px solid var(--Primary-Green-120);
   }
 }
 
 %colorGray {
   @include mixins.justify_width(center, center, row, true);
 
-  background-color: variables.$colorGray90;
-  border: 1px solid variables.$colorGray90;
+  background-color: var(--Grayscale-90);
+  border: 1px solid var(--Grayscale-90);
 
   .text {
-    color: variables.$colorWhite;
+    color: var(--Grayscale-0);
   }
 
   &[disabled], &[aria-disabled=true], &.disabled {
@@ -144,19 +143,19 @@
   }
 
   &:active {
-    background-color: variables.$colorGray80;
-    border: 1px solid variables.$colorGray80;
+    background-color: var(--Grayscale-80);
+    border: 1px solid var(--Grayscale-80);
   }
 }
 
 %colorLightGray {
   @include mixins.justify_width(center, center, row, true);
 
-  background-color: variables.$colorGray20;
-  border: 1px solid variables.$colorGray20;
+  background-color: var(--Grayscale-20);
+  border: 1px solid var(--Grayscale-20);
 
   .text {
-    color: variables.$colorGray80;
+    color: var(--Grayscale-80);
   }
 
   &[disabled], &[aria-disabled=true], &.disabled {
@@ -164,19 +163,19 @@
   }
 
   &:active {
-    background-color: variables.$colorGray30;
-    border: 1px solid variables.$colorGray30;
+    background-color: var(--Grayscale-30);
+    border: 1px solid var(--Grayscale-30);
   }
 }
 
 %colorLineGreen {
   @include mixins.justify_width(center, center, row, true);
 
-  background-color: variables.$colorWhite;
-  border: 1px solid variables.$colorGreen100;
+  background-color: var(--Grayscale-0);
+  border: 1px solid var(--Primary-Green-100);
 
   .text {
-    color: variables.$colorGreen100;
+    color: var(--Primary-Green-100);
   }
 
   &[disabled], &[aria-disabled=true], &.disabled {
@@ -184,18 +183,18 @@
   }
 
   &:active {
-    background-color: variables.$colorGreen10;
+    background-color: var(--Primary-Green-10);
   }
 }
 
 %colorLineOrange {
   @include mixins.justify_width(center, center, row, true);
 
-  background-color: variables.$colorWhite;
-  border: 1px solid variables.$colorOrange100;
+  background-color: var(--Grayscale-0);
+  border: 1px solid var(--Primary-Orange-100);
 
   .text {
-    color: variables.$colorOrange100;
+    color: var(--Primary-Orange-100);
   }
 
   &[disabled], &[aria-disabled=true], &.disabled {
@@ -203,18 +202,18 @@
   }
 
   &:active {
-    background-color: variables.$colorOrange10;
+    background-color: var(--Primary-Orange-10);
   }
 }
 
 %colorLineGray {
   @include mixins.justify_width(center, center, row, true);
 
-  background-color: variables.$colorWhite;
-  border: 1px solid variables.$colorGray60;
+  background-color: var(--Grayscale-0);
+  border: 1px solid var(--Grayscale-60);
 
   .text {
-    color: variables.$colorGray80;
+    color: var(--Grayscale-80);
   }
 
   &[disabled], &[aria-disabled=true], &.disabled {
@@ -222,18 +221,18 @@
   }
 
   &:active {
-    background-color: variables.$colorGray10;
+    background-color: var(--Grayscale-10);
   }
 }
 
 %colorLineLightGray {
   @include mixins.justify_width(center, center, row, true);
 
-  background-color: variables.$colorWhite;
-  border: 1px solid variables.$colorGray40;
+  background-color: var(--Grayscale-0);
+  border: 1px solid var(--Grayscale-40);
 
   .text {
-    color: variables.$colorGray70;
+    color: var(--Grayscale-70);
   }
 
   &[disabled], &[aria-disabled=true], &.disabled {
@@ -241,7 +240,7 @@
   }
 
   &:active {
-    background-color: variables.$colorGray10;
+    background-color: var(--Grayscale-10);
   }
 }
 
@@ -292,7 +291,6 @@ a.btn, button.btn {
   }
 
   &-gray {
-
     &-lg {
       @extend %colorGray;
       @extend %btnLgSize;
@@ -315,7 +313,6 @@ a.btn, button.btn {
   }
 
   &-light-gray {
-
     &-lg {
       @extend %colorLightGray;
       @extend %btnLgSize;
@@ -362,7 +359,6 @@ a.btn, button.btn {
   }
 
   &-line-orange {
-
     &-lg {
       @extend %colorLineOrange;
       @extend %btnLgSize;
@@ -385,7 +381,6 @@ a.btn, button.btn {
   }
 
   &-line-gray {
-
     &-lg {
       @extend %colorLineGray;
       @extend %btnLgSize;
@@ -408,7 +403,6 @@ a.btn, button.btn {
   }
 
   &-line-light-gray {
-
     &-lg {
       @extend %colorLineLightGray;
       @extend %btnLgSize;
@@ -432,105 +426,110 @@ a.btn, button.btn {
 }
 
 /* text button */
-.tbtn {
-  &-md {
+$tBtnSize: ('xs', 'sm', 'md', 'lg');
+%tbtnComm {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 1;
+
+  .text {
     display: inline-block;
+    color: var(--Grayscale-80);
     vertical-align: top;
-    line-height: 1;
-
-    .text {
-      display: inline-block;
-      color: variables.$colorGray80;
-      @include mixins.font_size_xl(sb);
-      vertical-align: top;
-
-      ~ [class^=ico] {
-        margin: {
-          top: 2px;
-          left: 2px;
-        }
-      }
-    }
-
-    [class^=ico] {
-      ~ .text {
-        margin-left: 6px;
-      }
-    }
   }
 
-  &-sm {
-    display: inline-block;
-    vertical-align: top;
-    line-height: 1;
-
-    .text {
-      display: inline-block;
-      color: variables.$colorGray80;
-      @include mixins.font_size_lg('md');
-      vertical-align: top;
-
-      ~ [class^=ico] {
-        margin: {
-          left: 6px;
-        }
-      }
-    }
-
-    [class^=ico] {
-      margin: {
-        top: 1px;
-        bottom: 1px;
-      }
-
-      ~ .text {
-        margin: {
-          left: 6px;
-        }
-      }
-    }
-  }
-
-  &-xs {
-    display: inline-block;
-    vertical-align: top;
-    line-height: 1;
-
-    .text {
-      display: inline-block;
-      color: variables.$colorGray80;
-      @include mixins.font_size_md(md, 18px);
-      vertical-align: top;
-
-      ~ [class^=ico] {
-        margin: {
-          left: 2px;
-        }
-      }
-    }
-
-    [class^=ico] {
-      ~ .text {
-        margin-left: 6px;
-      }
-    }
-
-    .ico-arwright-xs {
-      margin-top: 1px;
-    }
-
-    [class^=ico] {
-      ~ .text {
-        margin-left: 2px;
-      }
-    }
+  &[disabled], &[aria-disabled=true], &.disabled {
+    opacity: .4;
   }
 }
 
-/* text button gap */
-[class^=tbtn] {
-  + [class^=tbtn] {
-    margin-top: 10px;
+@each $size in $tBtnSize {
+  [class^=tbtn-][class*=#{$size}] {
+    @extend %tbtnComm;
+
+    @if ($size == 'xs') {
+      .text {
+        @include mixins.font_size_md('md');
+
+        ~ [class^=ico][class$=xs] {
+          margin: {
+            top: 1px;
+          }
+        }
+      }
+    } @else if ($size == 'sm') {
+      .text {
+        @include mixins.font_size_lg('md', 18px);
+
+        ~ [class^=ico][class$=xs] {
+          margin: {
+            top: 1px;
+          }
+        }
+      }
+
+      &[class*=-right-arw] {
+        position: relative;
+        display: block;
+        width: 100%;
+        text-align: left;
+
+        .text {
+          font-weight: variables.$fontWeightSemibold;
+          color: var(--Grayscale-100);
+        }
+
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          width: 16px;
+          height: 16px;
+          margin-top: -9px;
+          @include mixins.svg_mask('/assets/images/common/comm_ico_arw_right_xs', var(--Grayscale-80));
+        }
+      }
+
+    } @else if ($size == 'md') {
+      .text {
+        @include mixins.font_size_xl('md');
+      }
+
+    } @else if ($size == 'lg') {
+      .text {
+        @include mixins.font_size_2xl;
+        color: var(--Grayscale-100);
+
+        ~ [class^=ico] {
+          margin: {
+            top: 1px;
+          }
+        }
+      }
+    }
+
+    .text {
+      ~ [class^=ico] {
+        margin: {
+          left: 2px;
+        }
+      }
+    }
+
+    [class^=ico] {
+      ~ .text {
+        margin-left: 6px;
+      }
+    }
+
+    // type underline
+    &[class$=-udl] {
+      .text {
+        text-decoration: underline;
+      }
+    }
   }
 }
 
@@ -558,6 +557,10 @@ a.btn, button.btn {
 
     ~ [class^=btn] {
       margin-left: 6px;
+    }
+
+    &.btn-full {
+      flex-grow: 1;
     }
   }
 }
@@ -608,6 +611,17 @@ a.btn, button.btn {
         left: 0;
       }
     }
+    ~ [class^=tbtn] {
+      margin-top: 10px;
+    }
+  }
+  &:has([class^=bar][class$=group]) {
+    [class^=tbtn] {
+      width: auto;
+      ~ [class^=tbtn] {
+        margin-top: 0;
+      }
+    }
   }
 }
 
@@ -618,6 +632,22 @@ $btntSize: ('sm': 10px, 'md': 16px, 'lg': 24px, 'xl': 30px);
   margin: {
     left: -5px;
     right: -5px;
+  }
+
+  &.prod-detail {
+    gap: 6px;
+    > .btn-line-light-gray-lg {
+      padding: {
+        left: 14px;
+        right: 14px;
+      }
+    }
+
+    .btn-prod-wrap {
+      flex: 1 0 auto;
+      width: calc(100% - 80px);
+      margin: 0;
+    }
   }
 }
 
@@ -637,6 +667,58 @@ $btntSize: ('sm': 10px, 'md': 16px, 'lg': 24px, 'xl': 30px);
   @extend %btnFullWrap;
 }
 
+
+.btn-prod-wrap {
+  overflow: hidden;
+  @include mixins.justify_width(start, start);
+  margin: 0 -5px;
+  background-color: var(--Primary-Green-100);
+  border-radius: 27px;
+
+  [class^=btn-] {
+    position: relative;
+    flex: 1;
+    width: 100%;
+    min-width: auto;
+    border-radius: 0;
+
+    ~ [class^=btn-] {
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 1px;
+        height: 14px;
+        margin-top: -7px;
+        background-color: rgba(var(--Grayscale-0-RGB), 50%);
+        border-radius: 24px;
+      }
+    }
+  }
+
+  &:has(.cta-info-box) {
+    opacity: 0.4;
+  }
+
+  .cta-info-box {
+    position: relative;
+    flex: 1;
+
+    @include mixins.justify_width(center, center, row, true);
+    width: 100%;
+    height: 54px;
+    padding: 0 24px;
+
+    .text {
+      display: inline-block;
+      @include mixins.font_size_xl('sb');
+      color: var(--Grayscale-0);
+      text-align: center;
+      vertical-align: top;
+    }
+  }
+}
 
 @each $size, $px in $btntSize {
   .btn-flex-#{$size}-wrap {
@@ -664,3 +746,4 @@ $btntSize: ('sm': 10px, 'md': 16px, 'lg': 24px, 'xl': 30px);
     margin-top: $px;
   }
 }
+

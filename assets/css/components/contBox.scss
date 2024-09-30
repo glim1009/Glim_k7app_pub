@@ -13,17 +13,49 @@ $contGap: ('sm': 10px, 'md': 16px);
   .cont-#{$size}-box {
     &:not(:first-child) {
       margin-top: $px;
+
+      &.deco-tline {
+        border-top: 1px solid var(--Grayscale-30);
+        padding-top: $px;
+      }
+      &.deco-tfline {
+        position: relative;
+        padding-top: $px;
+
+        &:before {
+          position: absolute;
+          content: '';
+          top: 0;
+          left: -20px;
+          right: -20px;
+          height: 1px;
+          background-color: var(--Grayscale-30);
+        }
+      }
     }
 
-    &.deco-tline {
-      border-top: 1px solid variables.$colorGray30;
+    &:has(.map-wrap) {
+      flex: 1 0 auto;
+      @include mixins.justify_width(stretch, start, column);
+
+      :deep(.map-wrap) {
+        flex: 1 0 auto;
+      }
     }
 
     @each $gap, $px in $contGap {
       &.gap-#{$gap} {
-        :deep(:is([class^=white])[class*=box]) {
-          ~ [class^=white][class*=box] {
+        @include mixins.justify_width(stretch, start, column);
+        gap: $px;
+        /*:deep(:is([class^=line-light-gray], [class^=light-gray-], [class^=white], [class^=light-green])[class*=box]) {
+          ~ :is([class^=line-light-gray], [class^=light-gray-], [class^=white], [class^=light-green])[class*=box] {
             margin-top: $px;
+          }
+        }*/
+
+        @if ($gap == 'sm') {
+          :deep(> .ctitle-md-wrap) {
+            margin-bottom: 6px;
           }
         }
       }

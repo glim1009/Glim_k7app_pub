@@ -14,7 +14,7 @@
                 </div>
                 <div class="form-cont">
                   <div class="form-input-group">
-                    <EInputBox title="주소별칭 입력" placeholder="주소 별칭을 입력해 주세요. (ex. 우리집)" value="우리집"/>
+                    <EInputBox title="주소별칭 입력" placeholder="주소 별칭을 입력 (ex. 우리집)" value="우리집"/>
                   </div>
                 </div>
               </div>
@@ -26,7 +26,7 @@
                 </div>
                 <div class="form-cont">
                   <div class="form-input-group">
-                    <EInputBox title="이름 입력" placeholder="이름을 입력해 주세요." value="김세븐"/>
+                    <EInputBox title="이름 입력" placeholder="이름을 입력" value="김세븐"/>
                   </div>
                 </div>
               </div>
@@ -38,7 +38,7 @@
                 </div>
                 <div class="form-cont">
                   <div class="form-input-group">
-                    <EInputBox type="number" title="휴대폰 번호 입력" placeholder="휴대폰 번호를 입력해 주세요." value="01077771111"/>
+                    <EInputBox type="number" title="휴대폰 번호 입력" placeholder="휴대폰 번호를 입력" value="01077771111"/>
                   </div>
                 </div>
               </div>
@@ -52,7 +52,7 @@
                     </div>
                     <div class="flex-right">
                       <ETBtn tag="button" size="xs" @click="openCurrentAddress">
-                        <EIco name="current-location" size="sm"></EIco>
+                        <EIco name="current-location" color="gray" size="sm"></EIco>
                         <span class="text">현재 위치 주소에 추가</span>
                       </ETBtn>
                     </div>
@@ -60,7 +60,7 @@
                 </div>
                 <div class="form-cont">
                   <div class="form-input-group">
-                    <EInputBox type="search" enterkeyhint="search" title="주소 검색" placeholder="주소를 검색해주세요." value="(04684) 서울 강동구 상암로 15길" readonly>
+                    <EInputBox type="search" enterkeyhint="search" title="주소 검색" placeholder="주소검색" value="(04684) 서울 강동구 상암로 15길" readonly>
                       <button type="button" class="btn-input-search" @click="openSearchAddress">
                         <span class="offscreen">검색</span>
                       </button>
@@ -90,9 +90,9 @@
       <PopMySearchAddress v-model:sta="popSearchAddress" />
       <!-- // pop : 주소검색 -->
 
-      <!-- pop :현재 위치 주소 추가 -->
-      <PopMySearchAddress v-model:sta="popCurrentAddress" />
-      <!-- // pop :현재 위치 주소 추가 -->
+      <!-- pop : 현재 위치 주소 추가 -->
+      <PopMyCurrentAddress v-model:sta="popCurrentAddress" />
+      <!-- // pop : 현재 위치 주소 추가 -->
     </template>
   </ContDialog>
 </template>

@@ -10,9 +10,9 @@ $swiperType: ('', '-line', '-bar', '-tab');
   /* // swiper */
   .swiper-auto#{$type}-wrap {
     :deep(.swiper-slide) {
-      width: auto;
       position: relative;
-      margin: 0;
+      width: auto;
+      font-size: 0;
 
       :is([class^=line-light-gray], [class^=light-gray-], [class^=white], [class^=light-green])[class*=box] {
         margin: {
@@ -28,9 +28,66 @@ $swiperType: ('', '-line', '-bar', '-tab');
           @include mixins.multi_ellipsis(variables.$fontSizeMdLineHeight, 4, true);
         }
       }
-      // 상품
-      .thumb-prod {
 
+      // 쏘옥보관
+      .keep-prod-box {
+        width: 255px;
+      }
+
+      // 서비스 > 중카테고리
+      .link-service-sub-category {
+        position: relative;
+        display: block;
+        text-align: center;
+
+        .thumb-box {
+          @include mixins.justify_width(center, center);
+          width: 70px;
+          height: 70px;
+          border-radius: 35px;
+          background-color: var(--Grayscale-20);
+        }
+
+        .category-name {
+          margin-top: 4px;
+          @include mixins.font_size_md('body');
+          color: var(--Grayscale-100);
+          display: inline-block;
+          vertical-align: top;
+        }
+
+        &.all {
+          .thumb-box {
+            background-color: var(--Grayscale-0);
+            border: 1px solid var(--Primary-Green-100);
+          }
+
+          .category-name {
+            font-weight: variables.$fontWeightSemibold;
+          }
+        }
+      }
+
+      // 마이페이지 메인
+      .store-bookmark {
+        width: 200px;
+        min-height: 128px;
+
+        &:has(.store-add-wrap) {
+          @include mixins.justify_width(center, center);
+          border: 1px dashed var(--Grayscale-30);
+
+          .store-add-wrap {
+            flex-wrap: wrap;
+            text-align: center;
+
+            [class^=ico] {
+              ~ [class^=stext] {
+                margin-top: 8px;
+              }
+            }
+          }
+        }
       }
     }
 

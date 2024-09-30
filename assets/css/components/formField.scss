@@ -5,14 +5,16 @@
 .form-field {
   .form-title {
     .ctitle-xs {
-      color: variables.$colorGray90;
+      color: var(--Grayscale-90);
     }
 
-    .stext {
-      margin-top: 4px;
-    }
-    .stext-lg {
-      margin-top: 4px;
+    [class^=ctitle] {
+      ~ .stext {
+        margin-top: 4px;
+      }
+      ~ .stext-lg {
+        margin-top: 4px;
+      }
     }
 
     .flex-center-group {
@@ -22,11 +24,14 @@
         }
       }
     }
+
+    ~ .form-cont {
+      margin-top: 10px;
+    }
   }
 
   .form-cont {
     @include mixins.justify_width(stretch, start, column);
-    margin-top: 10px;
     row-gap: 10px;
 
     .form-input-group {

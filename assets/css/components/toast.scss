@@ -1,0 +1,81 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.toast-box {
+  position: fixed;
+  left: 10px;
+  right: 10px;
+  //bottom: 20px;
+  bottom: variables.$navbarHeight;
+  @include mixins.justify_width(center, center);
+  padding: 12px 16px;
+  border-radius: 15px;
+  background: var(--Grayscale-90);
+  backdrop-filter: blur(10px);
+  z-index: 99;
+
+
+  .toast-msg {
+    overflow: hidden;
+    width: calc(100% - 18px - 24px);
+    flex: 1 0 auto;
+    color: var(--Grayscale-0);
+    @include mixins.font_size_md;
+    text-align: center;
+
+    &.ta-left {
+      padding: {
+        left: 10px;
+        right: 10px;
+      }
+    }
+  }
+
+  .btn-close {
+    display: block;
+    width: 24px;
+    height: 24px;
+    padding: 3px;
+    margin: -3px;
+    flex-shrink: 0;
+  }
+
+  &.toast-enter-active {
+    @include mixins.prefix(animation, toastNavbarAnimation .35s variables.$transEaseBounceBack forwards);
+  }
+
+  &.toast-leave-active {
+    transition: opacity 0.25s;
+  }
+
+  &.toast-enter-from {
+    bottom: -2%;
+    opacity: 0;
+  }
+
+  &.toast-leave-to {
+    opacity: 0;
+  }
+}
+
+.wrapper {
+  &:has(.not-navbar) {
+    .toast-box {
+      bottom: 20px;
+
+      &.toast-enter-active {
+        @include mixins.prefix(animation, toastAnimation .35s variables.$transEaseBounceBack forwards);
+      }
+    }
+  }
+}
+
+body {
+  &:has(div[data-state="open"]) {
+    .toast-box.has-close {
+      z-index: 40;
+    }
+  }
+}
+

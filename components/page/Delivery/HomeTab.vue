@@ -1,25 +1,10 @@
 <template>
   <TabWrap>
     <template #tabs>
-      <SwiperAutoWrap type="line">
-        <swiper-slide class="tab-item">
-          <NuxtLink class="tab-link" to="/delivery" exact-active-class="is-active">
-            <span class="tab-text">홈</span>
-          </NuxtLink>
-        </swiper-slide>
-        <swiper-slide class="tab-item">
-          <NuxtLink class="tab-link" to="/delivery/situation" exact-active-class="is-active">
-            <span class="tab-text">예약현황</span>
-          </NuxtLink>
-        </swiper-slide>
-        <swiper-slide class="tab-item">
-          <NuxtLink class="tab-link" to="/delivery/search" exact-active-class="is-active">
-            <span class="tab-text">배송조회</span>
-          </NuxtLink>
-        </swiper-slide>
-        <swiper-slide class="tab-item">
-          <NuxtLink class="tab-link" to="/delivery/history" exact-active-class="is-active">
-            <span class="tab-text">이용내역</span>
+      <SwiperAutoWrap type="line" @swiper="onSwiper">
+        <swiper-slide v-for="(tab, index) in tabs" :key="index" class="tab-item">
+          <NuxtLink :class="['tab-link', {'is-active' : tab.path !== '' ? $route.path.includes( basePath + tab.path) : false }]" :to="basePath + tab.path" exact-active-class="is-active">
+            <span class="tab-text">{{ tab.text }}</span>
           </NuxtLink>
         </swiper-slide>
       </SwiperAutoWrap>
@@ -29,4 +14,14 @@
 </template>
 
 <script setup lang="ts">
+import { useLinkTabSwiper } from '~/composables/useFrontPub';
+const basePath = "/delivery";
+const tabs = [
+  { path: "", text: "홈" },
+  { path: "/situation", text: "예약현황" },
+  { path: "/search", text: "배송조회" },
+  { path: "/history", text: "이용내역" },
+];
+
+const { onSwiper } = useLinkTabSwiper(tabs, basePath);
 </script>

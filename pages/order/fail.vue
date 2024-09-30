@@ -1,5 +1,5 @@
 <template>
-  <ContWrap type="white" in-top="zero">
+  <ContWrap type="white" in-top="zero" class="not-navbar">
     <ContBox v-if="isNoStock">
       <InfoGuideWrap
         type="no-data"
@@ -42,7 +42,7 @@
       <ContBox size="lg">
         <ColorBox color="light-gray" class="ta-center">
           <div class="align-group">
-            <div class="stext-lg fw-sb fc-gray90">
+            <div class="stext-lg-gray90 fw-sb">
               실패사유
             </div>
             <div class="stext-lg fc-red">

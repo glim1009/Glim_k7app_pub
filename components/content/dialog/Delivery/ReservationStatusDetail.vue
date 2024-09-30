@@ -8,35 +8,37 @@
     <template #body>
       <div class="dialog-inner">
         <ContWrap type="white">
-          <BadgeGroup size="xl">
-            <EBadge color="gray" badge-text="일반택배" />
-            <EBadge color="green" badge-text="착한택배" />
-            <EBadge color="light-gray" badge-text="매장접수취소" />
-            <ETooltip>택배수거불가 및 기타 사유로 매장에서 접수 처리를 취소했습니다.</ETooltip>
-          </BadgeGroup>
-          <CtitleWrap>
-            <ETit text="반팔티 3팩" type="prod-detail" />
-            <div class="stext-lg">
-              매장의 택배접수기에 바코드를 스캔하여<br />택배를 접수해주세요.
-            </div>
-          </CtitleWrap>
-          <ColorBox color="line-light-gray" size="lg">
-            <div class="barcode-box">
-              <img src="/assets/images/temp/temp_img_barcode_delivery.svg" alt="일반택배 바코드" />
-              <!-- <img src="/assets/images/temp/temp_img_barcode_qr_delivery.svg" alt="착한택배 바코드"> -->
-            </div>
-          </ColorBox>
-          <BtnWrap size="md">
-            <EBtn color="light-gray">
-              <span class="text">예약취소</span>
-            </EBtn>
-          </BtnWrap>
+          <ContBox>
+            <BadgeGroup size="xl">
+              <EBadge color="gray" badge-text="일반택배" />
+              <EBadge color="green" badge-text="착한택배" />
+              <EBadge color="light-gray" badge-text="매장접수취소" />
+              <ETooltip>택배수거불가 및 기타 사유로 매장에서 접수 처리를 취소했습니다.</ETooltip>
+            </BadgeGroup>
+            <CtitleWrap>
+              <ETit text="반팔티 3팩" type="prod-detail" />
+              <div class="stext-lg">
+                매장의 택배접수기에 바코드를 스캔하여<br />택배를 접수해주세요.
+              </div>
+            </CtitleWrap>
+            <ColorBox color="line-light-gray" size="lg">
+              <div class="barcode-box">
+                <img src="/assets/images/temp/temp_img_barcode_delivery.svg" alt="일반택배 예약정보 바코드 이미지" />
+                <!-- <img src="/assets/images/temp/temp_img_barcode_qr_delivery.svg" alt="착한택배 예약정보 QR코드 이미지"> -->
+              </div>
+            </ColorBox>
+            <BtnWrap size="md">
+              <EBtn color="light-gray">
+                <span class="text">예약취소</span>
+              </EBtn>
+            </BtnWrap>
+          </ContBox>
         </ContWrap>
-        <ContWrap>
-          <CtitleWrap size="md">
-            <ETit text="예약정보" type="cont" />
-          </CtitleWrap>
-          <ContBox size="zero">
+        <ContWrap in-top="lg">
+          <ContBox gap="sm">
+            <CtitleWrap size="md">
+              <ETit text="예약정보" type="cont" />
+            </CtitleWrap>
             <ColorBox color="white" size="lg">
               <TableWrap type="info" gap="md" size="md" table-name="결제금액">
                 <colgroup>
@@ -44,30 +46,30 @@
                   <col style="width: auto;" />
                 </colgroup>
                 <tbody>
-                <tr>
-                  <th scope="row">
-                    결제금액
-                  </th>
-                  <td>3,400원</td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    예약일시
-                  </th>
-                  <td>2024.06.15 15:32</td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    물품금액
-                  </th>
-                  <td>5만원</td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    배송상품
-                  </th>
-                  <td>의류</td>
-                </tr>
+                  <tr>
+                    <th scope="row">
+                      결제금액
+                    </th>
+                    <td>3,400원</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      예약일시
+                    </th>
+                    <td>2024.06.15 15:32</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      물품금액
+                    </th>
+                    <td>5만원</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      배송상품
+                    </th>
+                    <td>의류</td>
+                  </tr>
                 </tbody>
               </TableWrap>
             </ColorBox>
@@ -171,6 +173,3 @@ function closeDialog() {
 }
 </script>
 
-<style lang="scss" scoped>
-  @import url('/assets/css/pages/delivery.scss');
-</style>

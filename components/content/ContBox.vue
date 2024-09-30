@@ -1,5 +1,5 @@
 <template>
-  <div :class="[className, { 'deco-tline': deco === 't-line' }, gapClass]">
+  <div :class="[className, { 'deco-tline': deco === 't-line' }, { 'deco-tfline': deco === 'tf-line' }, gapClass]">
     <slot></slot>
   </div>
 </template>
@@ -7,7 +7,7 @@
 <script setup lang="ts">
 const props = withDefaults(defineProps<{
   size?: 'zero' | 'xs' | 'sm' | 'md' | 'lg'; // zero - 0, xs - 10px, sm - 16px, md - 24px, lg - 30px
-  deco?: 't-line';
+  deco?: 't-line' | 'tf-line';
   gap?: 'sm' | 'md'; // sm - 10px, md - 16px
 }>(), {
   size: 'md',

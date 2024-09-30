@@ -8,15 +8,17 @@
   position: fixed;
   z-index: 20;
   right: 10px;
-  bottom: calc( 16px + var(--sab) );
+  //bottom: 16px;
+  bottom: variables.$navbarHeight;
 
   .btn-go-top {
     width: 40px;
     height: 40px;
-    background-color: rgba(variables.$colorWhite, 0.95);
-    border: 1px solid rgba(variables.$colorBlack, 0.1);
+    background-color: rgba(var(--Grayscale-0-RGB), 95%);
+    border: 1px solid rgba(var(--Grayscale-100-RGB), 10%);
     border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(variables.$colorBlack, 0.1);
+    box-shadow: 0 4px 10px rgba(var(--Grayscale-100-RGB), 10%);
+    backdrop-filter: blur(5px);
 
     .ico-top {
       @include mixins.prefix(transform, translateY(0));
@@ -27,8 +29,24 @@
 .wrapper {
   &:has(.cont-docker-wrap) {
     .floating-wrapper {
-      bottom: #{variables.$contDockerHeight + 24px};
+      bottom: #{ variables.$contDockerHeight - 14 };
     }
+  }
+  &:has(.not-navbar) {
+    .floating-wrapper {
+      bottom: 16px;
+    }
+    &:has(.cont-docker-wrap) {
+      .floating-wrapper {
+        bottom: #{ variables.$contDockerHeight - 14 };
+      }
+    }
+  }
+}
+body:has(.toast-box.has-close) {
+  .floating-wrapper {
+    @include mixins.prefix(transition, all 0.08s);
+    bottom: #{ variables.$navbarHeight + 48 + 14 };
   }
 }
 

@@ -11,7 +11,7 @@ const props = withDefaults(defineProps<{
     | 'orange' | 'light-orange' | 'line-orange' // orange
     | 'red' | 'light-red' | 'line-red' // red
     | 'gray' | 'light-gray' | 'line-gray'; // gray
-  size?: 'md' | 'sm'; // md - H22 , sm - H18
+  size?: 'lg' | 'md' | 'sm'; // lg - H24 , md - H22 , sm - H18
   badgeText?: string;
 }>(), {
   size: 'md',

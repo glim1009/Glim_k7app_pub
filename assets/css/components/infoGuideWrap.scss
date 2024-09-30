@@ -2,9 +2,7 @@
 @use '../abstracts/variables';
 @use '../abstracts/mixins';
 
-/* 안내성 컨텐츠 - 임시 class */
-
-.info-guide-wrap {
+[class^=info-guide][class$=wrap] {
   padding-top: 80px;
   text-align: center;
   @include mixins.word_break;
@@ -20,18 +18,23 @@
 
   .info-guide-desc {
     @include mixins.font_size_3xl;
-    color: variables.$colorBlack;
+    color: var(--Grayscale-100);
   }
 
   .no-data-desc {
     @include mixins.font_size_2xl;
-    color: variables.$colorBlack;
+    color: var(--Grayscale-100);
   }
 
   .sub-desc {
     margin-top: 6px;
     @include mixins.font_size_lg('lt');
-    color: variables.$colorGray70;
+    color: var(--Grayscale-70);
   }
 
+  &.info-guide-zero-wrap {
+    padding-top: 0;
+  }
 }
+
+

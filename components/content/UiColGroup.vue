@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 const props = withDefaults(defineProps<{
-  gap?: 'md' | 'lg'; // md - 10px, lg - 16px
+  gap?: 'sm' | 'md' | 'lg'; // sm - 6px, md - 10px, lg - 16px
 }>(), {
   gap: 'md',
 });

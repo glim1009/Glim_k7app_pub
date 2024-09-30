@@ -2,7 +2,7 @@
 @use '../abstracts/variables';
 @use '../abstracts/mixins';
 
-$listGapSize: ('sm': 6px, 'lg': 16px, 'xl': 24px);
+$listGapSize: ('sm': 6px, 'lg': 16px, 'xl': 24px, 'all-menu': 16px 0);
 $wrapSize: ('xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
 
 /* list */
@@ -27,8 +27,6 @@ $wrapSize: ('xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
     &:not(:first-child) {
       margin-top: $px;
     }
-
-
   }
 }
 
@@ -63,6 +61,7 @@ $wrapSize: ('xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
   }
 }
 
+// grid-col{i}-list
 @for $i from 2 through 6 {
   .grid-col#{$i}-list {
     @extend %gridListComm;
@@ -79,6 +78,49 @@ $wrapSize: ('xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
     :deep(.item-grid-full) {
       position: relative;
       grid-column: 1 / span #{$i};
+    }
+
+    @if ($i == 2) {
+      :deep(.item-grid) {
+        .light-gray-lg-box, .white-lg-box {
+          &.bg-normal-delivery, &.bg-kind-delivery {
+            position: relative;
+            height: 100%;
+            padding-bottom: 90px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+// grid prod list
+.grid-list {
+  &.gap-prod {
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 6px));
+    gap: 24px 12px;
+    margin: {
+      left: -5px;
+      right: -5px;
+    }
+
+    :deep(.item-grid) {
+      position: relative;
+
+      .thumb-prod {
+        .info-box {
+          margin: {
+            top: 12px;
+            left: 5px;
+            right: 5px;
+          }
+          .btn-auto-wrap {
+            //position: relative;
+            z-index: 2;
+          }
+        }
+      }
     }
   }
 }

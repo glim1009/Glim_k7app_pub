@@ -16,7 +16,7 @@
   }
   border: 1px solid transparent;
   border-radius: 22px;
-  background-color: variables.$colorGray20;
+  background-color: var(--Grayscale-20);
 
   .ui-input {
     height: 100%;
@@ -33,7 +33,7 @@
     display: none;
     width: 24px;
     height: 24px;
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_clear_gray_sm', 18px, center);
+    @include mixins.ratio_images('/assets/images/form/ico_clear_input_def', 18px, center);
     margin: {
       left: -3px;
       right: 7px;
@@ -47,7 +47,16 @@
     margin: {
       right: 10px;
     }
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_search_header', 24px, center);
+    @include mixins.ratio_images('/assets/images/common/comm_ico_search_header', 24px, center);
+  }
+
+  .btn-input-date {
+    width: 18px;
+    height: 18px;
+    margin: {
+      right: 10px;
+    }
+    @include mixins.ratio_images('/assets/images/common/comm_ico_calendar_sm', 18px, center);
   }
 
   .unit {
@@ -58,7 +67,7 @@
       bottom: 6px;
     };
     @include mixins.font_size_md('md');
-    color: variables.$colorGray70;
+    color: var(--Grayscale-70);
     vertical-align: top;
 
     &:last-child {
@@ -82,17 +91,23 @@
     margin: {
       right: 10px;
     }
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_toggle_password_hide', 18px, center);
+    @include mixins.ratio_images('/assets/images/common/comm_ico_toggle_password_hide', 18px, center);
 
     &.is-active {
-      @include mixins.ratio_images('~/assets/images/common/comm_ico_toggle_password_show', 18px, center);
+      @include mixins.ratio_images('/assets/images/common/comm_ico_toggle_password_show', 18px, center);
     }
   }
 
   &.is-focus {
-    border-color: variables.$colorGreen100;
-    background-color: variables.$colorWhite;
+    border-color: var(--Primary-Green-100);
+    background-color: var(--Grayscale-0);
     @include mixins.prefix(transition, border 0.2s ease-out);
+
+    .ui-input[type=search] {
+      &::placeholder {
+        color: transparent;
+      }
+    }
   }
 
   &.has-value {
@@ -106,11 +121,11 @@
   }
 
   &.is-disabled {
-    border-color: variables.$colorGray30;
-    background-color: variables.$colorWhite;
+    border-color: var(--Grayscale-30);
+    background-color: var(--Grayscale-0);
 
     .ui-input {
-      color: variables.$colorGray50;
+      color: var(--Grayscale-50);
     }
 
     .btn-input-del {
@@ -123,27 +138,53 @@
 .ui-input {
   @include mixins.clear_focus;
   @include mixins.font_size_lg('lt');
-  color: variables.$colorBlack;
+  color: var(--Grayscale-100);
   width: 100%;
 
   &::placeholder {
-    color: variables.$colorGray50;
+    color: var(--Grayscale-50);
   }
 }
 
 // default
 .input-box {
   @extend %inputBox;
+
+  &:has([class^=badge][class*=md]) {
+    &:has(.ui-input[type=search]) {
+      [class^=badge][class*=md] {
+        order: 1;
+        flex-shrink: 0;
+        margin-right: 10px;
+      }
+      .ui-input {
+        order: 2;
+      }
+      .btn-input-del {
+        order: 3;
+      }
+      .btn-input-search {
+        order: 4;
+      }
+    }
+  }
 }
 
 .flex-center-group {
-  .input-box, .ui-select {
+  .input-box, .ui-select, .datepicker-box, .input-info-box {
     flex: 1;
   }
 
   .gap {
     display: inline-block;
-    margin: 0 6px;
+    margin: {
+      left: 6px;
+    };
+    @include mixins.font_size_2xl('md');
     vertical-align: top;
+
+    ~ :deep(.flex-right) {
+      margin-left: 6px;
+    }
   }
 }

@@ -28,7 +28,7 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -36,7 +36,7 @@
                   7월 모닝 구독
                 </ETit>
                 <div class="stext">
-                  (31일간, 월1회 / 총 20회)
+                  (31일간, 월 1회 30% / 총 20회)
                 </div>
                 <div class="goods-group">
                   <span class="label">월</span>
@@ -50,6 +50,9 @@
                 <span class="offscreen">상품 삭제</span>
               </EIco>
             </button>
+            <NuxtLink class="btn-link" to="javascript:">
+              <span class="offscreen">바로가기</span>
+            </NuxtLink>
           </li>
           <li class="item-thumb-prod">
             <span class="ui-chk">
@@ -60,7 +63,7 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -68,7 +71,7 @@
                   7월 모닝 구독
                 </ETit>
                 <div class="stext">
-                  (31일간, 월1회 / 총 20회)
+                  (31일간, 월 1회 30% / 총 20회)
                 </div>
                 <div class="goods-group">
                   <span class="label">월</span>
@@ -82,6 +85,9 @@
                 <span class="offscreen">상품 삭제</span>
               </EIco>
             </button>
+            <NuxtLink class="btn-link" to="javascript:">
+              <span class="offscreen">바로가기</span>
+            </NuxtLink>
           </li>
           <li class="item-thumb-prod">
             <span class="ui-chk">
@@ -92,7 +98,7 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -100,7 +106,7 @@
                   7월 모닝 구독
                 </ETit>
                 <div class="stext">
-                  (31일간, 월1회 / 총 20회)
+                  (31일간, 월 1회 30% / 총 20회)
                 </div>
                 <div class="goods-group">
                   <span class="label">월</span>
@@ -114,6 +120,9 @@
                 <span class="offscreen">상품 삭제</span>
               </EIco>
             </button>
+            <NuxtLink class="btn-link" to="javascript:">
+              <span class="offscreen">바로가기</span>
+            </NuxtLink>
           </li>
           <!-- 품절 상품 -->
           <li class="item-thumb-prod">
@@ -123,9 +132,9 @@
             </span>
             <!-- thumb-prod-flex -->
             <div class="thumb-prod-flex">
-              <EThumbProdBox size="md" dim="soldOut">
+              <EThumbProdBox size="md" dim="SOLD OUT">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -133,7 +142,7 @@
                   7월 모닝 구독
                 </ETit>
                 <div class="stext">
-                  (31일간, 월1회 / 총 20회)
+                  (31일간, 월 1회 30% / 총 20회)
                 </div>
                 <div class="goods-group">
                   <span class="label">월</span>
@@ -147,6 +156,9 @@
                 <span class="offscreen">상품 삭제</span>
               </EIco>
             </button>
+            <NuxtLink class="btn-link" to="javascript:">
+              <span class="offscreen">바로가기</span>
+            </NuxtLink>
           </li>
           <!-- // 품절 상품 -->
           <!-- 구매불가 상품 -->
@@ -159,7 +171,7 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md" dim="구매불가">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -167,7 +179,7 @@
                   7월 모닝 구독
                 </ETit>
                 <div class="stext">
-                  (31일간, 월1회 / 총 20회)
+                  (31일간, 월 1회 30% / 총 20회)
                 </div>
                 <div class="goods-group">
                   <span class="label">월</span>
@@ -181,12 +193,15 @@
                 <span class="offscreen">상품 삭제</span>
               </EIco>
             </button>
+            <NuxtLink class="btn-link" to="javascript:">
+              <span class="offscreen">바로가기</span>
+            </NuxtLink>
           </li>
           <!-- // 구매불가 상품 -->
         </RowListWrap>
       </ColorBox>
       <BtnWrap size="md">
-        <EBtn color="line-light-gray" size="md">
+        <EBtn tag="a" color="line-gray" size="md" to="javascript:">
           <EIco name="plus" color="gray" size="sm" />
           <span class="text">상품 더 담기</span>
         </EBtn>
@@ -233,15 +248,15 @@
   </ContDocker>
 
   <!-- 데이터가 없는 경우  -->
-  <ContWrap v-if="isNoData" in-top="zero">
+  <ContWrap v-if="isNoData" in-top="zero" class="not-navbar">
     <InfoGuideWrap
       type="no-data"
       name="cart"
       desc="장바구니에 담긴 상품이 없습니다."
     />
     <BtnWrap type="auto-center" size="xl">
-      <EBtn tag="a" color="line-light-gray" size="md" to="to">
-        <span class="text">구독할인 상품 둘러보기</span>
+      <EBtn tag="a" color="line-light-gray" size="md" to="javascript:">
+        <span class="text">구독할인 상품보기</span>
       </EBtn>
     </BtnWrap>
   </ContWrap>
@@ -249,11 +264,6 @@
 </template>
 
 <script setup lang="ts">
-definePageMeta({
-  title: '장바구니',
-  hideRightHeader: false,
-});
-
 const isData = ref(true);
 const isNoData = ref(true);
 </script>

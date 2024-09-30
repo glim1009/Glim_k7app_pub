@@ -4,16 +4,15 @@
 
 /*  header */
 .header-wrapper {
-  position: relative;
   z-index: 27;
-  padding-top: variables.$headerHeight;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
 
   .header-box {
     @include mixins.justify_width(center);
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
+
     height: variables.$headerHeight;
     padding: {
       top: 16px;
@@ -21,7 +20,7 @@
       left: 20px;
       bottom: 16px;
     }
-    background: variables.$colorWhite;
+    background: var(--Grayscale-0);
 
     .header-left {
       width: 100%;
@@ -37,7 +36,7 @@
       .ptitle {
         @include mixins.font_size_3xl;
         @include mixins.ellipsis(false);
-        color: variables.$colorBlack;
+        color: var(--Grayscale-100);
         padding-right: 5px;
       }
     }
@@ -47,7 +46,18 @@
       @include mixins.justify_width(center);
 
       .btn-header-util {
+        position: relative;
         padding: 0 5px;
+
+        .new {
+          position: absolute;
+          top: 0;
+          right: 5px;
+          width: 4px;
+          height: 4px;
+          border-radius: 4px;
+          background: var(--Primary-Orange-100);
+        }
 
         &.cart {
           position: relative;
@@ -58,13 +68,17 @@
             z-index: 2;
             top: -4px;
             left: 20px;
+            min-width: 17px;
+            height: 16px;
             display: inline-block;
-            padding: 2px 6px 3px;
+            padding: 2px 6px 1px;
             border-radius: 9px;
             background-color: #FF6C00;
             box-shadow: 0 2px 6px 0 rgba(255, 108, 0, .2);
-            @include mixins.font_size_xs;
-            color: variables.$colorWhite;
+            font-size: 10px;
+            line-height: 12px;
+            letter-spacing: variables.$letterSpacing;
+            color: var(--Grayscale-0);
             vertical-align: top;
           }
         }
@@ -77,9 +91,113 @@
     }
 
     .input-box {
-      flex: 1 0 auto;
+      flex: 1;
       margin-right: 9px;
     }
+  }
+
+  &.header-main {
+
+    .header-box {
+      background: transparent;
+
+      .addr-info {
+        width: 100%;
+        line-height: normal;
+
+        .btn-addr {
+          @include mixins.justify_width(center, center, row, true);
+          max-width: 100%;
+
+          .text {
+            flex: 1 0 auto;
+            @include mixins.ellipsis;
+            max-width: calc(100% - 18px);
+          }
+
+          .ico-arw-right-gray-sm {
+          }
+        }
+      }
+    }
+
+    &:not(.type-white) {
+
+      .header-box {
+        .addr-info {
+          position: relative;
+        }
+
+        .btn-addr {
+          .text {
+            color: var(--Grayscale-0);
+          }
+
+          .ico-arw-right-gray-sm {
+            background: var(--Grayscale-0);
+          }
+        }
+
+        .btn-header-util {
+          [class^=ico-] {
+            background: var(--Grayscale-0);
+          }
+        }
+      }
+    }
+
+    &.type-white {
+      @include mixins.prefix(transition, background-color 0.3s variables.$easeInOutQuad);
+      background: var(--Grayscale-0);
+    }
+
+    .bubble-box {
+      position: absolute;
+      top: 100%;
+      left: 15px;
+      @include mixins.justify_width(center, center);
+      max-width: calc(100vw - 30px);
+      padding: 6px 13px 6px 18px;
+      background-color: var(--Primary-Green-100);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: -6px;
+        left: 30px;
+        width: 12px;
+        height: 15px;
+        @include mixins.svg_mask('/assets/images/main/ico_bubble_arr', rgba(var(--Primary-Green-100-RGB), 90%));
+      }
+
+      .text {
+        @include mixins.font_size_md('md');
+        color: var(--Grayscale-0);
+        padding-right: 10px;
+        width: calc(100% - 18px - 24px);
+        flex: 1 0 auto;
+      }
+
+      .btn-close {
+        display: block;
+        width: 24px;
+        height: 24px;
+        padding: 3px;
+        margin: -3px;
+        flex-shrink: 0;
+      }
+    }
+    .bubble-leave-active {
+      @include mixins.prefix(transition, opacity 0.25s variables.$easeInOutQuad);
+    }
+
+    .bubble-leave-to,
+    .bubble-leave-to {
+      opacity: 0;
+    }
+
   }
 }
 

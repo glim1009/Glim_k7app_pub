@@ -1,14 +1,21 @@
 <template>
-  <div class="fold-cont">
-    <slot />
+  <div :class="className">
+    <slot></slot>
   </div>
 </template>
 
 <script setup lang="ts">
-defineProps<{
-  isOpen: boolean
+const props = defineProps<{
+  isOpen: boolean;
+  contColor?: string;
 }>();
 
+const className = computed(() => {
+  let cNm = 'fold-cont';
+  if (props.contColor)
+    cNm += `-${props.contColor}`;
+  return cNm;
+});
 </script>
 
 <style lang="scss" scoped>

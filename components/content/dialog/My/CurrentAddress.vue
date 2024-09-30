@@ -7,6 +7,7 @@
       <div class="dialog-inner">
         <ContWrap>
           <div class="map-area">
+            <!-- 개발 시 삭제 영역 -->
             <div style="height: 100%; background: rgba(255, 0, 0, .1);">
               지도 API 영역 확인을 위한 임시 div입니다.
               <br>개발시 해당 div 삭제 후 작업해 주세요.
@@ -17,6 +18,7 @@
                 <EIco name="current-marker"><span class="offscreen">주소지 마커</span></EIco>
               </div>
             </div>
+            <!-- // 개발 시 삭제 영역 -->
             <button type="button" class="btn-access-location">
               <EIco name="access-location" color="green"></EIco>
               <span class="offscreen">현재 위치로 마커 자동 이동</span>
@@ -59,6 +61,3 @@ const closeDialog = () => {
 };
 </script>
 
-<style lang="scss" scoped>
-  @import url('assets/css/pages/my.scss');
-</style>

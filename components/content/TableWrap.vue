@@ -10,7 +10,7 @@
 <script setup lang="ts">
 const props = withDefaults(defineProps<{
   type?: 'row' | 'col' | 'info';
-  gap?: 'sm' | 'md'; // gap sm 6px, md 12px
+  gap?: 'sm' | 'md' | 'lg'; // gap sm 6px, md 8px, lg 12px
   size?: 'md' | 'lg'; // font md 13px, lg 14px
   tableName: string;
 }>(), {

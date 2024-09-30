@@ -11,7 +11,7 @@ body {
 }
 
 .wrapper {
-  background: variables.$colorWhite;
+  background: var(--Grayscale-0);
   min-height: var(--reVh, 1vh);
 
 }

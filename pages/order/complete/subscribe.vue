@@ -7,7 +7,7 @@
       sub-desc="주문내역을 확인해주세요."
     />
   </ContWrap>
-  <ContWrap>
+  <ContWrap class="not-navbar">
     <RowListWrap gap="2xl">
       <li class="item">
         <CtitleWrap>
@@ -81,7 +81,7 @@
       </li>
     </RowListWrap>
     <BtnWrap type="flex" size="xl">
-      <EBtn tag="a" color="line-light-gray" size="md" to="to">
+      <EBtn tag="a" color="line-light-gray" size="md" to="javascript:">
         <span class="text">주문내역</span>
       </EBtn>
     </BtnWrap>

@@ -14,7 +14,11 @@
         font-size: inherit;
         line-height: inherit;
         letter-spacing: inherit;
-        color: variables.$colorBlack;
+        color: var(--Grayscale-100);
+      }
+
+      .goods-md {
+        margin-top: 1px;
       }
     }
 
@@ -25,8 +29,10 @@
         &.type-text {
           flex-grow: 0;
         }
+      }
 
-        ~ .btn-filter {
+      .ui-select, .ui-chk {
+        ~ [class^=btn] {
           margin-left: 10px;
         }
       }
@@ -45,12 +51,23 @@
       bottom: 0;
       width: calc(100% + 40px);
       height: 1px;
-      background-color: variables.$colorGray30;
-    }
-
-    .search-result-tit {
-      @include mixins.font_size_2xl;
-      color: variables.$colorBlack;
+      background-color: var(--Grayscale-30);
     }
   }
+
+  .search-result-tit { // 검색결과
+    @include mixins.font_size_2xl;
+    color: var(--Grayscale-100);
+  }
+
+  ~ .map-wrap {
+    margin-top: 0;
+  }
+}
+
+// type line
+.list-line-header {
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--Grayscale-30);
 }

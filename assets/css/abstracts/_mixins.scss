@@ -1,6 +1,5 @@
 @use 'variables';
 
-
 // float하는 상위 DOM에 선언
 @mixin clearfix {
   &:after {
@@ -9,6 +8,18 @@
     width: 100%;
     height: 0;
     clear: both;
+  }
+}
+
+@mixin cont_not_navbar_bottom {
+  padding-bottom: 30px;
+
+  &[class*="bz-"] {
+    padding-bottom: 0 !important;
+  }
+
+  &[class*="bs-"] {
+    padding-bottom: 20px !important;
   }
 }
 
@@ -209,7 +220,7 @@
   background-size: $sizes;
 }
 
-@mixin svg_mask($file, $color: '', $sizes: cover, $position: 0 0, $repeat: no-repeat) {
+@mixin svg_mask($file, $color: '', $sizes: cover, $position: center, $repeat: no-repeat) {
   $urls: $file + '.svg';
   -webkit-mask-size: $sizes;
   mask-size: $sizes;
@@ -424,20 +435,8 @@
   }
 }
 
-// size : breakpoint mobile
-@mixin size_wrap_width {
-  width: 100%;
-  @media (min-width: variables.$wrapperMaxWidth) {
-    width: variables.$wrapperMaxWidth;
-    margin: {
-      left: auto;
-      right: auto;
-    }
-  }
-}
-
-@mixin size_max_mobile {
-  @media (min-width: variables.$wrapperMaxWidth) {
+@mixin size_min_mobile {
+  @media (max-width: 374px) {
     @content;
   }
 }

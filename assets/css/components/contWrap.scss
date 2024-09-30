@@ -7,29 +7,83 @@
 $contType: ('gray', 'white', 'divider'); // white - bg-color: white, divider - 추후 추가 예정
 $contDirsSize: ('zero': 0, 'sm' : 10px, 'md': 20px, 'lg': 30px);
 
+%contNotNavbarBottom {
+
+}
+
 .container-wrapper {
   &:has(.cont-docker-wrap) {
-    [class*="cont-"]:nth-last-of-type(2) {
+    [class^=cont][class*=-wrap]:nth-last-of-type(2) {
       flex: 1 0 auto;
-      padding-bottom: 90px;
-      //padding-bottom: #{variables.$contDockerHeight + 30px};
+      //padding-bottom: 90px;
+      padding-bottom: #{variables.$contDockerHeight + 30px};
+    }
+  }
+
+  .not-navbar {
+    [class^=cont][class*=-wrap]:last-child {
+      @include mixins.cont_not_navbar_bottom;
+    }
+  }
+
+  &:not(.not-navbar) {
+    [class^=cont][class*=-wrap]:last-child {
+      .tab-wrap [class^=cont][class*=-wrap]:last-child {
+        @include mixins.cont_not_navbar_bottom;
+      }
     }
   }
 }
 
+.wrapper:has(.footer-wrapper) {
+  [class^=cont][class*=-wrap]:last-child {
+    @include mixins.cont_not_navbar_bottom;
+  }
+}
+
+.dialog-body {
+  [class^=cont][class*=-wrap]:last-child {
+    @include mixins.cont_not_navbar_bottom;
+  }
+}
+
+
+.tab-wrap {
+  &:not(:last-child) {
+    [class^=cont][class*=-wrap] {
+      @include mixins.cont_not_navbar_bottom;
+    }
+  }
+}
+
+
 %contBoxCommon {
   padding: {
     left: 20px;
-    bottom: 30px;
     right: 20px;
   }
+  @include mixins.cont_not_navbar_bottom;
 
-  &[class*="bz-"] {
-    padding-bottom: 0 !important;
+  &:not(:last-child) {
+    .tab-wrap {
+      [class^=cont][class*=-wrap] {
+        @include mixins.cont_not_navbar_bottom;
+      }
+    }
   }
 
-  &[class*="bs-"] {
-    padding-bottom: 20px !important;
+
+  &:last-child:not(.not-navbar) {
+    padding-bottom: #{ variables.$navbarHeight + 30px };
+    //background: pink;
+
+    &[class*="bz-"] {
+      padding-bottom: #{ variables.$navbarHeight + 0 } !important;
+    }
+
+    &[class*="bs-"] {
+      padding-bottom: #{ variables.$navbarHeight + 20px } !important;
+    }
   }
 
   &.side-zero {
@@ -57,19 +111,32 @@ $contDirsSize: ('zero': 0, 'sm' : 10px, 'md': 20px, 'lg': 30px);
 
   &:last-of-type {
     flex: 1 0 auto;
-  }
 
+    &:has(.map-wrap) {
+      @include mixins.justify_width(stretch, start, column);
+
+      :deep(.map-wrap) {
+        flex: 1 0 auto;
+      }
+    }
+  }
 }
 
 // cont style type
 @mixin cont_type_style($type: 'gray') {
   @if ($type == 'gray') {
-    background-color: variables.$colorGray20;
+    background-color: var(--Grayscale-20);
+
+    :deep(.editor-wrap) {
+      @include mixins.font_size_lg('lt');
+      color: var(--Grayscale-80);
+    }
+
   } @else if ($type == 'divider') {
-    background-color: variables.$colorWhite;
-    border-top: 10px solid variables.$colorGray20;
+    background-color: var(--Grayscale-0);
+    border-top: 10px solid var(--Grayscale-20);
   } @else if ($type == 'white') {
-    background-color: variables.$colorWhite;
+    background-color: var(--Grayscale-0);
   }
 }
 

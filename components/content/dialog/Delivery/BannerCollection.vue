@@ -9,42 +9,42 @@
           <RowListWrap gap="md" class="side-box">
             <li class="item-banner">
               <div class="thumb-box">
-                <img src="/assets/images/temp/temp_banner_marketing_1.png" alt="배너 이미지">
+                <img src="/assets/images/temp/temp_banner_marketing_1.png" alt="배너 전체보기 이미지">
               </div>
             </li>
             <li class="item-banner">
               <div class="thumb-box">
-                <img src="/assets/images/temp/temp_banner_marketing_2.png" alt="배너 이미지">
+                <img src="/assets/images/temp/temp_banner_marketing_2.png" alt="배너 전체보기 이미지">
               </div>
             </li>
             <li class="item-banner">
               <div class="thumb-box">
-                <img src="/assets/images/temp/temp_banner_marketing_1.png" alt="배너 이미지">
+                <img src="/assets/images/temp/temp_banner_marketing_1.png" alt="배너 전체보기 이미지">
               </div>
             </li>
             <li class="item-banner">
               <div class="thumb-box">
-                <img src="/assets/images/temp/temp_banner_marketing_2.png" alt="배너 이미지">
+                <img src="/assets/images/temp/temp_banner_marketing_2.png" alt="배너 전체보기 이미지">
               </div>
             </li>
             <li class="item-banner">
               <div class="thumb-box">
-                <img src="/assets/images/temp/temp_banner_marketing_1.png" alt="배너 이미지">
+                <img src="/assets/images/temp/temp_banner_marketing_1.png" alt="배너 전체보기 이미지">
               </div>
             </li>
             <li class="item-banner">
               <div class="thumb-box">
-                <img src="/assets/images/temp/temp_banner_marketing_2.png" alt="배너 이미지">
+                <img src="/assets/images/temp/temp_banner_marketing_2.png" alt="배너 전체보기 이미지">
               </div>
             </li>
             <li class="item-banner">
               <div class="thumb-box">
-                <img src="/assets/images/temp/temp_banner_marketing_1.png" alt="배너 이미지">
+                <img src="/assets/images/temp/temp_banner_marketing_1.png" alt="배너 전체보기 이미지">
               </div>
             </li>
             <li class="item-banner">
               <div class="thumb-box">
-                <img src="/assets/images/temp/temp_banner_marketing_2.png" alt="배너 이미지">
+                <img src="/assets/images/temp/temp_banner_marketing_2.png" alt="배너 전체보기 이미지">
               </div>
             </li>
           </RowListWrap>
@@ -79,6 +79,3 @@ const closeDialog = () => {
 };
 </script>
 
-<style lang="scss" scoped>
-@import url('assets/css/pages/delivery.scss');
-</style>

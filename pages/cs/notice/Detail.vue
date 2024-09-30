@@ -12,6 +12,7 @@
     <template #content>
       <ContWrap in-top="md" in-bottom="sm">
         <div class="editor-wrap">
+          <!-- 개발 시 삭제 영역 -->
           <div>
             공지사항 내용은 에디터로 입력됩니다.<br>
             한 줄을 초과할 경우 말줄임 없이 줄바꿈하여 내용 전체 노출합니다.<br>
@@ -19,17 +20,7 @@
             에디터영역 확인을 위한 임시 div입니다.<br>
             개발시 해당 div 삭제 후 작업해 주세요.
           </div>
-        </div>
-      </ContWrap>
-      <ContWrap in-top="md" in-bottom="sm">
-        <div class="editor-wrap">
-          <div>
-            공지사항 내용은 에디터로 입력됩니다.<br>
-            한 줄을 초과할 경우 말줄임 없이 줄바꿈하여 내용 전체 노출합니다.<br>
-            <br>
-            에디터영역 확인을 위한 임시 div입니다.<br>
-            개발시 해당 div 삭제 후 작업해 주세요.
-          </div>
+          <!-- // 개발 시 삭제 영역 -->
         </div>
       </ContWrap>
     </template>

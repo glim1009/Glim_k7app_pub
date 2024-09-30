@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; min-height: var(--reVh, 1vh); }
 
-body {width: 100%; color: variables.$colorBlack; background-color: #fff; }
+body {width: 100%; color: var(--Grayscale-100); background-color: #fff; }
 html, body { margin: 0 auto; padding: 0; font-family: variables.$fontDefault; border: 0; font-weight: variables.$fontWeightRegular; font-style: normal; /*overscroll-behavior-y: none;*/ }
 
 ol, ul, nav {
@@ -237,7 +237,7 @@ textarea::-webkit-scrollbar-thumb { background: #ccc; }
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button{font-family: variables.$fontDefault; }
 
 /* Disable orange highlight */
-label, a, button, select {-o-tap-highlight-color:rgba(variables.$colorBlack, 0);-ms-tap-highlight-color:rgba(variables.$colorBlack, 0);-moz-tap-highlight-color:rgba(variables.$colorBlack, 0);-webkit-tap-highlight-color:rgba(variables.$colorBlack, 0);}
+label, a, button, select {-o-tap-highlight-color:rgba(var(--Grayscale-100), 0);-ms-tap-highlight-color:rgba(var(--Grayscale-100), 0);-moz-tap-highlight-color:rgba(var(--Grayscale-100), 0);-webkit-tap-highlight-color:rgba(var(--Grayscale-100), 0);}
 button {padding:0;background-color:transparent; border-width:0; outline: none; font-family: variables.$fontDefault; text-align: center;}
 
 /* // reset */

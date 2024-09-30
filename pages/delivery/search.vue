@@ -5,7 +5,6 @@
         <FlexGroup align="center">
           <div class="flex-left">
             <div class="goods-group">
-              <span class="label">총 </span>
               <EGoods val="8" unit="건" />
             </div>
           </div>
@@ -18,7 +17,8 @@
                 <option>택배명 순</option>
               </select>
             </div>
-            <button type="button" class="btn-filter is-active">
+            <!-- DESC :: 활성화시 is-active 클래스 추가 -->
+            <button type="button" class="btn-filter is-active" @click="openDeliveryFilterOption">
               <EIco name="filter" color="gray" size="xs" />
             </button>
           </div>
@@ -52,24 +52,26 @@
                 </tbody>
               </TableWrap>
             </div>
-            <ul class="delivery-step-col-list">
-              <li class="delivery-step-item">
-                <span class="status">접수완료</span>
-                <span class="sub-status">점포입고</span>
-              </li>
-              <li class="delivery-step-item">
-                <span class="status">배송시작</span>
-                <span class="sub-status">집하완료</span>
-              </li>
-              <li class="delivery-step-item">
-                <span class="status">배송중</span>
-                <span class="sub-status">배송중</span>
-              </li>
-              <li class="delivery-step-item">
-                <span class="status">배송완료</span>
-                <span class="sub-status">배송완료</span>
-              </li>
-            </ul>
+            <div class="step-list-wrap">
+              <ul class="step-col-list">
+                <li class="step-item">
+                  <span class="status">접수완료</span>
+                  <span class="sub-status">점포입고</span>
+                </li>
+                <li class="step-item">
+                  <span class="status">배송시작</span>
+                  <span class="sub-status">집하완료</span>
+                </li>
+                <li class="step-item">
+                  <span class="status">배송중</span>
+                  <span class="sub-status">배송중</span>
+                </li>
+                <li class="step-item">
+                  <span class="status">배송완료</span>
+                  <span class="sub-status">배송완료</span>
+                </li>
+              </ul>
+            </div>
             <FoldOverflowBox>
               <ColorBox color="light-gray">
                 <div class="scroll-box">
@@ -149,11 +151,11 @@
         <li class="item">
           <ColorBox color="white" size="lg">
             <div class="box-info-header">
+              <BadgeGroup size="xl">
+                <EBadge color="gray" size="md" badge-text="일반택배" />
+                <EBadge color="light-gray" size="md" badge-text="취소" />
+              </BadgeGroup>
               <CtitleWrap size="sm">
-                <badge-group>
-                  <EBadge color="gray" size="md" badge-text="일반택배" />
-                  <EBadge color="light-gray" size="md" badge-text="취소" />
-                </badge-group>
                 <ETit text="의류 청바지" type="box" />
               </CtitleWrap>
               <TableWrap type="info" gap="sm" size="md" table-name="배송정보">
@@ -171,24 +173,26 @@
                 </tbody>
               </TableWrap>
             </div>
-            <ul class="delivery-step-col-list">
-              <li class="delivery-step-item">
-                <span class="status">접수완료</span>
-                <span class="sub-status">점포입고</span>
-              </li>
-              <li class="delivery-step-item">
-                <span class="status">배송시작</span>
-                <span class="sub-status">집하완료</span>
-              </li>
-              <li class="delivery-step-item">
-                <span class="status">배송중</span>
-                <span class="sub-status">배송중</span>
-              </li>
-              <li class="delivery-step-item">
-                <span class="status">배송완료</span>
-                <span class="sub-status">배송완료</span>
-              </li>
-            </ul>
+            <div class="step-list-wrap">
+              <ul class="step-col-list">
+                <li class="step-item">
+                  <span class="status">접수완료</span>
+                  <span class="sub-status">점포입고</span>
+                </li>
+                <li class="step-item">
+                  <span class="status">배송시작</span>
+                  <span class="sub-status">집하완료</span>
+                </li>
+                <li class="step-item">
+                  <span class="status">배송중</span>
+                  <span class="sub-status">배송중</span>
+                </li>
+                <li class="step-item">
+                  <span class="status">배송완료</span>
+                  <span class="sub-status">배송완료</span>
+                </li>
+              </ul>
+            </div>
             <FoldOverflowBox>
               <ColorBox color="light-gray">
                 <ul class="delivery-step-row-list">
@@ -213,11 +217,11 @@
         <li class="item">
           <ColorBox color="white" size="lg">
             <div class="box-info-header">
+              <BadgeGroup size="xl">
+                <EBadge color="gray" size="md" badge-text="일반택배" />
+                <EBadge color="light-gray" size="md" badge-text="취소" />
+              </BadgeGroup>
               <CtitleWrap size="sm">
-                <badge-group>
-                  <EBadge color="gray" size="md" badge-text="일반택배" />
-                  <EBadge color="light-gray" size="md" badge-text="취소" />
-                </badge-group>
                 <ETit text="의류 청바지" type="box" />
               </CtitleWrap>
               <TableWrap type="info" gap="sm" size="md" table-name="배송정보">
@@ -235,24 +239,26 @@
                 </tbody>
               </TableWrap>
             </div>
-            <ul class="delivery-step-col-list">
-              <li class="delivery-step-item">
-                <span class="status">접수완료</span>
-                <span class="sub-status">점포입고</span>
-              </li>
-              <li class="delivery-step-item">
-                <span class="status">배송시작</span>
-                <span class="sub-status">집하완료</span>
-              </li>
-              <li class="delivery-step-item">
-                <span class="status">배송중</span>
-                <span class="sub-status">배송중</span>
-              </li>
-              <li class="delivery-step-item">
-                <span class="status">배송완료</span>
-                <span class="sub-status">배송완료</span>
-              </li>
-            </ul>
+            <div class="step-list-wrap">
+              <ul class="step-col-list">
+                <li class="step-item">
+                  <span class="status">접수완료</span>
+                  <span class="sub-status">점포입고</span>
+                </li>
+                <li class="step-item">
+                  <span class="status">배송시작</span>
+                  <span class="sub-status">집하완료</span>
+                </li>
+                <li class="step-item">
+                  <span class="status">배송중</span>
+                  <span class="sub-status">배송중</span>
+                </li>
+                <li class="step-item">
+                  <span class="status">배송완료</span>
+                  <span class="sub-status">배송완료</span>
+                </li>
+              </ul>
+            </div>
             <FoldOverflowBox>
               <ColorBox color="light-gray">
                 <ul class="delivery-step-row-list">
@@ -278,10 +284,10 @@
         <li class="item">
           <ColorBox color="white" size="lg">
             <div class="box-info-header">
+              <BadgeGroup size="xl">
+                <EBadge color="green" size="md" badge-text="착한택배" />
+              </BadgeGroup>
               <CtitleWrap size="sm">
-                <badge-group>
-                  <EBadge color="green" size="md" badge-text="착한택배" />
-                </badge-group>
                 <ETit text="의류 청바지" type="box" />
               </CtitleWrap>
               <TableWrap type="info" gap="sm" size="md" table-name="배송정보">
@@ -299,24 +305,26 @@
                 </tbody>
               </TableWrap>
             </div>
-            <ul class="delivery-step-col-list">
-              <li class="delivery-step-item is-active">
-                <span class="status">접수완료</span>
-                <span class="sub-status">점포입고</span>
-              </li>
-              <li class="delivery-step-item">
-                <span class="status">배송시작</span>
-                <span class="sub-status">집하완료</span>
-              </li>
-              <li class="delivery-step-item">
-                <span class="status">배송중</span>
-                <span class="sub-status">배송중</span>
-              </li>
-              <li class="delivery-step-item">
-                <span class="status">배송완료</span>
-                <span class="sub-status">배송완료</span>
-              </li>
-            </ul>
+            <div class="step-list-wrap">
+              <ul class="step-col-list">
+                <li class="step-item">
+                  <span class="status">접수완료</span>
+                  <span class="sub-status">점포입고</span>
+                </li>
+                <li class="step-item">
+                  <span class="status">배송시작</span>
+                  <span class="sub-status">집하완료</span>
+                </li>
+                <li class="step-item">
+                  <span class="status">배송중</span>
+                  <span class="sub-status">배송중</span>
+                </li>
+                <li class="step-item">
+                  <span class="status">배송완료</span>
+                  <span class="sub-status">배송완료</span>
+                </li>
+              </ul>
+            </div>
             <FoldOverflowBox>
               <ColorBox color="light-gray">
                 <div class="scroll-box">
@@ -400,10 +408,10 @@
         <li class="item">
           <ColorBox color="white" size="lg">
             <div class="box-info-header">
+              <BadgeGroup size="xl">
+                <EBadge color="gray" size="md" badge-text="일반택배" />
+              </BadgeGroup>
               <CtitleWrap size="sm">
-                <badge-group>
-                  <EBadge color="gray" size="md" badge-text="일반택배" />
-                </badge-group>
                 <ETit text="의류 청바지" type="box" />
               </CtitleWrap>
               <TableWrap type="info" gap="sm" size="md" table-name="배송정보">
@@ -421,24 +429,26 @@
                 </tbody>
               </TableWrap>
             </div>
-            <ul class="delivery-step-col-list">
-              <li class="delivery-step-item">
-                <span class="status">접수완료</span>
-                <span class="sub-status">점포입고</span>
-              </li>
-              <li class="delivery-step-item is-active">
-                <span class="status">배송시작</span>
-                <span class="sub-status">집하완료</span>
-              </li>
-              <li class="delivery-step-item">
-                <span class="status">배송중</span>
-                <span class="sub-status">배송중</span>
-              </li>
-              <li class="delivery-step-item">
-                <span class="status">배송완료</span>
-                <span class="sub-status">배송완료</span>
-              </li>
-            </ul>
+            <div class="step-list-wrap">
+              <ul class="step-col-list">
+                <li class="step-item">
+                  <span class="status">접수완료</span>
+                  <span class="sub-status">점포입고</span>
+                </li>
+                <li class="step-item is-active">
+                  <span class="status">배송시작</span>
+                  <span class="sub-status">집하완료</span>
+                </li>
+                <li class="step-item">
+                  <span class="status">배송중</span>
+                  <span class="sub-status">배송중</span>
+                </li>
+                <li class="step-item">
+                  <span class="status">배송완료</span>
+                  <span class="sub-status">배송완료</span>
+                </li>
+              </ul>
+            </div>
             <FoldOverflowBox>
               <ColorBox color="light-gray">
                 <div class="scroll-box">
@@ -522,10 +532,10 @@
         <li class="item">
           <ColorBox color="white" size="lg">
             <div class="box-info-header">
+              <BadgeGroup size="xl">
+                <EBadge color="gray" size="md" badge-text="일반택배" />
+              </BadgeGroup>
               <CtitleWrap size="sm">
-                <badge-group>
-                  <EBadge color="gray" size="md" badge-text="일반택배" />
-                </badge-group>
                 <ETit text="의류 청바지" type="box" />
               </CtitleWrap>
               <TableWrap type="info" gap="sm" size="md" table-name="배송정보">
@@ -543,24 +553,26 @@
                 </tbody>
               </TableWrap>
             </div>
-            <ul class="delivery-step-col-list">
-              <li class="delivery-step-item">
-                <span class="status">접수완료</span>
-                <span class="sub-status">점포입고</span>
-              </li>
-              <li class="delivery-step-item">
-                <span class="status">배송시작</span>
-                <span class="sub-status">집하완료</span>
-              </li>
-              <li class="delivery-step-item is-active">
-                <span class="status">배송중</span>
-                <span class="sub-status">배송중</span>
-              </li>
-              <li class="delivery-step-item">
-                <span class="status">배송완료</span>
-                <span class="sub-status">배송완료</span>
-              </li>
-            </ul>
+            <div class="step-list-wrap">
+              <ul class="step-col-list">
+                <li class="step-item">
+                  <span class="status">접수완료</span>
+                  <span class="sub-status">점포입고</span>
+                </li>
+                <li class="step-item">
+                  <span class="status">배송시작</span>
+                  <span class="sub-status">집하완료</span>
+                </li>
+                <li class="step-item is-active">
+                  <span class="status">배송중</span>
+                  <span class="sub-status">배송중</span>
+                </li>
+                <li class="step-item">
+                  <span class="status">배송완료</span>
+                  <span class="sub-status">배송완료</span>
+                </li>
+              </ul>
+            </div>
             <FoldOverflowBox>
               <ColorBox color="light-gray">
                 <div class="scroll-box">
@@ -644,11 +656,11 @@
         <li class="item">
           <ColorBox color="white" size="lg">
             <div class="box-info-header">
+              <BadgeGroup size="xl">
+                <EBadge color="gray" size="md" badge-text="일반택배" />
+                <EBadge color="light-gray" size="md" badge-text="반송" />
+              </BadgeGroup>
               <CtitleWrap size="sm">
-                <badge-group>
-                  <EBadge color="gray" size="md" badge-text="일반택배" />
-                  <EBadge color="light-gray" size="md" badge-text="반송" />
-                </badge-group>
                 <ETit text="의류 청바지" type="box" />
               </CtitleWrap>
               <TableWrap type="info" gap="sm" size="md" table-name="배송정보">
@@ -666,24 +678,26 @@
                 </tbody>
               </TableWrap>
             </div>
-            <ul class="delivery-step-col-list">
-              <li class="delivery-step-item">
-                <span class="status">접수완료</span>
-                <span class="sub-status">점포입고</span>
-              </li>
-              <li class="delivery-step-item">
-                <span class="status">배송시작</span>
-                <span class="sub-status">집하완료</span>
-              </li>
-              <li class="delivery-step-item">
-                <span class="status">배송중</span>
-                <span class="sub-status">배송중</span>
-              </li>
-              <li class="delivery-step-item is-active">
-                <span class="status">배송완료</span>
-                <span class="sub-status">배송완료</span>
-              </li>
-            </ul>
+            <div class="step-list-wrap">
+              <ul class="step-col-list">
+                <li class="step-item">
+                  <span class="status">접수완료</span>
+                  <span class="sub-status">점포입고</span>
+                </li>
+                <li class="step-item">
+                  <span class="status">배송시작</span>
+                  <span class="sub-status">집하완료</span>
+                </li>
+                <li class="step-item">
+                  <span class="status">배송중</span>
+                  <span class="sub-status">배송중</span>
+                </li>
+                <li class="step-item is-active">
+                  <span class="status">배송완료</span>
+                  <span class="sub-status">배송완료</span>
+                </li>
+              </ul>
+            </div>
             <FoldOverflowBox>
               <ColorBox color="light-gray">
                 <div class="scroll-box">
@@ -715,12 +729,95 @@
       <InfoGuideWrap
         v-if="isNoData"
         type="no-data"
-        name="temp"
+        name="history"
         desc="배송조회 내역이 없습니다."
       />
       <!-- // 데이터가 없는 경우  -->
     </ContWrap>
   </DeliveryHomeTab>
+
+  <!-- pop : 택배 - 필터 옵션 -->
+  <PopCommFilterOption v-model:sta="popDeliveryFilterOption">
+    <!-- 필터옵션목록 -->
+    <template #option>
+      <li class="item-xl">
+        <div class="form-field">
+          <div class="form-cont">
+            <div class="form-input-group">
+              <UiColGroup gap="sm">
+                <span class="ui-rdo-button">
+                  <input id="filterProdType01" type="radio" name="filterStatus01" />
+                  <label for="filterProdType01"><span class="text-sm">전체</span></label>
+                </span>
+                <span class="ui-rdo-button">
+                  <input id="filterProdType02" type="radio" name="filterStatus01" />
+                  <label for="filterProdType02"><span class="text-sm">사용가능</span></label>
+                </span>
+                <span class="ui-rdo-button">
+                  <input id="filterProdType03" type="radio" name="filterStatus01" />
+                  <label for="filterProdType03"><span class="text-sm">사용완료</span></label>
+                </span>
+                <span class="ui-rdo-button">
+                  <input id="filterProdType04" type="radio" name="filterStatus01" />
+                  <label for="filterProdType04"><span class="text-sm">기간만료</span></label>
+                </span>
+              </UiColGroup>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="item-xl">
+        <div class="form-field">
+          <div class="form-title">
+            <ETit text="조회기간" type="cont" />
+          </div>
+          <div class="form-cont">
+            <div class="form-input-group">
+              <UiColGroup gap="sm">
+                <span class="ui-rdo-button">
+                  <input id="filterOptionDate01" v-model="periodPicked" value="periodDate01" type="radio" />
+                  <label for="filterOptionDate01"><span class="text-sm">최근3개월</span></label>
+                </span>
+                <span class="ui-rdo-button">
+                  <input id="filterOptionDate02" v-model="periodPicked" value="periodDate02" type="radio" />
+                  <label for="filterOptionDate02"><span class="text-sm">6개월</span></label>
+                </span>
+                <span class="ui-rdo-button">
+                  <input id="filterOptionDate03" v-model="periodPicked" value="periodDate03" type="radio" />
+                  <label for="filterOptionDate03"><span class="text-sm">1년</span></label>
+                </span>
+                <span class="ui-rdo-button">
+                  <input id="filterOptionDate04" v-model="periodPicked" value="periodDateInput" type="radio" />
+                  <label for="filterOptionDate04"><span class="text-sm">직접입력</span></label>
+                </span>
+              </UiColGroup>
+              <FlexGroup>
+                <div class="flex-left">
+                  <EDatePicker :disabled="isDateInputDisabled" placeholder="시작일" />
+                </div>
+                <span class="gap">~</span>
+                <div class="flex-right">
+                  <EDatePicker :disabled="isDateInputDisabled" placeholder="종료일" />
+                </div>
+              </FlexGroup>
+            </div>
+          </div>
+        </div>
+      </li>
+    </template>
+    <!-- // 필터옵션목록 -->
+    <template #footer>
+      <div class="dialog-btn-auto-wrap">
+        <EBtn color="line-light-gray" size="lg">
+          <span class="text">초기화</span>
+        </EBtn>
+        <EBtn color="green" size="lg" @click="popDeliveryFilterOption.open = false">
+          <span class="text">적용</span>
+        </EBtn>
+      </div>
+    </template>
+  </PopCommFilterOption>
+  <!-- // pop : 택배 - 필터 옵션 -->
 </template>
 
 <script setup lang="ts">
@@ -730,6 +827,18 @@ definePageMeta({
 });
 const isData = ref(true);
 const isNoData = ref(true);
+
+// 상품필터옵션 팝업
+const popDeliveryFilterOption = ref({ open: false });
+const openDeliveryFilterOption = () => popDeliveryFilterOption.value.open = true;
+
+// 기간 날짜 조회
+const periodPicked = ref();
+const isDateInputDisabled = ref<boolean>(true);
+
+watch(periodPicked, (value) => {
+  isDateInputDisabled.value = value !== 'periodDateInput';
+});
 </script>
 
 <style lang="scss" scoped>

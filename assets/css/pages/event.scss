@@ -1,0 +1,309 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+// 이벤트 공통
+.event-banner-wrap, .event-title-visual, .calendar-wrap, .stamp-footer, .roulette-bg-box {
+  img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+// 캘린더 영역
+.calendar-wrap {
+  position: relative;
+
+  .calendar-top {
+
+  }
+
+  .calendar-body {
+    position: relative;
+
+    .tbl-calendar {
+      position: absolute;
+      margin: 0 9.3333333333vw;
+      top: 0;
+
+      table {
+        th, td {
+          font-size: 0;
+          //border: 1px solid #000;
+        }
+
+        thead {
+          th {
+            height: 12vw;
+          }
+        }
+
+        tbody {
+          td {
+            height: 9.06666666667vw;
+
+            .ico-stamp {
+              display: inline-block;
+              width: 9.06666666667vw;
+              height: 9.06666666667vw;
+              background: {
+                repeat: no-repeat;
+                position: center;
+                size: contain;
+              }
+
+              &.comp {
+                background-image: url('/assets/images/event/ico_calendar_comp.svg');
+              }
+
+              &.coupon-day {
+                background-image: url('/assets/images/event/ico_calendar_coupon_day.svg');
+
+                &.comp {
+                  background-image: url('/assets/images/event/ico_calendar_coupon_day_comp.svg');
+                }
+              }
+            }
+          }
+
+          tr + tr {
+            td {
+              height: 14.39999999997vw;
+              padding-top: 5.3333333333vw;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .btn-attendance-check {
+    position: absolute;
+    padding: 0 4vw;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+  }
+}
+
+// 스탬프
+.stamp-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  background: {
+    repeat: repeat-y;
+    size: contain;
+  }
+  padding: 2.6666666667vw 0;
+  gap: 5.3333333333vw;
+
+  .stamp-box {
+    display: flex;
+    flex: 1 0 100%;
+    justify-content: space-between;
+    padding: 0 9.3333333333vw;
+
+    .item-stamp {
+      .ico-stamp {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &.col-3 {
+    .stamp-box {
+      .item-stamp {
+        flex: 0 0 23.2vw;
+        height: 23.2vw;
+        &:nth-child(3) ~ .item-stamp {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &.col-4 {
+    .stamp-box {
+      .item-stamp {
+        flex: 0 0 17.06666666667vw;
+        height: 17.06666666667vw;
+        &:nth-child(4) ~ .item-stamp {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &.col-5 {
+    padding: 2.1333333333vw 0;
+    gap: 4.2666666667vw;
+
+    .stamp-box {
+      .item-stamp {
+        flex: 0 0 13.3333333333vw;
+        height: 13.3333333333vw;
+        &:nth-child(5) ~ .item-stamp {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &.col-6 {
+    padding: 1.3333333333vw 0;
+    gap: 2.6666666667vw;
+
+    .stamp-box {
+      .item-stamp {
+        flex: 0 0 11.4666666667vw;
+        height: 11.4666666667vw;
+      }
+    }
+  }
+
+  &.col-7 {
+    padding: 1.8666666667vw 0;
+    gap: 2.4vw;
+
+    .stamp-box {
+      .item-stamp {
+        flex: 0 0 9.6vw;
+        height: 9.6vw;
+      }
+    }
+  }
+}
+
+// 이벤트 상세
+/* 이벤트 상세 - 내 스탬프 현황 */
+.my-stamp-status-info-box {
+  @include mixins.justify_width(center);
+  margin-bottom: 16px;
+
+  .day-count {
+    @include mixins.justify_width(center, center);
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    margin-right: 12px;
+    border-radius: 30px;
+    background-color: var(--Primary-Orange-100);
+    @include mixins.font_size_3xl;
+    font-weight: variables.$fontWeightBold;
+    color: var(--Grayscale-0);
+  }
+
+  .ctitle-zero-wrap {
+    .ctitle-md {
+      @include mixins.multi_ellipsis(variables.$fontSize2xlLineHeight, 1, true);
+    }
+  }
+}
+
+.swiper-banner-stamp-wrap {
+  margin: 0 -20px;
+
+  :deep(.swiper-slide) {
+    padding: 0 15px;
+
+    .line-light-gray-lg-box {
+      margin: {
+        left: 0;
+        right: 0;
+      };
+
+      .ctitle-md-wrap {
+        .flex-center-group {
+          .flex-right {
+            .goods-group {
+              @include mixins.font_size_lg('lt');
+
+              .label {
+                display: inline-block;
+                font-weight: inherit;
+                font-size: inherit;
+                line-height: inherit;
+                letter-spacing: inherit;
+                color: var(--Grayscale-100);
+              }
+
+              .val {
+                font-weight: variables.$fontWeightSemibold;
+                color: var(--Primary-Green-100);
+              }
+            }
+          }
+        }
+      }
+
+      .my-stamp-status-list {
+        @include mixins.justify_width(center);
+        flex-wrap: wrap;
+        margin: {
+          top: -10px;
+        }
+
+        .item-my-stamp {
+          width: calc((100% - 46px) / 6);
+          margin: {
+            top: 10px;
+            right: 7.6px;
+          }
+          text-align: center;
+
+          &:nth-child(6n) {
+            margin-right: 0;
+          }
+
+          .stamp-box {
+            display: inline-block;
+            width: 44px;
+            height: 44px;
+            vertical-align: top;
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 전체/내글 버튼
+.btn-comment {
+  .text {
+    @include mixins.font_size_lg('lt');
+    color: var(--Grayscale-60);
+  }
+
+  &.is-active {
+    .text {
+      font-weight: variables.$fontWeightSemibold;
+      color: var(--Grayscale-100);
+    }
+  }
+}
+
+/* 기획전 상세 - 마케팅 배너 */
+.thumb-event-banner-box {
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 15px;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+

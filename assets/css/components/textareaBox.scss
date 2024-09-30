@@ -1,0 +1,69 @@
+@use 'sass:map';
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+/* form - textarea */
+.textarea-box {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 48px;
+  border-radius: 15px;
+  background-color: var(--Grayscale-20);
+  border: 1px solid transparent;
+
+  .ui-textarea {
+    @include mixins.clear_focus;
+    height: 150px;
+    padding: 18px 18px 0;
+    outline: none;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    @include mixins.font_size_lg('lt');
+    color: var(--Grayscale-100);
+    resize: none;
+
+    &::placeholder {
+      @include mixins.font_size_lg('lt');
+      color: var(--Grayscale-50);
+    }
+  }
+
+  .byte-check {
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+    display: inline-block;
+    @include mixins.font_size_md('md');
+    color: var(--Grayscale-100);
+    vertical-align: top;
+  }
+
+  &.is-focus {
+    background-color: var(--Grayscale-0);
+    border-color: var(--Primary-Green-100);
+    @include mixins.prefix(transition, border 0.2s ease-out);
+
+    .byte-check {
+      .count {
+        color: var(--Primary-Green-100);
+      }
+    }
+  }
+
+  &.is-disabled {
+    border-color: var(--Grayscale-30);
+    background-color: var(--Grayscale-0);
+    @include mixins.set_placeholder_color(var(--Grayscale-50));
+
+    @include mixins.device_mobile_ios {
+      -webkit-text-fill-color: var(--Grayscale-50);
+    }
+
+    .byte-check {
+      .count {
+        color: var(--Grayscale-50);
+      }
+    }
+  }
+}

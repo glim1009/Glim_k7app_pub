@@ -172,7 +172,7 @@
               <GridListWrap gap="lg" col="4">
                 <li class="item-grid-package">
                   <div class="thumb-box">
-                    <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="포장상태 이미지" />
+                    <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="서류봉투 포장불량예시 이미지" />
                   </div>
                   <div class="info-box">
                     <div class="stext">
@@ -182,7 +182,7 @@
                 </li>
                 <li class="item-grid-package">
                   <div class="thumb-box">
-                    <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="포장상태 이미지" />
+                    <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="마대자루 포장불량예시 이미지" />
                   </div>
                   <div class="info-box">
                     <div class="stext">
@@ -192,7 +192,7 @@
                 </li>
                 <li class="item-grid-package">
                   <div class="thumb-box">
-                    <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="포장상태 이미지" />
+                    <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="쇼핑백 포장불량예시 이미지" />
                   </div>
                   <div class="info-box">
                     <div class="stext">
@@ -202,7 +202,7 @@
                 </li>
                 <li class="item-grid-package">
                   <div class="thumb-box">
-                    <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="포장상태 이미지" />
+                    <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="나체품 포장불량예시 이미지" />
                   </div>
                   <div class="info-box">
                     <div class="stext">
@@ -212,7 +212,7 @@
                 </li>
                 <li class="item-grid-package">
                   <div class="thumb-box">
-                    <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="포장상태 이미지" />
+                    <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="비닐포장 포장불량예시 이미지" />
                   </div>
                   <div class="info-box">
                     <div class="stext">
@@ -222,7 +222,7 @@
                 </li>
                 <li class="item-grid-package">
                   <div class="thumb-box">
-                    <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="포장상태 이미지" />
+                    <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="결박화 포장불량예시 이미지" />
                   </div>
                   <div class="info-box">
                     <div class="stext">
@@ -232,7 +232,7 @@
                 </li>
                 <li class="item-grid-package">
                   <div class="thumb-box">
-                    <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="포장상태 이미지" />
+                    <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="이형화물 포장불량예시 이미지" />
                   </div>
                   <div class="info-box">
                     <div class="stext">
@@ -405,6 +405,3 @@ function closeDialog() {
 }
 </script>
 
-<style lang="scss" scoped>
-@import url('assets/css/pages/delivery.scss');
-</style>

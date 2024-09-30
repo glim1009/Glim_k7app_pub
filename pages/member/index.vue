@@ -1,11 +1,11 @@
 <template>
-  <div class="login-wrap">
+  <div class="login-wrap not-navbar">
     <ContWrap type="white" in-top="lg" in-bottom="md">
-      <CtitleWrap size="lg">
-        <div class="ctitle-2xl">L.POINT 통합 로그인</div>
-        <div class="stext-lg fc-gray70">지금 로그인하고 다양한 혜택을 만나보세요!</div>
-      </CtitleWrap>
-      <ContBox size="md">
+      <ContBox size="lg">
+        <CtitleWrap size="lg">
+          <div class="ctitle-2xl">L.POINT 통합 로그인</div>
+          <div class="stext-lg-gray70">지금 로그인하고 다양한 혜택을 만나보세요!</div>
+        </CtitleWrap>
         <RowListWrap gap="xl">
           <li class="item-form">
             <div class="form-field">
@@ -71,7 +71,7 @@
         <div class="flex-left">
           <CtitleWrap size="zero">
             <ETit text="간편 로그인" type="cont" />
-            <div class="stext fc-gray70">카카오 / 네이버로 간편하게 시작하세요</div>
+            <div class="stext-gray70">카카오 / 네이버로 간편하게 시작하세요</div>
           </CtitleWrap>
         </div>
         <div class="flex-right">

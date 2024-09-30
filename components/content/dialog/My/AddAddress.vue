@@ -14,7 +14,7 @@
                 </div>
                 <div class="form-cont">
                   <div class="form-input-group">
-                    <EInputBox title="주소별칭 입력" placeholder="주소 별칭을 입력해 주세요. (ex. 우리집)" />
+                    <EInputBox title="주소별칭 입력" placeholder="주소 별칭을 입력 (ex. 우리집)" />
                   </div>
                 </div>
               </div>
@@ -26,7 +26,7 @@
                 </div>
                 <div class="form-cont">
                   <div class="form-input-group">
-                    <EInputBox title="이름 입력" placeholder="이름을 입력해 주세요."/>
+                    <EInputBox title="이름 입력" placeholder="이름을 입력"/>
                   </div>
                 </div>
               </div>
@@ -38,7 +38,7 @@
                 </div>
                 <div class="form-cont">
                   <div class="form-input-group valid-check fail">
-                    <EInputBox type="number" title="휴대폰 번호 입력" placeholder="휴대폰 번호를 입력해 주세요."/>
+                    <EInputBox type="number" title="휴대폰 번호 입력" placeholder="휴대폰 번호를 입력"/>
                     <p class="valid-desc">휴대폰 번호를 입력해주세요.</p>
                   </div>
                 </div>
@@ -53,7 +53,7 @@
                     </div>
                     <div class="flex-right">
                       <ETBtn tag="button" size="xs" @click="openSearchAddress">
-                        <EIco name="current-location" size="sm"></EIco>
+                        <EIco name="current-location" color="gray" size="sm"></EIco>
                         <span class="text">현재 위치 주소에 추가</span>
                       </ETBtn>
                     </div>
@@ -61,7 +61,7 @@
                 </div>
                 <div class="form-cont">
                   <div class="form-input-group">
-                    <EInputBox type="search" enterkeyhint="search" title="주소 검색" placeholder="주소를 검색해주세요." readonly>
+                    <EInputBox type="search" enterkeyhint="search" title="주소 검색" placeholder="주소검색" readonly>
                       <button type="button" class="btn-input-search" @click="openSearchAddress">
                         <span class="offscreen">검색</span>
                       </button>

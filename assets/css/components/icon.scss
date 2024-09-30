@@ -18,258 +18,449 @@
   @extend %icon;
   width: 24px;
   height: 24px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_back_header');
+  @include mixins.svg_mask('/assets/images/common/comm_ico_back_header', var(--Grayscale-80));
 }
 
 .ico-home {
   @extend %icon;
   width: 24px;
   height: 24px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_home_header');
+  @include mixins.svg_mask('/assets/images/common/comm_ico_home_header', var(--Grayscale-80));
 }
 
 .ico-chat {
   @extend %icon;
   width: 24px;
   height: 24px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_chat_header');
+  @include mixins.svg_mask('/assets/images/common/comm_ico_chat_header', var(--Grayscale-80));
 }
 
 .ico-alarm {
   @extend %icon;
   width: 24px;
   height: 24px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_alarm_header');
+  @include mixins.svg_mask('/assets/images/common/comm_ico_alarm_header', var(--Grayscale-80));
 }
 
 .ico-cart {
   @extend %icon;
   width: 24px;
   height: 24px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_cart_header');
+  @include mixins.svg_mask('/assets/images/common/comm_ico_cart_header', var(--Grayscale-80));
 }
 
 .ico-search {
   @extend %icon;
   width: 24px;
   height: 24px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_search_header');
+  @include mixins.svg_mask('/assets/images/common/comm_ico_search_header', var(--Grayscale-80));
+}
+
+.ico-search-white {
+  @extend %icon;
+  width: 24px;
+  height: 24px;
+  @include mixins.svg_mask('/assets/images/common/comm_ico_search_header', var(--Grayscale-0));
 }
 
 .ico-close {
   @extend %icon;
   width: 24px;
   height: 24px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_close_header');
+  @include mixins.ratio_images('/assets/images/common/comm_ico_close_header');
+}
+
+.ico-history {
+  @extend %icon;
+  width: 24px;
+  height: 24px;
+  @include mixins.ratio_images('/assets/images/common/comm_ico_history_note');
+}
+.ico-receipt {
+  @extend %icon;
+  width: 24px;
+  height: 24px;
+  @include mixins.ratio_images('/assets/images/common/comm_ico_receipt');
+}
+.ico-delivery-box {
+  @extend %icon;
+  width: 24px;
+  height: 24px;
+  @include mixins.ratio_images('/assets/images/common/comm_ico_delivery_box');
+}
+.ico-edit {
+  @extend %icon;
+  width: 24px;
+  height: 24px;
+  @include mixins.ratio_images('/assets/images/common/comm_ico_edit');
 }
 
 .ico-top {
   @extend %icon;
   width: 24px;
   height: 24px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_top');
+  @include mixins.ratio_images('/assets/images/common/comm_ico_top');
 }
 
-.ico-headphone-gray {
+.ico-toast-notice {
   @extend %icon;
   width: 24px;
   height: 24px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_headphone_gray_cs');
+  @include mixins.svg_mask('/assets/images/common/comm_ico_toast_notice', var(--Primary-Green-100));
 }
+
+.ico-service-sub-category-green {
+  @extend %icon;
+  width: 24px;
+  height: 24px;
+  @include mixins.svg_mask('/assets/images/service/ico_service_sub_category', var(--Primary-Green-100));
+}
+
+.ico-present {
+  @extend %icon;
+  width: 24px;
+  height: 24px;
+  @include mixins.ratio_images('/assets/images/common/comm_ico_present_cta');
+}
+
+// wish icon
+.ico-wish-gray40 {
+  @extend %icon;
+  width: 24px;
+  height: 24px;
+  @include mixins.svg_mask('/assets/images/common/comm_ico_wish_sm', var(--Grayscale-40));
+}
+
+.is-active {
+  .ico-wish-gray40 {
+    background-color: var(--Primary-Red-100);
+  }
+}
+
+.ico-share {
+  @extend %icon;
+  width: 24px;
+  height: 24px;
+  @include mixins.svg_mask('/assets/images/common/comm_ico_share', var(--Grayscale-80));
+}
+
+.ico-bookmark {
+  @extend %icon;
+  width: 24px;
+  height: 24px;
+  @include mixins.svg_mask('/assets/images/common/comm_ico_bookmark', var(--Grayscale-40));
+}
+
+.ico-alert-green {
+  @extend %icon;
+  width: 24px;
+  height: 24px;
+  @include mixins.svg_mask('/assets/images/common/comm_ico_alert', var(--Primary-Green-100));
+}
+
+.ico-setting-gray {
+  @extend %icon;
+  width: 24px;
+  height: 24px;
+  @include mixins.svg_mask('/assets/images/common/comm_ico_setting', var(--Grayscale-80));
+}
+
+.ico-line-point-white {
+  @extend %icon;
+  width: 24px;
+  height: 24px;
+  @include mixins.svg_mask('/assets/images/common/comm_ico_line_point', var(--Grayscale-0));
+}
+
 
 // size - sm / h18
 .ico-plus-gray-sm {
   @extend %icon;
   width: 18px;
   height: 18px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_plus_gray_sm');
+  @include mixins.svg_mask('/assets/images/common/comm_ico_plus_sm', var(--Grayscale-80));
 }
+
 .ico-plus-white-sm { // white
   @extend %icon;
   width: 18px;
   height: 18px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_plus_white_sm');
+  @include mixins.svg_mask('/assets/images/common/comm_ico_plus_sm', var(--Grayscale-0));
 }
+
 .ico-search-gray-sm {
   @extend %icon;
   width: 18px;
   height: 18px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_search_gray_sm');
+  @include mixins.svg_mask('/assets/images/common/comm_ico_search_sm', var(--Grayscale-80));
 }
+
+.ico-search-white-sm { // white
+  @extend %icon;
+  width: 18px;
+  height: 18px;
+  @include mixins.svg_mask('/assets/images/common/comm_ico_search_sm', var(--Grayscale-0));
+}
+
 .ico-calendar-gray-sm {
   @extend %icon;
   width: 18px;
   height: 18px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_calendar_gray_sm');
+  @include mixins.ratio_images('/assets/images/common/comm_ico_calendar_sm', var(--Grayscale-80));
 }
-.ico-arw-down-sm {
+
+.ico-arw-down-gray-sm {
   @extend %icon;
   width: 18px;
   height: 18px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_arw_down_gray_sm');
+  @include mixins.svg_mask('/assets/images/common/comm_ico_arw_down_sm', var(--Grayscale-80));
 }
+
 .ico-arw-right-gray-sm {
   @extend %icon;
   width: 18px;
   height: 18px;
-  //@include mixins.ratio_images('~/assets/images/common/comm_ico_arw_right_gray_sm');
-  @include mixins.svg_mask('~/assets/images/common/comm_ico_arw_right_gray_sm', variables.$colorGray80);
+  @include mixins.svg_mask('/assets/images/common/comm_ico_arw_right_sm', var(--Grayscale-80));
 }
-.ico-clear-black-sm {
-  @extend %icon;
-  width: 18px;
-  height: 18px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_clear_black_sm');
-}
-.ico-clear-gray-sm {
-  @extend %icon;
-  width: 18px;
-  height: 18px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_clear_gray_sm');
-}
+
 .ico-filter-gray-sm {
   @extend %icon;
   width: 18px;
   height: 18px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_filter_gray_sm');
+  @include mixins.svg_mask('/assets/images/common/comm_ico_filter_sm', var(--Grayscale-80));
 }
+
 .ico-delete-gray-sm {
   @extend %icon;
   width: 18px;
   height: 18px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_delete_gray_sm');
+  @include mixins.svg_mask('/assets/images/common/comm_ico_delete_sm', var(--Grayscale-80));
 }
-.ico-check-green-sm { //green
+
+.ico-check-green-sm { // green
   @extend %icon;
   width: 18px;
   height: 18px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_check_green_sm');
+  @include mixins.svg_mask('/assets/images/common/comm_ico_check_sm', var(--Primary-Green-100));
 }
-.ico-current-location-sm {
+
+.ico-current-location-gray-sm {
   @extend %icon;
   width: 18px;
   height: 18px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_location_black_sm_delivery');
+  @include mixins.svg_mask('/assets/images/common/comm_ico_current_location_sm', var(--Grayscale-80));
 }
+
 .ico-info-gray-sm {
   @extend %icon;
   width: 18px;
   height: 18px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_info_gray_sm');
+  @include mixins.svg_mask('/assets/images/common/comm_ico_info_sm', var(--Grayscale-80));
 }
+
 .ico-location-gray-sm {
   @extend %icon;
   width: 18px;
   height: 18px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_location_gray_sm');
+  @include mixins.svg_mask('/assets/images/common/comm_ico_location_sm', var(--Grayscale-80));
 }
+
 .ico-edit-gray-sm {
   @extend %icon;
   width: 18px;
   height: 18px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_edit_gray_sm');
+  @include mixins.svg_mask('/assets/images/common/comm_ico_edit_sm', var(--Grayscale-80));
 }
+
+.ico-edit-green-sm {
+  @extend %icon;
+  width: 18px;
+  height: 18px;
+  @include mixins.svg_mask('/assets/images/common/comm_ico_edit_sm', var(--Primary-Green-100));
+}
+
 .ico-call-gray-sm {
   @extend %icon;
   width: 18px;
   height: 18px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_call_gray_sm');
+  @include mixins.svg_mask('/assets/images/common/comm_ico_call_sm', var(--Grayscale-80));
 }
 
+.ico-rating-gray40-sm {
+  @extend %icon;
+  width: 18px;
+  height: 19px;
+  @include mixins.svg_mask('/assets/images/common/comm_ico_rating_sm', var(--Grayscale-40));
+}
+
+.ico-rating-green-sm {
+  @extend %icon;
+  width: 18px;
+  height: 19px;
+  @include mixins.svg_mask('/assets/images/common/comm_ico_rating_sm', var(--Primary-Green-100));
+}
+
+.ico-reset-gray-sm {
+  @extend %icon;
+  width: 18px;
+  height: 18px;
+  @include mixins.svg_mask('/assets/images/common/comm_ico_reset_sm', var(--Grayscale-80));
+}
+
+.ico-menu-gray-sm {
+  @extend %icon;
+  width: 18px;
+  height: 18px;
+  @include mixins.svg_mask('/assets/images/common/comm_ico_menu_sm', var(--Grayscale-80));
+}
+
+// wish icon
+.ico-wish-sm {
+  @extend %icon;
+  width: 18px;
+  height: 18px;
+  @include mixins.svg_mask('/assets/images/common/comm_ico_wish_sm', rgba(var(--Grayscale-100-RGB), 20%));
+  opacity: 0.8;
+}
+
+[class^=ico-close-][class*=sm] {
+  @extend %icon;
+  width: 18px;
+  height: 18px;
+  @include mixins.svg_mask('/assets/images/common/comm_ico_close_sm');
+}
+
+.ico-close-white-sm {
+  background-color: var(--Grayscale-0);
+}
+
+.is-active {
+  .ico-wish-sm {
+    background-color: var(--Primary-Red-100);
+  }
+}
+
+// tooltip icon
+.ico-tooltip {
+  @extend %icon;
+  width: 18px;
+  height: 18px;
+  @include mixins.ratio_images('/assets/images/common/comm_ico_tooltip_def');
+}
+
+.btn-tooltip.is-active {
+  .ico-tooltip {
+    @include mixins.ratio_images('/assets/images/common/comm_ico_tooltip_sel');
+  }
+}
+
+// form - attach
+.ico-clear-black-sm {
+  @extend %icon;
+  width: 18px;
+  height: 18px;
+  @include mixins.ratio_images('/assets/images/form/ico_clear_attach_def');
+}
 
 // size - xs / h16
 .ico-arw-right-gray-xs {
   @extend %icon;
   width: 16px;
   height: 16px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_arw_right_gray_xs');
+  @include mixins.svg_mask('/assets/images/common/comm_ico_arw_right_xs', var(--Grayscale-80));
 }
+
 .ico-arw-down-gray-xs {
   @extend %icon;
   width: 16px;
   height: 16px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_arw_down_gray_xs');
+  @include mixins.svg_mask('/assets/images/common/comm_ico_arw_down_xs', var(--Grayscale-80));
 }
+
+.ico-arw-down-white-xs { // white
+  @extend %icon;
+  width: 16px;
+  height: 16px;
+  @include mixins.svg_mask('/assets/images/common/comm_ico_arw_down_xs', var(--Grayscale-0));
+}
+
 .ico-arw-up-gray-xs {
   @extend %icon;
   width: 16px;
   height: 16px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_arw_up_gray_xs');
+  @include mixins.svg_mask('/assets/images/common/comm_ico_arw_up_xs', var(--Grayscale-80));
 }
-.ico-close-gray-xs {
+
+[class^=ico-close-][class*=xs] {
   @extend %icon;
   width: 16px;
   height: 16px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_close_gray_xs');
+  @include mixins.svg_mask('/assets/images/common/comm_ico_close_xs');
 }
+
+.ico-close-gray-xs {
+  background: var(--Grayscale-80);
+}
+
+.ico-close-white-xs {
+  background: var(--Grayscale-0);
+}
+
 .ico-check-green-xs { //green
   @extend %icon;
   width: 16px;
   height: 16px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_check_green_xs');
+  @include mixins.svg_mask('/assets/images/common/comm_ico_check_xs', var(--Primary-Green-100));
 }
+
 .ico-delete-gray-xs {
   @extend %icon;
   width: 16px;
   height: 16px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_delete_gray_xs');
+  @include mixins.svg_mask('/assets/images/common/comm_ico_delete_xs', var(--Grayscale-80));
 }
+
 .ico-edit-green-xs { //green
   @extend %icon;
   width: 16px;
   height: 16px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_edit_green_xs');
+  @include mixins.svg_mask('/assets/images/common/comm_ico_edit_xs', var(--Primary-Green-100));
 }
+
 .ico-write-green-xs { //green
   @extend %icon;
   width: 16px;
   height: 16px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_write_green_xs');
+  @include mixins.svg_mask('/assets/images/common/comm_ico_write_xs', var(--Primary-Green-100));
 }
+
 .ico-filter-gray-xs {
   @extend %icon;
   width: 16px;
   height: 16px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_filter_gray_xs');
+  @include mixins.svg_mask('/assets/images/common/comm_ico_filter_xs', var(--Grayscale-80));
 }
-.ico-delete-gray-xs {
+
+// rating icon
+.ico-rating-gray50-xs {
   @extend %icon;
   width: 16px;
   height: 16px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_delete_gray_xs');
+  @include mixins.svg_mask('/assets/images/common/comm_ico_rating_xs', var(--Grayscale-50));
 }
-.ico-rating-gray-xs {
+
+.ico-rating-green-xs {
   @extend %icon;
   width: 16px;
   height: 16px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_rating_gray_xs');
+  @include mixins.svg_mask('/assets/images/common/comm_ico_rating_xs', var(--Primary-Green-100));
 }
 
-.ico-wish-sm {
+.ico-reset-gray-xs {
   @extend %icon;
-  width: 18px;
-  height: 18px;
-  @include mixins.svg_mask('~/assets/images/common/comm_ico_wish_sm', rgba( variables.$colorBlack, 20% ));
-  opacity: 0.8;
-}
-
-.is-active {
-  .ico-wish-sm {
-    background-color: variables.$colorRed100;
-  }
-}
-
-.ico-tooltip {
-  @extend %icon;
-  width: 18px;
-  height: 18px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_tooltip_def');
-}
-
-.btn-tooltip.is-active {
-  .ico-tooltip {
-    @include mixins.ratio_images('~/assets/images/common/comm_ico_tooltip_sel');
-  }
+  width: 16px;
+  height: 16px;
+  @include mixins.svg_mask('/assets/images/common/comm_ico_reset_xs', var(--Grayscale-80));
 }
 
 /* RowListWrap - sub item */
@@ -278,7 +469,7 @@
   width: 13px;
   height: 12px;
   margin-right: 6px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_bullet_order_info_list');
+  @include mixins.ratio_images('/assets/images/common/comm_ico_bullet_order_info_list');
 }
 
 /* 택배 > 메인 */
@@ -286,37 +477,53 @@
   @extend %icon;
   width: 42px;
   height: 42px;
-  @include mixins.ratio_images('~/assets/images/delivery/ico_inquiry_guide');
+  @include mixins.ratio_images('/assets/images/delivery/ico_inquiry_guide');
 }
 
-/* MY > 주소록 관리 */
-.ico-access-location-green {
+/* MY */
+.ico-access-location-green { // green
   @extend %icon;
   width: 24px;
   height: 24px;
-  @include mixins.ratio_images('~/assets/images/my/ico_access_location_green_my');
+  @include mixins.svg_mask('/assets/images/my/ico_access_location_my', var(--Primary-Green-100));
+}
+
+.ico-access-location-gray {
+  @extend %icon;
+  width: 24px;
+  height: 24px;
+  @include mixins.svg_mask('/assets/images/my/ico_access_location_my', var(--Grayscale-80));
 }
 
 .ico-current-marker {
   @extend %icon;
   width: 52px;
   height: 60px;
-  @include mixins.ratio_images('~/assets/images/my/ico_current_marker_my');
+  @include mixins.ratio_images('/assets/images/my/ico_current_marker_my');
 }
 
-/* sns icon - usage: 회원, 공통팝업 */
+.ico-plus-round {
+  @extend %icon;
+  width: 28px;
+  height: 28px;
+  @include mixins.ratio_images('/assets/images/common/comm_ico_plus_round');
+}
+
+/* sns icon - usage: 회원 */
 .ico-sns-kakao-sm {
   @extend %icon;
   width: 44px;
   height: 44px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_sns_kakao_sm_member');
+  @include mixins.ratio_images('/assets/images/common/comm_ico_sns_kakao_sm_member');
 }
+
 .ico-sns-naver-sm {
   @extend %icon;
   width: 44px;
   height: 44px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_sns_naver_sm_member');
+  @include mixins.ratio_images('/assets/images/common/comm_ico_sns_naver_sm_member');
 }
+
 /* s : info-guide-wrap */
 
 // type) info-guide
@@ -324,122 +531,278 @@
   @extend %icon;
   width: 100px;
   height: 100px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_info_guide_order_complete');
+  @include mixins.ratio_images('/assets/images/common/comm_ico_info_guide_order_complete');
 }
 
 .ico-info-guide-delivery { // 배송 완료 아이콘
   @extend %icon;
   width: 100px;
   height: 100px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_info_guide_delivery_complete');
+  @include mixins.ratio_images('/assets/images/common/comm_ico_info_guide_delivery_complete');
 }
+
+.ico-info-guide-gift { // 선물도착 완료 아이콘
+  @extend %icon;
+  width: 100px;
+  height: 100px;
+  @include mixins.ratio_images('/assets/images/common/comm_ico_info_guide_gift');
+}
+
+.ico-info-guide-19 { // 만 19세 아이콘
+  @extend %icon;
+  width: 103px;
+  height: 102px;
+  @include mixins.ratio_images('/assets/images/common/comm_ico_info_guide_19');
+}
+
 
 // type) no-data
 .ico-no-data-store { // 매장없음 아이콘
   @extend %icon;
   width: 80px;
   height: 80px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_no_data_store');
+  @include mixins.ratio_images('/assets/images/common/comm_ico_no_data_store');
 }
 
 .ico-no-data-history { // 내역없음 아이콘
   @extend %icon;
   width: 80px;
   height: 80px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_no_data_history');
+  @include mixins.ratio_images('/assets/images/common/comm_ico_no_data_history');
 }
 
 .ico-no-data-search-result { // 검색결과 없음 아이콘
   @extend %icon;
   width: 80px;
   height: 80px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_no_data_history');
+  @include mixins.ratio_images('/assets/images/common/comm_ico_no_data_search_result');
 }
 
 .ico-no-data-filter-result { // 필터결과 없음 아이콘
   @extend %icon;
   width: 80px;
   height: 80px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_no_data_filter_result');
+  @include mixins.ratio_images('/assets/images/common/comm_ico_no_data_filter_result');
 }
 
 .ico-no-data-cart { // 장바구니 없음 아이콘
   @extend %icon;
   width: 80px;
   height: 80px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_no_data_cart');
+  @include mixins.ratio_images('/assets/images/common/comm_ico_no_data_cart');
 }
 
 .ico-no-data-address { // 주소없음 아이콘
   @extend %icon;
   width: 80px;
   height: 80px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_no_data_address');
+  @include mixins.ratio_images('/assets/images/common/comm_ico_no_data_address');
 }
 
 .ico-no-data-coupon { // 쿠폰없음 아이콘
   @extend %icon;
   width: 80px;
   height: 80px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_no_data_coupon');
+  @include mixins.ratio_images('/assets/images/common/comm_ico_no_data_coupon');
 }
 
 .ico-no-data-review { // 리뷰없음 아이콘
   @extend %icon;
   width: 80px;
   height: 80px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_no_data_review');
+  @include mixins.ratio_images('/assets/images/common/comm_ico_no_data_review');
 }
 
-.ico-no-data-alert { // 리뷰없음 아이콘
+.ico-no-data-alert { // alert 아이콘
   @extend %icon;
   width: 80px;
   height: 80px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_no_data_alert');
+  @include mixins.ratio_images('/assets/images/common/comm_ico_no_data_alert');
+}
+
+.ico-no-data-wish { // 찜 없음 아이콘
+  @extend %icon;
+  width: 80px;
+  height: 80px;
+  @include mixins.ratio_images('/assets/images/common/comm_ico_no_data_wish');
+}
+
+.ico-no-data-event { // 이벤트&기획전 없음 아이콘
+  @extend %icon;
+  width: 80px;
+  height: 80px;
+  @include mixins.ratio_images('/assets/images/common/comm_ico_no_data_event');
 }
 
 /* e : info-guide-wrap */
-
-/* 임시 - 수정예정 */
-/* info-guide-wrap_temp / 삭제예정 LTK */
-.ico-info-guide-temp {
-  @extend %icon;
-  width: 103px;
-  height: 103px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_h103_info_guide');
-}
-.ico-no-data-temp {
-  @extend %icon;
-  width: 64px;
-  height: 64px;
-  @include mixins.ratio_images('~/assets/images/common/comm_ico_h64_no_data');
-}
-
-/* 고객센터 임시 아이콘 / 삭제예정 LTK */
+/* 고객센터 임시 아이콘 - 디자인 확정 후 수정 필요 */
 .ico-grade-benefit-temp {
   @extend %icon;
   width: 67px;
   height: 67px;
-  @include mixins.ratio_images('~/assets/images/cs/ico_grade_benefit_h67_cs');
+  @include mixins.ratio_images('/assets/images/cs/ico_grade_benefit_h67_cs');
 }
 
-/*.ico-delivery-common {
-    @extend %icon;
-    flex-shrink: 0;
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    margin-right: 14px;
-    border-radius: 4px;
-    @include mixins.ratio_images('~/assets/images/product/ico_prod_delivery_info_common_h30', 30px 30px, center, variables.$colorGray06);
+/* s : 메인 > 전체보기 아이콘 */
+[class^=ico-service-][class*=-sm] {
+  @extend %icon;
+  width: 50px;
+  height: 50px;
 }
-.ico-clock {
-    @extend %icon;
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    @include mixins.ratio_images('~/assets/images/product/ico_clock');
-    vertical-align: top;
-}*/
 
-/* e: customer */
+.ico-service-pickup {
+  @extend %icon;
+  width: 60px;
+  height: 60px;
+  @include mixins.ratio_images('/assets/images/common/comm_ico_service_pickup');
+}
+
+.ico-service-pickup-sm {
+  @extend %icon;
+  width: 50px;
+  height: 50px;
+  @include mixins.ratio_images('/assets/images/common/comm_ico_service_pickup_sm');
+}
+
+.ico-service-reservation {
+  @extend %icon;
+  width: 60px;
+  height: 60px;
+  @include mixins.ratio_images('/assets/images/common/comm_ico_service_reservation');
+}
+
+.ico-service-reservation-sm {
+  @include mixins.ratio_images('/assets/images/common/comm_ico_service_reservation_sm');
+}
+
+.ico-service-delivery {
+  @extend %icon;
+  width: 60px;
+  height: 60px;
+  @include mixins.ratio_images('/assets/images/common/comm_ico_service_delivery');
+}
+
+.ico-service-delivery-sm {
+  @include mixins.ratio_images('/assets/images/common/comm_ico_service_delivery_sm');
+}
+
+.ico-service-keep {
+  @extend %icon;
+  width: 60px;
+  height: 60px;
+  @include mixins.ratio_images('/assets/images/common/comm_ico_service_keep');
+}
+
+.ico-service-stock {
+  @extend %icon;
+  width: 60px;
+  height: 60px;
+  @include mixins.ratio_images('/assets/images/common/comm_ico_service_stock');
+}
+
+.ico-service-store {
+  @extend %icon;
+  width: 60px;
+  height: 60px;
+  @include mixins.ratio_images('/assets/images/common/comm_ico_service_store');
+}
+
+.ico-service-discount {
+  @extend %icon;
+  width: 60px;
+  height: 60px;
+  @include mixins.ratio_images('/assets/images/common/comm_ico_service_discount');
+}
+
+.ico-service-gift-card {
+  @extend %icon;
+  width: 60px;
+  height: 60px;
+  @include mixins.ratio_images('/assets/images/common/comm_ico_service_gift_card');
+}
+
+.ico-service-voucher {
+  @extend %icon;
+  width: 60px;
+  height: 60px;
+  @include mixins.ratio_images('/assets/images/common/comm_ico_service_voucher');
+}
+
+.ico-service-coupon {
+  @extend %icon;
+  width: 60px;
+  height: 60px;
+  @include mixins.ratio_images('/assets/images/common/comm_ico_service_coupon');
+}
+
+.ico-service-event {
+  @extend %icon;
+  width: 60px;
+  height: 60px;
+  @include mixins.ratio_images('/assets/images/common/comm_ico_service_event');
+}
+
+.ico-service-attendance {
+  @extend %icon;
+  width: 60px;
+  height: 60px;
+  @include mixins.ratio_images('/assets/images/common/comm_ico_service_attendance');
+}
+
+.ico-service-exhibition {
+  @extend %icon;
+  width: 60px;
+  height: 60px;
+  @include mixins.ratio_images('/assets/images/common/comm_ico_service_exhibition');
+}
+
+.ico-service-point {
+  @extend %icon;
+  width: 60px;
+  height: 60px;
+  @include mixins.ratio_images('/assets/images/common/comm_ico_service_point');
+}
+
+/* e : 메인 > 전체보기 아이콘 */
+
+/* s: 마케팅 수신 동의 아이콘 */
+[class^=ico-marketing-] {
+  @extend %icon;
+  width: 50px;
+  height: 50px;
+}
+
+.ico-marketing-alarm {
+  @include mixins.ratio_images('/assets/images/common/comm_ico_marketing_alarm');
+}
+
+.ico-marketing-shopping {
+  @include mixins.ratio_images('/assets/images/common/comm_ico_marketing_shopping');
+}
+
+.ico-marketing-event {
+  @include mixins.ratio_images('/assets/images/common/comm_ico_marketing_event');
+}
+
+/* e: 마케팅 수신 동의 아이콘 */
+
+/* s: SNS 공유 아이콘 */
+[class^=ico-share-] {
+  @extend %icon;
+  width: 59px;
+  height: 58px;
+}
+
+.ico-share-kakao {
+  @include mixins.ratio_images('/assets/images/common/comm_ico_share_kakao');
+}
+
+.ico-share-url {
+  @include mixins.ratio_images('/assets/images/common/comm_ico_share_url');
+}
+
+.ico-share-more {
+  @include mixins.ratio_images('/assets/images/common/comm_ico_share_more');
+}
+
+/* e: SNS 공유 아이콘 */

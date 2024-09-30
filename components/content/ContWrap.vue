@@ -8,7 +8,7 @@
 const props = withDefaults(defineProps<{
   type?: 'default' | 'white' | 'divider'; // default - gray, white, divider - 미정
   inTop?: 'zero' | 'sm' | 'md' | 'lg'; // zero - 0, sm - 10px , md - 20px, lg - 30px
-  inBottom?: 'zero' | 'md' | 'sm'; // zero - 0, md - 30px, 'sm' - 20px
+  inBottom?: 'zero' | 'md' | 'sm'; // zero - 0, md - 30px
 }>(), {
   type: 'default',
   inTop: 'md',

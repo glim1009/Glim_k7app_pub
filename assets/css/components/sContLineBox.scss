@@ -2,10 +2,53 @@
 @use '../abstracts/variables';
 @use '../abstracts/mixins';
 
-.sline-box {
-  ~ .sline-box {
+.scont-line-box {
+  position: relative;
+
+  ~ .scont-line-box {
     margin-top: 16px;
     padding-top: 16px;
-    border-top: 1px solid variables.$colorGray30;
+    border-top: 1px solid var(--Grayscale-30);
+  }
+
+  .sub-grid-wrap {
+
   }
 }
+
+
+$contGapSize: ('zero': 0px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
+
+
+@each $size, $px in $contGapSize {
+  .scont-col-#{$size}-wrap {
+    @include mixins.justify_width(stretch);
+    gap: $px * 2;
+
+    .scont-line-box {
+      width: 100%;
+      ~ .scont-line-box {
+        margin: {
+          top: 0;
+        }
+        padding: {
+          top: 0;
+        }
+        border-top: 0;
+        &:before {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: -#{$px};
+          content: '';
+          display: block;
+          width: 1px;
+          background-color: var(--Grayscale-30);
+        }
+        // left: 1px solid var(--Grayscale-30);
+      }
+    }
+  }
+}
+
+

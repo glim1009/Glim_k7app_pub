@@ -33,12 +33,7 @@
               </div>
               <div class="form-cont">
                 <div class="form-input-group">
-                  <EInputBox title="매장 요청사항 입력" placeholder="매장 요청사항 입력">
-                    <div class="byte-check">
-                      <span class="count">0</span>
-                      <span class="total">50</span>
-                    </div>
-                  </EInputBox>
+                  <EInputBox :max-length="50" title="매장 요청사항 입력" placeholder="매장 요청사항 입력" is-byte-check />
                 </div>
               </div>
             </div>
@@ -74,7 +69,7 @@
                     <div class="thumb-prod-flex">
                       <EThumbProdBox size="md">
                         <template #thumb>
-                          <img src="../../../assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
                         </template>
                       </EThumbProdBox>
                       <div class="info-box">
@@ -106,7 +101,7 @@
                     <div class="thumb-prod-flex">
                       <EThumbProdBox size="md">
                         <template #thumb>
-                          <img src="../../../assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
                         </template>
                       </EThumbProdBox>
                       <div class="info-box">
@@ -144,7 +139,7 @@
                     <div class="thumb-prod-flex">
                       <EThumbProdBox size="md">
                         <template #thumb>
-                          <img src="../../../assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
                         </template>
                       </EThumbProdBox>
                       <div class="info-box">
@@ -175,7 +170,7 @@
                     <div class="thumb-prod-flex">
                       <EThumbProdBox size="md">
                         <template #thumb>
-                          <img src="../../../assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
                         </template>
                       </EThumbProdBox>
                       <div class="info-box">
@@ -235,20 +230,16 @@
                       </div>
                     </div>
                   </FlexGroup>
-                  <ColorBox color="light-gray" size="sm" class="cont-discount-info">
-                    <FlexGroup align="center">
-                      <div class="flex-left">
-                        <EGoods size="sm" val="1,000" unit="원" />
-                      </div>
-                      <div class="flex-right">
-                        <button type="button" class="btn-delete">
-                          <EIco name="close" color="gray" size="xs">
-                            <span class="offscreen">할인 취소</span>
-                          </EIco>
-                        </button>
-                      </div>
-                    </FlexGroup>
-                  </ColorBox>
+                  <div class="tag-full-box cont-discount-info">
+                    <p class="stext fc-black fw-md">
+                      1,000원
+                    </p>
+                    <button type="button" class="btn-delete">
+                      <EIco name="close" color="gray" size="xs">
+                        <span class="offscreen">할인 취소</span>
+                      </EIco>
+                    </button>
+                  </div>
                 </li>
                 <li class="item-sm">
                   <FlexGroup>
@@ -264,20 +255,16 @@
                       </div>
                     </div>
                   </FlexGroup>
-                  <ColorBox color="light-gray" size="sm" class="cont-discount-info">
-                    <FlexGroup align="center">
-                      <div class="flex-left">
-                        <EGoods size="sm" val="1,000" unit="원" />
-                      </div>
-                      <div class="flex-right">
-                        <button type="button" class="btn-delete">
-                          <EIco name="close" color="gray" size="xs">
-                            <span class="offscreen">할인 취소</span>
-                          </EIco>
-                        </button>
-                      </div>
-                    </FlexGroup>
-                  </ColorBox>
+                  <div class="tag-full-box cont-discount-info">
+                    <p class="stext fc-black fw-md">
+                      1,000원
+                    </p>
+                    <button type="button" class="btn-delete">
+                      <EIco name="close" color="gray" size="xs">
+                        <span class="offscreen">할인 취소</span>
+                      </EIco>
+                    </button>
+                  </div>
                 </li>
                 <li class="item-sm">
                   <FlexGroup>
@@ -287,26 +274,22 @@
                     <div class="flex-right">
                       <div class="align-group">
                         <span class="stext">사용가능 <EGoods val="10,000" unit="P" /></span>
-                        <EBtn color="line-light-gray" size="xs" @click="openPayLPoint">
+                        <EBtn color="line-light-gray" size="xs" @click="openSelectPayLPoint">
                           <span class="text">사용</span>
                         </EBtn>
                       </div>
                     </div>
                   </FlexGroup>
-                  <ColorBox color="light-gray" size="sm" class="cont-discount-info">
-                    <FlexGroup align="center">
-                      <div class="flex-left">
-                        <EGoods size="sm" val="1,000" unit="원" />
-                      </div>
-                      <div class="flex-right">
-                        <button type="button" class="btn-delete">
-                          <EIco name="close" color="gray" size="xs">
-                            <span class="offscreen">할인 취소</span>
-                          </EIco>
-                        </button>
-                      </div>
-                    </FlexGroup>
-                  </ColorBox>
+                  <div class="tag-full-box cont-discount-info">
+                    <p class="stext fc-black fw-md">
+                      1,000원
+                    </p>
+                    <button type="button" class="btn-delete">
+                      <EIco name="close" color="gray" size="xs">
+                        <span class="offscreen">할인 취소</span>
+                      </EIco>
+                    </button>
+                  </div>
                 </li>
                 <li class="item-sm">
                   <FlexGroup>
@@ -316,26 +299,22 @@
                     <div class="flex-right">
                       <div class="align-group">
                         <span class="stext">사용가능 <EGoods val="17,500" unit="P" /></span>
-                        <EBtn color="line-light-gray" size="xs" @click="openSelectGiftCard">
+                        <EBtn color="line-light-gray" size="xs" @click="openSelectVoucher">
                           <span class="text">사용</span>
                         </EBtn>
                       </div>
                     </div>
                   </FlexGroup>
-                  <ColorBox color="light-gray" size="sm" class="cont-discount-info">
-                    <FlexGroup align="center">
-                      <div class="flex-left">
-                        <EGoods size="sm" val="1,000" unit="원" />
-                      </div>
-                      <div class="flex-right">
-                        <button type="button" class="btn-delete">
-                          <EIco name="close" color="gray" size="xs">
-                            <span class="offscreen">할인 취소</span>
-                          </EIco>
-                        </button>
-                      </div>
-                    </FlexGroup>
-                  </ColorBox>
+                  <div class="tag-full-box cont-discount-info">
+                    <p class="stext fc-black fw-md">
+                      1,000원
+                    </p>
+                    <button type="button" class="btn-delete">
+                      <EIco name="close" color="gray" size="xs">
+                        <span class="offscreen">할인 취소</span>
+                      </EIco>
+                    </button>
+                  </div>
                 </li>
               </RowListWrap>
             </ColorBox>
@@ -367,7 +346,7 @@
                   <ColorBox color="light-gray" size="sm">
                     <FlexGroup>
                       <div class="flex-left">
-                        <div class="stext fw-sb fc-gray90">
+                        <div class="stext-gray90 fw-sb">
                           개인 소득공제
                         </div>
                       </div>
@@ -386,7 +365,7 @@
                   <ColorBox color="light-gray" size="sm">
                     <FlexGroup>
                       <div class="flex-left">
-                        <div class="stext fw-sb fc-gray90">
+                        <div class="stext-gray90 fw-sb">
                           사업자 소득공제
                         </div>
                       </div>
@@ -412,7 +391,7 @@
                   <ColorBox color="light-gray" size="sm">
                     <FlexGroup>
                       <div class="flex-left">
-                        <div class="stext fw-sb fc-gray90">
+                        <div class="stext-gray90 fw-sb">
                           현금영수증 신청 안함
                         </div>
                       </div>
@@ -577,20 +556,78 @@
       </li>
     </RowListWrap>
     <ContBox size="lg">
-      <FlexGroup>
-        <div class="flex-left">
-          <span class="ui-chk">
-            <input id="agreeChk01" type="checkbox" />
-            <label for="agreeChk01"><span class="text-lg">개인정보 수집 및 이용동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
-          </span>
-        </div>
-        <div class="flex-right">
-          <ETBtn size="xs">
-            <span class="text">상세보기</span>
-            <EIco name="arw-right" color="gray" size="xs" />
-          </ETBtn>
-        </div>
-      </FlexGroup>
+      <AllAgreeWrap v-model:checkCount="checkCheckBox" :index="1" :total-count="totalCheckBox">
+        <ColorBox color="white" size="md">
+          <div ref="agreeListRef">
+            <RowListWrap gap="md">
+              <li class="ui-col-item">
+                <FlexGroup>
+                  <div class="flex-left">
+                    <span class="ui-chk">
+                      <input id="agreeChk02" type="checkbox" />
+                      <label for="agreeChk02"><span class="text-md">개인정보 수집 및 이용동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
+                    </span>
+                  </div>
+                  <div class="flex-right">
+                    <ETBtn size="xs" @click="openPersonalInfoAgree">
+                      <span class="text">상세보기</span>
+                      <EIco name="arw-right" color="gray" size="xs" />
+                    </ETBtn>
+                  </div>
+                </FlexGroup>
+              </li>
+              <li class="ui-col-item">
+                <FlexGroup>
+                  <div class="flex-left">
+                    <span class="ui-chk">
+                      <input id="agreeChk01" type="checkbox" />
+                      <label for="agreeChk01"><span class="text-md">PG사 전자금융거래 약관동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
+                    </span>
+                  </div>
+                  <div class="flex-right">
+                    <ETBtn tag="a" size="xs" to="javascript:">
+                      <span class="text">상세보기</span>
+                      <EIco name="arw-right" color="gray" size="xs" />
+                    </ETBtn>
+                  </div>
+                </FlexGroup>
+              </li>
+              <li class="ui-col-item">
+                <FlexGroup>
+                  <div class="flex-left">
+                    <span class="ui-chk">
+                      <input id="agreeChk01" type="checkbox" />
+                      <label for="agreeChk01"><span class="text-md">PG사 개인정보 수집 및 이용동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
+                    </span>
+                  </div>
+                  <div class="flex-right">
+                    <ETBtn tag="a" size="xs" to="javascript:">
+                      <span class="text">상세보기</span>
+                      <EIco name="arw-right" color="gray" size="xs" />
+                    </ETBtn>
+                  </div>
+                </FlexGroup>
+              </li>
+              <li class="ui-col-item">
+                <FlexGroup>
+                  <div class="flex-left">
+                    <span class="ui-chk">
+                      <input id="agreeChk01" type="checkbox" />
+                      <label for="agreeChk01"><span class="text-md">PG사 개인정보 제3자 제공동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
+                    </span>
+                  </div>
+                  <div class="flex-right">
+                    <ETBtn tag="a" size="xs" to="javascript:">
+                      <span class="text">상세보기</span>
+                      <EIco name="arw-right" color="gray" size="xs" />
+                    </ETBtn>
+                  </div>
+                </FlexGroup>
+              </li>
+            </RowListWrap>
+          </div>
+        </ColorBox>
+      </AllAgreeWrap>
       <RowListWrap size="xs">
         <li class="dot-text-sm">
           구매조건을 확인했으며 결제 진행에 동의합니다.
@@ -609,16 +646,24 @@
     </BtnWrap>
   </ContDocker>
 
+  <!-- pop : 개인정보 수집 및 이용약관 -->
+  <PopTermsPersonalInfoAgree v-model:sta="popPersonalInfoAgree" />
+  <!-- // pop : 개인정보 수집 및 이용약관 -->
+
   <!-- pop : 구독할인 -->
-  <popOrderSelectSubscribe v-model:sta="popSelectSubscribe" />
+  <popCommSelectSubscribe v-model:sta="popSelectSubscribe" />
   <!-- // pop : 구독할인 -->
 
+  <!-- pop : 쿠폰 -->
+  <popCommSelectCoupon v-model:sta="popSelectCoupon" />
+  <!-- // pop : 쿠폰 -->
+
   <!-- pop : L.POINT -->
-  <popOrderPayLPoint v-model:sta="popPayLPoint" />
+  <popCommSelectPayLPoint v-model:sta="popSelectPayLPoint" />
   <!-- // pop : L.POINT -->
 
   <!-- pop : 금액권선택 -->
-  <popOrderSelectGiftCard v-model:sta="popSelectGiftCard" />
+  <popCommSelectVoucher v-model:sta="popSelectVoucher" />
   <!-- // pop : 금액권선택 -->
 </template>
 
@@ -630,6 +675,10 @@ definePageMeta({
 const orderPayRadio = ref();
 const cashReceiptRadio = ref();
 
+// 개인정보 수집 및 이용약관 팝업
+const popPersonalInfoAgree = ref({ open: false });
+const openPersonalInfoAgree = () => popPersonalInfoAgree.value.open = true;
+
 // 증정품선택 팝업
 const popSelectSubscribe = ref({ open: false });
 const openSelectSubscribe = () => popSelectSubscribe.value.open = true;
@@ -639,12 +688,45 @@ const popSelectCoupon = ref({ open: false });
 const openSelectCoupon = () => popSelectCoupon.value.open = true;
 
 // L.POINT 팝업
-const popPayLPoint = ref({ open: false });
-const openPayLPoint = () => popPayLPoint.value.open = true;
+const popSelectPayLPoint = ref({ open: false });
+const openSelectPayLPoint = () => popSelectPayLPoint.value.open = true;
 
 // 금액권 선택 팝업
-const popSelectGiftCard = ref({ open: false });
-const openSelectGiftCard = () => popSelectGiftCard.value.open = true;
+const popSelectVoucher = ref({ open: false });
+const openSelectVoucher = () => popSelectVoucher.value.open = true;
+
+// 전체동의
+const agreeListRef = ref<HTMLInputElement | null>(null);
+const totalCheckBox = ref<number>(0);
+const checkCheckBox = ref<number>(0);
+let checkboxes: NodeListOf<HTMLInputElement>;
+
+function updateCheckCount(): void {
+  checkCheckBox.value = Array.from(checkboxes).filter(checkbox => checkbox.checked).length;
+}
+
+watch(() => checkCheckBox.value, (newValue) => {
+  totalCheckBox.value = checkboxes.length;
+  if (newValue === totalCheckBox.value) {
+    checkboxes.forEach(checkbox => checkbox.checked = true);
+  } else if (newValue === 0) {
+    checkboxes.forEach(checkbox => checkbox.checked = false);
+  }
+  updateCheckCount();
+});
+
+watch(() => agreeListRef.value, (newValue) => {
+  if (!newValue)
+    return;
+  checkboxes = newValue.querySelectorAll<HTMLInputElement>("input[type=\"checkbox\"]");
+  totalCheckBox.value = checkboxes.length;
+  checkboxes.forEach((checkbox) => {
+    checkbox.removeEventListener("change", updateCheckCount);
+    checkbox.addEventListener("change", updateCheckCount);
+  });
+
+  updateCheckCount();
+});
 </script>
 
 <style lang="scss" scoped>

@@ -4,7 +4,7 @@
       <span class="ui-chk">
         <input :id="'allAgreeChk'+index" type="checkbox" v-model="allChecked" @change="handleAllCheck" />
         <label :for="'allAgreeChk'+index">
-          <span class="text-lg">전체동의<span class="required"><span class="offscreen">필수체크</span></span></span>
+          <span class="text-lg">전체동의</span>
         </label>
       </span>
     </div>

@@ -42,7 +42,7 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -105,6 +105,9 @@
                 </div>
               </FlexGroup>
             </ColorBox>
+            <NuxtLink class="btn-link" to="javascript:">
+              <span class="offscreen">바로가기</span>
+            </NuxtLink>
           </li>
           <!-- // 일반 상품 -->
           <!-- 할인 상품 -->
@@ -117,7 +120,7 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -191,6 +194,9 @@
                 <label for="packageChk01"><span class="text-sm fc-gray80">포장봉투 (200원)</span></label>
               </span>
             </UiColGroup>
+            <NuxtLink class="btn-link" to="javascript:">
+              <span class="offscreen">바로가기</span>
+            </NuxtLink>
           </li>
           <!-- // 할인 상품 -->
         </RowListWrap>
@@ -219,7 +225,7 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -282,6 +288,9 @@
                 </div>
               </FlexGroup>
             </ColorBox>
+            <NuxtLink class="btn-link" to="javascript:">
+              <span class="offscreen">바로가기</span>
+            </NuxtLink>
           </li>
           <!-- // 일반 상품 -->
           <!-- 할인 상품 -->
@@ -294,7 +303,7 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -362,6 +371,9 @@
                 </div>
               </FlexGroup>
             </ColorBox>
+            <NuxtLink class="btn-link" to="javascript:">
+              <span class="offscreen">바로가기</span>
+            </NuxtLink>
           </li>
           <!-- // 할인 상품 -->
         </RowListWrap>
@@ -390,7 +402,7 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md" dim="19">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -458,12 +470,15 @@
                 </div>
               </FlexGroup>
             </ColorBox>
+            <NuxtLink class="btn-link" to="javascript:">
+              <span class="offscreen">바로가기</span>
+            </NuxtLink>
           </li>
           <!-- // 주류/와인 상품 -->
         </RowListWrap>
       </ColorBox>
       <BtnWrap size="md">
-        <EBtn color="line-light-gray" size="md">
+        <EBtn tag="a" color="line-gray" size="md" to="javascript:">
           <EIco name="plus" color="gray" size="sm" />
           <span class="text">상품 더 담기</span>
         </EBtn>
@@ -539,31 +554,26 @@
   <!-- // 데이터가 없는 경우 -->
 
   <!-- 데이터가 없는 경우  -->
-  <ContWrap v-if="isNoData" in-top="zero">
+  <ContWrap v-if="isNoData" in-top="zero" class="not-navbar">
     <InfoGuideWrap
       type="no-data"
       name="cart"
       desc="장바구니에 담긴 상품이 없습니다."
     />
     <BtnWrap type="auto-center" size="xl">
-      <EBtn tag="a" color="line-light-gray" size="md" to="to">
-        <span class="text">사전예약 상품 둘러보기</span>
+      <EBtn tag="a" color="line-light-gray" size="md" to="javascript:">
+        <span class="text">사전예약 상품보기</span>
       </EBtn>
     </BtnWrap>
   </ContWrap>
   <!-- // 데이터가 없는 경우  -->
 
   <!-- pop : 픽업정보변경 -->
-  <popCartChangePickupInfo v-model:sta="popChangePickupInfo" />
+  <popCommChangePickupInfo v-model:sta="popChangePickupInfo" />
   <!-- // pop : 픽업정보변경 -->
 </template>
 
 <script setup lang="ts">
-definePageMeta({
-  title: '장바구니',
-  hideRightHeader: false,
-});
-
 const isData = ref(true);
 const isNoData = ref(true);
 

@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 const props = withDefaults(defineProps<{
-  size?: 'xs' | 'sm' | 'md' | 'lg'; // padding - xs: 10px, sm: 12px, md: 16px, lg: 20px
+  size?: 'zero' | 'xs' | 'sm' | 'md' | 'lg'; // padding - xs: 10px, sm: 12px, md: 16px, lg: 20px
   color?: 'white' | 'light-green' | 'light-gray' | 'line-light-gray' | 'orange';
 }>(), {
   size: 'md',

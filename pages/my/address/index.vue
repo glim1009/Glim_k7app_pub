@@ -6,8 +6,8 @@
           <EIco name="plus" size="sm" color="white"></EIco>
           <span class="text">주소지 추가</span>
         </EBtn>
-        <ETBtn tag="button" size="xs" @click="openAddAddress">
-          <EIco name="current-location" size="sm"></EIco>
+        <ETBtn tag="button" size="xs" @click="openCurrentAddress">
+          <EIco name="current-location" color="gray" size="sm"></EIco>
           <span class="text">현재 위치 주소에 추가</span>
         </ETBtn>
       </BtnWrap>
@@ -47,8 +47,8 @@
               </FlexGroup>
             </div>
             <RowListWrap size="xs">
-              <p class="stext fw-md fc-black">085421</p>
-              <TableWrap type="info" gap="sm" size="md" table-name="정보성 테이블">
+              <p class="stext-black fw-md">085421</p>
+              <TableWrap type="info" gap="sm" size="md" table-name="주소정보">
                 <colgroup>
                   <col style="width: 44px;">
                   <col style="width: auto;">
@@ -96,8 +96,8 @@
               </FlexGroup>
             </div>
             <RowListWrap size="xs">
-              <p class="stext fw-md fc-black">085421</p>
-              <TableWrap type="info" gap="sm" size="md" table-name="정보성 테이블">
+              <p class="stext-black fw-md">085421</p>
+              <TableWrap type="info" gap="sm" size="md" table-name="주소정보">
                 <colgroup>
                   <col style="width: 44px;">
                   <col style="width: auto;">
@@ -145,8 +145,8 @@
               </FlexGroup>
             </div>
             <RowListWrap size="xs">
-              <p class="stext fw-md fc-black">085421</p>
-              <TableWrap type="info" gap="sm" size="md" table-name="정보성 테이블">
+              <p class="stext-black fw-md">085421</p>
+              <TableWrap type="info" gap="sm" size="md" table-name="주소정보">
                 <colgroup>
                   <col style="width: 44px;">
                   <col style="width: auto;">
@@ -194,6 +194,10 @@
   <PopMyAddAddress v-model:sta="popAddAddress"/>
   <!-- // pop : 주소록 추가 -->
 
+  <!-- pop : 현재 위치 주소 추가 -->
+  <PopMyCurrentAddress v-model:sta="popCurrentAddress" />
+  <!-- // pop : 현재 위치 주소 추가 -->
+
   <!-- pop : 주소록 수정 -->
   <PopMyEditAddress v-model:sta="popEditAddress"/>
   <!-- // pop : 주소록 수정 -->
@@ -208,9 +212,15 @@ definePageMeta({
 const isData = ref(true);
 const isNoData = ref(true);
 
+// 주소록 추가
 const popAddAddress = ref({open: false});
 const openAddAddress = () => popAddAddress.value.open = true;
 
+// 현재 위치 주소 추가
+const popCurrentAddress = ref({ open: false });
+const openCurrentAddress = () => popCurrentAddress.value.open = true;
+
+// 주소록 수정
 const popEditAddress = ref({open: false});
 const openEditAddress = () => popEditAddress.value.open = true;
 

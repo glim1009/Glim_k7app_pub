@@ -14,22 +14,41 @@ $groupAlign: ('start', 'center', 'end');
     :deep(.flex-left) {
       flex-wrap: wrap;
       @include mixins.justify_width(#{$align}, start);
+
+      .ui-chk {
+        padding-right: 6px;
+        input {
+          + label {
+            .text-md {
+              @include mixins.multi_ellipsis(variables.$fontSizeMdLineHeight, 1, true);
+            }
+          }
+        }
+      }
     }
     :deep(.flex-right) {
       flex-wrap: wrap;
       flex: 1 0 auto;
       @include mixins.justify_width(#{$align}, end);
+
+      .btn-share {
+        margin-left: 14px;
+      }
+    }
+    :deep(.flex-start-right) {
+      flex-wrap: wrap;
+      flex: 1 0 auto;
+      @include mixins.justify_width(#{$align}, start);
     }
   }
 }
 
 // Usage 주소록 box
-
 :deep(.info-flex-left) {
-  display: block;
-  font-size: 0;
+  @include mixins.justify_width(start, center, column);
 
   [class^=ctitle][class*=wrap] {
+
     [class^=ctitle] {
       display: inline-block;
       vertical-align: top;
@@ -42,13 +61,26 @@ $groupAlign: ('start', 'center', 'end');
       }
     }
 
+    [class^=badge] {
+      + [class^=ctitle] {
+        margin-left: 6px;
+      }
+    }
+
     ~ .bar-group {
       margin-top: 0;
     }
   }
 
-  .box-rdo-group {
+  [class^=tbtn-] {
+    display: block;
 
+    ~ .bar-group {
+      margin-top: 6px;
+    }
+  }
+
+  .box-rdo-group {
     .ui-rdo {
       .text-lg {
         @include mixins.font_size_2xl('sb');
@@ -64,3 +96,10 @@ $groupAlign: ('start', 'center', 'end');
 }
 
 
+:deep(.flex-left) {
+  &:has([class^=ico-marketing-]){ // 마케팅 수신 팝업
+    + .flex-start-right {
+      margin-left: 10px;
+    }
+  }
+}

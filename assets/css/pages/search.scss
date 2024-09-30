@@ -2,11 +2,22 @@
 @use '../abstracts/variables';
 @use '../abstracts/mixins';
 
-
+/* s: 검색어 입력중 case */
 .auto-complete-layer {
   position: fixed;
+  z-index: 30;
   top: variables.$headerHeight;
   left: 0;
   right: 0;
   bottom: 0;
+
+  @include mixins.justify_width(stretch, start, column);
+  flex: 1 0 auto;
+  overflow-y: scroll;
+
+  :deep([class^=cont][class$=-wrap]) {
+    flex: 1 0 auto;
+  }
 }
+/* e: 검색어 입력중 case */
+
