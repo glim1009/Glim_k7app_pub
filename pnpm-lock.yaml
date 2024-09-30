@@ -42,7 +42,7 @@ importers:
         specifier: ^3.4.31
         version: 3.4.33(typescript@5.5.4)
       vuedraggable:
-        specifier: ^4.1.0
+        specifier: 4.1.0
         version: 4.1.0(vue@3.4.33(typescript@5.5.4))
     devDependencies:
       '@antfu/eslint-config':
