@@ -12,9 +12,9 @@
                   <ETit text="리뷰 작성포인트 지급 기준" type="sCont" />
                   <p class="stext">
                     상품평가 = 10p
-                    <br />상품평가+텍스트 = 50p
-                    <br />상품평가+사진 = 60p
-                    <br />상품평가+텍스트+사진 = 100p
+                    <br>상품평가+텍스트 = 50p
+                    <br>상품평가+사진 = 60p
+                    <br>상품평가+텍스트+사진 = 100p
                   </p>
                 </CtitleWrap>
               </ETooltip>
@@ -166,9 +166,13 @@
 
 <script setup lang="ts">
 definePageMeta({
-  title: '상품리뷰',
-  hideRightHeader: ['home'],
+  title: "상품리뷰",
+  hideRightHeader: ["home"],
 });
+
+const route = useRoute();
+if (route.params.slug[1])
+  showError({ statusCode: 404 });
 
 // 리뷰작성 팝업
 const popWriteReview = ref({ open: false });

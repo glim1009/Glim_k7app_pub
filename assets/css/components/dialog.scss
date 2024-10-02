@@ -144,7 +144,7 @@
 .ui-dialog-full {
   @extend %dialogDefault;
   border-radius: 0;
-  height: 100dvh;
+  height: 100vh;
   left: 0;
   top: 0;
 
@@ -201,7 +201,7 @@
   border-bottom-right-radius: 0;
   max-height: calc(100dvh - 100px);
   bottom: 0;
-  margin-bottom: calc(100vh / 5 * -1);
+  margin-bottom: calc(100dvh / 5 * -1);
   opacity: 1;
 
 

@@ -51,6 +51,42 @@
   }
 }
 
+.faq-fix-wrap {
+  &:has([class*=faq-fix-search]) {
+    padding-top: 44px !important;
+  }
+
+  &:has([class*=faq-fix-tab]) {
+    padding-top: 60px !important;
+  }
+
+  [class*=faq-fix-] {
+    z-index: 5;
+    background: var(--Grayscale-0);
+
+    :deep(.tabs) {
+      z-index: 5;
+      background: var(--Grayscale-0);
+    }
+  }
+
+  [class*=faq-fix-search] {
+    position: fixed;
+    top: 55px;
+    left: 0;
+    right: 0;
+    padding: 0 10px;
+  }
+
+  [class*=faq-fix-tab] {
+    :deep(.tabs) {
+      top: 95px;
+      position: fixed;
+      left: 0;
+      right: 0;
+    }
+  }
+}
 
 // 임시
 .ctitle-zero-wrap { // ctitle 15px ~ tbtn 13px 여백

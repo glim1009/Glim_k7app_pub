@@ -529,6 +529,10 @@ $wrapSize: ('2xs': 8px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
 .row-bline-list {
   :deep([class^=item]) {
     border-bottom: 1px solid var(--Grayscale-30);
+
+    .fold-box {
+      margin: 0;
+    }
   }
 
   :deep(.item-lg-full) {

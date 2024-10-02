@@ -15,13 +15,18 @@
                 <ETit type="form">계열사<span class="required"><span class="offscreen">필수입력</span></span></ETit>
               </div>
               <div class="form-cont">
-                <div class="ui-select">
-                  <select title="계열사 목록" disabled>
-                    <option selected>exmaple</option>
-                    <option>선택</option>
-                    <option>선택</option>
-                    <option>선택</option>
-                  </select>
+                <div class="form-input-group valid-check">
+                  <div class="ui-select">
+                    <select title="계열사 목록" disabled>
+                      <option selected>exmaple</option>
+                      <option>선택</option>
+                      <option>선택</option>
+                      <option>선택</option>
+                    </select>
+                  </div>
+                  <p class="valid-desc">
+                    계열사를 선택해 주세요.
+                  </p>
                 </div>
               </div>
             </div>
@@ -34,7 +39,7 @@
                 </ETit>
               </div>
               <div class="form-cont">
-                <div class="form-input-group">
+                <div class="form-input-group valid-check">
                   <FlexGroup>
                     <div class="flex-left">
                       <EInputBox title="이메일 입력" placeholder="이메일 입력"/>
@@ -46,6 +51,7 @@
                       </div>
                     </div>
                   </FlexGroup>
+                  <p class="valid-desc">이메일을 입력해 주세요.</p>
                 </div>
               </div>
             </div>
@@ -56,13 +62,14 @@
                 <ETit type="form">인증번호<span class="required"><span class="offscreen">필수입력</span></span></ETit>
               </div>
               <div class="form-cont">
-                <div class="form-input-group">
+                <div class="form-input-group valid-check">
                   <EInputBox title="인증번호 입력" type="number" placeholder="인증번호 입력">
                     <span class="unit fc-red">05:34</span>
                     <EBtn color="line-light-gray" size="xs">
                       <span class="text">재발송</span>
                     </EBtn>
                   </EInputBox>
+                  <p class="valid-desc">인증번호를 입력해 주세요.</p>
                 </div>
               </div>
             </div>

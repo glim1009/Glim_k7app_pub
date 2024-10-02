@@ -14,7 +14,10 @@
               <ETit type="form">사번<span class="required"><span class="offscreen">필수입력</span></span></ETit>
             </div>
             <div class="form-cont">
-              <EInputBox type="number" inputmode="numeric" title="사번입력" placeholder="사번입력" />
+              <div class="form-input-group valid-check">
+                <EInputBox type="number" inputmode="numeric" title="사번입력" placeholder="사번입력" />
+                <p class="valid-desc">사번을 입력해 주세요.</p>
+              </div>
             </div>
           </div>
         </li>
@@ -26,7 +29,7 @@
               </ETit>
             </div>
             <div class="form-cont">
-              <div class="form-input-group">
+              <div class="form-input-group valid-check">
                 <FlexGroup>
                   <div class="flex-left">
                     <EInputBox title="이메일 입력" placeholder="이메일 입력" />
@@ -38,6 +41,7 @@
                     </div>
                   </div>
                 </FlexGroup>
+                <p class="valid-desc">이메일을 입력해 주세요.</p>
               </div>
             </div>
           </div>

@@ -284,7 +284,6 @@
 
 <script setup lang="ts">
 const route = useRoute();
-console.log(route.params.slug[0]);
 
 const isData = ref(true);
 const isNoData = ref(false);

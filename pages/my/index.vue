@@ -200,7 +200,7 @@
             </ETBtn>
           </li>
           <li class="item-md-link">
-            <ETBtn tag="a" size="sm" type="right-arw" to="javascript:">
+            <ETBtn tag="a" size="sm" type="right-arw" target="_blank" to="javascript:">
               <span class="text">L.PAY 간편결제 관리</span>
             </ETBtn>
           </li>
@@ -219,7 +219,7 @@
             </ETBtn>
           </li>
           <li class="item-md-link">
-            <ETBtn tag="a" size="sm" type="right-arw" to="javascript:">
+            <ETBtn tag="a" size="sm" type="right-arw" to="/event/participate">
               <span class="text">참여중인 이벤트</span>
             </ETBtn>
           </li>
@@ -292,7 +292,7 @@
             </ETBtn>
           </li>
           <li class="item-md-link">
-            <ETBtn tag="a" size="sm" type="right-arw" to="https://m.7-eleven.co.kr:444/franchise/advice/cvmsForm.asp">
+            <ETBtn tag="a" size="sm" type="right-arw" target="_blank" to="https://m.7-eleven.co.kr:444/franchise/advice/cvmsForm.asp">
               <span class="text">고객의 소리</span>
             </ETBtn>
           </li>

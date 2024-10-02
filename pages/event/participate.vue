@@ -16,7 +16,7 @@
                   </span>
                 </div>
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_banner_service_1.png" alt="기획전명 이미지" />
+                  <img src="/assets/images/temp/temp_banner_service_1.png" alt="이벤트명 이미지" />
                 </template>
               </EThumbEventBox>
               <div class="info-box">
@@ -46,7 +46,7 @@
                   </span>
                 </div>
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_banner_service_1.png" alt="기획전명 이미지" />
+                  <img src="/assets/images/temp/temp_banner_service_1.png" alt="이벤트명 이미지" />
                 </template>
               </EThumbEventBox>
               <div class="info-box">
@@ -71,7 +71,7 @@
             <div class="thumb-event">
               <EThumbEventBox>
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_banner_service_1.png" alt="기획전명 이미지" />
+                  <img src="/assets/images/temp/temp_banner_service_1.png" alt="이벤트명 이미지" />
                 </template>
               </EThumbEventBox>
               <div class="info-box">
@@ -96,7 +96,7 @@
             <div class="thumb-event">
               <EThumbEventBox dim="19">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_banner_service_1.png" alt="성인인증이 필요한 기획전 이미지" />
+                  <img src="/assets/images/temp/temp_banner_service_1.png" alt="성인인증이 필요한 이벤트 이미지" />
                 </template>
               </EThumbEventBox>
               <div class="info-box">
@@ -142,7 +142,7 @@ definePageMeta({
 });
 
 const isData = ref(true);
-const isNoData = ref(false);
+const isNoData = ref(true);
 </script>
 
 <style lang="scss" scoped>

@@ -15,7 +15,10 @@
                 <ETit type="form">점포코드<span class="required"><span class="offscreen">필수입력</span></span></ETit>
               </div>
               <div class="form-cont">
-                <EInputBox title="점포코드 입력" placeholder="점포코드 입력" />
+                <div class="form-input-group valid-check">
+                  <EInputBox title="점포코드 입력" placeholder="점포코드 입력" />
+                  <p class="valid-desc">점포코드를 입력해 주세요.</p>
+                </div>
               </div>
             </div>
           </li>
@@ -25,8 +28,9 @@
                 <ETit type="form">휴대폰번호<span class="required"><span class="offscreen">필수입력</span></span></ETit>
               </div>
               <div class="form-cont">
-                <div class="form-input-group">
+                <div class="form-input-group valid-check">
                   <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호 입력" />
+                  <p class="valid-desc">휴대폰 번호를 정확하게 입력해 주세요.</p>
                 </div>
               </div>
             </div>

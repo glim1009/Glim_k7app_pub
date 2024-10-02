@@ -1,6 +1,6 @@
 <template>
-  <ContWrap type="white" in-top="zero" in-bottom="zero">
-    <ContBox style="padding-bottom: 10px">
+  <ContWrap class="faq-fix-wrap" type="white" in-top="zero" in-bottom="zero">
+    <ContBox class="faq-fix-search">
       <EInputBox type="search" enterkeyhint="search" title="검색" placeholder="궁금하신 내용을 입력해 보세요.">
         <button type="button" class="btn-input-search">
           <span class="offscreen">검색</span>
@@ -10,45 +10,51 @@
       <div v-if="isSearch" class="list-header faq-search-info">
         <div class="search-result-tit">
           <span class="fc-spot fw-sb">'반품'</span>에 대한
-          <EGoods unit="개"><span class="val fc-spot">0</span></EGoods>의 검색결과
+          <EGoods unit="개">
+            <span class="val fc-spot">0</span>
+          </EGoods>의 검색결과
         </div>
       </div>
       <!--  //검색후  -->
     </ContBox>
   </ContWrap>
-  <ContWrap type="white" in-top="zero" class="side-zero">
-    <TabWrap fir-active="tabOften">
+  <ContWrap type="white" in-top="zero" class="faq-fix-wrap side-zero">
+    <TabWrap class="faq-fix-tab" fir-active="tabOften">
       <!--  검색전  -->
       <template v-if="!isSearch" #tabs="{ activeTab, setActiveTab }">
         <SwiperAutoWrap type="line" class="in-top-xs">
           <swiper-slide class="tab-item">
-            <button type="button" class="tab-link"
-                    :class="{ 'is-active': activeTab === 'tabOften' }"
-                    @click="setActiveTab('tabOften')"
+            <button
+              type="button" class="tab-link"
+              :class="{ 'is-active': activeTab === 'tabOften' }"
+              @click="setActiveTab('tabOften')"
             >
               <span class="tab-text">자주 찾는 질문 10</span>
             </button>
           </swiper-slide>
           <swiper-slide class="tab-item">
-            <button type="button" class="tab-link"
-                    :class="{ 'is-active': activeTab === 'tabAll' }"
-                    @click="setActiveTab('tabAll')"
+            <button
+              type="button" class="tab-link"
+              :class="{ 'is-active': activeTab === 'tabAll' }"
+              @click="setActiveTab('tabAll')"
             >
               <span class="tab-text">전체</span>
             </button>
           </swiper-slide>
           <swiper-slide class="tab-item">
-            <button type="button" class="tab-link"
-                    :class="{ 'is-active': activeTab === 'tabCategory01' }"
-                    @click="setActiveTab('tabCategory01')"
+            <button
+              type="button" class="tab-link"
+              :class="{ 'is-active': activeTab === 'tabCategory01' }"
+              @click="setActiveTab('tabCategory01')"
             >
               <span class="tab-text">하위 카테고리01</span>
             </button>
           </swiper-slide>
           <swiper-slide class="tab-item">
-            <button type="button" class="tab-link"
-                    :class="{ 'is-active': activeTab === 'tabCategory02' }"
-                    @click="setActiveTab('tabCategory02')"
+            <button
+              type="button" class="tab-link"
+              :class="{ 'is-active': activeTab === 'tabCategory02' }"
+              @click="setActiveTab('tabCategory02')"
             >
               <span class="tab-text">하위 카테고리02</span>
             </button>
@@ -66,7 +72,9 @@
                 <template #header>
                   <div class="fold-title">
                     <CtitleWrap size="zero">
-                      <div class="title-sub-gray">사전예약</div>
+                      <div class="title-sub-gray">
+                        사전예약
+                      </div>
                       <ETit text="선택한 수령 시간이 지나도 수령할 수 있나요?" type="board" />
                     </CtitleWrap>
                   </div>
@@ -88,7 +96,9 @@
                 <template #header>
                   <div class="fold-title">
                     <CtitleWrap size="zero">
-                      <div class="title-sub-gray">사전예약</div>
+                      <div class="title-sub-gray">
+                        사전예약
+                      </div>
                       <ETit text="세븐리워드 / 세븐 APP 이벤트의 당첨자 발표는 어디서 확인할 수 있나요?" type="board" />
                     </CtitleWrap>
                   </div>
@@ -110,7 +120,9 @@
                 <template #header>
                   <div class="fold-title">
                     <CtitleWrap size="zero">
-                      <div class="title-sub-gray">하위 카테고리명</div>
+                      <div class="title-sub-gray">
+                        하위 카테고리명
+                      </div>
                       <ETit text="세븐 APP 포인트 카드는 어떻게 사용하나요?" type="board" />
                     </CtitleWrap>
                   </div>
@@ -132,7 +144,9 @@
                 <template #header>
                   <div class="fold-title">
                     <CtitleWrap size="zero">
-                      <div class="title-sub-gray">하위 카테고리명</div>
+                      <div class="title-sub-gray">
+                        하위 카테고리명
+                      </div>
                       <ETit text="개인정보를 수정하고 싶어요." type="board" />
                     </CtitleWrap>
                   </div>
@@ -154,7 +168,9 @@
                 <template #header>
                   <div class="fold-title">
                     <CtitleWrap size="zero">
-                      <div class="title-sub-gray">하위 카테고리명</div>
+                      <div class="title-sub-gray">
+                        하위 카테고리명
+                      </div>
                       <ETit text="6/3(월) ~ 6/7(금) 까지의 기간에 세븐 홈배송 서비스 결제오류건에 대한 자동 취소 접수 완료 안내 및 일부 고객님들의 주문내역 오류 발생과 미취소처리건 접수 지연 사과 안내" type="board" />
                     </CtitleWrap>
                   </div>
@@ -176,7 +192,9 @@
                 <template #header>
                   <div class="fold-title">
                     <CtitleWrap size="zero">
-                      <div class="title-sub-gray">회원</div>
+                      <div class="title-sub-gray">
+                        회원
+                      </div>
                       <ETit text="로그인이 안될 때는 어떻게 하나요?" type="board" />
                     </CtitleWrap>
                   </div>
@@ -219,18 +237,16 @@
     </BtnWrap>
   </ContWrap>
   <!-- // 검색후 : 검색 결과 없는 경우  -->
-
 </template>
 
 <script setup lang="ts">
 definePageMeta({
-  title: 'FAQ'
+  title: "FAQ",
 });
 
 const isSearch = ref(false); // 임시 : 검색 전/후 컨텐츠 확인을 위해 추가
 const isDataSearch = ref(true); // 임시 : 컨텐츠 확인을 위해 추가
 const isNoDataSearch = ref(true); // 임시 : 컨텐츠 확인을 위해 추가
-
 </script>
 
 <style lang="scss" scoped>

@@ -889,6 +889,11 @@
 definePageMeta({
   hideRightHeader: ["home"],
 });
+
+const route = useRoute();
+if (route.params.slug[1])
+  showError({ statusCode: 404 });
+
 const isPresent = ref(true);
 
 // 수량옵션 팝업

@@ -1,7 +1,7 @@
 <template>
   <BoardDetailWrap>
     <template #header>
-      <CtitleWrap size="zero">
+      <CtitleWrap v-if="!$route.path.includes('winning')" size="zero">
         <BadgeGroup size="xl">
           <EBadge color="light-orange" size="sm" badge-text="SECRET" />
         </BadgeGroup>
@@ -23,20 +23,45 @@
           </div>
         </FlexGroup>
       </CtitleWrap>
+      <CtitleWrap v-if="$route.path.includes('winning')" size="sm">
+        <ETit type="board-detail">
+          세븐일레븐 모닝 도시락모음 기획전 세븐일레븐 모닝 도시락모음 기획전
+        </ETit>
+      </CtitleWrap>
+      <TableWrap v-if="$route.path.includes('winning')" type="info" gap="sm" size="md" table-name="당첨자 발표 정보">
+        <colgroup>
+          <col style="width: 55px;">
+          <col style="width: auto;">
+        </colgroup>
+        <tbody>
+          <tr>
+            <th scope="row">
+              발표일
+            </th>
+            <td>2024.08.01</td>
+          </tr>
+          <tr>
+            <th scope="row">
+              응모기간
+            </th>
+            <td>2024.07.01 ~ 2024.07.31</td>
+          </tr>
+        </tbody>
+      </TableWrap>
     </template>
     <template #content>
       <NuxtPage />
     </template>
   </BoardDetailWrap>
 
-  <!-- pop : 금액권선택 -->
+  <!-- pop : SNS 공유 -->
   <popCommSnsShare v-model:sta="popSnsShare" />
-  <!-- // pop : 금액권선택 -->
+  <!-- // pop : SNS 공유 -->
 </template>
 
 <script setup lang="ts">
 definePageMeta({
-  hideRightHeader: ['chat'],
+  hideRightHeader: ["chat"],
 });
 
 // 공유하기 팝업

@@ -64,7 +64,7 @@ const props = withDefaults(defineProps<{
   modelValue?: string;
   inputmode?: "text" | "search" | "numeric" | "email" | "tel" | "url" | "none" | "decimal" | undefined;
   initialStates?: Partial<ClassStates>;
-  isByteCheck: boolean;
+  isByteCheck?: boolean;
 }>(), {
   type: "text",
   modelValue: "",
