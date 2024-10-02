@@ -5,7 +5,7 @@ export default defineNuxtConfig({
       title: "Life Changing Experience, 고객의 마음속 첫번째 편의점 세븐일레븐",
       meta: [
         { charset: "utf-8" },
-        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        { name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" },
         { "http-equiv": "X-UA-Compatible", "content": "IE=edge" },
         { "http-equiv": "Content-Type", "content": "text/html; charset=utf-8" },
         { "http-equiv": "imagetoolbar", "content": "no" },
