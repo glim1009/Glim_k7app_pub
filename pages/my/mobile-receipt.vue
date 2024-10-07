@@ -238,8 +238,8 @@
 
 <script setup lang="ts">
 definePageMeta({
-  title: '모바일 영수증',
-  hideRightHeader: ['home'],
+  title: "모바일 영수증",
+  hideRightHeader: ["home"],
 });
 
 const monthActiveIdx = ref(0); // 임시 초기 셋팅 (0~2)

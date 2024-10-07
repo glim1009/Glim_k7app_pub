@@ -3,7 +3,7 @@
     <CtitleWrap>
       <ETit type="cont">
         카드를 등록하신 후 통합바코드를 통해
-        <br />한번에 간편하게 할인과 결제를 진행하세요.
+        <br>한번에 간편하게 할인과 결제를 진행하세요.
       </ETit>
       <div class="stext">
         5개의 결제수단을 선택하실 수 있습니다.
@@ -52,7 +52,7 @@
                     <div class="payment-info-area">
                       <CtitleWrap size="sm">
                         <span v-if="element.stared.visible" class="ui-chk-bookmark">
-                          <input :id="element.stared.chkId" type="checkbox" />
+                          <input :id="element.stared.chkId" type="checkbox">
                           <label :for="element.stared.chkId"><span class="offscreen">결제수단 즐겨찾기</span></label>
                         </span>
                         <span class="ctitle-sm fc-gray90">{{ element.title }}</span>
@@ -60,7 +60,7 @@
                       <FlexGroup>
                         <div class="flex-left">
                           <div class="thumb-pay">
-                            <img :src="`/assets/images/common/${element.paymentImg.src}`" :alt="element.paymentImg.alt" />
+                            <img :src="`/assets/images/common/${element.paymentImg.src}`" :alt="element.paymentImg.alt">
                           </div>
                         </div>
                         <div class="flex-info-right">
@@ -100,7 +100,7 @@
       <ColorBox color="white" size="zero">
         <RowListWrap gap="line">
           <li class="item-md-link">
-            <ETBtn tag="a" size="sm" type="right-arw" to="javascript:">
+            <ETBtn tag="a" size="sm" type="right-arw" to="/my/mobile-receipt">
               <span class="text">모바일 영수증</span>
             </ETBtn>
           </li>
@@ -120,11 +120,11 @@
 </template>
 
 <script setup lang="ts">
-import draggable from 'vuedraggable';
+import draggable from "vuedraggable";
 
 definePageMeta({
-  title: '결제수단 관리',
-  hideRightHeader: ['home'],
+  title: "결제수단 관리",
+  hideRightHeader: ["home"],
 });
 
 const isChangeListOrder = ref(false);
@@ -132,37 +132,37 @@ const isChangeListOrder = ref(false);
 const drag = ref(false);
 const payment = ref([
   {
-    title: '편의점 결제전용',
-    stared: { visible: true, chkId: 'cardKB' },
+    title: "편의점 결제전용",
+    stared: { visible: true, chkId: "cardKB" },
     paymentInfo: {
-      info: { name: 'KB 국민카드', type: '체크카드' },
-      cardNo: '1234-****-****-5678',
+      info: { name: "KB 국민카드", type: "체크카드" },
+      cardNo: "1234-****-****-5678",
     },
-    paymentImg: { src: 'comm_card_kb.png', alt: '국민카드' },
+    paymentImg: { src: "comm_card_kb.png", alt: "국민카드" },
     changeable: true,
     deletable: true,
     order: 1,
   },
   {
-    title: '신한 마스터 카드',
-    stared: { visible: true, chkId: 'cardSH' },
+    title: "신한 마스터 카드",
+    stared: { visible: true, chkId: "cardSH" },
     paymentInfo: {
-      info: { name: '신한카드', type: '신용카드' },
-      cardNo: '1234-****-****-5678',
+      info: { name: "신한카드", type: "신용카드" },
+      cardNo: "1234-****-****-5678",
     },
-    paymentImg: { src: 'comm_card_samsung.png', alt: '삼성카드' },
+    paymentImg: { src: "comm_card_samsung.png", alt: "삼성카드" },
     changeable: true,
     deletable: true,
     order: 2,
   },
   {
-    title: '네이버페이',
-    stared: { visible: false, chkId: 'cardNP' },
+    title: "네이버페이",
+    stared: { visible: false, chkId: "cardNP" },
     paymentInfo: {
-      info: { name: 'N.Pay', type: null },
+      info: { name: "N.Pay", type: null },
       cardNo: null,
     },
-    paymentImg: { src: 'comm_card_naver_pay.png', alt: '네이버페이' },
+    paymentImg: { src: "comm_card_naver_pay.png", alt: "네이버페이" },
     changeable: false,
     deletable: false,
     order: 3,

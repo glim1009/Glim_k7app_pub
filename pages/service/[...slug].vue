@@ -4,7 +4,7 @@
       <SwiperBannerWrap type="promotion">
         <swiper-slide>
           <div class="thumb-box">
-            <img src="/assets/images/temp/temp_banner_service_1.png" alt="서비스 메인 배너 이미지" />
+            <img src="/assets/images/temp/temp_banner_service_1.png" alt="서비스 메인 배너 이미지">
           </div>
           <NuxtLink class="btn-link" to="javascript:">
             <span class="offscreen">바로가기</span>
@@ -12,7 +12,7 @@
         </swiper-slide>
         <swiper-slide>
           <div class="thumb-box">
-            <img src="/assets/images/temp/temp_banner_service_2.png" alt="서비스 메인 배너 이미지" />
+            <img src="/assets/images/temp/temp_banner_service_2.png" alt="서비스 메인 배너 이미지">
           </div>
           <NuxtLink class="btn-link" to="javascript:">
             <span class="offscreen">바로가기</span>
@@ -41,7 +41,7 @@
                 </EIco>
               </button>
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <!-- // thumb-prod-2xl -->
@@ -85,7 +85,7 @@
                 </EIco>
               </button>
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <!-- // thumb-prod-2xl -->
@@ -126,7 +126,7 @@
                 </EIco>
               </button>
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <!-- // thumb-prod-2xl -->
@@ -165,7 +165,7 @@
                 </EIco>
               </button>
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <!-- // thumb-prod-2xl -->
@@ -206,7 +206,7 @@
                 </EIco>
               </button>
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <!-- // thumb-prod-2xl -->
@@ -256,7 +256,7 @@
               </EIco>
             </button>
             <template #thumb>
-              <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+              <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
             </template>
           </EThumbProdBox>
           <!-- // thumb-prod-2xl -->
@@ -303,7 +303,7 @@
               </EIco>
             </button>
             <template #thumb>
-              <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+              <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
             </template>
           </EThumbProdBox>
           <!-- // thumb-prod-2xl -->
@@ -347,7 +347,7 @@
               </EIco>
             </button>
             <template #thumb>
-              <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+              <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
             </template>
           </EThumbProdBox>
           <!-- // thumb-prod-2xl -->
@@ -386,7 +386,7 @@
               </EIco>
             </button>
             <template #thumb>
-              <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+              <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
             </template>
           </EThumbProdBox>
           <!-- // thumb-prod-2xl -->
@@ -427,7 +427,7 @@
               </EIco>
             </button>
             <template #thumb>
-              <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+              <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
             </template>
           </EThumbProdBox>
           <!-- // thumb-prod-2xl -->
@@ -460,7 +460,7 @@
   </ContWrap>
   <ContWrap v-if="hasCategory" type="divider">
     <ContBox gap="md">
-      <button v-if="route.params.slug[0] !== 'gift-card'" type="button" class="btn-store">
+      <button v-if="route.params.slug[0] !== 'gift-card'" type="button" class="btn-store" @click="openStoreSearchSelect(false)">
         <EBadge color="green" size="md" badge-text="픽업매장" />
         <span class="store">매장을 선택해주세요.</span>
         <EIco name="arw-right" color="gray" size="sm" />
@@ -480,7 +480,7 @@
         <swiper-slide>
           <NuxtLink class="link-service-sub-category" to="/service/category">
             <div class="thumb-box">
-              <img src="/assets/images/temp/temp_service_sub_category_1.png" alt="서비스 중카테고리 이미지" />
+              <img src="/assets/images/temp/temp_service_sub_category_1.png" alt="서비스 중카테고리 이미지">
             </div>
             <span class="category-name">간식·디저트</span>
           </NuxtLink>
@@ -490,7 +490,7 @@
         <swiper-slide>
           <NuxtLink class="link-service-sub-category" to="/service/category">
             <div class="thumb-box">
-              <img src="/assets/images/temp/temp_service_sub_category_1.png" alt="서비스 중카테고리 이미지" />
+              <img src="/assets/images/temp/temp_service_sub_category_1.png" alt="서비스 중카테고리 이미지">
             </div>
             <span class="category-name">도시락·요리</span>
           </NuxtLink>
@@ -500,7 +500,7 @@
         <swiper-slide>
           <NuxtLink class="link-service-sub-category" to="/service/category">
             <div class="thumb-box">
-              <img src="/assets/images/temp/temp_service_sub_category_1.png" alt="서비스 중카테고리 이미지" />
+              <img src="/assets/images/temp/temp_service_sub_category_1.png" alt="서비스 중카테고리 이미지">
             </div>
             <span class="category-name">음료·주류</span>
           </NuxtLink>
@@ -510,7 +510,7 @@
         <swiper-slide>
           <NuxtLink class="link-service-sub-category" to="/service/category">
             <div class="thumb-box">
-              <img src="/assets/images/temp/temp_service_sub_category_1.png" alt="서비스 중카테고리 이미지" />
+              <img src="/assets/images/temp/temp_service_sub_category_1.png" alt="서비스 중카테고리 이미지">
             </div>
             <span class="category-name">기타</span>
           </NuxtLink>
@@ -560,7 +560,7 @@
                 </EIco>
               </button>
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <div class="info-box">
@@ -601,7 +601,7 @@
                 </EIco>
               </button>
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <div class="info-box">
@@ -651,7 +651,7 @@
                 </EIco>
               </button>
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <div class="info-box">
@@ -700,7 +700,7 @@
                 </EIco>
               </button>
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <div class="info-box">
@@ -747,7 +747,7 @@
                 </EIco>
               </button>
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <div class="info-box">
@@ -788,7 +788,7 @@
                 </EIco>
               </button>
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <div class="info-box">
@@ -837,7 +837,7 @@
                 </EIco>
               </button>
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <div class="info-box">
@@ -881,7 +881,7 @@
                 </EIco>
               </button>
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <div class="info-box">
@@ -933,31 +933,31 @@
             <div class="form-input-group">
               <UiColGroup gap="sm">
                 <span class="ui-chk-button">
-                  <input id="filterProdType01" type="checkbox" />
+                  <input id="filterProdType01" type="checkbox">
                   <label for="filterProdType01"><span class="text-sm">품절 상품 제외</span></label>
                 </span>
                 <span class="ui-chk-button">
-                  <input id="filterProdType02" type="checkbox" />
+                  <input id="filterProdType02" type="checkbox">
                   <label for="filterProdType02"><span class="text-sm">만 19세 미만 상품 제외</span></label>
                 </span>
                 <span class="ui-chk-button">
-                  <input id="filterProdType03" type="checkbox" />
+                  <input id="filterProdType03" type="checkbox">
                   <label for="filterProdType03"><span class="text-sm">앱전용 상품 보기</span></label>
                 </span>
                 <span class="ui-chk-button">
-                  <input id="filterProdType04" type="checkbox" />
+                  <input id="filterProdType04" type="checkbox">
                   <label for="filterProdType04"><span class="text-sm">신상품 보기</span></label>
                 </span>
                 <span class="ui-chk-button">
-                  <input id="filterProdType05" type="checkbox" />
+                  <input id="filterProdType05" type="checkbox">
                   <label for="filterProdType05"><span class="text-sm">7-SELECT</span></label>
                 </span>
                 <span class="ui-chk-button">
-                  <input id="filterProdType06" type="checkbox" />
+                  <input id="filterProdType06" type="checkbox">
                   <label for="filterProdType06"><span class="text-sm">한정수량 상품 보기</span></label>
                 </span>
                 <span class="ui-chk-button">
-                  <input id="filterProdType07" type="checkbox" />
+                  <input id="filterProdType07" type="checkbox">
                   <label for="filterProdType07"><span class="text-sm">단독상품 보기</span></label>
                 </span>
               </UiColGroup>
@@ -974,23 +974,23 @@
             <div class="form-input-group">
               <UiColGroup gap="sm">
                 <span class="ui-chk-button">
-                  <input id="filterProdBenefit01" type="checkbox" />
+                  <input id="filterProdBenefit01" type="checkbox">
                   <label for="filterProdBenefit01"><span class="text-sm">할인</span></label>
                 </span>
                 <span class="ui-chk-button">
-                  <input id="filterProdBenefit02" type="checkbox" />
+                  <input id="filterProdBenefit02" type="checkbox">
                   <label for="filterProdBenefit02"><span class="text-sm">1+1</span></label>
                 </span>
                 <span class="ui-chk-button">
-                  <input id="filterProdBenefit03" type="checkbox" />
+                  <input id="filterProdBenefit03" type="checkbox">
                   <label for="filterProdBenefit03"><span class="text-sm">2+1</span></label>
                 </span>
                 <span class="ui-chk-button">
-                  <input id="filterProdBenefit04" type="checkbox" />
+                  <input id="filterProdBenefit04" type="checkbox">
                   <label for="filterProdBenefit04"><span class="text-sm">증정</span></label>
                 </span>
                 <span class="ui-chk-button">
-                  <input id="filterProdBenefit05" type="checkbox" />
+                  <input id="filterProdBenefit05" type="checkbox">
                   <label for="filterProdBenefit05"><span class="text-sm">핫딜</span></label>
                 </span>
               </UiColGroup>
@@ -1007,35 +1007,35 @@
             <div class="form-input-group">
               <UiColGroup gap="sm">
                 <span class="ui-chk-button">
-                  <input id="filterProdPrice01" type="checkbox" />
+                  <input id="filterProdPrice01" type="checkbox">
                   <label for="filterProdPrice01"><span class="text-sm">~1만원</span></label>
                 </span>
                 <span class="ui-chk-button">
-                  <input id="filterProdPrice02" type="checkbox" />
+                  <input id="filterProdPrice02" type="checkbox">
                   <label for="filterProdPrice02"><span class="text-sm">1~2만원</span></label>
                 </span>
                 <span class="ui-chk-button">
-                  <input id="filterProdPrice03" type="checkbox" />
+                  <input id="filterProdPrice03" type="checkbox">
                   <label for="filterProdPrice03"><span class="text-sm">2~3만원</span></label>
                 </span>
                 <span class="ui-chk-button">
-                  <input id="filterProdPrice04" type="checkbox" />
+                  <input id="filterProdPrice04" type="checkbox">
                   <label for="filterProdPrice04"><span class="text-sm">3~5만원</span></label>
                 </span>
                 <span class="ui-chk-button">
-                  <input id="filterProdPrice05" type="checkbox" />
+                  <input id="filterProdPrice05" type="checkbox">
                   <label for="filterProdPrice05"><span class="text-sm">5~8만원</span></label>
                 </span>
                 <span class="ui-chk-button">
-                  <input id="filterProdPrice06" type="checkbox" />
+                  <input id="filterProdPrice06" type="checkbox">
                   <label for="filterProdPrice06"><span class="text-sm">9~10만원</span></label>
                 </span>
                 <span class="ui-chk-button">
-                  <input id="filterProdPrice07" type="checkbox" />
+                  <input id="filterProdPrice07" type="checkbox">
                   <label for="filterProdPrice07"><span class="text-sm">10~15만원</span></label>
                 </span>
                 <span class="ui-chk-button">
-                  <input id="filterProdPrice08" type="checkbox" />
+                  <input id="filterProdPrice08" type="checkbox">
                   <label for="filterProdPrice08"><span class="text-sm">~15만원</span></label>
                 </span>
               </UiColGroup>
@@ -1057,6 +1057,10 @@
     </template>
   </PopCommFilterOption>
   <!-- // pop : 상품 필터 옵션 -->
+
+  <!-- pop : 매장선택 -->
+  <PopStoreSearchSelect v-model:sta="popStoreSearchSelect" :is-search-data="popSearchType" />
+  <!-- // pop : 매장선택 -->
 </template>
 
 <script setup lang="ts">
@@ -1066,26 +1070,37 @@ definePageMeta({
   title: (route: any) => {
     const slug = route.params.slug as string[] | undefined;
     if (!slug || slug.length === 0)
-      return '당일픽업';
+      return "당일픽업";
     switch (slug[0]) {
-      case 'reservation':
-        return '사전예약';
-      case 'gift-card':
-        return '교환권';
+      case "reservation":
+        return "사전예약";
+      case "gift-card":
+        return "교환권";
     }
   },
   validate: (route) => {
-    const validSlugs = ['reservation', 'gift-card'];
+    const validSlugs = ["reservation", "gift-card"];
     return !route.params.slug || validSlugs.includes(route.params.slug[0] as string);
   },
-  hideRightHeader: ['home'],
+  hideRightHeader: ["home"],
 });
+
+const hasCategory = ref(true); // 임시 : 하위 카테고리 있는 서비스 목록 확인을 위해 추가
 
 // 상품필터옵션 팝업
 const popProdFilterOption = ref({ open: false });
 const openProdFilterOption = () => popProdFilterOption.value.open = true;
 
-const hasCategory = ref(true);
+// 매장선택
+const popStoreSearchSelect = ref({ open: false });
+
+// 임시 - 매장 검색결과 팝업 확인을 위한 이벤트 추가 ( 개발시 삭제 요청 )
+const popSearchType = ref<boolean>();
+
+const openStoreSearchSelect = (isSearchData: boolean) => {
+  popSearchType.value = isSearchData; // 임시 - 매장 검색결과 팝업 확인을 위한 이벤트 추가 ( 개발시 삭제 요청 )
+  popStoreSearchSelect.value.open = true;
+};
 </script>
 
 <style lang="scss" scoped>

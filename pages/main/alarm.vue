@@ -4,7 +4,8 @@
       <div class="stext-lg">
         알림은 30일 보관 후에 자동 삭제됩니다.
       </div>
-      <RowListWrap>
+      <!-- // 데이터 있음 -->
+      <RowListWrap v-if="true">
         <!-- repeat -->
         <li class="item-board">
           <ColorBox color="white">
@@ -90,6 +91,15 @@
         </li>
         <!-- // repeat -->
       </RowListWrap>
+      <!-- // 데이터 있음 -->
+      <!-- 데이터 없음 -->
+      <InfoGuideWrap
+        v-if="true"
+        type="no-data"
+        name="alarm"
+        desc="새로운 알림이 없습니다."
+      />
+      <!-- // 데이터 없음 -->
     </ContBox>
   </ContWrap>
 </template>
@@ -102,5 +112,4 @@ definePageMeta({
 </script>
 
 <style lang="scss" scoped>
-
 </style>

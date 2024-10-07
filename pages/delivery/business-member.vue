@@ -3,7 +3,7 @@
     <ContBox>
       <CtitleWrap size="md">
         <ETit type="cont">
-          사업자회원으로 인증되시면 <br />전용 운임 혜택을 받으실 수 있습니다.
+          사업자회원으로 인증되시면 <br>전용 운임 혜택을 받으실 수 있습니다.
         </ETit>
       </CtitleWrap>
       <RowListWrap gap="sm">
@@ -31,6 +31,9 @@
               <div class="form-cont">
                 <div class="form-input-group valid-check">
                   <EInputBox type="number" title="사업자등록번호 입력" placeholder="사업자등록번호 입력" />
+                  <p class="input-guide">
+                    숫자 8~12자 공백 없이 등록
+                  </p>
                   <p class="valid-desc">
                     사업자등록번호를 입력해주세요.
                   </p>
@@ -51,7 +54,7 @@
                     <!-- 첨부파일 등록되지 않은 경우 -->
                     <swiper-slide>
                       <div class="attach-box">
-                        <input id="attach01" type="file" />
+                        <input id="attach01" type="file">
                         <label for="attach01"><span class="offscreen">첨부파일 추가</span></label>
                       </div>
                     </swiper-slide>
@@ -59,11 +62,11 @@
                     <!-- 첨부파일 등록된 경우 -->
                     <swiper-slide>
                       <div class="attach-box">
-                        <input id="attach02" type="file" />
+                        <input id="attach02" type="file">
                         <label for="attach02"><span class="offscreen">첨부파일 추가</span></label>
                         <div class="attach-img-wrap">
                           <div class="attach-img">
-                            <img src="/assets/images/temp/temp_attach_img_01.png" alt="첨부파일 이미지" />
+                            <img src="/assets/images/temp/temp_attach_img_01.png" alt="첨부파일 이미지">
                           </div>
                           <button type="button" class="btn-remove">
                             <EIco name="clear" color="black" size="sm">
@@ -77,11 +80,11 @@
                     <!-- 첨부파일 등록된 경우 -->
                     <swiper-slide>
                       <div class="attach-box">
-                        <input id="attach03" type="file" />
+                        <input id="attach03" type="file">
                         <label for="attach03"><span class="offscreen">첨부파일 추가</span></label>
                         <div class="attach-img-wrap">
                           <div class="attach-img">
-                            <img src="/assets/images/temp/temp_attach_img_01.png" alt="첨부파일 이미지" />
+                            <img src="/assets/images/temp/temp_attach_img_01.png" alt="첨부파일 이미지">
                           </div>
                           <button type="button" class="btn-remove">
                             <EIco name="clear" color="black" size="sm">
@@ -95,11 +98,11 @@
                     <!-- // 첨부파일 등록된 경우 -->
                     <swiper-slide>
                       <div class="attach-box">
-                        <input id="attach03" type="file" />
+                        <input id="attach03" type="file">
                         <label for="attach03"><span class="offscreen">첨부파일 추가</span></label>
                         <div class="attach-img-wrap">
                           <div class="attach-img">
-                            <img src="/assets/images/temp/temp_attach_img_01.png" alt="첨부파일 이미지" />
+                            <img src="/assets/images/temp/temp_attach_img_01.png" alt="첨부파일 이미지">
                           </div>
                           <button type="button" class="btn-remove">
                             <EIco name="clear" color="black" size="sm">
@@ -113,11 +116,11 @@
                     <!-- 첨부파일 등록된 경우 -->
                     <swiper-slide>
                       <div class="attach-box">
-                        <input id="attach03" type="file" />
+                        <input id="attach03" type="file">
                         <label for="attach03"><span class="offscreen">첨부파일 추가</span></label>
                         <div class="attach-img-wrap">
                           <div class="attach-img">
-                            <img src="/assets/images/temp/temp_attach_img_01.png" alt="첨부파일 이미지" />
+                            <img src="/assets/images/temp/temp_attach_img_01.png" alt="첨부파일 이미지">
                           </div>
                           <button type="button" class="btn-remove">
                             <EIco name="clear" color="black" size="sm">
@@ -157,8 +160,8 @@
 
 <script setup lang="ts">
 definePageMeta({
-  title: '사업자회원 증빙',
-  hideRightHeader: ['home'],
+  title: "사업자회원 증빙",
+  hideRightHeader: ["home"],
 });
 </script>
 

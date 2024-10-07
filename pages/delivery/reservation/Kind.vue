@@ -131,7 +131,7 @@
                       </div>
                       <div class="form-cont">
                         <div class="form-input-group valid-check">
-                          <EInputBox title="물품명 입력" type="number" placeholder="물품명 입력" :max-length="10" />
+                          <EInputBox title="물품명 입력" placeholder="물품명 입력" :max-length="10" />
                           <div class="input-guide">
                             최대 10자만 입력하실 수 있습니다.
                           </div>
@@ -183,7 +183,7 @@
                       </div>
                       <div class="form-cont">
                         <div class="form-input-group valid-check">
-                          <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호 입력" />
+                          <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호 입력" :max-length="11" />
                           <div class="input-guide">
                             공백 없이 숫자만 입력해 주세요.
                           </div>
@@ -223,7 +223,7 @@
                           </div>
                         </div>
                         <span class="ui-chk">
-                          <input id="formChk01" type="checkbox" />
+                          <input id="formChk01" type="checkbox">
                           <label for="formChk01"><span class="text-md">기본주소지와 동일</span></label>
                         </span>
                       </div>
@@ -239,7 +239,7 @@
                             </ETit>
                           </div>
                           <div class="flex-right">
-                            <EBtn size="xs" color="line-light-gray" @click="openStoreBookmarkList">
+                            <EBtn tag="a" size="xs" color="line-light-gray" to="/store/search">
                               <span class="text">단골매장 불러오기</span>
                             </EBtn>
                           </div>
@@ -248,16 +248,16 @@
                       <div class="form-cont">
                         <div class="form-input-group valid-check">
                           <EInputBox type="search" enterkeyhint="search" title="주소 검색" placeholder="매장 검색" readonly>
-                            <button type="button" class="btn-input-search" @click="openSearchAddress">
+                            <NuxtLink class="btn-input-search" to="/store/search">
                               <span class="offscreen">검색</span>
-                            </button>
+                            </NuxtLink>
                           </EInputBox>
                           <div class="valid-desc">
                             매장을 검색해주세요.
                           </div>
                         </div>
                         <span class="ui-chk">
-                          <input id="formChk02" type="checkbox" />
+                          <input id="formChk02" type="checkbox" @click="overBookmarkToast">
                           <label for="formChk02"><span class="text-md">단골매장 저장</span></label>
                         </span>
                       </div>
@@ -304,7 +304,7 @@
                       </div>
                       <div class="form-cont">
                         <div class="form-input-group">
-                          <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호 입력">
+                          <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호 입력" :max-length="11">
                             <EBtn color="line-light-gray" size="xs">
                               <span class="text">인증번호 발송</span>
                             </EBtn>
@@ -330,7 +330,7 @@
                       </div>
                       <div class="form-cont">
                         <div class="form-input-group">
-                          <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호 입력" value="01012345678" disabled>
+                          <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호 입력" :max-length="11" value="01012345678" disabled>
                             <EBtn color="line-light-gray" size="xs">
                               <span class="text">재발송</span>
                             </EBtn>
@@ -356,7 +356,7 @@
                       </div>
                       <div class="form-cont">
                         <div class="form-input-group">
-                          <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호 입력" value="01012345678" disabled>
+                          <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호 입력" :max-length="11" value="01012345678" disabled>
                             <EBtn color="line-light-gray" size="xs">
                               <span class="text">재발송</span>
                             </EBtn>
@@ -382,7 +382,7 @@
                       </div>
                       <div class="form-cont">
                         <div class="form-input-group">
-                          <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호 입력" value="01012341234">
+                          <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호 입력" :max-length="11" value="01012341234">
                             <EBtn color="line-light-gray" size="xs">
                               <span class="text">재발송</span>
                             </EBtn>
@@ -408,7 +408,7 @@
                       </div>
                       <div class="form-cont">
                         <div class="form-input-group valid-check">
-                          <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호 입력" />
+                          <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호 입력" :max-length="11" />
                           <div class="input-guide">
                             공백 없이 숫자만 입력해 주세요.
                           </div>
@@ -417,7 +417,7 @@
                           </div>
                         </div>
                         <span class="ui-chk">
-                          <input id="formChk03" type="checkbox" />
+                          <input id="formChk03" type="checkbox">
                           <label for="formChk03"><span class="text-md">휴대폰번호와 동일</span></label>
                         </span>
                       </div>
@@ -472,7 +472,7 @@
                           </div>
                         </div>
                         <span class="ui-chk">
-                          <input id="formChk05" type="checkbox" />
+                          <input id="formChk05" type="checkbox">
                           <label for="formChk05"><span class="text-md">기본주소지와 동일</span></label>
                         </span>
                       </div>
@@ -488,7 +488,7 @@
                             </ETit>
                           </div>
                           <div class="flex-right">
-                            <EBtn size="xs" color="line-light-gray" @click="openStoreBookmarkList">
+                            <EBtn tag="a" size="xs" color="line-light-gray" to="/store/search">
                               <span class="text">단골매장 불러오기</span>
                             </EBtn>
                           </div>
@@ -497,16 +497,16 @@
                       <div class="form-cont">
                         <div class="form-input-group valid-check">
                           <EInputBox type="search" enterkeyhint="search" title="주소 검색" placeholder="매장 검색" readonly>
-                            <button type="button" class="btn-input-search" @click="openSearchAddress">
+                            <NuxtLink class="btn-input-search" to="/store/search">
                               <span class="offscreen">검색</span>
-                            </button>
+                            </NuxtLink>
                           </EInputBox>
                           <div class="valid-desc">
                             매장을 검색해주세요.
                           </div>
                         </div>
                         <span class="ui-chk">
-                          <input id="formChk06" type="checkbox" disabled />
+                          <input id="formChk06" type="checkbox" disabled>
                           <label for="formChk06"><span class="text-md">단골매장 저장</span></label>
                         </span>
                       </div>
@@ -553,7 +553,7 @@
                       </div>
                       <div class="form-cont">
                         <div class="form-input-group valid-check">
-                          <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호 입력" />
+                          <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호 입력" :max-length="11" />
                           <div class="input-guide">
                             공백 없이 숫자만 입력해 주세요.
                           </div>
@@ -574,7 +574,7 @@
                       <div class="form-cont">
                         <div class="form-input-group valid-check">
                           <EInputBox type="search" enterkeyhint="search" title="매장 검색" placeholder="매장 검색" readonly>
-                            <button type="button" class="btn-input-search">
+                            <button type="button" class="btn-input-search" @click="popStoreList">
                               <span class="offscreen">검색</span>
                             </button>
                           </EInputBox>
@@ -636,7 +636,7 @@
                             </div>
                             <div class="form-cont">
                               <div class="form-input-group valid-check">
-                                <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호 입력" />
+                                <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호 입력" :max-length="11" />
                                 <div class="input-guide">
                                   공백 없이 숫자만 입력해 주세요.
                                 </div>
@@ -657,9 +657,9 @@
                             <div class="form-cont">
                               <div class="form-input-group valid-check">
                                 <EInputBox type="search" enterkeyhint="search" title="매장 검색" placeholder="매장 검색" readonly>
-                                  <button type="button" class="btn-input-search">
+                                  <NuxtLink class="btn-input-search" to="/store/search">
                                     <span class="offscreen">검색</span>
-                                  </button>
+                                  </NuxtLink>
                                 </EInputBox>
                                 <p class="valid-desc">
                                   매장을 입력해주세요.
@@ -720,7 +720,7 @@
                             </div>
                             <div class="form-cont">
                               <div class="form-input-group valid-check">
-                                <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호 입력" />
+                                <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호 입력" :max-length="11" />
                                 <div class="input-guide">
                                   공백 없이 숫자만 입력해 주세요.
                                 </div>
@@ -741,9 +741,9 @@
                             <div class="form-cont">
                               <div class="form-input-group valid-check">
                                 <EInputBox type="search" enterkeyhint="search" title="매장 검색" placeholder="매장 검색" readonly>
-                                  <button type="button" class="btn-input-search">
+                                  <NuxtLink class="btn-input-search" to="/store/search">
                                     <span class="offscreen">검색</span>
-                                  </button>
+                                  </NuxtLink>
                                 </EInputBox>
                                 <p class="valid-desc">
                                   매장을 입력해주세요.
@@ -802,7 +802,7 @@
                       </div>
                       <div class="form-cont">
                         <div class="form-input-group valid-check">
-                          <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호 입력" />
+                          <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호 입력" :max-length="11" />
                           <div class="input-guide">
                             공백 없이 숫자만 입력해 주세요.
                           </div>
@@ -823,9 +823,9 @@
                       <div class="form-cont">
                         <div class="form-input-group valid-check">
                           <EInputBox type="search" enterkeyhint="search" title="매장 검색" placeholder="매장 검색" readonly>
-                            <button type="button" class="btn-input-search">
+                            <NuxtLink class="btn-input-search" to="/store/search">
                               <span class="offscreen">검색</span>
-                            </button>
+                            </NuxtLink>
                           </EInputBox>
                           <p class="valid-desc">
                             매장을 입력해주세요.
@@ -855,8 +855,8 @@
               <ColorBox color="white" size="lg">
                 <TableWrap type="info" gap="lg" size="lg" table-name="운임안내">
                   <colgroup>
-                    <col style="width: 96px;" />
-                    <col style="width: auto;" />
+                    <col style="width: 96px;">
+                    <col style="width: auto;">
                   </colgroup>
                   <tbody>
                     <tr>
@@ -981,7 +981,7 @@
                       <div class="flex-right">
                         <div class="align-group">
                           <span class="stext">사용가능 <EGoods val="10,000" unit="P" /></span>
-                          <EBtn color="line-light-gray" size="xs" @click="openSelectPayLPoint">
+                          <EBtn tag="a" color="line-light-gray" size="xs" to="/common/l-point">
                             <span class="text">사용</span>
                           </EBtn>
                         </div>
@@ -1038,11 +1038,11 @@
                       <div class="flex-right">
                         <UiColGroup gap="lg">
                           <span class="ui-rdo">
-                            <input id="cashReceiptRdo01" v-model="cashReceiptRadio" type="radio" name="cashReceiptRdo01" value="receiptApply" />
+                            <input id="cashReceiptRdo01" v-model="cashReceiptRadio" type="radio" name="cashReceiptRdo01" value="receiptApply">
                             <label for="cashReceiptRdo01"><span class="text-md">신청</span></label>
                           </span>
                           <span class="ui-rdo">
-                            <input id="cashReceiptRdo02" v-model="cashReceiptRadio" type="radio" name="cashReceiptRdo01" value="receiptNotApply" />
+                            <input id="cashReceiptRdo02" v-model="cashReceiptRadio" type="radio" name="cashReceiptRdo01" value="receiptNotApply">
                             <label for="cashReceiptRdo02"><span class="text-md">미신청</span></label>
                           </span>
                         </UiColGroup>
@@ -1127,7 +1127,7 @@
                 <RowListWrap gap="line">
                   <li class="item-md">
                     <span class="ui-rdo">
-                      <input id="orderPayRdo01" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payCard" />
+                      <input id="orderPayRdo01" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payCard">
                       <label for="orderPayRdo01"><span class="text-lg">신용(체크)카드</span></label>
                     </span>
                     <div v-show="orderPayRadio === 'payCard'" class="cont-pay-info">
@@ -1142,13 +1142,13 @@
                   </li>
                   <li class="item-md">
                     <span class="ui-rdo">
-                      <input id="orderPayRdo02" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payLpay" />
+                      <input id="orderPayRdo02" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payLpay">
                       <label for="orderPayRdo02"><span class="text-lg">L.PAY</span></label>
                     </span>
                   </li>
                   <li class="item-md">
                     <span class="ui-rdo">
-                      <input id="orderPayRdo03" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payNaver" />
+                      <input id="orderPayRdo03" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payNaver">
                       <label for="orderPayRdo03"><span class="text-lg">네이버 간편결제</span></label>
                     </span>
                     <div v-show="orderPayRadio === 'payNaver'" class="cont-pay-info">
@@ -1164,13 +1164,13 @@
                   </li>
                   <li class="item-md">
                     <span class="ui-rdo">
-                      <input id="orderPayRdo04" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payKakao" />
+                      <input id="orderPayRdo04" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payKakao">
                       <label for="orderPayRdo04"><span class="text-lg">카카오페이</span></label>
                     </span>
                   </li>
                   <li class="item-md">
                     <span class="ui-chk">
-                      <input id="orderPayChk01" type="checkbox" />
+                      <input id="orderPayChk01" type="checkbox">
                       <label for="orderPayChk01"><span class="text-sm fc-gray70">선택한 결제수단 다음에도 사용</span></label>
                     </span>
                   </li>
@@ -1315,7 +1315,7 @@
                 <FlexGroup>
                   <div class="flex-left">
                     <span class="ui-chk">
-                      <input id="agreeChk01" type="checkbox" />
+                      <input id="agreeChk01" type="checkbox">
                       <label for="agreeChk01"><span class="text-md">택배 이용약관<span class="required"><span class="offscreen">필수체크</span></span></span></label>
                     </span>
                   </div>
@@ -1331,7 +1331,7 @@
                 <FlexGroup>
                   <div class="flex-left">
                     <span class="ui-chk">
-                      <input id="agreeChk02" type="checkbox" />
+                      <input id="agreeChk02" type="checkbox">
                       <label for="agreeChk02"><span class="text-md">개인정보 수집 및 이용동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
                     </span>
                   </div>
@@ -1347,7 +1347,7 @@
                 <FlexGroup>
                   <div class="flex-left">
                     <span class="ui-chk">
-                      <input id="agreeChk03" type="checkbox" />
+                      <input id="agreeChk03" type="checkbox">
                       <label for="agreeChk03"><span class="text-md">PG사 전자금융거래 약관동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
                     </span>
                   </div>
@@ -1363,7 +1363,7 @@
                 <FlexGroup>
                   <div class="flex-left">
                     <span class="ui-chk">
-                      <input id="agreeChk04" type="checkbox" />
+                      <input id="agreeChk04" type="checkbox">
                       <label for="agreeChk04"><span class="text-md">PG사 개인정보 수집 및 이용동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
                     </span>
                   </div>
@@ -1379,7 +1379,7 @@
                 <FlexGroup>
                   <div class="flex-left">
                     <span class="ui-chk">
-                      <input id="agreeChk05" type="checkbox" />
+                      <input id="agreeChk05" type="checkbox">
                       <label for="agreeChk05"><span class="text-md">PG사 개인정보 제3자 제공동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
                     </span>
                   </div>
@@ -1433,10 +1433,6 @@
   <PopMySearchAddress v-model:sta="popSearchAddress" />
   <!-- // pop : 주소검색 -->
 
-  <!-- pop : 단골매장 선택 -->
-  <PopDeliveryStoreBookmarkList v-model:sta="popStoreBookmarkList" />
-  <!-- // pop : 단골매장 선택 -->
-
   <!-- pop : 구독할인 -->
   <popCommSelectSubscribe v-model:sta="popSelectSubscribe" />
   <!-- // pop : 구독할인 -->
@@ -1445,10 +1441,6 @@
   <popCommSelectCoupon v-model:sta="popSelectCoupon" />
   <!-- // pop : 쿠폰 -->
 
-  <!-- pop : L.POINT -->
-  <popCommSelectPayLPoint v-model:sta="popSelectPayLPoint" />
-  <!-- // pop : L.POINT -->
-
   <!-- pop : 금액권선택 -->
   <popCommSelectVoucher v-model:sta="popSelectVoucher" />
   <!-- // pop : 금액권선택 -->
@@ -1456,8 +1448,8 @@
 
 <script setup lang="ts">
 definePageMeta({
-  title: '착한 택배예약',
-  hideRightHeader: ['home'],
+  title: "착한 택배예약",
+  hideRightHeader: ["home"],
 });
 
 const isMember = ref(true);
@@ -1485,10 +1477,6 @@ const openPersonalInfoAgree = () => popPersonalInfoAgree.value.open = true;
 const popSearchAddress = ref({ open: false });
 const openSearchAddress = () => popSearchAddress.value.open = true;
 
-// 단골매장 팝업
-const popStoreBookmarkList = ref({ open: false });
-const openStoreBookmarkList = () => popStoreBookmarkList.value.open = true;
-
 // 증정품선택 팝업
 const popSelectSubscribe = ref({ open: false });
 const openSelectSubscribe = () => popSelectSubscribe.value.open = true;
@@ -1496,10 +1484,6 @@ const openSelectSubscribe = () => popSelectSubscribe.value.open = true;
 // 쿠폰 팝업
 const popSelectCoupon = ref({ open: false });
 const openSelectCoupon = () => popSelectCoupon.value.open = true;
-
-// L.POINT 팝업
-const popSelectPayLPoint = ref({ open: false });
-const openSelectPayLPoint = () => popSelectPayLPoint.value.open = true;
 
 // 금액권 선택 팝업
 const popSelectVoucher = ref({ open: false });
@@ -1519,7 +1503,8 @@ watch(() => checkCheckBox.value, (newValue) => {
   totalCheckBox.value = checkboxes.length;
   if (newValue === totalCheckBox.value) {
     checkboxes.forEach(checkbox => checkbox.checked = true);
-  } else if (newValue === 0) {
+  }
+  else if (newValue === 0) {
     checkboxes.forEach(checkbox => checkbox.checked = false);
   }
   updateCheckCount();
@@ -1537,6 +1522,12 @@ watch(() => agreeListRef.value, (newValue) => {
 
   updateCheckCount();
 });
+
+const { $showToast } = useNuxtApp();
+
+const overBookmarkToast = () => { // 단골매장 등록 3개 이상 저장할 경우
+  $showToast({ msg: "등록 가능한 매장 수를 초과하였습니다." });
+}
 </script>
 
 <style lang="scss" scoped>

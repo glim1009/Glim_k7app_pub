@@ -7,10 +7,10 @@
         </div>
       </CtitleWrap>
       <ColorBox color="light-green" size="sm" class="ta-center">
-        <EIco name="alert" color="green" />
-        <span class="stext-lg fw-sb fc-spot">
-          응모결과를 조회해 주세요.
-        </span>
+        <div class="align-group">
+          <EIco name="alert" color="green" />
+          <span class="stext-lg fw-sb fc-spot">응모결과를 조회해 주세요.</span>
+        </div>
       </ColorBox>
     </ContBox>
     <BtnWrap size="sm">

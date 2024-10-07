@@ -16,10 +16,20 @@
                 <div class="banner-info-box">
                   <CtitleWrap size="zero">
                     <div class="ctitle-main-banner">
-                      구독권으로 맛보는 세븐 도시락 1
+                      <div v-if="true" class="text-line">
+                        구독권으로 맛보는
+                      </div>
+                      <div v-if="true" class="text-line">
+                        세븐 도시락 1
+                      </div>
                     </div>
                     <div class="stext-lg">
-                      도시락 구독하고 할인받으세요
+                      <div v-if="true" class="text-line">
+                        도시락 구독하고 할인받으세요
+                      </div>
+                      <div v-if="true" class="text-line">
+                        도시락 구독하고 할인받으세요
+                      </div>
                     </div>
                   </CtitleWrap>
                 </div>
@@ -34,10 +44,20 @@
                 <div class="banner-info-box">
                   <CtitleWrap size="zero">
                     <div class="ctitle-main-banner">
-                      구독권으로 맛보는 세븐 도시락 2
+                      <div class="text-line">
+                        구독권으로 맛보는
+                      </div>
+                      <div class="text-line">
+                        세븐 도시락 2
+                      </div>
                     </div>
                     <div class="stext-lg">
-                      도시락 구독하고 할인받으세요
+                      <div class="text-line">
+                        도시락 구독하고 할인받으세요
+                      </div>
+                      <div class="text-line">
+                        도시락 구독하고 할인받으세요
+                      </div>
                     </div>
                   </CtitleWrap>
                 </div>
@@ -52,10 +72,20 @@
                 <div class="banner-info-box">
                   <CtitleWrap size="zero">
                     <div class="ctitle-main-banner">
-                      구독권으로 맛보는 세븐 도시락 3
+                      <div class="text-line">
+                        구독권으로 맛보는
+                      </div>
+                      <div class="text-line">
+                        세븐 도시락 3
+                      </div>
                     </div>
                     <div class="stext-lg">
-                      도시락 구독하고 할인받으세요
+                      <div class="text-line">
+                        도시락 구독하고 할인받으세요
+                      </div>
+                      <div class="text-line">
+                        도시락 구독하고 할인받으세요
+                      </div>
                     </div>
                   </CtitleWrap>
                 </div>
@@ -171,6 +201,9 @@
                       <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
                     </template>
                   </EThumbProdBox>
+                  <NuxtLink class="btn-link" to="javascript:">
+                    <span class="offscreen">바로가기</span>
+                  </NuxtLink>
                 </div>
                 <div class="keep-prod-area">
                   <div class="bubble-box">
@@ -181,6 +214,9 @@
                       <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
                     </template>
                   </EThumbProdBox>
+                  <NuxtLink class="btn-link" to="javascript:">
+                    <span class="offscreen">바로가기</span>
+                  </NuxtLink>
                 </div>
               </div>
             </div>
@@ -652,7 +688,7 @@
                 </ETit>
               </div>
               <div class="flex-right">
-                <ETBtn tag="a" size="xs" to="/cs">
+                <ETBtn tag="a" size="xs" to="/event/plan">
                   <span class="text">더보기</span>
                   <EIco name="arw-right" color="gray" size="xs" />
                 </ETBtn>
@@ -1754,7 +1790,7 @@
                 </ETit>
               </div>
               <div class="flex-right">
-                <ETBtn tag="a" size="xs" to="/cs">
+                <ETBtn tag="a" size="xs" to="/service/category/discount">
                   <span class="text">더보기</span>
                   <EIco name="arw-right" color="gray" size="xs" />
                 </ETBtn>

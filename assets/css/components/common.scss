@@ -205,6 +205,12 @@
       margin-left: 6px;
     }
   }
+
+  [class^=ico] {
+    ~ [class^=stext] {
+      margin-left: 10px;
+    }
+  }
 }
 
 .calendar-group {

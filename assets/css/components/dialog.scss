@@ -158,6 +158,10 @@
       @include mixins.font_size_3xl('sb');
     }
 
+    .dialog-close {
+      top: 16px;
+    }
+
     &:has(.input-box) {
       padding: {
         top: 5px;

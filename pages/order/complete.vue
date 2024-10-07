@@ -4,10 +4,9 @@
 
 <script setup lang="ts">
 definePageMeta({
-  title: '주문완료',
-  hideRightHeader: ['chat', 'search', 'cart'],
-})
-
+  title: "주문완료",
+  hideRightHeader: ["chat", "search", "cart"],
+});
 </script>
 
 <style lang="scss" scoped>

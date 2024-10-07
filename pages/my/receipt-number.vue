@@ -13,7 +13,7 @@
             <div class="form-field">
               <div class="form-title">
                 <CtitleWrap size="md">
-                  <ETit type="form" text="현금영수증 신청"/>
+                  <ETit type="form" text="현금영수증 신청" />
                 </CtitleWrap>
               </div>
               <div class="form-cont">
@@ -47,7 +47,7 @@
               </div>
               <div class="form-cont">
                 <div class="form-input-group valid-check">
-                  <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호 입력" max-length="10" />
+                  <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호 입력" :max-length="11" />
                   <div class="input-guide">
                     휴대폰번호를 정확하게 입력해 주세요.
                   </div>
@@ -65,7 +65,7 @@
               </div>
               <div class="form-cont">
                 <div class="form-input-group valid-check">
-                  <EInputBox title="사업자등록번호 입력" type="number" inputmode="numeric" placeholder="사업자등록번호 입력" max-length="10" />
+                  <EInputBox title="사업자등록번호 입력" type="number" inputmode="numeric" placeholder="사업자등록번호 입력" :max-length="10" />
                   <div class="input-guide">
                     사업자등록번호를 정확하게 입력해 주세요.
                   </div>
@@ -81,7 +81,7 @@
     </ContBox>
     <ContBox size="lg">
       <CtitleWrap size="sm">
-        <ETit type="cont" text="유의사항"/>
+        <ETit type="cont" text="유의사항" />
       </CtitleWrap>
       <RowListWrap gap="sm">
         <li class="dot-text-sm">소득공제는 휴대폰번호 또는 사업자등록번호를 저장한 이후부터 적용이 됩니다.</li>
@@ -100,12 +100,11 @@
 
 <script setup lang="ts">
 definePageMeta({
-  title: '현금영수증 번호 관리',
-  hideRightHeader: ['search', 'cart'],
+  title: "현금영수증 번호 관리",
+  hideRightHeader: ["search", "cart"],
 });
 
 const receiptRadio = ref();
-
 </script>
 
 <style lang="scss" scoped>

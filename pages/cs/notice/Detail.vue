@@ -5,8 +5,12 @@
         <EBadge color="green" size="sm" badge-text="중요" />
       </BadgeGroup>
       <CtitleWrap size="zero">
-        <ETit type="board-detail">6/3(월) 홈배송 서비스 일부 고객님들의 주문내역 오류 발생과 접수 지연 사과 안내</ETit>
-        <div class="stext board-date">2024.07.17</div>
+        <ETit type="board-detail">
+          6/3(월) 홈배송 서비스 일부 고객님들의 주문내역 오류 발생과 접수 지연 사과 안내
+        </ETit>
+        <div class="stext board-date">
+          2024.07.17
+        </div>
       </CtitleWrap>
     </template>
     <template #content>
@@ -29,8 +33,8 @@
 
 <script setup lang="ts">
 definePageMeta({
-  title: '공지사항'
-})
+  title: "공지사항",
+});
 </script>
 
 <style lang="scss" scoped>

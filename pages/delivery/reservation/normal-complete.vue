@@ -23,7 +23,7 @@
       <ColorBox color="light-gray" size="md" class="ta-center">
         <div class="align-group">
           <span class="stext-lg-gray90">예약번호 : 68429106806</span>
-          <EBtn color="line-light-gray" size="xs">
+          <EBtn color="line-light-gray" size="xs" @click="copyText">
             <span class="text">복사</span>
           </EBtn>
         </div>
@@ -39,12 +39,21 @@
 
 <script setup lang="ts">
 definePageMeta({
-  title: '일반 택배예약',
-  hideRightHeader: ['home'],
+  title: "일반 택배예약",
+  hideRightHeader: ["home"],
 });
 
 const isMember = ref(true);
 const isNonMember = ref(true);
+
+function copyText() {
+  if (copyTextRef.value) {
+    const textCode = copyTextRef.value.textContent;
+    window.navigator.clipboard.writeText(textCode).then(() => {
+      $showToast({ msg: "예약번호가 복사되었습니다." });
+    });
+  }
+}
 </script>
 
 <style lang="scss" scoped>

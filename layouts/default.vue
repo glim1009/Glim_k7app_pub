@@ -4,7 +4,7 @@
   </div>
   <div class="wrapper">
     <slot name="header">
-      <LayoutHeader :title="changeTitle" :hideRightHeader="changeRightHeader" :notBack="notBack" />
+      <LayoutHeader :title="changeTitle" :hide-right-header="changeRightHeader" :not-back="notBack" />
     </slot>
     <LayoutContainer id="container">
       <slot />
@@ -15,7 +15,6 @@
 </template>
 
 <script setup lang="ts">
-
 interface RouteMetaWithLayout {
   hideRightHeader?: string[] | boolean;
   title?: string | undefined | (() => string | undefined);
@@ -27,21 +26,13 @@ const routeMeta = computed(() => route.meta as RouteMetaWithLayout);
 
 const changeTitle = ref<any>("");
 const notBack = ref<any>("");
-const changeRightHeader = ref<any>( "" || routeMeta?.value.hideRightHeader );
+const changeRightHeader = ref<any>("" || routeMeta?.value.hideRightHeader);
 
 watch(() => route.path, () => {
   const metaTitle = routeMeta.value.title;
   changeTitle.value = typeof metaTitle === "function" ? metaTitle(route) : (metaTitle || "");
   notBack.value = routeMeta.value.notBack || false;
-  if( route.meta.hideRightHeader ) changeRightHeader.value = route.meta.hideRightHeader;
+  if (route.meta.hideRightHeader !== undefined)
+    changeRightHeader.value = route.meta.hideRightHeader;
 }, { immediate: true });
-
-watch(changeTitle, (newTitle) => {
-  if (newTitle) {
-    document.title = newTitle;
-  }
-});
-
-
 </script>
-

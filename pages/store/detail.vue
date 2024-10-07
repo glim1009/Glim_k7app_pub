@@ -3,7 +3,7 @@
     <ContBox>
       <div class="thumb-store-detail">
         <div class="thumb-box">
-          <img src="/assets/images/temp/temp_store_detail.png" alt="매장 상세 브랜드 이미지" />
+          <img src="/assets/images/temp/temp_store_detail.png" alt="매장 상세 브랜드 이미지">
         </div>
       </div>
     </ContBox>
@@ -53,8 +53,8 @@
       </div>
       <TableWrap type="info" gap="lg" size="md" table-name="매장 상세 정보" class="scont-top-md">
         <colgroup>
-          <col style="width: 70px;" />
-          <col style="width: auto;" />
+          <col style="width: 70px;">
+          <col style="width: auto;">
         </colgroup>
         <tbody>
           <tr>
@@ -156,7 +156,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -200,7 +200,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -242,7 +242,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -282,7 +282,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -322,7 +322,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -362,7 +362,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -414,7 +414,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -458,7 +458,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -500,7 +500,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -540,7 +540,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -580,7 +580,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -620,7 +620,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -675,7 +675,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -715,7 +715,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -757,7 +757,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -797,7 +797,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -837,7 +837,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -877,7 +877,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -929,7 +929,7 @@
             <CtitleWrap size="zero">
               <ETit text="일반택배" type="lgCont" />
               <div class="stext-gray70">
-                전국 어디서든<br />안전하게
+                전국 어디서든<br>안전하게
               </div>
             </CtitleWrap>
           </ColorBox>
@@ -942,7 +942,7 @@
             <CtitleWrap size="zero">
               <ETit text="착한택배" type="lgCont" />
               <div class="stext-gray70">
-                편의점에서 편의점으로<br />알뜰하게
+                편의점에서 편의점으로<br>알뜰하게
               </div>
             </CtitleWrap>
           </ColorBox>
@@ -984,8 +984,8 @@
 
 <script setup lang="ts">
 definePageMeta({
-  title: '매장상세',
-  hideRightHeader: ['home'],
+  title: "매장상세",
+  hideRightHeader: ["home"],
 });
 </script>
 

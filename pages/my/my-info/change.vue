@@ -21,11 +21,11 @@
       <RowListWrap gap="sm" size="xs">
         <li class="dot-text-sm">
           하나의 아이디로 롯데 L.POINT 회원제 서비스가
-          <br />제공되는 사이트의 모든 거래 및 서비스를 이용하실 수 있습니다.
+          <br>제공되는 사이트의 모든 거래 및 서비스를 이용하실 수 있습니다.
         </li>
         <li class="dot-text-sm">
           L.POINT 회원 정보 변경 시, 가입하신 롯데그룹 계열사 사이트의
-          <br />회원정보가 함께 변경됩니다. 소중한 정보를 정확하게 기입해 주시기 바랍니다.
+          <br>회원정보가 함께 변경됩니다. 소중한 정보를 정확하게 기입해 주시기 바랍니다.
         </li>
       </RowListWrap>
     </ContBox>
@@ -47,8 +47,8 @@
               </div>
               <div class="flex-right">
                 <span class="ui-toggle">
-                  <input id="toggleKakao" type="checkbox" />
-                  <label for="toggleKakao"></label>
+                  <input id="toggleKakao" type="checkbox">
+                  <label for="toggleKakao" />
                 </span>
               </div>
             </FlexGroup>
@@ -65,8 +65,8 @@
               </div>
               <div class="flex-right">
                 <span class="ui-toggle">
-                  <input id="toggleNaver" type="checkbox" />
-                  <label for="toggleNaver"></label>
+                  <input id="toggleNaver" type="checkbox">
+                  <label for="toggleNaver" />
                 </span>
               </div>
             </FlexGroup>
@@ -81,7 +81,7 @@
           SNS 연결 설정 시 해당 SNS 계정 인증이 필요합니다
         </li>
       </RowListWrap>
-      <BtnWrap size="xl" type="full">
+      <BtnWrap size="xl">
         <EBtn tag="a" color="line-light-gray" to="/my/my-info/secession-info">
           <span class="text">회원탈퇴</span>
         </EBtn>
@@ -92,7 +92,7 @@
 
 <script setup lang="ts">
 definePageMeta({
-  title: '회원 정보 변경',
+  title: "회원 정보 변경",
 });
 </script>
 

@@ -634,6 +634,13 @@
   @include mixins.ratio_images('/assets/images/common/comm_ico_no_data_event');
 }
 
+.ico-no-data-alarm { // 알림 없음 아이콘
+  @extend %icon;
+  width: 80px;
+  height: 80px;
+  @include mixins.ratio_images('/assets/images/common/comm_ico_no_data_alarm');
+}
+
 /* e : info-guide-wrap */
 /* 고객센터 임시 아이콘 - 디자인 확정 후 수정 필요 */
 .ico-grade-benefit-temp {

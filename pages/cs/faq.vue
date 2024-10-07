@@ -223,10 +223,10 @@
     <InfoGuideWrap
       type="no-data"
       name="search-result"
-      desc="`<span class='fc-spot'>‘반품’</span>`에 대한 검색 결과가 없습니다."
+      desc="<span class='fc-spot'>‘반품’</span>에 대한 검색 결과가 없습니다."
     />
     <BtnWrap type="flex" size="xl">
-      <EBtn tag="a" size="md" color="line-light-gray" to="https://m.7-eleven.co.kr:444/franchise/advice/cvmsForm.asp">
+      <EBtn tag="a" size="md" color="line-light-gray" target="_blank" to="https://m.7-eleven.co.kr:444/franchise/advice/cvmsForm.asp">
         <EIco name="edit" color="gray" size="sm" />
         <span class="text">고객의 소리</span>
       </EBtn>

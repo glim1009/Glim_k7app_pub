@@ -451,7 +451,7 @@
             <!-- thumb-prod -->
             <div class="thumb-prod">
               <!-- thumb-prod-2xl -->
-              <EThumbProdBox size="2xl" dim="text">
+              <EThumbProdBox size="2xl" dim="SOLD OUT">
                 <!-- DESC :: 활성화시 is-active 클래스 추가 -->
                 <button type="button" class="btn-wish">
                   <EIco name="wish" size="sm">
@@ -887,7 +887,7 @@
 
 <script setup lang="ts">
 definePageMeta({
-  hideRightHeader: ["home"],
+  hideRightHeader: ["chat"],
 });
 
 const route = useRoute();

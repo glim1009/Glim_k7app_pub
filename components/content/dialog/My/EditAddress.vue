@@ -14,7 +14,7 @@
                 </div>
                 <div class="form-cont">
                   <div class="form-input-group">
-                    <EInputBox title="주소별칭 입력" placeholder="주소 별칭을 입력 (ex. 우리집)" value="우리집"/>
+                    <EInputBox title="주소별칭 입력" placeholder="주소 별칭 입력" value="우리집"/>
                   </div>
                 </div>
               </div>
@@ -26,7 +26,7 @@
                 </div>
                 <div class="form-cont">
                   <div class="form-input-group">
-                    <EInputBox title="이름 입력" placeholder="이름을 입력" value="김세븐"/>
+                    <EInputBox title="이름 입력" placeholder="이름 입력" value="김세븐"/>
                   </div>
                 </div>
               </div>
@@ -34,11 +34,13 @@
             <li class="item-form">
               <div class="form-field">
                 <div class="form-title">
-                  <ETit type="form">휴대폰 번호<span class="required"><span class="offscreen">필수입력</span></span></ETit>
+                  <ETit type="form">휴대폰번호<span class="required"><span class="offscreen">필수입력</span></span></ETit>
                 </div>
                 <div class="form-cont">
-                  <div class="form-input-group">
-                    <EInputBox type="number" title="휴대폰 번호 입력" placeholder="휴대폰 번호를 입력" value="01077771111"/>
+                  <div class="form-input-group valid-check">
+                    <EInputBox type="number" title="휴대폰번호 입력" placeholder="휴대폰번호 입력" value="01077771111"/>
+                    <p class="input-guide">공백 없이 숫자만 입력해주세요.</p>
+                    <p class="valid-desc">휴대폰번호를 입력해주세요.</p>
                   </div>
                 </div>
               </div>

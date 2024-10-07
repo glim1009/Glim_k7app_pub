@@ -16,7 +16,7 @@
             </li>
           </ul>
         </template>
-        <NuxtPage/>
+        <NuxtPage />
       </TabWrap>
     </ContWrap>
   </CouponHomeTab>
@@ -24,8 +24,8 @@
 
 <script setup lang="ts">
 definePageMeta({
-  title: '쿠폰함',
-  hideRightHeader: ['home'],
+  title: "쿠폰함",
+  hideRightHeader: ["home"],
 });
 </script>
 

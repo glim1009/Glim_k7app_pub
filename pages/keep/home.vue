@@ -14,13 +14,12 @@
 </template>
 
 <script setup lang="ts">
-import { useLinkTabSwiper } from '~/composables/useFrontPub';
+import { useLinkTabSwiper } from "~/composables/useFrontPub";
 
 definePageMeta({
   title: "쏘옥보관",
   hideRightHeader: ["home"],
 });
-
 
 const basePath = "/keep/home";
 const tabs = [

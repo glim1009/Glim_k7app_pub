@@ -14,22 +14,22 @@
 </template>
 
 <script setup lang="ts">
-import { useLinkTabSwiper } from '~/composables/useFrontPub';
+import { useLinkTabSwiper } from "~/composables/useFrontPub";
 
 definePageMeta({
-  title: '주문내역',
-  hideRightHeader: ['home'],
+  title: "주문내역",
+  hideRightHeader: ["home"],
 });
 
-const basePath = '/my/order/home';
+const basePath = "/my/order/home";
 const tabs = [
-  { path: '', text: '전체' },
-  { path: '/pickup', text: '당일픽업' },
-  { path: '/reservation', text: '사전예약' },
-  { path: '/gift-card', text: '교환권' },
-  { path: '/discount', text: '구독할인' },
-  { path: '/voucher', text: '금액권' },
-  { path: '/delivery', text: '홈배송' },
+  { path: "", text: "전체" },
+  { path: "/pickup", text: "당일픽업" },
+  { path: "/reservation", text: "사전예약" },
+  { path: "/gift-card", text: "교환권" },
+  { path: "/discount", text: "구독할인" },
+  { path: "/voucher", text: "금액권" },
+  { path: "/delivery", text: "홈배송" },
 ];
 const { onSwiper, updateSwiperIndex } = useLinkTabSwiper(tabs, basePath);
 </script>

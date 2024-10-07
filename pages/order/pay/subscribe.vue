@@ -10,7 +10,7 @@
           <div class="thumb-prod-flex">
             <EThumbProdBox size="md">
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <div class="info-box">
@@ -49,7 +49,7 @@
               <RowListWrap gap="line">
                 <li class="item-md">
                   <span class="ui-rdo">
-                    <input id="orderPayRdo01" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payCard" />
+                    <input id="orderPayRdo01" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payCard">
                     <label for="orderPayRdo01"><span class="text-lg">신용(체크)카드</span></label>
                   </span>
                   <div v-show="orderPayRadio === 'payCard'" class="cont-pay-info">
@@ -64,13 +64,13 @@
                 </li>
                 <li class="item-md">
                   <span class="ui-rdo">
-                    <input id="orderPayRdo02" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payLpay" />
+                    <input id="orderPayRdo02" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payLpay">
                     <label for="orderPayRdo02"><span class="text-lg">L.PAY</span></label>
                   </span>
                 </li>
                 <li class="item-md">
                   <span class="ui-rdo">
-                    <input id="orderPayRdo03" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payNaver" />
+                    <input id="orderPayRdo03" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payNaver">
                     <label for="orderPayRdo03"><span class="text-lg">네이버 간편결제</span></label>
                   </span>
                   <div v-show="orderPayRadio === 'payNaver'" class="cont-pay-info">
@@ -86,13 +86,13 @@
                 </li>
                 <li class="item-md">
                   <span class="ui-rdo">
-                    <input id="orderPayRdo04" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payKakao" disabled />
+                    <input id="orderPayRdo04" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payKakao" disabled>
                     <label for="orderPayRdo04"><span class="text-lg">카카오페이</span></label>
                   </span>
                 </li>
                 <li class="item-md">
                   <span class="ui-chk">
-                    <input id="orderPayChk01" type="checkbox" />
+                    <input id="orderPayChk01" type="checkbox">
                     <label for="orderPayChk01"><span class="text-sm fc-gray70">선택한 결제수단 다음에도 사용</span></label>
                   </span>
                 </li>
@@ -166,7 +166,7 @@
                 <FlexGroup>
                   <div class="flex-left">
                     <span class="ui-chk">
-                      <input id="agreeChk02" type="checkbox" />
+                      <input id="agreeChk02" type="checkbox">
                       <label for="agreeChk02"><span class="text-md">개인정보 수집 및 이용동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
                     </span>
                   </div>
@@ -182,7 +182,7 @@
                 <FlexGroup>
                   <div class="flex-left">
                     <span class="ui-chk">
-                      <input id="agreeChk01" type="checkbox" />
+                      <input id="agreeChk01" type="checkbox">
                       <label for="agreeChk01"><span class="text-md">PG사 전자금융거래 약관동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
                     </span>
                   </div>
@@ -198,7 +198,7 @@
                 <FlexGroup>
                   <div class="flex-left">
                     <span class="ui-chk">
-                      <input id="agreeChk01" type="checkbox" />
+                      <input id="agreeChk01" type="checkbox">
                       <label for="agreeChk01"><span class="text-md">PG사 개인정보 수집 및 이용동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
                     </span>
                   </div>
@@ -214,7 +214,7 @@
                 <FlexGroup>
                   <div class="flex-left">
                     <span class="ui-chk">
-                      <input id="agreeChk01" type="checkbox" />
+                      <input id="agreeChk01" type="checkbox">
                       <label for="agreeChk01"><span class="text-md">PG사 개인정보 제3자 제공동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
                     </span>
                   </div>
@@ -239,10 +239,10 @@
   </ContWrap>
   <ContDocker>
     <BtnWrap type="auto">
-      <EBtn color="line-light-gray" size="lg">
+      <EBtn tag="a" color="line-light-gray" size="lg" to="/cart">
         <span class="text">취소</span>
       </EBtn>
-      <EBtn color="green" size="lg">
+      <EBtn tag="a" color="green" size="lg" to="javascript:">
         <span class="text"><EGoods val="6,400" unit="원" /> 결제하기</span>
       </EBtn>
     </BtnWrap>
@@ -255,7 +255,7 @@
 
 <script setup lang="ts">
 definePageMeta({
-  title: '정기구독',
+  title: "정기구독",
 });
 
 const orderPayRadio = ref();
@@ -273,7 +273,8 @@ watch(() => checkCheckBox.value, (newValue) => {
   totalCheckBox.value = checkboxes.length;
   if (newValue === totalCheckBox.value) {
     checkboxes.forEach(checkbox => checkbox.checked = true);
-  } else if (newValue === 0) {
+  }
+  else if (newValue === 0) {
     checkboxes.forEach(checkbox => checkbox.checked = false);
   }
   updateCheckCount();

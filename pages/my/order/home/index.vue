@@ -555,7 +555,7 @@
             </div>
             <!-- // thumb-prod-flex -->
             <BtnWrap size="md">
-              <EBtn tag="a" color="line-light-gray" size="sm" to="/keep/view">
+              <EBtn tag="a" color="line-light-gray" size="sm" to="/my/order/detail">
                 <span class="text">주문상세</span>
               </EBtn>
             </BtnWrap>
@@ -665,7 +665,7 @@
             </div>
             <!-- // thumb-prod-flex -->
             <BtnWrap size="md">
-              <EBtn tag="a" color="line-light-gray" size="sm" to="/keep/view">
+              <EBtn tag="a" color="line-light-gray" size="sm" to="/my/order/detail">
                 <span class="text">주문상세</span>
               </EBtn>
             </BtnWrap>

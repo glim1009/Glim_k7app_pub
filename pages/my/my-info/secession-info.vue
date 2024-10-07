@@ -4,7 +4,7 @@
       <CtitleWrap size="lg">
         <ETit type="lgCont">
           김세븐님 회원탈퇴 전 유의사항을
-          <br />확인해주세요.
+          <br>확인해주세요.
         </ETit>
       </CtitleWrap>
 
@@ -21,7 +21,7 @@
 
 <script setup lang="ts">
 definePageMeta({
-  title: '회원 탈퇴 안내',
+  title: "회원 탈퇴 안내",
 });
 const isPossible = ref(true); // 임시 : 탈퇴 가능 여부에 따른 컨텐츠 확인을 위해 추가
 </script>

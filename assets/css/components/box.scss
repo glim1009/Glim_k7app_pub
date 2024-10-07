@@ -184,6 +184,28 @@
       right: 0;
     };
   }
+
+  &:has(.box-arr-area) {
+    position: relative;
+
+    :deep(.box-arr-area) {
+      position: relative;
+      padding-right: 34px;
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        top: 50%;
+        right: -9px;
+        transform: translateX(-50%);
+        margin-top: -9px;
+        @include mixins.svg_mask('/assets/images/common/comm_ico_arw_right_sm', var(--Grayscale-80));
+      }
+    }
+  }
 }
 
 [class^=light-green][class*=box] {

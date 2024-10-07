@@ -5,9 +5,9 @@
         <div class="header-box">
           <div class="header-left">
             <button class="btn-header-back">
-              <EIco name="back"/>
+              <EIco name="back" />
             </button>
-            <EInputBox @class-change="handleChangeClass" @clear="valueClear" type="search" enterkeyhint="search" title="검색" placeholder="검색어 입력">
+            <EInputBox type="search" enterkeyhint="search" title="검색" placeholder="검색어 입력" @class-change="handleChangeClass" @clear="valueClear">
               <button type="button" class="btn-input-search">
                 <span class="offscreen">검색</span>
               </button>
@@ -15,13 +15,13 @@
           </div>
           <div class="header-right">
             <NuxtLink to="/cart" class="btn-header-util cart">
-              <EIco name="cart"/>
+              <EIco name="cart" />
               <span class="count">99</span>
             </NuxtLink>
           </div>
         </div>
       </div>
-      <div class="auto-complete-layer" v-if="isAutoComplete">
+      <div v-if="isAutoComplete" class="auto-complete-layer">
         <ContWrap type="white">
           <RowListWrap gap="line">
             <li class="item-md">
@@ -77,25 +77,27 @@ definePageMeta({
 
 const isClassValue = ref(false);
 
-const handleChangeClass = ( className:string, isActive:boolean ) => {
-  if( className === 'value' ) isClassValue.value = isActive;
-}
+const handleChangeClass = (className: string, isActive: boolean) => {
+  if (className === "value")
+    isClassValue.value = isActive;
+};
 
-const isAutoComplete = computed( () => {
+const isAutoComplete = computed(() => {
   return !!isClassValue.value;
 });
 
 const valueClear = async () => {
   try {
-    if(route.path.includes("/search/result")) {
+    if (route.path.includes("/search/result")) {
       router.push("/search");
     }
-  } catch (err) {
+  }
+  catch (err) {
     console.error(err);
   }
-}
-
+};
 </script>
+
 <style lang="scss" scoped>
 @import url('@/assets/css/layout/header.scss');
 </style>

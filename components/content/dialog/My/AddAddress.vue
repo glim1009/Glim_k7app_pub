@@ -14,7 +14,7 @@
                 </div>
                 <div class="form-cont">
                   <div class="form-input-group">
-                    <EInputBox title="주소별칭 입력" placeholder="주소 별칭을 입력 (ex. 우리집)" />
+                    <EInputBox title="주소별칭 입력" placeholder="주소별칭 입력" />
                   </div>
                 </div>
               </div>
@@ -26,7 +26,7 @@
                 </div>
                 <div class="form-cont">
                   <div class="form-input-group">
-                    <EInputBox title="이름 입력" placeholder="이름을 입력"/>
+                    <EInputBox title="이름 입력" placeholder="이름 입력"/>
                   </div>
                 </div>
               </div>
@@ -34,12 +34,13 @@
             <li class="item-form">
               <div class="form-field">
                 <div class="form-title">
-                  <ETit type="form">휴대폰 번호<span class="required"><span class="offscreen">필수입력</span></span></ETit>
+                  <ETit type="form">휴대폰번호<span class="required"><span class="offscreen">필수입력</span></span></ETit>
                 </div>
                 <div class="form-cont">
-                  <div class="form-input-group valid-check fail">
-                    <EInputBox type="number" title="휴대폰 번호 입력" placeholder="휴대폰 번호를 입력"/>
-                    <p class="valid-desc">휴대폰 번호를 입력해주세요.</p>
+                  <div class="form-input-group valid-check">
+                    <EInputBox type="number" title="휴대폰번호 입력" placeholder="휴대폰번호 입력"/>
+                    <p class="input-guide">공백 없이 숫자만 입력해주세요.</p>
+                    <p class="valid-desc">휴대폰번호를 입력해주세요.</p>
                   </div>
                 </div>
               </div>
@@ -52,7 +53,7 @@
                       <ETit type="form">주소<span class="required"><span class="offscreen">필수입력</span></span></ETit>
                     </div>
                     <div class="flex-right">
-                      <ETBtn tag="button" size="xs" @click="openSearchAddress">
+                      <ETBtn tag="button" size="xs" @click="openCurrentAddress">
                         <EIco name="current-location" color="gray" size="sm"></EIco>
                         <span class="text">현재 위치 주소에 추가</span>
                       </ETBtn>
@@ -91,6 +92,10 @@
   <!-- pop : 주소검색 -->
   <PopMySearchAddress v-model:sta="popSearchAddress" />
   <!-- // pop : 주소검색 -->
+
+  <!-- pop : 현재 위치 주소 추가 -->
+  <PopMyCurrentAddress v-model:sta="popCurrentAddress" />
+  <!-- // pop : 현재 위치 주소 추가 -->
 </template>
 
 <script setup lang="ts">
@@ -120,4 +125,8 @@ const closeDialog = () => {
 // 주소검색 팝업
 const popSearchAddress = ref({ open: false });
 const openSearchAddress = () => popSearchAddress.value.open = true;
+
+// 현재 위치 주소 추가
+const popCurrentAddress = ref({ open: false });
+const openCurrentAddress = () => popCurrentAddress.value.open = true;
 </script>

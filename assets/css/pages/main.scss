@@ -69,22 +69,21 @@
         padding: {
           top: calc(8.36dvh + 55px);
           left: 20px;
-          right: 31vw;
+          right: 20px;
         }
         color: var(--Grayscale-0);
         transform: translateY(3vh);
         opacity: 0;
 
         .ctitle-main-banner {
-          overflow: hidden;
-          $mainBannerTitleHeight: 36px;
-          font-size: 28px;
-          line-height: $mainBannerTitleHeight;
-          max-height: $mainBannerTitleHeight * 2;
-          letter-spacing: variables.$letterSpacing;
-          font-weight: variables.$fontWeightBold;
-          word-break: keep-all;
-          word-break: auto-phrase;
+          .text-line {
+            overflow: hidden;
+            $mainBannerTitleHeight: 36px;
+            max-height: $mainBannerTitleHeight;
+            font-size: 28px;
+            line-height: $mainBannerTitleHeight;
+            font-weight: variables.$fontWeightBold;
+          }
         }
 
         .stext-lg {

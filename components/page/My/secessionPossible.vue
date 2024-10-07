@@ -98,7 +98,7 @@
       <EBtn tag="a" color="line-light-gray" size="md" to="/my/my-info/change">
         <span class="text">취소</span>
       </EBtn>
-      <EBtn tag="a" color="line-light-gray" size="md" to="javascript:">
+      <EBtn color="line-light-gray" size="md">
         <span class="text">회원탈퇴</span>
       </EBtn>
     </BtnWrap>

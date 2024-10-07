@@ -2,7 +2,7 @@
   <DeliveryHomeTab>
     <ContWrap>
       <GridListWrap col="2" class="side-box">
-        <li class="item-grid-full" v-if="isMember">
+        <li v-if="isMember" class="item-grid-full">
           <ColorBox color="white" size="lg">
             <CtitleWrap size="lg">
               <FlexGroup>
@@ -47,11 +47,11 @@
             </div>
           </ColorBox>
         </li>
-        <li class="item-grid-full" v-if="isNoMember">
+        <li v-if="isNoMember" class="item-grid-full">
           <ColorBox color="white" size="lg">
             <CtitleWrap size="lg">
               <ETBtn tag="a" to="/member">
-                <ETit text="로그인 후 이용해보세요" type="lgCont"/>
+                <ETit text="로그인 후 이용해보세요" type="lgCont" />
                 <EIco name="arw-right" color="gray" size="sm" />
               </ETBtn>
             </CtitleWrap>
@@ -75,7 +75,7 @@
             </div>
           </ColorBox>
         </li>
-        <li class="item-grid-full" v-if="isBusinessMember">
+        <li v-if="isBusinessMember" class="item-grid-full">
           <ColorBox color="white" size="lg">
             <CtitleWrap size="lg">
               <ETit text="사업자인증회원" type="lgCont" />
@@ -116,7 +116,7 @@
             <CtitleWrap size="zero">
               <ETit text="일반택배" type="lgCont" />
               <div class="stext-gray70">
-                전국 어디서든<br />안전하게
+                전국 어디서든<br>안전하게
               </div>
             </CtitleWrap>
           </ColorBox>
@@ -129,7 +129,7 @@
             <CtitleWrap size="zero">
               <ETit text="착한택배" type="lgCont" />
               <div class="stext-gray70">
-                편의점에서 편의점으로<br />알뜰하게
+                편의점에서 편의점으로<br>알뜰하게
               </div>
             </CtitleWrap>
           </ColorBox>
@@ -143,12 +143,12 @@
         <SwiperBannerWrap add-click @click-emit="openBannerCollection">
           <swiper-slide>
             <div class="thumb-box">
-              <img src="/assets/images/temp/temp_banner_marketing_1.png" alt="마케팅배너 이미지" />
+              <img src="/assets/images/temp/temp_banner_marketing_1.png" alt="마케팅배너 이미지">
             </div>
           </swiper-slide>
           <swiper-slide>
             <div class="thumb-box">
-              <img src="/assets/images/temp/temp_banner_marketing_2.png" alt="마케팅배너 이미지" />
+              <img src="/assets/images/temp/temp_banner_marketing_2.png" alt="마케팅배너 이미지">
             </div>
           </swiper-slide>
         </SwiperBannerWrap>
@@ -163,7 +163,7 @@
             </ETBtn>
           </div>
           <div class="bar-item">
-            <ETBtn tag="a" size="sm" @click="openSearchAvailableShop">
+            <ETBtn tag="a" size="sm" to="/store/search">
               <EIco name="location" color="gray" size="sm" />
               <span class="text">이용가능매장</span>
             </ETBtn>
@@ -265,10 +265,6 @@
   <PopDeliveryServiceInfo v-model:sta="popServiceInfo" />
   <!-- // pop : 이용안내 -->
 
-  <!-- pop : 이용가능매장 -->
-  <PopDeliverySearchAvailableShop v-model:sta="popSearchAvailableShop" />
-  <!-- // pop : 이용가능매장 -->
-
   <!-- pop : 전체보기 -->
   <PopDeliveryBannerCollection v-model:sta="popBannerCollection" />
   <!-- // pop : 전체보기 -->
@@ -284,8 +280,8 @@
 
 <script setup lang="ts">
 definePageMeta({
-  title: '택배',
-  hideRightHeader: ['home'],
+  title: "택배",
+  hideRightHeader: ["home"],
 });
 
 const isMember = ref(true);
@@ -295,10 +291,6 @@ const isBusinessMember = ref(true);
 // 이용안내
 const popServiceInfo = ref({ open: false });
 const openServiceInfoNormal = () => popServiceInfo.value.open = true;
-
-// 이용가능매장
-const popSearchAvailableShop = ref({ open: false });
-const openSearchAvailableShop = () => popSearchAvailableShop.value.open = true;
 
 // 전체보기
 const popBannerCollection = ref({ open: false });

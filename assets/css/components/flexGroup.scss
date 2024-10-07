@@ -34,6 +34,10 @@ $groupAlign: ('start', 'center', 'end');
       .btn-share {
         margin-left: 14px;
       }
+
+      &:has(.ui-toggle) {
+        margin-left: 16px;
+      }
     }
     :deep(.flex-start-right) {
       flex-wrap: wrap;

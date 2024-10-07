@@ -9,12 +9,12 @@
     <CtitleWrap>
       <ETit text="반팔티 3팩" type="prod-detail" />
       <div class="stext-lg">
-        매장의 택배접수기에 바코드를 스캔하여<br />택배를 접수해주세요.
+        매장의 택배접수기에 바코드를 스캔하여<br>택배를 접수해주세요.
       </div>
     </CtitleWrap>
     <ColorBox color="line-light-gray" size="lg">
       <div class="barcode-box">
-        <img src="/assets/images/temp/temp_img_barcode_delivery.svg" alt="일반택배 예약내역 바코드 이미지" />
+        <img src="/assets/images/temp/temp_img_barcode_delivery.svg" alt="일반택배 예약내역 바코드 이미지">
         <!-- <img src="/assets/images/temp/temp_img_barcode_qr_delivery.svg" alt="착한택배 예약내역 QR코드 이미지" /> -->
       </div>
     </ColorBox>
@@ -32,8 +32,8 @@
       <ColorBox color="white" size="lg">
         <TableWrap type="info" gap="lg" size="md" table-name="결제금액">
           <colgroup>
-            <col style="width: 78px;" />
-            <col style="width: auto;" />
+            <col style="width: 78px;">
+            <col style="width: auto;">
           </colgroup>
           <tbody>
             <tr>
@@ -66,8 +66,8 @@
       <ColorBox color="white" size="lg">
         <TableWrap type="info" gap="lg" size="md" table-name="보내는 분">
           <colgroup>
-            <col style="width: 78px;" />
-            <col style="width: auto;" />
+            <col style="width: 78px;">
+            <col style="width: auto;">
           </colgroup>
           <tbody>
             <tr>
@@ -86,7 +86,7 @@
               <th scope="row">
                 주소(반송처)
               </th>
-              <td>서울시 중구 충무로 23가길 ***<br />***동 ****호</td>
+              <td>서울시 중구 충무로 23가길 ***<br>***동 ****호</td>
             </tr>
             <tr>
               <th scope="row">
@@ -100,8 +100,8 @@
       <ColorBox color="white" size="lg">
         <TableWrap type="info" gap="lg" size="md" table-name="받는 분">
           <colgroup>
-            <col style="width: 78px;" />
-            <col style="width: auto;" />
+            <col style="width: 78px;">
+            <col style="width: auto;">
           </colgroup>
           <tbody>
             <tr>
@@ -120,7 +120,7 @@
               <th scope="row">
                 주소(반송처)
               </th>
-              <td>서울시 중구 충무로 23가길 234<br />127동 2301호</td>
+              <td>서울시 중구 충무로 23가길 234<br>127동 2301호</td>
             </tr>
             <tr>
               <th scope="row">
@@ -137,8 +137,8 @@
 
 <script setup lang="ts">
 definePageMeta({
-  title: '비회원 예약내역',
-  hideRightHeader: ['home'],
+  title: "비회원 예약내역",
+  hideRightHeader: ["home"],
 });
 </script>
 

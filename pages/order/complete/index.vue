@@ -22,8 +22,8 @@
                 <ColorBox color="white" size="lg">
                   <TableWrap type="info" gap="lg" size="md" table-name="상품정보 테이블">
                     <colgroup>
-                      <col style="width: 55px;" />
-                      <col style="width: auto;" />
+                      <col style="width: 55px;">
+                      <col style="width: auto;">
                     </colgroup>
                     <tbody>
                       <tr>
@@ -52,8 +52,8 @@
                 <ColorBox color="white" size="lg">
                   <TableWrap type="info" gap="lg" size="md" table-name="상품정보 테이블">
                     <colgroup>
-                      <col style="width: 55px;" />
-                      <col style="width: auto;" />
+                      <col style="width: 55px;">
+                      <col style="width: auto;">
                     </colgroup>
                     <tbody>
                       <tr>
@@ -89,8 +89,8 @@
         <ColorBox color="white" size="lg">
           <TableWrap type="info" gap="lg" size="md" table-name="상품정보 테이블">
             <colgroup>
-              <col style="width: 55px;" />
-              <col style="width: auto;" />
+              <col style="width: 55px;">
+              <col style="width: auto;">
             </colgroup>
             <tbody>
               <tr>
@@ -122,8 +122,8 @@
         <ColorBox color="white" size="lg">
           <TableWrap type="info" gap="lg" size="md" table-name="결제정보 테이블">
             <colgroup>
-              <col style="width: 70px;" />
-              <col style="width: auto;" />
+              <col style="width: 70px;">
+              <col style="width: auto;">
             </colgroup>
             <tbody>
               <tr>
@@ -160,7 +160,7 @@
       </li>
     </RowListWrap>
     <BtnWrap type="flex" size="xl">
-      <EBtn tag="a" color="gray" size="md" to="javascript:">
+      <EBtn tag="a" color="gray" size="md" to="/keep/home">
         <span class="text">쏘옥보관</span>
       </EBtn>
       <EBtn tag="a" color="line-light-gray" size="md" to="javascript:">
@@ -172,7 +172,7 @@
 
 <script setup lang="ts">
 definePageMeta({
-  title: '주문완료',
+  title: "주문완료",
 });
 
 const isReservation = ref(true); // 사전 예약 content 상태

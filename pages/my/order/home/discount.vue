@@ -587,7 +587,7 @@
         sub-desc="세븐일레븐에서 할인된 가격으로<br />구독할인 서비스를 이용하세요."
       />
       <BtnWrap type="auto-center" size="lg">
-        <EBtn tag="a" color="line-gray" size="md" to="javascript:">
+        <EBtn tag="a" color="line-gray" size="md" to="/service">
           <span class="text">구독할인 상품보기</span>
         </EBtn>
       </BtnWrap>

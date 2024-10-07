@@ -25,7 +25,7 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -52,8 +52,8 @@
               <ColorBox color="light-gray" size="sm" class="ta-center">
                 <TableWrap type="info" gap="sm" size="md" table-name="픽업정보">
                   <colgroup>
-                    <col style="width: 55px;" />
-                    <col style="width: auto;" />
+                    <col style="width: 55px;">
+                    <col style="width: auto;">
                   </colgroup>
                   <tbody>
                     <tr>
@@ -109,7 +109,7 @@
                     <div class="thumb-prod-flex">
                       <EThumbProdBox size="md">
                         <template #thumb>
-                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                         </template>
                       </EThumbProdBox>
                       <div class="info-box">
@@ -136,8 +136,8 @@
                       <ColorBox color="light-gray" size="sm" class="ta-center">
                         <TableWrap type="info" gap="sm" size="md" table-name="픽업정보">
                           <colgroup>
-                            <col style="width: 55px;" />
-                            <col style="width: auto;" />
+                            <col style="width: 55px;">
+                            <col style="width: auto;">
                           </colgroup>
                           <tbody>
                             <tr>
@@ -157,7 +157,7 @@
                     <div class="thumb-prod-flex">
                       <EThumbProdBox size="md">
                         <template #thumb>
-                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                         </template>
                       </EThumbProdBox>
                       <div class="info-box">
@@ -190,8 +190,8 @@
                       <ColorBox color="light-gray" size="sm" class="ta-center">
                         <TableWrap type="info" gap="sm" size="md" table-name="픽업정보">
                           <colgroup>
-                            <col style="width: 55px;" />
-                            <col style="width: auto;" />
+                            <col style="width: 55px;">
+                            <col style="width: auto;">
                           </colgroup>
                           <tbody>
                             <tr>
@@ -211,7 +211,7 @@
                     <div class="thumb-prod-flex">
                       <EThumbProdBox size="md">
                         <template #thumb>
-                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                         </template>
                       </EThumbProdBox>
                       <div class="info-box">
@@ -234,8 +234,8 @@
                       <ColorBox color="light-gray" size="sm" class="ta-center">
                         <TableWrap type="info" gap="sm" size="md" table-name="픽업정보">
                           <colgroup>
-                            <col style="width: 55px;" />
-                            <col style="width: auto;" />
+                            <col style="width: 55px;">
+                            <col style="width: auto;">
                           </colgroup>
                           <tbody>
                             <tr>
@@ -271,7 +271,7 @@
                     <div class="thumb-prod-flex">
                       <EThumbProdBox size="md">
                         <template #thumb>
-                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                         </template>
                       </EThumbProdBox>
                       <div class="info-box">
@@ -304,8 +304,8 @@
                       <ColorBox color="light-gray" size="sm" class="ta-center">
                         <TableWrap type="info" gap="sm" size="md" table-name="픽업정보">
                           <colgroup>
-                            <col style="width: 55px;" />
-                            <col style="width: auto;" />
+                            <col style="width: 55px;">
+                            <col style="width: auto;">
                           </colgroup>
                           <tbody>
                             <tr>
@@ -325,7 +325,7 @@
                     <div class="thumb-prod-flex">
                       <EThumbProdBox size="md">
                         <template #thumb>
-                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                         </template>
                       </EThumbProdBox>
                       <div class="info-box">
@@ -348,8 +348,8 @@
                       <ColorBox color="light-gray" size="sm" class="ta-center">
                         <TableWrap type="info" gap="sm" size="md" table-name="픽업정보">
                           <colgroup>
-                            <col style="width: 55px;" />
-                            <col style="width: auto;" />
+                            <col style="width: 55px;">
+                            <col style="width: auto;">
                           </colgroup>
                           <tbody>
                             <tr>
@@ -445,7 +445,7 @@
                     <div class="flex-right">
                       <div class="align-group">
                         <span class="stext">사용가능 <EGoods val="10,000" unit="P" /></span>
-                        <EBtn color="line-light-gray" size="xs" @click="openSelectPayLPoint">
+                        <EBtn tag="a" color="line-light-gray" size="xs" to="/common/l-point">
                           <span class="text">사용</span>
                         </EBtn>
                       </div>
@@ -502,11 +502,11 @@
                     <div class="flex-right">
                       <UiColGroup gap="lg">
                         <span class="ui-rdo">
-                          <input id="cashReceiptRdo01" v-model="cashReceiptRadio" type="radio" name="cashReceiptRdo01" value="receiptApply" />
+                          <input id="cashReceiptRdo01" v-model="cashReceiptRadio" type="radio" name="cashReceiptRdo01" value="receiptApply">
                           <label for="cashReceiptRdo01"><span class="text-md">신청</span></label>
                         </span>
                         <span class="ui-rdo">
-                          <input id="cashReceiptRdo02" v-model="cashReceiptRadio" type="radio" name="cashReceiptRdo01" value="receiptNotApply" />
+                          <input id="cashReceiptRdo02" v-model="cashReceiptRadio" type="radio" name="cashReceiptRdo01" value="receiptNotApply">
                           <label for="cashReceiptRdo02"><span class="text-md">미신청</span></label>
                         </span>
                       </UiColGroup>
@@ -591,7 +591,7 @@
               <RowListWrap gap="line">
                 <li class="item-md">
                   <span class="ui-rdo">
-                    <input id="orderPayRdo01" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payCard" />
+                    <input id="orderPayRdo01" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payCard">
                     <label for="orderPayRdo01"><span class="text-lg">신용(체크)카드</span></label>
                   </span>
                   <div v-show="orderPayRadio === 'payCard'" class="cont-pay-info">
@@ -606,13 +606,13 @@
                 </li>
                 <li class="item-md">
                   <span class="ui-rdo">
-                    <input id="orderPayRdo02" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payLpay" />
+                    <input id="orderPayRdo02" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payLpay">
                     <label for="orderPayRdo02"><span class="text-lg">L.PAY</span></label>
                   </span>
                 </li>
                 <li class="item-md">
                   <span class="ui-rdo">
-                    <input id="orderPayRdo03" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payNaver" />
+                    <input id="orderPayRdo03" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payNaver">
                     <label for="orderPayRdo03"><span class="text-lg">네이버 간편결제</span></label>
                   </span>
                   <div v-show="orderPayRadio === 'payNaver'" class="cont-pay-info">
@@ -628,13 +628,13 @@
                 </li>
                 <li class="item-md">
                   <span class="ui-rdo">
-                    <input id="orderPayRdo04" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payKakao" disabled />
+                    <input id="orderPayRdo04" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payKakao" disabled>
                     <label for="orderPayRdo04"><span class="text-lg">카카오페이</span></label>
                   </span>
                 </li>
                 <li class="item-md">
                   <span class="ui-chk">
-                    <input id="orderPayChk01" type="checkbox" />
+                    <input id="orderPayChk01" type="checkbox">
                     <label for="orderPayChk01"><span class="text-sm fc-gray70">선택한 결제수단 다음에도 사용</span></label>
                   </span>
                 </li>
@@ -721,7 +721,7 @@
                 <FlexGroup>
                   <div class="flex-left">
                     <span class="ui-chk">
-                      <input id="agreeChk02" type="checkbox" />
+                      <input id="agreeChk02" type="checkbox">
                       <label for="agreeChk02"><span class="text-md">개인정보 수집 및 이용동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
                     </span>
                   </div>
@@ -737,7 +737,7 @@
                 <FlexGroup>
                   <div class="flex-left">
                     <span class="ui-chk">
-                      <input id="agreeChk01" type="checkbox" />
+                      <input id="agreeChk01" type="checkbox">
                       <label for="agreeChk01"><span class="text-md">PG사 전자금융거래 약관동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
                     </span>
                   </div>
@@ -753,7 +753,7 @@
                 <FlexGroup>
                   <div class="flex-left">
                     <span class="ui-chk">
-                      <input id="agreeChk01" type="checkbox" />
+                      <input id="agreeChk01" type="checkbox">
                       <label for="agreeChk01"><span class="text-md">PG사 개인정보 수집 및 이용동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
                     </span>
                   </div>
@@ -769,7 +769,7 @@
                 <FlexGroup>
                   <div class="flex-left">
                     <span class="ui-chk">
-                      <input id="agreeChk01" type="checkbox" />
+                      <input id="agreeChk01" type="checkbox">
                       <label for="agreeChk01"><span class="text-md">PG사 개인정보 제3자 제공동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
                     </span>
                   </div>
@@ -794,10 +794,10 @@
   </ContWrap>
   <ContDocker>
     <BtnWrap type="auto">
-      <EBtn color="line-light-gray" size="lg">
+      <EBtn tag="a" color="line-light-gray" size="lg" to="/cart">
         <span class="text">취소</span>
       </EBtn>
-      <EBtn color="green" size="lg">
+      <EBtn tag="a" color="green" size="lg" to="javascript:">
         <span class="text"><EGoods val="6,400" unit="원" /> 결제하기</span>
       </EBtn>
     </BtnWrap>
@@ -815,10 +815,6 @@
   <popCommSelectCoupon v-model:sta="popSelectCoupon" />
   <!-- // pop : 쿠폰 -->
 
-  <!-- pop : L.POINT -->
-  <popCommSelectPayLPoint v-model:sta="popSelectPayLPoint" />
-  <!-- // pop : L.POINT -->
-
   <!-- pop : 금액권선택 -->
   <popCommSelectVoucher v-model:sta="popSelectVoucher" />
   <!-- // pop : 금액권선택 -->
@@ -826,7 +822,7 @@
 
 <script setup lang="ts">
 definePageMeta({
-  title: '상품 결제',
+  title: "상품 결제",
 });
 
 const orderPayRadio = ref();
@@ -847,10 +843,6 @@ const openSelectSubscribe = () => popSelectSubscribe.value.open = true;
 const popSelectCoupon = ref({ open: false });
 const openSelectCoupon = () => popSelectCoupon.value.open = true;
 
-// L.POINT 팝업
-const popSelectPayLPoint = ref({ open: false });
-const openSelectPayLPoint = () => popSelectPayLPoint.value.open = true;
-
 // 금액권 선택 팝업
 const popSelectVoucher = ref({ open: false });
 const openSelectVoucher = () => popSelectVoucher.value.open = true;
@@ -869,7 +861,8 @@ watch(() => checkCheckBox.value, (newValue) => {
   totalCheckBox.value = checkboxes.length;
   if (newValue === totalCheckBox.value) {
     checkboxes.forEach(checkbox => checkbox.checked = true);
-  } else if (newValue === 0) {
+  }
+  else if (newValue === 0) {
     checkboxes.forEach(checkbox => checkbox.checked = false);
   }
   updateCheckCount();

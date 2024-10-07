@@ -2,7 +2,7 @@
   <ContWrap type="white" class="side-zero" in-top="zero" in-bottom="zero">
     <ContBox>
       <div class="thumb-box">
-        <img src="/assets/images/temp/temp_event_detail.png" alt="기획전 이미지" />
+        <img src="/assets/images/temp/temp_event_detail.png" alt="기획전 이미지">
       </div>
     </ContBox>
   </ContWrap>
@@ -11,7 +11,7 @@
       <div class="editor-wrap">
         <!-- 개발 시 삭제 영역 -->
         <div style="height: 108px; background: rgba(255, 0, 0, .1);">
-          에디터영역 확인을 위한 임시 div입니다.<br />
+          에디터영역 확인을 위한 임시 div입니다.<br>
           개발시 해당 div 삭제 후 작업해 주세요.
         </div>
         <!-- // 개발 시 삭제 영역 -->
@@ -22,7 +22,7 @@
       <FlexGroup>
         <div class="flex-left">
           <span class="ui-chk">
-            <input id="agreeChk01" type="checkbox" />
+            <input id="agreeChk01" type="checkbox">
             <label for="agreeChk01"><span class="text-md">개인정보 수집 및 이용동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
           </span>
         </div>
@@ -44,7 +44,7 @@
                 <FlexGroup>
                   <div class="flex-left">
                     <span class="ui-chk">
-                      <input id="agreeChk02" type="checkbox" />
+                      <input id="agreeChk02" type="checkbox">
                       <label for="agreeChk02"><span class="text-md">개인정보 수집 및 이용동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
                     </span>
                   </div>
@@ -60,7 +60,7 @@
                 <FlexGroup>
                   <div class="flex-left">
                     <span class="ui-chk">
-                      <input id="agreeChk03" type="checkbox" />
+                      <input id="agreeChk03" type="checkbox">
                       <label for="agreeChk03"><span class="text-md">이벤트 참여 문자 및 이메일 마케팅 정...</span></label>
                     </span>
                   </div>
@@ -123,7 +123,7 @@
                     sev*****you
                   </div>
                 </div>
-                <div class="flex-right"></div>
+                <div class="flex-right" />
               </FlexGroup>
             </CtitleWrap>
             <p class="stext">
@@ -154,7 +154,7 @@
                     sev*****you
                   </div>
                 </div>
-                <div class="flex-right"></div>
+                <div class="flex-right" />
               </FlexGroup>
             </CtitleWrap>
             <p class="stext">
@@ -185,7 +185,7 @@
                     sev*****you
                   </div>
                 </div>
-                <div class="flex-right"></div>
+                <div class="flex-right" />
               </FlexGroup>
             </CtitleWrap>
             <p class="stext">
@@ -261,8 +261,8 @@ function toggleMyComment() {
   isMine.value = !isMine.value;
 }
 
-const parentValue = ref<string>('');
-const textareaEmits = ref<string | null>('');
+const parentValue = ref<string>("");
+const textareaEmits = ref<string | null>("");
 
 // 입력값이 변경될 때 발생하는 이벤트
 function handlerValue(value: any) {
@@ -295,7 +295,8 @@ watch(() => checkCheckBox.value, (newValue) => {
   totalCheckBox.value = checkboxes.length;
   if (newValue === totalCheckBox.value) {
     checkboxes.forEach(checkbox => checkbox.checked = true);
-  } else if (newValue === 0) {
+  }
+  else if (newValue === 0) {
     checkboxes.forEach(checkbox => checkbox.checked = false);
   }
   updateCheckCount();
@@ -303,10 +304,10 @@ watch(() => checkCheckBox.value, (newValue) => {
 
 onMounted(() => {
   if (agreeListRef.value instanceof Element) {
-    checkboxes = agreeListRef.value.querySelectorAll<HTMLInputElement>('input[type="checkbox"]');
+    checkboxes = agreeListRef.value.querySelectorAll<HTMLInputElement>("input[type=\"checkbox\"]");
     totalCheckBox.value = checkboxes.length;
     checkboxes.forEach((checkbox) => {
-      checkbox.addEventListener('change', updateCheckCount);
+      checkbox.addEventListener("change", updateCheckCount);
     });
 
     updateCheckCount();
@@ -316,7 +317,7 @@ onMounted(() => {
 onUnmounted(() => {
   if (agreeListRef.value instanceof Element) {
     checkboxes.forEach((checkbox) => {
-      checkbox.removeEventListener('change', updateCheckCount);
+      checkbox.removeEventListener("change", updateCheckCount);
     });
   }
 });

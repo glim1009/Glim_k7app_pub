@@ -48,7 +48,7 @@
               <li class="item">
                 <FlexGroup>
                   <div class="flex-left">
-                    <span class="stext">만족도</span>
+                    <span class="stext">서비스</span>
                   </div>
                   <div class="flex-right">
                     <div class="rating">
@@ -63,7 +63,7 @@
               <li class="item">
                 <FlexGroup>
                   <div class="flex-left">
-                    <span class="stext">품질</span>
+                    <span class="stext">상품</span>
                   </div>
                   <div class="flex-right">
                     <div class="rating">
@@ -78,7 +78,7 @@
               <li class="item">
                 <FlexGroup>
                   <div class="flex-left">
-                    <span class="stext">가격</span>
+                    <span class="stext">청결</span>
                   </div>
                   <div class="flex-right">
                     <div class="rating">
@@ -93,7 +93,7 @@
               <li class="item">
                 <FlexGroup>
                   <div class="flex-left">
-                    <span class="stext">재구매의사</span>
+                    <span class="stext">추천</span>
                   </div>
                   <div class="flex-right">
                     <div class="rating">
@@ -113,7 +113,7 @@
   </ContWrap>
   <ContWrap>
     <ContBox v-if="isData">
-      <div class="list-header" v-if="isData || isFilterNoData">
+      <div v-if="isData || isFilterNoData" class="list-header">
         <FlexGroup align="center">
           <div class="flex-left">
             <div class="goods-group">
@@ -165,7 +165,7 @@
                       <li class="item">
                         <FlexGroup>
                           <div class="flex-left">
-                            <span class="stext">만족도</span>
+                            <span class="stext">서비스</span>
                           </div>
                           <div class="flex-right">
                             <div class="rating">
@@ -180,7 +180,7 @@
                       <li class="item">
                         <FlexGroup>
                           <div class="flex-left">
-                            <span class="stext">품질</span>
+                            <span class="stext">상품</span>
                           </div>
                           <div class="flex-right">
                             <div class="rating">
@@ -199,7 +199,7 @@
                       <li class="item">
                         <FlexGroup>
                           <div class="flex-left">
-                            <span class="stext">가격</span>
+                            <span class="stext">청결</span>
                           </div>
                           <div class="flex-right">
                             <div class="rating">
@@ -214,7 +214,7 @@
                       <li class="item">
                         <FlexGroup>
                           <div class="flex-left">
-                            <span class="stext">재구매의사</span>
+                            <span class="stext">추천</span>
                           </div>
                           <div class="flex-right">
                             <div class="rating">
@@ -263,7 +263,7 @@
                       <li class="item">
                         <FlexGroup>
                           <div class="flex-left">
-                            <span class="stext">만족도</span>
+                            <span class="stext">서비스</span>
                           </div>
                           <div class="flex-right">
                             <div class="rating">
@@ -278,7 +278,7 @@
                       <li class="item">
                         <FlexGroup>
                           <div class="flex-left">
-                            <span class="stext">품질</span>
+                            <span class="stext">상품</span>
                           </div>
                           <div class="flex-right">
                             <div class="rating">
@@ -297,7 +297,7 @@
                       <li class="item">
                         <FlexGroup>
                           <div class="flex-left">
-                            <span class="stext">가격</span>
+                            <span class="stext">청결</span>
                           </div>
                           <div class="flex-right">
                             <div class="rating">
@@ -312,7 +312,7 @@
                       <li class="item">
                         <FlexGroup>
                           <div class="flex-left">
-                            <span class="stext">재구매의사</span>
+                            <span class="stext">추천</span>
                           </div>
                           <div class="flex-right">
                             <div class="rating">
@@ -369,22 +369,22 @@
         <div class="form-cont">
           <div class="form-input-group">
             <UiColGroup gap="sm">
-                <span class="ui-rdo-button">
-                  <input id="filterOptionDate01" v-model="periodPicked" value="periodDate01" type="radio" checked />
-                  <label for="filterOptionDate01"><span class="text-sm">최근3개월</span></label>
-                </span>
               <span class="ui-rdo-button">
-                  <input id="filterOptionDate02" v-model="periodPicked" value="periodDate02" type="radio" />
-                  <label for="filterOptionDate02"><span class="text-sm">6개월</span></label>
-                </span>
+                <input id="filterOptionDate01" v-model="periodPicked" value="periodDate01" type="radio" checked>
+                <label for="filterOptionDate01"><span class="text-sm">최근3개월</span></label>
+              </span>
               <span class="ui-rdo-button">
-                  <input id="filterOptionDate03" v-model="periodPicked" value="periodDate03" type="radio" />
-                  <label for="filterOptionDate03"><span class="text-sm">1년</span></label>
-                </span>
+                <input id="filterOptionDate02" v-model="periodPicked" value="periodDate02" type="radio">
+                <label for="filterOptionDate02"><span class="text-sm">6개월</span></label>
+              </span>
               <span class="ui-rdo-button">
-                  <input id="filterOptionDate04" v-model="periodPicked" value="periodDateInput" type="radio" />
-                  <label for="filterOptionDate04"><span class="text-sm">직접입력</span></label>
-                </span>
+                <input id="filterOptionDate03" v-model="periodPicked" value="periodDate03" type="radio">
+                <label for="filterOptionDate03"><span class="text-sm">1년</span></label>
+              </span>
+              <span class="ui-rdo-button">
+                <input id="filterOptionDate04" v-model="periodPicked" value="periodDateInput" type="radio">
+                <label for="filterOptionDate04"><span class="text-sm">직접입력</span></label>
+              </span>
             </UiColGroup>
             <FlexGroup>
               <div class="flex-left">
@@ -416,8 +416,8 @@
 
 <script setup lang="ts">
 definePageMeta({
-  title: '매장리뷰',
-  hideRightHeader: ['home'],
+  title: "매장리뷰",
+  hideRightHeader: ["home"],
 });
 
 const isData = ref(true); // 임시 - 컨텐츠 확인을 위해 추가
@@ -437,7 +437,7 @@ const periodPicked = ref();
 const isDateInputDisabled = ref<boolean>(true);
 
 watch(periodPicked, (value) => {
-  isDateInputDisabled.value = value !== 'periodDateInput';
+  isDateInputDisabled.value = value !== "periodDateInput";
 });
 </script>
 

@@ -49,19 +49,25 @@
         <div class="bar-flex-group">
           <div class="bar-item">
             <NuxtLink class="link-service-menu" to="/keep/home">
-              <div class="bar-text">쏘옥보관</div>
+              <div class="bar-text">
+                쏘옥보관
+              </div>
               <EGoods val="15" />
             </NuxtLink>
           </div>
           <div class="bar-item">
             <NuxtLink class="link-service-menu" to="/coupon/app">
-              <div class="bar-text">앱쿠폰</div>
+              <div class="bar-text">
+                앱쿠폰
+              </div>
               <EGoods val="5" />
             </NuxtLink>
           </div>
           <div class="bar-item">
             <NuxtLink class="link-service-menu" to="/coupon/store">
-              <div class="bar-text">매장쿠폰</div>
+              <div class="bar-text">
+                매장쿠폰
+              </div>
               <EGoods val="3" />
             </NuxtLink>
           </div>
@@ -81,7 +87,9 @@
             <CtitleWrap size="md">
               <FlexGroup>
                 <div class="flex-left">
-                  <div class="ctitle-md">을지로 1가점</div>
+                  <div class="ctitle-md">
+                    을지로 1가점
+                  </div>
                 </div>
                 <div class="flex-right">
                   <!-- DESC :: 활성화시 is-active 클래스 추가 -->
@@ -110,7 +118,9 @@
             <CtitleWrap size="md">
               <FlexGroup>
                 <div class="flex-left">
-                  <div class="ctitle-md">시그니처타워점</div>
+                  <div class="ctitle-md">
+                    시그니처타워점
+                  </div>
                 </div>
                 <div class="flex-right">
                   <!-- DESC :: 활성화시 is-active 클래스 추가 -->
@@ -140,7 +150,9 @@
           <ColorBox color="white" size="lg" class="store-bookmark">
             <div class="store-add-wrap">
               <EIco name="plus-round" />
-              <div class="stext-gray70 fw-sb">단골매장 추가하기</div>
+              <div class="stext-gray70 fw-sb">
+                단골매장 추가하기
+              </div>
             </div>
           </ColorBox>
           <NuxtLink class="btn-link" to="/store/search">
@@ -230,12 +242,12 @@
           </li>
           <li class="item-md-link">
             <ETBtn tag="a" size="sm" type="right-arw" to="/my/activity/review/product">
-            <span class="text">상품 리뷰관리</span>
+              <span class="text">상품 리뷰관리</span>
             </ETBtn>
           </li>
           <li class="item-md-link">
             <ETBtn tag="a" size="sm" type="right-arw" to="/my/activity/review/store">
-            <span class="text">매장 리뷰관리</span>
+              <span class="text">매장 리뷰관리</span>
             </ETBtn>
           </li>
         </RowListWrap>

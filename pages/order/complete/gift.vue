@@ -35,8 +35,8 @@
         <ColorBox color="white" size="lg">
           <TableWrap type="info" gap="sm" size="md" table-name="상품정보 테이블">
             <colgroup>
-              <col style="width: 55px;" />
-              <col style="width: auto;" />
+              <col style="width: 55px;">
+              <col style="width: auto;">
             </colgroup>
             <tbody>
               <tr>
@@ -56,8 +56,8 @@
         <ColorBox color="white" size="lg">
           <TableWrap type="info" gap="sm" size="md" table-name="결제정보 테이블">
             <colgroup>
-              <col style="width: 70px;" />
-              <col style="width: auto;" />
+              <col style="width: 70px;">
+              <col style="width: auto;">
             </colgroup>
             <tbody>
               <tr>
@@ -103,7 +103,7 @@
 
 <script setup lang="ts">
 definePageMeta({
-  title: '주문완료',
+  title: "주문완료",
 });
 </script>
 

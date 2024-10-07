@@ -1,29 +1,39 @@
 <template>
   <ContWrap in-top="lg">
     <CtitleWrap size="lg">
-      <ETit type="cont">택배예약 시 발급된 예약번호와<br>설정한 비밀번호를 입력해주세요.</ETit>
+      <ETit type="cont">
+        택배예약 시 발급된 예약번호와<br>설정한 비밀번호를 입력해주세요.
+      </ETit>
     </CtitleWrap>
     <ColorBox color="white" size="lg">
       <RowListWrap gap="xl">
         <li class="item-form">
           <div class="form-field">
             <div class="form-title">
-              <ETit type="form">예약번호<span class="required"><span class="offscreen">필수입력</span></span></ETit>
+              <ETit type="form">
+                예약번호<span class="required"><span class="offscreen">필수입력</span></span>
+              </ETit>
             </div>
             <div class="form-cont">
-              <EInputBox type="number" inputmode="numeric" title="예약번호를 입력" placeholder="예약번호 입력" />
+              <div class="form-input-group">
+                <EInputBox type="number" inputmode="numeric" title="예약번호를 입력" placeholder="예약번호 입력" />
+              </div>
             </div>
           </div>
         </li>
         <li class="item-form">
           <div class="form-field">
             <div class="form-title">
-              <ETit type="form">예약비밀번호<span class="required"><span class="offscreen">필수입력</span></span></ETit>
+              <ETit type="form">
+                예약비밀번호<span class="required"><span class="offscreen">필수입력</span></span>
+              </ETit>
             </div>
             <div class="form-cont">
               <div class="form-input-group">
                 <EInputBox type="number" title="예약비밀번호를 입력" placeholder="예약비밀번호 입력" :max-length="8" />
-                <div class="input-guide">예약 시 설정한 비밀번호를 입력해주세요.</div>
+                <div class="input-guide">
+                  예약 시 설정한 비밀번호를 입력해주세요.
+                </div>
               </div>
             </div>
           </div>
@@ -43,12 +53,10 @@
 
 <script setup lang="ts">
 definePageMeta({
-  title: '택배 예약/배송 조회',
-  hideRightHeader: ['home'],
+  title: "택배 예약/배송 조회",
+  hideRightHeader: ["home"],
 });
-
 </script>
-
 
 <style lang="scss" scoped>
 @import url("assets/css/pages/delivery.scss");

@@ -95,6 +95,8 @@ $wrapSize: ('2xs': 8px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
 
   // 배너 전체보기 팝업
   :deep(.item-banner) {
+    position: relative;
+
     .thumb-box {
       overflow: hidden;
       border-radius: 15px;
@@ -312,25 +314,6 @@ $wrapSize: ('2xs': 8px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
     // 컬러 박스 arw-right
     [class^=white][class$=box] {
       position: relative;
-
-      .box-arr-area {
-        padding-right: 34px;
-      }
-
-      .btn-link {
-        &::after {
-          content: '';
-          display: block;
-          position: absolute;
-          width: 18px;
-          height: 18px;
-          top: 50%;
-          right: 11px;
-          transform: translateX(-50%);
-          margin-top: -9px;
-          @include mixins.svg_mask('/assets/images/common/comm_ico_arw_right_sm', var(--Grayscale-80));
-        }
-      }
     }
   }
 }

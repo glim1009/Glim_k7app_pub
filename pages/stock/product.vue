@@ -79,7 +79,7 @@ definePageMeta({
 const isClassValue = ref(false);
 
 function handleChangeClass(className: string, isActive: boolean) {
-  if (className === 'value')
+  if (className === "value")
     isClassValue.value = isActive;
 }
 
@@ -89,10 +89,11 @@ const isAutoComplete = computed(() => {
 
 async function valueClear() {
   try {
-    if (route.path.includes('/stock/product/result')) {
-      router.push('/stock/product');
+    if (route.path.includes("/stock/product/result")) {
+      router.push("/stock/product");
     }
-  } catch (err) {
+  }
+  catch (err) {
     console.error(err);
   }
 }

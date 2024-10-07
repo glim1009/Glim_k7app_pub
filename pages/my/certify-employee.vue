@@ -14,18 +14,17 @@
         </li>
       </ul>
     </template>
-    <NuxtPage/>
+    <NuxtPage />
   </TabWrap>
 </template>
 
 <script setup lang="ts">
 definePageMeta({
-  title: '임직원 인증',
-  hideRightHeader: ['home'],
+  title: "임직원 인증",
+  hideRightHeader: ["home"],
 });
 </script>
 
 <style lang="scss" scoped>
 
 </style>
-

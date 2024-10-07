@@ -3,12 +3,12 @@
     <template #tabs>
       <ul class="tab-line-list">
         <li class="tab-item">
-          <NuxtLink class="tab-link" to="/my/activity/review/product" :class="['tab-link', {'is-active' :  $route.path.includes('/my/activity/review/product') }]" exact-active-class="is-active">
+          <NuxtLink class="tab-link tab-link" to="/my/activity/review/product" :class="[{ 'is-active': $route.path.includes('/my/activity/review/product') }]" exact-active-class="is-active">
             <span class="tab-text">상품리뷰</span>
           </NuxtLink>
         </li>
         <li class="tab-item">
-          <NuxtLink class="tab-link" to="/my/activity/review/store" :class="['tab-link', {'is-active' :  $route.path.includes('/my/activity/review/store') }]" exact-active-class="is-active">
+          <NuxtLink class="tab-link tab-link" to="/my/activity/review/store" :class="[{ 'is-active': $route.path.includes('/my/activity/review/store') }]" exact-active-class="is-active">
             <span class="tab-text">매장리뷰</span>
           </NuxtLink>
         </li>
@@ -30,7 +30,7 @@
             </li>
           </ul>
         </template>
-        <NuxtPage/>
+        <NuxtPage />
       </TabWrap>
     </ContWrap>
   </TabWrap>
@@ -38,8 +38,8 @@
 
 <script setup lang="ts">
 definePageMeta({
-  title: '내 리뷰',
-  hideRightHeader: ['home'],
+  title: "내 리뷰",
+  hideRightHeader: ["home"],
 });
 </script>
 

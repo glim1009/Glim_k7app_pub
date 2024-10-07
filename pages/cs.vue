@@ -4,9 +4,8 @@
 
 <script setup lang="ts">
 definePageMeta({
-  hideRightHeader: ['home'],
-})
-
+  hideRightHeader: ["home"],
+});
 </script>
 
 <style lang="scss" scoped>

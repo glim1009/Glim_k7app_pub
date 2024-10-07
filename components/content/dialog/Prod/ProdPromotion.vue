@@ -34,7 +34,7 @@
               <li class="item-grid">
                 <!-- thumb-prod -->
                 <div class="thumb-prod">
-                  <EThumbProdBox dim="TEXT">
+                  <EThumbProdBox dim="SOLD OUT">
                     <div class="right-group">
                       <EBadge color="red" size="sm" badge-text="19" />
                     </div>

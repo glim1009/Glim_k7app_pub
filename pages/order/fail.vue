@@ -27,7 +27,7 @@
         <EBtn tag="a" color="line-light-gray" size="md" to="/">
           <span class="text">메인화면</span>
         </EBtn>
-        <EBtn tag="a" color="line-green" size="md" to="javascript:">
+        <EBtn tag="a" color="line-green" size="md" to="/cart">
           <span class="text">다시 주문하기</span>
         </EBtn>
       </BtnWrap>
@@ -65,8 +65,8 @@
 
 <script setup lang="ts">
 definePageMeta({
-  title: '주문실패',
-  hideRightHeader: ['chat', 'search', 'cart'],
+  title: "주문실패",
+  hideRightHeader: ["chat", "search", "cart"],
 });
 const isNoStock = ref(true);
 const isSoldOut = ref(true);

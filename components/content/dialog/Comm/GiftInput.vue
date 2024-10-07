@@ -22,12 +22,12 @@
                     </div>
                     <div class="form-cont">
                       <div class="form-input-group">
-                        <EInputBox title="보내는 사람" placeholder="보내는 사람 입력" value="김세븐"/>
+                        <EInputBox title="보내는 사람" placeholder="보내는 사람 입력" value="김세븐" />
                       </div>
                     </div>
                   </div>
                 </li>
-                <li class="item-form" v-if="isInputRecipient">
+                <li v-if="isInputRecipient" class="item-form">
                   <div class="form-field">
                     <div class="form-title">
                       <CtitleWrap size="zero">
@@ -38,7 +38,7 @@
                             </ETit>
                           </div>
                           <div class="flex-right">
-                            <EBtn tag="a" size="xs" color="line-light-gray" to="javascript:">
+                            <EBtn size="xs" color="line-light-gray">
                               <span class="text">연락처 선택</span>
                             </EBtn>
                           </div>
@@ -47,12 +47,12 @@
                     </div>
                     <div class="form-cont">
                       <div class="form-input-group">
-                        <EInputBox type="number" inputmode="tel" title="휴대폰 번호" placeholder="휴대폰 번호 입력"/>
+                        <EInputBox type="number" inputmode="tel" title="휴대폰 번호" placeholder="휴대폰 번호 입력" />
                       </div>
                     </div>
                   </div>
                 </li>
-                <li class="item-form" v-if="isSelectedRecipient">
+                <li v-if="isSelectedRecipient" class="item-form">
                   <div class="form-field">
                     <div class="form-title">
                       <CtitleWrap size="zero">
@@ -65,10 +65,14 @@
                       <div class="tag-full-box">
                         <FlexGroup>
                           <div class="flex-left">
-                            <p class="stext-lg-black fw-sb">홍길동</p>
+                            <p class="stext-lg-black fw-sb">
+                              홍길동
+                            </p>
                           </div>
                           <div class="flex-right">
-                            <p class="stext-lg">01012345678</p>
+                            <p class="stext-lg">
+                              01012345678
+                            </p>
                           </div>
                         </FlexGroup>
                         <button type="button" class="btn-delete">
@@ -82,21 +86,25 @@
                 </li>
               </RowListWrap>
             </ColorBox>
-            <ColorBox color="white" size="lg" v-if="isFreeGift">
+            <ColorBox v-if="isFreeGift" color="white" size="lg">
               <FlexGroup>
                 <div class="flex-left">
-                  <ETit type="cont">선물 수량</ETit>
+                  <ETit type="cont">
+                    선물 수량
+                  </ETit>
                 </div>
                 <div class="flex-right">
                   <ESpinner />
                 </div>
               </FlexGroup>
             </ColorBox>
-            <ColorBox color="white" size="lg" v-if="isFreeGift">
+            <ColorBox v-if="isFreeGift" color="white" size="lg">
               <CtitleWrap>
                 <FlexGroup>
                   <div class="flex-left">
-                    <ETit type="cont">증정품 선택</ETit>
+                    <ETit type="cont">
+                      증정품 선택
+                    </ETit>
                   </div>
                   <div class="flex-right">
                     <span class="stext">
@@ -113,13 +121,15 @@
                     <div class="thumb-prod-flex">
                       <EThumbProdBox size="md">
                         <template #thumb>
-                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지"/>
+                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
                         </template>
                       </EThumbProdBox>
                       <div class="info-box">
                         <FlexGroup>
                           <div class="flex-left">
-                            <ETit type="prod">제육&콘 참치마요 덮밥</ETit>
+                            <ETit type="prod">
+                              제육&콘 참치마요 덮밥
+                            </ETit>
                           </div>
                           <div class="flex-right">
                             <ESpinner />
@@ -134,13 +144,15 @@
                     <div class="thumb-prod-flex">
                       <EThumbProdBox size="md">
                         <template #thumb>
-                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지"/>
+                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
                         </template>
                       </EThumbProdBox>
                       <div class="info-box">
                         <FlexGroup>
                           <div class="flex-left">
-                            <ETit type="prod">제육&콘 참치마요 덮밥</ETit>
+                            <ETit type="prod">
+                              제육&콘 참치마요 덮밥
+                            </ETit>
                           </div>
                           <div class="flex-right">
                             <ESpinner />
@@ -155,13 +167,15 @@
                     <div class="thumb-prod-flex">
                       <EThumbProdBox size="md">
                         <template #thumb>
-                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지"/>
+                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
                         </template>
                       </EThumbProdBox>
                       <div class="info-box">
                         <FlexGroup>
                           <div class="flex-left">
-                            <ETit type="prod">제육&콘 참치마요 덮밥</ETit>
+                            <ETit type="prod">
+                              제육&콘 참치마요 덮밥
+                            </ETit>
                           </div>
                           <div class="flex-right">
                             <ESpinner />
@@ -176,13 +190,15 @@
                     <div class="thumb-prod-flex">
                       <EThumbProdBox size="md">
                         <template #thumb>
-                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지"/>
+                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
                         </template>
                       </EThumbProdBox>
                       <div class="info-box">
                         <FlexGroup>
                           <div class="flex-left">
-                            <ETit type="prod">제육&콘 참치마요 덮밥</ETit>
+                            <ETit type="prod">
+                              제육&콘 참치마요 덮밥
+                            </ETit>
                           </div>
                           <div class="flex-right">
                             <ESpinner />
@@ -197,13 +213,15 @@
                     <div class="thumb-prod-flex">
                       <EThumbProdBox size="md">
                         <template #thumb>
-                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지"/>
+                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
                         </template>
                       </EThumbProdBox>
                       <div class="info-box">
                         <FlexGroup>
                           <div class="flex-left">
-                            <ETit type="prod">제육&콘 참치마요 덮밥</ETit>
+                            <ETit type="prod">
+                              제육&콘 참치마요 덮밥
+                            </ETit>
                           </div>
                           <div class="flex-right">
                             <ESpinner />
@@ -218,13 +236,15 @@
                     <div class="thumb-prod-flex">
                       <EThumbProdBox size="md">
                         <template #thumb>
-                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지"/>
+                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
                         </template>
                       </EThumbProdBox>
                       <div class="info-box">
                         <FlexGroup>
                           <div class="flex-left">
-                            <ETit type="prod">제육&콘 참치마요 덮밥</ETit>
+                            <ETit type="prod">
+                              제육&콘 참치마요 덮밥
+                            </ETit>
                           </div>
                           <div class="flex-right">
                             <ESpinner />
@@ -237,7 +257,7 @@
                 </RowListWrap>
               </div>
             </ColorBox>
-            <ColorBox color="white" size="lg" v-if="isSendGift">
+            <ColorBox v-if="isSendGift" color="white" size="lg">
               <CtitleWrap>
                 <ETit type="cont" text="보낼선물" />
               </CtitleWrap>
@@ -245,11 +265,13 @@
               <div class="thumb-prod-flex">
                 <EThumbProdBox size="md">
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지"/>
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
-                  <ETit type="prod">제육&콘 참치마요 덮밥</ETit>
+                  <ETit type="prod">
+                    제육&콘 참치마요 덮밥
+                  </ETit>
                 </div>
               </div>
               <!-- // thumb-prod-flex -->
@@ -267,7 +289,9 @@
     </template>
     <template #footer>
       <div v-if="!isCta" class="dialog-btn-wrap">
-        <EBtn color="green" @click="closeDialog"><span class="text">선물하기</span></EBtn>
+        <EBtn color="green" @click="closeDialog">
+          <span class="text">선물하기</span>
+        </EBtn>
       </div>
     </template>
     <slot v-if="isCta" name="cta" />
@@ -286,7 +310,7 @@ const props = defineProps<{
   isSendGift?: boolean; // 보낼선물 컨텐츠 확인을 위해 추가
 }>();
 
-const emit = defineEmits(['update:sta']);
+const emit = defineEmits(["update:sta"]);
 
 function openDialog() {
   isOpen.value = true;
@@ -294,7 +318,7 @@ function openDialog() {
 
 const isOpen = computed({
   get: () => props.sta.open,
-  set: value => emit('update:sta', { ...props.sta, open: value }),
+  set: value => emit("update:sta", { ...props.sta, open: value }),
 });
 
 function closeDialog() {

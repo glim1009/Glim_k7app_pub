@@ -15,12 +15,12 @@
             </li>
             <li class="tab-item">
               <!-- CASE 01 : 미로그인 시 로그인 화면 이동 버튼 노출 -->
-              <!--<NuxtLink
+              <!-- <NuxtLink
                 class="tab-link"
                 to="/member"
               >
                 <span class="tab-text">내가 응모한 이벤트</span>
-              </NuxtLink>-->
+              </NuxtLink> -->
               <!-- // CASE 01 : 미로그인 시 로그인 화면 이동 버튼 노출 -->
               <!-- CASE 02 : 로그인 시 탭 버튼 노출 -->
               <button
@@ -48,7 +48,7 @@
                         </span>
                       </div>
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_banner_service_1.png" alt="당첨자발표 게시글 제목 이미지" />
+                        <img src="/assets/images/temp/temp_banner_service_1.png" alt="당첨자발표 게시글 제목 이미지">
                       </template>
                     </EThumbEventBox>
                     <div class="info-box">
@@ -71,7 +71,7 @@
                   <div class="thumb-event">
                     <EThumbEventBox>
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_banner_service_1.png" alt="당첨자발표 게시글 제목 이미지" />
+                        <img src="/assets/images/temp/temp_banner_service_1.png" alt="당첨자발표 게시글 제목 이미지">
                       </template>
                     </EThumbEventBox>
                     <div class="info-box">
@@ -94,7 +94,7 @@
                   <div class="thumb-event">
                     <EThumbEventBox>
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_banner_service_1.png" alt="당첨자발표 게시글 제목 이미지" />
+                        <img src="/assets/images/temp/temp_banner_service_1.png" alt="당첨자발표 게시글 제목 이미지">
                       </template>
                     </EThumbEventBox>
                     <div class="info-box">
@@ -117,7 +117,7 @@
                   <div class="thumb-event">
                     <EThumbEventBox dim="19">
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_banner_service_1.png" alt="성인인증이 필요한 당첨자 발표 이미지" />
+                        <img src="/assets/images/temp/temp_banner_service_1.png" alt="성인인증이 필요한 당첨자 발표 이미지">
                       </template>
                     </EThumbEventBox>
                     <div class="info-box">
@@ -164,7 +164,7 @@
                         </span>
                       </div>
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_banner_service_1.png" alt="당첨자발표 게시글 제목 이미지" />
+                        <img src="/assets/images/temp/temp_banner_service_1.png" alt="당첨자발표 게시글 제목 이미지">
                       </template>
                     </EThumbEventBox>
                     <div class="info-box">
@@ -192,7 +192,7 @@
                         </span>
                       </div>
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_banner_service_1.png" alt="당첨자발표 게시글 제목 이미지" />
+                        <img src="/assets/images/temp/temp_banner_service_1.png" alt="당첨자발표 게시글 제목 이미지">
                       </template>
                     </EThumbEventBox>
                     <div class="info-box">
@@ -220,7 +220,7 @@
                         </span>
                       </div>
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_banner_service_1.png" alt="당첨자발표 게시글 제목 이미지" />
+                        <img src="/assets/images/temp/temp_banner_service_1.png" alt="당첨자발표 게시글 제목 이미지">
                       </template>
                     </EThumbEventBox>
                     <div class="info-box">
@@ -248,7 +248,7 @@
                         </span>
                       </div>
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_banner_service_1.png" alt="당첨자발표 게시글 제목 이미지" />
+                        <img src="/assets/images/temp/temp_banner_service_1.png" alt="당첨자발표 게시글 제목 이미지">
                       </template>
                     </EThumbEventBox>
                     <div class="info-box">
@@ -277,15 +277,14 @@
           </ContWrap>
         </template>
       </TabWrap>
-
     </ContWrap>
   </EventHomeTab>
 </template>
 
 <script setup lang="ts">
 definePageMeta({
-  title: '이벤트',
-  hideRightHeader: ['home'],
+  title: "이벤트",
+  hideRightHeader: ["home"],
 });
 
 const isData = ref(true);

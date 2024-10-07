@@ -7,52 +7,6 @@
   overflow: hidden;
 }
 
-
-/* swiper banner */
-.swiper-banner-wrap {
-  @extend %swiperBanner;
-  margin: {
-    left: -5px;
-    right: -5px;
-  }
-  .swiper {
-    border-radius: 15px;
-  }
-}
-
-.swiper-banner-prod-wrap {
-  @extend %swiperBanner;
-  margin: {
-    left: -20px;
-    right: -20px;
-  }
-
-  :deep(.thumb-prod-box) {
-    border-radius: 0;
-  }
-
-  .swiper-pagination-bullets {
-    @extend %paginationDot;
-    bottom: 16px;
-  }
-}
-
-.swiper-banner-promotion-wrap {
-  @extend %swiperBanner;
-  margin: {
-    left: -20px;
-    right: -20px;
-  }
-
-  .swiper-pagination {
-    @extend %paginationFraction;
-    right: 20px;
-    bottom: 20px;
-  }
-}
-
-/* // swiper banner */
-
 /* paging */
 %paginationFraction {
   position: absolute;
@@ -155,3 +109,64 @@
     margin-top: 16px;
   }
 }
+
+/* swiper banner */
+.swiper-banner-wrap {
+  @extend %swiperBanner;
+  margin: {
+    left: -5px;
+    right: -5px;
+  }
+  .swiper {
+    border-radius: 15px;
+  }
+}
+
+// type - prod
+.swiper-banner-prod-wrap {
+  @extend %swiperBanner;
+  margin: {
+    left: -20px;
+    right: -20px;
+  }
+
+  :deep(.thumb-prod-box) {
+    border-radius: 0;
+  }
+
+  .swiper-pagination-bullets {
+    @extend %paginationDot;
+    bottom: 16px;
+  }
+}
+
+// type - promotion
+.swiper-banner-promotion-wrap {
+  @extend %swiperBanner;
+  margin: {
+    left: -20px;
+    right: -20px;
+  }
+
+  .swiper-pagination {
+    @extend %paginationFraction;
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+// type - marketing
+.swiper-banner-marketing-wrap {
+  @extend %swiperBanner;
+
+  .swiper-pagination-fraction {
+    height: 22px;
+    padding: 4px 8px 4px;
+    border-radius: 8px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+}
+
+/* // swiper banner */

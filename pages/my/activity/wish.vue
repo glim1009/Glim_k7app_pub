@@ -70,7 +70,7 @@
               </div>
               <div class="flex-right">
                 <span class="ui-chk">
-                  <input id="soldOutChk" type="checkbox" />
+                  <input id="soldOutChk" type="checkbox">
                   <label for="soldOutChk"><span class="text-md">품절제외</span></label>
                 </span>
                 <EBtn size="xs" color="line-light-gray">
@@ -100,7 +100,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -152,7 +152,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -207,7 +207,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -263,7 +263,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -318,7 +318,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -374,7 +374,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -434,7 +434,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -483,7 +483,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -525,7 +525,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -565,7 +565,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -613,7 +613,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -656,7 +656,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -698,7 +698,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -738,7 +738,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -783,7 +783,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -827,7 +827,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -869,7 +869,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -909,7 +909,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -957,7 +957,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -998,7 +998,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -1037,7 +1037,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -1074,7 +1074,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -1119,7 +1119,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -1157,7 +1157,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -1193,7 +1193,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -1227,7 +1227,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -1276,17 +1276,15 @@
 
 <script setup lang="ts">
 definePageMeta({
-  title: '찜',
-  hideRightHeader: ['home'],
+  title: "찜",
+  hideRightHeader: ["home"],
 });
 
 const isDataProd = ref(true); // 임시 : 상품 목록 컨텐츠 확인을 위해 추가
 const isNoDataProd = ref(true); // 임시 : 상품 목록 없음 컨텐츠 확인을 위해 추가
 const isNoDataSoldOut = ref(false); // 임시 : 품절 제외 상품 없음 컨텐츠 확인을 위해 추가
-
 </script>
 
 <style lang="scss" scoped>
 
 </style>
-

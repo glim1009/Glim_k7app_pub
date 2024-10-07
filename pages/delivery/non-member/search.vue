@@ -10,8 +10,8 @@
         </CtitleWrap>
         <TableWrap type="info" gap="sm" size="md" table-name="배송정보">
           <colgroup>
-            <col style="width: 55px;" />
-            <col style="width: auto;" />
+            <col style="width: 55px;">
+            <col style="width: auto;">
           </colgroup>
           <tbody>
             <tr>
@@ -116,8 +116,8 @@
 
 <script setup lang="ts">
 definePageMeta({
-  title: '비회원 배송조회',
-  hideRightHeader: ['home'],
+  title: "비회원 배송조회",
+  hideRightHeader: ["home"],
 });
 </script>
 

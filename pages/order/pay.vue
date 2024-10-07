@@ -4,10 +4,9 @@
 
 <script setup lang="ts">
 definePageMeta({
-  title: '주문결제',
+  title: "주문결제",
   hideRightHeader: false,
-})
-
+});
 </script>
 
 <style lang="scss" scoped>

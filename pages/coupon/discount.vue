@@ -30,7 +30,7 @@
                 <div class="thumb-prod-flex">
                   <EThumbProdBox size="lg">
                     <template #thumb>
-                      <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                      <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                     </template>
                   </EThumbProdBox>
                   <div class="info-box">
@@ -45,8 +45,8 @@
               <div class="coupon-cont">
                 <TableWrap type="info" gap="sm" size="md" table-name="쿠폰 정보">
                   <colgroup>
-                    <col style="width: 55px;" />
-                    <col style="width: auto;" />
+                    <col style="width: 55px;">
+                    <col style="width: auto;">
                   </colgroup>
                   <tbody>
                     <tr>
@@ -74,7 +74,7 @@
                 <div class="thumb-prod-flex">
                   <EThumbProdBox size="lg">
                     <template #thumb>
-                      <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                      <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                     </template>
                   </EThumbProdBox>
                   <div class="info-box">
@@ -89,8 +89,8 @@
               <div class="coupon-cont">
                 <TableWrap type="info" gap="sm" size="md" table-name="쿠폰 정보">
                   <colgroup>
-                    <col style="width: 55px;" />
-                    <col style="width: auto;" />
+                    <col style="width: 55px;">
+                    <col style="width: auto;">
                   </colgroup>
                   <tbody>
                     <tr>
@@ -118,7 +118,7 @@
                 <div class="thumb-prod-flex">
                   <EThumbProdBox size="lg" dim="사용완료">
                     <template #thumb>
-                      <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                      <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                     </template>
                   </EThumbProdBox>
                   <div class="info-box">
@@ -133,8 +133,8 @@
               <div class="coupon-cont">
                 <TableWrap type="info" gap="sm" size="md" table-name="쿠폰 정보">
                   <colgroup>
-                    <col style="width: 55px;" />
-                    <col style="width: auto;" />
+                    <col style="width: 55px;">
+                    <col style="width: auto;">
                   </colgroup>
                   <tbody>
                     <tr>
@@ -174,8 +174,8 @@
 const { $showToast } = useNuxtApp();
 
 definePageMeta({
-  title: '쿠폰함',
-  hideRightHeader: ['home'],
+  title: "쿠폰함",
+  hideRightHeader: ["home"],
 });
 
 const isData = ref(true); // 임시 : 쿠폰 데이터 확인을 위해 추가
@@ -186,7 +186,7 @@ const popCouponDetail = ref({ open: false });
 const openCouponDetail = () => popCouponDetail.value.open = true;
 
 function DownloadClick() {
-  $showToast({ msg: '쿠폰 받기가 완료되었습니다.' + `<br>` + '사용하기를 터치하시면 매장에서 바로 사용하실 수 있습니다.' });
+  $showToast({ msg: "쿠폰 받기가 완료되었습니다." + `<br>` + "사용하기를 터치하시면 매장에서 바로 사용하실 수 있습니다." });
 }
 </script>
 
