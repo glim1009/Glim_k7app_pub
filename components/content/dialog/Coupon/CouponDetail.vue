@@ -15,7 +15,7 @@
               <!-- thumb-prod-2xl -->
               <EThumbProdBox size="2xl">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품 이미지">
                 </template>
               </EThumbProdBox>
               <!-- // thumb-prod-2xl -->
@@ -41,8 +41,8 @@
                 </ColorBox>
                 <TableWrap type="info" gap="sm" size="lg" table-name="쿠폰정보">
                   <colgroup>
-                    <col style="width: 70px;" />
-                    <col style="width: auto;" />
+                    <col style="width: 70px;">
+                    <col style="width: auto;">
                   </colgroup>
                   <tbody>
                     <tr>
@@ -71,7 +71,7 @@
               <!-- thumb-prod-2xl -->
               <EThumbProdBox size="2xl">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품 이미지">
                 </template>
               </EThumbProdBox>
               <!-- // thumb-prod-2xl -->
@@ -86,14 +86,14 @@
                 </CtitleWrap>
                 <ColorBox color="line-light-gray" size="lg">
                   <div class="barcode-box">
-                    <img src="/assets/images/temp/temp_img_barcode_delivery.svg" alt="바코드 이미지" />
+                    <img src="/assets/images/temp/temp_img_barcode_delivery.svg" alt="바코드 이미지">
                     <!-- <img src="/assets/images/temp/temp_img_barcode_qr_delivery.svg" alt="QR코드 이미지"> -->
                   </div>
                 </ColorBox>
                 <TableWrap type="info" gap="sm" size="lg" table-name="쿠폰정보">
                   <colgroup>
-                    <col style="width: 70px;" />
-                    <col style="width: auto;" />
+                    <col style="width: 70px;">
+                    <col style="width: auto;">
                   </colgroup>
                   <tbody>
                     <tr>
@@ -103,7 +103,7 @@
                       <td class="ta-right">
                         2024.06.30~2024.12.31
                         <!-- DESC :: 쿠폰 사용 기간 시작일 이전에 접근한 경우 노출 -->
-                        <br />(쿠폰 사용 가능 기간이 아닙니다.)
+                        <br>(쿠폰 사용 가능 기간이 아닙니다.)
                       </td>
                     </tr>
                     <tr>
@@ -141,7 +141,7 @@
               <!-- thumb-prod-2xl -->
               <EThumbProdBox size="2xl">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품 이미지">
                 </template>
               </EThumbProdBox>
               <!-- // thumb-prod-2xl -->
@@ -164,14 +164,14 @@
                 </ColorBox>
                 <ColorBox color="line-light-gray" size="lg">
                   <div class="barcode-box">
-                    <img src="/assets/images/temp/temp_img_barcode_delivery.svg" alt="바코드 이미지" />
+                    <img src="/assets/images/temp/temp_img_barcode_delivery.svg" alt="바코드 이미지">
                     <!-- <img src="/assets/images/temp/temp_img_barcode_qr_delivery.svg" alt="QR코드 이미지"> -->
                   </div>
                 </ColorBox>
                 <TableWrap type="info" gap="sm" size="lg" table-name="쿠폰정보">
                   <colgroup>
-                    <col style="width: 70px;" />
-                    <col style="width: auto;" />
+                    <col style="width: 70px;">
+                    <col style="width: auto;">
                   </colgroup>
                   <tbody>
                     <!-- 교환매장 점포 선택 전 case -->
@@ -180,7 +180,7 @@
                         교환매장
                       </th>
                       <td class="ta-right">
-                        <EBtn tag="a" color="line-light-gray" size="xs" to="/store/search">
+                        <EBtn color="line-light-gray" size="xs" @click="openStoreSearchSelect(false)">
                           <span class="text">교환매장 선택</span>
                         </EBtn>
                       </td>
@@ -203,7 +203,7 @@
                         <div class="align-group">
                           <span class="stext">세븐일레븐 강남점</span>
                           <!-- DESC :: 센터 발송한 경우 [disabled] 속성 추가 -->
-                          <EBtn tag="a" color="line-light-gray" size="xs" to="/store/search">
+                          <EBtn color="line-light-gray" size="xs" @click="openStoreSearchSelect(false)">
                             <span class="text">변경</span>
                           </EBtn>
                         </div>
@@ -236,7 +236,7 @@
               <!-- thumb-prod-2xl -->
               <EThumbProdBox size="2xl">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품 이미지">
                 </template>
               </EThumbProdBox>
               <!-- // thumb-prod-2xl -->
@@ -259,8 +259,8 @@
                 </ColorBox>
                 <TableWrap type="info" gap="sm" size="lg" table-name="쿠폰정보">
                   <colgroup>
-                    <col style="width: 70px;" />
-                    <col style="width: auto;" />
+                    <col style="width: 70px;">
+                    <col style="width: auto;">
                   </colgroup>
                   <tbody>
                     <tr>
@@ -303,7 +303,7 @@
               <!-- thumb-prod-2xl -->
               <EThumbProdBox size="2xl">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품 이미지">
                 </template>
               </EThumbProdBox>
               <!-- // thumb-prod-2xl -->
@@ -318,14 +318,14 @@
                 </CtitleWrap>
                 <ColorBox color="line-light-gray" size="lg">
                   <div class="barcode-box">
-                    <img src="/assets/images/temp/temp_img_barcode_delivery.svg" alt="바코드 이미지" />
+                    <img src="/assets/images/temp/temp_img_barcode_delivery.svg" alt="바코드 이미지">
                     <!-- <img src="/assets/images/temp/temp_img_barcode_qr_delivery.svg" alt="QR코드 이미지"> -->
                   </div>
                 </ColorBox>
                 <TableWrap type="info" gap="sm" size="lg" table-name="쿠폰정보">
                   <colgroup>
-                    <col style="width: 70px;" />
-                    <col style="width: auto;" />
+                    <col style="width: 70px;">
+                    <col style="width: auto;">
                   </colgroup>
                   <tbody>
                     <tr>
@@ -354,7 +354,7 @@
               <!-- thumb-prod-2xl -->
               <EThumbProdBox size="2xl" dim="기간만료">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품 이미지">
                 </template>
               </EThumbProdBox>
               <!-- // thumb-prod-2xl -->
@@ -380,8 +380,8 @@
                 </ColorBox>
                 <TableWrap type="info" gap="sm" size="lg" table-name="쿠폰정보">
                   <colgroup>
-                    <col style="width: 70px;" />
-                    <col style="width: auto;" />
+                    <col style="width: 70px;">
+                    <col style="width: auto;">
                   </colgroup>
                   <tbody>
                     <tr>
@@ -410,7 +410,7 @@
               <!-- thumb-prod-2xl -->
               <EThumbProdBox size="2xl" dim="기간만료">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품 이미지">
                 </template>
               </EThumbProdBox>
               <!-- // thumb-prod-2xl -->
@@ -425,14 +425,14 @@
                 </CtitleWrap>
                 <ColorBox color="line-light-gray" size="lg">
                   <div class="barcode-box">
-                    <img src="/assets/images/temp/temp_img_barcode_delivery.svg" alt="바코드 이미지" />
+                    <img src="/assets/images/temp/temp_img_barcode_delivery.svg" alt="바코드 이미지">
                     <!-- <img src="/assets/images/temp/temp_img_barcode_qr_delivery.svg" alt="QR코드 이미지"> -->
                   </div>
                 </ColorBox>
                 <TableWrap type="info" gap="sm" size="lg" table-name="쿠폰정보">
                   <colgroup>
-                    <col style="width: 70px;" />
-                    <col style="width: auto;" />
+                    <col style="width: 70px;">
+                    <col style="width: auto;">
                   </colgroup>
                   <tbody>
                     <tr>
@@ -478,7 +478,7 @@
               <!-- thumb-prod-2xl -->
               <EThumbProdBox size="2xl" dim="기간만료">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품 이미지">
                 </template>
               </EThumbProdBox>
               <!-- // thumb-prod-2xl -->
@@ -501,14 +501,14 @@
                 </ColorBox>
                 <ColorBox color="line-light-gray" size="lg">
                   <div class="barcode-box">
-                    <img src="/assets/images/temp/temp_img_barcode_delivery.svg" alt="바코드 이미지" />
+                    <img src="/assets/images/temp/temp_img_barcode_delivery.svg" alt="바코드 이미지">
                     <!-- <img src="/assets/images/temp/temp_img_barcode_qr_delivery.svg" alt="QR코드 이미지"> -->
                   </div>
                 </ColorBox>
                 <TableWrap type="info" gap="sm" size="lg" table-name="쿠폰정보">
                   <colgroup>
-                    <col style="width: 70px;" />
-                    <col style="width: auto;" />
+                    <col style="width: 70px;">
+                    <col style="width: auto;">
                   </colgroup>
                   <tbody>
                     <!-- 교환매장 선택 전 이용기간 종료된 case -->
@@ -517,7 +517,7 @@
                         교환매장
                       </th>
                       <td class="ta-right">
-                        <EBtn tag="a" color="line-light-gray" size="xs" to="/store/search" class="disabled">
+                        <EBtn color="line-light-gray" size="xs" disabled @click="openStoreSearchSelect(false)">
                           <span class="text">교환매장 선택</span>
                         </EBtn>
                       </td>
@@ -539,7 +539,7 @@
                       <td class="ta-right">
                         <div class="align-group">
                           <span class="stext">세븐일레븐 강남점</span>
-                          <EBtn tag="a" color="line-light-gray" size="xs" to="/store/search" class="disabled">
+                          <EBtn color="line-light-gray" size="xs" disabled @click="openStoreSearchSelect(false)">
                             <span class="text">변경</span>
                           </EBtn>
                         </div>
@@ -572,7 +572,7 @@
               <!-- thumb-prod-2xl -->
               <EThumbProdBox size="2xl" dim="사용완료">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품 이미지">
                 </template>
               </EThumbProdBox>
               <!-- // thumb-prod-2xl -->
@@ -595,8 +595,8 @@
                 </ColorBox>
                 <TableWrap type="info" gap="sm" size="lg" table-name="쿠폰정보">
                   <colgroup>
-                    <col style="width: 70px;" />
-                    <col style="width: auto;" />
+                    <col style="width: 70px;">
+                    <col style="width: auto;">
                   </colgroup>
                   <tbody>
                     <tr>
@@ -656,7 +656,7 @@
                     </div>
                     <div class="stext">
                       APP 이용 및 매장관련문의
-                      <br />09:00~18:00 주말 및 공휴일 제외
+                      <br>09:00~18:00 주말 및 공휴일 제외
                     </div>
                   </CtitleWrap>
                 </SContLineBox>
@@ -680,7 +680,7 @@
                   </li>
                   <li class="dot-text">
                     화면 하단 ‘확정’ 선택
-                    <br />(쿠폰 스캔 후 화면상 ‘ENTER’ 버튼 선택 시 금액 수정이 불가하다는 팝업창 생성)
+                    <br>(쿠폰 스캔 후 화면상 ‘ENTER’ 버튼 선택 시 금액 수정이 불가하다는 팝업창 생성)
                   </li>
                   <li class="dot-text">
                     현금 합계 완료
@@ -699,7 +699,7 @@
                   <RowListWrap gap="sm">
                     <li class="dot-text">
                       결제 건당 할인쿠폰은 1회 적용 가능합니다.
-                      <br />(중복 적용 불가)
+                      <br>(중복 적용 불가)
                     </li>
                     <li class="dot-text">
                       해당 쿠폰은 일부 세븐일레븐 점포에서는 취급하지 않는 상품일 수 있습니다.
@@ -777,7 +777,7 @@
                     </div>
                     <div class="stext">
                       APP 이용 및 매장관련문의
-                      <br />09:00~18:00 주말 및 공휴일 제외
+                      <br>09:00~18:00 주말 및 공휴일 제외
                     </div>
                   </CtitleWrap>
                 </SContLineBox>
@@ -790,7 +790,7 @@
                     </div>
                     <div class="stext">
                       롯데쇼핑 e커머스 고객센터
-                      <br />10:00~20:00 주말 및 공휴일 제외
+                      <br>10:00~20:00 주말 및 공휴일 제외
                     </div>
                   </CtitleWrap>
                 </SContLineBox>
@@ -828,7 +828,7 @@
                     </div>
                     <div class="stext">
                       APP 이용 및 매장관련문의
-                      <br />09:00~18:00 주말 및 공휴일 제외
+                      <br>09:00~18:00 주말 및 공휴일 제외
                     </div>
                   </CtitleWrap>
                 </SContLineBox>
@@ -841,7 +841,7 @@
                     </div>
                     <div class="stext">
                       롯데쇼핑 e커머스 고객센터
-                      <br />10:00~20:00 주말 및 공휴일 제외
+                      <br>10:00~20:00 주말 및 공휴일 제외
                     </div>
                   </CtitleWrap>
                 </SContLineBox>
@@ -854,10 +854,14 @@
       </div>
     </template>
   </ContDialog>
+
+  <!-- pop : 매장선택 -->
+  <PopStoreSearchSelect v-model:sta="popStoreSearchSelect" :is-search-data="popSearchType" />
+  <!-- // pop : 매장선택 -->
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from "vue";
 
 interface DialogState {
   open: boolean;
@@ -867,11 +871,11 @@ const props = defineProps<{
   sta: DialogState;
 }>();
 
-const emit = defineEmits(['update:sta']);
+const emit = defineEmits(["update:sta"]);
 
 const isOpen = computed({
   get: () => props.sta.open,
-  set: value => emit('update:sta', { ...props.sta, open: value }),
+  set: value => emit("update:sta", { ...props.sta, open: value }),
 });
 
 const { $showToast } = useNuxtApp();
@@ -882,11 +886,22 @@ function copyText() {
   if (copyTextRef.value) {
     const textCode = copyTextRef.value.textContent;
     window.navigator.clipboard.writeText(textCode).then(() => {
-      $showToast({ msg: '쿠폰번호가 복사되었습니다.' });
+      $showToast({ msg: "쿠폰번호가 복사되었습니다." });
     });
   }
 }
 
 // 화면 캡처 시도 시 토스트 노출
 /* $showToast({ msg: '이 화면은 캡처하실 수 없습니다.' }); */
+
+// 매장선택
+const popStoreSearchSelect = ref({ open: false });
+
+// 임시 - 매장 검색결과 팝업 확인을 위한 이벤트 추가 ( 개발시 삭제 요청 )
+const popSearchType = ref<boolean>();
+
+const openStoreSearchSelect = (isSearchData: boolean) => {
+  popSearchType.value = isSearchData; // 임시 - 매장 검색결과 팝업 확인을 위한 이벤트 추가 ( 개발시 삭제 요청 )
+  popStoreSearchSelect.value.open = true;
+};
 </script>

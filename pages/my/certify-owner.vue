@@ -3,7 +3,7 @@
     <ContBox size="md">
       <CtitleWrap size="md">
         <ETit type="cont">
-          점포코드와 본인 휴대폰 번호를 통해
+          점포코드와 본인 휴대폰번호를 통해
           <br>경영주 인증을 진행해 주세요.
         </ETit>
       </CtitleWrap>
@@ -37,7 +37,7 @@
                 <div class="form-input-group valid-check">
                   <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호 입력" />
                   <p class="valid-desc">
-                    휴대폰 번호를 정확하게 입력해 주세요.
+                    휴대폰번호를 정확하게 입력해 주세요.
                   </p>
                 </div>
               </div>
@@ -52,7 +52,7 @@
       </CtitleWrap>
       <RowListWrap gap="sm">
         <li class="dot-text-sm">
-          휴대폰 번호가 미등록된 경영주께서는 점포 관리자에게 문의해 주시기 바랍니다.
+          휴대폰번호가 미등록된 경영주께서는 점포 관리자에게 문의해 주시기 바랍니다.
         </li>
       </RowListWrap>
     </ContBox>

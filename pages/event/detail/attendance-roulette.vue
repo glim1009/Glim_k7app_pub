@@ -57,10 +57,18 @@
           </div>
           <span class="roulette-pin"></span>
         </div>
+        <!-- CASE 01 : 로그인 전 -->
+        <!--<NuxtLink class="btn-attendance-check" to="/member">
+          <img src="/assets/images/event/bg_attendance_roulette_btn.png" alt="룰렛 출석체크" />
+        </NuxtLink>-->
+        <!-- // CASE 01 : 로그인 전 -->
+
+        <!-- CASE 02 : 로그인 후 -->
         <!-- DESC :: 당첨 결과 팝업 노출 시 @click="openWinResult" 추가 필요 -->
         <button type="button" class="btn-attendance-check" @click="spinRoulette">
           <img src="/assets/images/event/bg_attendance_roulette_btn.png" alt="룰렛 출석체크" />
         </button>
+        <!-- // CASE 02 : 로그인 후 -->
       </div>
       <!-- // roulette-wrap -->
     </div>

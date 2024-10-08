@@ -172,10 +172,17 @@
           </table>
         </div>
       </div>
+      <!-- CASE 01 : 로그인 전 -->
+      <!--<NuxtLink class="btn-attendance-check" to="/member">
+        <img src="/assets/images/event/bg_attendance_calendar_btn.png" alt="출석체크" />
+      </NuxtLink>-->
+      <!-- // CASE 01 : 로그인 전 -->
 
+      <!-- CASE 02 : 로그인 후 -->
       <button type="button" class="btn-attendance-check" @click="openWinResult">
         <img src="/assets/images/event/bg_attendance_calendar_btn.png" alt="출석체크" />
       </button>
+      <!-- // CASE 02 : 로그인 후 -->
     </div>
     <!-- // calendar-wrap -->
   </ContWrap>

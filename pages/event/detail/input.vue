@@ -8,6 +8,10 @@
   </ContWrap>
   <ContWrap type="white" in-top="lg" class="not-navbar">
     <ContBox size="sm">
+      <!-- DESC :: 미로그인 시
+      - EInputBox에 readonly 속성 추가
+      - 등록버튼 선택 시 "/member"로 이동
+      -->
       <EInputBox title="쿠폰번호" placeholder="쿠폰번호 입력">
         <EBtn color="green" size="xs">
           <span class="text">등록</span>

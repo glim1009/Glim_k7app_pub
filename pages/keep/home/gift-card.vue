@@ -48,7 +48,7 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -98,7 +98,7 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md" dim="사용완료">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -148,7 +148,7 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -195,7 +195,7 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md" dim="사용완료">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -239,7 +239,7 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md" dim="기간만료">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -274,7 +274,7 @@
         sub-desc="세븐일레븐의 1+1 및 2+1 교환권은<br>온라인에서 편리하게 구매하세요."
       />
       <BtnWrap type="auto-center" size="lg">
-        <EBtn tag="a" color="line-gray" size="md" to="/service">
+        <EBtn tag="a" color="line-gray" size="md" to="/service/gift-card">
           <span class="text">교환권 상품보기</span>
         </EBtn>
       </BtnWrap>
@@ -292,19 +292,19 @@
             <div class="form-input-group">
               <UiColGroup gap="sm">
                 <span class="ui-rdo-button">
-                  <input id="filterProdType01" type="radio" name="filterStatus01" />
+                  <input id="filterProdType01" type="radio" name="filterStatus01">
                   <label for="filterProdType01"><span class="text-sm">전체</span></label>
                 </span>
                 <span class="ui-rdo-button">
-                  <input id="filterProdType02" type="radio" name="filterStatus01" />
+                  <input id="filterProdType02" type="radio" name="filterStatus01">
                   <label for="filterProdType02"><span class="text-sm">사용가능</span></label>
                 </span>
                 <span class="ui-rdo-button">
-                  <input id="filterProdType03" type="radio" name="filterStatus01" />
+                  <input id="filterProdType03" type="radio" name="filterStatus01">
                   <label for="filterProdType03"><span class="text-sm">사용완료</span></label>
                 </span>
                 <span class="ui-rdo-button">
-                  <input id="filterProdType04" type="radio" name="filterStatus01" />
+                  <input id="filterProdType04" type="radio" name="filterStatus01">
                   <label for="filterProdType04"><span class="text-sm">기간만료</span></label>
                 </span>
               </UiColGroup>
@@ -321,19 +321,19 @@
             <div class="form-input-group">
               <UiColGroup gap="sm">
                 <span class="ui-rdo-button">
-                  <input id="filterOptionDate01" v-model="periodPicked" value="periodDate01" type="radio" />
+                  <input id="filterOptionDate01" v-model="periodPicked" value="periodDate01" type="radio">
                   <label for="filterOptionDate01"><span class="text-sm">최근3개월</span></label>
                 </span>
                 <span class="ui-rdo-button">
-                  <input id="filterOptionDate02" v-model="periodPicked" value="periodDate02" type="radio" />
+                  <input id="filterOptionDate02" v-model="periodPicked" value="periodDate02" type="radio">
                   <label for="filterOptionDate02"><span class="text-sm">6개월</span></label>
                 </span>
                 <span class="ui-rdo-button">
-                  <input id="filterOptionDate03" v-model="periodPicked" value="periodDate03" type="radio" />
+                  <input id="filterOptionDate03" v-model="periodPicked" value="periodDate03" type="radio">
                   <label for="filterOptionDate03"><span class="text-sm">1년</span></label>
                 </span>
                 <span class="ui-rdo-button">
-                  <input id="filterOptionDate04" v-model="periodPicked" value="periodDateInput" type="radio" />
+                  <input id="filterOptionDate04" v-model="periodPicked" value="periodDateInput" type="radio">
                   <label for="filterOptionDate04"><span class="text-sm">직접입력</span></label>
                 </span>
               </UiColGroup>
@@ -383,7 +383,7 @@ const periodPicked = ref();
 const isDateInputDisabled = ref<boolean>(true);
 
 watch(periodPicked, (value) => {
-  isDateInputDisabled.value = value !== 'periodDateInput';
+  isDateInputDisabled.value = value !== "periodDateInput";
 });
 
 // 선물하기 팝업

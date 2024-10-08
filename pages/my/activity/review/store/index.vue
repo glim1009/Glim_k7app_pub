@@ -13,33 +13,19 @@
       </div>
       <ContBox size="zero" gap="sm">
         <ColorBox color="white" size="lg">
-         <FlexGroup align="start">
-           <div class="flex-left">
-             <CtitleWrap size="zero">
-               <ETit type="box" text="을지로 1가점" />
-               <div class="stext-lg">파니니EPL축구카드36팩 외 3건</div>
-             </CtitleWrap>
-           </div>
-           <div class="flex-right">
-             <div class="stext fc-gray60">2024.07.21 구매</div>
-           </div>
-         </FlexGroup>
-          <BtnWrap size="sm">
-            <EBtn color="line-light-gray" size="sm" @click="openWriteReview">
-              <span class="text">리뷰 작성 (D-5)</span>
-            </EBtn>
-          </BtnWrap>
-        </ColorBox>
-        <ColorBox color="white" size="lg">
           <FlexGroup align="start">
             <div class="flex-left">
               <CtitleWrap size="zero">
                 <ETit type="box" text="을지로 1가점" />
-                <div class="stext-lg">파니니EPL축구카드36팩 외 3건</div>
+                <div class="stext-lg">
+                  파니니EPL축구카드36팩 외 3건
+                </div>
               </CtitleWrap>
             </div>
             <div class="flex-right">
-              <div class="stext fc-gray60">2024.07.21 구매</div>
+              <div class="stext fc-gray60">
+                2024.07.21 구매
+              </div>
             </div>
           </FlexGroup>
           <BtnWrap size="sm">
@@ -53,11 +39,37 @@
             <div class="flex-left">
               <CtitleWrap size="zero">
                 <ETit type="box" text="을지로 1가점" />
-                <div class="stext-lg">파니니EPL축구카드36팩 외 3건</div>
+                <div class="stext-lg">
+                  파니니EPL축구카드36팩 외 3건
+                </div>
               </CtitleWrap>
             </div>
             <div class="flex-right">
-              <div class="stext fc-gray60">2024.07.21 구매</div>
+              <div class="stext fc-gray60">
+                2024.07.21 구매
+              </div>
+            </div>
+          </FlexGroup>
+          <BtnWrap size="sm">
+            <EBtn color="line-light-gray" size="sm" @click="openWriteReview">
+              <span class="text">리뷰 작성 (D-5)</span>
+            </EBtn>
+          </BtnWrap>
+        </ColorBox>
+        <ColorBox color="white" size="lg">
+          <FlexGroup align="start">
+            <div class="flex-left">
+              <CtitleWrap size="zero">
+                <ETit type="box" text="을지로 1가점" />
+                <div class="stext-lg">
+                  파니니EPL축구카드36팩 외 3건
+                </div>
+              </CtitleWrap>
+            </div>
+            <div class="flex-right">
+              <div class="stext fc-gray60">
+                2024.07.21 구매
+              </div>
             </div>
           </FlexGroup>
           <BtnWrap size="sm">
@@ -84,7 +96,6 @@
   <!-- pop : 리뷰작성 팝업 -->
   <PopCommWriteReview v-model:sta="popWriteReview" is-store />
   <!-- // pop : 리뷰작성 팝업 -->
-
 </template>
 
 <script setup lang="ts">
@@ -95,4 +106,3 @@ const isNoData = ref(true); // 임시 : 리뷰 데이터 없음 확인을 위해
 const popWriteReview = ref({ open: false });
 const openWriteReview = () => popWriteReview.value.open = true;
 </script>
-

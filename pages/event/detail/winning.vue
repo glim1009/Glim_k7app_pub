@@ -21,7 +21,7 @@
       <!-- //CASE 01 : 로그인 전 -->
 
       <!-- CASE 02 : 로그인 후 -->
-      <EBtn size="md" color="green">
+      <EBtn size="md" color="green" @click="openWinResult">
         <span class="text">응모결과 조회</span>
       </EBtn>
       <!-- // CASE 02 : 로그인 후 -->
@@ -37,12 +37,23 @@
       </div>
     </ContBox>
   </ContWrap>
+  <!-- pop : 행운의 룰렛 -->
+  <!-- DESC :: 당첨 결과 여부에 따라 사용 필요
+       - is-gift: 경품 당첨
+       - is-boom: 꽝
+  -->
+  <PopEventWinResult v-model:sta="popWinResult" is-gift />
+  <!-- // pop : 행운의 룰렛 -->
 </template>
 
 <script setup lang="ts">
 definePageMeta({
   hideRightHeader: ["chat"],
 });
+
+// 당첨 결과 팝업
+const popWinResult = ref({ open: false });
+const openWinResult = () => popWinResult.value.open = true;
 </script>
 
 <style lang="scss" scoped>

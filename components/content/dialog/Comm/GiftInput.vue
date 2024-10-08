@@ -47,7 +47,7 @@
                     </div>
                     <div class="form-cont">
                       <div class="form-input-group">
-                        <EInputBox type="number" inputmode="tel" title="휴대폰 번호" placeholder="휴대폰 번호 입력" />
+                        <EInputBox type="number" inputmode="tel" title="휴대폰번호" placeholder="휴대폰번호 입력" />
                       </div>
                     </div>
                   </div>

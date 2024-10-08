@@ -37,10 +37,10 @@
     </template>
     <template #footer>
       <div class="dialog-btn-wrap">
-        <EBtn tag="a" color="line-light-gray" size="lg" to="javascript:">
+        <EBtn tag="a" color="line-light-gray" size="lg" to="/order/pay/subscribe">
           <span class="text">정기구독</span>
         </EBtn>
-        <EBtn tag="a" color="green" size="lg" to="javascript:">
+        <EBtn tag="a" color="green" size="lg" to="/order/pay">
           <span class="text">1회성 구독</span>
         </EBtn>
       </div>

@@ -9,9 +9,9 @@
             </button>
             <EInputBox type="search" enterkeyhint="search" title="상품 명 검색" placeholder="상품 명 입력" @class-change="handleChangeClass" @clear="valueClear">
               <EBadge color="gray" badge-text="재고찾기" />
-              <NuxtLink to="javascript:" class="btn-input-search">
+              <button type="button" class="btn-input-search">
                 <span class="offscreen">검색</span>
-              </NuxtLink>
+              </button>
             </EInputBox>
           </div>
           <div class="header-right">

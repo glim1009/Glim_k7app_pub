@@ -87,7 +87,7 @@
         </div>
       </div>
       <div class="flex-right">
-        <EBtn tag="a" color="gray" size="xs" to="javascript:">
+        <EBtn tag="a" color="gray" size="xs" to="/stock/product">
           <div class="text">
             재고찾기
           </div>
@@ -207,7 +207,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -248,7 +248,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -290,7 +290,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -331,7 +331,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -373,7 +373,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -415,7 +415,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -482,7 +482,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -523,7 +523,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -565,7 +565,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -606,7 +606,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -648,7 +648,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -690,7 +690,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -755,7 +755,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -796,7 +796,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -838,7 +838,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -879,7 +879,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -921,7 +921,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -963,7 +963,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -1030,7 +1030,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -1068,7 +1068,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -1107,7 +1107,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -1145,7 +1145,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -1184,7 +1184,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -1223,7 +1223,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -1287,7 +1287,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -1322,7 +1322,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -1358,7 +1358,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -1394,7 +1394,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -1430,7 +1430,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -1466,7 +1466,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -1495,7 +1495,7 @@
       </ContWrap>
       <ContWrap v-if="activeTab !== 'allResult'" in-top="md" type="white">
         <ContBox v-if="activeTab === 'pickUp' || activeTab === 'reservation'" size="sm">
-          <button type="button" class="btn-store">
+          <button type="button" class="btn-store" @click="openStoreSearchSelect(false)">
             <EBadge color="green" size="md" badge-text="픽업매장" />
             <span class="store">세븐일레븐 강남점</span>
             <EIco name="arw-right" color="gray" size="sm" />
@@ -1546,7 +1546,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -1595,7 +1595,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -1637,7 +1637,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -1677,7 +1677,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -1725,7 +1725,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -1768,7 +1768,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -1810,7 +1810,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -1850,7 +1850,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -1895,7 +1895,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -1939,7 +1939,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -1981,7 +1981,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -2021,7 +2021,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -2069,7 +2069,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -2110,7 +2110,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -2149,7 +2149,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -2186,7 +2186,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -2231,7 +2231,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -2269,7 +2269,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -2305,7 +2305,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -2339,7 +2339,7 @@
                     </EIco>
                   </button>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -2375,144 +2375,6 @@
           <!-- // 필터 조건 검색결과 없음 -->
         </ContBox>
       </ContWrap>
-
-      <!-- pop : 상품 필터 옵션 -->
-      <PopCommFilterOption v-model:sta="popProdFilterOption">
-        <!-- 필터옵션목록 -->
-        <template #option>
-          <li class="item-xl">
-            <div class="form-field">
-              <div class="form-title">
-                <ETit text="상품유형" type="cont" />
-              </div>
-              <div class="form-cont">
-                <div class="form-input-group">
-                  <UiColGroup gap="sm">
-                    <span class="ui-chk-button">
-                      <input id="filterProdType01" type="checkbox" />
-                      <label for="filterProdType01"><span class="text-sm">품절 상품 제외</span></label>
-                    </span>
-                    <span class="ui-chk-button">
-                      <input id="filterProdType02" type="checkbox" />
-                      <label for="filterProdType02"><span class="text-sm">만 19세 미만 상품 제외</span></label>
-                    </span>
-                    <span class="ui-chk-button">
-                      <input id="filterProdType03" type="checkbox" />
-                      <label for="filterProdType03"><span class="text-sm">앱전용 상품 보기</span></label>
-                    </span>
-                    <span class="ui-chk-button">
-                      <input id="filterProdType04" type="checkbox" />
-                      <label for="filterProdType04"><span class="text-sm">신상품 보기</span></label>
-                    </span>
-                    <span class="ui-chk-button">
-                      <input id="filterProdType05" type="checkbox" />
-                      <label for="filterProdType05"><span class="text-sm">7-SELECT</span></label>
-                    </span>
-                    <span class="ui-chk-button">
-                      <input id="filterProdType06" type="checkbox" />
-                      <label for="filterProdType06"><span class="text-sm">한정수량 상품 보기</span></label>
-                    </span>
-                    <span class="ui-chk-button">
-                      <input id="filterProdType07" type="checkbox" />
-                      <label for="filterProdType07"><span class="text-sm">단독상품 보기</span></label>
-                    </span>
-                  </UiColGroup>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="item-xl">
-            <div class="form-field">
-              <div class="form-title">
-                <ETit text="할인/혜택" type="cont" />
-              </div>
-              <div class="form-cont">
-                <div class="form-input-group">
-                  <UiColGroup gap="sm">
-                    <span class="ui-chk-button">
-                      <input id="filterProdBenefit01" type="checkbox" />
-                      <label for="filterProdBenefit01"><span class="text-sm">할인</span></label>
-                    </span>
-                    <span class="ui-chk-button">
-                      <input id="filterProdBenefit02" type="checkbox" />
-                      <label for="filterProdBenefit02"><span class="text-sm">1+1</span></label>
-                    </span>
-                    <span class="ui-chk-button">
-                      <input id="filterProdBenefit03" type="checkbox" />
-                      <label for="filterProdBenefit03"><span class="text-sm">2+1</span></label>
-                    </span>
-                    <span class="ui-chk-button">
-                      <input id="filterProdBenefit04" type="checkbox" />
-                      <label for="filterProdBenefit04"><span class="text-sm">증정</span></label>
-                    </span>
-                    <span class="ui-chk-button">
-                      <input id="filterProdBenefit05" type="checkbox" />
-                      <label for="filterProdBenefit05"><span class="text-sm">핫딜</span></label>
-                    </span>
-                  </UiColGroup>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="item-xl">
-            <div class="form-field">
-              <div class="form-title">
-                <ETit text="가격" type="cont" />
-              </div>
-              <div class="form-cont">
-                <div class="form-input-group">
-                  <UiColGroup gap="sm">
-                    <span class="ui-chk-button">
-                      <input id="filterProdPrice01" type="checkbox" />
-                      <label for="filterProdPrice01"><span class="text-sm">~1만원</span></label>
-                    </span>
-                    <span class="ui-chk-button">
-                      <input id="filterProdPrice02" type="checkbox" />
-                      <label for="filterProdPrice02"><span class="text-sm">1~2만원</span></label>
-                    </span>
-                    <span class="ui-chk-button">
-                      <input id="filterProdPrice03" type="checkbox" />
-                      <label for="filterProdPrice03"><span class="text-sm">2~3만원</span></label>
-                    </span>
-                    <span class="ui-chk-button">
-                      <input id="filterProdPrice04" type="checkbox" />
-                      <label for="filterProdPrice04"><span class="text-sm">3~5만원</span></label>
-                    </span>
-                    <span class="ui-chk-button">
-                      <input id="filterProdPrice05" type="checkbox" />
-                      <label for="filterProdPrice05"><span class="text-sm">5~8만원</span></label>
-                    </span>
-                    <span class="ui-chk-button">
-                      <input id="filterProdPrice06" type="checkbox" checked />
-                      <label for="filterProdPrice06"><span class="text-sm">9~10만원</span></label>
-                    </span>
-                    <span class="ui-chk-button">
-                      <input id="filterProdPrice07" type="checkbox" />
-                      <label for="filterProdPrice07"><span class="text-sm">10~15만원</span></label>
-                    </span>
-                    <span class="ui-chk-button">
-                      <input id="filterProdPrice08" type="checkbox" />
-                      <label for="filterProdPrice08"><span class="text-sm">~15만원</span></label>
-                    </span>
-                  </UiColGroup>
-                </div>
-              </div>
-            </div>
-          </li>
-        </template>
-        <!-- // 필터옵션목록 -->
-        <template #footer>
-          <div class="dialog-btn-auto-wrap">
-            <EBtn color="line-light-gray" size="lg">
-              <span class="text">초기화</span>
-            </EBtn>
-            <EBtn color="green" size="lg" @click="popProdFilterOption.open = false">
-              <span class="text">적용</span>
-            </EBtn>
-          </div>
-        </template>
-      </PopCommFilterOption>
-      <!-- // pop : 상품 필터 옵션 -->
     </template>
   </TabWrap>
   <!-- // 검색결과 있음 -->
@@ -2526,6 +2388,148 @@
     />
   </ContWrap>
   <!-- // 검색결과 없음 -->
+
+  <!-- pop : 상품 필터 옵션 -->
+  <PopCommFilterOption v-model:sta="popProdFilterOption">
+    <!-- 필터옵션목록 -->
+    <template #option>
+      <li class="item-xl">
+        <div class="form-field">
+          <div class="form-title">
+            <ETit text="상품유형" type="cont" />
+          </div>
+          <div class="form-cont">
+            <div class="form-input-group">
+              <UiColGroup gap="sm">
+                <span class="ui-chk-button">
+                  <input id="filterProdType01" type="checkbox">
+                  <label for="filterProdType01"><span class="text-sm">품절 상품 제외</span></label>
+                </span>
+                <span class="ui-chk-button">
+                  <input id="filterProdType02" type="checkbox">
+                  <label for="filterProdType02"><span class="text-sm">만 19세 미만 상품 제외</span></label>
+                </span>
+                <span class="ui-chk-button">
+                  <input id="filterProdType03" type="checkbox">
+                  <label for="filterProdType03"><span class="text-sm">앱전용 상품 보기</span></label>
+                </span>
+                <span class="ui-chk-button">
+                  <input id="filterProdType04" type="checkbox">
+                  <label for="filterProdType04"><span class="text-sm">신상품 보기</span></label>
+                </span>
+                <span class="ui-chk-button">
+                  <input id="filterProdType05" type="checkbox">
+                  <label for="filterProdType05"><span class="text-sm">7-SELECT</span></label>
+                </span>
+                <span class="ui-chk-button">
+                  <input id="filterProdType06" type="checkbox">
+                  <label for="filterProdType06"><span class="text-sm">한정수량 상품 보기</span></label>
+                </span>
+                <span class="ui-chk-button">
+                  <input id="filterProdType07" type="checkbox">
+                  <label for="filterProdType07"><span class="text-sm">단독상품 보기</span></label>
+                </span>
+              </UiColGroup>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="item-xl">
+        <div class="form-field">
+          <div class="form-title">
+            <ETit text="할인/혜택" type="cont" />
+          </div>
+          <div class="form-cont">
+            <div class="form-input-group">
+              <UiColGroup gap="sm">
+                <span class="ui-chk-button">
+                  <input id="filterProdBenefit01" type="checkbox">
+                  <label for="filterProdBenefit01"><span class="text-sm">할인</span></label>
+                </span>
+                <span class="ui-chk-button">
+                  <input id="filterProdBenefit02" type="checkbox">
+                  <label for="filterProdBenefit02"><span class="text-sm">1+1</span></label>
+                </span>
+                <span class="ui-chk-button">
+                  <input id="filterProdBenefit03" type="checkbox">
+                  <label for="filterProdBenefit03"><span class="text-sm">2+1</span></label>
+                </span>
+                <span class="ui-chk-button">
+                  <input id="filterProdBenefit04" type="checkbox">
+                  <label for="filterProdBenefit04"><span class="text-sm">증정</span></label>
+                </span>
+                <span class="ui-chk-button">
+                  <input id="filterProdBenefit05" type="checkbox">
+                  <label for="filterProdBenefit05"><span class="text-sm">핫딜</span></label>
+                </span>
+              </UiColGroup>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="item-xl">
+        <div class="form-field">
+          <div class="form-title">
+            <ETit text="가격" type="cont" />
+          </div>
+          <div class="form-cont">
+            <div class="form-input-group">
+              <UiColGroup gap="sm">
+                <span class="ui-chk-button">
+                  <input id="filterProdPrice01" type="checkbox">
+                  <label for="filterProdPrice01"><span class="text-sm">~1만원</span></label>
+                </span>
+                <span class="ui-chk-button">
+                  <input id="filterProdPrice02" type="checkbox">
+                  <label for="filterProdPrice02"><span class="text-sm">1~2만원</span></label>
+                </span>
+                <span class="ui-chk-button">
+                  <input id="filterProdPrice03" type="checkbox">
+                  <label for="filterProdPrice03"><span class="text-sm">2~3만원</span></label>
+                </span>
+                <span class="ui-chk-button">
+                  <input id="filterProdPrice04" type="checkbox">
+                  <label for="filterProdPrice04"><span class="text-sm">3~5만원</span></label>
+                </span>
+                <span class="ui-chk-button">
+                  <input id="filterProdPrice05" type="checkbox">
+                  <label for="filterProdPrice05"><span class="text-sm">5~8만원</span></label>
+                </span>
+                <span class="ui-chk-button">
+                  <input id="filterProdPrice06" type="checkbox" checked>
+                  <label for="filterProdPrice06"><span class="text-sm">9~10만원</span></label>
+                </span>
+                <span class="ui-chk-button">
+                  <input id="filterProdPrice07" type="checkbox">
+                  <label for="filterProdPrice07"><span class="text-sm">10~15만원</span></label>
+                </span>
+                <span class="ui-chk-button">
+                  <input id="filterProdPrice08" type="checkbox">
+                  <label for="filterProdPrice08"><span class="text-sm">~15만원</span></label>
+                </span>
+              </UiColGroup>
+            </div>
+          </div>
+        </div>
+      </li>
+    </template>
+    <!-- // 필터옵션목록 -->
+    <template #footer>
+      <div class="dialog-btn-auto-wrap">
+        <EBtn color="line-light-gray" size="lg">
+          <span class="text">초기화</span>
+        </EBtn>
+        <EBtn color="green" size="lg" @click="popProdFilterOption.open = false">
+          <span class="text">적용</span>
+        </EBtn>
+      </div>
+    </template>
+  </PopCommFilterOption>
+  <!-- // pop : 상품 필터 옵션 -->
+
+  <!-- pop : 매장선택 -->
+  <PopStoreSearchSelect v-model:sta="popStoreSearchSelect" :is-search-data="popSearchType" />
+  <!-- // pop : 매장선택 -->
 </template>
 
 <script setup lang="ts">
@@ -2536,6 +2540,17 @@ const isNoDataSearch = ref(false); // 임시 : 검색결과 없음 컨텐츠 확
 // 상품필터옵션 팝업
 const popProdFilterOption = ref({ open: false });
 const openProdFilterOption = () => popProdFilterOption.value.open = true;
+
+// 매장선택
+const popStoreSearchSelect = ref({ open: false });
+
+// 임시 - 매장 검색결과 팝업 확인을 위한 이벤트 추가 ( 개발시 삭제 요청 )
+const popSearchType = ref<boolean>();
+
+const openStoreSearchSelect = (isSearchData: boolean) => {
+  popSearchType.value = isSearchData; // 임시 - 매장 검색결과 팝업 확인을 위한 이벤트 추가 ( 개발시 삭제 요청 )
+  popStoreSearchSelect.value.open = true;
+};
 </script>
 
 <style lang="scss" scoped>

@@ -60,7 +60,7 @@
                   와인 구독
                 </ETit>
                 <div class="stext">
-                  (31일간, 일 회 30% / 총 3회)
+                  (31일간, 월 1회 30% / 총 20회)
                 </div>
               </div>
             </div>
@@ -235,7 +235,7 @@
         sub-desc="세븐일레븐에서 구독할인 서비스로<br>다양한 혜택을 받아보세요."
       />
       <BtnWrap type="auto-center" size="lg">
-        <EBtn tag="a" color="line-gray" size="md" to="/service">
+        <EBtn tag="a" color="line-gray" size="md" to="/service/category/discount">
           <span class="text">구독할인 상품보기</span>
         </EBtn>
       </BtnWrap>

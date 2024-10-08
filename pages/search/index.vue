@@ -279,9 +279,13 @@
             <!-- thumb-prod-2xl -->
             <EThumbProdBox size="2xl">
               <!-- DESC :: 활성화시 is-active 클래스 추가 -->
-              <button type="button" class="btn-wish"><EIco name="wish" size="sm"><span class="offscreen">관심 등록</span></EIco></button>
+              <button type="button" class="btn-wish">
+                <EIco name="wish" size="sm">
+                  <span class="offscreen">관심 등록</span>
+                </EIco>
+              </button>
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <!-- // thumb-prod-2xl -->
@@ -323,9 +327,13 @@
                 <EBadge color="gray" size="sm" badge-text="혜택" />
               </div>
               <!-- DESC :: 활성화시 is-active 클래스 추가 -->
-              <button type="button" class="btn-wish"><EIco name="wish" size="sm"><span class="offscreen">관심 등록</span></EIco></button>
+              <button type="button" class="btn-wish">
+                <EIco name="wish" size="sm">
+                  <span class="offscreen">관심 등록</span>
+                </EIco>
+              </button>
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <!-- // thumb-prod-2xl -->
@@ -364,7 +372,11 @@
             <!-- thumb-prod-2xl -->
             <EThumbProdBox size="2xl">
               <!-- DESC :: 활성화시 is-active 클래스 추가 -->
-              <button type="button" class="btn-wish"><EIco name="wish" size="sm"><span class="offscreen">관심 등록</span></EIco></button>
+              <button type="button" class="btn-wish">
+                <EIco name="wish" size="sm">
+                  <span class="offscreen">관심 등록</span>
+                </EIco>
+              </button>
             </EThumbProdBox>
             <!-- // thumb-prod-2xl -->
             <div class="info-box">
@@ -405,9 +417,13 @@
                 <EBadge color="red" size="sm" badge-text="19" />
               </div>
               <!-- DESC :: 활성화시 is-active 클래스 추가 -->
-              <button type="button" class="btn-wish"><EIco name="wish" size="sm"><span class="offscreen">관심 등록</span></EIco></button>
+              <button type="button" class="btn-wish">
+                <EIco name="wish" size="sm">
+                  <span class="offscreen">관심 등록</span>
+                </EIco>
+              </button>
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <!-- // thumb-prod-2xl -->
@@ -446,9 +462,13 @@
             <!-- thumb-prod-2xl -->
             <EThumbProdBox size="2xl" dim="19">
               <!-- DESC :: 활성화시 is-active 클래스 추가 -->
-              <button type="button" class="btn-wish"><EIco name="wish" size="sm"><span class="offscreen">관심 등록</span></EIco></button>
+              <button type="button" class="btn-wish">
+                <EIco name="wish" size="sm">
+                  <span class="offscreen">관심 등록</span>
+                </EIco>
+              </button>
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <!-- // thumb-prod-2xl -->
@@ -493,7 +513,7 @@
                 </EIco>
               </button>
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <!-- // thumb-prod-2xl -->
@@ -532,9 +552,13 @@
             <!-- thumb-prod-2xl -->
             <EThumbProdBox size="2xl">
               <!-- DESC :: 활성화시 is-active 클래스 추가 -->
-              <button type="button" class="btn-wish"><EIco name="wish" size="sm"><span class="offscreen">관심 등록</span></EIco></button>
+              <button type="button" class="btn-wish">
+                <EIco name="wish" size="sm">
+                  <span class="offscreen">관심 등록</span>
+                </EIco>
+              </button>
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <!-- // thumb-prod-2xl -->
@@ -573,9 +597,13 @@
             <!-- thumb-prod-2xl -->
             <EThumbProdBox size="2xl">
               <!-- DESC :: 활성화시 is-active 클래스 추가 -->
-              <button type="button" class="btn-wish"><EIco name="wish" size="sm"><span class="offscreen">관심 등록</span></EIco></button>
+              <button type="button" class="btn-wish">
+                <EIco name="wish" size="sm">
+                  <span class="offscreen">관심 등록</span>
+                </EIco>
+              </button>
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <!-- // thumb-prod-2xl -->
@@ -614,9 +642,13 @@
             <!-- thumb-prod-2xl -->
             <EThumbProdBox size="2xl">
               <!-- DESC :: 활성화시 is-active 클래스 추가 -->
-              <button type="button" class="btn-wish"><EIco name="wish" size="sm"><span class="offscreen">관심 등록</span></EIco></button>
+              <button type="button" class="btn-wish">
+                <EIco name="wish" size="sm">
+                  <span class="offscreen">관심 등록</span>
+                </EIco>
+              </button>
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <!-- // thumb-prod-2xl -->
@@ -656,13 +688,19 @@
     <SwiperBannerWrap :is-click-event="false">
       <swiper-slide>
         <div class="thumb-box">
-          <img src="/assets/images/temp/temp_banner_marketing_1.png" alt="마케팅배너 이미지" />
+          <img src="/assets/images/temp/temp_banner_marketing_1.png" alt="마케팅배너 이미지">
         </div>
+        <NuxtLink class="btn-link" to="javascript:">
+          <span class="offscreen">바로가기</span>
+        </NuxtLink>
       </swiper-slide>
       <swiper-slide>
         <div class="thumb-box">
-          <img src="/assets/images/temp/temp_banner_marketing_2.png" alt="마케팅배너 이미지" />
+          <img src="/assets/images/temp/temp_banner_marketing_2.png" alt="마케팅배너 이미지">
         </div>
+        <NuxtLink class="btn-link" to="javascript:">
+          <span class="offscreen">바로가기</span>
+        </NuxtLink>
       </swiper-slide>
     </SwiperBannerWrap>
   </ContWrap>

@@ -50,7 +50,7 @@
                   <span class="offscreen">관심 등록</span>
                 </EIco>
               </button>
-              <button type="button" class="btn-share">
+              <button type="button" class="btn-share" @click="openSnsShare">
                 <EIco name="share">
                   <span class="offscreen">공유</span>
                 </EIco>
@@ -713,14 +713,20 @@
           <span class="offscreen">선물하기</span>
         </EBtn>
         <div class="btn-prod-wrap">
-          <!-- CTA CASE 01 : 사전예약, 교환권, 금액권, 정기구독 상품 -->
+          <!-- CTA CASE 01 : 사전예약(주석처리), 교환권, 금액권, 정기구독 상품 -->
           <EBtn color="green" size="lg" @click="openProdOption">
             <span class="text">장바구니</span>
           </EBtn>
+          <!--<EBtn color="green" size="lg" @click="openAddPickupInfo">
+            <span class="text">장바구니</span>
+          </EBtn>-->
           <EBtn color="green" size="lg" @click="openAddPickupInfo">
             <span class="text">바로구매</span>
           </EBtn>
-          <!-- // CTA CASE 01 : 사전예약, 교환권, 금액권, 정기구독 상품 -->
+          <!--<EBtn color="green" size="lg" @click="openAddPickupInfo">
+            <span class="text">바로구매</span>
+          </EBtn>-->
+          <!-- // CTA CASE 01 : 사전예약(주석처리), 교환권, 금액권, 정기구독 상품 -->
           <!-- CTA CASE 02 : 정기구독 상품(바로구매 선택 후) -->
           <!-- <EBtn tag="a" color="green" size="lg" to="javascript:">
             <span class="text">정기구독</span>
@@ -747,7 +753,7 @@
         </EBtn>
         <!-- // CTA CASE 01 : 당일픽업 상품 -->
         <!-- CTA CASE 02 : 당일픽업 상품(품절) -->
-        <EBtn tag="a" color="green" size="lg" to="javascript:">
+        <EBtn tag="a" color="green" size="lg" to="/store/search">
           <span class="text">주변매장 재고찾기</span>
         </EBtn>
         <!-- // CTA CASE 02 : 당일픽업 상품(품절) -->
@@ -883,6 +889,10 @@
   <!-- pop : 정기구독안내 팝업 -->
   <PopProdSubscribeInfo v-model:sta="popSubscribeInfo" />
   <!-- // pop : 정기구독안내 팝업 -->
+
+  <!-- pop : SNS 공유 -->
+  <popCommSnsShare v-model:sta="popSnsShare" />
+  <!-- // pop : SNS 공유 -->
 </template>
 
 <script setup lang="ts">
@@ -925,6 +935,10 @@ const closeGiftInput = () => popGiftInput.value.open = false;
 const popSubscribeInfo = ref({ open: false });
 const openSubscribeInfo = () => popSubscribeInfo.value.open = true;
 const closeSubscribeInfo = () => popSubscribeInfo.value.open = false;
+
+// 공유하기 팝업
+const popSnsShare = ref({ open: false });
+const openSnsShare = () => popSnsShare.value.open = true;
 </script>
 
 <style lang="scss" scoped>

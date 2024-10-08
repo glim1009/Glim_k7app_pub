@@ -11,7 +11,7 @@
           <ColorBox color="white">
             <div class="board-info-wrap">
               <CtitleWrap size="zero">
-                <ETit type="board">
+                <ETit size="sm">
                   당일픽업
                 </ETit>
                 <div class="stext">
@@ -39,7 +39,7 @@
           <ColorBox color="white">
             <div class="board-info-wrap">
               <CtitleWrap size="zero">
-                <ETit type="board">
+                <ETit size="sm">
                   당일픽업
                 </ETit>
                 <div class="stext">
@@ -67,7 +67,7 @@
           <ColorBox color="white">
             <div class="board-info-wrap">
               <CtitleWrap size="zero">
-                <ETit type="board">
+                <ETit size="sm">
                   당일픽업
                 </ETit>
                 <div class="stext">
