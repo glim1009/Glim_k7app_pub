@@ -160,7 +160,7 @@
   </TabWrap>
 
   <!-- pop : 리뷰작성 팝업 -->
-  <PopCommWriteReview v-model:sta="popWriteReview" is-prod />
+  <PopCommWriteReview v-model:sta="popWriteReview" :active-type="WriteReviewType" />
   <!-- // pop : 리뷰작성 팝업 -->
 </template>
 
@@ -176,7 +176,13 @@ if (route.params.slug[1])
 
 // 리뷰작성 팝업
 const popWriteReview = ref({ open: false });
-const openWriteReview = () => popWriteReview.value.open = true;
+
+const WriteReviewType = ref<string>();
+const openWriteReview = (type: string = "prod") => {
+  WriteReviewType.value = type;
+  popWriteReview.value.open = true;
+};
+
 const closeWriteReview = () => popWriteReview.value.open = false;
 </script>
 

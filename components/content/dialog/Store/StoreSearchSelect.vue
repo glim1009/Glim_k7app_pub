@@ -10,7 +10,7 @@
     </template>
     <template #body>
       <div class="dialog-inner">
-        <StoreSearchList v-if="!isSearchData" @open-filter="openStoreFilterOption" />
+        <StoreSearchList v-if="!isSearchData" :first-tab="props.firstTab" @open-filter="openStoreFilterOption" />
         <StoreSearchResult v-if="isSearchData" @open-filter="openStoreFilterOption" />
       </div>
     </template>
@@ -123,16 +123,17 @@
 </template>
 
 <script setup lang="ts">
-interface DialogState {
-  open: boolean;
-}
-
 const props = defineProps<{
   sta: DialogState;
+  firstTab?: "list" | "map" | "bookmark" | string | undefined;
   isSearchData?: boolean; // 임시 :: 컨텐츠 확인을 위해 추가 ( 개발시 삭제 요청 )
 }>();
 
 const emit = defineEmits(["update:sta"]);
+
+interface DialogState {
+  open: boolean;
+}
 
 const isOpen = computed({
   get: () => props.sta.open,

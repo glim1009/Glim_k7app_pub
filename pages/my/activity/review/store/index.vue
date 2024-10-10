@@ -29,7 +29,7 @@
             </div>
           </FlexGroup>
           <BtnWrap size="sm">
-            <EBtn color="line-light-gray" size="sm" @click="openWriteReview">
+            <EBtn color="line-light-gray" size="sm" @click="openWriteReview('store')">
               <span class="text">리뷰 작성 (D-5)</span>
             </EBtn>
           </BtnWrap>
@@ -51,7 +51,7 @@
             </div>
           </FlexGroup>
           <BtnWrap size="sm">
-            <EBtn color="line-light-gray" size="sm" @click="openWriteReview">
+            <EBtn color="line-light-gray" size="sm" @click="openWriteReview('store')">
               <span class="text">리뷰 작성 (D-5)</span>
             </EBtn>
           </BtnWrap>
@@ -73,7 +73,7 @@
             </div>
           </FlexGroup>
           <BtnWrap size="sm">
-            <EBtn color="line-light-gray" size="sm" @click="openWriteReview">
+            <EBtn color="line-light-gray" size="sm" @click="openWriteReview('store')">
               <span class="text">리뷰 작성 (D-5)</span>
             </EBtn>
           </BtnWrap>
@@ -94,7 +94,7 @@
   </ContWrap>
 
   <!-- pop : 리뷰작성 팝업 -->
-  <PopCommWriteReview v-model:sta="popWriteReview" is-store />
+  <PopCommWriteReview v-model:sta="popWriteReview" :active-type="WriteReviewType" />
   <!-- // pop : 리뷰작성 팝업 -->
 </template>
 
@@ -104,5 +104,12 @@ const isNoData = ref(true); // 임시 : 리뷰 데이터 없음 확인을 위해
 
 // 리뷰작성 팝업
 const popWriteReview = ref({ open: false });
-const openWriteReview = () => popWriteReview.value.open = true;
+
+const WriteReviewType = ref<string>();
+const openWriteReview = (type: string = "prod") => {
+  WriteReviewType.value = type;
+  popWriteReview.value.open = true;
+};
+
+const closeWriteReview = () => popWriteReview.value.open = false;
 </script>

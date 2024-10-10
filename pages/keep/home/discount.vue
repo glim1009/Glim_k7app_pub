@@ -22,6 +22,7 @@
             <!-- DESC :: 활성화시 is-active 클래스 추가 -->
             <button type="button" class="btn-filter is-active" @click="openKeepFilterOption">
               <EIco name="filter" color="gray" size="xs" />
+              <span class="offscreen">필터옵션</span>
             </button>
           </div>
         </FlexGroup>
@@ -250,26 +251,24 @@
       <li class="item-xl">
         <div class="form-field">
           <div class="form-cont">
-            <div class="form-input-group">
-              <UiColGroup gap="sm">
-                <span class="ui-rdo-button">
-                  <input id="filterProdType01" type="radio" name="filterStatus01">
-                  <label for="filterProdType01"><span class="text-sm">전체</span></label>
-                </span>
-                <span class="ui-rdo-button">
-                  <input id="filterProdType02" type="radio" name="filterStatus01">
-                  <label for="filterProdType02"><span class="text-sm">사용가능</span></label>
-                </span>
-                <span class="ui-rdo-button">
-                  <input id="filterProdType03" type="radio" name="filterStatus01">
-                  <label for="filterProdType03"><span class="text-sm">사용완료</span></label>
-                </span>
-                <span class="ui-rdo-button">
-                  <input id="filterProdType04" type="radio" name="filterStatus01">
-                  <label for="filterProdType04"><span class="text-sm">기간만료</span></label>
-                </span>
-              </UiColGroup>
-            </div>
+            <UiColGroup gap="sm">
+              <span class="ui-rdo-button">
+                <input id="filterProdType01" type="radio" name="filterStatus01">
+                <label for="filterProdType01"><span class="text-sm">전체</span></label>
+              </span>
+              <span class="ui-rdo-button">
+                <input id="filterProdType02" type="radio" name="filterStatus01">
+                <label for="filterProdType02"><span class="text-sm">사용가능</span></label>
+              </span>
+              <span class="ui-rdo-button">
+                <input id="filterProdType03" type="radio" name="filterStatus01">
+                <label for="filterProdType03"><span class="text-sm">사용완료</span></label>
+              </span>
+              <span class="ui-rdo-button">
+                <input id="filterProdType04" type="radio" name="filterStatus01">
+                <label for="filterProdType04"><span class="text-sm">기간만료</span></label>
+              </span>
+            </UiColGroup>
           </div>
         </div>
       </li>
@@ -279,35 +278,33 @@
             <ETit text="조회기간" type="cont" />
           </div>
           <div class="form-cont">
-            <div class="form-input-group">
-              <UiColGroup gap="sm">
-                <span class="ui-rdo-button">
-                  <input id="filterOptionDate01" v-model="periodPicked" value="periodDate01" type="radio">
-                  <label for="filterOptionDate01"><span class="text-sm">최근3개월</span></label>
-                </span>
-                <span class="ui-rdo-button">
-                  <input id="filterOptionDate02" v-model="periodPicked" value="periodDate02" type="radio">
-                  <label for="filterOptionDate02"><span class="text-sm">6개월</span></label>
-                </span>
-                <span class="ui-rdo-button">
-                  <input id="filterOptionDate03" v-model="periodPicked" value="periodDate03" type="radio">
-                  <label for="filterOptionDate03"><span class="text-sm">1년</span></label>
-                </span>
-                <span class="ui-rdo-button">
-                  <input id="filterOptionDate04" v-model="periodPicked" value="periodDateInput" type="radio">
-                  <label for="filterOptionDate04"><span class="text-sm">직접입력</span></label>
-                </span>
-              </UiColGroup>
-              <FlexGroup>
-                <div class="flex-left">
-                  <EDatePicker :disabled="isDateInputDisabled" placeholder="시작일" />
-                </div>
-                <span class="gap">~</span>
-                <div class="flex-right">
-                  <EDatePicker :disabled="isDateInputDisabled" placeholder="종료일" />
-                </div>
-              </FlexGroup>
-            </div>
+            <UiColGroup gap="sm">
+              <span class="ui-rdo-button">
+                <input id="filterOptionDate01" v-model="periodPicked" value="periodDate01" type="radio">
+                <label for="filterOptionDate01"><span class="text-sm">최근3개월</span></label>
+              </span>
+              <span class="ui-rdo-button">
+                <input id="filterOptionDate02" v-model="periodPicked" value="periodDate02" type="radio">
+                <label for="filterOptionDate02"><span class="text-sm">6개월</span></label>
+              </span>
+              <span class="ui-rdo-button">
+                <input id="filterOptionDate03" v-model="periodPicked" value="periodDate03" type="radio">
+                <label for="filterOptionDate03"><span class="text-sm">1년</span></label>
+              </span>
+              <span class="ui-rdo-button">
+                <input id="filterOptionDate04" v-model="periodPicked" value="periodDateInput" type="radio">
+                <label for="filterOptionDate04"><span class="text-sm">직접입력</span></label>
+              </span>
+            </UiColGroup>
+            <FlexGroup>
+              <div class="flex-left">
+                <EDatePicker :disabled="isDateInputDisabled" placeholder="시작일" />
+              </div>
+              <span class="gap">~</span>
+              <div class="flex-right">
+                <EDatePicker :disabled="isDateInputDisabled" placeholder="종료일" />
+              </div>
+            </FlexGroup>
           </div>
         </div>
       </li>

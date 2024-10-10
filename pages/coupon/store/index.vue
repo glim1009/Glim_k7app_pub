@@ -20,6 +20,7 @@
             <!-- DESC :: 활성화시 is-active 클래스 추가 -->
             <button type="button" class="btn-filter is-active" @click="openCouponListFilterOption">
               <EIco name="filter" color="gray" size="xs" />
+              <span class="offscreen">필터옵션</span>
             </button>
           </div>
         </FlexGroup>
@@ -329,18 +330,16 @@
       <li class="item-xl">
         <div class="form-field">
           <div class="form-cont">
-            <div class="form-input-group">
-              <UiColGroup gap="sm">
-                <span class="ui-rdo-button">
-                  <input id="sortCouponList02" type="checkbox">
-                  <label for="sortCouponList02"><span class="text-sm">사용예정</span></label>
-                </span>
-                <span class="ui-rdo-button">
-                  <input id="sortCouponList03" type="checkbox" checked>
-                  <label for="sortCouponList03"><span class="text-sm">사용가능</span></label>
-                </span>
-              </UiColGroup>
-            </div>
+            <UiColGroup gap="sm">
+              <span class="ui-rdo-button">
+                <input id="sortCouponList02" type="checkbox">
+                <label for="sortCouponList02"><span class="text-sm">사용예정</span></label>
+              </span>
+              <span class="ui-rdo-button">
+                <input id="sortCouponList03" type="checkbox" checked>
+                <label for="sortCouponList03"><span class="text-sm">사용가능</span></label>
+              </span>
+            </UiColGroup>
           </div>
         </div>
       </li>

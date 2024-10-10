@@ -10,7 +10,7 @@
         <!-- 픽업매장 데이터 있음 -->
         <ContWrap v-if="isDataStore">
           <ContBox size="sm">
-            <button type="button" class="btn-store">
+            <button type="button" class="btn-store" @click="openStoreSearchSelect(false)">
               <EBadge color="green" size="md" badge-text="픽업매장" />
               <span class="store">세븐일레븐 강남점</span>
               <EIco name="arw-right" color="gray" size="sm" />
@@ -27,55 +27,55 @@
               <GridListWrap gap="sm" col="3">
                 <li class="item-grid">
                   <span class="ui-rdo-button">
-                    <input id="pickupTimeRdo01" type="radio" name="pickupTimeRdo01" disabled />
+                    <input id="pickupTimeRdo01" type="radio" name="pickupTimeRdo01" disabled>
                     <label for="pickupTimeRdo01"><span class="text-sm">00시~03시</span></label>
                   </span>
                 </li>
                 <li class="item-grid">
                   <span class="ui-rdo-button">
-                    <input id="pickupTimeRdo02" type="radio" name="pickupTimeRdo01" disabled />
+                    <input id="pickupTimeRdo02" type="radio" name="pickupTimeRdo01" disabled>
                     <label for="pickupTimeRdo02"><span class="text-sm">03시~06시</span></label>
                   </span>
                 </li>
                 <li class="item-grid">
                   <span class="ui-rdo-button">
-                    <input id="pickupTimeRdo03" type="radio" name="pickupTimeRdo01" disabled />
+                    <input id="pickupTimeRdo03" type="radio" name="pickupTimeRdo01" disabled>
                     <label for="pickupTimeRdo03"><span class="text-sm">06시~09시</span></label>
                   </span>
                 </li>
                 <li class="item-grid">
                   <span class="ui-rdo-button">
-                    <input id="pickupTimeRdo04" type="radio" name="pickupTimeRdo01" />
+                    <input id="pickupTimeRdo04" type="radio" name="pickupTimeRdo01">
                     <label for="pickupTimeRdo04"><span class="text-sm">09시~12시</span></label>
                   </span>
                 </li>
                 <li class="item-grid">
                   <span class="ui-rdo-button">
-                    <input id="pickupTimeRdo05" type="radio" name="pickupTimeRdo01" />
+                    <input id="pickupTimeRdo05" type="radio" name="pickupTimeRdo01">
                     <label for="pickupTimeRdo05"><span class="text-sm">12시~15시</span></label>
                   </span>
                 </li>
                 <li class="item-grid">
                   <span class="ui-rdo-button">
-                    <input id="pickupTimeRdo06" type="radio" name="pickupTimeRdo01" checked />
+                    <input id="pickupTimeRdo06" type="radio" name="pickupTimeRdo01" checked>
                     <label for="pickupTimeRdo06"><span class="text-sm">15시~18시</span></label>
                   </span>
                 </li>
                 <li class="item-grid">
                   <span class="ui-rdo-button">
-                    <input id="pickupTimeRdo07" type="radio" name="pickupTimeRdo01" />
+                    <input id="pickupTimeRdo07" type="radio" name="pickupTimeRdo01">
                     <label for="pickupTimeRdo07"><span class="text-sm">18시~20시</span></label>
                   </span>
                 </li>
                 <li class="item-grid">
                   <span class="ui-rdo-button">
-                    <input id="pickupTimeRdo08" type="radio" name="pickupTimeRdo01" />
+                    <input id="pickupTimeRdo08" type="radio" name="pickupTimeRdo01">
                     <label for="pickupTimeRdo08"><span class="text-sm">20시~22시</span></label>
                   </span>
                 </li>
                 <li class="item-grid">
                   <span class="ui-rdo-button">
-                    <input id="pickupTimeRdo09" type="radio" name="pickupTimeRdo01" />
+                    <input id="pickupTimeRdo09" type="radio" name="pickupTimeRdo01">
                     <label for="pickupTimeRdo09"><span class="text-sm">22시~24시</span></label>
                   </span>
                 </li>
@@ -103,17 +103,23 @@
             </ColorBox>
             <ColorBox color="white" size="lg">
               <CtitleWrap size="md">
-                <ETit type="cont">선택한 예약 정보</ETit>
+                <ETit type="cont">
+                  선택한 예약 정보
+                </ETit>
               </CtitleWrap>
               <RowListWrap gap="md">
                 <li class="item">
                   <div class="tag-full-box">
                     <CtitleWrap size="sm">
-                      <div class="ctitle-xs">세븐일레븐 면목점</div>
+                      <div class="ctitle-xs">
+                        세븐일레븐 면목점
+                      </div>
                     </CtitleWrap>
                     <FlexGroup>
                       <div class="flex-left">
-                        <p class="stext-lg-black fw-md">2024.07.18 (목), 12 ~ 15시</p>
+                        <p class="stext-lg-black fw-md">
+                          2024.07.18 (목), 12 ~ 15시
+                        </p>
                       </div>
                       <div class="flex-right">
                         <EGoods size="md" val="3" unit="개" class="fc-gray80" />
@@ -129,11 +135,15 @@
                 <li class="item">
                   <div class="tag-full-box">
                     <CtitleWrap size="sm">
-                      <div class="ctitle-xs">세븐일레븐 강남점</div>
+                      <div class="ctitle-xs">
+                        세븐일레븐 강남점
+                      </div>
                     </CtitleWrap>
                     <FlexGroup>
                       <div class="flex-left">
-                        <p class="stext-lg-black fw-md">2024.07.20 (토), 09 ~ 12시</p>
+                        <p class="stext-lg-black fw-md">
+                          2024.07.20 (토), 09 ~ 12시
+                        </p>
                       </div>
                       <div class="flex-right">
                         <EGoods size="md" val="3" unit="개" class="fc-gray80" />
@@ -154,11 +164,11 @@
         <!-- 픽업매장 데이터 없음 -->
         <ContWrap v-if="isNoDataStore">
           <ContBox size="zero">
-            <NuxtLink class="btn-store" to="javascript:">
+            <button type="button" class="btn-store" @click="openStoreSearchSelect(false)">
               <EBadge color="green" size="md" badge-text="픽업매장" />
               <span class="store">매장을 선택해주세요.</span>
               <EIco name="arw-right" color="gray" size="sm" />
-            </NuxtLink>
+            </button>
           </ContBox>
           <ContBox size="zero">
             <InfoGuideWrap
@@ -180,9 +190,15 @@
       </div>
     </template>
   </ContDialog>
+
+  <!-- pop : 매장선택 -->
+  <PopStoreSearchSelect v-model:sta="popStoreSearchSelect" :is-search-data="popSearchType" />
+  <!-- // pop : 매장선택 -->
 </template>
 
 <script setup lang="ts">
+import { type DateValue, getLocalTimeZone, today } from "@internationalized/date";
+
 interface DialogState {
   open: boolean;
 }
@@ -191,7 +207,7 @@ const props = defineProps<{
   sta: DialogState;
 }>();
 
-const emit = defineEmits(['update:sta']);
+const emit = defineEmits(["update:sta"]);
 
 function openDialog() {
   isOpen.value = true;
@@ -199,16 +215,25 @@ function openDialog() {
 
 const isOpen = computed({
   get: () => props.sta.open,
-  set: value => emit('update:sta', { ...props.sta, open: value }),
+  set: value => emit("update:sta", { ...props.sta, open: value }),
 });
 
 function closeDialog() {
   isOpen.value = false;
 }
-
-import { type DateValue, getLocalTimeZone, today } from '@internationalized/date';
 const value = ref(today(getLocalTimeZone())) as Ref<DateValue>;
 
 const isNoDataStore = ref(true); // 임시 : 픽업 매장 데이터 있음 컨텐츠 확인을 위해 추가
 const isDataStore = ref(true); // 임시 : 픽업 매장 데이터 없음 컨텐츠 확인을 위해 추가
+
+// 매장선택
+const popStoreSearchSelect = ref({ open: false });
+
+// 임시 - 매장 검색결과 팝업 확인을 위한 이벤트 추가 ( 개발시 삭제 요청 )
+const popSearchType = ref<boolean>();
+
+const openStoreSearchSelect = (isSearchData: boolean) => {
+  popSearchType.value = isSearchData; // 임시 - 매장 검색결과 팝업 확인을 위한 이벤트 추가 ( 개발시 삭제 요청 )
+  popStoreSearchSelect.value.open = true;
+};
 </script>

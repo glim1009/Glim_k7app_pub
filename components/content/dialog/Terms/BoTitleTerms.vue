@@ -1,15 +1,15 @@
 <template>
   <ContDialog v-model="isOpen" content-class="ui-dialog-full">
     <template #title>
-      <div class="dialog-title">개인정보 수집 및 이용약관</div>
+      <div class="dialog-title" v-html="popTitle" />
     </template>
     <template #body>
       <div class="dialog-inner">
         <ContWrap type="white">
           <div class="editor-wrap">
             <!-- 개발 시 삭제 영역 -->
-            <div style="height: 500px; background: rgba(255, 0, 0, .2);">
-              개인정보 수집 및 이용약관 내용은 BO 등록 입니다.
+            <div style="height: 100vh; background: rgba(255, 0, 0, .2);">
+              약관 내용은 에디터로 입력됩니다.
               <br>
               에디터영역 확인을 위한 임시 div입니다.
               <br>
@@ -28,9 +28,12 @@ interface DialogState {
   open: boolean;
 }
 
-const props = defineProps<{
+const props = withDefaults(defineProps<{
   sta: DialogState;
-}>();
+  popTitle?: string;
+}>(), {
+  popTitle: "BO 등록 약관 팝업 타이틀",
+});
 
 const openDialog = () => {
   isOpen.value = true;

@@ -4,7 +4,7 @@
       <div class="map-area">
         <!-- 지도 임시 영역 -->
         <div style="height: 100%; background: rgba(255, 0, 0, .1);">
-          <br /><br /><br />지도 API 영역 확인을 위한 임시 div입니다.
+          <br><br><br>지도 API 영역 확인을 위한 임시 div입니다.
 
           <div class="map-content">
             <!-- DESC :: 매장 정보 숨김 기능 처리 예시를 위한 임시 버튼입니다. 개발시 해당 EBtn 삭제 후 작업해 주세요. -->
@@ -94,7 +94,7 @@
               <div class="box-info-header">
                 <FlexGroup align="start">
                   <div class="info-flex-left">
-                    <ETBtn tag="a" size="lg" to="javascript:">
+                    <ETBtn tag="a" size="lg" to="/store/detail">
                       <span class="text">을지로 1가점</span>
                       <EIco name="arw-right" color="gray" size="sm" />
                     </ETBtn>
@@ -116,7 +116,7 @@
                         <span class="offscreen">관심 등록</span>
                       </EIco>
                     </button>
-                    <button type="button" class="btn-share">
+                    <button type="button" class="btn-share" @click="openSnsShare">
                       <EIco name="share">
                         <span class="offscreen">공유</span>
                       </EIco>
@@ -128,7 +128,7 @@
                 서울특별시 종로구 12길 (관철동, 종로코아 빌딩) 서울특별시 종로구 12길 (관철동, 종로코아 빌딩) 서울특별시 종로구 12길 (관철동, 종로코아 빌딩) 서울특별시 종로구 12길 (관철동, 종로코아 빌딩)
               </p>
               <BtnWrap type="full" size="md">
-                <EBtn tag="a" color="green" size="sm" to="javascript:">
+                <EBtn tag="a" color="green" size="sm" to="/product/[...slug]">
                   <span class="text">구매하기</span>
                 </EBtn>
               </BtnWrap>
@@ -140,6 +140,10 @@
       <!-- // 지도 임시 영역 -->
     </div>
   </ContWrap>
+
+  <!-- pop : (공통) SNS 공유 -->
+  <PopCommSnsShare v-model:sta="popSnsShare" />
+  <!-- // pop : (공통) SNS 공유 -->
 </template>
 
 <script setup lang="ts">
@@ -152,4 +156,8 @@ function ActivePin(buttonIndex: number) {
 function hiddenStoreInfo() {
   activeButton.value = false;
 }
+
+// sns 공유 팝업
+const popSnsShare = ref({ open: false });
+const openSnsShare = () => popSnsShare.value.open = true;
 </script>

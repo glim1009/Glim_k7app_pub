@@ -42,7 +42,7 @@
        - is-gift: 경품 당첨
        - is-boom: 꽝
   -->
-  <PopEventWinResult v-model:sta="popWinResult" is-gift />
+  <PopEventWinResult v-model:sta="popWinResult" />
   <!-- // pop : 행운의 룰렛 -->
 </template>
 

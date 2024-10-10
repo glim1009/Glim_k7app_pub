@@ -32,8 +32,6 @@ const tabs = [
   { path: "/voucher", text: "금액권" },
 ];
 const { onSwiper, updateSwiperIndex } = useLinkTabSwiper(tabs, basePath);
-
-
 </script>
 
 <style lang="scss" scoped>

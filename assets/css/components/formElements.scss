@@ -29,6 +29,10 @@
       border-color: var(--Primary-Red-100);
     }
 
+    .input-guide {
+      display: none;
+    }
+
     .valid-desc {
       display: block;
     }
@@ -180,7 +184,7 @@
         display: inline-block;
         padding: {
           top: 2px;
-          left: 6px;
+          left: 8px;
           bottom: 2px;
         }
         color: var(--Grayscale-100);
@@ -197,7 +201,7 @@
       }
 
       .text-lg { // 15px
-        @include mixins.font_size_xl;
+        @include mixins.font_size_xl('md');
       }
 
       &.align-top {
@@ -950,7 +954,7 @@ $itemGap: ('sm': 6px, 'md': 10px, 'lg': 16px); // sm - 6px / md - 10px / lg - 16
       top: 6px;
       bottom: 6px;
     };
-    @include mixins.font_size_md('md');
+    @include mixins.font_size_md;
     color: var(--Grayscale-50);
     vertical-align: top;
   }

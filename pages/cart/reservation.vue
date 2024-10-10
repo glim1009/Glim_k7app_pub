@@ -6,7 +6,7 @@
         <FlexGroup>
           <div class="flex-left">
             <span class="ui-chk">
-              <input id="prdAllChk01" type="checkbox" />
+              <input id="prdAllChk01" type="checkbox">
               <label for="prdAllChk01"><span class="text-lg">전체선택</span></label>
             </span>
           </div>
@@ -35,14 +35,14 @@
           <!-- 일반 상품 -->
           <li class="item-thumb-prod">
             <span class="ui-chk">
-              <input id="prodChk01" type="checkbox" />
+              <input id="prodChk01" type="checkbox">
               <label for="prodChk01"><span class="offscreen">상품 선택</span></label>
             </span>
             <!-- thumb-prod-flex -->
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -75,8 +75,8 @@
                 <div class="flex-left">
                   <TableWrap type="info" gap="sm" size="md" table-name="픽업정보">
                     <colgroup>
-                      <col style="width: 55px;" />
-                      <col style="width: auto;" />
+                      <col style="width: 55px;">
+                      <col style="width: auto;">
                     </colgroup>
                     <tbody>
                       <tr>
@@ -113,14 +113,14 @@
           <!-- 할인 상품 -->
           <li class="item-thumb-prod">
             <span class="ui-chk">
-              <input id="prodChk02" type="checkbox" />
+              <input id="prodChk02" type="checkbox">
               <label for="prodChk02"><span class="offscreen">상품 선택</span></label>
             </span>
             <!-- thumb-prod-flex -->
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -158,8 +158,8 @@
                 <div class="flex-left">
                   <TableWrap type="info" gap="sm" size="md" table-name="픽업정보">
                     <colgroup>
-                      <col style="width: 55px;" />
-                      <col style="width: auto;" />
+                      <col style="width: 55px;">
+                      <col style="width: auto;">
                     </colgroup>
                     <tbody>
                       <tr>
@@ -190,7 +190,7 @@
             </ColorBox>
             <UiColGroup>
               <span class="ui-chk">
-                <input id="packageChk01" type="checkbox" />
+                <input id="packageChk01" type="checkbox">
                 <label for="packageChk01"><span class="text-sm fc-gray80">포장봉투 (200원)</span></label>
               </span>
             </UiColGroup>
@@ -218,14 +218,14 @@
           <!-- 일반 상품 -->
           <li class="item-thumb-prod">
             <span class="ui-chk">
-              <input id="prodChk03" type="checkbox" />
+              <input id="prodChk03" type="checkbox">
               <label for="prodChk03"><span class="offscreen">상품 선택</span></label>
             </span>
             <!-- thumb-prod-flex -->
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -258,8 +258,8 @@
                 <div class="flex-left">
                   <TableWrap type="info" gap="sm" size="md" table-name="픽업정보">
                     <colgroup>
-                      <col style="width: 55px;" />
-                      <col style="width: auto;" />
+                      <col style="width: 55px;">
+                      <col style="width: auto;">
                     </colgroup>
                     <tbody>
                       <tr>
@@ -296,14 +296,14 @@
           <!-- 할인 상품 -->
           <li class="item-thumb-prod">
             <span class="ui-chk">
-              <input id="prodChk04" type="checkbox" />
+              <input id="prodChk04" type="checkbox">
               <label for="prodChk04"><span class="offscreen">상품 선택</span></label>
             </span>
             <!-- thumb-prod-flex -->
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -341,8 +341,8 @@
                 <div class="flex-left">
                   <TableWrap type="info" gap="sm" size="md" table-name="픽업정보">
                     <colgroup>
-                      <col style="width: 55px;" />
-                      <col style="width: auto;" />
+                      <col style="width: 55px;">
+                      <col style="width: auto;">
                     </colgroup>
                     <tbody>
                       <tr>
@@ -395,14 +395,14 @@
           <!-- 주류/와인 상품 -->
           <li class="item-thumb-prod">
             <span class="ui-chk">
-              <input id="prodChk05" type="checkbox" />
+              <input id="prodChk05" type="checkbox">
               <label for="prodChk05"><span class="offscreen">상품 선택</span></label>
             </span>
             <!-- thumb-prod-flex -->
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md" dim="19">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -440,8 +440,8 @@
                 <div class="flex-left">
                   <TableWrap type="info" gap="sm" size="md" table-name="픽업정보">
                     <colgroup>
-                      <col style="width: 55px;" />
-                      <col style="width: auto;" />
+                      <col style="width: 55px;">
+                      <col style="width: auto;">
                     </colgroup>
                     <tbody>
                       <tr>
@@ -478,7 +478,7 @@
         </RowListWrap>
       </ColorBox>
       <BtnWrap size="md">
-        <EBtn tag="a" color="line-gray" size="md" to="javascript:">
+        <EBtn tag="a" color="line-gray" size="md" to="/service/reservation">
           <EIco name="plus" color="gray" size="sm" />
           <span class="text">상품 더 담기</span>
         </EBtn>
@@ -546,7 +546,7 @@
   </ContWrap>
   <ContDocker v-if="isData">
     <BtnWrap>
-      <EBtn color="green" size="lg">
+      <EBtn tag="a" color="green" size="lg" to="/order/pay/reservation">
         <span class="text"><EGoods val="133,500" unit="원" /> 주문하기</span>
       </EBtn>
     </BtnWrap>
@@ -561,7 +561,7 @@
       desc="장바구니에 담긴 상품이 없습니다."
     />
     <BtnWrap type="auto-center" size="xl">
-      <EBtn tag="a" color="line-light-gray" size="md" to="javascript:">
+      <EBtn tag="a" color="line-light-gray" size="md" to="/service/reservation">
         <span class="text">사전예약 상품보기</span>
       </EBtn>
     </BtnWrap>

@@ -163,7 +163,7 @@
             </ETBtn>
           </div>
           <div class="bar-item">
-            <ETBtn tag="a" size="sm" to="/store/search">
+            <ETBtn size="sm" @click="openStoreSearchSelect(false)">
               <EIco name="location" color="gray" size="sm" />
               <span class="text">이용가능매장</span>
             </ETBtn>
@@ -276,6 +276,10 @@
   <!-- pop : 비회원 택배예약 -->
   <PopDeliveryReservationNonMember v-model:sta="popReservationNonMember" />
   <!-- // pop : 비회원 택배예약 -->
+
+  <!-- pop : 매장 선택 -->
+  <PopStoreSearchSelect :is-search-data="popSearchType" v-model:sta="popStoreSearchSelect" />
+  <!-- // pop : 매장 선택 -->
 </template>
 
 <script setup lang="ts">
@@ -303,6 +307,17 @@ const openPartnershipInquiry = () => popPartnershipInquiry.value.open = true;
 // 비회원 택배예약
 const popReservationNonMember = ref({ open: false });
 const openReservationNonMember = () => popReservationNonMember.value.open = true;
+
+// 매장선택
+const popStoreSearchSelect = ref({ open: false });
+
+// 임시 - 매장 검색결과 팝업 확인을 위한 이벤트 추가 ( 개발시 삭제 요청 )
+const popSearchType = ref<boolean>();
+
+const openStoreSearchSelect = (isSearchData: boolean) => {
+  popSearchType.value = isSearchData; // 임시 - 매장 검색결과 팝업 확인을 위한 이벤트 추가 ( 개발시 삭제 요청 )
+  popStoreSearchSelect.value.open = true;
+};
 </script>
 
 <style lang="scss" scoped>

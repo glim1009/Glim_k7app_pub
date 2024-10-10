@@ -10,7 +10,7 @@
             </p>
           </div>
           <div class="flex-right">
-            <EBtn color="light-green" size="sm" @click="openWriteReview">
+            <EBtn color="light-green" size="sm" @click="openWriteReview('store')">
               <EIco name="edit" color="green" size="sm" />
               <span class="text">리뷰작성</span>
             </EBtn>
@@ -133,6 +133,7 @@
             <!-- DESC :: 활성화시 is-active 클래스 추가 -->
             <button type="button" class="btn-filter is-active" @click="openReviewFilterOption">
               <EIco name="filter" color="gray" size="xs" />
+              <span class="offscreen">필터옵션</span>
             </button>
           </div>
         </FlexGroup>
@@ -354,10 +355,6 @@
     </ContBox>
   </ContWrap>
 
-  <!-- pop : 리뷰작성 팝업 -->
-  <PopCommWriteReview v-model:sta="popWriteReview" is-store />
-  <!-- // pop : 리뷰작성 팝업 -->
-
   <!-- pop : 리뷰 - 필터 옵션 -->
   <PopCommFilterOption v-model:sta="popReviewFilterOption">
     <!-- 필터옵션목록 -->
@@ -367,35 +364,33 @@
           <ETit text="조회기간" type="cont" />
         </div>
         <div class="form-cont">
-          <div class="form-input-group">
-            <UiColGroup gap="sm">
-              <span class="ui-rdo-button">
-                <input id="filterOptionDate01" v-model="periodPicked" value="periodDate01" type="radio" checked>
-                <label for="filterOptionDate01"><span class="text-sm">최근3개월</span></label>
-              </span>
-              <span class="ui-rdo-button">
-                <input id="filterOptionDate02" v-model="periodPicked" value="periodDate02" type="radio">
-                <label for="filterOptionDate02"><span class="text-sm">6개월</span></label>
-              </span>
-              <span class="ui-rdo-button">
-                <input id="filterOptionDate03" v-model="periodPicked" value="periodDate03" type="radio">
-                <label for="filterOptionDate03"><span class="text-sm">1년</span></label>
-              </span>
-              <span class="ui-rdo-button">
-                <input id="filterOptionDate04" v-model="periodPicked" value="periodDateInput" type="radio">
-                <label for="filterOptionDate04"><span class="text-sm">직접입력</span></label>
-              </span>
-            </UiColGroup>
-            <FlexGroup>
-              <div class="flex-left">
-                <EDatePicker :disabled="isDateInputDisabled" placeholder="시작일" />
-              </div>
-              <span class="gap">~</span>
-              <div class="flex-right">
-                <EDatePicker :disabled="isDateInputDisabled" placeholder="종료일" />
-              </div>
-            </FlexGroup>
-          </div>
+          <UiColGroup gap="sm">
+            <span class="ui-rdo-button">
+              <input id="filterOptionDate01" v-model="periodPicked" value="periodDate01" type="radio" checked>
+              <label for="filterOptionDate01"><span class="text-sm">최근3개월</span></label>
+            </span>
+            <span class="ui-rdo-button">
+              <input id="filterOptionDate02" v-model="periodPicked" value="periodDate02" type="radio">
+              <label for="filterOptionDate02"><span class="text-sm">6개월</span></label>
+            </span>
+            <span class="ui-rdo-button">
+              <input id="filterOptionDate03" v-model="periodPicked" value="periodDate03" type="radio">
+              <label for="filterOptionDate03"><span class="text-sm">1년</span></label>
+            </span>
+            <span class="ui-rdo-button">
+              <input id="filterOptionDate04" v-model="periodPicked" value="periodDateInput" type="radio">
+              <label for="filterOptionDate04"><span class="text-sm">직접입력</span></label>
+            </span>
+          </UiColGroup>
+          <FlexGroup>
+            <div class="flex-left">
+              <EDatePicker :disabled="isDateInputDisabled" placeholder="시작일" />
+            </div>
+            <span class="gap">~</span>
+            <div class="flex-right">
+              <EDatePicker :disabled="isDateInputDisabled" placeholder="종료일" />
+            </div>
+          </FlexGroup>
         </div>
       </div>
     </template>
@@ -412,6 +407,10 @@
     </template>
   </PopCommFilterOption>
   <!-- // pop : 리뷰 - 필터 옵션 -->
+
+  <!-- pop : 리뷰작성 팝업 -->
+  <PopCommWriteReview v-model:sta="popWriteReview" :active-type="WriteReviewType" />
+  <!-- // pop : 리뷰작성 팝업 -->
 </template>
 
 <script setup lang="ts">
@@ -426,7 +425,14 @@ const isFilterNoData = ref(false); // 임시 - 필터 데이터 없음 컨텐츠
 
 // 리뷰작성 팝업
 const popWriteReview = ref({ open: false });
-const openWriteReview = () => popWriteReview.value.open = true;
+
+const WriteReviewType = ref<string>();
+const openWriteReview = (type: string = "prod") => {
+  WriteReviewType.value = type;
+  popWriteReview.value.open = true;
+};
+
+const closeWriteReview = () => popWriteReview.value.open = false;
 
 // 리뷰 필터 옵션 팝업
 const popReviewFilterOption = ref({ open: false });

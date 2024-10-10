@@ -266,7 +266,7 @@
           </span>
         </div>
         <div class="flex-right">
-          <ETBtn size="xs" @click="openPersonalInfoAgree">
+          <ETBtn size="xs" @click="openBoTitleTerms">
             <span class="text">상세보기</span>
             <EIco name="arw-right" color="gray" size="xs" />
           </ETBtn>
@@ -288,7 +288,7 @@
                     </span>
                   </div>
                   <div class="flex-right">
-                    <ETBtn size="xs" @click="openPersonalInfoAgree">
+                    <ETBtn size="xs" @click="openBoTitleTerms">
                       <span class="text">상세보기</span>
                       <EIco name="arw-right" color="gray" size="xs" />
                     </ETBtn>
@@ -304,7 +304,7 @@
                     </span>
                   </div>
                   <div class="flex-right">
-                    <ETBtn tag="a" size="xs" to="javascript:">
+                    <ETBtn size="xs" @click="openBoTitleTerms">
                       <span class="text">상세보기</span>
                       <EIco name="arw-right" color="gray" size="xs" />
                     </ETBtn>
@@ -352,9 +352,9 @@
     <!-- // 하단 docker CASE 03 : 이벤트 종료 -->
   </ContDocker>
 
-  <!-- pop : 개인정보 수집 및 이용약관 -->
-  <PopTermsPersonalInfoAgree v-model:sta="popPersonalInfoAgree" />
-  <!-- // pop : 개인정보 수집 및 이용약관 -->
+  <!-- pop : (공통) 약관 -->
+  <PopTermsBoTitleTerms v-model:sta="popBoTitleTerms" :pop-title="`팝업 타이틀 BO 관리`" />
+  <!-- // pop : (공통) 약관 -->
 
   <!-- pop : 행운의 룰렛 -->
   <!-- DESC :: 당첨 결과 여부에 따라 사용 필요
@@ -362,14 +362,14 @@
        - is-gift: 경품 당첨
        - is-boom: 꽝
   -->
-  <PopEventWinResult v-model:sta="popWinResult" is-point />
+  <PopEventWinResult v-model:sta="popWinResult" />
   <!-- // pop : 행운의 룰렛 -->
 </template>
 
 <script setup lang="ts">
-// 개인정보 수집 및 이용약관 팝업
-const popPersonalInfoAgree = ref({ open: false });
-const openPersonalInfoAgree = () => popPersonalInfoAgree.value.open = true;
+// (공통) 약관 팝업
+const popBoTitleTerms = ref({ open: false });
+const openBoTitleTerms = () => popBoTitleTerms.value.open = true;
 
 const rouletteWheel = ref<HTMLElement | null>(null);
 

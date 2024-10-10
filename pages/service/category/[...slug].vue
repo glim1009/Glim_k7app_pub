@@ -85,6 +85,7 @@
                 <!-- DESC :: 활성화시 is-active 클래스 추가 -->
                 <button type="button" class="btn-filter is-active" @click="openProdFilterOption">
                   <EIco name="filter" color="gray" size="xs" />
+                  <span class="offscreen">필터옵션</span>
                 </button>
               </div>
             </FlexGroup>
@@ -138,7 +139,7 @@
                     <span class="score-sm">4.0 (10)</span>
                   </div>
                   <BtnWrap type="auto">
-                    <EBtn color="line-light-gray" size="xs">
+                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
                       <span class="text">주변매장 재고찾기</span>
                     </EBtn>
                   </BtnWrap>
@@ -190,7 +191,7 @@
                     <span class="score-sm">4.0 (10)</span>
                   </div>
                   <BtnWrap type="auto">
-                    <EBtn color="line-light-gray" size="xs">
+                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
                       <span class="text">주변매장 재고찾기</span>
                     </EBtn>
                   </BtnWrap>
@@ -245,7 +246,7 @@
                     <span class="score-sm">4.0 (10)</span>
                   </div>
                   <BtnWrap type="auto">
-                    <EBtn color="line-light-gray" size="xs">
+                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
                       <span class="text">주변매장 재고찾기</span>
                     </EBtn>
                   </BtnWrap>
@@ -301,7 +302,7 @@
                     <span class="score-sm">4.0 (10)</span>
                   </div>
                   <BtnWrap type="auto">
-                    <EBtn color="line-light-gray" size="xs">
+                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
                       <span class="text">주변매장 재고찾기</span>
                     </EBtn>
                   </BtnWrap>
@@ -356,7 +357,7 @@
                     <span class="score-sm">4.0 (10)</span>
                   </div>
                   <BtnWrap type="auto">
-                    <EBtn color="line-light-gray" size="xs">
+                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
                       <span class="text">주변매장 재고찾기</span>
                     </EBtn>
                   </BtnWrap>
@@ -412,7 +413,7 @@
                     <span class="score-sm">4.0 (10)</span>
                   </div>
                   <BtnWrap type="auto">
-                    <EBtn color="line-light-gray" size="xs">
+                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
                       <span class="text">주변매장 재고찾기</span>
                     </EBtn>
                   </BtnWrap>
@@ -466,7 +467,7 @@
                     <span class="score-sm">4.0 (10)</span>
                   </div>
                   <BtnWrap type="auto">
-                    <EBtn color="line-light-gray" size="xs">
+                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
                       <span class="text">주변매장 재고찾기</span>
                     </EBtn>
                   </BtnWrap>
@@ -518,7 +519,7 @@
                     <span class="score-sm">4.0 (10)</span>
                   </div>
                   <BtnWrap type="auto">
-                    <EBtn color="line-light-gray" size="xs">
+                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
                       <span class="text">주변매장 재고찾기</span>
                     </EBtn>
                   </BtnWrap>
@@ -570,7 +571,7 @@
                     <span class="score-sm">4.0 (10)</span>
                   </div>
                   <BtnWrap type="auto">
-                    <EBtn color="line-light-gray" size="xs">
+                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
                       <span class="text">주변매장 재고찾기</span>
                     </EBtn>
                   </BtnWrap>
@@ -622,7 +623,7 @@
                     <span class="score-sm">4.0 (10)</span>
                   </div>
                   <BtnWrap type="auto">
-                    <EBtn color="line-light-gray" size="xs">
+                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
                       <span class="text">주변매장 재고찾기</span>
                     </EBtn>
                   </BtnWrap>
@@ -676,7 +677,7 @@
                     <span class="score-sm">4.0 (10)</span>
                   </div>
                   <BtnWrap type="auto">
-                    <EBtn color="line-light-gray" size="xs">
+                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
                       <span class="text">주변매장 재고찾기</span>
                     </EBtn>
                   </BtnWrap>
@@ -728,7 +729,7 @@
                     <span class="score-sm">4.0 (10)</span>
                   </div>
                   <BtnWrap type="auto">
-                    <EBtn color="line-light-gray" size="xs">
+                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
                       <span class="text">주변매장 재고찾기</span>
                     </EBtn>
                   </BtnWrap>
@@ -780,7 +781,7 @@
                     <span class="score-sm">4.0 (10)</span>
                   </div>
                   <BtnWrap type="auto">
-                    <EBtn color="line-light-gray" size="xs">
+                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
                       <span class="text">주변매장 재고찾기</span>
                     </EBtn>
                   </BtnWrap>
@@ -832,7 +833,7 @@
                     <span class="score-sm">4.0 (10)</span>
                   </div>
                   <BtnWrap type="auto">
-                    <EBtn color="line-light-gray" size="xs">
+                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
                       <span class="text">주변매장 재고찾기</span>
                     </EBtn>
                   </BtnWrap>
@@ -886,7 +887,7 @@
                     <span class="score-sm">4.0 (10)</span>
                   </div>
                   <BtnWrap type="auto">
-                    <EBtn color="line-light-gray" size="xs">
+                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
                       <span class="text">주변매장 재고찾기</span>
                     </EBtn>
                   </BtnWrap>
@@ -938,7 +939,7 @@
                     <span class="score-sm">4.0 (10)</span>
                   </div>
                   <BtnWrap type="auto">
-                    <EBtn color="line-light-gray" size="xs">
+                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
                       <span class="text">주변매장 재고찾기</span>
                     </EBtn>
                   </BtnWrap>
@@ -990,7 +991,7 @@
                     <span class="score-sm">4.0 (10)</span>
                   </div>
                   <BtnWrap type="auto">
-                    <EBtn color="line-light-gray" size="xs">
+                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
                       <span class="text">주변매장 재고찾기</span>
                     </EBtn>
                   </BtnWrap>
@@ -1042,7 +1043,7 @@
                     <span class="score-sm">4.0 (10)</span>
                   </div>
                   <BtnWrap type="auto">
-                    <EBtn color="line-light-gray" size="xs">
+                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
                       <span class="text">주변매장 재고찾기</span>
                     </EBtn>
                   </BtnWrap>
@@ -1096,7 +1097,7 @@
                     <span class="score-sm">4.0 (10)</span>
                   </div>
                   <BtnWrap type="auto">
-                    <EBtn color="line-light-gray" size="xs">
+                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
                       <span class="text">주변매장 재고찾기</span>
                     </EBtn>
                   </BtnWrap>
@@ -1148,7 +1149,7 @@
                     <span class="score-sm">4.0 (10)</span>
                   </div>
                   <BtnWrap type="auto">
-                    <EBtn color="line-light-gray" size="xs">
+                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
                       <span class="text">주변매장 재고찾기</span>
                     </EBtn>
                   </BtnWrap>
@@ -1200,7 +1201,7 @@
                     <span class="score-sm">4.0 (10)</span>
                   </div>
                   <BtnWrap type="auto">
-                    <EBtn color="line-light-gray" size="xs">
+                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
                       <span class="text">주변매장 재고찾기</span>
                     </EBtn>
                   </BtnWrap>
@@ -1252,7 +1253,7 @@
                     <span class="score-sm">4.0 (10)</span>
                   </div>
                   <BtnWrap type="auto">
-                    <EBtn color="line-light-gray" size="xs">
+                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
                       <span class="text">주변매장 재고찾기</span>
                     </EBtn>
                   </BtnWrap>
@@ -1286,38 +1287,36 @@
             <ETit text="상품유형" type="cont" />
           </div>
           <div class="form-cont">
-            <div class="form-input-group">
-              <UiColGroup gap="sm">
-                <span class="ui-chk-button">
-                  <input id="filterProdType01" type="checkbox">
-                  <label for="filterProdType01"><span class="text-sm">품절 상품 제외</span></label>
-                </span>
-                <span class="ui-chk-button">
-                  <input id="filterProdType02" type="checkbox">
-                  <label for="filterProdType02"><span class="text-sm">만 19세 미만 상품 제외</span></label>
-                </span>
-                <span class="ui-chk-button">
-                  <input id="filterProdType03" type="checkbox">
-                  <label for="filterProdType03"><span class="text-sm">앱전용 상품 보기</span></label>
-                </span>
-                <span class="ui-chk-button">
-                  <input id="filterProdType04" type="checkbox">
-                  <label for="filterProdType04"><span class="text-sm">신상품 보기</span></label>
-                </span>
-                <span class="ui-chk-button">
-                  <input id="filterProdType05" type="checkbox">
-                  <label for="filterProdType05"><span class="text-sm">7-SELECT</span></label>
-                </span>
-                <span class="ui-chk-button">
-                  <input id="filterProdType06" type="checkbox">
-                  <label for="filterProdType06"><span class="text-sm">한정수량 상품 보기</span></label>
-                </span>
-                <span class="ui-chk-button">
-                  <input id="filterProdType07" type="checkbox">
-                  <label for="filterProdType07"><span class="text-sm">단독상품 보기</span></label>
-                </span>
-              </UiColGroup>
-            </div>
+            <UiColGroup gap="sm">
+              <span class="ui-chk-button">
+                <input id="filterProdType01" type="checkbox">
+                <label for="filterProdType01"><span class="text-sm">품절 상품 제외</span></label>
+              </span>
+              <span class="ui-chk-button">
+                <input id="filterProdType02" type="checkbox">
+                <label for="filterProdType02"><span class="text-sm">만 19세 미만 상품 제외</span></label>
+              </span>
+              <span class="ui-chk-button">
+                <input id="filterProdType03" type="checkbox">
+                <label for="filterProdType03"><span class="text-sm">앱전용 상품 보기</span></label>
+              </span>
+              <span class="ui-chk-button">
+                <input id="filterProdType04" type="checkbox">
+                <label for="filterProdType04"><span class="text-sm">신상품 보기</span></label>
+              </span>
+              <span class="ui-chk-button">
+                <input id="filterProdType05" type="checkbox">
+                <label for="filterProdType05"><span class="text-sm">7-SELECT</span></label>
+              </span>
+              <span class="ui-chk-button">
+                <input id="filterProdType06" type="checkbox">
+                <label for="filterProdType06"><span class="text-sm">한정수량 상품 보기</span></label>
+              </span>
+              <span class="ui-chk-button">
+                <input id="filterProdType07" type="checkbox">
+                <label for="filterProdType07"><span class="text-sm">단독상품 보기</span></label>
+              </span>
+            </UiColGroup>
           </div>
         </div>
       </li>
@@ -1327,30 +1326,28 @@
             <ETit text="할인/혜택" type="cont" />
           </div>
           <div class="form-cont">
-            <div class="form-input-group">
-              <UiColGroup gap="sm">
-                <span class="ui-chk-button">
-                  <input id="filterProdBenefit01" type="checkbox">
-                  <label for="filterProdBenefit01"><span class="text-sm">할인</span></label>
-                </span>
-                <span class="ui-chk-button">
-                  <input id="filterProdBenefit02" type="checkbox">
-                  <label for="filterProdBenefit02"><span class="text-sm">1+1</span></label>
-                </span>
-                <span class="ui-chk-button">
-                  <input id="filterProdBenefit03" type="checkbox">
-                  <label for="filterProdBenefit03"><span class="text-sm">2+1</span></label>
-                </span>
-                <span class="ui-chk-button">
-                  <input id="filterProdBenefit04" type="checkbox">
-                  <label for="filterProdBenefit04"><span class="text-sm">증정</span></label>
-                </span>
-                <span class="ui-chk-button">
-                  <input id="filterProdBenefit05" type="checkbox">
-                  <label for="filterProdBenefit05"><span class="text-sm">핫딜</span></label>
-                </span>
-              </UiColGroup>
-            </div>
+            <UiColGroup gap="sm">
+              <span class="ui-chk-button">
+                <input id="filterProdBenefit01" type="checkbox">
+                <label for="filterProdBenefit01"><span class="text-sm">할인</span></label>
+              </span>
+              <span class="ui-chk-button">
+                <input id="filterProdBenefit02" type="checkbox">
+                <label for="filterProdBenefit02"><span class="text-sm">1+1</span></label>
+              </span>
+              <span class="ui-chk-button">
+                <input id="filterProdBenefit03" type="checkbox">
+                <label for="filterProdBenefit03"><span class="text-sm">2+1</span></label>
+              </span>
+              <span class="ui-chk-button">
+                <input id="filterProdBenefit04" type="checkbox">
+                <label for="filterProdBenefit04"><span class="text-sm">증정</span></label>
+              </span>
+              <span class="ui-chk-button">
+                <input id="filterProdBenefit05" type="checkbox">
+                <label for="filterProdBenefit05"><span class="text-sm">핫딜</span></label>
+              </span>
+            </UiColGroup>
           </div>
         </div>
       </li>
@@ -1360,42 +1357,40 @@
             <ETit text="가격" type="cont" />
           </div>
           <div class="form-cont">
-            <div class="form-input-group">
-              <UiColGroup gap="sm">
-                <span class="ui-chk-button">
-                  <input id="filterProdPrice01" type="checkbox">
-                  <label for="filterProdPrice01"><span class="text-sm">~1만원</span></label>
-                </span>
-                <span class="ui-chk-button">
-                  <input id="filterProdPrice02" type="checkbox">
-                  <label for="filterProdPrice02"><span class="text-sm">1~2만원</span></label>
-                </span>
-                <span class="ui-chk-button">
-                  <input id="filterProdPrice03" type="checkbox">
-                  <label for="filterProdPrice03"><span class="text-sm">2~3만원</span></label>
-                </span>
-                <span class="ui-chk-button">
-                  <input id="filterProdPrice04" type="checkbox">
-                  <label for="filterProdPrice04"><span class="text-sm">3~5만원</span></label>
-                </span>
-                <span class="ui-chk-button">
-                  <input id="filterProdPrice05" type="checkbox">
-                  <label for="filterProdPrice05"><span class="text-sm">5~8만원</span></label>
-                </span>
-                <span class="ui-chk-button">
-                  <input id="filterProdPrice06" type="checkbox" checked>
-                  <label for="filterProdPrice06"><span class="text-sm">9~10만원</span></label>
-                </span>
-                <span class="ui-chk-button">
-                  <input id="filterProdPrice07" type="checkbox">
-                  <label for="filterProdPrice07"><span class="text-sm">10~15만원</span></label>
-                </span>
-                <span class="ui-chk-button">
-                  <input id="filterProdPrice08" type="checkbox">
-                  <label for="filterProdPrice08"><span class="text-sm">~15만원</span></label>
-                </span>
-              </UiColGroup>
-            </div>
+            <UiColGroup gap="sm">
+              <span class="ui-chk-button">
+                <input id="filterProdPrice01" type="checkbox">
+                <label for="filterProdPrice01"><span class="text-sm">~1만원</span></label>
+              </span>
+              <span class="ui-chk-button">
+                <input id="filterProdPrice02" type="checkbox">
+                <label for="filterProdPrice02"><span class="text-sm">1~2만원</span></label>
+              </span>
+              <span class="ui-chk-button">
+                <input id="filterProdPrice03" type="checkbox">
+                <label for="filterProdPrice03"><span class="text-sm">2~3만원</span></label>
+              </span>
+              <span class="ui-chk-button">
+                <input id="filterProdPrice04" type="checkbox">
+                <label for="filterProdPrice04"><span class="text-sm">3~5만원</span></label>
+              </span>
+              <span class="ui-chk-button">
+                <input id="filterProdPrice05" type="checkbox">
+                <label for="filterProdPrice05"><span class="text-sm">5~8만원</span></label>
+              </span>
+              <span class="ui-chk-button">
+                <input id="filterProdPrice06" type="checkbox" checked>
+                <label for="filterProdPrice06"><span class="text-sm">9~10만원</span></label>
+              </span>
+              <span class="ui-chk-button">
+                <input id="filterProdPrice07" type="checkbox">
+                <label for="filterProdPrice07"><span class="text-sm">10~15만원</span></label>
+              </span>
+              <span class="ui-chk-button">
+                <input id="filterProdPrice08" type="checkbox">
+                <label for="filterProdPrice08"><span class="text-sm">~15만원</span></label>
+              </span>
+            </UiColGroup>
           </div>
         </div>
       </li>

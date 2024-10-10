@@ -38,6 +38,8 @@
 </template>
 
 <script setup lang="ts">
+import {ref} from "vue";
+
 definePageMeta({
   title: "착한 택배예약",
   hideRightHeader: ["home"],
@@ -45,6 +47,10 @@ definePageMeta({
 
 const isMember = ref(true);
 const isNonMember = ref(true);
+
+const { $showToast } = useNuxtApp();
+
+const copyTextRef = ref<HTMLElement | null>(null);
 
 function copyText() {
   if (copyTextRef.value) {

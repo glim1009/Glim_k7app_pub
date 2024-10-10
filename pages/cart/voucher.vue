@@ -5,7 +5,7 @@
         <FlexGroup>
           <div class="flex-left">
             <span class="ui-chk">
-              <input id="prodAllChk" type="checkbox" />
+              <input id="prodAllChk" type="checkbox">
               <label for="prodAllChk"><span class="text-lg">전체선택</span></label>
             </span>
           </div>
@@ -21,14 +21,14 @@
         <RowListWrap gap="line">
           <li class="item-thumb-prod">
             <span class="ui-chk">
-              <input id="prodChk01" type="checkbox" />
+              <input id="prodChk01" type="checkbox">
               <label for="prodChk01"><span class="offscreen">상품 선택</span></label>
             </span>
             <!-- thumb-prod-flex -->
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -64,14 +64,14 @@
           </li>
           <li class="item-thumb-prod">
             <span class="ui-chk">
-              <input id="prodChk02" type="checkbox" />
+              <input id="prodChk02" type="checkbox">
               <label for="prodChk02"><span class="offscreen">상품 선택</span></label>
             </span>
             <!-- thumb-prod-flex -->
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -102,14 +102,14 @@
           </li>
           <li class="item-thumb-prod">
             <span class="ui-chk">
-              <input id="prodChk03" type="checkbox" />
+              <input id="prodChk03" type="checkbox">
               <label for="prodChk03"><span class="offscreen">상품 선택</span></label>
             </span>
             <!-- thumb-prod-flex -->
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -140,14 +140,14 @@
           </li>
           <li class="item-thumb-prod">
             <span class="ui-chk">
-              <input id="prodChk04" type="checkbox" />
+              <input id="prodChk04" type="checkbox">
               <label for="prodChk04"><span class="offscreen">상품 선택</span></label>
             </span>
             <!-- thumb-prod-flex -->
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -179,7 +179,7 @@
         </RowListWrap>
       </ColorBox>
       <BtnWrap size="md">
-        <EBtn tag="a" color="line-gray" size="md" to="javascript:">
+        <EBtn tag="a" color="line-gray" size="md" to="/service/category/voucher">
           <EIco name="plus" color="gray" size="sm" />
           <span class="text">상품 더 담기</span>
         </EBtn>
@@ -237,7 +237,7 @@
       </CtitleWrap>
       <RowListWrap size="sm" gap="sm">
         <li class="dot-text-sm">
-          구매하신 상품권은 온/오프라인에서 사용이 가능합니다.<br />(일부 매장에서는 모바일 쿠폰 사용이 불가할 수 있습니다.)
+          구매하신 상품권은 온/오프라인에서 사용이 가능합니다.<br>(일부 매장에서는 모바일 쿠폰 사용이 불가할 수 있습니다.)
         </li>
         <li class="dot-text-sm">
           결제금액이 100만원 이상일 경우 본인인증 절차를 진행합니다. (1회 결제한도 150만원)
@@ -253,7 +253,7 @@
   </ContWrap>
   <ContDocker>
     <BtnWrap>
-      <EBtn color="green" size="lg">
+      <EBtn tag="a" color="green" size="lg" to="/order/pay">
         <span class="text"><EGoods val="133,500" unit="원" /> 주문하기</span>
       </EBtn>
     </BtnWrap>
@@ -267,7 +267,7 @@
       desc="장바구니에 담긴 상품이 없습니다."
     />
     <BtnWrap type="auto-center" size="xl">
-      <EBtn tag="a" color="line-light-gray" size="md" to="javascript:">
+      <EBtn tag="a" color="line-light-gray" size="md" to="/service/category/voucher">
         <span class="text">금액권 상품보기</span>
       </EBtn>
     </BtnWrap>

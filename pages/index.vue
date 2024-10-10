@@ -198,7 +198,7 @@
                   </div>
                   <EThumbProdBox size="md">
                     <template #thumb>
-                      <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                      <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                     </template>
                   </EThumbProdBox>
                   <NuxtLink class="btn-link" to="javascript:">
@@ -211,7 +211,7 @@
                   </div>
                   <EThumbProdBox size="md">
                     <template #thumb>
-                      <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                      <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                     </template>
                   </EThumbProdBox>
                   <NuxtLink class="btn-link" to="javascript:">
@@ -219,13 +219,16 @@
                   </NuxtLink>
                 </div>
               </div>
+              <NuxtLink class="link-service-keep" to="javascript:">
+                <span class="offscreen">바로가기</span>
+              </NuxtLink>
             </div>
             <div class="banner-grid-box">
               <div class="thumb-box">
-                <img src="/assets/images/temp/temp_shortcut_banner.png" alt="임시 이미지">
+                <img src="/assets/images/temp/temp_shortcut_banner.png" alt="바로가기 배너 이미지">
               </div>
               <div class="thumb-text-box">
-                <img src="/assets/images/temp/temp_shortcut_banner_text.png" alt="임시 텍스트 이미지">
+                <img src="/assets/images/temp/temp_shortcut_banner_text.png" alt="바로가기 배너 텍스트 이미지">
               </div>
               <NuxtLink class="btn-link" to="javascript:">
                 <span class="offscreen">바로가기</span>
@@ -255,7 +258,7 @@
                     <EBadge color="gray" size="sm" badge-text="1+1" />
                   </div>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -296,7 +299,7 @@
                 <!-- thumb-prod-2xl -->
                 <EThumbProdBox size="2xl">
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -337,7 +340,7 @@
                     <EBadge color="gray" size="sm" badge-text="1+1" />
                   </div>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -376,7 +379,7 @@
                     <EBadge color="gray" size="sm" badge-text="1+1" />
                   </div>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -418,51 +421,7 @@
                     <EBadge color="gray" size="sm" badge-text="1+1" />
                   </div>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
-                  </template>
-                </EThumbProdBox>
-                <!-- // thumb-prod-2xl -->
-                <div class="info-box">
-                  <BadgeGroup gap="md">
-                    <EBadge color="light-green" size="sm" badge-text="당일픽업" />
-                    <EBadge color="light-gray" size="sm" badge-text="NEW" />
-                  </BadgeGroup>
-                  <ETit type="prod">
-                    바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
-                  </ETit>
-                  <div class="stext">
-                    (31일간, 월 1회 30% / 총 20회)
-                  </div>
-                  <div class="goods-group">
-                    <EGoods type="origin" size="sm" val="3,000" unit="원" />
-                    <EGoods type="percent" size="md" val="10" unit="%" />
-                    <EGoods size="md" val="2,700" unit="원" />
-                  </div>
-                  <div class="rating">
-                    <EIco name="rating" color="gray50" size="xs">
-                      <span class="offscreen">별점</span>
-                    </EIco>
-                    <span class="score-sm">4.0 (10)</span>
-                  </div>
-                </div>
-              </div>
-              <!-- // thumb-prod -->
-              <NuxtLink class="btn-link" to="javascript:">
-                <span class="offscreen">바로가기</span>
-              </NuxtLink>
-            </swiper-slide>
-            <!-- // slide -->
-            <!-- slide -->
-            <swiper-slide>
-              <!-- thumb-prod -->
-              <div class="thumb-prod">
-                <!-- thumb-prod-2xl -->
-                <EThumbProdBox size="2xl">
-                  <div class="left-group">
-                    <EBadge color="gray" size="sm" badge-text="1+1" />
-                  </div>
-                  <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -506,7 +465,7 @@
                     <EBadge color="gray" size="sm" badge-text="1+1" />
                   </div>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -550,7 +509,7 @@
                     <EBadge color="gray" size="sm" badge-text="1+1" />
                   </div>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -594,7 +553,7 @@
                     <EBadge color="gray" size="sm" badge-text="1+1" />
                   </div>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -638,7 +597,51 @@
                     <EBadge color="gray" size="sm" badge-text="1+1" />
                   </div>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
+                  </template>
+                </EThumbProdBox>
+                <!-- // thumb-prod-2xl -->
+                <div class="info-box">
+                  <BadgeGroup gap="md">
+                    <EBadge color="light-green" size="sm" badge-text="당일픽업" />
+                    <EBadge color="light-gray" size="sm" badge-text="NEW" />
+                  </BadgeGroup>
+                  <ETit type="prod">
+                    바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
+                  </ETit>
+                  <div class="stext">
+                    (31일간, 월 1회 30% / 총 20회)
+                  </div>
+                  <div class="goods-group">
+                    <EGoods type="origin" size="sm" val="3,000" unit="원" />
+                    <EGoods type="percent" size="md" val="10" unit="%" />
+                    <EGoods size="md" val="2,700" unit="원" />
+                  </div>
+                  <div class="rating">
+                    <EIco name="rating" color="gray50" size="xs">
+                      <span class="offscreen">별점</span>
+                    </EIco>
+                    <span class="score-sm">4.0 (10)</span>
+                  </div>
+                </div>
+              </div>
+              <!-- // thumb-prod -->
+              <NuxtLink class="btn-link" to="javascript:">
+                <span class="offscreen">바로가기</span>
+              </NuxtLink>
+            </swiper-slide>
+            <!-- // slide -->
+            <!-- slide -->
+            <swiper-slide>
+              <!-- thumb-prod -->
+              <div class="thumb-prod">
+                <!-- thumb-prod-2xl -->
+                <EThumbProdBox size="2xl">
+                  <div class="left-group">
+                    <EBadge color="gray" size="sm" badge-text="1+1" />
+                  </div>
+                  <template #thumb>
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -703,7 +706,7 @@
                 <div class="thumb-event">
                   <EThumbEventBox>
                     <template #thumb>
-                      <img src="/assets/images/temp/temp_banner_service_1.png" alt="임시 이미지">
+                      <img src="/assets/images/temp/temp_banner_service_1.png" alt="기획전 배너 이미지">
                     </template>
                   </EThumbEventBox>
                   <NuxtLink class="btn-link" to="javascript:">
@@ -723,7 +726,7 @@
                           <EBadge color="red" size="sm" badge-text="19" />
                         </div>
                         <template #thumb>
-                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                         </template>
                       </EThumbProdBox>
                       <div class="info-box">
@@ -761,7 +764,7 @@
                           <EBadge color="gray" size="sm" badge-text="혜택" />
                         </div>
                         <template #thumb>
-                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                         </template>
                       </EThumbProdBox>
                       <div class="info-box">
@@ -796,7 +799,7 @@
                           <EBadge color="gray" size="sm" badge-text="혜택" />
                         </div>
                         <template #thumb>
-                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                         </template>
                       </EThumbProdBox>
                       <div class="info-box">
@@ -834,7 +837,7 @@
                 <div class="thumb-event">
                   <EThumbEventBox dim="19">
                     <template #thumb>
-                      <img src="/assets/images/temp/temp_banner_service_2.png" alt="임시 이미지">
+                      <img src="/assets/images/temp/temp_banner_service_2.png" alt="기획전 배너 이미지">
                     </template>
                   </EThumbEventBox>
                   <NuxtLink class="btn-link" to="javascript:">
@@ -854,7 +857,7 @@
                           <EBadge color="red" size="sm" badge-text="19" />
                         </div>
                         <template #thumb>
-                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                         </template>
                       </EThumbProdBox>
                       <div class="info-box">
@@ -892,7 +895,7 @@
                           <EBadge color="gray" size="sm" badge-text="혜택" />
                         </div>
                         <template #thumb>
-                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                         </template>
                       </EThumbProdBox>
                       <div class="info-box">
@@ -927,7 +930,7 @@
                           <EBadge color="gray" size="sm" badge-text="혜택" />
                         </div>
                         <template #thumb>
-                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                          <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                         </template>
                       </EThumbProdBox>
                       <div class="info-box">
@@ -967,7 +970,7 @@
       <SwiperBannerWrap class="swiper-main-marketing">
         <swiper-slide>
           <div class="thumb-box">
-            <img src="/assets/images/temp/temp_banner_marketing_1.png" alt="임시 이미지">
+            <img src="/assets/images/temp/temp_banner_marketing_1.png" alt="배너 이미지">
           </div>
           <NuxtLink class="btn-link" to="javascript:">
             <span class="offscreen">바로가기</span>
@@ -975,7 +978,7 @@
         </swiper-slide>
         <swiper-slide>
           <div class="thumb-box">
-            <img src="/assets/images/temp/temp_banner_marketing_2.png" alt="임시 이미지">
+            <img src="/assets/images/temp/temp_banner_marketing_2.png" alt="배너 이미지">
           </div>
           <NuxtLink class="btn-link" to="javascript:">
             <span class="offscreen">바로가기</span>
@@ -1007,7 +1010,7 @@
                         <EBadge color="red" size="sm" badge-text="19" />
                       </div>
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                       </template>
                     </EThumbProdBox>
                     <div class="info-box">
@@ -1044,7 +1047,7 @@
                         <EBadge color="gray" size="sm" badge-text="혜택" />
                       </div>
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                       </template>
                     </EThumbProdBox>
                     <div class="info-box">
@@ -1078,7 +1081,7 @@
                         <EBadge color="gray" size="sm" badge-text="혜택" />
                       </div>
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                       </template>
                     </EThumbProdBox>
                     <div class="info-box">
@@ -1121,7 +1124,7 @@
                         <EBadge color="red" size="sm" badge-text="19" />
                       </div>
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                       </template>
                     </EThumbProdBox>
                     <div class="info-box">
@@ -1158,7 +1161,7 @@
                         <EBadge color="gray" size="sm" badge-text="혜택" />
                       </div>
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                       </template>
                     </EThumbProdBox>
                     <div class="info-box">
@@ -1192,7 +1195,7 @@
                         <EBadge color="gray" size="sm" badge-text="혜택" />
                       </div>
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                       </template>
                     </EThumbProdBox>
                     <div class="info-box">
@@ -1235,7 +1238,7 @@
                         <EBadge color="red" size="sm" badge-text="19" />
                       </div>
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                       </template>
                     </EThumbProdBox>
                     <div class="info-box">
@@ -1272,7 +1275,7 @@
                         <EBadge color="gray" size="sm" badge-text="혜택" />
                       </div>
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                       </template>
                     </EThumbProdBox>
                     <div class="info-box">
@@ -1306,7 +1309,7 @@
                         <EBadge color="gray" size="sm" badge-text="혜택" />
                       </div>
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                       </template>
                     </EThumbProdBox>
                     <div class="info-box">
@@ -1359,7 +1362,7 @@
                     <EBadge color="gray" size="sm" badge-text="할인" />
                   </div>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -1397,7 +1400,7 @@
                 <!-- thumb-prod-2xl -->
                 <EThumbProdBox size="2xl">
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -1439,7 +1442,7 @@
                     <EBadge color="gray" size="sm" badge-text="1+1" />
                   </div>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -1478,7 +1481,7 @@
                     <EBadge color="gray" size="sm" badge-text="1+1" />
                   </div>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -1520,51 +1523,7 @@
                     <EBadge color="gray" size="sm" badge-text="1+1" />
                   </div>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
-                  </template>
-                </EThumbProdBox>
-                <!-- // thumb-prod-2xl -->
-                <div class="info-box">
-                  <BadgeGroup gap="md">
-                    <EBadge color="light-green" size="sm" badge-text="당일픽업" />
-                    <EBadge color="light-gray" size="sm" badge-text="NEW" />
-                  </BadgeGroup>
-                  <ETit type="prod">
-                    바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
-                  </ETit>
-                  <div class="stext">
-                    (31일간, 월 1회 30% / 총 20회)
-                  </div>
-                  <div class="goods-group">
-                    <EGoods type="origin" size="sm" val="3,000" unit="원" />
-                    <EGoods type="percent" size="md" val="10" unit="%" />
-                    <EGoods size="md" val="2,700" unit="원" />
-                  </div>
-                  <div class="rating">
-                    <EIco name="rating" color="gray50" size="xs">
-                      <span class="offscreen">별점</span>
-                    </EIco>
-                    <span class="score-sm">4.0 (10)</span>
-                  </div>
-                </div>
-              </div>
-              <!-- // thumb-prod -->
-              <NuxtLink class="btn-link" to="javascript:">
-                <span class="offscreen">바로가기</span>
-              </NuxtLink>
-            </swiper-slide>
-            <!-- // slide -->
-            <!-- slide -->
-            <swiper-slide>
-              <!-- thumb-prod -->
-              <div class="thumb-prod">
-                <!-- thumb-prod-2xl -->
-                <EThumbProdBox size="2xl">
-                  <div class="left-group">
-                    <EBadge color="gray" size="sm" badge-text="1+1" />
-                  </div>
-                  <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -1608,7 +1567,7 @@
                     <EBadge color="gray" size="sm" badge-text="1+1" />
                   </div>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -1652,7 +1611,7 @@
                     <EBadge color="gray" size="sm" badge-text="1+1" />
                   </div>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -1696,7 +1655,7 @@
                     <EBadge color="gray" size="sm" badge-text="1+1" />
                   </div>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -1740,7 +1699,51 @@
                     <EBadge color="gray" size="sm" badge-text="1+1" />
                   </div>
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
+                  </template>
+                </EThumbProdBox>
+                <!-- // thumb-prod-2xl -->
+                <div class="info-box">
+                  <BadgeGroup gap="md">
+                    <EBadge color="light-green" size="sm" badge-text="당일픽업" />
+                    <EBadge color="light-gray" size="sm" badge-text="NEW" />
+                  </BadgeGroup>
+                  <ETit type="prod">
+                    바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
+                  </ETit>
+                  <div class="stext">
+                    (31일간, 월 1회 30% / 총 20회)
+                  </div>
+                  <div class="goods-group">
+                    <EGoods type="origin" size="sm" val="3,000" unit="원" />
+                    <EGoods type="percent" size="md" val="10" unit="%" />
+                    <EGoods size="md" val="2,700" unit="원" />
+                  </div>
+                  <div class="rating">
+                    <EIco name="rating" color="gray50" size="xs">
+                      <span class="offscreen">별점</span>
+                    </EIco>
+                    <span class="score-sm">4.0 (10)</span>
+                  </div>
+                </div>
+              </div>
+              <!-- // thumb-prod -->
+              <NuxtLink class="btn-link" to="javascript:">
+                <span class="offscreen">바로가기</span>
+              </NuxtLink>
+            </swiper-slide>
+            <!-- // slide -->
+            <!-- slide -->
+            <swiper-slide>
+              <!-- thumb-prod -->
+              <div class="thumb-prod">
+                <!-- thumb-prod-2xl -->
+                <EThumbProdBox size="2xl">
+                  <div class="left-group">
+                    <EBadge color="gray" size="sm" badge-text="1+1" />
+                  </div>
+                  <template #thumb>
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <!-- // thumb-prod-2xl -->
@@ -1806,7 +1809,7 @@
                   <!-- thumb-prod-md -->
                   <EThumbProdBox size="md">
                     <template #thumb>
-                      <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                      <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                     </template>
                   </EThumbProdBox>
                   <!-- // thumb-prod-md -->
@@ -1842,7 +1845,7 @@
                   <!-- thumb-prod-md -->
                   <EThumbProdBox size="md">
                     <template #thumb>
-                      <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                      <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                     </template>
                   </EThumbProdBox>
                   <!-- // thumb-prod-md -->
@@ -1878,7 +1881,7 @@
                   <!-- thumb-prod-md -->
                   <EThumbProdBox size="md">
                     <template #thumb>
-                      <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                      <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                     </template>
                   </EThumbProdBox>
                   <!-- // thumb-prod-md -->
@@ -1914,7 +1917,7 @@
                   <!-- thumb-prod-md -->
                   <EThumbProdBox size="md">
                     <template #thumb>
-                      <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                      <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                     </template>
                   </EThumbProdBox>
                   <!-- // thumb-prod-md -->
@@ -1950,7 +1953,7 @@
                   <!-- thumb-prod-md -->
                   <EThumbProdBox size="md">
                     <template #thumb>
-                      <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                      <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                     </template>
                   </EThumbProdBox>
                   <!-- // thumb-prod-md -->
@@ -1986,7 +1989,7 @@
                   <!-- thumb-prod-md -->
                   <EThumbProdBox size="md">
                     <template #thumb>
-                      <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                      <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                     </template>
                   </EThumbProdBox>
                   <!-- // thumb-prod-md -->
@@ -2023,7 +2026,7 @@
       <SwiperBannerWrap class="swiper-main-marketing">
         <swiper-slide>
           <div class="thumb-box">
-            <img src="/assets/images/temp/temp_banner_marketing_1.png" alt="임시 이미지">
+            <img src="/assets/images/temp/temp_banner_marketing_1.png" alt="배너 이미지">
           </div>
           <NuxtLink class="btn-link" to="javascript:">
             <span class="offscreen">바로가기</span>
@@ -2031,7 +2034,7 @@
         </swiper-slide>
         <swiper-slide>
           <div class="thumb-box">
-            <img src="/assets/images/temp/temp_banner_marketing_2.png" alt="임시 이미지">
+            <img src="/assets/images/temp/temp_banner_marketing_2.png" alt="배너 이미지">
           </div>
           <NuxtLink class="btn-link" to="javascript:">
             <span class="offscreen">바로가기</span>
@@ -2066,7 +2069,7 @@
                         <EBadge color="red" size="sm" badge-text="19" />
                       </div>
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                       </template>
                     </EThumbProdBox>
                     <div class="info-box">
@@ -2103,7 +2106,7 @@
                         <EBadge color="gray" size="sm" badge-text="혜택" />
                       </div>
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                       </template>
                     </EThumbProdBox>
                     <div class="info-box">
@@ -2140,7 +2143,7 @@
                         <EBadge color="gray" size="sm" badge-text="혜택" />
                       </div>
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                       </template>
                     </EThumbProdBox>
                     <div class="info-box">
@@ -2177,7 +2180,7 @@
                         <EBadge color="gray" size="sm" badge-text="혜택" />
                       </div>
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                       </template>
                     </EThumbProdBox>
                     <div class="info-box">
@@ -2214,7 +2217,7 @@
                         <EBadge color="gray" size="sm" badge-text="혜택" />
                       </div>
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                       </template>
                     </EThumbProdBox>
                     <div class="info-box">
@@ -2260,7 +2263,7 @@
                         <EBadge color="red" size="sm" badge-text="19" />
                       </div>
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                       </template>
                     </EThumbProdBox>
                     <div class="info-box">
@@ -2297,7 +2300,7 @@
                         <EBadge color="gray" size="sm" badge-text="혜택" />
                       </div>
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                       </template>
                     </EThumbProdBox>
                     <div class="info-box">
@@ -2334,7 +2337,7 @@
                         <EBadge color="gray" size="sm" badge-text="혜택" />
                       </div>
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                       </template>
                     </EThumbProdBox>
                     <div class="info-box">
@@ -2371,7 +2374,7 @@
                         <EBadge color="gray" size="sm" badge-text="혜택" />
                       </div>
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                       </template>
                     </EThumbProdBox>
                     <div class="info-box">
@@ -2408,7 +2411,7 @@
                         <EBadge color="gray" size="sm" badge-text="혜택" />
                       </div>
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                       </template>
                     </EThumbProdBox>
                     <div class="info-box">
@@ -2446,9 +2449,9 @@
         <BtnWrap type="full">
           <!-- floating-marketing-box -->
           <div class="floating-marketing-box">
-            <NuxtLink class="link-floating-marketing" to="/cart">
+            <NuxtLink class="link-floating-marketing" to="javascript:">
               <div class="thumb-box">
-                <img src="/assets/images/temp/temp_floating_marketing.png" alt="임시 이미지">
+                <img src="/assets/images/temp/temp_floating_marketing.png" alt="광고 배너 이미지">
               </div>
             </NuxtLink>
             <button class="btn-close" @click="($event.target as HTMLElement)?.closest('.floating-marketing-box')?.remove()">
@@ -2458,9 +2461,9 @@
           <!-- // floating-marketing-box -->
           <!-- floating-marketing-box -->
           <div class="floating-marketing-box">
-            <NuxtLink class="link-floating-marketing" to="/cart">
+            <NuxtLink class="link-floating-marketing" to="javascript:">
               <div class="thumb-box">
-                <img src="/assets/images/temp/temp_floating_marketing.png" alt="임시 이미지">
+                <img src="/assets/images/temp/temp_floating_marketing.png" alt="광고 배너 이미지">
               </div>
             </NuxtLink>
             <button class="btn-close" @click="($event.target as HTMLElement)?.closest('.floating-marketing-box')?.remove()">
@@ -2538,7 +2541,10 @@ function handleOpenPopup(popupName: string) {
 
 onMounted(() => {
   // 토스트 팝업 open
-  $showToast({ msg: "오늘 오후 8시 30분에 픽업 예정이에요.", isClose: true });
+  $showToast({
+    msg: "<a class='link-toast' href='/keep/home/pickup'>오늘 오후 8시 30분에 픽업 예정이에요.</a>"
+    , isClose: true
+  });
 });
 </script>
 

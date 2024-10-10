@@ -12,6 +12,7 @@
             <!-- DESC :: 활성화시 is-active 클래스 추가 -->
             <button type="button" class="btn-filter is-active" @click="emitOpenFilter">
               <EIco name="filter" color="gray" size="xs" />
+              <span class="offscreen">필터옵션</span>
             </button>
           </div>
         </FlexGroup>
@@ -23,7 +24,7 @@
             <div class="box-info-header">
               <FlexGroup align="start">
                 <div class="info-flex-left">
-                  <ETBtn tag="a" size="lg" to="javascript:">
+                  <ETBtn tag="a" size="lg" to="/store/detail">
                     <span class="text">을지로 1가점</span>
                     <EIco name="arw-right" color="gray" size="sm" />
                   </ETBtn>
@@ -44,7 +45,7 @@
                       <span class="offscreen">관심 등록</span>
                     </EIco>
                   </button>
-                  <button type="button" class="btn-share">
+                  <button type="button" class="btn-share" @click="openSnsShare">
                     <EIco name="share">
                       <span class="offscreen">공유</span>
                     </EIco>
@@ -97,7 +98,7 @@
             <div class="box-info-header">
               <FlexGroup align="start">
                 <div class="info-flex-left">
-                  <ETBtn tag="a" size="lg" to="javascript:">
+                  <ETBtn tag="a" size="lg" to="/store/detail">
                     <span class="text">을지로 1가점</span>
                     <EIco name="arw-right" color="gray" size="sm" />
                   </ETBtn>
@@ -118,7 +119,7 @@
                       <span class="offscreen">관심 등록</span>
                     </EIco>
                   </button>
-                  <button type="button" class="btn-share">
+                  <button type="button" class="btn-share" @click="openSnsShare">
                     <EIco name="share">
                       <span class="offscreen">공유</span>
                     </EIco>
@@ -173,7 +174,7 @@
             <div class="box-info-header">
               <FlexGroup align="start">
                 <div class="info-flex-left">
-                  <ETBtn tag="a" size="lg" to="javascript:">
+                  <ETBtn tag="a" size="lg" to="/store/detail">
                     <span class="text">을지로 1가점</span>
                     <EIco name="arw-right" color="gray" size="sm" />
                   </ETBtn>
@@ -194,7 +195,7 @@
                       <span class="offscreen">관심 등록</span>
                     </EIco>
                   </button>
-                  <button type="button" class="btn-share">
+                  <button type="button" class="btn-share" @click="openSnsShare">
                     <EIco name="share">
                       <span class="offscreen">공유</span>
                     </EIco>
@@ -241,7 +242,7 @@
               <EBadge color="light-gray" badge-text="+2" />
             </BadgeGroup>
             <BtnWrap size="md">
-              <EBtn color="light-green" size="sm">
+              <EBtn tag="a" color="light-green" size="sm" to="javascript:">
                 <EIco name="check" size="xs" color="green" />
                 <span class="text">매장 선택</span>
               </EBtn>
@@ -253,7 +254,7 @@
             <div class="box-info-header">
               <FlexGroup align="start">
                 <div class="info-flex-left">
-                  <ETBtn tag="a" size="lg" to="javascript:">
+                  <ETBtn tag="a" size="lg" to="/store/detail">
                     <span class="text">을지로 1가점</span>
                     <EIco name="arw-right" color="gray" size="sm" />
                   </ETBtn>
@@ -274,7 +275,7 @@
                       <span class="offscreen">관심 등록</span>
                     </EIco>
                   </button>
-                  <button type="button" class="btn-share">
+                  <button type="button" class="btn-share" @click="openSnsShare">
                     <EIco name="share">
                       <span class="offscreen">공유</span>
                     </EIco>
@@ -288,30 +289,30 @@
                 <col style="width: auto;">
               </colgroup>
               <tbody>
-              <tr>
-                <th scope="row">
-                  주소
-                </th>
-                <td>
-                  <span class="multi-ellipsis">서울특별시 종로구 12길 (관철동, 종로코아 빌딩) 서울특별시 종로구 12길 (관철동, 종로코아 빌딩) 서울특별시 종로구 12길 (관철동, 종로코아 빌딩) 서울특별시 종로구 12길 (관철동, 종로코아 빌딩)</span>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">
-                  전화번호
-                </th>
-                <td>
-                  <ETBtn tag="a" size="xs" type="underline" to="tel:02-1234-0000">
-                    <span class="text fw-rgl">02-1234-0000</span>
-                  </ETBtn>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">
-                  영업시간
-                </th>
-                <td>24시간</td>
-              </tr>
+                <tr>
+                  <th scope="row">
+                    주소
+                  </th>
+                  <td>
+                    <span class="multi-ellipsis">서울특별시 종로구 12길 (관철동, 종로코아 빌딩) 서울특별시 종로구 12길 (관철동, 종로코아 빌딩) 서울특별시 종로구 12길 (관철동, 종로코아 빌딩) 서울특별시 종로구 12길 (관철동, 종로코아 빌딩)</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    전화번호
+                  </th>
+                  <td>
+                    <ETBtn tag="a" size="xs" type="underline" to="tel:02-1234-0000">
+                      <span class="text fw-rgl">02-1234-0000</span>
+                    </ETBtn>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    영업시간
+                  </th>
+                  <td>24시간</td>
+                </tr>
               </tbody>
             </TableWrap>
             <BadgeGroup>
@@ -321,7 +322,7 @@
               <EBadge color="light-gray" badge-text="+2" />
             </BadgeGroup>
             <BtnWrap size="md">
-              <EBtn color="light-green" size="sm">
+              <EBtn tag="a" color="light-green" size="sm" to="javascript:">
                 <EIco name="check" size="xs" color="green" />
                 <span class="text">매장 선택</span>
               </EBtn>
@@ -349,6 +350,10 @@
       />
     </ContBox>
   </ContWrap>
+
+  <!-- pop : (공통) SNS 공유 -->
+  <PopCommSnsShare v-model:sta="popSnsShare" />
+  <!-- // pop : (공통) SNS 공유 -->
 </template>
 
 <script setup lang="ts">
@@ -362,6 +367,10 @@ const isNoData = ref(false);
 const emitOpenFilter = () => {
   emit("openFilter");
 };
+
+// sns 공유 팝업
+const popSnsShare = ref({ open: false });
+const openSnsShare = () => popSnsShare.value.open = true;
 </script>
 
 <style lang="scss" scoped>

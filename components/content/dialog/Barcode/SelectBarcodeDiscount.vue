@@ -32,7 +32,7 @@
                   <div class="thumb-prod-flex">
                     <EThumbProdBox size="lg">
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                       </template>
                     </EThumbProdBox>
                     <div class="info-box">
@@ -62,8 +62,8 @@
                       <div class="info-flex-left">
                         <div class="box-rdo-group">
                           <span class="ui-chk">
-                            <input id="disCountChk01" type="checkbox">
-                            <label for="disCountChk01"><span class="text-lg">D-93</span></label>
+                            <input id="disCountChk02" type="checkbox">
+                            <label for="disCountChk02"><span class="text-lg">D-93</span></label>
                           </span>
                         </div>
                       </div>
@@ -76,7 +76,7 @@
                   <div class="thumb-prod-flex">
                     <EThumbProdBox size="lg">
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                       </template>
                     </EThumbProdBox>
                     <div class="info-box">
@@ -103,8 +103,8 @@
                       <div class="info-flex-left">
                         <div class="box-rdo-group">
                           <span class="ui-chk">
-                            <input id="disCountChk01" type="checkbox">
-                            <label for="disCountChk01"><span class="text-lg">D-93</span></label>
+                            <input id="disCountChk03" type="checkbox">
+                            <label for="disCountChk03"><span class="text-lg">D-93</span></label>
                           </span>
                         </div>
                       </div>
@@ -117,7 +117,7 @@
                   <div class="thumb-prod-flex">
                     <EThumbProdBox size="lg">
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="임시 이미지">
+                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                       </template>
                     </EThumbProdBox>
                     <div class="info-box">

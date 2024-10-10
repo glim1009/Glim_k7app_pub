@@ -130,7 +130,7 @@
                     <span class="score-sm">4.0 (10)</span>
                   </div>
                   <BtnWrap type="auto">
-                    <EBtn color="line-light-gray" size="xs">
+                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
                       <span class="text">주변매장 재고찾기</span>
                     </EBtn>
                   </BtnWrap>
@@ -182,7 +182,7 @@
                     <span class="score-sm">4.0 (10)</span>
                   </div>
                   <BtnWrap type="auto">
-                    <EBtn color="line-light-gray" size="xs">
+                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
                       <span class="text">주변매장 재고찾기</span>
                     </EBtn>
                   </BtnWrap>
@@ -237,7 +237,7 @@
                     <span class="score-sm">4.0 (10)</span>
                   </div>
                   <BtnWrap type="auto">
-                    <EBtn color="line-light-gray" size="xs">
+                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
                       <span class="text">주변매장 재고찾기</span>
                     </EBtn>
                   </BtnWrap>
@@ -293,7 +293,7 @@
                     <span class="score-sm">4.0 (10)</span>
                   </div>
                   <BtnWrap type="auto">
-                    <EBtn color="line-light-gray" size="xs">
+                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
                       <span class="text">주변매장 재고찾기</span>
                     </EBtn>
                   </BtnWrap>
@@ -348,7 +348,7 @@
                     <span class="score-sm">4.0 (10)</span>
                   </div>
                   <BtnWrap type="auto">
-                    <EBtn color="line-light-gray" size="xs">
+                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
                       <span class="text">주변매장 재고찾기</span>
                     </EBtn>
                   </BtnWrap>
@@ -404,7 +404,7 @@
                     <span class="score-sm">4.0 (10)</span>
                   </div>
                   <BtnWrap type="auto">
-                    <EBtn color="line-light-gray" size="xs">
+                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
                       <span class="text">주변매장 재고찾기</span>
                     </EBtn>
                   </BtnWrap>
@@ -457,7 +457,7 @@
                     <span class="score-sm">4.0 (10)</span>
                   </div>
                   <BtnWrap type="auto">
-                    <EBtn color="line-light-gray" size="xs">
+                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
                       <span class="text">주변매장 재고찾기</span>
                     </EBtn>
                   </BtnWrap>

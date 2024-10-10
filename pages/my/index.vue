@@ -93,7 +93,7 @@
                 </div>
                 <div class="flex-right">
                   <!-- DESC :: 활성화시 is-active 클래스 추가 -->
-                  <button type="button" class="btn-bookmark">
+                  <button type="button" class="btn-bookmark is-active">
                     <EIco name="bookmark">
                       <span class="offscreen">관심 등록</span>
                     </EIco>
@@ -124,7 +124,7 @@
                 </div>
                 <div class="flex-right">
                   <!-- DESC :: 활성화시 is-active 클래스 추가 -->
-                  <button type="button" class="btn-bookmark">
+                  <button type="button" class="btn-bookmark is-active">
                     <EIco name="bookmark">
                       <span class="offscreen">관심 등록</span>
                     </EIco>
@@ -155,9 +155,9 @@
               </div>
             </div>
           </ColorBox>
-          <NuxtLink class="btn-link" to="/store/search">
-            <span class="offscreen">바로가기</span>
-          </NuxtLink>
+          <button class="btn-link" @click="openStoreSearchSelect(false, 'bookmark')">
+            <span class="offscreen">매장 선택</span>
+          </button>
         </swiper-slide>
         <!-- // slide -->
       </SwiperAutoWrap>
@@ -332,6 +332,10 @@
       </EBtn>
     </BtnWrap>
   </ContWrap>
+
+  <!-- pop : 매장 선택 -->
+  <PopStoreSearchSelect v-model:sta="popStoreSearchSelect" :first-tab="StoreSearchTabName" :is-search-data="popSearchType" />
+  <!-- // pop : 매장 선택 -->
 </template>
 
 <script setup lang="ts">
@@ -339,6 +343,18 @@ definePageMeta({
   title: "마이페이지",
   hideRightHeader: ["home"],
 });
+
+// 매장선택
+const popStoreSearchSelect = ref({ open: false });
+
+// 임시 - 매장 검색결과 팝업 확인을 위한 이벤트 추가 ( 개발시 삭제 요청 )
+const popSearchType = ref<boolean>();
+const StoreSearchTabName = ref<string>();
+const openStoreSearchSelect = (isSearchData: boolean, tabName: string = "list") => {
+  popSearchType.value = isSearchData; // 임시 - 매장 검색결과 팝업 확인을 위한 이벤트 추가 ( 개발시 삭제 요청 )
+  StoreSearchTabName.value = tabName;
+  popStoreSearchSelect.value.open = true;
+};
 </script>
 
 <style lang="scss" scoped>

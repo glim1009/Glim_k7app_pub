@@ -5,20 +5,25 @@
 .tag-md {
   display: inline-block;
   max-height: 36px;
-  padding: 8px 16px;
+  padding-right: 16px;
   background-color: var(--Grayscale-20);
   border-radius: 22px;
   vertical-align: top;
 
+
   .text {
     display: inline-block;
+    padding: 8px 0 8px 16px;
     vertical-align: top;
     @include mixins.font_size_md('sb');
     color: var(--Grayscale-80);
   }
 
   .btn-delete {
-    margin-left: 4px;
+    margin: {
+      top: 10px;
+      left: 4px;
+    }
   }
 }
 

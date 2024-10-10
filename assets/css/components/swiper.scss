@@ -39,17 +39,20 @@ $swiperType: ('', '-line', '-bar', '-tab');
         position: relative;
         display: block;
         text-align: center;
+        width: 70px;
 
         .thumb-box {
           @include mixins.justify_width(center, center);
           width: 70px;
           height: 70px;
+          margin: 0 auto;
           border-radius: 35px;
           background-color: var(--Grayscale-20);
         }
 
         .category-name {
           margin-top: 4px;
+          padding: 0 5px;
           @include mixins.font_size_md('body');
           color: var(--Grayscale-100);
           display: inline-block;

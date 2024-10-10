@@ -239,7 +239,7 @@
                             </ETit>
                           </div>
                           <div class="flex-right">
-                            <EBtn tag="a" size="xs" color="line-light-gray" to="/store/search">
+                            <EBtn size="xs" color="line-light-gray" @click="openStoreSearchSelect(false, 'bookmark')">
                               <span class="text">단골매장 불러오기</span>
                             </EBtn>
                           </div>
@@ -247,17 +247,17 @@
                       </div>
                       <div class="form-cont">
                         <div class="form-input-group valid-check">
-                          <EInputBox type="search" enterkeyhint="search" title="주소 검색" placeholder="매장 검색" readonly>
-                            <NuxtLink class="btn-input-search" to="/store/search">
+                          <EInputBox type="search" enterkeyhint="search" title="매장 검색" placeholder="매장 검색" readonly>
+                            <button class="btn-input-search" @click="openStoreSearchSelect(false)">
                               <span class="offscreen">검색</span>
-                            </NuxtLink>
+                            </button>
                           </EInputBox>
                           <div class="valid-desc">
                             매장을 검색해주세요.
                           </div>
                         </div>
                         <span class="ui-chk">
-                          <input id="formChk02" type="checkbox" @click="overBookmarkToast">
+                          <input id="formChk02" type="checkbox">
                           <label for="formChk02"><span class="text-md">단골매장 저장</span></label>
                         </span>
                       </div>
@@ -488,7 +488,7 @@
                             </ETit>
                           </div>
                           <div class="flex-right">
-                            <EBtn tag="a" size="xs" color="line-light-gray" to="/store/search">
+                            <EBtn size="xs" color="line-light-gray" @click="openStoreSearchSelect(false, 'bookmark')">
                               <span class="text">단골매장 불러오기</span>
                             </EBtn>
                           </div>
@@ -497,9 +497,9 @@
                       <div class="form-cont">
                         <div class="form-input-group valid-check">
                           <EInputBox type="search" enterkeyhint="search" title="주소 검색" placeholder="매장 검색" readonly>
-                            <NuxtLink class="btn-input-search" to="/store/search">
+                            <button class="btn-input-search" @click="openStoreSearchSelect(false)">
                               <span class="offscreen">검색</span>
-                            </NuxtLink>
+                            </button>
                           </EInputBox>
                           <div class="valid-desc">
                             매장을 검색해주세요.
@@ -574,7 +574,7 @@
                       <div class="form-cont">
                         <div class="form-input-group valid-check">
                           <EInputBox type="search" enterkeyhint="search" title="매장 검색" placeholder="매장 검색" readonly>
-                            <button type="button" class="btn-input-search" @click="popStoreList">
+                            <button class="btn-input-search" @click="openStoreSearchSelect(false)">
                               <span class="offscreen">검색</span>
                             </button>
                           </EInputBox>
@@ -657,9 +657,9 @@
                             <div class="form-cont">
                               <div class="form-input-group valid-check">
                                 <EInputBox type="search" enterkeyhint="search" title="매장 검색" placeholder="매장 검색" readonly>
-                                  <NuxtLink class="btn-input-search" to="/store/search">
+                                  <button class="btn-input-search" @click="openStoreSearchSelect(false)">
                                     <span class="offscreen">검색</span>
-                                  </NuxtLink>
+                                  </button>
                                 </EInputBox>
                                 <p class="valid-desc">
                                   매장을 입력해주세요.
@@ -741,9 +741,9 @@
                             <div class="form-cont">
                               <div class="form-input-group valid-check">
                                 <EInputBox type="search" enterkeyhint="search" title="매장 검색" placeholder="매장 검색" readonly>
-                                  <NuxtLink class="btn-input-search" to="/store/search">
+                                  <button class="btn-input-search" @click="openStoreSearchSelect(false)">
                                     <span class="offscreen">검색</span>
-                                  </NuxtLink>
+                                  </button>
                                 </EInputBox>
                                 <p class="valid-desc">
                                   매장을 입력해주세요.
@@ -823,9 +823,9 @@
                       <div class="form-cont">
                         <div class="form-input-group valid-check">
                           <EInputBox type="search" enterkeyhint="search" title="매장 검색" placeholder="매장 검색" readonly>
-                            <NuxtLink class="btn-input-search" to="/store/search">
+                            <button class="btn-input-search" @click="openStoreSearchSelect(false)">
                               <span class="offscreen">검색</span>
-                            </NuxtLink>
+                            </button>
                           </EInputBox>
                           <p class="valid-desc">
                             매장을 입력해주세요.
@@ -1444,9 +1444,15 @@
   <!-- pop : 금액권선택 -->
   <popCommSelectVoucher v-model:sta="popSelectVoucher" />
   <!-- // pop : 금액권선택 -->
+
+  <!-- pop : 매장 선택 -->
+  <PopStoreSearchSelect v-model:sta="popStoreSearchSelect" :is-search-data="popSearchType" />
+  <!-- // pop : 매장 선택 -->
 </template>
 
 <script setup lang="ts">
+import { useSharedStoreState } from "~/composables/useFrontPub";
+
 definePageMeta({
   title: "착한 택배예약",
   hideRightHeader: ["home"],
@@ -1519,15 +1525,29 @@ watch(() => agreeListRef.value, (newValue) => {
     checkbox.removeEventListener("change", updateCheckCount);
     checkbox.addEventListener("change", updateCheckCount);
   });
-
   updateCheckCount();
 });
 
-const { $showToast } = useNuxtApp();
+// 매장선택
+const popStoreSearchSelect = ref({ open: false });
 
-const overBookmarkToast = () => { // 단골매장 등록 3개 이상 저장할 경우
-  $showToast({ msg: "등록 가능한 매장 수를 초과하였습니다." });
-}
+// 임시 - 매장 검색결과 팝업 확인을 위한 이벤트 추가 ( 개발시 삭제 요청 )
+const popSearchType = ref<boolean>();
+const openStoreSearchSelect = (isSearchData: boolean) => {
+  popSearchType.value = isSearchData; // 임시 - 매장 검색결과 팝업 확인을 위한 이벤트 추가 ( 개발시 삭제 요청 )
+  popStoreSearchSelect.value.open = true;
+};
+
+const { $showToast } = useNuxtApp();
+// DESC :: 단골매장 저장 : 단골매장 등록 3개 이상 저장할 경우
+/* $showToast({ msg: "등록 가능한 매장 수를 초과하였습니다." }); */
+
+// 단골매장 불러오기 :: 매장찾기 > 단골매장 탭 이동 기능
+const sharedStoreState = useSharedStoreState();
+const pageMoveStoreSearch = () => {
+  sharedStoreState.value.firstTab = "bookmark";
+  navigateTo("/store/search");
+};
 </script>
 
 <style lang="scss" scoped>

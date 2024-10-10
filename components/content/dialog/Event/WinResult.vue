@@ -2,16 +2,16 @@
   <ContDialog v-model="isOpen" not-header>
     <template #body>
       <div class="dialog-inner">
-        <ContWrap v-if="isPoint" type="white" in-bottom="zero">
+        <ContWrap v-if="activeType === 'point'" type="white" in-bottom="zero">
           <ContBox>
             <div class="thumb-win-result">
               <div class="thumb-win-result-box bg-point">
                 <div class="thumb">
-                  <img src="/assets/images/event/bg_roulette_result_point.svg" alt="당첨 결과 포인트 이미지" />
+                  <img src="/assets/images/event/bg_roulette_result_point.svg" alt="당첨 결과 포인트 이미지">
                 </div>
               </div>
               <p class="stext">
-                축하합니다!<br />세븐앱 L.POINT에 당첨되셨습니다.
+                축하합니다!<br>세븐앱 L.POINT에 당첨되셨습니다.
               </p>
             </div>
           </ContBox>
@@ -23,16 +23,16 @@
             </ColorBox>
           </ContBox>
         </ContWrap>
-        <ContWrap v-if="isGift" type="white" in-bottom="zero">
+        <ContWrap v-if="activeType === 'gift'" type="white" in-bottom="zero">
           <ContBox>
             <div class="thumb-win-result">
               <div class="thumb-win-result-box bg-gift">
                 <div class="thumb">
-                  <img src="/assets/images/event/bg_roulette_result_gift.svg" alt="당첨 결과 경품 이미지" />
+                  <img src="/assets/images/event/bg_roulette_result_gift.svg" alt="당첨 결과 경품 이미지">
                 </div>
               </div>
               <p class="stext">
-                축하합니다!<br />이벤트 경품에 당첨되셨습니다.
+                축하합니다!<br>이벤트 경품에 당첨되셨습니다.
               </p>
             </div>
           </ContBox>
@@ -44,12 +44,12 @@
             </ColorBox>
           </ContBox>
         </ContWrap>
-        <ContWrap v-if="isBoom" type="white" in-bottom="zero">
+        <ContWrap v-if="activeType === 'boom'" type="white" in-bottom="zero">
           <ContBox size="sm">
             <div class="thumb-win-result">
               <div class="thumb-win-result-box bg-boom">
                 <div class="thumb">
-                  <img src="/assets/images/event/bg_roulette_result_boom.svg" alt="당첨 결과 꽝 이미지" />
+                  <img src="/assets/images/event/bg_roulette_result_boom.svg" alt="당첨 결과 꽝 이미지">
                 </div>
               </div>
               <p class="stext">
@@ -82,18 +82,18 @@ interface DialogState {
   open: boolean;
 }
 
-const props = defineProps<{
+const props = withDefaults(defineProps<{
   sta: DialogState;
-  isPoint?: boolean;
-  isGift?: boolean;
-  isBoom?: boolean;
-}>();
+  activeType: "point" | "gift" | "boom" | string;
+}>(), {
+  activeType: "point",
+});
 
-const emit = defineEmits(['update:sta']);
+const emit = defineEmits(["update:sta"]);
 
 const isOpen = computed({
   get: () => props.sta.open,
-  set: value => emit('update:sta', { ...props.sta, open: value }),
+  set: value => emit("update:sta", { ...props.sta, open: value }),
 });
 
 function closeDialog() {

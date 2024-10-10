@@ -316,6 +316,10 @@
           }
         }
 
+        .link-service-keep {
+          display: none;
+        }
+
         &:not(:has(.keep-prod-wrap)) {
           &:after {
             position: absolute;
@@ -326,6 +330,15 @@
             height: 70px;
             display: block;
             @include mixins.ratio_images('/assets/images/main/ico_service_keep');
+          }
+
+          .link-service-keep {
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
           }
         }
       }

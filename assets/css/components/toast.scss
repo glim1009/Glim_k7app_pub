@@ -32,6 +32,20 @@
     }
   }
 
+  &:has(.link-toast) {
+    padding:{
+      top: 0;
+      bottom: 0;
+    }
+    :deep(.link-toast) {
+      display: block;
+      padding: {
+        top: 12px;
+        bottom: 12px;
+      }
+    }
+  }
+
   .btn-close {
     display: block;
     width: 24px;

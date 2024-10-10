@@ -20,7 +20,7 @@
       <div v-if="isRecentSearchData" class="tag-md-group">
         <!-- tag-md -->
         <span class="tag-md">
-          <span class="text">초콜릿</span>
+          <NuxtLink to="javascript:" class="text">초콜릿</NuxtLink>
           <button type="button" class="btn-delete">
             <EIco name="close" color="gray" size="xs">
               <span class="offscreen">최근 검색어 삭제</span>
@@ -30,7 +30,7 @@
         <!-- // tag-md -->
         <!-- tag-md -->
         <span class="tag-md">
-          <span class="text">카덴양념장어구이덮밥...</span>
+           <NuxtLink to="javascript:" class="text">카덴양념장어구이덮밥...</NuxtLink>
           <button type="button" class="btn-delete">
             <EIco name="close" color="gray" size="xs">
               <span class="offscreen">최근 검색어 삭제</span>
@@ -40,7 +40,7 @@
         <!-- // tag-md -->
         <!-- tag-md -->
         <span class="tag-md">
-          <span class="text">7-SELECT</span>
+           <NuxtLink to="javascript:" class="text">7-SELECT</NuxtLink>
           <button type="button" class="btn-delete">
             <EIco name="close" color="gray" size="xs">
               <span class="offscreen">최근 검색어 삭제</span>
@@ -50,7 +50,7 @@
         <!-- // tag-md -->
         <!-- tag-md -->
         <span class="tag-md">
-          <span class="text">삼각김밥</span>
+          <NuxtLink to="javascript:" class="text">삼각김밥</NuxtLink>
           <button type="button" class="btn-delete">
             <EIco name="close" color="gray" size="xs">
               <span class="offscreen">최근 검색어 삭제</span>
@@ -60,7 +60,7 @@
         <!-- // tag-md -->
         <!-- tag-md -->
         <span class="tag-md">
-          <span class="text">제로콜라</span>
+          <NuxtLink to="javascript:" class="text">제로콜라</NuxtLink>
           <button type="button" class="btn-delete">
             <EIco name="close" color="gray" size="xs">
               <span class="offscreen">최근 검색어 삭제</span>
@@ -70,7 +70,7 @@
         <!-- // tag-md -->
         <!-- tag-md -->
         <span class="tag-md">
-          <span class="text">10자 노출 이후 말줄임 처리 됩니다...</span>
+          <NuxtLink to="javascript:" class="text">10자 노출 이후 말줄임 처리 됩니다...</NuxtLink>
           <button type="button" class="btn-delete">
             <EIco name="close" color="gray" size="xs">
               <span class="offscreen">최근 검색어 삭제</span>
@@ -108,7 +108,7 @@
               <FlexGroup>
                 <div class="flex-rank-left">
                   <span class="rank">1</span>
-                  <NuxtLink class="link-keyword" to="javascript:">
+                  <NuxtLink class="link-keyword" to="/search/result">
                     <span class="keyword">바인더</span>
                   </NuxtLink>
                 </div>
@@ -124,7 +124,7 @@
               <FlexGroup>
                 <div class="flex-rank-left">
                   <span class="rank">2</span>
-                  <NuxtLink class="link-keyword" to="javascript:">
+                  <NuxtLink class="link-keyword" to="/search/result">
                     <span class="keyword">KBO</span>
                   </NuxtLink>
                 </div>
@@ -139,7 +139,7 @@
               <FlexGroup>
                 <div class="flex-rank-left">
                   <span class="rank">3</span>
-                  <NuxtLink class="link-keyword" to="javascript:">
+                  <NuxtLink class="link-keyword" to="/search/result">
                     <span class="keyword">초콜릿</span>
                   </NuxtLink>
                 </div>
@@ -155,7 +155,7 @@
               <FlexGroup>
                 <div class="flex-rank-left">
                   <span class="rank">4</span>
-                  <NuxtLink class="link-keyword" to="javascript:">
+                  <NuxtLink class="link-keyword" to="/search/result">
                     <span class="keyword">검색어</span>
                   </NuxtLink>
                 </div>
@@ -170,7 +170,7 @@
               <FlexGroup>
                 <div class="flex-rank-left">
                   <span class="rank">5</span>
-                  <NuxtLink class="link-keyword" to="javascript:">
+                  <NuxtLink class="link-keyword" to="/search/result">
                     <span class="keyword">검색어텍스트...</span>
                   </NuxtLink>
                 </div>
@@ -189,7 +189,7 @@
               <FlexGroup>
                 <div class="flex-rank-left">
                   <span class="rank">6</span>
-                  <NuxtLink class="link-keyword" to="javascript:">
+                  <NuxtLink class="link-keyword" to="/search/result">
                     <span class="keyword">검색어</span>
                   </NuxtLink>
                 </div>
@@ -204,7 +204,7 @@
               <FlexGroup>
                 <div class="flex-rank-left">
                   <span class="rank">7</span>
-                  <NuxtLink class="link-keyword" to="javascript:">
+                  <NuxtLink class="link-keyword" to="/search/result">
                     <span class="keyword">검색어텍스트...</span>
                   </NuxtLink>
                 </div>
@@ -219,7 +219,7 @@
               <FlexGroup>
                 <div class="flex-rank-left">
                   <span class="rank">8</span>
-                  <NuxtLink class="link-keyword" to="javascript:">
+                  <NuxtLink class="link-keyword" to="/search/result">
                     <span class="keyword">검색어텍스트...</span>
                   </NuxtLink>
                 </div>
@@ -234,7 +234,7 @@
               <FlexGroup>
                 <div class="flex-rank-left">
                   <span class="rank">9</span>
-                  <NuxtLink class="link-keyword" to="javascript:">
+                  <NuxtLink class="link-keyword" to="/search/result">
                     <span class="keyword">검색어텍스트...</span>
                   </NuxtLink>
                 </div>
@@ -249,7 +249,7 @@
               <FlexGroup>
                 <div class="flex-rank-left">
                   <span class="rank">10</span>
-                  <NuxtLink class="link-keyword" to="javascript:">
+                  <NuxtLink class="link-keyword" to="/search/result">
                     <span class="keyword">검색어말줄임텍...</span>
                   </NuxtLink>
                 </div>

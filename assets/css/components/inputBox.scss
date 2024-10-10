@@ -175,6 +175,11 @@
     flex: 1;
   }
 
+  .flex-left {
+    &:has(.input-box, .ui-select, .datepicker-box, .input-info-box) {
+      flex: 1 0 auto;
+    }
+  }
   .gap {
     display: inline-block;
     margin: {
@@ -183,7 +188,7 @@
     @include mixins.font_size_2xl('md');
     vertical-align: top;
 
-    ~ :deep(.flex-right) {
+    ~ .flex-right {
       margin-left: 6px;
     }
   }

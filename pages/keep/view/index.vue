@@ -270,10 +270,10 @@
             </ColorBox>
           </div>
           <BtnWrap size="lg">
-            <EBtn tag="a" color="line-light-gray" size="md" to="javascript:">
+            <EBtn color="line-light-gray" size="md" @click="openWriteReview">
               <span class="text">상품리뷰</span>
             </EBtn>
-            <EBtn tag="a" color="line-light-gray" size="md" to="javascript:">
+            <EBtn color="line-light-gray" size="md" @click="openWriteReview('store')">
               <span class="text">매장리뷰</span>
             </EBtn>
           </BtnWrap>
@@ -943,6 +943,10 @@
   <!-- pop : 금액권 이용내역 -->
   <PopKeepVoucherHistory v-model:sta="popVoucherHistory" />
   <!-- // pop : 금액권 이용내역 -->
+
+  <!-- pop : 리뷰작성 팝업 -->
+  <PopCommWriteReview v-model:sta="popWriteReview" :active-type="WriteReviewType" />
+  <!-- // pop : 리뷰작성 팝업 -->
 </template>
 
 <script setup lang="ts">
@@ -962,6 +966,17 @@ const openSubscribeHistory = () => popSubscribeHistory.value.open = true;
 // 금액권 이용내역 팝업
 const popVoucherHistory = ref({ open: false });
 const openVoucherHistory = () => popVoucherHistory.value.open = true;
+
+// 리뷰작성 팝업
+const popWriteReview = ref({ open: false });
+
+const WriteReviewType = ref<string>();
+const openWriteReview = (type: string = "prod") => {
+  WriteReviewType.value = type;
+  popWriteReview.value.open = true;
+};
+
+const closeWriteReview = () => popWriteReview.value.open = false;
 </script>
 
 <style lang="scss" scoped>

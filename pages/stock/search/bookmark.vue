@@ -25,7 +25,7 @@
           <div class="box-info-header">
             <FlexGroup align="start">
               <div class="info-flex-left">
-                <ETBtn tag="a" size="lg" to="javascript:">
+                <ETBtn tag="a" size="lg" to="/store/detail">
                   <span class="text">을지로 1가점</span>
                   <EIco name="arw-right" color="gray" size="sm" />
                 </ETBtn>
@@ -47,7 +47,7 @@
                     <span class="offscreen">관심 등록</span>
                   </EIco>
                 </button>
-                <button type="button" class="btn-share">
+                <button type="button" class="btn-share" @click="openSnsShare">
                   <EIco name="share">
                     <span class="offscreen">공유</span>
                   </EIco>
@@ -57,8 +57,8 @@
           </div>
           <TableWrap type="info" gap="sm" size="md" table-name="매장 상세 정보">
             <colgroup>
-              <col style="width: 55px;" />
-              <col style="width: auto;" />
+              <col style="width: 55px;">
+              <col style="width: auto;">
             </colgroup>
             <tbody>
               <tr>
@@ -88,7 +88,7 @@
             </tbody>
           </TableWrap>
           <BtnWrap type="full" size="md">
-            <EBtn tag="a" color="green" size="sm" to="javascript:">
+            <EBtn tag="a" color="green" size="sm" to="/product/[...slug]">
               <span class="text">구매하기</span>
             </EBtn>
           </BtnWrap>
@@ -99,7 +99,7 @@
           <div class="box-info-header">
             <FlexGroup align="start">
               <div class="info-flex-left">
-                <ETBtn tag="a" size="lg" to="javascript:">
+                <ETBtn tag="a" size="lg" to="/store/detail">
                   <span class="text">을지로 1가점</span>
                   <EIco name="arw-right" color="gray" size="sm" />
                 </ETBtn>
@@ -121,7 +121,7 @@
                     <span class="offscreen">관심 등록</span>
                   </EIco>
                 </button>
-                <button type="button" class="btn-share">
+                <button type="button" class="btn-share" @click="openSnsShare">
                   <EIco name="share">
                     <span class="offscreen">공유</span>
                   </EIco>
@@ -131,8 +131,8 @@
           </div>
           <TableWrap type="info" gap="sm" size="md" table-name="매장 상세 정보">
             <colgroup>
-              <col style="width: 55px;" />
-              <col style="width: auto;" />
+              <col style="width: 55px;">
+              <col style="width: auto;">
             </colgroup>
             <tbody>
               <tr>
@@ -162,7 +162,7 @@
             </tbody>
           </TableWrap>
           <BtnWrap type="full" size="md">
-            <EBtn tag="a" color="green" size="sm" to="javascript:">
+            <EBtn tag="a" color="green" size="sm" to="/product/[...slug]">
               <span class="text">구매하기</span>
             </EBtn>
           </BtnWrap>
@@ -173,7 +173,7 @@
           <div class="box-info-header">
             <FlexGroup align="start">
               <div class="info-flex-left">
-                <ETBtn tag="a" size="lg" to="javascript:">
+                <ETBtn tag="a" size="lg" to="/store/detail">
                   <span class="text">을지로 1가점</span>
                   <EIco name="arw-right" color="gray" size="sm" />
                 </ETBtn>
@@ -195,7 +195,7 @@
                     <span class="offscreen">관심 등록</span>
                   </EIco>
                 </button>
-                <button type="button" class="btn-share">
+                <button type="button" class="btn-share" @click="openSnsShare">
                   <EIco name="share">
                     <span class="offscreen">공유</span>
                   </EIco>
@@ -205,8 +205,8 @@
           </div>
           <TableWrap type="info" gap="sm" size="md" table-name="매장 상세 정보">
             <colgroup>
-              <col style="width: 55px;" />
-              <col style="width: auto;" />
+              <col style="width: 55px;">
+              <col style="width: auto;">
             </colgroup>
             <tbody>
               <tr>
@@ -236,7 +236,7 @@
             </tbody>
           </TableWrap>
           <BtnWrap type="full" size="md">
-            <EBtn tag="a" color="green" size="sm" to="javascript:">
+            <EBtn tag="a" color="green" size="sm" to="/product/[...slug]">
               <span class="text">구매하기</span>
             </EBtn>
           </BtnWrap>
@@ -252,11 +252,25 @@
       sub-desc="단골 매장을 설정해 주세요."
     />
   </ContWrap>
+
+  <!-- pop : (공통) SNS 공유 -->
+  <PopCommSnsShare v-model:sta="popSnsShare" />
+  <!-- // pop : (공통) SNS 공유 -->
 </template>
 
 <script setup lang="ts">
 const isData = ref(true);
 const isNoData = ref(false);
+const { $showToast } = useNuxtApp();
+
+// 즐겨찾기 등록한 경우 토스트 노출
+/* $showToast({ msg: '단골매장이 등록되었습니다.' }); */
+// 즐겨찾기 등록 해지한 경우 토스트 노출
+/* $showToast({ msg: '단골매장 등록이 해지되었습니다.' }); */
+
+// sns 공유 팝업
+const popSnsShare = ref({ open: false });
+const openSnsShare = () => popSnsShare.value.open = true;
 </script>
 
 <style lang="scss" scoped>

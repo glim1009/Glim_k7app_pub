@@ -22,6 +22,7 @@
             <!-- DESC :: 활성화시 is-active 클래스 추가 -->
             <button type="button" class="btn-filter is-active" @click="openKeepFilterOption">
               <EIco name="filter" color="gray" size="xs" />
+              <span class="offscreen">필터옵션</span>
             </button>
           </div>
         </FlexGroup>
@@ -48,7 +49,7 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -62,8 +63,8 @@
               <ColorBox color="light-gray" size="xs">
                 <TableWrap type="info" gap="sm" size="md" table-name="픽업 정보">
                   <colgroup>
-                    <col style="width: 103px;" />
-                    <col style="width: auto;" />
+                    <col style="width: 103px;">
+                    <col style="width: auto;">
                   </colgroup>
                   <tbody>
                     <tr>
@@ -107,7 +108,7 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md" dim="픽업완료">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -121,8 +122,8 @@
               <ColorBox color="light-gray" size="xs">
                 <TableWrap type="info" gap="sm" size="md" table-name="픽업 정보">
                   <colgroup>
-                    <col style="width: 103px;" />
-                    <col style="width: auto;" />
+                    <col style="width: 103px;">
+                    <col style="width: auto;">
                   </colgroup>
                   <tbody>
                     <tr>
@@ -138,10 +139,11 @@
               </ColorBox>
             </div>
             <BtnWrap size="md">
-              <EBtn tag="a" color="line-light-gray" size="sm" to="javascript:">
+              <!-- DESC :: 리뷰 작성 팝업 오픈 예시 이벤트 ( 링크 이동 type 파라미터 값  - 'page' ) -->
+              <EBtn tag="a" color="line-light-gray" size="sm" @click="handlerWriteProdReview">
                 <span class="text">상품리뷰</span>
               </EBtn>
-              <EBtn tag="a" color="line-light-gray" size="sm" to="javascript:">
+              <EBtn color="line-light-gray" size="sm" @click="openWriteReview('store')">
                 <span class="text">매장리뷰</span>
               </EBtn>
               <EBtn tag="a" color="line-light-gray" size="sm" to="/keep/view/pickup">
@@ -172,7 +174,7 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md" dim="기간만료">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -186,8 +188,8 @@
               <ColorBox color="light-gray" size="xs">
                 <TableWrap type="info" gap="sm" size="md" table-name="픽업 정보">
                   <colgroup>
-                    <col style="width: 103px;" />
-                    <col style="width: auto;" />
+                    <col style="width: 103px;">
+                    <col style="width: auto;">
                   </colgroup>
                   <tbody>
                     <tr>
@@ -237,26 +239,24 @@
       <li class="item-xl">
         <div class="form-field">
           <div class="form-cont">
-            <div class="form-input-group">
-              <UiColGroup gap="sm">
-                <span class="ui-rdo-button">
-                  <input id="filterProdType01" type="radio" name="filterStatus01" />
-                  <label for="filterProdType01"><span class="text-sm">전체</span></label>
-                </span>
-                <span class="ui-rdo-button">
-                  <input id="filterProdType02" type="radio" name="filterStatus01" />
-                  <label for="filterProdType02"><span class="text-sm">사용가능</span></label>
-                </span>
-                <span class="ui-rdo-button">
-                  <input id="filterProdType03" type="radio" name="filterStatus01" />
-                  <label for="filterProdType03"><span class="text-sm">사용완료</span></label>
-                </span>
-                <span class="ui-rdo-button">
-                  <input id="filterProdType04" type="radio" name="filterStatus01" />
-                  <label for="filterProdType04"><span class="text-sm">기간만료</span></label>
-                </span>
-              </UiColGroup>
-            </div>
+            <UiColGroup gap="sm">
+              <span class="ui-rdo-button">
+                <input id="filterProdType01" type="radio" name="filterStatus01">
+                <label for="filterProdType01"><span class="text-sm">전체</span></label>
+              </span>
+              <span class="ui-rdo-button">
+                <input id="filterProdType02" type="radio" name="filterStatus01">
+                <label for="filterProdType02"><span class="text-sm">사용가능</span></label>
+              </span>
+              <span class="ui-rdo-button">
+                <input id="filterProdType03" type="radio" name="filterStatus01">
+                <label for="filterProdType03"><span class="text-sm">사용완료</span></label>
+              </span>
+              <span class="ui-rdo-button">
+                <input id="filterProdType04" type="radio" name="filterStatus01">
+                <label for="filterProdType04"><span class="text-sm">기간만료</span></label>
+              </span>
+            </UiColGroup>
           </div>
         </div>
       </li>
@@ -266,35 +266,33 @@
             <ETit text="조회기간" type="cont" />
           </div>
           <div class="form-cont">
-            <div class="form-input-group">
-              <UiColGroup gap="sm">
-                <span class="ui-rdo-button">
-                  <input id="filterOptionDate01" v-model="periodPicked" value="periodDate01" type="radio" />
-                  <label for="filterOptionDate01"><span class="text-sm">최근3개월</span></label>
-                </span>
-                <span class="ui-rdo-button">
-                  <input id="filterOptionDate02" v-model="periodPicked" value="periodDate02" type="radio" />
-                  <label for="filterOptionDate02"><span class="text-sm">6개월</span></label>
-                </span>
-                <span class="ui-rdo-button">
-                  <input id="filterOptionDate03" v-model="periodPicked" value="periodDate03" type="radio" />
-                  <label for="filterOptionDate03"><span class="text-sm">1년</span></label>
-                </span>
-                <span class="ui-rdo-button">
-                  <input id="filterOptionDate04" v-model="periodPicked" value="periodDateInput" type="radio" />
-                  <label for="filterOptionDate04"><span class="text-sm">직접입력</span></label>
-                </span>
-              </UiColGroup>
-              <FlexGroup>
-                <div class="flex-left">
-                  <EDatePicker :disabled="isDateInputDisabled" placeholder="시작일" />
-                </div>
-                <span class="gap">~</span>
-                <div class="flex-right">
-                  <EDatePicker :disabled="isDateInputDisabled" placeholder="종료일" />
-                </div>
-              </FlexGroup>
-            </div>
+            <UiColGroup gap="sm">
+              <span class="ui-rdo-button">
+                <input id="filterOptionDate01" v-model="periodPicked" value="periodDate01" type="radio">
+                <label for="filterOptionDate01"><span class="text-sm">최근3개월</span></label>
+              </span>
+              <span class="ui-rdo-button">
+                <input id="filterOptionDate02" v-model="periodPicked" value="periodDate02" type="radio">
+                <label for="filterOptionDate02"><span class="text-sm">6개월</span></label>
+              </span>
+              <span class="ui-rdo-button">
+                <input id="filterOptionDate03" v-model="periodPicked" value="periodDate03" type="radio">
+                <label for="filterOptionDate03"><span class="text-sm">1년</span></label>
+              </span>
+              <span class="ui-rdo-button">
+                <input id="filterOptionDate04" v-model="periodPicked" value="periodDateInput" type="radio">
+                <label for="filterOptionDate04"><span class="text-sm">직접입력</span></label>
+              </span>
+            </UiColGroup>
+            <FlexGroup>
+              <div class="flex-left">
+                <EDatePicker :disabled="isDateInputDisabled" placeholder="시작일" />
+              </div>
+              <span class="gap">~</span>
+              <div class="flex-right">
+                <EDatePicker :disabled="isDateInputDisabled" placeholder="종료일" />
+              </div>
+            </FlexGroup>
           </div>
         </div>
       </li>
@@ -312,6 +310,10 @@
     </template>
   </PopCommFilterOption>
   <!-- // pop : 쏘옥보관 - 필터 옵션 -->
+
+  <!-- pop : 리뷰작성 팝업 -->
+  <PopCommWriteReview v-model:sta="popWriteReview" :active-type="WriteReviewType" />
+  <!-- // pop : 리뷰작성 팝업 -->
 </template>
 
 <script setup lang="ts">
@@ -327,8 +329,31 @@ const periodPicked = ref();
 const isDateInputDisabled = ref<boolean>(true);
 
 watch(periodPicked, (value) => {
-  isDateInputDisabled.value = value !== 'periodDateInput';
+  isDateInputDisabled.value = value !== "periodDateInput";
 });
+
+// 리뷰작성 팝업
+const popWriteReview = ref({ open: false });
+
+const WriteReviewType = ref<string>();
+const openWriteReview = (type: string = "prod") => {
+  WriteReviewType.value = type;
+  popWriteReview.value.open = true;
+};
+
+const closeWriteReview = () => popWriteReview.value.open = false;
+
+// [handler] 상품 리뷰 작성 오픈,이동 ( 데이터 조건에 따라 개발 처리 필요 )
+const handlerWriteProdReview = (type: string = "popup") => {
+  // 리뷰 작성 팝업 오픈
+  if (type === "popup") {
+    openWriteReview();
+  }
+  // 리뷰 페이지 이둉
+  else if ("page") {
+    navigateTo("/my/activity/review/product");
+  }
+};
 </script>
 
 <style lang="scss" scoped>

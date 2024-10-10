@@ -5,7 +5,7 @@
         <FlexGroup>
           <div class="flex-left">
             <span class="ui-chk">
-              <input id="prdAllChk01" type="checkbox" />
+              <input id="prdAllChk01" type="checkbox">
               <label for="prdAllChk01"><span class="text-lg">전체선택</span></label>
             </span>
           </div>
@@ -22,14 +22,14 @@
           <!-- 할인 상품 -->
           <li class="item-thumb-prod">
             <span class="ui-chk">
-              <input id="prodChk01" type="checkbox" />
+              <input id="prodChk01" type="checkbox">
               <label for="prodChk01"><span class="offscreen">상품 선택</span></label>
             </span>
             <!-- thumb-prod-flex -->
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -70,14 +70,14 @@
           <!-- N+N 증정 상품 (증정품 미선택) -->
           <li class="item-thumb-prod">
             <span class="ui-chk">
-              <input id="prodChk02" type="checkbox" />
+              <input id="prodChk02" type="checkbox">
               <label for="prodChk02"><span class="offscreen">상품 선택</span></label>
             </span>
             <!-- thumb-prod-flex -->
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -126,14 +126,14 @@
           <!-- N+N 증정 상품 (증정품 선택) -->
           <li class="item-thumb-prod">
             <span class="ui-chk">
-              <input id="prodChk03" type="checkbox" />
+              <input id="prodChk03" type="checkbox">
               <label for="prodChk03"><span class="offscreen">상품 선택</span></label>
             </span>
             <!-- thumb-prod-flex -->
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -171,7 +171,7 @@
               <div class="thumb-prod-flex">
                 <EThumbProdBox size="md">
                   <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                   </template>
                 </EThumbProdBox>
                 <div class="info-box">
@@ -198,14 +198,14 @@
           <!-- N+N 증정 상품 (증정 가능 상품 안내) -->
           <li class="item-thumb-prod">
             <span class="ui-chk">
-              <input id="prodChk04" type="checkbox" />
+              <input id="prodChk04" type="checkbox">
               <label for="prodChk04"><span class="offscreen">상품 선택</span></label>
             </span>
             <!-- thumb-prod-flex -->
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -251,14 +251,14 @@
           <!-- 주류/와인 상품 -->
           <li class="item-thumb-prod">
             <span class="ui-chk">
-              <input id="prodChk05" type="checkbox" />
+              <input id="prodChk05" type="checkbox">
               <label for="prodChk05"><span class="offscreen">상품 선택</span></label>
             </span>
             <!-- thumb-prod-flex -->
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md" dim="19">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -310,7 +310,7 @@
                   </EIco>
                 </button>
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                 </template>
               </EThumbProdBox>
               <!-- // thumb-prod-2xl -->
@@ -351,7 +351,7 @@
                   </EIco>
                 </button>
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                 </template>
               </EThumbProdBox>
               <!-- // thumb-prod-2xl -->
@@ -386,7 +386,7 @@
                   </EIco>
                 </button>
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                 </template>
               </EThumbProdBox>
               <!-- // thumb-prod-2xl -->
@@ -425,7 +425,7 @@
                   </EIco>
                 </button>
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                 </template>
               </EThumbProdBox>
               <!-- // thumb-prod-2xl -->
@@ -466,7 +466,7 @@
                   </EIco>
                 </button>
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                 </template>
               </EThumbProdBox>
               <!-- // thumb-prod-2xl -->
@@ -498,7 +498,7 @@
         </SwiperAutoWrap>
       </ColorBox>
       <BtnWrap size="md">
-        <EBtn tag="a" color="line-gray" size="md" to="javascript:">
+        <EBtn tag="a" color="line-gray" size="md" to="/service/gift-card">
           <EIco name="plus" color="gray" size="sm" />
           <span class="text">상품 더 담기</span>
         </EBtn>
@@ -566,7 +566,7 @@
   </ContWrap>
   <ContDocker v-if="isData">
     <BtnWrap>
-      <EBtn color="green" size="lg">
+      <EBtn tag="a" color="green" size="lg" to="/order/pay">
         <span class="text"><EGoods val="133,500" unit="원" /> 주문하기</span>
       </EBtn>
     </BtnWrap>
@@ -580,7 +580,7 @@
       desc="장바구니에 담긴 상품이 없습니다."
     />
     <BtnWrap type="auto-center" size="xl">
-      <EBtn tag="a" color="line-light-gray" size="md" to="javascript:">
+      <EBtn tag="a" color="line-light-gray" size="md" to="/service/gift-card">
         <span class="text">교환권 상품보기</span>
       </EBtn>
     </BtnWrap>

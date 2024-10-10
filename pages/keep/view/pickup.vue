@@ -8,8 +8,8 @@
         </CtitleWrap>
         <TableWrap type="info" gap="sm" size="lg" table-name="픽업 정보">
           <colgroup>
-            <col style="width: 83px;" />
-            <col style="width: auto;" />
+            <col style="width: 83px;">
+            <col style="width: auto;">
           </colgroup>
           <tbody>
             <tr>
@@ -45,8 +45,8 @@
         </CtitleWrap>
         <TableWrap type="info" gap="sm" size="lg" table-name="픽업 정보">
           <colgroup>
-            <col style="width: 59px;" />
-            <col style="width: auto;" />
+            <col style="width: 59px;">
+            <col style="width: auto;">
           </colgroup>
           <tbody>
             <tr>
@@ -123,7 +123,7 @@
             </CtitleWrap>
             <ColorBox color="line-light-gray" size="lg">
               <div class="barcode-box">
-                <img src="/assets/images/temp/temp_img_barcode_delivery.svg" alt="바코드 이미지" />
+                <img src="/assets/images/temp/temp_img_barcode_delivery.svg" alt="바코드 이미지">
               </div>
             </ColorBox>
             <!-- DESC :: 받은선물인 경우 미노출 -->
@@ -141,7 +141,7 @@
                   <div class="thumb-prod-flex">
                     <EThumbProdBox size="md">
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                       </template>
                     </EThumbProdBox>
                     <div class="info-box">
@@ -164,7 +164,7 @@
                   <div class="thumb-prod-flex">
                     <EThumbProdBox size="md">
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                       </template>
                     </EThumbProdBox>
                     <div class="info-box">
@@ -187,7 +187,7 @@
                   <div class="thumb-prod-flex">
                     <EThumbProdBox size="md">
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                       </template>
                     </EThumbProdBox>
                     <div class="info-box">
@@ -210,7 +210,7 @@
                   <div class="thumb-prod-flex">
                     <EThumbProdBox size="md">
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                       </template>
                     </EThumbProdBox>
                     <div class="info-box">
@@ -268,7 +268,7 @@
             </CtitleWrap>
             <ColorBox color="line-light-gray" size="lg">
               <div class="barcode-box">
-                <img src="/assets/images/temp/temp_img_barcode_delivery.svg" alt="바코드 이미지" />
+                <img src="/assets/images/temp/temp_img_barcode_delivery.svg" alt="바코드 이미지">
               </div>
             </ColorBox>
             <!-- DESC :: 받은선물인 경우 미노출 -->
@@ -286,7 +286,7 @@
                   <div class="thumb-prod-flex">
                     <EThumbProdBox size="md">
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                       </template>
                     </EThumbProdBox>
                     <div class="info-box">
@@ -309,7 +309,7 @@
                   <div class="thumb-prod-flex">
                     <EThumbProdBox size="md">
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                       </template>
                     </EThumbProdBox>
                     <div class="info-box">
@@ -332,7 +332,7 @@
                   <div class="thumb-prod-flex">
                     <EThumbProdBox size="md">
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                       </template>
                     </EThumbProdBox>
                     <div class="info-box">
@@ -355,7 +355,7 @@
                   <div class="thumb-prod-flex">
                     <EThumbProdBox size="md">
                       <template #thumb>
-                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                        <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                       </template>
                     </EThumbProdBox>
                     <div class="info-box">
@@ -375,10 +375,11 @@
             <!-- // DESC :: 받은선물인 경우 미노출 -->
           </div>
           <BtnWrap size="lg">
-            <EBtn tag="a" color="line-light-gray" size="md" to="javascript:">
+            <!-- DESC :: 리뷰 작성 팝업 오픈 예시 이벤트 ( 링크 이동 type 파라미터 값  - 'page' ) -->
+            <EBtn tag="a" color="line-light-gray" size="md" @click="handlerWriteProdReview('page')">
               <span class="text">상품리뷰</span>
             </EBtn>
-            <EBtn tag="a" color="line-light-gray" size="md" to="javascript:">
+            <EBtn color="line-light-gray" size="md" @click="openWriteReview">
               <span class="text">매장리뷰</span>
             </EBtn>
           </BtnWrap>
@@ -404,7 +405,7 @@
           <!-- DESC :: 받은선물인 경우 노출 -->
           <EThumbProdBox size="2xl" dim="기간만료">
             <template #thumb>
-              <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+              <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
             </template>
           </EThumbProdBox>
           <!-- // DESC :: 받은선물인 경우 노출 -->
@@ -421,7 +422,7 @@
             </CtitleWrap>
             <ColorBox color="line-light-gray" size="lg">
               <div class="barcode-box">
-                <img src="/assets/images/temp/temp_img_barcode_delivery.svg" alt="바코드 이미지" />
+                <img src="/assets/images/temp/temp_img_barcode_delivery.svg" alt="바코드 이미지">
               </div>
             </ColorBox>
             <!-- DESC :: 받은선물인 경우 미노출 -->
@@ -538,7 +539,7 @@
         <div class="thumb-prod-keep">
           <EThumbProdBox size="2xl">
             <template #thumb>
-              <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+              <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
             </template>
           </EThumbProdBox>
           <div class="info-box">
@@ -552,7 +553,7 @@
             </CtitleWrap>
             <ColorBox color="line-light-gray" size="lg" class="disabled">
               <div class="barcode-box">
-                <img src="/assets/images/temp/temp_img_barcode_delivery.svg" alt="바코드 이미지" />
+                <img src="/assets/images/temp/temp_img_barcode_delivery.svg" alt="바코드 이미지">
               </div>
             </ColorBox>
           </div>
@@ -569,8 +570,8 @@
       <ColorBox color="white" size="lg">
         <TableWrap type="info" gap="sm" size="lg" table-name="주문정보">
           <colgroup>
-            <col style="width: 61px;" />
-            <col style="width: auto;" />
+            <col style="width: 61px;">
+            <col style="width: auto;">
           </colgroup>
           <tbody>
             <tr>
@@ -624,8 +625,8 @@
       <ColorBox color="white" size="lg">
         <TableWrap type="info" gap="sm" size="lg" table-name="주문정보">
           <colgroup>
-            <col style="width: 61px;" />
-            <col style="width: auto;" />
+            <col style="width: 61px;">
+            <col style="width: auto;">
           </colgroup>
           <tbody>
             <tr>
@@ -671,8 +672,8 @@
       <ColorBox color="white" size="lg">
         <TableWrap type="info" gap="sm" size="lg" table-name="주문정보">
           <colgroup>
-            <col style="width: 61px;" />
-            <col style="width: auto;" />
+            <col style="width: 61px;">
+            <col style="width: auto;">
           </colgroup>
           <tbody>
             <tr>
@@ -769,7 +770,7 @@
               </div>
               <div class="stext">
                 APP 이용 및 매장관련문의
-                <br />09:00~18:00 주말 및 공휴일 제외
+                <br>09:00~18:00 주말 및 공휴일 제외
               </div>
             </CtitleWrap>
           </SContLineBox>
@@ -782,7 +783,7 @@
               </div>
               <div class="stext">
                 롯데쇼핑 e커머스 고객센터
-                <br />10:00~20:00 주말 및 공휴일 제외
+                <br>10:00~20:00 주말 및 공휴일 제외
               </div>
             </CtitleWrap>
           </SContLineBox>
@@ -790,8 +791,38 @@
       </FoldToggleBox>
     </ContBox>
   </ContWrap>
+
+  <!-- pop : 리뷰작성 팝업 -->
+  <PopCommWriteReview v-model:sta="popWriteReview" :active-type="WriteReviewType" />
+  <!-- // pop : 리뷰작성 팝업 -->
 </template>
 
 <script setup lang="ts">
+definePageMeta({
+  title: "교환권보기",
+  hideRightHeader: false,
+});
 
+// 리뷰작성 팝업
+const popWriteReview = ref({ open: false });
+
+const WriteReviewType = ref<string>();
+const openWriteReview = (type: string = "prod") => {
+  WriteReviewType.value = type;
+  popWriteReview.value.open = true;
+};
+
+const closeWriteReview = () => popWriteReview.value.open = false;
+
+// [handler] 상품 리뷰 작성 오픈,이동 ( 데이터 조건에 따라 개발 처리 필요 )
+const handlerWriteProdReview = (type: string = "popup") => {
+  // 리뷰 작성 팝업 오픈
+  if (type === "popup") {
+    openWriteReview();
+  }
+  // 리뷰 페이지 이둉
+  else if ("page") {
+    navigateTo("/my/activity/review/product");
+  }
+};
 </script>

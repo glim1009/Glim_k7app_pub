@@ -37,7 +37,7 @@
               </div>
               <div class="form-cont">
                 <div class="form-input-group valid-check">
-                  <EInputBox :type="isPassword ? 'password' : 'text'" inputmode="numeric" title="비밀번호 입력" placeholder="비밀번호 입력 (8~15자리 숫자, 영문자, 특수문자)" :max-length="15">
+                  <EInputBox :type="isPassword ? 'password' : 'text'" title="비밀번호 입력" placeholder="비밀번호 입력 (8~15자리 숫자, 영문자, 특수문자)" :max-length="15">
                     <button type="button" class="btn-toggle-pw" :class="[{ 'is-active': !isPassword }]" @click="togglePassword">
                       <span class="offscreen">비밀번호 보임 상태</span>
                     </button>

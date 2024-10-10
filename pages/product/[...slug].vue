@@ -2,7 +2,7 @@
   <div class="prod-detail-wrap">
     <ContWrap in-top="zero" type="white" class="prod-detail-header">
       <ContBox size="sm">
-        <button type="button" class="btn-store">
+        <button type="button" class="btn-store" @click="openStoreSearchSelect(false)">
           <EBadge color="green" size="md" badge-text="픽업매장" />
           <span class="store">세븐일레븐 강남점</span>
           <EIco name="arw-right" color="gray" size="sm" />
@@ -893,6 +893,10 @@
   <!-- pop : SNS 공유 -->
   <popCommSnsShare v-model:sta="popSnsShare" />
   <!-- // pop : SNS 공유 -->
+
+  <!-- pop : 매장 선택 -->
+  <PopStoreSearchSelect :is-search-data="popSearchType" v-model:sta="popStoreSearchSelect" />
+  <!-- // pop : 매장 선택 -->
 </template>
 
 <script setup lang="ts">
@@ -939,6 +943,17 @@ const closeSubscribeInfo = () => popSubscribeInfo.value.open = false;
 // 공유하기 팝업
 const popSnsShare = ref({ open: false });
 const openSnsShare = () => popSnsShare.value.open = true;
+
+// 매장선택
+const popStoreSearchSelect = ref({ open: false });
+
+// 임시 - 매장 검색결과 팝업 확인을 위한 이벤트 추가 ( 개발시 삭제 요청 )
+const popSearchType = ref<boolean>();
+
+const openStoreSearchSelect = (isSearchData: boolean) => {
+  popSearchType.value = isSearchData; // 임시 - 매장 검색결과 팝업 확인을 위한 이벤트 추가 ( 개발시 삭제 요청 )
+  popStoreSearchSelect.value.open = true;
+};
 </script>
 
 <style lang="scss" scoped>

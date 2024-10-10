@@ -21,7 +21,7 @@
                   <span class="offscreen">관심 등록</span>
                 </EIco>
               </button>
-              <button type="button" class="btn-share">
+              <button type="button" class="btn-share" @click="openSnsShare">
                 <EIco name="share">
                   <span class="offscreen">공유</span>
                 </EIco>
@@ -980,6 +980,10 @@
       <!-- // 택배 매너 노출 case 03 : 일반/착한 배너 노출되는 경우 -->
     </ContBox>
   </ContWrap>
+
+  <!-- pop : (공통) SNS 공유 -->
+  <PopCommSnsShare v-model:sta="popSnsShare" />
+  <!-- // pop : (공통) SNS 공유 -->
 </template>
 
 <script setup lang="ts">
@@ -987,6 +991,10 @@ definePageMeta({
   title: "매장상세",
   hideRightHeader: ["home"],
 });
+
+// sns 공유 팝업
+const popSnsShare = ref({ open: false });
+const openSnsShare = () => popSnsShare.value.open = true;
 </script>
 
 <style lang="scss" scoped>

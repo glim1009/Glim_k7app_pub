@@ -1,8 +1,8 @@
 <template>
-  <NuxtLink v-if="tag === 'a'" :to="to" :class="className">
+  <NuxtLink v-if="tag === 'a'" :to="to" :class="className" @click="$emit('click')">
     <slot />
   </NuxtLink>
-  <component :is="tag" v-else :class="className" :disabled="props.disabled">
+  <component :is="tag" v-else :class="className" :disabled="props.disabled" @click="$emit('click')">
     <slot />
   </component>
 </template>
@@ -19,6 +19,8 @@ const props = withDefaults(defineProps<{
   color: "green",
   tag: "button",
 });
+
+const emit = defineEmits(["click"]);
 
 const className = computed(() => {
   let cNm = "btn";

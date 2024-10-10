@@ -18,8 +18,8 @@
                       <div class="info-flex-left">
                         <div class="box-rdo-group">
                           <span class="ui-chk">
-                            <input id="disCountChk01" type="checkbox">
-                            <label for="disCountChk01"><span class="text-lg">D-93</span></label>
+                            <input id="voucherChk01" type="checkbox">
+                            <label for="voucherChk01"><span class="text-lg">D-93</span></label>
                           </span>
                         </div>
                       </div>
@@ -62,8 +62,8 @@
                       <div class="info-flex-left">
                         <div class="box-rdo-group">
                           <span class="ui-chk">
-                            <input id="disCountChk01" type="checkbox">
-                            <label for="disCountChk01"><span class="text-lg">D-93</span></label>
+                            <input id="voucherChk02" type="checkbox">
+                            <label for="voucherChk02"><span class="text-lg">D-93</span></label>
                           </span>
                         </div>
                       </div>
@@ -106,8 +106,8 @@
                       <div class="info-flex-left">
                         <div class="box-rdo-group">
                           <span class="ui-chk">
-                            <input id="disCountChk01" type="checkbox">
-                            <label for="disCountChk01"><span class="text-lg">D-93</span></label>
+                            <input id="voucherChk03" type="checkbox">
+                            <label for="voucherChk03"><span class="text-lg">D-93</span></label>
                           </span>
                         </div>
                       </div>
