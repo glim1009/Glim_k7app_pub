@@ -75,12 +75,6 @@
     width: 100%;
     margin-bottom: 16px;
 
-    .box-rdo-group {
-      ~ .bar-group {
-        margin-top: 10px;
-      }
-    }
-
     ~ .box-info {
       &-cont {
         padding-top: 16px;
@@ -103,6 +97,17 @@
 
     ~ [class^=badge-md][class*=group] {
       margin-top: 16px;
+    }
+  }
+
+  :deep(.box-address-header) {
+    width: 100%;
+    margin-bottom: 10px;
+
+    .box-rdo-group {
+      ~ .bar-group {
+        margin-top: 10px;
+      }
     }
   }
 

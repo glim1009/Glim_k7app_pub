@@ -6,7 +6,7 @@
           <div class="ctitle-2xl">
             L.POINT 통합 로그인
           </div>
-          <div class="stext-lg-gray70">
+          <div class="stext-lg">
             지금 로그인하고 다양한 혜택을 만나보세요!
           </div>
         </CtitleWrap>
@@ -37,7 +37,7 @@
               </div>
               <div class="form-cont">
                 <div class="form-input-group valid-check">
-                  <EInputBox :type="isPassword ? 'password' : 'text'" title="비밀번호 입력" placeholder="비밀번호 입력 (8~15자리 숫자, 영문자, 특수문자)" :max-length="15">
+                  <EInputBox :type="isPassword ? 'password' : 'text'" title="비밀번호 입력" placeholder="비밀번호 입력" :max-length="15">
                     <button type="button" class="btn-toggle-pw" :class="[{ 'is-active': !isPassword }]" @click="togglePassword">
                       <span class="offscreen">비밀번호 보임 상태</span>
                     </button>
@@ -64,33 +64,31 @@
           </span>
         </UiColGroup>
       </ContBox>
-      <ContBox size="lg">
-        <BtnWrap>
-          <EBtn tag="a" color="green" size="lg" to="javascript:">
-            <span class="text">로그인</span>
-          </EBtn>
-        </BtnWrap>
-        <BtnWrap size="md" type="auto-center">
-          <div class="bar-group">
-            <ETBtn tag="a" size="md" to="javascript:">
-              <span class="text">아이디 찾기</span>
-            </ETBtn>
-            <ETBtn tag="a" size="md" to="javascript:">
-              <span class="text">비밀번호 찾기</span>
-            </ETBtn>
-            <ETBtn tag="a" size="md" to="javascript:">
-              <span class="text">회원가입</span>
-            </ETBtn>
-          </div>
-        </BtnWrap>
-      </ContBox>
+      <BtnWrap size="xl">
+        <EBtn tag="a" color="green" size="lg" to="javascript:">
+          <span class="text">로그인</span>
+        </EBtn>
+      </BtnWrap>
+      <BtnWrap size="md" type="auto-center">
+        <div class="bar-group">
+          <ETBtn tag="a" size="sm" to="javascript:">
+            <span class="text">아이디 찾기</span>
+          </ETBtn>
+          <ETBtn tag="a" size="sm" to="javascript:">
+            <span class="text">비밀번호 찾기</span>
+          </ETBtn>
+          <ETBtn tag="a" size="sm" to="javascript:">
+            <span class="text">회원가입</span>
+          </ETBtn>
+        </div>
+      </BtnWrap>
     </ContWrap>
     <ContWrap type="divider" in-top="lg" in-bottom="md">
       <FlexGroup>
         <div class="flex-left">
           <CtitleWrap size="zero">
             <ETit text="간편 로그인" type="cont" />
-            <div class="stext-gray70">
+            <div class="stext-lg">
               카카오 / 네이버로 간편하게 시작하세요
             </div>
           </CtitleWrap>

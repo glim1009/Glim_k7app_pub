@@ -11,19 +11,19 @@
           <ContBox>
             <CtitleWrap size="zero">
               <ETit text="내용 확인 후 동의해주세요." type="cont" />
-              <div class="stext">
-                유의사항 및 파손면책안내를<br />모두 읽으신 후 동의하실 수 있습니다.
+              <div class="stext-lg">
+                유의사항 및 파손면책안내를<br>모두 읽으신 후 동의하실 수 있습니다.
               </div>
             </CtitleWrap>
           </ContBox>
           <ContBox size="lg">
             <CtitleWrap>
               <ETit text="1. 유의사항" type="cont" />
-              <div class="stext">
+              <div class="stext-lg">
                 택배예약 시 꼭 확인해주세요.
               </div>
             </CtitleWrap>
-            <ColorBox color="white" size="md">
+            <ColorBox color="white" size="lg">
               <RowListWrap gap="sm">
                 <li class="dot-text-sm">
                   포장당 50만원 초과하는 운송물에 대하여 소정의 할증운임을 받습니다.
@@ -41,7 +41,7 @@
             <CtitleWrap>
               <ETit text="2. 취급제한 품목" type="cont" />
             </CtitleWrap>
-            <ColorBox color="white" size="md">
+            <ColorBox color="white" size="lg">
               <CtitleWrap>
                 <ETit text="현금화 가능 물품" type="sCont" />
                 <div class="stext">
@@ -69,7 +69,7 @@
               <CtitleWrap>
                 <ETit text="서신류" type="sCont" />
                 <div class="stext">
-                  우편법상의 제한물품<br />(예 : 편지, 긴급을 요하는 서류 화물 등)
+                  우편법상의 제한물품<br>(예 : 편지, 긴급을 요하는 서류 화물 등)
                 </div>
               </CtitleWrap>
               <CtitleWrap>
@@ -87,7 +87,7 @@
               <CtitleWrap size="zero">
                 <ETit text="중량물" type="sCont" />
                 <div class="stext">
-                  중량 20kg 초과 (생물, 곡물류, 도서류, 이삿짐의 경우 20kg 이상) / <br />세변의합이 160cm 이상 / 한 변의 길이가 120cm를 초과하는 물품
+                  중량 20kg 초과 (생물, 곡물류, 도서류, 이삿짐의 경우 20kg 이상) / <br>세변의합이 160cm 이상 / 한 변의 길이가 120cm를 초과하는 물품
                 </div>
               </CtitleWrap>
             </ColorBox>
@@ -96,12 +96,12 @@
             <CtitleWrap>
               <ETit text="3. 할증운임 및 배상한도" type="cont" />
             </CtitleWrap>
-            <ColorBox color="white" size="md">
+            <ColorBox color="white" size="lg">
               <TableWrap type="col" table-name="할증운임 및 배상한도">
                 <colgroup>
-                  <col style="width: 56%;" />
-                  <col style="width: auto;" />
-                  <col style="width: auto;" />
+                  <col style="width: 56%;">
+                  <col style="width: auto;">
+                  <col style="width: auto;">
                 </colgroup>
                 <thead>
                   <tr>
@@ -118,12 +118,20 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="fc-gray80">50만원 초과 ~ 100만원 초과</td>
-                    <td class="fc-gray80">50%</td>
-                    <td class="fc-gray80">100만원</td>
+                    <td class="fc-gray80">
+                      50만원 초과 ~ 100만원 초과
+                    </td>
+                    <td class="fc-gray80">
+                      50%
+                    </td>
+                    <td class="fc-gray80">
+                      100만원
+                    </td>
                   </tr>
                   <tr>
-                    <td class="fc-gray80">100만원 초과 고가물품</td>
+                    <td class="fc-gray80">
+                      100만원 초과 고가물품
+                    </td>
                     <td colspan="2" class="fc-gray80">
                       미취급
                     </td>
@@ -136,11 +144,11 @@
             <CtitleWrap>
               <ETit text="4. 무게 및 규격 안내" type="cont" />
             </CtitleWrap>
-            <ColorBox color="white" size="md">
+            <ColorBox color="white" size="lg">
               <TableWrap type="info" gap="md" size="md" table-name="무게 및 규격 안내">
                 <colgroup>
-                  <col style="width: 40px;" />
-                  <col style="width: auto;" />
+                  <col style="width: 40px;">
+                  <col style="width: auto;">
                 </colgroup>
                 <tbody>
                   <tr>
@@ -151,7 +159,7 @@
                     <th class="va-top">
                       규격
                     </th>
-                    <td>가로,세로,높이 합 160cm 이하(최장변 120cm 이하), <br />가액 100만원 이하(50~100만원 할증 50%)</td>
+                    <td>가로,세로,높이 합 160cm 이하(최장변 120cm 이하), <br>가액 100만원 이하(50~100만원 할증 50%)</td>
                   </tr>
                 </tbody>
               </TableWrap>
@@ -160,19 +168,19 @@
           <ContBox size="lg">
             <CtitleWrap>
               <ETit text="5. 포장상태" type="cont" />
-              <div class="stext">
+              <div class="stext-lg">
                 포장은 보내시는 분이 직접 해주셔야 하며, <span class="fw-md">포장상태가 불량</span>할 경우 물품훼손 및 이탈의 우려가 있어 <span class="fw-md">수거가 불가</span>합니다.
-                <br />규격화된 박스에 물품을 안전하게 포장하여 주시기 바랍니다.
+                <br>규격화된 박스에 물품을 안전하게 포장하여 주시기 바랍니다.
               </div>
             </CtitleWrap>
-            <ColorBox color="white" size="md">
+            <ColorBox color="white" size="lg">
               <CtitleWrap size="sm">
                 <ETit text="*포장불량예시" type="sCont" class="fc-red" />
               </CtitleWrap>
               <GridListWrap gap="lg" col="4">
                 <li class="item-grid-package">
                   <div class="thumb-box">
-                    <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="서류봉투 포장불량예시 이미지" />
+                    <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="서류봉투 포장불량예시 이미지">
                   </div>
                   <div class="info-box">
                     <div class="stext">
@@ -182,7 +190,7 @@
                 </li>
                 <li class="item-grid-package">
                   <div class="thumb-box">
-                    <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="마대자루 포장불량예시 이미지" />
+                    <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="마대자루 포장불량예시 이미지">
                   </div>
                   <div class="info-box">
                     <div class="stext">
@@ -192,7 +200,7 @@
                 </li>
                 <li class="item-grid-package">
                   <div class="thumb-box">
-                    <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="쇼핑백 포장불량예시 이미지" />
+                    <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="쇼핑백 포장불량예시 이미지">
                   </div>
                   <div class="info-box">
                     <div class="stext">
@@ -202,7 +210,7 @@
                 </li>
                 <li class="item-grid-package">
                   <div class="thumb-box">
-                    <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="나체품 포장불량예시 이미지" />
+                    <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="나체품 포장불량예시 이미지">
                   </div>
                   <div class="info-box">
                     <div class="stext">
@@ -212,7 +220,7 @@
                 </li>
                 <li class="item-grid-package">
                   <div class="thumb-box">
-                    <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="비닐포장 포장불량예시 이미지" />
+                    <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="비닐포장 포장불량예시 이미지">
                   </div>
                   <div class="info-box">
                     <div class="stext">
@@ -222,7 +230,7 @@
                 </li>
                 <li class="item-grid-package">
                   <div class="thumb-box">
-                    <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="결박화 포장불량예시 이미지" />
+                    <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="결박화 포장불량예시 이미지">
                   </div>
                   <div class="info-box">
                     <div class="stext">
@@ -232,7 +240,7 @@
                 </li>
                 <li class="item-grid-package">
                   <div class="thumb-box">
-                    <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="이형화물 포장불량예시 이미지" />
+                    <img src="/assets/images/delivery/img_temp_package_condition_delivery.svg" alt="이형화물 포장불량예시 이미지">
                   </div>
                   <div class="info-box">
                     <div class="stext">
@@ -247,7 +255,7 @@
             <CtitleWrap>
               <ETit text="6. 품목별 접수 안내" type="cont" />
             </CtitleWrap>
-            <ColorBox color="white" size="md">
+            <ColorBox color="white" size="lg">
               <ContBox>
                 <CtitleWrap size="sm">
                   <ETit text="전자제품류" type="sCont" />
@@ -284,7 +292,7 @@
                 <RowListWrap gap="sm">
                   <li class="dot-text-sm">
                     접수 시 필히 “김치전용 비닐포장”으로 내포장
-                    <br />(김치는 발효식품으로 자체적 발효 가스 발생으로 인한 다른 화물 오염 우려가 있어 내포장 후 (아이스박스)포장 필수)
+                    <br>(김치는 발효식품으로 자체적 발효 가스 발생으로 인한 다른 화물 오염 우려가 있어 내포장 후 (아이스박스)포장 필수)
                   </li>
                   <li class="dot-text-sm">
                     BOX당 중량이 20kg을 넘지 않도록 나누어 포장
@@ -350,13 +358,13 @@
           </ContBox>
           <ContBox size="lg">
             <ETit text="파손면책이란?" type="cont" />
-            <div class="stext">
+            <div class="stext-lg">
               배송중 포장 부실로 인한 상품의 고장/파손에 대하여 택배사의 배상 책임을 묻지 않겠다는 고객의 확인
             </div>
           </ContBox>
           <ContBox size="lg">
             <ETit text="택배 이용불가 상품" type="cont" />
-            <div class="stext">
+            <div class="stext-lg">
               유리류, 사기류, 아크릴제품, 현금, 신분증, 여권, 예술품, 살아있는 동물, 포장하지 않은 상품, 액체류 등
             </div>
           </ContBox>
@@ -385,7 +393,7 @@ const props = defineProps<{
   sta: DialogState;
 }>();
 
-const emit = defineEmits(['update:sta']);
+const emit = defineEmits(["update:sta"]);
 
 function openDialog() {
   isOpen.value = true;
@@ -393,11 +401,10 @@ function openDialog() {
 
 const isOpen = computed({
   get: () => props.sta.open,
-  set: value => emit('update:sta', { ...props.sta, open: value }),
+  set: value => emit("update:sta", { ...props.sta, open: value }),
 });
 
 function closeDialog() {
   isOpen.value = false;
 }
 </script>
-

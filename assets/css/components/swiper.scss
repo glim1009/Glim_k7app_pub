@@ -57,6 +57,7 @@ $swiperType: ('', '-line', '-bar', '-tab');
           color: var(--Grayscale-100);
           display: inline-block;
           vertical-align: top;
+          word-break: break-all;
         }
 
         &.all {

@@ -120,7 +120,7 @@
                 <div class="attach-box">
                   <div class="attach-img-wrap">
                     <div class="attach-img">
-                      <img src="/assets/images/temp/temp_attach_img_01.png" alt="상품 리뷰 이미지" />
+                      <img src="/assets/images/temp/temp_attach_img_01.png" alt="상품 리뷰 이미지">
                     </div>
                   </div>
                 </div>
@@ -134,7 +134,7 @@
                 <div class="attach-box">
                   <div class="attach-img-wrap">
                     <div class="attach-img">
-                      <img src="/assets/images/temp/temp_attach_img_01.png" alt="상품 리뷰 이미지" />
+                      <img src="/assets/images/temp/temp_attach_img_01.png" alt="상품 리뷰 이미지">
                     </div>
                   </div>
                 </div>
@@ -148,7 +148,7 @@
                 <div class="attach-box">
                   <div class="attach-img-wrap">
                     <div class="attach-img">
-                      <img src="/assets/images/temp/temp_attach_img_01.png" alt="상품 리뷰 이미지" />
+                      <img src="/assets/images/temp/temp_attach_img_01.png" alt="상품 리뷰 이미지">
                     </div>
                   </div>
                 </div>
@@ -162,7 +162,7 @@
                 <div class="attach-box">
                   <div class="attach-img-wrap">
                     <div class="attach-img">
-                      <img src="/assets/images/temp/temp_attach_img_01.png" alt="상품 리뷰 이미지" />
+                      <img src="/assets/images/temp/temp_attach_img_01.png" alt="상품 리뷰 이미지">
                     </div>
                   </div>
                 </div>
@@ -177,7 +177,7 @@
                 <div class="attach-box">
                   <div class="attach-img-wrap">
                     <div class="attach-img">
-                      <img src="/assets/images/temp/temp_attach_img_01.png" alt="상품 리뷰 이미지" />
+                      <img src="/assets/images/temp/temp_attach_img_01.png" alt="상품 리뷰 이미지">
                     </div>
                   </div>
                 </div>
@@ -288,7 +288,7 @@
                 <div class="attach-box">
                   <div class="attach-img-wrap">
                     <div class="attach-img">
-                      <img src="/assets/images/temp/temp_attach_img_01.png" alt="상품 리뷰 이미지" />
+                      <img src="/assets/images/temp/temp_attach_img_01.png" alt="상품 리뷰 이미지">
                     </div>
                   </div>
                 </div>
@@ -302,7 +302,7 @@
                 <div class="attach-box">
                   <div class="attach-img-wrap">
                     <div class="attach-img">
-                      <img src="/assets/images/temp/temp_attach_img_01.png" alt="상품 리뷰 이미지" />
+                      <img src="/assets/images/temp/temp_attach_img_01.png" alt="상품 리뷰 이미지">
                     </div>
                   </div>
                 </div>
@@ -316,7 +316,7 @@
                 <div class="attach-box">
                   <div class="attach-img-wrap">
                     <div class="attach-img">
-                      <img src="/assets/images/temp/temp_attach_img_01.png" alt="상품 리뷰 이미지" />
+                      <img src="/assets/images/temp/temp_attach_img_01.png" alt="상품 리뷰 이미지">
                     </div>
                   </div>
                 </div>
@@ -330,7 +330,7 @@
                 <div class="attach-box">
                   <div class="attach-img-wrap">
                     <div class="attach-img">
-                      <img src="/assets/images/temp/temp_attach_img_01.png" alt="상품 리뷰 이미지" />
+                      <img src="/assets/images/temp/temp_attach_img_01.png" alt="상품 리뷰 이미지">
                     </div>
                   </div>
                 </div>
@@ -345,7 +345,7 @@
                 <div class="attach-box">
                   <div class="attach-img-wrap">
                     <div class="attach-img">
-                      <img src="/assets/images/temp/temp_attach_img_01.png" alt="상품 리뷰 이미지" />
+                      <img src="/assets/images/temp/temp_attach_img_01.png" alt="상품 리뷰 이미지">
                     </div>
                   </div>
                 </div>
@@ -388,19 +388,19 @@
         <div class="form-cont">
           <UiColGroup gap="sm">
             <span class="ui-rdo-button">
-              <input id="filterOptionDate01" v-model="periodPicked" value="periodDate01" type="radio" />
+              <input id="filterOptionDate01" v-model="periodPicked" value="periodDate01" type="radio">
               <label for="filterOptionDate01"><span class="text-sm">최근3개월</span></label>
             </span>
             <span class="ui-rdo-button">
-              <input id="filterOptionDate02" v-model="periodPicked" value="periodDate02" type="radio" />
+              <input id="filterOptionDate02" v-model="periodPicked" value="periodDate02" type="radio">
               <label for="filterOptionDate02"><span class="text-sm">6개월</span></label>
             </span>
             <span class="ui-rdo-button">
-              <input id="filterOptionDate03" v-model="periodPicked" value="periodDate03" type="radio" />
+              <input id="filterOptionDate03" v-model="periodPicked" value="periodDate03" type="radio">
               <label for="filterOptionDate03"><span class="text-sm">1년</span></label>
             </span>
             <span class="ui-rdo-button">
-              <input id="filterOptionDate04" v-model="periodPicked" value="periodDateInput" type="radio" />
+              <input id="filterOptionDate04" v-model="periodPicked" value="periodDateInput" type="radio">
               <label for="filterOptionDate04"><span class="text-sm">직접입력</span></label>
             </span>
           </UiColGroup>
@@ -449,6 +449,6 @@ const periodPicked = ref();
 const isDateInputDisabled = ref<boolean>(true);
 
 watch(periodPicked, (value) => {
-  isDateInputDisabled.value = value !== 'periodDateInput';
+  isDateInputDisabled.value = value !== "periodDateInput";
 });
 </script>

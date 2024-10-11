@@ -19,6 +19,7 @@
       </div>
       <ContBox size="zero" gap="sm" v-if="isData && !isNoFilterData">
         <ColorBox color="white" size="lg">
+          <!-- DESC :: 폐점된 매장 리뷰인 경우 is-dimmed 클래스 추가 -->
           <div class="review-group">
             <FlexGroup align="start">
               <div class="flex-left">
@@ -111,7 +112,8 @@
           </div>
         </ColorBox>
         <ColorBox color="white" size="lg">
-          <div class="review-group">
+          <!-- DESC :: 폐점된 매장 리뷰인 경우 is-dimmed 클래스 추가 -->
+          <div class="review-group is-dimmed">
             <FlexGroup align="start">
               <div class="flex-left">
                 <CtitleWrap>
@@ -203,6 +205,7 @@
           </div>
         </ColorBox>
         <ColorBox color="white" size="lg">
+          <!-- DESC :: 폐점된 매장 리뷰인 경우 is-dimmed 클래스 추가 -->
           <div class="review-group">
             <FlexGroup align="start">
               <div class="flex-left">

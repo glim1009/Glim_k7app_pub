@@ -20,20 +20,19 @@
       <RowListWrap>
         <li class="item">
           <ColorBox color="white" size="lg">
-            <div class="box-info-header">
+            <div class="box-address-header">
               <FlexGroup align="start">
                 <div class="info-flex-left">
                   <div class="box-rdo-group">
                     <span class="ui-rdo">
                       <input id="demoRdo01" type="radio" name="demoRdo01">
-                      <label for="demoRdo01"><span class="text-lg">사무실</span></label>
+                      <label for="demoRdo01"><span class="text-lg fw-sb fw-sb">사무실</span></label>
                     </span>
                     <EBadge color="light-gray" size="md" badge-text="기본주소지" />
                   </div>
-
                   <div class="bar-group">
-                    <span class="bar-text-sm fc-black">홍*동</span>
-                    <span class="bar-text-sm fc-black">010-4554-8785</span>
+                    <span class="bar-text fc-black">홍*동</span>
+                    <span class="bar-text fc-black">010-****-8785</span>
                   </div>
                 </div>
                 <div class="flex-right">
@@ -52,47 +51,36 @@
                 </div>
               </FlexGroup>
             </div>
-            <RowListWrap size="xs">
-              <p class="stext-black fw-md">
-                085421
-              </p>
-              <TableWrap type="info" gap="sm" size="md" table-name="주소정보">
-                <colgroup>
-                  <col style="width: 44px;">
-                  <col style="width: auto;">
-                </colgroup>
-                <tbody>
-                  <tr>
-                    <th scope="row" class="fc-black fw-md">
-                      도로명
-                    </th>
-                    <td>서울 강동구 상암로 **길 ***호</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" class="fc-black fw-md">
-                      지번
-                    </th>
-                    <td>서울 강동구 암사동 265-5번지 203호 서울 강동구 암사동 265-5번지 ***호</td>
-                  </tr>
-                </tbody>
-              </TableWrap>
-            </RowListWrap>
+            <TableWrap type="info" gap="sm" size="md" table-name="주소정보">
+              <colgroup>
+                <col style="width: 57px;">
+                <col style="width: auto;">
+              </colgroup>
+              <tbody>
+              <tr>
+                <th scope="row" class="">
+                  085421
+                </th>
+                <td>서울 강동구 상암로 **길 ***호</td>
+              </tr>
+              </tbody>
+            </TableWrap>
           </ColorBox>
         </li>
         <li class="item">
           <ColorBox color="white" size="lg">
-            <div class="box-info-header">
+            <div class="box-address-header">
               <FlexGroup align="start">
                 <div class="info-flex-left">
                   <div class="box-rdo-group">
                     <span class="ui-rdo">
                       <input id="demoRdo02" type="radio" name="demoRdo01">
-                      <label for="demoRdo02"><span class="text-lg">엄마집</span></label>
+                      <label for="demoRdo02"><span class="text-lg fw-sb">엄마집</span></label>
                     </span>
                   </div>
                   <div class="bar-group">
-                    <span class="bar-text-sm fc-black">홍*동</span>
-                    <span class="bar-text-sm fc-black">010-4554-8785</span>
+                    <span class="bar-text fc-black">홍*동</span>
+                    <span class="bar-text fc-black">010-****-8785</span>
                   </div>
                 </div>
                 <div class="flex-right">
@@ -111,47 +99,36 @@
                 </div>
               </FlexGroup>
             </div>
-            <RowListWrap size="xs">
-              <p class="stext-black fw-md">
-                085421
-              </p>
-              <TableWrap type="info" gap="sm" size="md" table-name="주소정보">
-                <colgroup>
-                  <col style="width: 44px;">
-                  <col style="width: auto;">
-                </colgroup>
-                <tbody>
-                  <tr>
-                    <th scope="row" class="fc-black fw-md">
-                      도로명
-                    </th>
-                    <td>서울 강동구 상암로 **길 ***호</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" class="fc-black fw-md">
-                      지번
-                    </th>
-                    <td>서울 강동구 암사동 265-5번지 203호 서울 강동구 암사동 265-5번지 ***호</td>
-                  </tr>
-                </tbody>
-              </TableWrap>
-            </RowListWrap>
+            <TableWrap type="info" gap="sm" size="md" table-name="주소정보">
+              <colgroup>
+                <col style="width: 57px;">
+                <col style="width: auto;">
+              </colgroup>
+              <tbody>
+              <tr>
+                <th scope="row" class="">
+                  085421
+                </th>
+                <td>서울 강동구 상암로 **길 ***호</td>
+              </tr>
+              </tbody>
+            </TableWrap>
           </ColorBox>
         </li>
         <li class="item">
           <ColorBox color="white" size="lg">
-            <div class="box-info-header">
+            <div class="box-address-header">
               <FlexGroup align="start">
                 <div class="info-flex-left">
                   <div class="box-rdo-group">
                     <span class="ui-rdo">
                       <input id="demoRdo03" type="radio" name="demoRdo01">
-                      <label for="demoRdo03"><span class="text-lg">우리집</span></label>
+                      <label for="demoRdo03"><span class="text-lg fw-sb">우리집</span></label>
                     </span>
                   </div>
                   <div class="bar-group">
-                    <span class="bar-text-sm fc-black">홍*동</span>
-                    <span class="bar-text-sm fc-black">010-4554-8785</span>
+                    <span class="bar-text fc-black">홍*동</span>
+                    <span class="bar-text fc-black">010-****-8785</span>
                   </div>
                 </div>
                 <div class="flex-right">
@@ -170,31 +147,20 @@
                 </div>
               </FlexGroup>
             </div>
-            <RowListWrap size="xs">
-              <p class="stext-black fw-md">
-                085421
-              </p>
-              <TableWrap type="info" gap="sm" size="md" table-name="주소정보">
-                <colgroup>
-                  <col style="width: 44px;">
-                  <col style="width: auto;">
-                </colgroup>
-                <tbody>
-                  <tr>
-                    <th scope="row" class="fc-black fw-md">
-                      도로명
-                    </th>
-                    <td>서울 강동구 상암로 **길 ***호</td>
-                  </tr>
-                  <tr>
-                    <th scope="row" class="fc-black fw-md">
-                      지번
-                    </th>
-                    <td>서울 강동구 암사동 265-5번지 203호 서울 강동구 암사동 265-5번지 ***호</td>
-                  </tr>
-                </tbody>
-              </TableWrap>
-            </RowListWrap>
+            <TableWrap type="info" gap="sm" size="md" table-name="주소정보">
+              <colgroup>
+                <col style="width: 57px;">
+                <col style="width: auto;">
+              </colgroup>
+              <tbody>
+              <tr>
+                <th scope="row" class="">
+                  085421
+                </th>
+                <td>서울 강동구 상암로 **길 ***호</td>
+              </tr>
+              </tbody>
+            </TableWrap>
           </ColorBox>
         </li>
       </RowListWrap>

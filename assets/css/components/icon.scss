@@ -497,8 +497,8 @@
 
 .ico-current-marker {
   @extend %icon;
-  width: 52px;
-  height: 60px;
+  width: 48px;
+  height: 48px;
   @include mixins.ratio_images('/assets/images/my/ico_current_marker_my');
 }
 

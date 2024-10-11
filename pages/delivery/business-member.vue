@@ -49,7 +49,7 @@
                 </ETit>
               </div>
               <div class="form-cont">
-                <div class="form-input-group valid-check">
+                <div class="form-input-group valid-check fail">
                   <SwiperAutoWrap class="side-zero">
                     <!-- 첨부파일 등록되지 않은 경우 -->
                     <swiper-slide>

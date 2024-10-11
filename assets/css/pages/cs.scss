@@ -36,20 +36,6 @@
 
 }
 
-.flex-center-group {
-  :deep(.flex-faq-left) {
-
-    .bar-group {
-      .bar-item {
-        &:has(.ctitle-lg) { // ctitle 18px
-          &::after {
-            margin-top: 6px;
-          }
-        }
-      }
-    }
-  }
-}
 
 .faq-fix-wrap {
   &:has([class*=faq-fix-search]) {

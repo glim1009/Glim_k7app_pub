@@ -77,7 +77,7 @@
               </div>
             </li>
           </RowListWrap>
-          <BtnWrap size="lg">
+          <BtnWrap size="xl">
             <EBtn color="line-light-gray" size="lg" @click="closeDialog">
               <span class="text">취소</span>
             </EBtn>

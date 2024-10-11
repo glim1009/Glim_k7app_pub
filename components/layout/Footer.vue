@@ -11,22 +11,34 @@
           <div class="flex-right has-cs-menu">
             <ul class="footer-cs-menu">
               <li class="item-cs-menu">
-                <NuxtLink class="btn-cs-menu" to="/cs">고객센터</NuxtLink>
+                <NuxtLink class="btn-cs-menu" to="/cs">
+                  고객센터
+                </NuxtLink>
               </li>
               <li class="item-cs-menu">
-                <NuxtLink class="btn-cs-menu" target="_blank" to="https://m.7-eleven.co.kr:444/franchise/advice/joinadviceNew.asp">창업상담신청</NuxtLink>
+                <NuxtLink class="btn-cs-menu" target="_blank" to="https://m.7-eleven.co.kr:444/franchise/advice/joinadviceNew.asp">
+                  창업상담신청
+                </NuxtLink>
               </li>
               <li class="item-cs-menu">
-                <button type="button" class="btn-cs-menu" @click="$emit('openPopup', 'termsService')">이용약관</button>
+                <button type="button" class="btn-cs-menu" @click="$emit('openPopup', 'termsService')">
+                  이용약관
+                </button>
               </li>
               <li class="item-cs-menu">
-                <button type="button" class="btn-cs-menu" @click="$emit('openPopup', 'termsPrivacy')">개인정보 처리방침</button>
+                <button type="button" class="btn-cs-menu" @click="$emit('openPopup', 'termsPrivacy')">
+                  개인정보 처리방침
+                </button>
               </li>
               <li class="item-cs-menu">
-                <button type="button" class="btn-cs-menu" @click="$emit('openPopup', 'termsOfLocation')">위치기반 서비스 이용약관</button>
+                <button type="button" class="btn-cs-menu" @click="$emit('openPopup', 'termsOfLocation')">
+                  위치기반 서비스 이용약관
+                </button>
               </li>
               <li class="item-cs-menu">
-                <button type="button" class="btn-cs-menu" @click="$emit('openPopup', 'policyOfcctv')">영상정보처리기기 운영/관리 방침</button>
+                <button type="button" class="btn-cs-menu" @click="$emit('openPopup', 'policyOfcctv')">
+                  영상정보처리기기 운영/관리 방침
+                </button>
               </li>
             </ul>
           </div>
@@ -37,7 +49,9 @@
           <template #header>
             <div class="fold-title">
               <FlexGroup align="center">
-                <ETit size="xs">코리아 세븐</ETit>
+                <ETit size="xs">
+                  코리아 세븐
+                </ETit>
               </FlexGroup>
             </div>
           </template>
@@ -51,7 +65,9 @@
                 <br>통신판매업신고번호 : 제2012-서울중구-0636호
                 <br>통신판매업신고기관 : 서울특별시 중구청(02-3396-5077)
                 <br>고객센터 : 1577-0711(평일 09:00~18:00 / 발신자부담)
-                <br>이메일 : <ETBtn tag="a" size="xs" type="underline" to="mailto:711CS@lotte.net"><span class="text">711CS@lotte.net</span></ETBtn>
+                <br>이메일 : <ETBtn tag="a" size="xs" type="underline" to="mailto:711CS@lotte.net">
+                  <span class="text">711CS@lotte.net</span>
+                </ETBtn>
               </div>
               <div class="row-info">
                 판매사 : 롯데쇼핑㈜e커머스사업부
@@ -61,19 +77,23 @@
                 <br>통신판매업신고번호 : 서울송파 제0158호
                 <br>통신판매업신고기관 : 서울특별시 송파구청 (02-2147-2525,2549)
                 <br>고객센터 : 1522-2552 (연중무휴 10:00 ~ 20:00)
-                <br>이메일 : <ETBtn tag="a" size="xs" type="underline" to="mailto:lottegift@lotte.net"><span class="text">lottegift@lotte.net</span></ETBtn>
+                <br>이메일 : <ETBtn tag="a" size="xs" type="underline" to="mailto:lottegift@lotte.net">
+                  <span class="text">lottegift@lotte.net</span>
+                </ETBtn>
               </div>
             </div>
           </template>
         </FoldToggleBox>
-        <div class="copyright">COPYRIGHT 2024 KOREA SEVEN CO, LTD All Right Reserved</div>
+        <div class="copyright">
+          COPYRIGHT 2024 KOREA SEVEN CO, LTD All Right Reserved
+        </div>
       </ContBox>
     </ContWrap>
   </div>
 </template>
 
 <script setup lang="ts">
-defineEmits(['openPopup']);
+defineEmits(["openPopup"]);
 </script>
 
 <style lang="scss" scoped>

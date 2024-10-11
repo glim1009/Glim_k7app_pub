@@ -37,8 +37,10 @@ const props = defineProps<{
 
 function isIconVisible(name: string) {
   let view = true;
-  if( typeof props.hideRightHeader === 'boolean' ) view = props.hideRightHeader;
-  else if ( typeof props.hideRightHeader === 'object' ) view = !props.hideRightHeader?.includes(name);
+  if (typeof props.hideRightHeader === "boolean")
+    view = props.hideRightHeader;
+  else if (typeof props.hideRightHeader === "object")
+    view = !props.hideRightHeader?.includes(name);
   return view;
 }
 </script>

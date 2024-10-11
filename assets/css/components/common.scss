@@ -455,6 +455,10 @@
       padding-top: 16px;
     }
   }
+
+  &.is-dimmed {
+    opacity: .4;
+  }
 }
 
 // 당일픽업
@@ -735,6 +739,10 @@
         color: var(--Grayscale-0);
         vertical-align: top;
       }
+    }
+
+    .btn-pin-location {
+      position: absolute;
     }
 
     .btn-access-location {

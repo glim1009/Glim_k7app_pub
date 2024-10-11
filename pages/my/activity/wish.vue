@@ -129,11 +129,6 @@
                     </EIco>
                     <span class="score-sm">4.0 (10)</span>
                   </div>
-                  <BtnWrap type="auto">
-                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
-                      <span class="text">주변매장 재고찾기</span>
-                    </EBtn>
-                  </BtnWrap>
                 </div>
               </div>
               <!-- // thumb-prod -->
@@ -236,11 +231,6 @@
                     </EIco>
                     <span class="score-sm">4.0 (10)</span>
                   </div>
-                  <BtnWrap type="auto">
-                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
-                      <span class="text">주변매장 재고찾기</span>
-                    </EBtn>
-                  </BtnWrap>
                 </div>
               </div>
               <!-- // thumb-prod -->
@@ -292,11 +282,6 @@
                     </EIco>
                     <span class="score-sm">4.0 (10)</span>
                   </div>
-                  <BtnWrap type="auto">
-                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
-                      <span class="text">주변매장 재고찾기</span>
-                    </EBtn>
-                  </BtnWrap>
                 </div>
               </div>
               <!-- // thumb-prod -->
@@ -347,11 +332,6 @@
                     </EIco>
                     <span class="score-sm">4.0 (10)</span>
                   </div>
-                  <BtnWrap type="auto">
-                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
-                      <span class="text">주변매장 재고찾기</span>
-                    </EBtn>
-                  </BtnWrap>
                 </div>
               </div>
               <!-- // thumb-prod -->
@@ -403,11 +383,6 @@
                     </EIco>
                     <span class="score-sm">4.0 (10)</span>
                   </div>
-                  <BtnWrap type="auto">
-                    <EBtn tag="a" color="line-light-gray" size="xs" to="/stock/search">
-                      <span class="text">주변매장 재고찾기</span>
-                    </EBtn>
-                  </BtnWrap>
                 </div>
               </div>
               <!-- // thumb-prod -->
@@ -671,9 +646,6 @@
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
                   </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
-                  </div>
                   <div class="rating">
                     <EIco name="rating" color="gray50" size="xs">
                       <span class="offscreen">별점</span>
@@ -841,9 +813,6 @@
                     <EGoods type="origin" size="sm" val="3,000" unit="원" />
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
-                  </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
                   </div>
                   <div class="rating">
                     <EIco name="rating" color="gray50" size="xs">
@@ -1016,9 +985,6 @@
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
                   </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
-                  </div>
                 </div>
               </div>
               <!-- // thumb-prod -->
@@ -1171,9 +1137,6 @@
                     <EGoods type="origin" size="sm" val="3,000" unit="원" />
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
-                  </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
                   </div>
                 </div>
               </div>

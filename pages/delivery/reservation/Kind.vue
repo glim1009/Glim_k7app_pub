@@ -77,7 +77,7 @@
                       </div>
                       <div class="form-cont">
                         <div class="form-input-group valid-check">
-                          <EInputBox title="물품금액 입력" type="number" placeholder="물품금액 입력" :max-length="3">
+                          <EInputBox title="물품금액 입력" type="number" placeholder="물품금액 입력" :max-length="3" is-byte-check>
                             <span class="unit">만원</span>
                           </EInputBox>
                           <div class="valid-desc">
@@ -131,7 +131,7 @@
                       </div>
                       <div class="form-cont">
                         <div class="form-input-group valid-check">
-                          <EInputBox title="물품명 입력" placeholder="물품명 입력" :max-length="10" />
+                          <EInputBox title="물품명 입력" placeholder="물품명 입력" :max-length="10" is-byte-check />
                           <div class="input-guide">
                             최대 10자만 입력하실 수 있습니다.
                           </div>
@@ -303,15 +303,23 @@
                         </ETit>
                       </div>
                       <div class="form-cont">
-                        <div class="form-input-group">
+                        <div class="form-input-group valid-check">
                           <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호 입력" :max-length="11">
                             <EBtn color="line-light-gray" size="xs">
                               <span class="text">인증번호 발송</span>
                             </EBtn>
                           </EInputBox>
-                          <EInputBox title="인증번호 입력" type="number" placeholder="인증번호 입력" :max-length="6">
-                            <span class="unit">05:34</span>
-                          </EInputBox>
+                          <!-- 유효성 검사 CASE 01 : 휴대폰번호 인증 미입력한 경우 -->
+                          <div class="valid-desc">
+                            휴대폰번호를 입력해주세요.
+                          </div>
+                          <!-- // 유효성 검사 CASE 01 : 휴대폰번호 인증 미입력한 경우 -->
+                          <!-- 유효성 검사 CASE 02 : 휴대폰번호 인증 9자 미만 입력한 경우 -->
+                          <!-- <div class="valid-desc">
+                            휴대폰번호는 9자 이상 등록해주세요.
+                          </div> -->
+                          <!-- // 유효성 검사 CASE 02 : 휴대폰번호 인증 9자 미만 입력한 경우 -->
+                          <EInputBox title="인증번호 입력" type="number" placeholder="인증번호 입력" :max-length="6" is-byte-check />
                           <BtnWrap>
                             <EBtn color="line-green" size="md" disabled>
                               <span class="text">인증하기</span>
@@ -335,7 +343,7 @@
                               <span class="text">재발송</span>
                             </EBtn>
                           </EInputBox>
-                          <EInputBox title="인증번호 입력" type="number" placeholder="인증번호 입력" :max-length="6">
+                          <EInputBox title="인증번호 입력" type="number" placeholder="인증번호 입력" :max-length="6" is-byte-check>
                             <span class="unit fc-red">05:34</span>
                           </EInputBox>
                           <BtnWrap>
@@ -361,8 +369,8 @@
                               <span class="text">재발송</span>
                             </EBtn>
                           </EInputBox>
-                          <EInputBox title="인증번호 입력" type="number" placeholder="인증번호 입력" value="12345" :max-length="6">
-                            <span class="unit">05:34</span>
+                          <EInputBox title="인증번호 입력" type="number" placeholder="인증번호 입력" value="12345" :max-length="6" is-byte-check>
+                            <span class="unit fc-red">05:34</span>
                           </EInputBox>
                           <BtnWrap>
                             <EBtn color="line-green" size="md">
@@ -387,7 +395,7 @@
                               <span class="text">재발송</span>
                             </EBtn>
                           </EInputBox>
-                          <EInputBox title="인증번호 입력" type="number" placeholder="인증번호 입력" value="12345" :max-length="6">
+                          <EInputBox title="인증번호 입력" type="number" placeholder="인증번호 입력" value="123456" :max-length="6" is-byte-check>
                             <span class="unit">00:00</span>
                           </EInputBox>
                           <BtnWrap>
@@ -926,31 +934,6 @@
                   <li class="item-sm">
                     <FlexGroup>
                       <div class="flex-left">
-                        <ETit text="구독할인" type="form" />
-                      </div>
-                      <div class="flex-right">
-                        <div class="align-group">
-                          <span class="stext">가능 1개 / <span class="fc-gray60">전체 2개</span></span>
-                          <EBtn color="line-light-gray" size="xs" @click="openSelectSubscribe">
-                            <span class="text">사용</span>
-                          </EBtn>
-                        </div>
-                      </div>
-                    </FlexGroup>
-                    <div class="tag-full-box cont-discount-info">
-                      <p class="stext fc-black fw-md">
-                        1,000원
-                      </p>
-                      <button type="button" class="btn-delete">
-                        <EIco name="close" color="gray" size="xs">
-                          <span class="offscreen">할인 취소</span>
-                        </EIco>
-                      </button>
-                    </div>
-                  </li>
-                  <li class="item-sm">
-                    <FlexGroup>
-                      <div class="flex-left">
                         <ETit text="쿠폰" type="form" />
                       </div>
                       <div class="flex-right">
@@ -1170,6 +1153,7 @@
                   </li>
                   <li class="item-md">
                     <span class="ui-chk">
+                      <!-- DESC :: 비회원일 경우 [disabled] 속성 추가 -->
                       <input id="orderPayChk01" type="checkbox">
                       <label for="orderPayChk01"><span class="text-sm fc-gray70">선택한 결제수단 다음에도 사용</span></label>
                     </span>
@@ -1455,10 +1439,10 @@ import { useSharedStoreState } from "~/composables/useFrontPub";
 
 definePageMeta({
   title: "착한 택배예약",
-  hideRightHeader: ["home"],
+  hideRightHeader: false,
 });
 
-const isMember = ref(true);
+const isMember = ref(false);
 const isNonMember = ref(true);
 const orderPayRadio = ref();
 const cashReceiptRadio = ref();

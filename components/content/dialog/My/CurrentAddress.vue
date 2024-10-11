@@ -1,37 +1,95 @@
 <template>
-  <ContDialog v-model="isOpen" content-class="ui-dialog-full">
+  <ContDialog v-model="isOpen" content-class="ui-dialog-full" not-footer-gradient>
     <template #title>
       <div class="dialog-title">주소록 추가</div>
     </template>
     <template #body>
       <div class="dialog-inner">
-        <ContWrap>
-          <div class="map-area">
-            <!-- 개발 시 삭제 영역 -->
-            <div style="height: 100%; background: rgba(255, 0, 0, .1);">
-              지도 API 영역 확인을 위한 임시 div입니다.
-              <br>개발시 해당 div 삭제 후 작업해 주세요.
-              <div class="pin-location-state" style="top: 200px; left: 100px;">
-                <div class="info-area">
-                  <div class="location">서울시 중구 청계천로 100 시그니쳐타워</div>
+        <ContWrap type="white" in-bottom="sm">
+          <div class="map-wrap">
+            <div class="map-area">
+              <!-- 지도 임시 영역 -->
+              <div style="height: 100%; background: rgba(255, 0, 0, .1);">
+                지도 API 영역 확인을 위한 임시 div입니다.
+
+                <div class="map-content">
+                  <!-- 주소지 기준 이동 버튼 -->
+                  <button type="button" class="btn-pin-location" style="top: 200px; left: 100px;">
+                    <EIco name="current-marker" />
+                    <span class="offscreen">주소지 마커</span>
+                  </button>
+                  <!-- // 주소지 기준 이동 버튼 -->
+
+                  <!-- 현 위치 이동 버튼 -->
+                  <button type="button" class="btn-access-location">
+                    <EIco name="access-location" color="gray" />
+                    <span class="offscreen">현 위치로 이동</span>
+                  </button>
+                  <!-- // 현 위치 이동 버튼 -->
                 </div>
-                <EIco name="current-marker"><span class="offscreen">주소지 마커</span></EIco>
               </div>
             </div>
-            <!-- // 개발 시 삭제 영역 -->
-            <button type="button" class="btn-access-location">
-              <EIco name="access-location" color="green"></EIco>
-              <span class="offscreen">현재 위치로 마커 자동 이동</span>
-            </button>
+            <!-- // 지도 임시 영역 -->
           </div>
-          <div style="height: 120px; background: #333; color: white; font-weight: 600; padding: 20px;">TBD</div>
         </ContWrap>
       </div>
     </template>
     <template #footer>
-      <div class="dialog-btn-wrap">
-        <EBtn color="green" size="lg" @click="closeDialog"><span class="text">현재 위치를 주소록에 추가</span></EBtn>
-      </div>
+      <RowListWrap gap="line">
+        <!-- DESC :: 주소 단일 노출 시 li.item-md 구조 삭제 -->
+        <li class="item-md">
+          <FlexGroup>
+            <div class="flex-left">
+              <TableWrap type="info" gap="sm" size="md" table-name="주소정보">
+                <colgroup>
+                  <col style="width: 47px;">
+                  <col style="width: auto;">
+                </colgroup>
+                <tbody>
+                <tr>
+                  <th scope="row" class="">
+                    도로명
+                  </th>
+                  <td>서울 강동구 상암로 **길 ***호</td>
+                </tr>
+                </tbody>
+              </TableWrap>
+            </div>
+            <div class="flex-right">
+              <EBtn color="light-green" size="xs" @click="closeDialog">
+                <EIco name="check" color="green" size="xs" />
+                <span class="text">선택</span>
+              </EBtn>
+            </div>
+          </FlexGroup>
+        </li>
+        <li class="item-md">
+          <FlexGroup>
+            <div class="flex-left">
+              <TableWrap type="info" gap="sm" size="md" table-name="주소정보">
+                <colgroup>
+                  <col style="width: 47px;">
+                  <col style="width: auto;">
+                </colgroup>
+                <tbody>
+                <tr>
+                  <th scope="row" class="">
+                    지번
+                  </th>
+                  <td>서울 강동구 암사동 265-5번지 세븐빌딩 **동 ***호</td>
+                </tr>
+                </tbody>
+              </TableWrap>
+            </div>
+            <div class="flex-right">
+              <EBtn color="light-green" size="xs" @click="closeDialog">
+                <EIco name="check" color="green" size="xs" />
+                <span class="text">선택</span>
+              </EBtn>
+            </div>
+          </FlexGroup>
+        </li>
+      </RowListWrap>
     </template>
   </ContDialog>
 </template>
