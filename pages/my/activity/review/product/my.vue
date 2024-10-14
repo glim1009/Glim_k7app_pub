@@ -34,7 +34,7 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품 리뷰 이미지" />
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -215,7 +215,7 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품 리뷰 이미지" />
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -323,7 +323,7 @@
             <div class="thumb-prod-flex">
               <EThumbProdBox size="md">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품 리뷰 이미지" />
                 </template>
               </EThumbProdBox>
               <div class="info-box">

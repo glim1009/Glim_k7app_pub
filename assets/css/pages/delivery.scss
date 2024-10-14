@@ -189,3 +189,17 @@
     }
   }
 }
+
+.bar-flex-group {
+  .bar-item {
+    .ctitle-zero-wrap {
+      .stext-lg-black {
+        margin-top: 0;
+
+        + .ctitle-sm {
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+}

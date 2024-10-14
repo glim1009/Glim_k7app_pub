@@ -228,7 +228,7 @@
         <div class="bar-flex-group">
           <div class="bar-item">
             <CtitleWrap size="zero">
-              <div class="stext-black">
+              <div class="stext-lg-black">
                 일반택배
               </div>
               <div class="ctitle-sm">
@@ -238,7 +238,7 @@
           </div>
           <div class="bar-item">
             <CtitleWrap size="zero">
-              <div class="stext-black">
+              <div class="stext-lg-black">
                 착한택배
               </div>
               <div class="ctitle-sm">
@@ -248,7 +248,7 @@
           </div>
           <div class="bar-item">
             <CtitleWrap size="zero">
-              <div class="stext-black">
+              <div class="stext-lg-black">
                 롯데택배
               </div>
               <div class="ctitle-sm">
