@@ -226,6 +226,7 @@
                           </div>
                         </div>
                         <span class="ui-chk">
+                          <!-- DESC :: 등록된 기본주소지 없는 경우 [disabled] 속성 추가 -->
                           <input id="formChk01" type="checkbox">
                           <label for="formChk01"><span class="text-md">기본주소지와 동일</span></label>
                         </span>
@@ -449,6 +450,7 @@
                           </div>
                         </div>
                         <span class="ui-chk">
+                          <!-- DESC :: 등록된 기본주소지 없는 경우 [disabled] 속성 추가 -->
                           <input id="formChk03" type="checkbox" disabled>
                           <label for="formChk03"><span class="text-md">기본주소지와 동일</span></label>
                         </span>
@@ -633,6 +635,7 @@
                                 </p>
                               </div>
                               <span class="ui-chk">
+                                <!-- DESC :: 등록된 기본주소지 없는 경우 [disabled] 속성 추가 -->
                                 <input id="formChk05" type="checkbox">
                                 <label for="formChk05"><span class="text-md">기본주소지와 동일</span></label>
                               </span>
@@ -731,6 +734,7 @@
                                 </p>
                               </div>
                               <span class="ui-chk">
+                                <!-- DESC :: 등록된 기본주소지 없는 경우 [disabled] 속성 추가 -->
                                 <input id="formChk06" type="checkbox">
                                 <label for="formChk06"><span class="text-md">기본주소지와 동일</span></label>
                               </span>
