@@ -2,10 +2,10 @@
   <ContWrap>
     <ColorBox color="white" size="lg">
       <div class="box-info-header">
+        <BadgeGroup size="xl">
+          <EBadge color="gray" size="md" badge-text="일반택배" />
+        </BadgeGroup>
         <CtitleWrap size="sm">
-          <badge-group>
-            <EBadge color="gray" size="md" badge-text="일반택배" />
-          </badge-group>
           <ETit text="의류 청바지" type="box" />
         </CtitleWrap>
         <TableWrap type="info" gap="sm" size="md" table-name="배송정보">
@@ -23,24 +23,26 @@
           </tbody>
         </TableWrap>
       </div>
-      <ul class="delivery-step-col-list">
-        <li class="delivery-step-item">
-          <span class="status">접수완료</span>
-          <span class="sub-status">점포입고</span>
-        </li>
-        <li class="delivery-step-item">
-          <span class="status">배송시작</span>
-          <span class="sub-status">집하완료</span>
-        </li>
-        <li class="delivery-step-item">
-          <span class="status">배송중</span>
-          <span class="sub-status">배송중</span>
-        </li>
-        <li class="delivery-step-item is-active">
-          <span class="status">배송완료</span>
-          <span class="sub-status">배송완료</span>
-        </li>
-      </ul>
+      <div class="step-list-wrap">
+        <ul class="step-col-list">
+          <li class="step-item">
+            <span class="status">접수완료</span>
+            <span class="sub-status">점포입고</span>
+          </li>
+          <li class="step-item">
+            <span class="status">배송시작</span>
+            <span class="sub-status">집하완료</span>
+          </li>
+          <li class="step-item">
+            <span class="status">배송중</span>
+            <span class="sub-status">배송중</span>
+          </li>
+          <li class="step-item is-active">
+            <span class="status">배송완료</span>
+            <span class="sub-status">배송완료</span>
+          </li>
+        </ul>
+      </div>
       <ColorBox color="light-gray">
         <ul class="delivery-step-row-list">
           <li class="delivery-step-item is-completed">

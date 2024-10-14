@@ -1,12 +1,13 @@
 <template>
-  <ContWrap v-if="isMember" type="white" in-top="zero" class="not-navbar">
+  <ContWrap v-if="isMember" type="white" class="not-navbar">
     <InfoGuideWrap
+      in-top="zero"
       type="info-guide"
       name="delivery"
       desc="택배 예약이 완료되었습니다."
       sub-desc="예약현황에서 예약하신 내역을 확인하실 수 있습니다."
     />
-    <BtnWrap type="full" size="lg">
+    <BtnWrap type="full" size="xl">
       <EBtn tag="a" color="line-green" size="md" to="/delivery/situation">
         <span class="text">예약현황</span>
       </EBtn>
@@ -14,6 +15,7 @@
   </ContWrap>
   <ContWrap v-if="isNonMember" type="white" in-top="zero" class="not-navbar">
     <InfoGuideWrap
+      in-top="zero"
       type="info-guide"
       name="delivery"
       desc="택배 예약이 완료되었습니다."
@@ -22,7 +24,7 @@
     <ContBox size="lg">
       <ColorBox color="light-gray" size="md" class="ta-center">
         <div class="align-group">
-          <span class="stext-lg-gray90">예약번호 : 68429106806</span>
+          <span class="stext-lg-gray90">예약번호 : <span ref="copyTextRef" class="copy-text">68429106806</span></span>
           <EBtn color="line-light-gray" size="xs" @click="copyText">
             <span class="text">복사</span>
           </EBtn>
@@ -38,11 +40,11 @@
 </template>
 
 <script setup lang="ts">
-import {ref} from "vue";
+import { ref } from "vue";
 
 definePageMeta({
   title: "착한 택배예약",
-  hideRightHeader: ["home"],
+  hideRightHeader: ["chat", "search", "cart"],
 });
 
 const isMember = ref(true);

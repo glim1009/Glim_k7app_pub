@@ -100,7 +100,7 @@
       </div>
     </div>
   </ContWrap>
-  <TabWrap v-if="isDataSearch" fir-active="allResult">
+  <TabWrap v-if="isDataSearch" ref="tabWrapRef" fir-active="allResult">
     <template #tabs="{ activeTab, setActiveTab }">
       <SwiperAutoWrap type="line" class="scroll-fix">
         <swiper-slide class="tab-item">

@@ -317,9 +317,6 @@ $wrapSize: ('2xs': 8px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
     }
   }
 }
-:deep(.pickup-info-wrap) {
-  margin-top: 16px;
-}
 
 %listItemGapClear {
   :deep([class^=item]) {
