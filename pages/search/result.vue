@@ -180,7 +180,7 @@
                 </ETit>
               </div>
               <div class="flex-right">
-                <ETBtn size="xs">
+                <ETBtn size="xs" @click="() => (tabWrapRef as TabWrapExpose).setActiveTab('pickUp')">
                   <span class="text">더보기</span>
                 </ETBtn>
               </div>
@@ -455,7 +455,7 @@
                 </ETit>
               </div>
               <div class="flex-right">
-                <ETBtn size="xs">
+                <ETBtn size="xs" @click="() => (tabWrapRef as TabWrapExpose).setActiveTab('reservation')">
                   <span class="text">더보기</span>
                 </ETBtn>
               </div>
@@ -730,7 +730,7 @@
                 </ETit>
               </div>
               <div class="flex-right">
-                <ETBtn size="xs">
+                <ETBtn size="xs" @click="() => (tabWrapRef as TabWrapExpose).setActiveTab('giftCard')">
                   <span class="text">더보기</span>
                 </ETBtn>
               </div>
@@ -1003,7 +1003,7 @@
                 </ETit>
               </div>
               <div class="flex-right">
-                <ETBtn size="xs">
+                <ETBtn size="xs" @click="() => (tabWrapRef as TabWrapExpose).setActiveTab('discount')">
                   <span class="text">더보기</span>
                 </ETBtn>
               </div>
@@ -1260,7 +1260,7 @@
                 </ETit>
               </div>
               <div class="flex-right">
-                <ETBtn size="xs">
+                <ETBtn size="xs" @click="() => (tabWrapRef as TabWrapExpose).setActiveTab('voucher')">
                   <span class="text">더보기</span>
                 </ETBtn>
               </div>
@@ -1514,7 +1514,7 @@
                       판매량 많은순
                     </option>
                     <option>최신순</option>
-                    <option>추천순</option>
+                    <option v-if="activeTab !== 'discount' || 'voucher'">추천순</option>
                     <option>가격 낮은순</option>
                     <option>가격 높은순</option>
                   </select>
@@ -2532,6 +2532,12 @@ const openStoreSearchSelect = (isSearchData: boolean) => {
   popSearchType.value = isSearchData; // 임시 - 매장 검색결과 팝업 확인을 위한 이벤트 추가 ( 개발시 삭제 요청 )
   popStoreSearchSelect.value.open = true;
 };
+
+// 임시 :: 탭 변경 확인을 위해 추가
+interface TabWrapExpose {
+  setActiveTab: (tabName: string) => void;
+}
+const tabWrapRef = ref<TabWrapExpose | null>(null);
 </script>
 
 <style lang="scss" scoped>

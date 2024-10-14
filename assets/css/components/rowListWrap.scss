@@ -284,6 +284,8 @@ $wrapSize: ('2xs': 8px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
       }
 
       .pickup-info-wrap {
+        margin-top: 16px;
+
         .light-gray-sm-box {
           margin-top: 0;
         }
@@ -315,8 +317,7 @@ $wrapSize: ('2xs': 8px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
     }
   }
 }
-
-.pickup-info-wrap {
+:deep(.pickup-info-wrap) {
   margin-top: 16px;
 }
 

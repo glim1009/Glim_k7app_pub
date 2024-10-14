@@ -707,8 +707,8 @@
 </template>
 
 <script setup lang="ts">
-const isRecentSearchData = ref(false); // 임시 : 최근 검색어 컨텐츠 확인을 위해 추가
-const isRecentSearchNoData = ref(true); // 임시 : 최근 검색어 데이터 없음 컨텐츠 확인을 위해 추가
+const isRecentSearchData = ref(true); // 임시 : 최근 검색어 컨텐츠 확인을 위해 추가
+const isRecentSearchNoData = ref(false); // 임시 : 최근 검색어 데이터 없음 컨텐츠 확인을 위해 추가
 </script>
 
 <style lang="scss" scoped>
