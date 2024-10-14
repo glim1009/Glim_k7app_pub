@@ -58,7 +58,7 @@
               </colgroup>
               <tbody>
               <tr>
-                <th scope="row" class="">
+                <th scope="row">
                   085421
                 </th>
                 <td>서울 강동구 상암로 **길 ***호</td>
@@ -106,7 +106,7 @@
               </colgroup>
               <tbody>
               <tr>
-                <th scope="row" class="">
+                <th scope="row">
                   085421
                 </th>
                 <td>서울 강동구 상암로 **길 ***호</td>
@@ -154,7 +154,7 @@
               </colgroup>
               <tbody>
               <tr>
-                <th scope="row" class="">
+                <th scope="row">
                   085421
                 </th>
                 <td>서울 강동구 상암로 **길 ***호</td>

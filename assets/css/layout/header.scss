@@ -97,6 +97,7 @@
   }
 
   &.header-main {
+    top: var(--native-bar-height);
 
     .header-box {
       background: transparent;
@@ -189,6 +190,7 @@
         flex-shrink: 0;
       }
     }
+
     .bubble-leave-active {
       @include mixins.prefix(transition, opacity 0.25s variables.$easeInOutQuad);
     }

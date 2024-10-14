@@ -5,7 +5,7 @@
 .step-list-wrap {
   position: relative;
   width: 100%;
-  margin-top: 20px;
+  margin-top: 16px;
   overflow: hidden;
 
   .step-col-list {
@@ -21,7 +21,7 @@
       left: 0;
       top: 4px;
       height: 2px;
-      background-color: var(--Grayscale-30);
+      background-color: var(--Grayscale-40);
       border-radius: 2px;
       vertical-align: top;
     }
@@ -95,7 +95,7 @@
         ~ .step-item {
           &:before {
             width: 50%;
-            background-color: var(--Grayscale-30);
+            background-color: var(--Grayscale-40);
           }
           &:after {
             border-color: var(--Grayscale-40);
@@ -110,12 +110,12 @@
 
   &:not(:has(.is-active)) {
     &:before {
-      background-color: var(--Grayscale-30);
+      background-color: var(--Grayscale-40);
     }
 
     .step-col-list {
       &:before {
-        background-color: var(--Grayscale-30);
+        background-color: var(--Grayscale-40);
       }
 
       .step-item {
@@ -123,7 +123,7 @@
           border-color: var(--Grayscale-40);
         }
         &:before {
-          background-color: var(--Grayscale-30);
+          background-color: var(--Grayscale-40);
         }
 
         .status {

@@ -36,7 +36,7 @@
     :deep(.swiper-pagination) {
       left: 20px;
       right: auto;
-      top: calc(2.6dvh + 55px);
+      top: calc(2.6dvh + 55px + var(--native-bar-height));
       bottom: auto;
     }
 
@@ -67,7 +67,7 @@
         z-index: 1;
         height: 100%;
         padding: {
-          top: calc(8.36dvh + 55px);
+          top: calc(8.36dvh + 55px + var(--native-bar-height));
           left: 20px;
           right: 20px;
         }

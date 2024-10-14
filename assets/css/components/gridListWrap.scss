@@ -82,10 +82,8 @@ $wrapSize: ('xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
 
     @if ($i == 2) {
       :deep(.item-grid) {
-        .light-gray-lg-box, .white-lg-box {
+        .white-lg-box {
           &.bg-normal-delivery, &.bg-kind-delivery {
-            position: relative;
-            height: 100%;
             padding-bottom: 90px !important;
           }
         }

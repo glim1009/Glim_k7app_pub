@@ -61,7 +61,7 @@
     }
   }
 
-  [class^=fold-cont] {
+  .fold-cont {
     margin-top: 16px;
   }
 }
@@ -72,7 +72,8 @@
   @extend %foldBoxComm;
 
   :deep([class^=btn-flex][class$=wrap]),
-  :deep(:is([class^=line-light-gray], [class^=light-gray-], [class^=white], [class^=light-green])[class$=box]) {
+  :deep(:is([class^=line-light-gray], [class^=light-gray-], [class^=white], [class^=light-green])[class$=box]),
+  :deep([class^=fold][class$=box]) {
     margin: {
       left: 0;
       right: 0;
@@ -96,7 +97,7 @@
     }
   }
 
-  [class^=fold-cont] {
+  .fold-cont {
     overflow: hidden;
     margin-top: 16px;
   }

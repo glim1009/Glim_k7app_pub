@@ -38,7 +38,7 @@
       <RowListWrap gap="line">
         <!-- DESC :: 주소 단일 노출 시 li.item-md 구조 삭제 -->
         <li class="item-md">
-          <FlexGroup>
+          <FlexGroup class="location-info">
             <div class="flex-left">
               <TableWrap type="info" gap="sm" size="md" table-name="주소정보">
                 <colgroup>
@@ -64,7 +64,7 @@
           </FlexGroup>
         </li>
         <li class="item-md">
-          <FlexGroup>
+          <FlexGroup class="location-info">
             <div class="flex-left">
               <TableWrap type="info" gap="sm" size="md" table-name="주소정보">
                 <colgroup>

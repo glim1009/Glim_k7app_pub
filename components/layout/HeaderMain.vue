@@ -1,5 +1,5 @@
 <template>
-  <div class="header-wrapper header-main" :class="{ 'type-white': isHeaderTypeWhite }">
+  <div class="header-wrapper header-main" :style="nativeCustomStyle" :class="{ 'type-white': isHeaderTypeWhite }">
     <div class="header-box">
       <div class="header-left">
         <div class="addr-info">
@@ -39,6 +39,11 @@
 </template>
 
 <script setup lang="ts">
+const props = withDefaults(defineProps<{
+  barHeight?: number | string;
+}>(), {
+  barHeight: 0,
+});
 const popSettingAddress = ref({ open: false });
 const isHeaderAddrBubble = ref(false);
 
@@ -56,6 +61,12 @@ onUnmounted(() => {
 function headerMainChangeType() {
   isHeaderTypeWhite.value = getScrollPosition() > 55;
 }
+
+const nativeCustomStyle = computed(() => {
+  return {
+    "--native-bar-height": `${props.barHeight}px`,
+  };
+});
 </script>
 
 <style lang="scss" scoped>

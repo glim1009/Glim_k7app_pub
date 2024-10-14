@@ -39,6 +39,7 @@ $groupAlign: ('start', 'center', 'end');
         margin-left: 16px;
       }
     }
+
     :deep(.flex-start-right) {
       flex-wrap: wrap;
       flex: 1 0 auto;
@@ -105,5 +106,11 @@ $groupAlign: ('start', 'center', 'end');
     + .flex-start-right {
       margin-left: 10px;
     }
+  }
+}
+
+.location-info { // 현재 위치 추소 추가 팝업
+  :deep(.flex-right) {
+    margin-left: 10px;
   }
 }

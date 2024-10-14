@@ -12,8 +12,9 @@
             <div class="ui-select type-text">
               <select title="배송상태 정렬">
                 <option selected>
-                  예약일시 순
+                  배송상태 순
                 </option>
+                <option>예약일시 순</option>
                 <option>택배명 순</option>
               </select>
             </div>

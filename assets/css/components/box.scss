@@ -236,10 +236,15 @@
 
 /* e: box */
 .light-gray-lg-box, .white-lg-box {
-
   &.bg-normal-delivery, &.bg-kind-delivery {
     position: relative;
     height: 100%;
+
+    :deep([class^=ctitle-][class$=wrap]) {
+      .stext-gray70 {
+        word-break: break-all;
+      }
+    }
 
     &:after {
       content: '';
@@ -265,6 +270,12 @@
       @include mixins.ratio_images('/assets/images/common/comm_ico_h60_normal_delivery');
       /*@include mixins.ratio_images('/assets/images/common/comm_ico_h60_TBD');*/
     }
+  }
+}
+
+.light-gray-lg-box {
+  &.bg-normal-delivery, &.bg-kind-delivery {
+    padding-bottom: 90px !important;
   }
 }
 

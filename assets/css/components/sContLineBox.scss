@@ -27,6 +27,19 @@ $contGapSize: ('zero': 0px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
 
     .scont-line-box {
       width: 100%;
+
+      :deep(.light-gray-lg-box, .white-lg-box) {
+        &.bg-normal-delivery {
+          margin: {
+            right: 0;
+          };
+        }
+        &.bg-kind-delivery {
+          margin: {
+            left: 0;
+          };
+        }
+      }
       ~ .scont-line-box {
         margin: {
           top: 0;

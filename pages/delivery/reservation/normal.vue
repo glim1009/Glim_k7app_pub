@@ -23,48 +23,53 @@
                         </div>
                       </div>
                       <div class="form-cont">
-                        <GridListWrap gap="sm">
-                          <li class="item-grid-category is-active">
-                            <EBtn color="light-gray" size="sm" @click="openIndemnityAgreementNormal">
-                              <span class="text">의류</span>
-                            </EBtn>
-                          </li>
-                          <li class="item-grid-category">
-                            <EBtn color="light-gray" size="sm" @click="openIndemnityAgreementNormal">
-                              <span class="text">서신/서류</span>
-                            </EBtn>
-                          </li>
-                          <li class="item-grid-category">
-                            <EBtn color="light-gray" size="sm" @click="openIndemnityAgreementNormal">
-                              <span class="text">가전제품류</span>
-                            </EBtn>
-                          </li>
-                          <li class="item-grid-category">
-                            <EBtn color="light-gray" size="sm" @click="openIndemnityAgreementNormal">
-                              <span class="text">과일류</span>
-                            </EBtn>
-                          </li>
-                          <li class="item-grid-category">
-                            <EBtn color="light-gray" size="sm" @click="openIndemnityAgreementNormal">
-                              <span class="text">곡물류</span>
-                            </EBtn>
-                          </li>
-                          <li class="item-grid-category">
-                            <EBtn color="light-gray" size="sm" @click="openIndemnityAgreementNormal">
-                              <span class="text">한약류</span>
-                            </EBtn>
-                          </li>
-                          <li class="item-grid-category">
-                            <EBtn color="light-gray" size="sm" @click="openIndemnityAgreementNormal">
-                              <span class="text">식물류</span>
-                            </EBtn>
-                          </li>
-                          <li class="item-grid-category">
-                            <EBtn color="light-gray" size="sm" @click="openIndemnityAgreementNormal">
-                              <span class="text">잡화/서적류</span>
-                            </EBtn>
-                          </li>
-                        </GridListWrap>
+                        <div class="valid-check">
+                          <GridListWrap gap="sm">
+                            <li class="item-grid-category is-active">
+                              <EBtn color="light-gray" size="sm" @click="openIndemnityAgreementNormal">
+                                <span class="text">의류</span>
+                              </EBtn>
+                            </li>
+                            <li class="item-grid-category">
+                              <EBtn color="light-gray" size="sm" @click="openIndemnityAgreementNormal">
+                                <span class="text">서신/서류</span>
+                              </EBtn>
+                            </li>
+                            <li class="item-grid-category">
+                              <EBtn color="light-gray" size="sm" @click="openIndemnityAgreementNormal">
+                                <span class="text">가전제품류</span>
+                              </EBtn>
+                            </li>
+                            <li class="item-grid-category">
+                              <EBtn color="light-gray" size="sm" @click="openIndemnityAgreementNormal">
+                                <span class="text">과일류</span>
+                              </EBtn>
+                            </li>
+                            <li class="item-grid-category">
+                              <EBtn color="light-gray" size="sm" @click="openIndemnityAgreementNormal">
+                                <span class="text">곡물류</span>
+                              </EBtn>
+                            </li>
+                            <li class="item-grid-category">
+                              <EBtn color="light-gray" size="sm" @click="openIndemnityAgreementNormal">
+                                <span class="text">한약류</span>
+                              </EBtn>
+                            </li>
+                            <li class="item-grid-category">
+                              <EBtn color="light-gray" size="sm" @click="openIndemnityAgreementNormal">
+                                <span class="text">식물류</span>
+                              </EBtn>
+                            </li>
+                            <li class="item-grid-category">
+                              <EBtn color="light-gray" size="sm" @click="openIndemnityAgreementNormal">
+                                <span class="text">잡화/서적류</span>
+                              </EBtn>
+                            </li>
+                          </GridListWrap>
+                          <p class="valid-desc">
+                            배송상품선택을 입력해주세요.
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -273,7 +278,7 @@
                         </ETit>
                       </div>
                       <div class="form-cont">
-                        <div class="form-input-group valid-check fail">
+                        <div class="form-input-group valid-check">
                           <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호 입력" :max-length="11">
                             <EBtn color="line-light-gray" size="xs">
                               <span class="text">인증번호 발송</span>
@@ -812,7 +817,7 @@
                             </ETit>
                           </div>
                           <div class="flex-right">
-                            <EBtn size="xs" color="line-light-gray" @click="openAddressList">
+                            <EBtn size="xs" color="line-light-gray" disabled @click="openAddressList">
                               <span class="text">주소록 불러오기</span>
                             </EBtn>
                           </div>

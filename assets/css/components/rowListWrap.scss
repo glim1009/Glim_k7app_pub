@@ -56,7 +56,7 @@ $wrapSize: ('2xs': 8px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
     &.is-selected {
       // 택배 > 주소록 선택
       .white-lg-box {
-        .box-info-header {
+        .box-address-header {
           .ctitle-lg {
             position: relative;
             padding-left: 22px;
@@ -118,6 +118,10 @@ $wrapSize: ('2xs': 8px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
   }
 
   :deep(.item-sub-order-info) {
+    &:not(:first-child) {
+      margin-top: 2px;
+    }
+
     .flex-center-group {
       .flex-right {
         @include mixins.font_size_md;
@@ -175,6 +179,7 @@ $wrapSize: ('2xs': 8px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
   // 인기 검색어
   :deep(.item-search-rank) {
     width: 100%;
+    line-height: variables.$fontSizeLgLineHeight;
 
     .flex-center-group {
       justify-content: space-between;
@@ -218,7 +223,7 @@ $wrapSize: ('2xs': 8px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
             content: '';
             position: absolute;
             display: inline-block;
-            top: 8px;
+            top: 6px;
             right: 0;
             width: 8px;
             height: 8px;
@@ -228,10 +233,10 @@ $wrapSize: ('2xs': 8px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
 
           &.up, &.down {
             padding-right: 12px;
-            margin-top: 3px;
+            margin-top: 1px;
 
             &:after {
-              margin-top: -4px;
+              margin-top: -1px;
             }
           }
 

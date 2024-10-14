@@ -23,48 +23,53 @@
                         </div>
                       </div>
                       <div class="form-cont">
-                        <GridListWrap gap="sm">
-                          <li class="item-grid-category is-active">
-                            <EBtn color="light-gray" size="sm" @click="openIndemnityAgreementKind">
-                              <span class="text">의류</span>
-                            </EBtn>
-                          </li>
-                          <li class="item-grid-category">
-                            <EBtn color="light-gray" size="sm" @click="openIndemnityAgreementKind">
-                              <span class="text">서신/서류</span>
-                            </EBtn>
-                          </li>
-                          <li class="item-grid-category">
-                            <EBtn color="light-gray" size="sm" @click="openIndemnityAgreementKind">
-                              <span class="text">가전제품류</span>
-                            </EBtn>
-                          </li>
-                          <li class="item-grid-category">
-                            <EBtn color="light-gray" size="sm" @click="openIndemnityAgreementKind">
-                              <span class="text">과일류</span>
-                            </EBtn>
-                          </li>
-                          <li class="item-grid-category">
-                            <EBtn color="light-gray" size="sm" @click="openIndemnityAgreementKind">
-                              <span class="text">곡물류</span>
-                            </EBtn>
-                          </li>
-                          <li class="item-grid-category">
-                            <EBtn color="light-gray" size="sm" @click="openIndemnityAgreementKind">
-                              <span class="text">한약류</span>
-                            </EBtn>
-                          </li>
-                          <li class="item-grid-category">
-                            <EBtn color="light-gray" size="sm" @click="openIndemnityAgreementKind">
-                              <span class="text">식물류</span>
-                            </EBtn>
-                          </li>
-                          <li class="item-grid-category">
-                            <EBtn color="light-gray" size="sm" @click="openIndemnityAgreementKind">
-                              <span class="text">잡화/서적류</span>
-                            </EBtn>
-                          </li>
-                        </GridListWrap>
+                        <div class="valid-check">
+                          <GridListWrap gap="sm">
+                            <li class="item-grid-category is-active">
+                              <EBtn color="light-gray" size="sm" @click="openIndemnityAgreementKind">
+                                <span class="text">의류</span>
+                              </EBtn>
+                            </li>
+                            <li class="item-grid-category">
+                              <EBtn color="light-gray" size="sm" @click="openIndemnityAgreementKind">
+                                <span class="text">서신/서류</span>
+                              </EBtn>
+                            </li>
+                            <li class="item-grid-category">
+                              <EBtn color="light-gray" size="sm" @click="openIndemnityAgreementKind">
+                                <span class="text">가전제품류</span>
+                              </EBtn>
+                            </li>
+                            <li class="item-grid-category">
+                              <EBtn color="light-gray" size="sm" @click="openIndemnityAgreementKind">
+                                <span class="text">과일류</span>
+                              </EBtn>
+                            </li>
+                            <li class="item-grid-category">
+                              <EBtn color="light-gray" size="sm" @click="openIndemnityAgreementKind">
+                                <span class="text">곡물류</span>
+                              </EBtn>
+                            </li>
+                            <li class="item-grid-category">
+                              <EBtn color="light-gray" size="sm" @click="openIndemnityAgreementKind">
+                                <span class="text">한약류</span>
+                              </EBtn>
+                            </li>
+                            <li class="item-grid-category">
+                              <EBtn color="light-gray" size="sm" @click="openIndemnityAgreementKind">
+                                <span class="text">식물류</span>
+                              </EBtn>
+                            </li>
+                            <li class="item-grid-category">
+                              <EBtn color="light-gray" size="sm" @click="openIndemnityAgreementKind">
+                                <span class="text">잡화/서적류</span>
+                              </EBtn>
+                            </li>
+                          </GridListWrap>
+                          <p class="valid-desc">
+                            배송상품선택을 입력해주세요.
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </li>

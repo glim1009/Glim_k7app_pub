@@ -1,10 +1,9 @@
 <template>
   <NuxtLayout name="default">
     <template #header>
-      <LayoutHeaderMain />
+      <LayoutHeaderMain :bar-height="nativeBarHeight" />
     </template>
-
-    <div class="main-cont-wrapper">
+    <div class="main-cont-wrapper" :style="nativeCustomStyle">
       <!-- main - header -->
       <ContWrap in-top="zero" in-bottom="zero" class="side-zero">
         <!--  이벤트, 기획전 배너  -->
@@ -2512,10 +2511,6 @@ const popTermsOfLocation = ref({ open: false });
 const popPolicyOfcctv = ref({ open: false });
 const termOfUseType = ref<string>();
 
-function OpenAlarm(popupName: string) {
-
-}
-
 function handleOpenPopup(popupName: string) {
   switch (popupName) {
     // 이용약관 open
@@ -2542,9 +2537,18 @@ function handleOpenPopup(popupName: string) {
 onMounted(() => {
   // 토스트 팝업 open
   $showToast({
-    msg: "<a class='link-toast' href='/keep/home/pickup'>오늘 오후 8시 30분에 픽업 예정이에요.</a>"
-    , isClose: true
+    msg: "<a class='link-toast' href='/keep/home/pickup'>오늘 오후 8시 30분에 픽업 예정이에요.</a>",
+    isClose: true,
   });
+});
+
+// app header 스타일
+const nativeBarHeight = ref<number>(0); // DESC :: 네이브 상단 네비바 높이 값 호출
+
+const nativeCustomStyle = computed(() => {
+  return {
+    "--native-bar-height": `${nativeBarHeight.value}px`,
+  };
 });
 </script>
 
