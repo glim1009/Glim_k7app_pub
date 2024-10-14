@@ -450,24 +450,21 @@ $tBtnSize: ('xs', 'sm', 'md', 'lg');
     @if ($size == 'xs') {
       .text {
         @include mixins.font_size_md('md');
-
-        ~ [class^=ico][class$=xs] {
-          margin: {
-            top: 1px;
-          }
+      }
+      [class^=ico][class$=xs] {
+        margin: {
+          top: 1px;
         }
       }
     } @else if ($size == 'sm') {
       .text {
-        @include mixins.font_size_lg('md', 18px);
-
-        ~ [class^=ico][class$=xs] {
-          margin: {
-            top: 1px;
-          }
+        @include mixins.font_size_lg('md');
+      }
+      [class^=ico][class$=xs] {
+        margin: {
+          top: 2px;
         }
       }
-
       &[class*=-right-arw] {
         position: relative;
         display: block;
@@ -491,21 +488,33 @@ $tBtnSize: ('xs', 'sm', 'md', 'lg');
           @include mixins.svg_mask('/assets/images/common/comm_ico_arw_right_xs', var(--Grayscale-80));
         }
       }
-
     } @else if ($size == 'md') {
       .text {
-        @include mixins.font_size_xl('md');
+        @include mixins.font_size_xl;
       }
-
+      [class^=ico][class$=xs] {
+        margin: {
+          top: 3px;
+        }
+      }
+      [class^=ico][class$=sm] {
+        margin: {
+          top: 2px;
+        }
+      }
     } @else if ($size == 'lg') {
       .text {
         @include mixins.font_size_2xl;
         color: var(--Grayscale-100);
-
-        ~ [class^=ico] {
-          margin: {
-            top: 1px;
-          }
+      }
+      [class^=ico][class$=xs] {
+        margin: {
+          top: 3px;
+        }
+      }
+      [class^=ico][class$=sm] {
+        margin: {
+          top: 2px;
         }
       }
     }
@@ -611,13 +620,16 @@ $tBtnSize: ('xs', 'sm', 'md', 'lg');
         left: 0;
       }
     }
+
     ~ [class^=tbtn] {
       margin-top: 10px;
     }
   }
+
   &:has([class^=bar][class$=group]) {
     [class^=tbtn] {
       width: auto;
+
       ~ [class^=tbtn] {
         margin-top: 0;
       }
@@ -636,6 +648,7 @@ $btntSize: ('sm': 10px, 'md': 16px, 'lg': 24px, 'xl': 30px);
 
   &.prod-detail {
     gap: 6px;
+
     > .btn-line-light-gray-lg {
       padding: {
         left: 14px;

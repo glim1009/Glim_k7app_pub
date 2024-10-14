@@ -89,7 +89,7 @@
   </ContWrap>
   <ContWrap type="divider" in-top="lg">
     <ContBox>
-      <CtitleWrap>
+      <CtitleWrap size="lg">
         <FlexGroup>
           <div class="flex-left">
             <ETit type="cont">
@@ -707,8 +707,8 @@
 </template>
 
 <script setup lang="ts">
-const isRecentSearchData = ref(true); // 임시 : 최근 검색어 컨텐츠 확인을 위해 추가
-const isRecentSearchNoData = ref(false); // 임시 : 최근 검색어 데이터 없음 컨텐츠 확인을 위해 추가
+const isRecentSearchData = ref(false); // 임시 : 최근 검색어 컨텐츠 확인을 위해 추가
+const isRecentSearchNoData = ref(true); // 임시 : 최근 검색어 데이터 없음 컨텐츠 확인을 위해 추가
 </script>
 
 <style lang="scss" scoped>

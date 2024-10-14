@@ -1,8 +1,8 @@
 <template>
   <TabWrap fir-active="tab1" class="justify-tab">
     <template #tabs="{ activeTab, setActiveTab }">
-      <SwiperAutoWrap type="tab">
-        <swiper-slide class="tab-item">
+      <ul class="tab-list">
+        <li class="tab-item">
           <button
             type="button" class="tab-link"
             :class="{ 'is-active': activeTab === 'tab1' }"
@@ -10,8 +10,8 @@
           >
             <span class="tab-text">이용안내</span>
           </button>
-        </swiper-slide>
-        <swiper-slide class="tab-item">
+        </li>
+        <li class="tab-item">
           <button
             type="button" class="tab-link"
             :class="{ 'is-active': activeTab === 'tab2' }"
@@ -19,8 +19,8 @@
           >
             <span class="tab-text">운임안내</span>
           </button>
-        </swiper-slide>
-        <swiper-slide class="tab-item">
+        </li>
+        <li class="tab-item">
           <button
             type="button" class="tab-link"
             :class="{ 'is-active': activeTab === 'tab3' }"
@@ -28,8 +28,8 @@
           >
             <span class="tab-text">배송과정</span>
           </button>
-        </swiper-slide>
-      </SwiperAutoWrap>
+        </li>
+      </ul>
     </template>
     <template #default="{ activeTab }">
       <ContWrap v-if="activeTab === 'tab1'" type="white" in-top="lg">

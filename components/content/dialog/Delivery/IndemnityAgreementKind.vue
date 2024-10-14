@@ -26,13 +26,10 @@
             <ColorBox color="white" size="lg">
               <RowListWrap gap="sm">
                 <li class="dot-text-sm">
-                  포장당 50만원 초과하는 운송물에 대하여 소정의 할증운임을 받습니다.
+                  50만원을 초과하는 운송물은 취급하지 않습니다.
                 </li>
                 <li class="dot-text-sm">
-                  포장당 100만원 초과하는 운송물은 취급하지 않습니다.
-                </li>
-                <li class="dot-text-sm">
-                  물품가액은 배송 사고시 보상의 기준이 되며, 미기재시 최대 50만원 한도 내에서 배상해 드립니다.
+                  물품가액은 배송 사고시 보상의 기준이 되며, 미개재시 최대 50만원 한도 내에서 배상해 드립니다.
                 </li>
               </RowListWrap>
             </ColorBox>
@@ -87,7 +84,7 @@
               <CtitleWrap size="zero">
                 <ETit text="중량물" type="sCont" />
                 <div class="stext">
-                  중량 20kg 초과 (생물, 곡물류, 도서류, 이삿짐의 경우 20kg 이상) / <br>세변의합이 160cm 이상 / 한 변의 길이가 120cm를 초과하는 물품
+                  중량 5kg 초과 (생물, 곡물류, 도서류, 이삿짐의 경우 5kg 이상)/세변의 합이 80cm 이상 / 한 변의 길이가 80cm를 초과하는 물품
                 </div>
               </CtitleWrap>
             </ColorBox>
@@ -99,7 +96,7 @@
             <ColorBox color="white" size="lg">
               <TableWrap type="col" table-name="할증운임 및 배상한도">
                 <colgroup>
-                  <col style="width: 56%;">
+                  <col style="width: 51%;">
                   <col style="width: auto;">
                   <col style="width: auto;">
                 </colgroup>
@@ -119,18 +116,7 @@
                 <tbody>
                   <tr>
                     <td class="fc-gray80">
-                      50만원 초과 ~ 100만원 초과
-                    </td>
-                    <td class="fc-gray80">
-                      50%
-                    </td>
-                    <td class="fc-gray80">
-                      100만원
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="fc-gray80">
-                      100만원 초과 고가물품
+                      50만원 초과
                     </td>
                     <td colspan="2" class="fc-gray80">
                       미취급
@@ -147,19 +133,19 @@
             <ColorBox color="white" size="lg">
               <TableWrap type="info" gap="md" size="md" table-name="무게 및 규격 안내">
                 <colgroup>
-                  <col style="width: 40px;">
+                  <col style="width: 33px;">
                   <col style="width: auto;">
                 </colgroup>
                 <tbody>
                   <tr>
                     <th>무게</th>
-                    <td>20kg 이하</td>
+                    <td>5kg 이내</td>
                   </tr>
                   <tr>
                     <th class="va-top">
                       규격
                     </th>
-                    <td>가로,세로,높이 합 160cm 이하(최장변 120cm 이하), <br>가액 100만원 이하(50~100만원 할증 50%)</td>
+                    <td>가로,세로,높이 합 80cm 이하, 무게 5kg 이하, 가액 50만원 이하</td>
                   </tr>
                 </tbody>
               </TableWrap>

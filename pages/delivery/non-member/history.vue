@@ -3,7 +3,7 @@
     <BadgeGroup size="xl">
       <EBadge color="gray" badge-text="일반택배" />
       <EBadge color="green" badge-text="착한택배" />
-      <EBadge color="light-gray" badge-text="매장접수취소" />
+      <EBadge color="light-gray" badge-text="취소" />
       <ETooltip>택배수거불가 및 기타 사유로 매장에서 접수 처리를 취소했습니다.</ETooltip>
     </BadgeGroup>
     <CtitleWrap>

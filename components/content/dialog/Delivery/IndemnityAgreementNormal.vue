@@ -147,7 +147,7 @@
             <ColorBox color="white" size="lg">
               <TableWrap type="info" gap="md" size="md" table-name="무게 및 규격 안내">
                 <colgroup>
-                  <col style="width: 40px;">
+                  <col style="width: 33px;">
                   <col style="width: auto;">
                 </colgroup>
                 <tbody>
@@ -159,7 +159,7 @@
                     <th class="va-top">
                       규격
                     </th>
-                    <td>가로,세로,높이 합 160cm 이하(최장변 120cm 이하), <br>가액 100만원 이하(50~100만원 할증 50%)</td>
+                    <td>가로,세로,높이 합 160cm 이하(최장변 120cm 이하), 가액 100만원 이하(50~100만원 할증 50%)</td>
                   </tr>
                 </tbody>
               </TableWrap>
@@ -357,16 +357,20 @@
             </ColorBox>
           </ContBox>
           <ContBox size="lg">
-            <ETit text="파손면책이란?" type="cont" />
-            <div class="stext-lg">
-              배송중 포장 부실로 인한 상품의 고장/파손에 대하여 택배사의 배상 책임을 묻지 않겠다는 고객의 확인
-            </div>
+            <CtitleWrap size="zero">
+              <ETit text="파손면책이란?" type="cont" />
+              <div class="stext-lg">
+                배송중 포장 부실로 인한 상품의 고장/파손에 대하여 택배사의 배상 책임을 묻지 않겠다는 고객의 확인
+              </div>
+            </CtitleWrap>
           </ContBox>
           <ContBox size="lg">
-            <ETit text="택배 이용불가 상품" type="cont" />
-            <div class="stext-lg">
-              유리류, 사기류, 아크릴제품, 현금, 신분증, 여권, 예술품, 살아있는 동물, 포장하지 않은 상품, 액체류 등
-            </div>
+            <CtitleWrap size="zero">
+              <ETit text="택배 이용불가 상품" type="cont" />
+              <div class="stext-lg">
+                유리류, 사기류, 아크릴제품, 현금, 신분증, 여권, 예술품, 살아있는 동물, 포장하지 않은 상품, 액체류 등
+              </div>
+            </CtitleWrap>
           </ContBox>
         </ContWrap>
       </ContBox>

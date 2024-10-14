@@ -736,30 +736,59 @@
       <!-- // 데이터가 없는 경우  -->
     </ContWrap>
   </DeliveryHomeTab>
-
   <!-- pop : 택배 - 필터 옵션 -->
   <PopCommFilterOption v-model:sta="popDeliveryFilterOption">
     <!-- 필터옵션목록 -->
     <template #option>
       <li class="item-xl">
         <div class="form-field">
+          <div class="form-title">
+            <ETit text="택배구분" type="cont" />
+          </div>
           <div class="form-cont">
             <UiColGroup gap="sm">
               <span class="ui-rdo-button">
-                <input id="filterProdType01" type="radio" name="filterStatus01">
+                <input id="filterProdType01" type="radio" name="filterProdType01">
                 <label for="filterProdType01"><span class="text-sm">전체</span></label>
               </span>
               <span class="ui-rdo-button">
-                <input id="filterProdType02" type="radio" name="filterStatus01">
-                <label for="filterProdType02"><span class="text-sm">사용가능</span></label>
+                <input id="filterProdType02" type="radio" name="filterProdType01">
+                <label for="filterProdType02"><span class="text-sm">일반택배</span></label>
               </span>
               <span class="ui-rdo-button">
-                <input id="filterProdType03" type="radio" name="filterStatus01">
-                <label for="filterProdType03"><span class="text-sm">사용완료</span></label>
+                <input id="filterProdType03" type="radio" name="filterProdType01">
+                <label for="filterProdType03"><span class="text-sm">착한택배</span></label>
+              </span>
+            </UiColGroup>
+          </div>
+        </div>
+      </li>
+      <li class="item-xl">
+        <div class="form-field">
+          <div class="form-title">
+            <ETit text="배송상태" type="cont" />
+          </div>
+          <div class="form-cont">
+            <UiColGroup gap="sm">
+              <span class="ui-rdo-button">
+                <input id="filterProdType04" type="radio" name="filterStatus02">
+                <label for="filterProdType04"><span class="text-sm">전체</span></label>
               </span>
               <span class="ui-rdo-button">
-                <input id="filterProdType04" type="radio" name="filterStatus01">
-                <label for="filterProdType04"><span class="text-sm">기간만료</span></label>
+                <input id="filterProdType05" type="radio" name="filterStatus02">
+                <label for="filterProdType05"><span class="text-sm">접수완료</span></label>
+              </span>
+              <span class="ui-rdo-button">
+                <input id="filterProdType06" type="radio" name="filterStatus02">
+                <label for="filterProdType06"><span class="text-sm">배송중(점포 출발)</span></label>
+              </span>
+              <span class="ui-rdo-button">
+                <input id="filterProdType07" type="radio" name="filterStatus02">
+                <label for="filterProdType07"><span class="text-sm">배송중(배송지, 점포 도착)</span></label>
+              </span>
+              <span class="ui-rdo-button">
+                <input id="filterProdType08" type="radio" name="filterStatus02">
+                <label for="filterProdType08"><span class="text-sm">배송완료</span></label>
               </span>
             </UiColGroup>
           </div>

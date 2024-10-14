@@ -2,76 +2,74 @@
   <!-- 검색결과 있음 -->
   <ContWrap v-if="isDataSearch" type="white" in-bottom="sm">
     <div class="related-search-wrap">
-      <div class="title">
-        연관
-      </div>
+      <div class="title">연관</div>
       <SwiperAutoWrap gap="10">
         <!-- slide -->
         <swiper-slide>
-          <ETBtn tag="a" size="sm" to="/search/result">
+          <ETBtn tag="a" size="sm" to="javascript:">
             <span class="text">만두국</span>
           </ETBtn>
         </swiper-slide>
         <!-- // slide -->
         <!-- slide -->
         <swiper-slide>
-          <ETBtn tag="a" size="sm" to="/search/result">
+          <ETBtn tag="a" size="sm" to="javascript:">
             <span class="text">김치만두</span>
           </ETBtn>
         </swiper-slide>
         <!-- // slide -->
         <!-- slide -->
         <swiper-slide>
-          <ETBtn tag="a" size="sm" to="/search/result">
+          <ETBtn tag="a" size="sm" to="javascript:">
             <span class="text">고기만두</span>
           </ETBtn>
         </swiper-slide>
         <!-- // slide -->
         <!-- slide -->
         <swiper-slide>
-          <ETBtn tag="a" size="sm" to="/search/result">
+          <ETBtn tag="a" size="sm" to="javascript:">
             <span class="text">군만두</span>
           </ETBtn>
         </swiper-slide>
         <!-- // slide -->
         <!-- slide -->
         <swiper-slide>
-          <ETBtn tag="a" size="sm" to="/search/result">
+          <ETBtn tag="a" size="sm" to="javascript:">
             <span class="text">갈비만두</span>
           </ETBtn>
         </swiper-slide>
         <!-- // slide -->
         <!-- slide -->
         <swiper-slide>
-          <ETBtn tag="a" size="sm" to="/search/result">
+          <ETBtn tag="a" size="sm" to="javascript:">
             <span class="text">비비고만두</span>
           </ETBtn>
         </swiper-slide>
         <!-- // slide -->
         <!-- slide -->
         <swiper-slide>
-          <ETBtn tag="a" size="sm" to="/search/result">
+          <ETBtn tag="a" size="sm" to="javascript:">
             <span class="text">만두국</span>
           </ETBtn>
         </swiper-slide>
         <!-- // slide -->
         <!-- slide -->
         <swiper-slide>
-          <ETBtn tag="a" size="sm" to="/search/result">
+          <ETBtn tag="a" size="sm" to="javascript:">
             <span class="text">김치만두</span>
           </ETBtn>
         </swiper-slide>
         <!-- // slide -->
         <!-- slide -->
         <swiper-slide>
-          <ETBtn tag="a" size="sm" to="/search/result">
+          <ETBtn tag="a" size="sm" to="javascript:">
             <span class="text">고기만두</span>
           </ETBtn>
         </swiper-slide>
         <!-- // slide -->
         <!-- slide -->
         <swiper-slide>
-          <ETBtn tag="a" size="sm" to="/search/result">
+          <ETBtn tag="a" size="sm" to="javascript:">
             <span class="text">군만두</span>
           </ETBtn>
         </swiper-slide>
@@ -1784,9 +1782,6 @@
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
                   </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
-                  </div>
                   <div class="rating">
                     <EIco name="rating" color="gray50" size="xs">
                       <span class="offscreen">별점</span>
@@ -1954,9 +1949,6 @@
                     <EGoods type="origin" size="sm" val="3,000" unit="원" />
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
-                  </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
                   </div>
                   <div class="rating">
                     <EIco name="rating" color="gray50" size="xs">
@@ -2129,9 +2121,6 @@
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
                   </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
-                  </div>
                 </div>
               </div>
               <!-- // thumb-prod -->
@@ -2284,9 +2273,6 @@
                     <EGoods type="origin" size="sm" val="3,000" unit="원" />
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
-                  </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
                   </div>
                 </div>
               </div>
@@ -2530,7 +2516,7 @@
 <script setup lang="ts">
 const isDataSearch = ref(true); // 임시 : 검색결과 컨텐츠 확인을 위해 추가
 const isNoDataSearchFilter = ref(true); // 임시 : 필터 조건 검색결과 없음 컨텐츠 확인을 위해 추가
-const isNoDataSearch = ref(false); // 임시 : 검색결과 없음 컨텐츠 확인을 위해 추가
+const isNoDataSearch = ref(true); // 임시 : 검색결과 없음 컨텐츠 확인을 위해 추가
 
 // 상품필터옵션 팝업
 const popProdFilterOption = ref({ open: false });

@@ -112,10 +112,7 @@
                           </swiper-slide>
                         </SwiperAutoWrap>
                         <RowListWrap gap="sm">
-                          <li class="dot-text">
-                            50만원 초과할 경우 소정의 할증운임을 받습니다.
-                          </li>
-                          <li class="dot-text">
+                          <li class="dot-text-sm">
                             물품가액은 배송 사고시 보상의 기준이 되며, 미개재시 최대 50만원 한도 내에서 배상해 드립니다
                           </li>
                         </RowListWrap>
@@ -873,39 +870,8 @@
                       </th>
                       <td class="ta-right">
                         <div class="goods-group">
-                          <EGoods type="origin" val="3,200" unit="원" />
-                          <EGoods val="3,000" unit="원" />
+                          <EGoods val="2,200" unit="원" />
                         </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        타권역
-                      </th>
-                      <td class="ta-right">
-                        <div class="goods-group">
-                          <EGoods type="origin" val="3,700" unit="원" />
-                          <EGoods val="3,000" unit="원" />
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        제주도
-                      </th>
-                      <td class="ta-right">
-                        <div class="goods-group">
-                          <EGoods type="origin" val="6,200" unit="원" />
-                          <EGoods val="3,000" unit="원" />
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="row">
-                        도서산간
-                      </th>
-                      <td class="ta-right">
-                        지역별 요금 상이
                       </td>
                     </tr>
                   </tbody>
