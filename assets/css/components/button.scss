@@ -11,7 +11,7 @@
   border-radius: 27px;
 
   .text {
-    @include mixins.font_size_xl('sb');
+    @include mixins.font_size_xl;
 
     ~ [class^=ico] {
       margin-left: 4px;
@@ -51,7 +51,7 @@
   border-radius: 22px;
 
   .text {
-    @include mixins.font_size_md('sb');
+    @include mixins.font_size_md;
 
     ~ [class^=ico] {
       margin-left: 4px;
