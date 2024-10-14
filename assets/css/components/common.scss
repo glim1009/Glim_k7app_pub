@@ -812,48 +812,14 @@
 .cs-center-box {
   @include mixins.justify_width(center,start);
 
-  &.bg-cs-7eleven, &.bg-cs-kind-delivery {
-    min-height: 60px;
-    position: relative;
-
-    &:before {
-      content: '';
-      position: absolute;
-      display: inline-block;
-      left: 0;
-      top: 50%;
-      @include mixins.prefix(transform, translateY(-50%));
-      width: 60px;
-      height: 60px;
-      vertical-align: top;
-    }
-  }
-
-  &.bg-cs-7eleven {
-    &:before {
-      //@include mixins.ratio_images('/assets/images/common/comm_ico_h60_kind_delivery'); // TBD
-      @include mixins.ratio_images('/assets/images/common/comm_ico_h60_TBD');
-    }
-  }
-
-  &.bg-cs-kind-delivery {
-    &:before {
-      //@include mixins.ratio_images('/assets/images/common/comm_ico_h60_kind_delivery'); // TBD
-      @include mixins.ratio_images('/assets/images/common/comm_ico_h60_TBD');
-    }
-  }
-
   [class^=ctitle][class$=-wrap] {
-    padding-left: 70px;
-
-    .stext-lg {
+    .stext-lg-black {
       margin: 0;
       +.ctitle-sm {
         margin-top: 4px;
       }
     }
   }
-
 }
 
 [class^=tbtn] { // 링크 타이틀 + 아이콘

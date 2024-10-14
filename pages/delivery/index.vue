@@ -19,8 +19,8 @@
             <div class="bar-flex-group">
               <div class="bar-item">
                 <div class="alert-count-group type-reservation">
-                  <span class="stext-gray70">예약중</span>
-                  <EGoods size="sm" val="1" unit="건" class="fw-bold" />
+                  <span class="stext-black">예약중</span>
+                  <EGoods size="sm" val="1" class="fw-bold fc-spot" />
                 </div>
                 <NuxtLink class="btn-link" to="/delivery/situation">
                   <span class="offscreen">예약중 목록 바로가기</span>
@@ -28,8 +28,8 @@
               </div>
               <div class="bar-item">
                 <div class="alert-count-group type-delivery">
-                  <span class="stext-gray70">배송중</span>
-                  <EGoods size="sm" val="2" unit="건" class="fw-bold" />
+                  <span class="stext-black">배송중</span>
+                  <EGoods size="sm" val="2" class="fw-bold fc-spot" />
                 </div>
                 <NuxtLink class="btn-link" to="/delivery/search">
                   <span class="offscreen">배송중 목록 바로가기</span>
@@ -37,8 +37,8 @@
               </div>
               <div class="bar-item">
                 <div class="alert-count-group type-history">
-                  <span class="stext-gray70">이용내역</span>
-                  <EGoods size="sm" val="25" unit="건" class="fw-bold" />
+                  <span class="stext-black">이용내역</span>
+                  <EGoods size="sm" val="25" class="fw-bold fc-spot" />
                 </div>
                 <NuxtLink class="btn-link" to="/delivery/history">
                   <span class="offscreen">이용내역 목록 바로가기</span>
@@ -58,15 +58,15 @@
             <div class="bar-flex-group">
               <div class="bar-item">
                 <div class="alert-count-group type-nonmember-reservation">
-                  <span class="stext-gray90">비회원 택배예약</span>
+                  <span class="stext-black">비회원 택배예약</span>
                 </div>
                 <button type="button" class="btn-link" @click="openReservationNonMember">
                   <span class="offscreen">비회원 택배예약 바로가기</span>
                 </button>
               </div>
               <div class="bar-item">
-                <div class="alert-count-group type-nonmember-search">
-                  <span class="stext-gray90">비회원 예약/배송 조회</span>
+                <div class="alert-count-group type-history">
+                  <span class="stext-black">비회원 예약/배송 조회</span>
                 </div>
                 <NuxtLink class="btn-link" to="/delivery/non-member/history">
                   <span class="offscreen">비회원 예약/배송 조회 바로가기</span>
@@ -83,8 +83,8 @@
             <div class="bar-flex-group">
               <div class="bar-item">
                 <div class="alert-count-group type-reservation">
-                  <span class="stext-gray70">예약중</span>
-                  <EGoods size="sm" val="1" unit="건" class="fw-bold" />
+                  <span class="stext-black">예약중</span>
+                  <EGoods size="sm" val="1" class="fw-bold fc-spot" />
                 </div>
                 <NuxtLink class="btn-link" to="/delivery/situation">
                   <span class="offscreen">예약중 목록 바로가기</span>
@@ -92,8 +92,8 @@
               </div>
               <div class="bar-item">
                 <div class="alert-count-group type-delivery">
-                  <span class="stext-gray70">배송중</span>
-                  <EGoods size="sm" val="2" unit="건" class="fw-bold" />
+                  <span class="stext-black">배송중</span>
+                  <EGoods size="sm" val="2" class="fw-bold fc-spot" />
                 </div>
                 <NuxtLink class="btn-link" to="/delivery/search">
                   <span class="offscreen">배송중 목록 바로가기</span>
@@ -101,8 +101,8 @@
               </div>
               <div class="bar-item">
                 <div class="alert-count-group type-history">
-                  <span class="stext-gray70">이용내역</span>
-                  <EGoods size="sm" val="25" unit="건" class="fw-bold" />
+                  <span class="stext-black">이용내역</span>
+                  <EGoods size="sm" val="25" class="fw-bold fc-spot" />
                 </div>
                 <NuxtLink class="btn-link" to="/delivery/history">
                   <span class="offscreen">이용내역 목록 바로가기</span>
@@ -129,7 +129,7 @@
             <CtitleWrap size="zero">
               <ETit text="착한택배" type="lgCont" />
               <div class="stext-gray70">
-                편의점에서 편의점으로<br>알뜰하게
+                편의점에서 착한가격으로 편리하게
               </div>
             </CtitleWrap>
           </ColorBox>
@@ -174,39 +174,39 @@
     <ContWrap type="white" in-top="lg">
       <CtitleWrap size="md">
         <ETit text="고객 콜센터" type="lgCont" />
-        <div class="stext">
+        <div class="stext-lg-gray70">
           평일 09:00~18:00 / 토요일 09:00~13:00
         </div>
       </CtitleWrap>
       <GridListWrap gap="sm" col="2">
         <li class="item-grid">
-          <div class="cs-center-box bg-cs-7eleven">
+          <ColorBox color="line-light-gray" class="cs-center-box" size="lg">
             <CtitleWrap size="zero">
               <div class="stext-lg-black">
-                세븐일레븐 착한택배
+                롯데택배
               </div>
               <div class="ctitle-sm">
-                1544-0124
+                1688-1211
               </div>
             </CtitleWrap>
-          </div>
+          </ColorBox>
           <NuxtLink class="btn-link" to="tel:1688-1211">
-            <span class="offscreen">롯데택배 세븐일레븐</span>
+            <span class="offscreen">롯데택배 콜센터</span>
           </NuxtLink>
         </li>
         <li class="item-grid">
-          <div class="cs-center-box bg-cs-kind-delivery">
+          <ColorBox color="line-light-gray" class="cs-center-box" size="lg">
             <CtitleWrap size="zero">
               <div class="stext-lg-black">
-                세븐일레븐 착한택배
+                착한택배
               </div>
               <div class="ctitle-sm">
                 1544-0124
               </div>
             </CtitleWrap>
-          </div>
+          </ColorBox>
           <NuxtLink class="btn-link" to="tel:1544-0124">
-            <span class="offscreen">세븐일레븐 착한택배</span>
+            <span class="offscreen">착한택배 콜센터</span>
           </NuxtLink>
         </li>
       </GridListWrap>
@@ -278,7 +278,7 @@
   <!-- // pop : 비회원 택배예약 -->
 
   <!-- pop : 매장 선택 -->
-  <PopStoreSearchSelect :is-search-data="popSearchType" v-model:sta="popStoreSearchSelect" />
+  <PopStoreSearchSelect v-model:sta="popStoreSearchSelect" :is-search-data="popSearchType" />
   <!-- // pop : 매장 선택 -->
 </template>
 

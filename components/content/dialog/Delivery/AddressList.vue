@@ -36,7 +36,7 @@
                     <FlexGroup align="start">
                       <div class="info-flex-left">
                         <CtitleWrap size="sm">
-                          <div class="ctitle-lg">
+                          <div class="ctitle-md">
                             사무실
                           </div>
                           <EBadge color="light-gray" size="md" badge-text="기본주소지" />
@@ -78,7 +78,7 @@
                     <FlexGroup align="start">
                       <div class="info-flex-left">
                         <CtitleWrap size="sm">
-                          <div class="ctitle-lg">
+                          <div class="ctitle-md">
                             엄마집
                           </div>
                         </CtitleWrap>
@@ -119,7 +119,7 @@
                     <FlexGroup align="start">
                       <div class="info-flex-left">
                         <CtitleWrap size="sm">
-                          <div class="ctitle-lg">
+                          <div class="ctitle-md">
                             우리집
                           </div>
                         </CtitleWrap>

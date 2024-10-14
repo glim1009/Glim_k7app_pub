@@ -155,39 +155,32 @@
   &:before {
     content: '';
     display: block;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     margin: 0 auto 10px;
     overflow: hidden;
-    @include mixins.ratio_images('/assets/images/common/comm_ico_h60_TBD');
-    //@include mixins.ratio_images('/assets/images/delivery/bg_alert_reservation'); //TBD
+    @include mixins.ratio_images('/assets/images/delivery/bg_alert_reservation');
   }
 
   &.type-delivery {
     &:before {
-      //@include mixins.ratio_images_change('/assets/images/delivery/bg_alert_delivery');//TBD
+      @include mixins.ratio_images_change('/assets/images/delivery/bg_alert_delivery');
     }
   }
 
   &.type-history {
     &:before {
-      //@include mixins.ratio_images_change('/assets/images/delivery/bg_alert_history');//TBD
+      @include mixins.ratio_images_change('/assets/images/delivery/bg_alert_history');
     }
   }
 
   &.type-nonmember-reservation {
     &:before {
-      //@include mixins.ratio_images_change('/assets/images/delivery/bg_alert_history');//TBD
+      @include mixins.ratio_images_change('/assets/images/delivery/bg_alert_nonmember_reservation');
     }
   }
 
-  &.type-nonmember-search {
-    &:before {
-      //@include mixins.ratio_images_change('/assets/images/delivery/bg_alert_history');//TBD
-    }
-  }
-
-  .stext {
+  .stext-black {
     display: inline-block;
     vertical-align: top;
 
