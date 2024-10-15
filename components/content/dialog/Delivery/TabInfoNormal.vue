@@ -62,7 +62,7 @@
               <RowListWrap size="xs" gap="md">
                 <li class="item">
                   <ColorBox color="line-light-gray" size="lg">
-                    <CtitleWrap>
+                    <CtitleWrap size="zero">
                       <div class="ctitle-sm">
                         매장에 김펭구 무인택배기가 있을 경우
                       </div>
@@ -75,9 +75,9 @@
                 <li class="item">
                   <ColorBox color="line-light-gray" size="lg">
                     <SContLineBox>
-                      <CtitleWrap>
+                      <CtitleWrap size="zero">
                         <div class="ctitle-sm">
-                          매장에 김펭구 무인택배기가 있을 경우
+                          매장에 김펭구 무인 택배기가 없을 경우
                         </div>
                         <div class="stext">
                           카운터에 택배물품을 전달해주시고, 매장 근무자에게 예약내역 바코드를 보여주세요.
@@ -279,10 +279,15 @@
           </TableWrap>
         </ContBox>
       </ContWrap>
-      <ContWrap v-if="activeTab === 'tab3'" in-top="lg">
+      <ContWrap v-if="activeTab === 'tab3'">
         <ContBox>
-          <div class="thumb-box">
-            <img src="/assets/images/delivery/delivery_process_flow.png" alt="일반택배 배송 절차 안내 이미지">
+          <div class="delivery-process-wrap">
+            <div class="delivery-process-header">
+              <img src="/assets/images/delivery/delivery_process_divide.png" alt="일반택배 배송 절차 안내 구분 이미지">
+            </div>
+            <div class="delivery-process-body">
+              <img src="/assets/images/delivery/delivery_process_flow.png" alt="일반택배 배송 절차 안내 이미지">
+            </div>
           </div>
         </ContBox>
       </ContWrap>

@@ -1335,3 +1335,26 @@
   }
 }
 /* e: 검색어 입력중 case */
+
+.delivery-process-wrap {
+  .delivery-process-header {
+    margin-bottom: 20px;
+
+    img {
+      display: block;
+      height: 20px;
+      margin-left: auto;
+      object-fit: cover;
+    }
+  }
+
+  .delivery-process-body {
+    width: 100%;
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
