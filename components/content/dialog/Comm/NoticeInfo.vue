@@ -1,9 +1,7 @@
 <template>
   <ContDialog v-model="isOpen">
     <template #title>
-      <div class="dialog-title">
-        공지사항 타이틀 노출
-      </div>
+      <div class="dialog-title">공지사항 타이틀 노출</div>
     </template>
     <template #body>
       <ContWrap type="white" in-top="zero" in-bottom="zero">
@@ -27,7 +25,7 @@
         <div class="flex-left">
           <!-- DESC :: 설정안함 선택 시 [ui-chk] 구조 삭제 -->
           <div class="ui-chk">
-            <input id="closeChk01" type="checkbox" @click="closeDialog">
+            <input type="checkbox" id="closeChk01" @click="closeDialog">
             <label for="closeChk01">
               <span class="text-md fw-md fc-gray70">오늘 하루 보지 않기</span>
             </label>
@@ -43,7 +41,6 @@
     </template>
   </ContDialog>
 </template>
-
 <script setup lang="ts">
 interface DialogState {
   open: boolean;
@@ -53,11 +50,11 @@ const props = defineProps<{
   sta: DialogState;
 }>();
 
-const emit = defineEmits(["update:sta"]);
+const emit = defineEmits(['update:sta']);
 
 const isOpen = computed({
   get: () => props.sta.open,
-  set: value => emit("update:sta", { ...props.sta, open: value }),
+  set: (value) => emit('update:sta', { ...props.sta, open: value }),
 });
 
 const closeDialog = () => {

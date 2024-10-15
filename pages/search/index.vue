@@ -103,7 +103,7 @@
       </CtitleWrap>
       <SContColWrap>
         <SContLineBox>
-          <RowListWrap gap="search">
+          <RowListWrap class="search-rank">
             <li class="item-search-rank">
               <FlexGroup>
                 <div class="flex-rank-left">
@@ -189,7 +189,7 @@
           </RowListWrap>
         </SContLineBox>
         <SContLineBox>
-          <RowListWrap gap="search">
+          <RowListWrap class="search-rank">
             <li class="item-search-rank">
               <FlexGroup>
                 <div class="flex-rank-left">

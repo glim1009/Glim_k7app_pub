@@ -89,7 +89,7 @@
   </ContWrap>
   <ContWrap type="divider" in-top="lg">
     <ContBox>
-      <CtitleWrap>
+      <CtitleWrap size="lg">
         <FlexGroup>
           <div class="flex-left">
             <ETit type="cont">
@@ -103,14 +103,12 @@
       </CtitleWrap>
       <SContColWrap>
         <SContLineBox>
-          <RowListWrap>
+          <RowListWrap class="search-rank">
             <li class="item-search-rank">
               <FlexGroup>
                 <div class="flex-rank-left">
                   <span class="rank">1</span>
-                  <NuxtLink class="link-keyword" to="/stock/product/result">
-                    <span class="keyword">바인더</span>
-                  </NuxtLink>
+                  <span class="keyword">바인더</span>
                 </div>
                 <div class="flex-rank-right">
                   <span class="rank-status up">
@@ -119,14 +117,15 @@
                   </span>
                 </div>
               </FlexGroup>
+              <NuxtLink class="btn-link" to="/search/result">
+                <span class="offscreen">검색결과 바로가기</span>
+              </NuxtLink>
             </li>
             <li class="item-search-rank">
               <FlexGroup>
                 <div class="flex-rank-left">
                   <span class="rank">2</span>
-                  <NuxtLink class="link-keyword" to="/stock/product/result">
-                    <span class="keyword">KBO</span>
-                  </NuxtLink>
+                  <span class="keyword">KBO</span>
                 </div>
                 <div class="flex-rank-right">
                   <span class="rank-status">
@@ -134,14 +133,15 @@
                   </span>
                 </div>
               </FlexGroup>
+              <NuxtLink class="btn-link" to="/search/result">
+                <span class="offscreen">검색결과 바로가기</span>
+              </NuxtLink>
             </li>
             <li class="item-search-rank">
               <FlexGroup>
                 <div class="flex-rank-left">
                   <span class="rank">3</span>
-                  <NuxtLink class="link-keyword" to="/stock/product/result">
-                    <span class="keyword">초콜릿</span>
-                  </NuxtLink>
+                  <span class="keyword">초콜릿</span>
                 </div>
                 <div class="flex-rank-right">
                   <span class="rank-status down">
@@ -150,14 +150,15 @@
                   </span>
                 </div>
               </FlexGroup>
+              <NuxtLink class="btn-link" to="/search/result">
+                <span class="offscreen">검색결과 바로가기</span>
+              </NuxtLink>
             </li>
             <li class="item-search-rank">
               <FlexGroup>
                 <div class="flex-rank-left">
                   <span class="rank">4</span>
-                  <NuxtLink class="link-keyword" to="/stock/product/result">
-                    <span class="keyword">검색어</span>
-                  </NuxtLink>
+                  <span class="keyword">검색어</span>
                 </div>
                 <div class="flex-rank-right">
                   <span class="rank-status">
@@ -165,14 +166,15 @@
                   </span>
                 </div>
               </FlexGroup>
+              <NuxtLink class="btn-link" to="/search/result">
+                <span class="offscreen">검색결과 바로가기</span>
+              </NuxtLink>
             </li>
             <li class="item-search-rank">
               <FlexGroup>
                 <div class="flex-rank-left">
                   <span class="rank">5</span>
-                  <NuxtLink class="link-keyword" to="/stock/product/result">
-                    <span class="keyword">검색어텍스트...</span>
-                  </NuxtLink>
+                  <span class="keyword">검색어텍스트...</span>
                 </div>
                 <div class="flex-rank-right">
                   <span class="rank-status">
@@ -180,18 +182,19 @@
                   </span>
                 </div>
               </FlexGroup>
+              <NuxtLink class="btn-link" to="/search/result">
+                <span class="offscreen">검색결과 바로가기</span>
+              </NuxtLink>
             </li>
           </RowListWrap>
         </SContLineBox>
         <SContLineBox>
-          <RowListWrap>
+          <RowListWrap class="search-rank">
             <li class="item-search-rank">
               <FlexGroup>
                 <div class="flex-rank-left">
                   <span class="rank">6</span>
-                  <NuxtLink class="link-keyword" to="/stock/product/result">
-                    <span class="keyword">검색어</span>
-                  </NuxtLink>
+                  <span class="keyword">검색어</span>
                 </div>
                 <div class="flex-rank-right">
                   <span class="rank-status">
@@ -199,14 +202,15 @@
                   </span>
                 </div>
               </FlexGroup>
+              <NuxtLink class="btn-link" to="/search/result">
+                <span class="offscreen">검색결과 바로가기</span>
+              </NuxtLink>
             </li>
             <li class="item-search-rank">
               <FlexGroup>
                 <div class="flex-rank-left">
                   <span class="rank">7</span>
-                  <NuxtLink class="link-keyword" to="/stock/product/result">
-                    <span class="keyword">검색어텍스트...</span>
-                  </NuxtLink>
+                  <span class="keyword">검색어텍스트...</span>
                 </div>
                 <div class="flex-rank-right">
                   <span class="rank-status">
@@ -214,14 +218,15 @@
                   </span>
                 </div>
               </FlexGroup>
+              <NuxtLink class="btn-link" to="/search/result">
+                <span class="offscreen">검색결과 바로가기</span>
+              </NuxtLink>
             </li>
             <li class="item-search-rank">
               <FlexGroup>
                 <div class="flex-rank-left">
                   <span class="rank">8</span>
-                  <NuxtLink class="link-keyword" to="/stock/product/result">
-                    <span class="keyword">검색어텍스트...</span>
-                  </NuxtLink>
+                  <span class="keyword">검색어텍스트...</span>
                 </div>
                 <div class="flex-rank-right">
                   <span class="rank-status">
@@ -229,14 +234,15 @@
                   </span>
                 </div>
               </FlexGroup>
+              <NuxtLink class="btn-link" to="/search/result">
+                <span class="offscreen">검색결과 바로가기</span>
+              </NuxtLink>
             </li>
             <li class="item-search-rank">
               <FlexGroup>
                 <div class="flex-rank-left">
                   <span class="rank">9</span>
-                  <NuxtLink class="link-keyword" to="/stock/product/result">
-                    <span class="keyword">검색어텍스트...</span>
-                  </NuxtLink>
+                  <span class="keyword">검색어텍스트...</span>
                 </div>
                 <div class="flex-rank-right">
                   <span class="rank-status">
@@ -244,14 +250,15 @@
                   </span>
                 </div>
               </FlexGroup>
+              <NuxtLink class="btn-link" to="/search/result">
+                <span class="offscreen">검색결과 바로가기</span>
+              </NuxtLink>
             </li>
             <li class="item-search-rank">
               <FlexGroup>
                 <div class="flex-rank-left">
                   <span class="rank">10</span>
-                  <NuxtLink class="link-keyword" to="/stock/product/result">
-                    <span class="keyword">검색어말줄임텍...</span>
-                  </NuxtLink>
+                  <span class="keyword">검색어말줄임텍...</span>
                 </div>
                 <div class="flex-rank-right">
                   <span class="rank-status">
@@ -259,6 +266,9 @@
                   </span>
                 </div>
               </FlexGroup>
+              <NuxtLink class="btn-link" to="/search/result">
+                <span class="offscreen">검색결과 바로가기</span>
+              </NuxtLink>
             </li>
           </RowListWrap>
         </SContLineBox>

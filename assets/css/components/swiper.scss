@@ -77,6 +77,11 @@ $swiperType: ('', '-line', '-bar', '-tab');
         width: 200px;
         min-height: 128px;
 
+        .btn-bookmark {
+          position: relative;
+          z-index: 5;
+        }
+
         &:has(.store-add-wrap) {
           @include mixins.justify_width(center, center);
           border: 1px dashed var(--Grayscale-30);

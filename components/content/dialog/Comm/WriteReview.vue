@@ -341,5 +341,6 @@ const textareaEmits = ref<string | null>("");
 // 입력값이 변경될 때 발생하는 이벤트
 function handlerValue(value: any) {
   textareaEmits.value = value;
-};
+}
+
 </script>

@@ -167,9 +167,6 @@
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
                   </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
-                  </div>
                   <div class="rating">
                     <EIco name="rating" color="gray50" size="xs">
                       <span class="offscreen">별점</span>

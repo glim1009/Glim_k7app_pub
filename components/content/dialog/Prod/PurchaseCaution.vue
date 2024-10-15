@@ -1,18 +1,16 @@
 <template>
   <ContDialog v-model="isOpen">
     <template #title>
-      <div class="dialog-title">
-        상품 구매 시 유의사항
-      </div>
+      <div class="dialog-title">상품 구매 시 유의사항</div>
     </template>
     <template #body>
       <ContWrap type="white" in-top="md" in-bottom="zero">
         <ContBox size="lg">
           <InfoGuideWrap
-            in-top="zero"
-            type="no-data"
-            name="alert"
-            desc="유의사항을 확인했으며<br>상품을 주문하시겠습니까?"
+              in-top="zero"
+              type="no-data"
+              name="alert"
+              desc="유의사항을 확인했으며<br>상품을 주문하시겠습니까?"
           />
         </ContBox>
         <ContBox size="lg">
@@ -34,7 +32,7 @@
         <EBtn color="line-light-gray" size="lg" @click="closeDialog">
           <span class="text">취소</span>
         </EBtn>
-        <EBtn tag="a" color="green" size="lg" to="/order/pay">
+        <EBtn tag="a" color="green" size="lg" to="javascript:">
           <span class="text">확인</span>
         </EBtn>
       </div>
@@ -51,11 +49,11 @@ const props = defineProps<{
   sta: DialogState;
 }>();
 
-const emit = defineEmits(["update:sta"]);
+const emit = defineEmits(['update:sta']);
 
 const isOpen = computed({
   get: () => props.sta.open,
-  set: value => emit("update:sta", { ...props.sta, open: value }),
+  set: (value) => emit('update:sta', { ...props.sta, open: value }),
 });
 
 const closeDialog = () => {

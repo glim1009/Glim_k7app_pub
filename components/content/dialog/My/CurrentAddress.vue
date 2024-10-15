@@ -46,12 +46,12 @@
                   <col style="width: auto;">
                 </colgroup>
                 <tbody>
-                <tr>
-                  <th scope="row" class="">
-                    도로명
-                  </th>
-                  <td>서울 강동구 상암로 **길 ***호</td>
-                </tr>
+                  <tr>
+                    <th scope="row">
+                      도로명
+                    </th>
+                    <td>서울 강동구 상암로 **길 ***호</td>
+                  </tr>
                 </tbody>
               </TableWrap>
             </div>
@@ -72,12 +72,12 @@
                   <col style="width: auto;">
                 </colgroup>
                 <tbody>
-                <tr>
-                  <th scope="row" class="">
-                    지번
-                  </th>
-                  <td>서울 강동구 암사동 265-5번지 세븐빌딩 **동 ***호</td>
-                </tr>
+                  <tr>
+                    <th scope="row">
+                      지번
+                    </th>
+                    <td>서울 강동구 암사동 265-5번지 세븐빌딩 **동 ***호</td>
+                  </tr>
                 </tbody>
               </TableWrap>
             </div>

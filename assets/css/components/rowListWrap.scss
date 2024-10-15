@@ -21,6 +21,103 @@ $wrapSize: ('2xs': 8px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
       }
     }
   }
+
+  &.search-rank { // 인기 검색어
+    .row-md-list {
+      gap: 0;
+    }
+    :deep(.item-search-rank) {
+      position: relative;
+      width: 100%;
+      padding: 6px 0;
+      line-height: variables.$fontSizeLgLineHeight;
+
+      .flex-center-group {
+        justify-content: space-between;
+        flex: 1 0 auto;
+
+        .flex-rank-left {
+          width: 100%;
+
+          .rank {
+            display: inline-block;
+            min-width: 15px;
+            height: auto;
+            @include mixins.font_size_lg('heading');
+            color: var(--Grayscale-90);
+            margin-right: 10px;
+            vertical-align: top;
+          }
+
+          .keyword {
+            display: inline-block;
+            max-width: calc(100% - 30px);
+            color: var(--Grayscale-100);
+            @include mixins.font_size_lg('lt');
+            vertical-align: top;
+          }
+        }
+
+        .flex-rank-right {
+          flex-shrink: 0;
+          margin-left: 10px;
+
+          .rank-status {
+            position: relative;
+            display: inline-block;
+            min-width: 20px;
+            @include mixins.font_size_sm;
+            text-align: right;
+            vertical-align: top;
+
+            &:after {
+              content: '';
+              position: absolute;
+              display: inline-block;
+              top: 6px;
+              right: 0;
+              width: 8px;
+              height: 8px;
+              @include mixins.ratio_images('/assets/images/common/comm_ico_search_rank_keep');
+              vertical-align: top;
+            }
+
+            &.up, &.down {
+              padding-right: 12px;
+              margin-top: 1px;
+
+              &:after {
+                margin-top: -1px;
+              }
+            }
+
+            &.up {
+              color: var(--Primary-Green-100);
+
+              &:after {
+                @include mixins.ratio_images('/assets/images/common/comm_ico_search_rank_up');
+              }
+            }
+
+            &.down {
+              color: var(--Grayscale-70);
+
+              &::after {
+                @include mixins.ratio_images('/assets/images/common/comm_ico_search_rank_down');
+              }
+            }
+          }
+        }
+      }
+
+      &:first-child {
+        padding-top: 0;
+      }
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
 }
 
 /* list */
@@ -444,100 +541,6 @@ $wrapSize: ('2xs': 8px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
 
     &:last-child {
       padding-bottom: -20px;
-    }
-  }
-}
-
-.row-search-list { // 인기 검색어
-  :deep(.item-search-rank) {
-    position: relative;
-    width: 100%;
-    padding: 6px 0;
-    line-height: variables.$fontSizeLgLineHeight;
-
-    .flex-center-group {
-      justify-content: space-between;
-      flex: 1 0 auto;
-
-      .flex-rank-left {
-        width: 100%;
-
-        .rank {
-          display: inline-block;
-          min-width: 15px;
-          height: auto;
-          @include mixins.font_size_lg('heading');
-          color: var(--Grayscale-90);
-          margin-right: 10px;
-          vertical-align: top;
-        }
-
-        .keyword {
-          display: inline-block;
-          max-width: calc(100% - 30px);
-          color: var(--Grayscale-100);
-          @include mixins.font_size_lg('lt');
-          vertical-align: top;
-        }
-      }
-
-      .flex-rank-right {
-        flex-shrink: 0;
-        margin-left: 10px;
-
-        .rank-status {
-          position: relative;
-          display: inline-block;
-          min-width: 20px;
-          @include mixins.font_size_sm;
-          text-align: right;
-          vertical-align: top;
-
-          &:after {
-            content: '';
-            position: absolute;
-            display: inline-block;
-            top: 6px;
-            right: 0;
-            width: 8px;
-            height: 8px;
-            @include mixins.ratio_images('/assets/images/common/comm_ico_search_rank_keep');
-            vertical-align: top;
-          }
-
-          &.up, &.down {
-            padding-right: 12px;
-            margin-top: 1px;
-
-            &:after {
-              margin-top: -1px;
-            }
-          }
-
-          &.up {
-            color: var(--Primary-Green-100);
-
-            &:after {
-              @include mixins.ratio_images('/assets/images/common/comm_ico_search_rank_up');
-            }
-          }
-
-          &.down {
-            color: var(--Grayscale-70);
-
-            &::after {
-              @include mixins.ratio_images('/assets/images/common/comm_ico_search_rank_down');
-            }
-          }
-        }
-      }
-    }
-
-    &:first-child {
-      padding-top: 0;
-    }
-    &:last-child {
-      padding-bottom: 0;
     }
   }
 }

@@ -46,7 +46,7 @@
                 <ETit type="cont" text="세븐 앱에서 택배를 예약해 주세요." />
               </CtitleWrap>
               <div class="thumb-box">
-                <img src="/assets/images/delivery/delivery_step_guide_01.png" alt="일반택배 접수 안내 흐름도 이미지">
+                <img src="/assets/images/delivery/delivery_step_guide_01.png" alt="일반택배 접수 안내 흐름도 이미지" />
               </div>
             </li>
             <li class="item">
@@ -57,18 +57,14 @@
                 <ETit type="cont" text="택배접수가 가능한 세븐일레븐 매장에 방문해주세요." />
               </CtitleWrap>
               <div class="thumb-box">
-                <img src="/assets/images/delivery/delivery_step_guide_02.png" alt="일반택배 접수 안내 흐름도 이미지">
+                <img src="/assets/images/delivery/delivery_step_guide_02.png" alt="일반택배 접수 안내 흐름도 이미지" />
               </div>
               <RowListWrap size="xs" gap="md">
                 <li class="item">
                   <ColorBox color="line-light-gray" size="lg">
                     <CtitleWrap>
-                      <div class="ctitle-sm">
-                        매장에 김펭구 무인택배기가 있을 경우
-                      </div>
-                      <div class="stext">
-                        김펭구 택배기 사전접수 버튼 선택 후 예약 내역 바코드 스캔을 해주세요.
-                      </div>
+                      <div class="ctitle-sm">매장에 김펭구 무인택배기가 있을 경우</div>
+                      <div class="stext">김펭구 택배기 사전접수 버튼 선택 후 예약 내역 바코드 스캔을 해주세요.</div>
                     </CtitleWrap>
                   </ColorBox>
                 </li>
@@ -76,12 +72,8 @@
                   <ColorBox color="line-light-gray" size="lg">
                     <SContLineBox>
                       <CtitleWrap>
-                        <div class="ctitle-sm">
-                          매장에 김펭구 무인택배기가 있을 경우
-                        </div>
-                        <div class="stext">
-                          카운터에 택배물품을 전달해주시고, 매장 근무자에게 예약내역 바코드를 보여주세요.
-                        </div>
+                        <div class="ctitle-sm">매장에 김펭구 무인택배기가 있을 경우</div>
+                        <div class="stext">카운터에 택배물품을 전달해주시고, 매장 근무자에게 예약내역 바코드를 보여주세요.</div>
                       </CtitleWrap>
                     </SContLineBox>
                     <SContLineBox>
@@ -104,7 +96,7 @@
                 <ETit type="cont" text="입력한 정보 확인 후 운송장을 출력해주세요." />
               </CtitleWrap>
               <div class="thumb-box">
-                <img src="/assets/images/delivery/delivery_step_guide_03.png" alt="일반택배 접수 안내 흐름도 이미지">
+                <img src="/assets/images/delivery/delivery_step_guide_03.png" alt="일반택배 접수 안내 흐름도 이미지" />
               </div>
             </li>
             <li class="item">
@@ -115,7 +107,7 @@
                 <ETit type="cont" text="좌측면 운송장을 택배물품에 부착해주세요." />
               </CtitleWrap>
               <div class="thumb-box">
-                <img src="/assets/images/delivery/delivery_step_guide_04.png" alt="일반택배 접수 안내 흐름도 이미지">
+                <img src="/assets/images/delivery/delivery_step_guide_04.png" alt="일반택배 접수 안내 흐름도 이미지" />
               </div>
             </li>
             <li class="item">
@@ -126,7 +118,7 @@
                 <ETit type="cont" text="택배물품과 우측면 운송장을 카운터에 전달해주세요." />
               </CtitleWrap>
               <div class="thumb-box">
-                <img src="/assets/images/delivery/delivery_step_guide_05.png" alt="일반택배 접수 안내 흐름도 이미지">
+                <img src="/assets/images/delivery/delivery_step_guide_05.png" alt="일반택배 접수 안내 흐름도 이미지" />
               </div>
             </li>
             <li class="item">
@@ -137,7 +129,7 @@
                 <ETit type="cont" text="매장에 택배접수가 완료되면 세븐일레븐 앱에서 배송조회를 하실 수 있어요." />
               </CtitleWrap>
               <div class="thumb-box">
-                <img src="/assets/images/delivery/delivery_step_guide_06.png" alt="일반택배 접수 안내 흐름도 이미지">
+                <img src="/assets/images/delivery/delivery_step_guide_06.png" alt="일반택배 접수 안내 흐름도 이미지" />
               </div>
               <BtnWrap type="full" size="md">
                 <EBtn tag="a" color="line-light-gray" size="md" to="/delivery/search">
@@ -210,10 +202,10 @@
         <ContBox>
           <div class="delivery-process-wrap">
             <div class="delivery-process-header">
-              <img src="/assets/images/delivery/delivery_process_divide.png" alt="일반택배 배송 절차 안내 구분 이미지">
+              <img src="/assets/images/delivery/delivery_process_divide.png" alt="일반택배 배송 절차 안내 구분 이미지" />
             </div>
             <div class="delivery-process-body">
-              <img src="/assets/images/delivery/delivery_process_flow.png" alt="일반택배 배송 절차 안내 이미지">
+              <img src="/assets/images/delivery/delivery_process_flow.png" alt="일반택배 배송 절차 안내 이미지" />
             </div>
           </div>
         </ContBox>

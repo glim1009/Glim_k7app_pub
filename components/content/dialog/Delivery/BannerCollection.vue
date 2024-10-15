@@ -1,9 +1,7 @@
 <template>
   <ContDialog v-model="isOpen" content-class="ui-dialog-full">
     <template #title>
-      <div class="dialog-title">
-        전체보기
-      </div>
+      <div class="dialog-title">전체보기</div>
     </template>
     <template #body>
       <div class="dialog-inner">
@@ -65,18 +63,19 @@ const props = defineProps<{
   sta: DialogState;
 }>();
 
-const emit = defineEmits(["update:sta"]);
-
 const openDialog = () => {
   isOpen.value = true;
 };
 
+const emit = defineEmits(['update:sta']);
+
 const isOpen = computed({
   get: () => props.sta.open,
-  set: value => emit("update:sta", { ...props.sta, open: value }),
+  set: (value) => emit('update:sta', { ...props.sta, open: value }),
 });
 
 const closeDialog = () => {
   isOpen.value = false;
 };
 </script>
+
