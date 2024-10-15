@@ -456,6 +456,11 @@ $tBtnSize: ('xs', 'sm', 'md', 'lg');
           top: 2px;
         }
       }
+      [class^=ico][class$=sm] {
+        margin: {
+          top: 1px;
+        }
+      }
     } @else if ($size == 'sm') {
       .text {
         @include mixins.font_size_lg('md');

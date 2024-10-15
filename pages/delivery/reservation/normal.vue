@@ -875,8 +875,12 @@
                       </th>
                       <td class="ta-right">
                         <div class="goods-group">
-                          <EGoods type="origin" val="3,200" unit="원" />
-                          <EGoods val="3,000" unit="원" />
+                          <div class="goods-group">
+                            <!-- 배송비 할인가 case -->
+                            <EGoods type="origin" val="3,200" unit="원" />
+                            <EGoods val="3,000" unit="원" />
+                            <!-- // 배송비 할인가 case -->
+                          </div>
                         </div>
                       </td>
                     </tr>
@@ -886,8 +890,10 @@
                       </th>
                       <td class="ta-right">
                         <div class="goods-group">
+                          <!-- 배송비 할인가 case -->
                           <EGoods type="origin" val="3,700" unit="원" />
                           <EGoods val="3,000" unit="원" />
+                          <!-- // 배송비 할인가 case -->
                         </div>
                       </td>
                     </tr>
@@ -897,8 +903,9 @@
                       </th>
                       <td class="ta-right">
                         <div class="goods-group">
-                          <EGoods type="origin" val="6,200" unit="원" />
+                          <!-- 배송비 할인가 case -->
                           <EGoods val="3,000" unit="원" />
+                          <!-- // 배송비 할인가 case -->
                         </div>
                       </td>
                     </tr>
@@ -1110,6 +1117,7 @@
             <template #content>
               <ColorBox color="white" size="lg">
                 <RowListWrap gap="line">
+                  <!-- DESC :: 비회원일 경우 input [disabled] 속성 추가 -->
                   <li class="item-md">
                     <span class="ui-rdo">
                       <input id="orderPayRdo01" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payCard">
@@ -1155,7 +1163,6 @@
                   </li>
                   <li class="item-md">
                     <span class="ui-chk">
-                      <!-- DESC :: 비회원일 경우 [disabled] 속성 추가 -->
                       <input id="orderPayChk01" type="checkbox">
                       <label for="orderPayChk01"><span class="text-sm fc-gray70">선택한 결제수단 다음에도 사용</span></label>
                     </span>

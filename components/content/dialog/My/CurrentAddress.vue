@@ -40,20 +40,10 @@
         <li class="item-md">
           <FlexGroup class="location-info">
             <div class="flex-left">
-              <TableWrap type="info" gap="sm" size="md" table-name="주소정보">
-                <colgroup>
-                  <col style="width: 47px;">
-                  <col style="width: auto;">
-                </colgroup>
-                <tbody>
-                  <tr>
-                    <th scope="row">
-                      도로명
-                    </th>
-                    <td>서울 강동구 상암로 **길 ***호</td>
-                  </tr>
-                </tbody>
-              </TableWrap>
+              <div class="address-info-group">
+                <span class="number">도로명</span>
+                <span class="address">서울 강동구 상암로 **길 ***호</span>
+              </div>
             </div>
             <div class="flex-right">
               <EBtn color="light-green" size="xs" @click="closeDialog">
@@ -66,20 +56,10 @@
         <li class="item-md">
           <FlexGroup class="location-info">
             <div class="flex-left">
-              <TableWrap type="info" gap="sm" size="md" table-name="주소정보">
-                <colgroup>
-                  <col style="width: 47px;">
-                  <col style="width: auto;">
-                </colgroup>
-                <tbody>
-                  <tr>
-                    <th scope="row">
-                      지번
-                    </th>
-                    <td>서울 강동구 암사동 265-5번지 세븐빌딩 **동 ***호</td>
-                  </tr>
-                </tbody>
-              </TableWrap>
+              <div class="address-info-group">
+                <span class="number">지번</span>
+                <span class="address">서울 강동구 암사동 265-5번지 세븐빌딩 **동 ***호</span>
+              </div>
             </div>
             <div class="flex-right">
               <EBtn color="light-green" size="xs" @click="closeDialog">

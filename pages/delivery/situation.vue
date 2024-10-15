@@ -185,15 +185,15 @@
           <div class="form-cont">
             <UiColGroup gap="sm">
               <span class="ui-rdo-button">
-                <input id="filterProdType01" type="radio" name="filterProdType01">
+                <input id="filterProdType01" type="checkbox">
                 <label for="filterProdType01"><span class="text-sm">전체</span></label>
               </span>
               <span class="ui-rdo-button">
-                <input id="filterProdType02" type="radio" name="filterProdType01">
+                <input id="filterProdType02" type="checkbox">
                 <label for="filterProdType02"><span class="text-sm">일반택배</span></label>
               </span>
               <span class="ui-rdo-button">
-                <input id="filterProdType03" type="radio" name="filterProdType01">
+                <input id="filterProdType03" type="checkbox">
                 <label for="filterProdType03"><span class="text-sm">착한택배</span></label>
               </span>
             </UiColGroup>

@@ -338,7 +338,7 @@
             <div class="box-info-header">
               <BadgeGroup size="xl">
                 <EBadge color="green" badge-text="착한택배" />
-                <EBadge color="light-gray" badge-text="매장접수취소" />
+                <EBadge color="light-gray" badge-text="CS취소" />
               </BadgeGroup>
               <CtitleWrap size="sm">
                 <ETit text="의류 청바지" type="box" />
@@ -664,15 +664,15 @@
           <div class="form-cont">
             <UiColGroup gap="sm">
               <span class="ui-rdo-button">
-                <input id="filterProdType01" type="radio" name="filterProdType01">
+                <input id="filterProdType01" type="checkbox">
                 <label for="filterProdType01"><span class="text-sm">전체</span></label>
               </span>
               <span class="ui-rdo-button">
-                <input id="filterProdType02" type="radio" name="filterProdType01">
+                <input id="filterProdType02" type="checkbox">
                 <label for="filterProdType02"><span class="text-sm">일반택배</span></label>
               </span>
               <span class="ui-rdo-button">
-                <input id="filterProdType03" type="radio" name="filterProdType01">
+                <input id="filterProdType03" type="checkbox">
                 <label for="filterProdType03"><span class="text-sm">착한택배</span></label>
               </span>
             </UiColGroup>

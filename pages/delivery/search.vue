@@ -154,8 +154,8 @@
           <ColorBox color="white" size="lg">
             <div class="box-info-header">
               <BadgeGroup size="xl">
-                <EBadge color="gray" size="md" badge-text="일반택배" />
-                <EBadge color="light-gray" size="md" badge-text="취소" />
+                <EBadge color="green" size="md" badge-text="착한택배" />
+                <EBadge color="light-gray" size="md" badge-text="CS취소" />
               </BadgeGroup>
               <CtitleWrap size="sm">
                 <ETit text="의류 청바지" type="box" />
@@ -221,7 +221,7 @@
             <div class="box-info-header">
               <BadgeGroup size="xl">
                 <EBadge color="gray" size="md" badge-text="일반택배" />
-                <EBadge color="light-gray" size="md" badge-text="취소" />
+                <EBadge color="light-gray" size="md" badge-text="CS취소" />
               </BadgeGroup>
               <CtitleWrap size="sm">
                 <ETit text="의류 청바지" type="box" />
@@ -287,7 +287,7 @@
           <ColorBox color="white" size="lg">
             <div class="box-info-header">
               <BadgeGroup size="xl">
-                <EBadge color="green" size="md" badge-text="착한택배" />
+                <EBadge color="gray" size="md" badge-text="일반택배" />
               </BadgeGroup>
               <CtitleWrap size="sm">
                 <ETit text="의류 청바지" type="box" />
@@ -309,11 +309,11 @@
             </div>
             <div class="step-list-wrap">
               <ul class="step-col-list">
-                <li class="step-item">
+                <li class="step-item is-active">
                   <span class="status">접수완료</span>
                   <span class="sub-status">점포입고</span>
                 </li>
-                <li class="step-item">
+                <li class="step-item is-active">
                   <span class="status">배송시작</span>
                   <span class="sub-status">집하완료</span>
                 </li>
@@ -335,69 +335,13 @@
                       <FlexGroup align="start">
                         <div class="flex-left">
                           <div class="status">
-                            고객수령 완료 되었습니다.
+                            점포 접수되었습니다.
                           </div>
                           <span class="date">2024.06.25 15:34</span>
                           <span class="location">세븐일레븐 부산본점</span>
                         </div>
                         <div class="flex-right">
-                          <span class="sub-status">배송완료</span>
-                        </div>
-                      </FlexGroup>
-                    </li>
-                    <li class="delivery-step-item">
-                      <FlexGroup align="start">
-                        <div class="flex-left">
-                          <div class="status">
-                            점포 도착 하였습니다.
-                          </div>
-                          <span class="date">2024.06.24 23:58</span>
-                          <span class="location">세븐일레븐 부산본점</span>
-                        </div>
-                        <div class="flex-right">
-                          <span class="sub-status">배송중</span>
-                        </div>
-                      </FlexGroup>
-                    </li>
-                    <li class="delivery-step-item">
-                      <FlexGroup align="start">
-                        <div class="flex-left">
-                          <div class="status">
-                            점포로 출고 되었습니다.
-                          </div>
-                          <span class="date">2024.06.23 09:22</span>
-                          <span class="location">세븐일레븐 부산본점</span>
-                        </div>
-                        <div class="flex-right">
-                          <span class="sub-status">배송시작</span>
-                        </div>
-                      </FlexGroup>
-                    </li>
-                    <li class="delivery-step-item">
-                      <FlexGroup align="start">
-                        <div class="flex-left">
-                          <div class="status">
-                            배송센터 입고 되었습니다.
-                          </div>
-                          <span class="date">2024.06.24 15:34</span>
-                          <span class="location">부산 저온센터</span>
-                        </div>
-                        <div class="flex-right">
-                          <span class="sub-status">배송시작</span>
-                        </div>
-                      </FlexGroup>
-                    </li>
-                    <li class="delivery-step-item">
-                      <FlexGroup align="start">
-                        <div class="flex-left">
-                          <div class="status">
-                            배송센터 입고 되었습니다.
-                          </div>
-                          <span class="date">2024.06.24 15:34</span>
-                          <span class="location">부산 저온센터</span>
-                        </div>
-                        <div class="flex-right">
-                          <span class="sub-status">배송시작</span>
+                          <span class="sub-status">집하전</span>
                         </div>
                       </FlexGroup>
                     </li>
@@ -659,8 +603,7 @@
           <ColorBox color="white" size="lg">
             <div class="box-info-header">
               <BadgeGroup size="xl">
-                <EBadge color="gray" size="md" badge-text="일반택배" />
-                <EBadge color="light-gray" size="md" badge-text="반송" />
+                <EBadge color="green" size="md" badge-text="착한택배" />
               </BadgeGroup>
               <CtitleWrap size="sm">
                 <ETit text="의류 청바지" type="box" />
@@ -704,17 +647,73 @@
               <ColorBox color="light-gray">
                 <div class="scroll-box">
                   <ul class="delivery-step-row-list">
-                    <li class="delivery-step-item is-incomplete">
+                    <li class="delivery-step-item is-completed">
                       <FlexGroup align="start">
                         <div class="flex-left">
-                          <div class="stext">
-                            반송되었습니다.
+                          <div class="status">
+                            고객수령 완료 되었습니다.
                           </div>
                           <span class="date">2024.06.25 15:34</span>
                           <span class="location">세븐일레븐 부산본점</span>
                         </div>
                         <div class="flex-right">
-                          <span class="sub-status">반송</span>
+                          <span class="sub-status">배송완료</span>
+                        </div>
+                      </FlexGroup>
+                    </li>
+                    <li class="delivery-step-item">
+                      <FlexGroup align="start">
+                        <div class="flex-left">
+                          <div class="status">
+                            점포 도착 하였습니다.
+                          </div>
+                          <span class="date">2024.06.24 23:58</span>
+                          <span class="location">세븐일레븐 부산본점</span>
+                        </div>
+                        <div class="flex-right">
+                          <span class="sub-status">배송중</span>
+                        </div>
+                      </FlexGroup>
+                    </li>
+                    <li class="delivery-step-item">
+                      <FlexGroup align="start">
+                        <div class="flex-left">
+                          <div class="status">
+                            점포로 출고 되었습니다.
+                          </div>
+                          <span class="date">2024.06.23 09:22</span>
+                          <span class="location">세븐일레븐 부산본점</span>
+                        </div>
+                        <div class="flex-right">
+                          <span class="sub-status">배송시작</span>
+                        </div>
+                      </FlexGroup>
+                    </li>
+                    <li class="delivery-step-item">
+                      <FlexGroup align="start">
+                        <div class="flex-left">
+                          <div class="status">
+                            배송센터 입고 되었습니다.
+                          </div>
+                          <span class="date">2024.06.24 15:34</span>
+                          <span class="location">부산 저온센터</span>
+                        </div>
+                        <div class="flex-right">
+                          <span class="sub-status">배송시작</span>
+                        </div>
+                      </FlexGroup>
+                    </li>
+                    <li class="delivery-step-item">
+                      <FlexGroup align="start">
+                        <div class="flex-left">
+                          <div class="status">
+                            배송센터 입고 되었습니다.
+                          </div>
+                          <span class="date">2024.06.24 15:34</span>
+                          <span class="location">부산 저온센터</span>
+                        </div>
+                        <div class="flex-right">
+                          <span class="sub-status">배송시작</span>
                         </div>
                       </FlexGroup>
                     </li>
@@ -749,15 +748,15 @@
           <div class="form-cont">
             <UiColGroup gap="sm">
               <span class="ui-rdo-button">
-                <input id="filterProdType01" type="radio" name="filterProdType01">
+                <input id="filterProdType01" type="checkbox">
                 <label for="filterProdType01"><span class="text-sm">전체</span></label>
               </span>
               <span class="ui-rdo-button">
-                <input id="filterProdType02" type="radio" name="filterProdType01">
+                <input id="filterProdType02" type="checkbox">
                 <label for="filterProdType02"><span class="text-sm">일반택배</span></label>
               </span>
               <span class="ui-rdo-button">
-                <input id="filterProdType03" type="radio" name="filterProdType01">
+                <input id="filterProdType03" type="checkbox">
                 <label for="filterProdType03"><span class="text-sm">착한택배</span></label>
               </span>
             </UiColGroup>
@@ -772,23 +771,23 @@
           <div class="form-cont">
             <UiColGroup gap="sm">
               <span class="ui-rdo-button">
-                <input id="filterProdType04" type="radio" name="filterStatus02">
+                <input id="filterProdType04" type="checkbox">
                 <label for="filterProdType04"><span class="text-sm">전체</span></label>
               </span>
               <span class="ui-rdo-button">
-                <input id="filterProdType05" type="radio" name="filterStatus02">
+                <input id="filterProdType05" type="checkbox">
                 <label for="filterProdType05"><span class="text-sm">접수완료</span></label>
               </span>
               <span class="ui-rdo-button">
-                <input id="filterProdType06" type="radio" name="filterStatus02">
+                <input id="filterProdType06" type="checkbox">
                 <label for="filterProdType06"><span class="text-sm">배송중(점포 출발)</span></label>
               </span>
               <span class="ui-rdo-button">
-                <input id="filterProdType07" type="radio" name="filterStatus02">
+                <input id="filterProdType07" type="checkbox">
                 <label for="filterProdType07"><span class="text-sm">배송중(배송지, 점포 도착)</span></label>
               </span>
               <span class="ui-rdo-button">
-                <input id="filterProdType08" type="radio" name="filterStatus02">
+                <input id="filterProdType08" type="checkbox">
                 <label for="filterProdType08"><span class="text-sm">배송완료</span></label>
               </span>
             </UiColGroup>

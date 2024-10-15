@@ -153,22 +153,24 @@ $wrapSize: ('2xs': 8px, 'xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
     &.is-selected {
       // 택배 > 주소록 선택
       .white-lg-box {
-        .box-address-header {
-          .ctitle-md {
-            position: relative;
-            padding-left: 22px;
-            color: var(--Primary-Green-100);
+        .box-info-header {
+          &.address-info {
+            .ctitle-md {
+              position: relative;
+              padding-left: 22px;
+              color: var(--Primary-Green-100);
 
-            &:before {
-              content: '';
-              position: absolute;
-              top: 4px;
-              left: 0;
-              display: inline-block;
-              width: 16px;
-              height: 16px;
-              @include mixins.svg_mask('/assets/images/common/comm_ico_check_xs', var(--Primary-Green-100));
-              vertical-align: top;
+              &:before {
+                content: '';
+                position: absolute;
+                top: 4px;
+                left: 0;
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                @include mixins.svg_mask('/assets/images/common/comm_ico_check_xs', var(--Primary-Green-100));
+                vertical-align: top;
+              }
             }
           }
         }

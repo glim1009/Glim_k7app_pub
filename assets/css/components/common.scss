@@ -190,6 +190,13 @@
   img {
     width: 100%;
   }
+
+  &.side-zero {
+    margin: {
+      left: -20px;
+      right: -20px;
+    };
+  }
 }
 
 // text 정렬
@@ -815,7 +822,8 @@
   [class^=ctitle][class$=-wrap] {
     .stext-lg-black {
       margin: 0;
-      +.ctitle-sm {
+
+      + .ctitle-lg {
         margin-top: 4px;
       }
     }
@@ -1338,12 +1346,12 @@
 
 .delivery-process-wrap {
   .delivery-process-header {
+    width: 100%;
     margin-bottom: 20px;
 
     img {
       display: block;
-      height: 20px;
-      margin-left: auto;
+      width: 100%;
       object-fit: cover;
     }
   }
@@ -1355,6 +1363,30 @@
       display: block;
       width: 100%;
       object-fit: cover;
+    }
+  }
+}
+
+// 주소 - 단일 주소 case
+.address-info-group {
+  @include mixins.justify_width;
+  @include mixins.font_size_md;
+
+  .number {
+    font-weight: variables.$fontWeightSemibold;
+    color: var(--Grayscale-90);
+  }
+  .address {
+    margin-left: 10px;
+    color: var(--Grayscale-80);
+  }
+}
+
+.location-info {
+  .address-info-group {
+    @include mixins.font_size_lg('lt');
+    .number {
+      min-width: 37px;
     }
   }
 }

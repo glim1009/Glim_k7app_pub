@@ -55,7 +55,7 @@
                     <div class="flex-right">
                       <ETBtn tag="button" size="xs" @click="openCurrentAddress">
                         <EIco name="current-location" color="gray" size="sm"></EIco>
-                        <span class="text">현재 위치 주소에 추가</span>
+                        <span class="text">현재 위치를 주소에 추가</span>
                       </ETBtn>
                     </div>
                   </FlexGroup>

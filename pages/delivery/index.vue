@@ -19,8 +19,8 @@
             <div class="bar-flex-group">
               <div class="bar-item">
                 <div class="alert-count-group type-reservation">
-                  <span class="stext-black">예약중</span>
-                  <EGoods size="sm" val="1" class="fw-bold fc-spot" />
+                  <span class="stext-lg-black">예약중</span>
+                  <EGoods size="md" val="1" class="fw-bold fc-spot" />
                 </div>
                 <NuxtLink class="btn-link" to="/delivery/situation">
                   <span class="offscreen">예약중 목록 바로가기</span>
@@ -28,8 +28,8 @@
               </div>
               <div class="bar-item">
                 <div class="alert-count-group type-delivery">
-                  <span class="stext-black">배송중</span>
-                  <EGoods size="sm" val="2" class="fw-bold fc-spot" />
+                  <span class="stext-lg-black">배송중</span>
+                  <EGoods size="md" val="2" class="fw-bold fc-spot" />
                 </div>
                 <NuxtLink class="btn-link" to="/delivery/search">
                   <span class="offscreen">배송중 목록 바로가기</span>
@@ -37,8 +37,8 @@
               </div>
               <div class="bar-item">
                 <div class="alert-count-group type-history">
-                  <span class="stext-black">이용내역</span>
-                  <EGoods size="sm" val="25" class="fw-bold fc-spot" />
+                  <span class="stext-lg-black">이용내역</span>
+                  <EGoods size="md" val="25" class="fw-bold fc-spot" />
                 </div>
                 <NuxtLink class="btn-link" to="/delivery/history">
                   <span class="offscreen">이용내역 목록 바로가기</span>
@@ -58,7 +58,7 @@
             <div class="bar-flex-group">
               <div class="bar-item">
                 <div class="alert-count-group type-nonmember-reservation">
-                  <span class="stext-black">비회원 택배예약</span>
+                  <span class="stext-lg-black">비회원 택배예약</span>
                 </div>
                 <button type="button" class="btn-link" @click="openReservationNonMember">
                   <span class="offscreen">비회원 택배예약 바로가기</span>
@@ -66,7 +66,7 @@
               </div>
               <div class="bar-item">
                 <div class="alert-count-group type-history">
-                  <span class="stext-black">비회원 예약/배송 조회</span>
+                  <span class="stext-lg-black">비회원 예약/배송 조회</span>
                 </div>
                 <NuxtLink class="btn-link" to="/delivery/non-member/history">
                   <span class="offscreen">비회원 예약/배송 조회 바로가기</span>
@@ -83,8 +83,8 @@
             <div class="bar-flex-group">
               <div class="bar-item">
                 <div class="alert-count-group type-reservation">
-                  <span class="stext-black">예약중</span>
-                  <EGoods size="sm" val="1" class="fw-bold fc-spot" />
+                  <span class="stext-lg-black">예약중</span>
+                  <EGoods size="md" val="1" class="fw-bold fc-spot" />
                 </div>
                 <NuxtLink class="btn-link" to="/delivery/situation">
                   <span class="offscreen">예약중 목록 바로가기</span>
@@ -92,8 +92,8 @@
               </div>
               <div class="bar-item">
                 <div class="alert-count-group type-delivery">
-                  <span class="stext-black">배송중</span>
-                  <EGoods size="sm" val="2" class="fw-bold fc-spot" />
+                  <span class="stext-lg-black">배송중</span>
+                  <EGoods size="md" val="2" class="fw-bold fc-spot" />
                 </div>
                 <NuxtLink class="btn-link" to="/delivery/search">
                   <span class="offscreen">배송중 목록 바로가기</span>
@@ -101,8 +101,8 @@
               </div>
               <div class="bar-item">
                 <div class="alert-count-group type-history">
-                  <span class="stext-black">이용내역</span>
-                  <EGoods size="sm" val="25" class="fw-bold fc-spot" />
+                  <span class="stext-lg-black">이용내역</span>
+                  <EGoods size="md" val="25" class="fw-bold fc-spot" />
                 </div>
                 <NuxtLink class="btn-link" to="/delivery/history">
                   <span class="offscreen">이용내역 목록 바로가기</span>
@@ -185,7 +185,7 @@
               <div class="stext-lg-black">
                 롯데택배
               </div>
-              <div class="ctitle-sm">
+              <div class="ctitle-lg">
                 1688-1211
               </div>
             </CtitleWrap>
@@ -200,7 +200,7 @@
               <div class="stext-lg-black">
                 착한택배
               </div>
-              <div class="ctitle-sm">
+              <div class="ctitle-lg">
                 1544-0124
               </div>
             </CtitleWrap>
@@ -242,7 +242,7 @@
                 착한택배
               </div>
               <div class="ctitle-sm">
-                1644-8448
+                1544-2548
               </div>
             </CtitleWrap>
           </div>
@@ -252,7 +252,7 @@
                 롯데택배
               </div>
               <div class="ctitle-sm">
-                1500-6548
+                1544-2548
               </div>
             </CtitleWrap>
           </div>
@@ -313,9 +313,10 @@ const popStoreSearchSelect = ref({ open: false });
 
 // 임시 - 매장 검색결과 팝업 확인을 위한 이벤트 추가 ( 개발시 삭제 요청 )
 const popSearchType = ref<boolean>();
-
-const openStoreSearchSelect = (isSearchData: boolean) => {
+const StoreSearchTabName = ref<string>();
+const openStoreSearchSelect = (isSearchData: boolean, tabName: string = "list") => {
   popSearchType.value = isSearchData; // 임시 - 매장 검색결과 팝업 확인을 위한 이벤트 추가 ( 개발시 삭제 요청 )
+  StoreSearchTabName.value = tabName;
   popStoreSearchSelect.value.open = true;
 };
 </script>

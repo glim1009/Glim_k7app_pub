@@ -24,7 +24,7 @@
             <BtnWrap type="auto-center" size="md">
               <ETBtn tag="button" size="xs" @click="openCurrentAddress">
                 <EIco name="current-location" color="gray" size="sm" />
-                <span class="text">현재 위치 주소에 추가</span>
+                <span class="text">현재 위치를 주소에 추가</span>
               </ETBtn>
             </BtnWrap>
           </ContBox>
@@ -32,13 +32,11 @@
             <RowListWrap>
               <li class="item is-selected">
                 <ColorBox color="white" size="lg">
-                  <div class="box-address-header">
+                  <div class="box-info-header address-info">
                     <FlexGroup align="start">
                       <div class="info-flex-left">
                         <CtitleWrap size="sm">
-                          <div class="ctitle-md">
-                            사무실
-                          </div>
+                          <div class="ctitle-md">사무실</div>
                           <EBadge color="light-gray" size="md" badge-text="기본주소지" />
                         </CtitleWrap>
                         <div class="bar-group">
@@ -54,33 +52,20 @@
                       </div>
                     </FlexGroup>
                   </div>
-                  <RowListWrap size="xs">
-                    <TableWrap type="info" gap="sm" size="md" table-name="주소지 정보">
-                      <colgroup>
-                        <col style="width: 57px;">
-                        <col style="width: auto;">
-                      </colgroup>
-                      <tbody>
-                        <tr>
-                          <th scope="row">
-                            085421
-                          </th>
-                          <td>서울 강동구 상암로 **길 ***호 </td>
-                        </tr>
-                      </tbody>
-                    </TableWrap>
-                  </RowListWrap>
+                  <div class="address-info-group">
+                    <span class="number">085421</span>
+                    <span class="address">서울 강동구 상암로 **길 ***호</span>
+                  </div>
                 </ColorBox>
               </li>
               <li class="item">
                 <ColorBox color="white" size="lg">
-                  <div class="box-address-header">
+                  <div class="box-info-header address-info">
                     <FlexGroup align="start">
                       <div class="info-flex-left">
                         <CtitleWrap size="sm">
-                          <div class="ctitle-md">
-                            엄마집
-                          </div>
+                          <div class="ctitle-md">엄마집</div>
+                          <EBadge color="light-gray" size="md" badge-text="기본주소지" />
                         </CtitleWrap>
                         <div class="bar-group">
                           <span class="bar-text fc-black">홍*동</span>
@@ -95,27 +80,15 @@
                       </div>
                     </FlexGroup>
                   </div>
-                  <RowListWrap size="xs">
-                    <TableWrap type="info" gap="sm" size="md" table-name="주소지 정보">
-                      <colgroup>
-                        <col style="width: 57px;">
-                        <col style="width: auto;">
-                      </colgroup>
-                      <tbody>
-                        <tr>
-                          <th scope="row">
-                            085421
-                          </th>
-                          <td>서울 강동구 상암로 **길 ***호 </td>
-                        </tr>
-                      </tbody>
-                    </TableWrap>
-                  </RowListWrap>
+                  <div class="address-info-group">
+                    <span class="number">085421</span>
+                    <span class="address">서울 강동구 상암로 **길 ***호</span>
+                  </div>
                 </ColorBox>
               </li>
               <li class="item">
                 <ColorBox color="white" size="lg">
-                  <div class="box-address-header">
+                  <div class="box-info-header address-info">
                     <FlexGroup align="start">
                       <div class="info-flex-left">
                         <CtitleWrap size="sm">
@@ -136,22 +109,10 @@
                       </div>
                     </FlexGroup>
                   </div>
-                  <RowListWrap size="xs">
-                    <TableWrap type="info" gap="sm" size="md" table-name="주소지 정보">
-                      <colgroup>
-                        <col style="width: 57px;">
-                        <col style="width: auto;">
-                      </colgroup>
-                      <tbody>
-                        <tr>
-                          <th scope="row">
-                            085421
-                          </th>
-                          <td>서울 강동구 상암로 **길 ***호 </td>
-                        </tr>
-                      </tbody>
-                    </TableWrap>
-                  </RowListWrap>
+                  <div class="address-info-group">
+                    <span class="number">085421</span>
+                    <span class="address">서울 강동구 상암로 **길 ***호</span>
+                  </div>
                 </ColorBox>
               </li>
             </RowListWrap>

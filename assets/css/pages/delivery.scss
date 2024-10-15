@@ -180,7 +180,7 @@
     }
   }
 
-  .stext-black {
+  .stext-lg-black {
     display: inline-block;
     vertical-align: top;
 
@@ -192,6 +192,15 @@
 
 .bar-flex-group {
   .bar-item {
+    &:has(.ico-info-gray-sm, .ico-location-gray-sm) {
+      ~ .bar-item {
+        &:before {
+          background-color: var(--Grayscale-50);
+          top: 4px;
+          height: 12px;
+        }
+      }
+    }
     .ctitle-zero-wrap {
       .stext-lg-black {
         margin-top: 0;

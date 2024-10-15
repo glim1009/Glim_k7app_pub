@@ -877,7 +877,13 @@
                       </th>
                       <td class="ta-right">
                         <div class="goods-group">
+                          <!-- 배송비 정상가 case -->
                           <EGoods val="2,200" unit="원" />
+                          <!-- // 배송비 정상가 case -->
+                          <!-- 배송비 할인가 case -->
+                          <!-- <EGoods type="origin" val="2,700" unit="원" />
+                          <EGoods val="2,200" unit="원" /> -->
+                          <!-- // 배송비 할인가 case -->
                         </div>
                       </td>
                     </tr>
@@ -1081,6 +1087,7 @@
             <template #content>
               <ColorBox color="white" size="lg">
                 <RowListWrap gap="line">
+                  <!-- DESC :: 비회원일 경우 input [disabled] 속성 추가 -->
                   <li class="item-md">
                     <span class="ui-rdo">
                       <input id="orderPayRdo01" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payCard">
@@ -1126,7 +1133,6 @@
                   </li>
                   <li class="item-md">
                     <span class="ui-chk">
-                      <!-- DESC :: 비회원일 경우 [disabled] 속성 추가 -->
                       <input id="orderPayChk01" type="checkbox">
                       <label for="orderPayChk01"><span class="text-sm fc-gray70">선택한 결제수단 다음에도 사용</span></label>
                     </span>
@@ -1277,7 +1283,7 @@
                     </span>
                   </div>
                   <div class="flex-right">
-                    <ETBtn size="xs" @click="popTermsOfUseKind">
+                    <ETBtn size="xs" @click="openTermsOfUseKind">
                       <span class="text">상세보기</span>
                       <EIco name="arw-right" color="gray" size="xs" />
                     </ETBtn>
@@ -1490,8 +1496,10 @@ const popStoreSearchSelect = ref({ open: false });
 
 // 임시 - 매장 검색결과 팝업 확인을 위한 이벤트 추가 ( 개발시 삭제 요청 )
 const popSearchType = ref<boolean>();
-const openStoreSearchSelect = (isSearchData: boolean) => {
+const StoreSearchTabName = ref<string>();
+const openStoreSearchSelect = (isSearchData: boolean, tabName: string = "list") => {
   popSearchType.value = isSearchData; // 임시 - 매장 검색결과 팝업 확인을 위한 이벤트 추가 ( 개발시 삭제 요청 )
+  StoreSearchTabName.value = tabName;
   popStoreSearchSelect.value.open = true;
 };
 

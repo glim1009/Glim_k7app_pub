@@ -15,8 +15,11 @@
               </ETit>
             </div>
             <div class="form-cont">
-              <div class="form-input-group">
+              <div class="form-input-group valid-check">
                 <EInputBox type="number" inputmode="numeric" title="예약번호를 입력" placeholder="예약번호 입력" />
+                <div class="valid-desc">
+                  예약번호를 입력해주세요.
+                </div>
               </div>
             </div>
           </div>
@@ -29,10 +32,13 @@
               </ETit>
             </div>
             <div class="form-cont">
-              <div class="form-input-group">
+              <div class="form-input-group valid-check">
                 <EInputBox type="number" title="예약비밀번호를 입력" placeholder="예약비밀번호 입력" :max-length="8" />
                 <div class="input-guide">
                   예약 시 설정한 비밀번호를 입력해주세요.
+                </div>
+                <div class="valid-desc">
+                  예약비밀번호를 입력해주세요.
                 </div>
               </div>
             </div>

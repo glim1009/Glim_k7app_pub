@@ -100,13 +100,15 @@
     }
   }
 
-  :deep(.box-address-header) {
-    width: 100%;
-    margin-bottom: 10px;
+  :deep(.box-info-header) {
+    &.address-info {
+      width: 100%;
+      margin-bottom: 10px;
 
-    .box-rdo-group {
-      ~ .bar-group {
-        margin-top: 10px;
+      .box-rdo-group {
+        ~ .bar-group {
+          margin-top: 10px;
+        }
       }
     }
   }

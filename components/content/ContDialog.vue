@@ -1,7 +1,9 @@
 <template>
   <Dialog :open="modelValue" @update:open="$emit('update:modelValue', $event)">
-    <DialogContent :class="[contentClass, {'not-header' : notHeader}]" :onInteractOutside="handleInteractOutside">
-      <VisuallyHidden asChild><DialogTitle></DialogTitle><DialogDescription></DialogDescription></VisuallyHidden>
+    <DialogContent :class="[contentClass, { 'not-header': notHeader }]" :on-interact-outside="handleInteractOutside">
+      <VisuallyHidden as-child>
+        <DialogTitle /><DialogDescription />
+      </VisuallyHidden>
       <div v-if="contentClass !== 'ui-dialog-alert' && !notHeader" class="dialog-header">
         <slot name="title" />
         <button type="button" class="dialog-close" @click="close">
@@ -17,7 +19,7 @@
       <div class="dialog-body">
         <slot name="body" />
       </div>
-      <div :class="['dialog-footer', {'not-gradient' : notFooterGradient}]" v-if="$slots.footer">
+      <div v-if="$slots.footer" class="dialog-footer" :class="[{ 'not-gradient': notFooterGradient }]">
         <slot name="footer" />
       </div>
       <slot />
@@ -26,54 +28,53 @@
 </template>
 
 <script setup lang="ts">
+import { VisuallyHidden } from "radix-vue";
 import {
   Dialog,
   DialogContent,
+  DialogDescription,
   DialogTitle,
-  DialogDescription
-} from '~/components/ui/dialog';
-
-import { VisuallyHidden } from 'radix-vue';
-
-const slots = useSlots();
+} from "~/components/ui/dialog";
 
 const props = defineProps({
   modelValue: {
     type: Boolean,
-    required: true
+    required: true,
   },
   contentClass: {
     type: String,
-    default: 'ui-dialog'
+    default: "ui-dialog",
   },
   notHeader: {
     type: Boolean,
-    default: false
+    default: false,
   },
   notFooterGradient: {
     type: Boolean,
-    default: false
+    default: false,
   },
   notDimClick: {
     type: Boolean,
-    default: false
+    default: false,
   },
 });
 
-const emit = defineEmits(['update:modelValue']);
+const emit = defineEmits(["update:modelValue"]);
+
+const slots = useSlots();
 
 const close = () => {
-  emit('update:modelValue', false);
+  emit("update:modelValue", false);
 };
 
 const handleInteractOutside = (event: Event) => {
-  if ( props.notDimClick || props.contentClass === "ui-dialog-alert") {
+  if (props.notDimClick || props.contentClass === "ui-dialog-alert") {
     event.preventDefault();
-  } else {
+  }
+  else {
     close();
   }
 };
-
 </script>
 
 <style lang="scss">
