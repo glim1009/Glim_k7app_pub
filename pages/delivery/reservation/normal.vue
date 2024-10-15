@@ -1340,8 +1340,8 @@
                 <FlexGroup>
                   <div class="flex-left">
                     <span class="ui-chk">
-                      <input id="agreeChk01" type="checkbox">
-                      <label for="agreeChk01"><span class="text-md">PG사 전자금융거래 약관동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
+                      <input id="agreeChk03" type="checkbox">
+                      <label for="agreeChk03"><span class="text-md">PG사 전자금융거래 약관동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
                     </span>
                   </div>
                   <div class="flex-right">
@@ -1356,8 +1356,8 @@
                 <FlexGroup>
                   <div class="flex-left">
                     <span class="ui-chk">
-                      <input id="agreeChk01" type="checkbox">
-                      <label for="agreeChk01"><span class="text-md">PG사 개인정보 수집 및 이용동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
+                      <input id="agreeChk04" type="checkbox">
+                      <label for="agreeChk04"><span class="text-md">PG사 개인정보 수집 및 이용동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
                     </span>
                   </div>
                   <div class="flex-right">
@@ -1372,8 +1372,8 @@
                 <FlexGroup>
                   <div class="flex-left">
                     <span class="ui-chk">
-                      <input id="agreeChk01" type="checkbox">
-                      <label for="agreeChk01"><span class="text-md">PG사 개인정보 제3자 제공동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
+                      <input id="agreeChk05" type="checkbox">
+                      <label for="agreeChk05"><span class="text-md">PG사 개인정보 제3자 제공동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
                     </span>
                   </div>
                   <div class="flex-right">
@@ -1441,7 +1441,7 @@
 
 <script setup lang="ts">
 definePageMeta({
-  title: "일반 택배예약",
+  title: "일반택배 예약",
   hideRightHeader: false,
 });
 

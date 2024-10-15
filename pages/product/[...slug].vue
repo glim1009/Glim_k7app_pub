@@ -895,7 +895,7 @@
   <!-- // pop : SNS 공유 -->
 
   <!-- pop : 매장 선택 -->
-  <PopStoreSearchSelect :is-search-data="popSearchType" v-model:sta="popStoreSearchSelect" />
+  <PopStoreSearchSelect v-model:sta="popStoreSearchSelect" :first-tab="StoreSearchTabName" :is-search-data="popSearchType" />
   <!-- // pop : 매장 선택 -->
 </template>
 
@@ -949,9 +949,10 @@ const popStoreSearchSelect = ref({ open: false });
 
 // 임시 - 매장 검색결과 팝업 확인을 위한 이벤트 추가 ( 개발시 삭제 요청 )
 const popSearchType = ref<boolean>();
-
-const openStoreSearchSelect = (isSearchData: boolean) => {
+const StoreSearchTabName = ref<string>();
+const openStoreSearchSelect = (isSearchData: boolean, tabName: string = "list") => {
   popSearchType.value = isSearchData; // 임시 - 매장 검색결과 팝업 확인을 위한 이벤트 추가 ( 개발시 삭제 요청 )
+  StoreSearchTabName.value = tabName;
   popStoreSearchSelect.value.open = true;
 };
 </script>

@@ -1,9 +1,7 @@
 <template>
   <ContDialog v-model="isOpen" content-class="ui-dialog-full">
     <template #title>
-      <div class="dialog-title">
-        매장쿠폰 선택
-      </div>
+      <div class="dialog-title">매장쿠폰 선택</div>
     </template>
     <template #body>
       <div class="dialog-inner">
@@ -11,9 +9,7 @@
           <ContBox v-if="isData">
             <CtitleWrap size="lg">
               <ETit type="cont" text="매장전용 쿠폰안내" />
-              <p class="stext-lg">
-                바코드 적용 및 오프라인 구매는 매장 쿠폰만 사용 가능하며, APP 쿠폰은 마이페이지 쿠폰함에서 확인 가능합니다.
-              </p>
+              <p class="stext-lg">바코드 적용 및 오프라인 구매는 매장 쿠폰만 사용 가능하며, APP 쿠폰은 마이페이지 쿠폰함에서 확인 가능합니다.</p>
             </CtitleWrap>
             <RowListWrap>
               <!-- repeat -->
@@ -21,13 +17,13 @@
                 <div class="coupon-box">
                   <div class="coupon-header">
                     <div class="ui-rdo-prod">
-                      <input id="storeCouponRdo01" type="radio" name="storeCouponRdo01">
-                      <label for="storeCouponRdo01" class="align-top" />
+                      <input id="storeCouponRdo01" type="radio" name="storeCouponRdo01" />
+                      <label for="storeCouponRdo01" class="align-top"></label>
                       <!-- thumb-prod-flex -->
                       <div class="thumb-prod-flex">
                         <EThumbProdBox size="lg">
                           <template #thumb>
-                            <img src="/assets/images/temp/temp_prod_5by5.png" alt="쿠폰명 이미지">
+                            <img src="/assets/images/temp/temp_prod_5by5.png" alt="쿠폰명 이미지" />
                           </template>
                         </EThumbProdBox>
                         <div class="info-box">
@@ -45,8 +41,8 @@
                   <div class="coupon-cont">
                     <TableWrap type="info" gap="sm" size="md" table-name="쿠폰 정보">
                       <colgroup>
-                        <col style="width: 55px;">
-                        <col style="width: auto;">
+                        <col style="width: 55px;" />
+                        <col style="width: auto;" />
                       </colgroup>
                       <tbody>
                         <tr>
@@ -72,13 +68,13 @@
                 <div class="coupon-box">
                   <div class="coupon-header">
                     <div class="ui-rdo-prod">
-                      <input id="storeCouponRdo02" type="radio" name="storeCouponRdo01">
-                      <label for="storeCouponRdo02" class="align-top" />
+                      <input id="storeCouponRdo02" type="radio" name="storeCouponRdo01" />
+                      <label for="storeCouponRdo02" class="align-top"></label>
                       <!-- thumb-prod-flex -->
                       <div class="thumb-prod-flex">
                         <EThumbProdBox size="lg">
                           <template #thumb>
-                            <img src="/assets/images/temp/temp_prod_5by5.png" alt="쿠폰명 이미지">
+                            <img src="/assets/images/temp/temp_prod_5by5.png" alt="쿠폰명 이미지" />
                           </template>
                         </EThumbProdBox>
                         <div class="info-box">
@@ -96,8 +92,8 @@
                   <div class="coupon-cont">
                     <TableWrap type="info" gap="sm" size="md" table-name="쿠폰 정보">
                       <colgroup>
-                        <col style="width: 55px;">
-                        <col style="width: auto;">
+                        <col style="width: 55px;" />
+                        <col style="width: auto;" />
                       </colgroup>
                       <tbody>
                         <tr>
@@ -129,13 +125,13 @@
                 <div class="coupon-box">
                   <div class="coupon-header">
                     <div class="ui-rdo-prod">
-                      <input id="storeCouponRdo03" type="radio" name="storeCouponRdo01">
-                      <label for="storeCouponRdo03" class="align-top" />
+                      <input id="storeCouponRdo03" type="radio" name="storeCouponRdo01" />
+                      <label for="storeCouponRdo03" class="align-top"></label>
                       <!-- thumb-prod-flex -->
                       <div class="thumb-prod-flex">
                         <EThumbProdBox size="lg">
                           <template #thumb>
-                            <img src="/assets/images/temp/temp_prod_5by5.png" alt="쿠폰명 이미지">
+                            <img src="/assets/images/temp/temp_prod_5by5.png" alt="쿠폰명 이미지" />
                           </template>
                         </EThumbProdBox>
                         <div class="info-box">
@@ -153,8 +149,8 @@
                   <div class="coupon-cont">
                     <TableWrap type="info" gap="sm" size="md" table-name="쿠폰 정보">
                       <colgroup>
-                        <col style="width: 55px;">
-                        <col style="width: auto;">
+                        <col style="width: 55px;" />
+                        <col style="width: auto;" />
                       </colgroup>
                       <tbody>
                         <tr>
@@ -186,13 +182,13 @@
                 <div class="coupon-box">
                   <div class="coupon-header">
                     <div class="ui-rdo-prod">
-                      <input id="storeCouponRdo04" type="radio" name="storeCouponRdo01">
-                      <label for="storeCouponRdo04" class="align-top" />
+                      <input id="storeCouponRdo04" type="radio" name="storeCouponRdo01" />
+                      <label for="storeCouponRdo04" class="align-top"></label>
                       <!-- thumb-prod-flex -->
                       <div class="thumb-prod-flex">
                         <EThumbProdBox size="lg">
                           <template #thumb>
-                            <img src="/assets/images/temp/temp_prod_5by5.png" alt="쿠폰명 이미지">
+                            <img src="/assets/images/temp/temp_prod_5by5.png" alt="쿠폰명 이미지" />
                           </template>
                         </EThumbProdBox>
                         <div class="info-box">
@@ -210,8 +206,8 @@
                   <div class="coupon-cont">
                     <TableWrap type="info" gap="sm" size="md" table-name="쿠폰 정보">
                       <colgroup>
-                        <col style="width: 55px;">
-                        <col style="width: auto;">
+                        <col style="width: 55px;" />
+                        <col style="width: auto;" />
                       </colgroup>
                       <tbody>
                         <tr>
@@ -253,12 +249,8 @@
     <template #footer>
       <div class="dialog-btn-wrap">
         <!-- DESC :: 쿠폰 선택 시 [disabled] 속성 삭제 -->
-        <EBtn color="line-light-gray" size="lg" disabled>
-          <span class="text">초기화</span>
-        </EBtn>
-        <EBtn color="green" size="lg" disabled @click="closeDialog">
-          <span class="text">적용</span>
-        </EBtn>
+        <EBtn color="line-light-gray" size="lg" disabled><span class="text">초기화</span></EBtn>
+        <EBtn color="green" size="lg" @click="closeDialog" disabled><span class="text">적용</span></EBtn>
       </div>
     </template>
   </ContDialog>
@@ -273,15 +265,15 @@ const props = defineProps<{
   sta: DialogState;
 }>();
 
-const emit = defineEmits(["update:sta"]);
-
 const openDialog = () => {
   isOpen.value = true;
 };
 
+const emit = defineEmits(['update:sta']);
+
 const isOpen = computed({
   get: () => props.sta.open,
-  set: value => emit("update:sta", { ...props.sta, open: value }),
+  set: (value) => emit('update:sta', { ...props.sta, open: value }),
 });
 
 const closeDialog = () => {

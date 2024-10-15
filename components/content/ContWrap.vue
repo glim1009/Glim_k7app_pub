@@ -6,34 +6,36 @@
 
 <script setup lang="ts">
 const props = withDefaults(defineProps<{
-  type?: 'default' | 'white' | 'divider'; // default - gray, white, divider - 미정
-  inTop?: 'zero' | 'sm' | 'md' | 'lg'; // zero - 0, sm - 10px , md - 20px, lg - 30px
-  inBottom?: 'zero' | 'md' | 'sm'; // zero - 0, md - 30px
+  type?: "default" | "white" | "divider" | string; // default - gray, white, divider - 미정
+  inTop?: "zero" | "sm" | "md" | "lg"; // zero - 0, sm - 10px , md - 20px, lg - 30px
+  inBottom?: "zero" | "md" | "sm"; // zero - 0, md - 30px
 }>(), {
-  type: 'default',
-  inTop: 'md',
-  inBottom: 'md',
+  type: "default",
+  inTop: "md",
+  inBottom: "md",
 });
 
 // cont-{type}-{inTop/inBottom}-wrap
 // cont-white-zerobz-wrap
 // cont-white-lgbz-
 const className = computed(() => {
-  let cNm = 'cont';
-  let bottomClass = props.inBottom === 'zero' ? 'bz' : 'bs';
+  let cNm = "cont";
+  let bottomClass = props.inBottom === "zero" ? "bz" : "bs";
 
-  if (props.type !== 'default') cNm += '-' + props.type;
+  if (props.type !== "default")
+    cNm += `-${props.type}`;
 
   // top -md, bottom-zero
-  if (props.inTop !== 'md') {
-    cNm += '-' + props.inTop;
+  if (props.inTop !== "md") {
+    cNm += `-${props.inTop}`;
   }
   else {
-    bottomClass = '-' + bottomClass;
+    bottomClass = `-${bottomClass}`;
   }
-  if (props.inBottom !== 'md') cNm += bottomClass;
+  if (props.inBottom !== "md")
+    cNm += bottomClass;
 
-  cNm += '-wrap';
+  cNm += "-wrap";
   return cNm;
 });
 </script>
