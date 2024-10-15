@@ -132,15 +132,15 @@
                     </swiper-slide>
                     <!-- // 첨부파일 등록된 경우 -->
                   </SwiperAutoWrap>
+                  <RowListWrap>
+                    <li class="dot-text-sm">
+                      총 10MB 이하로 jpg, jpeg, png 파일만 업로드 가능합니다.
+                    </li>
+                  </RowListWrap>
                   <p class="valid-desc">
                     사업자등록증 이미지를 입력해주세요.
                   </p>
                 </div>
-                <RowListWrap>
-                  <li class="dot-text-sm">
-                    총 10MB 이하로 jpg, jpeg, png 파일만 업로드 가능합니다.
-                  </li>
-                </RowListWrap>
               </div>
             </div>
           </li>

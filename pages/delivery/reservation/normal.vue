@@ -278,22 +278,24 @@
                         </ETit>
                       </div>
                       <div class="form-cont">
-                        <div class="form-input-group valid-check">
-                          <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호 입력" :max-length="11">
-                            <EBtn color="line-light-gray" size="xs">
-                              <span class="text">인증번호 발송</span>
-                            </EBtn>
-                          </EInputBox>
-                          <!-- 유효성 검사 CASE 01 : 휴대폰번호 인증 미입력한 경우 -->
-                          <div class="valid-desc">
-                            휴대폰번호를 입력해주세요.
+                        <div class="form-input-group">
+                          <div class="valid-check">
+                            <EInputBox title="휴대폰번호 입력" type="number" inputmode="tel" placeholder="휴대폰번호 입력" :max-length="11">
+                              <EBtn color="line-light-gray" size="xs">
+                                <span class="text">인증번호 발송</span>
+                              </EBtn>
+                            </EInputBox>
+                            <!-- 유효성 검사 CASE 01 : 휴대폰번호 인증 미입력한 경우 -->
+                            <div class="valid-desc">
+                              휴대폰번호를 입력해주세요.
+                            </div>
+                            <!-- // 유효성 검사 CASE 01 : 휴대폰번호 인증 미입력한 경우 -->
+                            <!-- 유효성 검사 CASE 02 : 휴대폰번호 인증 9자 미만 입력한 경우 -->
+                            <!-- <div class="valid-desc">
+                              휴대폰번호는 9자 이상 등록해주세요.
+                            </div> -->
+                            <!-- // 유효성 검사 CASE 02 : 휴대폰번호 인증 9자 미만 입력한 경우 -->
                           </div>
-                          <!-- // 유효성 검사 CASE 01 : 휴대폰번호 인증 미입력한 경우 -->
-                          <!-- 유효성 검사 CASE 02 : 휴대폰번호 인증 9자 미만 입력한 경우 -->
-                          <!-- <div class="valid-desc">
-                            휴대폰번호는 9자 이상 등록해주세요.
-                          </div> -->
-                          <!-- // 유효성 검사 CASE 02 : 휴대폰번호 인증 9자 미만 입력한 경우 -->
                           <EInputBox title="인증번호 입력" type="number" placeholder="인증번호 입력" :max-length="6" is-byte-check />
                           <BtnWrap>
                             <EBtn color="line-green" size="md" disabled>

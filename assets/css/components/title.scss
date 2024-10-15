@@ -14,18 +14,18 @@
 [class^=ctitle-2xs] { // 13px
   @extend %ctitleCommon;
   @include mixins.font_size_md(sb);
-  color: var(--Grayscale-90);
+  color: var(--Grayscale-100);
 }
 
 .ctitle-2xs-gray {
-  @include mixins.font_size_md(body);
+  font-weight: variables.$fontWeightRegular;
   color: var(--Grayscale-70);
-
 }
 
 .ctitle-xs { // 14px
   @extend %ctitleCommon;
   @include mixins.font_size_lg;
+  //color: var(--Grayscale-100);
   color: var(--Grayscale-90);
 
   .ico-arwright-xs {

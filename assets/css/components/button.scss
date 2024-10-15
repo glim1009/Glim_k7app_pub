@@ -453,7 +453,7 @@ $tBtnSize: ('xs', 'sm', 'md', 'lg');
       }
       [class^=ico][class$=xs] {
         margin: {
-          top: 1px;
+          top: 2px;
         }
       }
     } @else if ($size == 'sm') {
@@ -515,14 +515,6 @@ $tBtnSize: ('xs', 'sm', 'md', 'lg');
       [class^=ico][class$=sm] {
         margin: {
           top: 2px;
-        }
-      }
-    }
-
-    .text {
-      ~ [class^=ico] {
-        margin: {
-          left: 2px;
         }
       }
     }

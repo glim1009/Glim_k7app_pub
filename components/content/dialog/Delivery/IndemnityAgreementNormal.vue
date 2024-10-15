@@ -99,7 +99,7 @@
             <ColorBox color="white" size="lg">
               <TableWrap type="col" table-name="할증운임 및 배상한도">
                 <colgroup>
-                  <col style="width: 56%;">
+                  <col style="width: 51%;">
                   <col style="width: auto;">
                   <col style="width: auto;">
                 </colgroup>
