@@ -5,7 +5,7 @@
     />
     <DialogContent
       v-bind="forwarded"
-      :onInteractOutside="handleInteractOutside"
+      :on-interact-outside="handleInteractOutside"
       :class="
         cn(
           'z-50',
@@ -18,19 +18,18 @@
 </template>
 
 <script setup lang="ts">
-import { type HTMLAttributes, computed } from 'vue';
+import { type HTMLAttributes, computed } from "vue";
 import {
   DialogContent,
   type DialogContentEmits,
-  type DialogContentProps,
   DialogOverlay,
   DialogPortal,
   useForwardPropsEmits,
-} from 'radix-vue';
-import { cn } from '@/lib/utils';
+} from "radix-vue";
+import { cn } from "@/lib/utils";
 
 const props = withDefaults(defineProps<{
-  class?: HTMLAttributes['class'];
+  class?: HTMLAttributes["class"];
   notDimClick?: boolean;
   isOpen?: boolean;
 }>(), {
@@ -38,7 +37,7 @@ const props = withDefaults(defineProps<{
   isOpen: undefined,
 });
 
-const emits = defineEmits<DialogContentEmits & { 'update:isOpen': [value: boolean] }>();
+const emits = defineEmits<DialogContentEmits & { "update:isOpen": [value: boolean] }>();
 
 const delegatedProps = computed(() => {
   const { class: _, notDimClick: __, isOpen: ___, ...delegated } = props;
@@ -51,13 +50,12 @@ const handleInteractOutside = (event: Event) => {
   if (!props.notDimClick) {
     event.preventDefault();
   }
-};  ``
+};
 
 // Watch for changes in isOpen prop
 watch(() => props.isOpen, (newValue) => {
   if (newValue !== undefined) {
-    emits('update:isOpen', newValue);
+    emits("update:isOpen", newValue);
   }
 });
-
 </script>

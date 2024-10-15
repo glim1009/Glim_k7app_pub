@@ -11,7 +11,7 @@
           <ContBox>
             <CtitleWrap size="zero">
               <ETit text="내용 확인 후 동의해주세요." type="cont" />
-              <div class="stext-lg">
+              <div class="stext">
                 유의사항 및 파손면책안내를<br />모두 읽으신 후 동의하실 수 있습니다.
               </div>
             </CtitleWrap>
@@ -19,11 +19,11 @@
           <ContBox size="lg">
             <CtitleWrap>
               <ETit text="1. 유의사항" type="cont" />
-              <div class="stext-lg">
+              <div class="stext">
                 택배예약 시 꼭 확인해주세요.
               </div>
             </CtitleWrap>
-            <ColorBox color="white" size="lg">
+            <ColorBox color="white" size="md">
               <RowListWrap gap="sm">
                 <li class="dot-text-sm">
                   포장당 50만원 초과하는 운송물에 대하여 소정의 할증운임을 받습니다.
@@ -41,7 +41,7 @@
             <CtitleWrap>
               <ETit text="2. 취급제한 품목" type="cont" />
             </CtitleWrap>
-            <ColorBox color="white" size="lg">
+            <ColorBox color="white" size="md">
               <CtitleWrap>
                 <ETit text="현금화 가능 물품" type="sCont" />
                 <div class="stext">
@@ -96,7 +96,7 @@
             <CtitleWrap>
               <ETit text="3. 할증운임 및 배상한도" type="cont" />
             </CtitleWrap>
-            <ColorBox color="white" size="lg">
+            <ColorBox color="white" size="md">
               <TableWrap type="col" table-name="할증운임 및 배상한도">
                 <colgroup>
                   <col style="width: 56%;" />
@@ -136,10 +136,10 @@
             <CtitleWrap>
               <ETit text="4. 무게 및 규격 안내" type="cont" />
             </CtitleWrap>
-            <ColorBox color="white" size="lg">
+            <ColorBox color="white" size="md">
               <TableWrap type="info" gap="md" size="md" table-name="무게 및 규격 안내">
                 <colgroup>
-                  <col style="width: 33px;" />
+                  <col style="width: 40px;" />
                   <col style="width: auto;" />
                 </colgroup>
                 <tbody>
@@ -151,7 +151,7 @@
                     <th class="va-top">
                       규격
                     </th>
-                    <td>가로,세로,높이 합 160cm 이하(최장변 120cm 이하), 가액 100만원 이하(50~100만원 할증 50%)</td>
+                    <td>가로,세로,높이 합 160cm 이하(최장변 120cm 이하), <br />가액 100만원 이하(50~100만원 할증 50%)</td>
                   </tr>
                 </tbody>
               </TableWrap>
@@ -160,12 +160,12 @@
           <ContBox size="lg">
             <CtitleWrap>
               <ETit text="5. 포장상태" type="cont" />
-              <div class="stext-lg">
+              <div class="stext">
                 포장은 보내시는 분이 직접 해주셔야 하며, <span class="fw-md">포장상태가 불량</span>할 경우 물품훼손 및 이탈의 우려가 있어 <span class="fw-md">수거가 불가</span>합니다.
                 <br />규격화된 박스에 물품을 안전하게 포장하여 주시기 바랍니다.
               </div>
             </CtitleWrap>
-            <ColorBox color="white" size="lg">
+            <ColorBox color="white" size="md">
               <CtitleWrap size="sm">
                 <ETit text="*포장불량예시" type="sCont" class="fc-red" />
               </CtitleWrap>
@@ -247,7 +247,7 @@
             <CtitleWrap>
               <ETit text="6. 품목별 접수 안내" type="cont" />
             </CtitleWrap>
-            <ColorBox color="white" size="lg">
+            <ColorBox color="white" size="md">
               <ContBox>
                 <CtitleWrap size="sm">
                   <ETit text="전자제품류" type="sCont" />
@@ -349,20 +349,16 @@
             </ColorBox>
           </ContBox>
           <ContBox size="lg">
-            <CtitleWrap size="zero">
-              <ETit text="파손면책이란?" type="cont" />
-              <div class="stext-lg">
-                배송중 포장 부실로 인한 상품의 고장/파손에 대하여 택배사의 배상 책임을 묻지 않겠다는 고객의 확인
-              </div>
-            </CtitleWrap>
+            <ETit text="파손면책이란?" type="cont" />
+            <div class="stext">
+              배송중 포장 부실로 인한 상품의 고장/파손에 대하여 택배사의 배상 책임을 묻지 않겠다는 고객의 확인
+            </div>
           </ContBox>
           <ContBox size="lg">
-            <CtitleWrap size="zero">
-              <ETit text="택배 이용불가 상품" type="cont" />
-              <div class="stext-lg">
-                유리류, 사기류, 아크릴제품, 현금, 신분증, 여권, 예술품, 살아있는 동물, 포장하지 않은 상품, 액체류 등
-              </div>
-            </CtitleWrap>
+            <ETit text="택배 이용불가 상품" type="cont" />
+            <div class="stext">
+              유리류, 사기류, 아크릴제품, 현금, 신분증, 여권, 예술품, 살아있는 동물, 포장하지 않은 상품, 액체류 등
+            </div>
           </ContBox>
         </ContWrap>
       </ContBox>

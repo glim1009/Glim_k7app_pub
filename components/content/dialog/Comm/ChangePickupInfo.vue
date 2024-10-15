@@ -17,7 +17,7 @@
           </ContBox>
           <ContBox size="sm" gap="sm">
             <ColorBox color="white" size="lg">
-              <UiCalendar locale="ko" v-model="value" class="calendar-group" />
+              <UiCalendar v-model="value" locale="ko" class="calendar-group" />
             </ColorBox>
             <ColorBox color="white" size="lg">
               <CtitleWrap size="sm">
@@ -26,55 +26,55 @@
               <GridListWrap gap="sm" col="3">
                 <li class="item-grid">
                   <span class="ui-rdo-button">
-                    <input id="pickupTimeRdo01" type="radio" name="pickupTimeRdo01" disabled />
+                    <input id="pickupTimeRdo01" type="radio" name="pickupTimeRdo01" disabled>
                     <label for="pickupTimeRdo01"><span class="text-sm">00시~03시</span></label>
                   </span>
                 </li>
                 <li class="item-grid">
                   <span class="ui-rdo-button">
-                    <input id="pickupTimeRdo02" type="radio" name="pickupTimeRdo01" disabled />
+                    <input id="pickupTimeRdo02" type="radio" name="pickupTimeRdo01" disabled>
                     <label for="pickupTimeRdo02"><span class="text-sm">03시~06시</span></label>
                   </span>
                 </li>
                 <li class="item-grid">
                   <span class="ui-rdo-button">
-                    <input id="pickupTimeRdo03" type="radio" name="pickupTimeRdo01" disabled />
+                    <input id="pickupTimeRdo03" type="radio" name="pickupTimeRdo01" disabled>
                     <label for="pickupTimeRdo03"><span class="text-sm">06시~09시</span></label>
                   </span>
                 </li>
                 <li class="item-grid">
                   <span class="ui-rdo-button">
-                    <input id="pickupTimeRdo04" type="radio" name="pickupTimeRdo01" />
+                    <input id="pickupTimeRdo04" type="radio" name="pickupTimeRdo01">
                     <label for="pickupTimeRdo04"><span class="text-sm">09시~12시</span></label>
                   </span>
                 </li>
                 <li class="item-grid">
                   <span class="ui-rdo-button">
-                    <input id="pickupTimeRdo05" type="radio" name="pickupTimeRdo01" />
+                    <input id="pickupTimeRdo05" type="radio" name="pickupTimeRdo01">
                     <label for="pickupTimeRdo05"><span class="text-sm">12시~15시</span></label>
                   </span>
                 </li>
                 <li class="item-grid">
                   <span class="ui-rdo-button">
-                    <input id="pickupTimeRdo06" type="radio" name="pickupTimeRdo01" checked />
+                    <input id="pickupTimeRdo06" type="radio" name="pickupTimeRdo01" checked>
                     <label for="pickupTimeRdo06"><span class="text-sm">15시~18시</span></label>
                   </span>
                 </li>
                 <li class="item-grid">
                   <span class="ui-rdo-button">
-                    <input id="pickupTimeRdo07" type="radio" name="pickupTimeRdo01" />
+                    <input id="pickupTimeRdo07" type="radio" name="pickupTimeRdo01">
                     <label for="pickupTimeRdo07"><span class="text-sm">18시~20시</span></label>
                   </span>
                 </li>
                 <li class="item-grid">
                   <span class="ui-rdo-button">
-                    <input id="pickupTimeRdo08" type="radio" name="pickupTimeRdo01" />
+                    <input id="pickupTimeRdo08" type="radio" name="pickupTimeRdo01">
                     <label for="pickupTimeRdo08"><span class="text-sm">20시~22시</span></label>
                   </span>
                 </li>
                 <li class="item-grid">
                   <span class="ui-rdo-button">
-                    <input id="pickupTimeRdo09" type="radio" name="pickupTimeRdo01" />
+                    <input id="pickupTimeRdo09" type="radio" name="pickupTimeRdo01">
                     <label for="pickupTimeRdo09"><span class="text-sm">22시~24시</span></label>
                   </span>
                 </li>
@@ -107,6 +107,8 @@
 </template>
 
 <script setup lang="ts">
+import { type DateValue, getLocalTimeZone, today } from "@internationalized/date";
+
 interface DialogState {
   open: boolean;
 }
@@ -115,7 +117,7 @@ const props = defineProps<{
   sta: DialogState;
 }>();
 
-const emit = defineEmits(['update:sta']);
+const emit = defineEmits(["update:sta"]);
 
 function openDialog() {
   isOpen.value = true;
@@ -123,25 +125,22 @@ function openDialog() {
 
 const isOpen = computed({
   get: () => props.sta.open,
-  set: value => emit('update:sta', { ...props.sta, open: value }),
+  set: value => emit("update:sta", { ...props.sta, open: value }),
 });
 
 function closeDialog() {
   isOpen.value = false;
 }
-
-import { type DateValue, getLocalTimeZone, today } from '@internationalized/date'
-const value = ref(today(getLocalTimeZone())) as Ref<DateValue>
+const value = ref(today(getLocalTimeZone())) as Ref<DateValue>;
 
 // 매장선택
 const popStoreSearchSelect = ref({ open: false });
 
 // 임시 - 매장 검색결과 팝업 확인을 위한 이벤트 추가 ( 개발시 삭제 요청 )
 const popSearchType = ref<boolean>();
-const StoreSearchTabName = ref<string>();
-const openStoreSearchSelect = (isSearchData: boolean, tabName: string = "list") => {
+
+const openStoreSearchSelect = (isSearchData: boolean) => {
   popSearchType.value = isSearchData; // 임시 - 매장 검색결과 팝업 확인을 위한 이벤트 추가 ( 개발시 삭제 요청 )
-  StoreSearchTabName.value = tabName;
   popStoreSearchSelect.value.open = true;
 };
 </script>

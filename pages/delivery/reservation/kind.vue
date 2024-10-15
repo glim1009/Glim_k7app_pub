@@ -1409,13 +1409,11 @@
   <!-- // pop : 금액권선택 -->
 
   <!-- pop : 매장 선택 -->
-  <PopStoreSearchSelect v-model:sta="popStoreSearchSelect" :is-search-data="popSearchType" />
+  <PopStoreSearchSelect v-model:sta="popStoreSearchSelect" :first-tab="StoreSearchTabName" :is-search-data="popSearchType" />
   <!-- // pop : 매장 선택 -->
 </template>
 
 <script setup lang="ts">
-import { useSharedStoreState } from "~/composables/useFrontPub";
-
 definePageMeta({
   title: "착한 택배예약",
   hideRightHeader: false,
@@ -1496,23 +1494,15 @@ const popStoreSearchSelect = ref({ open: false });
 
 // 임시 - 매장 검색결과 팝업 확인을 위한 이벤트 추가 ( 개발시 삭제 요청 )
 const popSearchType = ref<boolean>();
-const StoreSearchTabName = ref<string>();
-const openStoreSearchSelect = (isSearchData: boolean, tabName: string = "list") => {
+
+const openStoreSearchSelect = (isSearchData: boolean) => {
   popSearchType.value = isSearchData; // 임시 - 매장 검색결과 팝업 확인을 위한 이벤트 추가 ( 개발시 삭제 요청 )
-  StoreSearchTabName.value = tabName;
   popStoreSearchSelect.value.open = true;
 };
 
 const { $showToast } = useNuxtApp();
 // DESC :: 단골매장 저장 : 단골매장 등록 3개 이상 저장할 경우
 /* $showToast({ msg: "등록 가능한 매장 수를 초과하였습니다." }); */
-
-// 단골매장 불러오기 :: 매장찾기 > 단골매장 탭 이동 기능
-const sharedStoreState = useSharedStoreState();
-const pageMoveStoreSearch = () => {
-  sharedStoreState.value.firstTab = "bookmark";
-  navigateTo("/store/search");
-};
 </script>
 
 <style lang="scss" scoped>

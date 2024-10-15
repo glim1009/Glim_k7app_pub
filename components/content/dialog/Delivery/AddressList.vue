@@ -1,42 +1,34 @@
 <template>
   <ContDialog v-model="isOpen" content-class="ui-dialog-full">
     <template #title>
-      <div class="dialog-title">
-        주소록
-      </div>
+      <div class="dialog-title">주소록</div>
     </template>
     <template #body>
       <div class="dialog-inner">
         <ContWrap>
-          <ContBox size="sm">
-            <CtitleWrap size="zero">
-              <ETit type="cont" text="내용 확인 후 추가해주세요." />
-              <div class="stext-lg">
-                택배에서는 우편번호가 등록된 주소만 입력이 가능합니다. 따라서 우편번호가 없는 지도 주소는 목록에서 제외합니다.
-              </div>
-            </CtitleWrap>
-            <BtnWrap type="full" size="lg">
+          <ContBox>
+            <BtnWrap type="full">
               <EBtn color="gray" @click="openAddAddress">
-                <EIco name="plus" color="white" size="sm" />
+                <EIco name="plus" color="white" size="sm"></EIco>
                 <span class="text">주소지 추가</span>
               </EBtn>
             </BtnWrap>
             <BtnWrap type="auto-center" size="md">
-              <ETBtn tag="button" size="xs" @click="openCurrentAddress">
-                <EIco name="current-location" color="gray" size="sm" />
-                <span class="text">현재 위치를 주소에 추가</span>
+              <ETBtn tag="button" size="xs" @click="openSearchAddress">
+                <EIco name="current-location" color="gray" size="sm"></EIco>
+                <span class="text">현재 위치 주소에 추가</span>
               </ETBtn>
             </BtnWrap>
           </ContBox>
-          <ContBox size="sm">
+          <ContBox>
             <RowListWrap>
               <li class="item is-selected">
                 <ColorBox color="white" size="lg">
-                  <div class="box-info-header address-info">
+                  <div class="box-info-header">
                     <FlexGroup align="start">
                       <div class="info-flex-left">
                         <CtitleWrap size="sm">
-                          <div class="ctitle-md">사무실</div>
+                          <div class="ctitle-lg">사무실</div>
                           <EBadge color="light-gray" size="md" badge-text="기본주소지" />
                         </CtitleWrap>
                         <div class="bar-group">
@@ -52,20 +44,34 @@
                       </div>
                     </FlexGroup>
                   </div>
-                  <div class="address-info-group">
-                    <span class="number">085421</span>
-                    <span class="address">서울 강동구 상암로 **길 ***호</span>
-                  </div>
+                  <RowListWrap size="xs">
+                    <p class="stext-black fw-md">085421</p>
+                    <TableWrap type="info" gap="sm" size="md" table-name="정보성 테이블">
+                      <colgroup>
+                        <col style="width: 44px;">
+                        <col style="width: auto;">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th scope="row" class="fc-black fw-md">도로명</th>
+                          <td>서울 강동구 상암로 **길 ***호 </td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="fc-black fw-md">지번</th>
+                          <td>서울 강동구 암사동 265-5번지 203호 서울 강동구 암사동 265-5번지 ***호</td>
+                        </tr>
+                      </tbody>
+                    </TableWrap>
+                  </RowListWrap>
                 </ColorBox>
               </li>
               <li class="item">
                 <ColorBox color="white" size="lg">
-                  <div class="box-info-header address-info">
+                  <div class="box-info-header">
                     <FlexGroup align="start">
                       <div class="info-flex-left">
                         <CtitleWrap size="sm">
-                          <div class="ctitle-md">엄마집</div>
-                          <EBadge color="light-gray" size="md" badge-text="기본주소지" />
+                          <div class="ctitle-lg">엄마집</div>
                         </CtitleWrap>
                         <div class="bar-group">
                           <span class="bar-text fc-black">홍*동</span>
@@ -80,21 +86,34 @@
                       </div>
                     </FlexGroup>
                   </div>
-                  <div class="address-info-group">
-                    <span class="number">085421</span>
-                    <span class="address">서울 강동구 상암로 **길 ***호</span>
-                  </div>
+                  <RowListWrap size="xs">
+                    <p class="stext-black fw-md">085421</p>
+                    <TableWrap type="info" gap="sm" size="md" table-name="정보성 테이블">
+                      <colgroup>
+                        <col style="width: 44px;">
+                        <col style="width: auto;">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th scope="row" class="fc-black fw-md">도로명</th>
+                          <td>서울 강동구 상암로 **길 ***호 </td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="fc-black fw-md">지번</th>
+                          <td>서울 강동구 암사동 265-5번지 203호 서울 강동구 암사동 265-5번지 ***호</td>
+                        </tr>
+                      </tbody>
+                    </TableWrap>
+                  </RowListWrap>
                 </ColorBox>
               </li>
               <li class="item">
                 <ColorBox color="white" size="lg">
-                  <div class="box-info-header address-info">
+                  <div class="box-info-header">
                     <FlexGroup align="start">
                       <div class="info-flex-left">
                         <CtitleWrap size="sm">
-                          <div class="ctitle-md">
-                            우리집
-                          </div>
+                          <div class="ctitle-lg">우리집</div>
                         </CtitleWrap>
                         <div class="bar-group">
                           <span class="bar-text fc-black">홍*동</span>
@@ -109,10 +128,25 @@
                       </div>
                     </FlexGroup>
                   </div>
-                  <div class="address-info-group">
-                    <span class="number">085421</span>
-                    <span class="address">서울 강동구 상암로 **길 ***호</span>
-                  </div>
+                  <RowListWrap size="xs">
+                    <p class="stext-black fw-md">085421</p>
+                    <TableWrap type="info" gap="sm" size="md" table-name="정보성 테이블">
+                      <colgroup>
+                        <col style="width: 44px;">
+                        <col style="width: auto;">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th scope="row" class="fc-black fw-md">도로명</th>
+                          <td>서울 강동구 상암로 **길 ***호 </td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="fc-black fw-md">지번</th>
+                          <td>서울 강동구 암사동 265-5번지 203호 서울 강동구 암사동 265-5번지 ***호</td>
+                        </tr>
+                      </tbody>
+                    </TableWrap>
+                  </RowListWrap>
                 </ColorBox>
               </li>
             </RowListWrap>
@@ -125,12 +159,13 @@
   <PopMyAddAddress v-model:sta="popAddAddress" />
   <!-- // pop : 주소록 추가 팝업 -->
 
-  <!-- pop : 현재 위치 주소 추가 -->
-  <PopMyCurrentAddress v-model:sta="popCurrentAddress" />
-  <!-- // pop : 현재 위치 주소 추가 -->
+  <!-- pop : 주소록 검색 팝업 -->
+  <PopMySearchAddress v-model:sta="popSearchAddress" />
+  <!-- // pop : 주소록 검색 팝업 -->
 </template>
 
 <script setup lang="ts">
+
 interface DialogState {
   open: boolean;
 }
@@ -139,15 +174,15 @@ const props = defineProps<{
   sta: DialogState;
 }>();
 
-const emit = defineEmits(["update:sta"]);
-
 const openDialog = () => {
   isOpen.value = true;
 };
 
+const emit = defineEmits(['update:sta']);
+
 const isOpen = computed({
   get: () => props.sta.open,
-  set: value => emit("update:sta", { ...props.sta, open: value }),
+  set: (value) => emit('update:sta', { ...props.sta, open: value }),
 });
 
 const closeDialog = () => {
@@ -158,7 +193,7 @@ const closeDialog = () => {
 const popAddAddress = ref({ open: false });
 const openAddAddress = () => popAddAddress.value.open = true;
 
-// 현재 위치 주소 추가
-const popCurrentAddress = ref({ open: false });
-const openCurrentAddress = () => popCurrentAddress.value.open = true;
+// 주소록 검색 팝업
+const popSearchAddress = ref({ open: false });
+const openSearchAddress = () => popSearchAddress.value.open = true;
 </script>

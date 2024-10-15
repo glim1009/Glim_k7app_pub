@@ -11,43 +11,67 @@
           <RowListWrap gap="md" class="side-box">
             <li class="item-banner">
               <div class="thumb-box">
-                <img src="/assets/images/temp/temp_banner_marketing_1.png" alt="배너 전체보기 이미지" />
+                <img src="/assets/images/temp/temp_banner_marketing_1.png" alt="배너 전체보기 이미지">
               </div>
+              <NuxtLink class="btn-link" to="javascript:">
+                <span class="offscreen">바로가기</span>
+              </NuxtLink>
             </li>
             <li class="item-banner">
               <div class="thumb-box">
-                <img src="/assets/images/temp/temp_banner_marketing_2.png" alt="배너 전체보기 이미지" />
+                <img src="/assets/images/temp/temp_banner_marketing_2.png" alt="배너 전체보기 이미지">
               </div>
+              <NuxtLink class="btn-link" to="javascript:">
+                <span class="offscreen">바로가기</span>
+              </NuxtLink>
             </li>
             <li class="item-banner">
               <div class="thumb-box">
-                <img src="/assets/images/temp/temp_banner_marketing_1.png" alt="배너 전체보기 이미지" />
+                <img src="/assets/images/temp/temp_banner_marketing_1.png" alt="배너 전체보기 이미지">
               </div>
+              <NuxtLink class="btn-link" to="javascript:">
+                <span class="offscreen">바로가기</span>
+              </NuxtLink>
             </li>
             <li class="item-banner">
               <div class="thumb-box">
-                <img src="/assets/images/temp/temp_banner_marketing_2.png" alt="배너 전체보기 이미지" />
+                <img src="/assets/images/temp/temp_banner_marketing_2.png" alt="배너 전체보기 이미지">
               </div>
+              <NuxtLink class="btn-link" to="javascript:">
+                <span class="offscreen">바로가기</span>
+              </NuxtLink>
             </li>
             <li class="item-banner">
               <div class="thumb-box">
-                <img src="/assets/images/temp/temp_banner_marketing_1.png" alt="배너 전체보기 이미지" />
+                <img src="/assets/images/temp/temp_banner_marketing_1.png" alt="배너 전체보기 이미지">
               </div>
+              <NuxtLink class="btn-link" to="javascript:">
+                <span class="offscreen">바로가기</span>
+              </NuxtLink>
             </li>
             <li class="item-banner">
               <div class="thumb-box">
-                <img src="/assets/images/temp/temp_banner_marketing_2.png" alt="배너 전체보기 이미지" />
+                <img src="/assets/images/temp/temp_banner_marketing_2.png" alt="배너 전체보기 이미지">
               </div>
+              <NuxtLink class="btn-link" to="javascript:">
+                <span class="offscreen">바로가기</span>
+              </NuxtLink>
             </li>
             <li class="item-banner">
               <div class="thumb-box">
-                <img src="/assets/images/temp/temp_banner_marketing_1.png" alt="배너 전체보기 이미지" />
+                <img src="/assets/images/temp/temp_banner_marketing_1.png" alt="배너 전체보기 이미지">
               </div>
+              <NuxtLink class="btn-link" to="javascript:">
+                <span class="offscreen">바로가기</span>
+              </NuxtLink>
             </li>
             <li class="item-banner">
               <div class="thumb-box">
-                <img src="/assets/images/temp/temp_banner_marketing_2.png" alt="배너 전체보기 이미지" />
+                <img src="/assets/images/temp/temp_banner_marketing_2.png" alt="배너 전체보기 이미지">
               </div>
+              <NuxtLink class="btn-link" to="javascript:">
+                <span class="offscreen">바로가기</span>
+              </NuxtLink>
             </li>
           </RowListWrap>
         </ContWrap>
@@ -65,11 +89,10 @@ const props = defineProps<{
   sta: DialogState;
 }>();
 
-const emit = defineEmits(['update:sta']);
+const emit = defineEmits(["update:sta"]);
 
 const isOpen = computed({
   get: () => props.sta.open,
-  set: value => emit('update:sta', { ...props.sta, open: value }),
+  set: value => emit("update:sta", { ...props.sta, open: value }),
 });
-
 </script>

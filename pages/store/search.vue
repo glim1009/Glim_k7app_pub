@@ -173,8 +173,6 @@
 </template>
 
 <script setup lang="ts">
-import { useSharedStoreState } from "~/composables/useFrontPub";
-
 definePageMeta({
   layout: false,
 });
@@ -200,11 +198,6 @@ const popStoreFilterOption = ref({ open: false });
 const openStoreFilterOption = () => {
   popStoreFilterOption.value.open = true;
 };
-
-const sharedStoreState = useSharedStoreState();
-onMounted(() => {
-  sharedStoreState.value.firstTab = "list";
-});
 </script>
 
 <style lang="scss" scoped>

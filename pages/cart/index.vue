@@ -760,10 +760,9 @@ const popStoreSearchSelect = ref({ open: false });
 
 // 임시 - 매장 검색결과 팝업 확인을 위한 이벤트 추가 ( 개발시 삭제 요청 )
 const popSearchType = ref<boolean>();
-const StoreSearchTabName = ref<string>();
-const openStoreSearchSelect = (isSearchData: boolean, tabName: string = "list") => {
+
+const openStoreSearchSelect = (isSearchData: boolean) => {
   popSearchType.value = isSearchData; // 임시 - 매장 검색결과 팝업 확인을 위한 이벤트 추가 ( 개발시 삭제 요청 )
-  StoreSearchTabName.value = tabName;
   popStoreSearchSelect.value.open = true;
 };
 </script>

@@ -8,7 +8,9 @@
 </template>
 
 <script setup lang="ts">
-defineEmits(["toggleClick"]);
+
+defineEmits(['toggleClick']);
+
 </script>
 
 <style lang="scss" scoped>

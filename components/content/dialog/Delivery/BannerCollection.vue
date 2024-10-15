@@ -5,7 +5,7 @@
     </template>
     <template #body>
       <div class="dialog-inner">
-        <ContWrap in-top="zero" type="white">
+        <ContWrap in-top="zero">
           <RowListWrap gap="md" class="side-box">
             <li class="item-banner">
               <div class="thumb-box">

@@ -20,8 +20,6 @@ const props = withDefaults(defineProps<{
   open: false,
 });
 
-const emit = defineEmits(["toggleClick"]);
-
 const className = computed(() => {
   let cNm = "fold";
   if (props.type !== "box")
@@ -36,10 +34,7 @@ const isOpen = ref(false);
 const FoldContRef = ref<HTMLElement | null>(null);
 const FoldContHeight = ref();
 
-function toggle() {
-  isOpen.value = !isOpen.value;
-  emit("toggleClick", isOpen.value);
-}
+const toggle = () => isOpen.value = !isOpen.value;
 
 function customStyle() {
   return {
@@ -48,7 +43,6 @@ function customStyle() {
 }
 
 onMounted(() => {
-  // console.log(isOpen.value);
   if (props.open)
     isOpen.value = props.open;
 });
