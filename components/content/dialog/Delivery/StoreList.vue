@@ -1,13 +1,13 @@
 <template>
   <ContDialog v-model="isOpen" content-class="ui-dialog-full">
     <template #title>
-      <div class="dialog-title">매장선택</div>
+      <div class="dialog-title">
+        매장선택
+      </div>
     </template>
     <template #body>
       <div class="dialog-inner">
-        <ContWrap>
-          <div style="height: 100dvh; background: #E0F8EE; color: #00BB78; font-weight: 600; padding: 20px;">확정 후 반영 예정</div>
-        </ContWrap>
+        <ContWrap />
       </div>
     </template>
   </ContDialog>
@@ -22,15 +22,15 @@ const props = defineProps<{
   sta: DialogState;
 }>();
 
+const emit = defineEmits(["update:sta"]);
+
 const openDialog = () => {
   isOpen.value = true;
 };
 
-const emit = defineEmits(['update:sta']);
-
 const isOpen = computed({
   get: () => props.sta.open,
-  set: (value) => emit('update:sta', { ...props.sta, open: value }),
+  set: value => emit("update:sta", { ...props.sta, open: value }),
 });
 
 const closeDialog = () => {

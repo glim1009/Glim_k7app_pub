@@ -134,7 +134,3 @@ export function useToast() {
     isClose,
   };
 }
-
-export const useSharedStoreState = () => useState("sharedStoreState", () => ({
-  firstTab: "list",
-}));
