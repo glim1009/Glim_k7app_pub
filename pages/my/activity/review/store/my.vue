@@ -24,7 +24,10 @@
             <FlexGroup align="start">
               <div class="flex-left">
                 <CtitleWrap>
-                  <ETit type="box" text="을지로 1가점" />
+                  <ETBtn tag="a" size="lg" to="/store/detail">
+                    <span class="text">을지로 1가점</span>
+                    <EIco name="arw-right" color="gray" size="sm" />
+                  </ETBtn>
                   <div class="stext-lg">파니니EPL축구카드36팩 외 3건</div>
                 </CtitleWrap>
               </div>
@@ -117,7 +120,11 @@
             <FlexGroup align="start">
               <div class="flex-left">
                 <CtitleWrap>
-                  <ETit type="box" text="을지로 1가점" />
+                  <!-- DESC :: 폐점된 매장 리뷰인 경우 disabled 클래스 추가 -->
+                  <ETBtn tag="a" size="lg" to="/store/detail" class="disabled">
+                    <span class="text">을지로 1가점</span>
+                    <EIco name="arw-right" color="gray" size="sm" />
+                  </ETBtn>
                   <div class="stext-lg">파니니EPL축구카드36팩 외 3건</div>
                 </CtitleWrap>
               </div>
@@ -210,7 +217,10 @@
             <FlexGroup align="start">
               <div class="flex-left">
                 <CtitleWrap>
-                  <ETit type="box" text="을지로 1가점" />
+                  <ETBtn tag="a" size="lg" to="/store/detail">
+                    <span class="text">을지로 1가점</span>
+                    <EIco name="arw-right" color="gray" size="sm" />
+                  </ETBtn>
                   <div class="stext-lg">파니니EPL축구카드36팩 외 3건</div>
                 </CtitleWrap>
               </div>

@@ -2,7 +2,9 @@
   <!-- 검색결과 있음 -->
   <ContWrap v-if="isDataSearch" type="white" in-bottom="sm">
     <div class="related-search-wrap">
-      <div class="title">연관</div>
+      <div class="title">
+        연관
+      </div>
       <SwiperAutoWrap gap="10">
         <!-- slide -->
         <swiper-slide>
@@ -80,9 +82,7 @@
   <ContWrap v-if="isDataSearch" in-bottom="sm">
     <FlexGroup>
       <div class="flex-left">
-        <div class="ctitle-sm fw-md fc-gray90">
-          원하시는 상품의 재고를 찾고 계신가요?
-        </div>
+        <ETit size="sm" text="원하시는 상품의 재고를 찾고 계신가요?" class="fw-md fc-gray90" />
       </div>
       <div class="flex-right">
         <EBtn tag="a" color="gray" size="xs" to="/stock/product">
@@ -1514,7 +1514,9 @@
                       판매량 많은순
                     </option>
                     <option>최신순</option>
-                    <option v-if="activeTab !== 'discount' || 'voucher'">추천순</option>
+                    <option v-if="activeTab !== 'discount' || 'voucher'">
+                      추천순
+                    </option>
                     <option>가격 낮은순</option>
                     <option>가격 높은순</option>
                   </select>

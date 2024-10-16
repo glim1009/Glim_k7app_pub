@@ -98,11 +98,12 @@ $swiperType: ('', '-line', '-bar', '-tab');
           }
         }
       }
+
+      .thumb-prod {
+        + .btn-link {
+          z-index: 4;
+        }
+      }
     }
-
-
   }
-
-
-
 }

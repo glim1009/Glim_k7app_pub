@@ -389,7 +389,7 @@ const props = defineProps<{
   sta: DialogState;
 }>();
 
-const emit = defineEmits(['update:sta']);
+const emit = defineEmits(["update:sta"]);
 
 function openDialog() {
   isOpen.value = true;
@@ -397,7 +397,7 @@ function openDialog() {
 
 const isOpen = computed({
   get: () => props.sta.open,
-  set: value => emit('update:sta', { ...props.sta, open: value }),
+  set: value => emit("update:sta", { ...props.sta, open: value }),
 });
 
 function closeDialog() {

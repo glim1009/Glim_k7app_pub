@@ -611,9 +611,7 @@
       </BtnWrap>
       <ContBox size="lg">
         <CtitleWrap size="sm">
-          <div class="ctitle-lg">
-            포장봉투 선택
-          </div>
+          <ETit type="lgCont" text="포장봉투 선택" />
         </CtitleWrap>
         <ColorBox color="white">
           <RowListWrap gap="line">

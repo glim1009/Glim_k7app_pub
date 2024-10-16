@@ -64,7 +64,7 @@
         </ContWrap>
       </div>
     </template>
-    <StoreSearchList v-if="!isSearchData && !$route.path.includes('result')" :first-tab="sharedStoreState.firstTab" @open-filter="openStoreFilterOption" />
+    <StoreSearchList v-if="!isSearchData && !$route.path.includes('result')" @open-filter="openStoreFilterOption" />
     <StoreSearchResult v-if="isSearchData" @open-filter="openStoreFilterOption" />
 
     <!-- pop : 매장 서비스 필터 - 필터 옵션 -->

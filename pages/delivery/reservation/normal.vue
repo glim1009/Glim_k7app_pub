@@ -1313,7 +1313,7 @@
                     </span>
                   </div>
                   <div class="flex-right">
-                    <ETBtn size="xs" @click="openTermsOfUseNormal">
+                    <ETBtn size="xs" @click="openTermsOfUse">
                       <span class="text">상세보기</span>
                       <EIco name="arw-right" color="gray" size="xs" />
                     </ETBtn>
@@ -1415,7 +1415,7 @@
   <!-- // pop : 주소록 -->
 
   <!-- pop : 일반택배 이용약관 -->
-  <PopDeliveryTermsOfUseNormal v-model:sta="popTermsOfUseNormal" />
+  <PopDeliveryTermsOfUse v-model:sta="popTermsOfUse" />
   <!-- // pop : 일반택배 이용약관 -->
 
   <!-- pop : 개인정보 수집 및 이용약관 -->
@@ -1459,8 +1459,8 @@ const popAddressList = ref({ open: false });
 const openAddressList = () => popAddressList.value.open = true;
 
 // 일반택배 이용약관 팝업
-const popTermsOfUseNormal = ref({ open: false });
-const openTermsOfUseNormal = () => popTermsOfUseNormal.value.open = true;
+const popTermsOfUse = ref({ open: false });
+const openTermsOfUse = () => popTermsOfUse.value.open = true;
 
 // 개인정보 수집 및 이용약관 팝업
 const popPersonalInfoAgree = ref({ open: false });

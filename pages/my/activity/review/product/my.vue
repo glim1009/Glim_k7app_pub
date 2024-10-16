@@ -45,6 +45,9 @@
                   파니니 EPL 축구카드 36팩
                 </ETit>
               </div>
+              <NuxtLink class="btn-link" to="javascript:">
+                <span class="offscreen">바로가기</span>
+              </NuxtLink>
             </div>
             <!-- // thumb-prod-flex -->
             <ColorBox color="line-light-gray" size="sm">
@@ -226,6 +229,9 @@
                   파니니 EPL 축구카드 36팩
                 </ETit>
               </div>
+              <NuxtLink class="btn-link" to="javascript:">
+                <span class="offscreen">바로가기</span>
+              </NuxtLink>
             </div>
             <!-- // thumb-prod-flex -->
             <ColorBox color="line-light-gray" size="sm">
@@ -334,6 +340,9 @@
                   파니니 EPL 축구카드 36팩
                 </ETit>
               </div>
+              <NuxtLink class="btn-link" to="javascript:">
+                <span class="offscreen">바로가기</span>
+              </NuxtLink>
             </div>
             <!-- // thumb-prod-flex -->
             <ColorBox color="line-light-gray" size="sm">

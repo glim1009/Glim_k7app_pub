@@ -87,9 +87,7 @@
             <CtitleWrap size="md">
               <FlexGroup>
                 <div class="flex-left">
-                  <div class="ctitle-md">
-                    을지로 1가점
-                  </div>
+                  <ETit size="md" text="을지로 1가점" />
                 </div>
                 <div class="flex-right">
                   <!-- DESC :: 활성화시 is-active 클래스 추가 -->
@@ -118,9 +116,7 @@
             <CtitleWrap size="md">
               <FlexGroup>
                 <div class="flex-left">
-                  <div class="ctitle-md">
-                    시그니처타워점
-                  </div>
+                  <ETit size="md" text="시그니처타워점" />
                 </div>
                 <div class="flex-right">
                   <!-- DESC :: 활성화시 is-active 클래스 추가 -->

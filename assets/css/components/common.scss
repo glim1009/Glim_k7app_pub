@@ -465,6 +465,12 @@
 
   &.is-dimmed {
     opacity: .4;
+
+    [class^=tbtn] {
+      &.disabled {
+        opacity: 1;
+      }
+    }
   }
 }
 

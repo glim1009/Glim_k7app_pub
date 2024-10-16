@@ -62,9 +62,7 @@
               <CtitleWrap>
                 <FlexGroup align="center">
                   <div class="flex-left">
-                    <div class="ctitle-xs">
-                      택배비
-                    </div>
+                    <ETit size="xs" text="택배비" />
                   </div>
                   <div class="flex-right">
                     <EGoods size="md" class="fw-md" val="3,200" unit="원" />
@@ -215,9 +213,7 @@
               <CtitleWrap>
                 <FlexGroup align="center">
                   <div class="flex-left">
-                    <div class="ctitle-xs">
-                      택배비
-                    </div>
+                    <ETit size="xs" text="택배비" />
                   </div>
                   <div class="flex-right">
                     <EGoods size="md" class="fw-md" val="3,200" unit="원" />
@@ -368,9 +364,7 @@
               <CtitleWrap>
                 <FlexGroup align="center">
                   <div class="flex-left">
-                    <div class="ctitle-xs">
-                      택배비
-                    </div>
+                    <ETit size="xs" text="택배비" />
                   </div>
                   <div class="flex-right">
                     <EGoods size="md" class="fw-md" val="3,200" unit="원" />
@@ -520,9 +514,7 @@
               <CtitleWrap>
                 <FlexGroup align="center">
                   <div class="flex-left">
-                    <div class="ctitle-xs">
-                      택배비
-                    </div>
+                    <ETit size="xs" text="택배비" />
                   </div>
                   <div class="flex-right">
                     <EGoods size="md" class="fw-md" val="3,200" unit="원" />
@@ -692,11 +684,11 @@
               </span>
               <span class="ui-rdo-button">
                 <input id="filterOptionDate02" v-model="periodPicked" value="periodDate02" type="radio">
-                <label for="filterOptionDate02"><span class="text-sm">6개월</span></label>
+                <label for="filterOptionDate02"><span class="text-sm">3개월</span></label>
               </span>
               <span class="ui-rdo-button">
                 <input id="filterOptionDate03" v-model="periodPicked" value="periodDate03" type="radio">
-                <label for="filterOptionDate03"><span class="text-sm">1년</span></label>
+                <label for="filterOptionDate03"><span class="text-sm">6개월</span></label>
               </span>
               <span class="ui-rdo-button">
                 <input id="filterOptionDate04" v-model="periodPicked" value="periodDateInput" type="radio">

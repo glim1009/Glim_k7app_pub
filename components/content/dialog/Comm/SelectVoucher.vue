@@ -25,9 +25,7 @@
                   <div class="form-title">
                     <FlexGroup>
                       <div class="flex-left">
-                        <div class="ctitle-2xs">
-                          사용 금액
-                        </div>
+                        <ETit type="sCont" text="사용 금액" />
                       </div>
                       <div class="flex-right">
                         <span class="stext">
@@ -47,8 +45,8 @@
                     </div>
                     <TableWrap type="info" gap="sm" size="md" table-name="사용금액 만료정보">
                       <colgroup>
-                        <col style="width: 55px;" />
-                        <col style="width: auto;" />
+                        <col style="width: 55px;">
+                        <col style="width: auto;">
                       </colgroup>
                       <tbody>
                         <tr>
@@ -81,9 +79,7 @@
                   <div class="form-title">
                     <FlexGroup>
                       <div class="flex-left">
-                        <div class="ctitle-2xs">
-                          사용 금액
-                        </div>
+                        <ETit type="sCont" text="사용 금액" />
                       </div>
                       <div class="flex-right">
                         <span class="stext">
@@ -103,8 +99,8 @@
                     </div>
                     <TableWrap type="info" gap="sm" size="md" table-name="사용금액 만료정보">
                       <colgroup>
-                        <col style="width: 55px;" />
-                        <col style="width: auto;" />
+                        <col style="width: 55px;">
+                        <col style="width: auto;">
                       </colgroup>
                       <tbody>
                         <tr>
@@ -144,7 +140,7 @@ const props = defineProps<{
   sta: DialogState;
 }>();
 
-const emit = defineEmits(['update:sta']);
+const emit = defineEmits(["update:sta"]);
 
 function openDialog() {
   isOpen.value = true;
@@ -152,7 +148,7 @@ function openDialog() {
 
 const isOpen = computed({
   get: () => props.sta.open,
-  set: value => emit('update:sta', { ...props.sta, open: value }),
+  set: value => emit("update:sta", { ...props.sta, open: value }),
 });
 
 function closeDialog() {

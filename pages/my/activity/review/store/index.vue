@@ -16,7 +16,10 @@
           <FlexGroup align="start">
             <div class="flex-left">
               <CtitleWrap size="zero">
-                <ETit type="box" text="을지로 1가점" />
+                <ETBtn tag="a" size="lg" to="/store/detail">
+                  <span class="text">을지로 1가점</span>
+                  <EIco name="arw-right" color="gray" size="sm" />
+                </ETBtn>
                 <div class="stext-lg">
                   파니니EPL축구카드36팩 외 3건
                 </div>
@@ -38,7 +41,10 @@
           <FlexGroup align="start">
             <div class="flex-left">
               <CtitleWrap size="zero">
-                <ETit type="box" text="을지로 1가점" />
+                <ETBtn tag="a" size="lg" to="/store/detail">
+                  <span class="text">을지로 1가점</span>
+                  <EIco name="arw-right" color="gray" size="sm" />
+                </ETBtn>
                 <div class="stext-lg">
                   파니니EPL축구카드36팩 외 3건
                 </div>
@@ -60,7 +66,10 @@
           <FlexGroup align="start">
             <div class="flex-left">
               <CtitleWrap size="zero">
-                <ETit type="box" text="을지로 1가점" />
+                <ETBtn tag="a" size="lg" to="/store/detail">
+                  <span class="text">을지로 1가점</span>
+                  <EIco name="arw-right" color="gray" size="sm" />
+                </ETBtn>
                 <div class="stext-lg">
                   파니니EPL축구카드36팩 외 3건
                 </div>

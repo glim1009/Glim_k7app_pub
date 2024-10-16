@@ -119,9 +119,7 @@
             <CtitleWrap size="sm">
               <FlexGroup>
                 <div class="flex-left">
-                  <div class="ctitle-xs">
-                    sev*****you
-                  </div>
+                  <ETit size="xs" text="sev*****you" />
                 </div>
                 <div class="flex-right" />
               </FlexGroup>
@@ -150,9 +148,7 @@
             <CtitleWrap size="sm">
               <FlexGroup>
                 <div class="flex-left">
-                  <div class="ctitle-xs">
-                    sev*****you
-                  </div>
+                  <ETit size="xs" text="sev*****you" />
                 </div>
                 <div class="flex-right" />
               </FlexGroup>
@@ -181,9 +177,7 @@
             <CtitleWrap size="sm">
               <FlexGroup>
                 <div class="flex-left">
-                  <div class="ctitle-xs">
-                    sev*****you
-                  </div>
+                  <ETit size="xs" text="sev*****you" />
                 </div>
                 <div class="flex-right" />
               </FlexGroup>

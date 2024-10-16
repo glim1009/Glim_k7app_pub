@@ -7,7 +7,7 @@
             <button class="btn-header-back">
               <EIco name="back" />
             </button>
-            <EInputBox type="search" enterkeyhint="search" title="상품 명 검색" placeholder="상품 명 입력" @class-change="handleChangeClass" @clear="valueClear">
+            <EInputBox type="search" enterkeyhint="search" title="상품 명 검색" placeholder="상품명 입력" @input="handlerSearchInputValue" @class-change="handleChangeClass" @clear="valueClear">
               <EBadge color="gray" badge-text="재고찾기" />
               <button type="button" class="btn-input-search">
                 <span class="offscreen">검색</span>
@@ -83,15 +83,19 @@ function handleChangeClass(className: string, isActive: boolean) {
     isClassValue.value = isActive;
 }
 
+const handlerSearchInputValue = (value: any) => {
+  if (value.length === 0)
+    navigateTo("/stock/product");
+};
+
 const isAutoComplete = computed(() => {
   return !!isClassValue.value;
 });
 
 async function valueClear() {
   try {
-    if (route.path.includes("/stock/product/result")) {
-      router.push("/stock/product");
-    }
+    if (route.path.includes("/stock/product/result"))
+      navigateTo("/stock/product");
   }
   catch (err) {
     console.error(err);

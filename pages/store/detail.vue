@@ -952,7 +952,7 @@
         </li>
       </GridListWrap>
       <!-- // 택배 배너 노출 case 01 : 일반/착한 배너 노출되는 경우 -->
-      <!-- 택배 매너 노출 case 02 : 일반 배너 노출되는 경우 -->
+      <!-- 택배 배너 노출 case 02 : 일반 배너 노출되는 경우 -->
       <!-- <ColorBox color="white" size="lg" class="bg-normal-delivery">
         <CtitleWrap size="zero">
           <ETit text="일반택배" type="lgCont" />
@@ -964,8 +964,8 @@
           <span class="offscreen">일반택배 예약 바로가기</span>
         </NuxtLink>
       </ColorBox> -->
-      <!-- // 택배 매너 노출 case 02 : 일반 배너 노출되는 경우 -->
-      <!-- 택배 매너 노출 case 03 : 일반/착한 배너 노출되는 경우 -->
+      <!-- // 택배 배너 노출 case 02 : 일반 배너 노출되는 경우 -->
+      <!-- 택배 배너 노출 case 03 : 착한 배너 노출되는 경우 -->
       <!-- <ColorBox color="white" size="lg" class="bg-kind-delivery">
         <CtitleWrap size="zero">
           <ETit text="착한택배" type="lgCont" />
@@ -977,7 +977,7 @@
             <span class="offscreen">착한택배 예약 바로가기</span>
           </NuxtLink>
       </ColorBox> -->
-      <!-- // 택배 매너 노출 case 03 : 일반/착한 배너 노출되는 경우 -->
+      <!-- // 택배 배너 노출 case 03 : 착한 배너 노출되는 경우 -->
     </ContBox>
   </ContWrap>
 

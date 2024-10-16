@@ -45,6 +45,10 @@ $groupAlign: ('start', 'center', 'end');
       flex: 1 0 auto;
       @include mixins.justify_width(#{$align}, start);
     }
+
+    &:has(.btn-link) {
+      position: relative;
+    }
   }
 }
 

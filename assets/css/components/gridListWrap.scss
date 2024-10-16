@@ -113,11 +113,11 @@ $wrapSize: ('xs': 10px, 'sm': 16px, 'md': 24px, 'lg': 30px);
             left: 5px;
             right: 5px;
           }
-          .btn-auto-wrap {
-            //position: relative;
-            z-index: 2;
-          }
         }
+      }
+
+      .btn-link {
+        z-index: 4;
       }
     }
   }

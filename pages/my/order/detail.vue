@@ -474,11 +474,11 @@
         <template #content>
           <SContLineBox>
             <CtitleWrap size="zero">
-              <div class="ctitle-sm">
+              <ETit size="sm">
                 <ETBtn tag="a" size="md" to="tel:1577-0711">
                   <span class="text fc-black fw-sb">세븐일레븐 콜센터 1577-0711</span>
                 </ETBtn>
-              </div>
+              </ETit>
               <div class="stext">
                 APP 이용 및 매장관련문의
                 <br>09:00~18:00 주말 및 공휴일 제외
@@ -488,11 +488,11 @@
           <!-- 홈배송 아닌 경우 -->
           <SContLineBox>
             <CtitleWrap size="zero">
-              <div class="ctitle-sm">
+              <ETit size="sm">
                 <ETBtn tag="a" size="md" to="tel:1522-2552">
                   <span class="text fc-black fw-sb">쿠폰사용 관련 문의 1522-2552</span>
                 </ETBtn>
-              </div>
+              </ETit>
               <div class="stext">
                 롯데쇼핑 e커머스 고객센터
                 <br>10:00~20:00 주말 및 공휴일 제외

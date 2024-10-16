@@ -2,9 +2,7 @@
   <ContWrap type="white" in-top="lg" class="detail-tf-line not-navbar">
     <ContBox size="lg">
       <CtitleWrap size="sm">
-        <div class="ctitle-sm">
-          응모결과 조회
-        </div>
+        <ETit size="sm" text="응모결과 조회" />
       </CtitleWrap>
       <ColorBox color="light-green" size="sm" class="ta-center">
         <div class="align-group">

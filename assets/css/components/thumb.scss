@@ -123,8 +123,7 @@ $ProdSize: ('2xl': 120px, 'xl': 100px, 'lg': 80px, 'md': 60px);
 
   .ctitle-xs {
     @include mixins.ellipsis;
-    @include mixins.font_size_lg('lt');
-    color: var(--Grayscale-100);
+    font-weight: variables.$fontWeightRegular;
   }
 
   .stext {
@@ -181,6 +180,7 @@ $ProdSize: ('2xl': 120px, 'xl': 100px, 'lg': 80px, 'md': 60px);
   }
 
   .btn-auto-wrap {
+    z-index: 5;
     margin-top: 12px;
   }
 }
@@ -199,7 +199,7 @@ $ProdSize: ('2xl': 120px, 'xl': 100px, 'lg': 80px, 'md': 60px);
 
   .btn-wish {
     position: absolute;
-    z-index: 2;
+    z-index: 5;
     right: 6px;
     bottom: 6px;
     width: 30px;
@@ -233,7 +233,7 @@ $ProdSize: ('2xl': 120px, 'xl': 100px, 'lg': 80px, 'md': 60px);
 
     .btn-wish {
       position: absolute;
-      z-index: 2;
+      z-index: 5;
       right: 6px;
       bottom: 6px;
       width: 30px;
@@ -346,6 +346,10 @@ $ProdSize: ('2xl': 120px, 'xl': 100px, 'lg': 80px, 'md': 60px);
       }
     }
   }
+
+  &:has(.btn-link) {
+    position: relative;
+  }
 }
 
 .thumb-prod-keep {
@@ -429,13 +433,13 @@ $ProdSize: ('2xl': 120px, 'xl': 100px, 'lg': 80px, 'md': 60px);
   @include mixins.justify_width;
 
   .ui-chk {
-    z-index: 2;
+    z-index: 5;
     margin-right: 8px;
   }
 
   .btn-delete {
     position: relative;
-    z-index: 2;
+    z-index: 5;
     display: inline-block;
     width: 24px;
     height: 24px;
@@ -475,7 +479,7 @@ $ProdSize: ('2xl': 120px, 'xl': 100px, 'lg': 80px, 'md': 60px);
 
       .flex-left {
         .ui-spinner-box {
-          z-index: 2;
+          z-index: 5;
         }
       }
 
@@ -510,9 +514,8 @@ $ProdSize: ('2xl': 120px, 'xl': 100px, 'lg': 80px, 'md': 60px);
     }
   }
 
-  [class^=light-gray][class*=box],
-  [class^=orange][class*=box] {
-    z-index: 2;
+  [class^=light-gray][class*=box], [class^=orange][class*=box] {
+    z-index: 5;
     width: 100%;
     margin: {
       left: 0 !important;
@@ -526,12 +529,12 @@ $ProdSize: ('2xl': 120px, 'xl': 100px, 'lg': 80px, 'md': 60px);
   }
 
   [class^=btn][class*=wrap] {
-    z-index: 2;
+    z-index: 5;
     width: 100%;
   }
 
   [class^=light-gray][class*=-md-box] {
-    z-index: 2;
+    z-index: 5;
     .flex-start-group {
       .flex-right {
         margin-left: 16px;
@@ -541,6 +544,10 @@ $ProdSize: ('2xl': 120px, 'xl': 100px, 'lg': 80px, 'md': 60px);
 
   .ui-col-md-group {
     margin-top: 10px;
+  }
+
+  .btn-link {
+    z-index: 4;
   }
 
   &:has(.btn-delete) {

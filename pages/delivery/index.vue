@@ -20,7 +20,7 @@
               <div class="bar-item">
                 <div class="alert-count-group type-reservation">
                   <span class="stext-lg-black">예약중</span>
-                  <EGoods size="md" val="1" class="fw-bold fc-spot" />
+                  <EGoods size="md" val="1" class="fw-sb fc-spot" />
                 </div>
                 <NuxtLink class="btn-link" to="/delivery/situation">
                   <span class="offscreen">예약중 목록 바로가기</span>
@@ -29,7 +29,7 @@
               <div class="bar-item">
                 <div class="alert-count-group type-delivery">
                   <span class="stext-lg-black">배송중</span>
-                  <EGoods size="md" val="2" class="fw-bold fc-spot" />
+                  <EGoods size="md" val="2" class="fw-sb fc-spot" />
                 </div>
                 <NuxtLink class="btn-link" to="/delivery/search">
                   <span class="offscreen">배송중 목록 바로가기</span>
@@ -38,7 +38,7 @@
               <div class="bar-item">
                 <div class="alert-count-group type-history">
                   <span class="stext-lg-black">이용내역</span>
-                  <EGoods size="md" val="25" class="fw-bold fc-spot" />
+                  <EGoods size="md" val="25" class="fw-sb fc-spot" />
                 </div>
                 <NuxtLink class="btn-link" to="/delivery/history">
                   <span class="offscreen">이용내역 목록 바로가기</span>
@@ -84,7 +84,7 @@
               <div class="bar-item">
                 <div class="alert-count-group type-reservation">
                   <span class="stext-lg-black">예약중</span>
-                  <EGoods size="md" val="1" class="fw-bold fc-spot" />
+                  <EGoods size="md" val="1" class="fw-sb fc-spot" />
                 </div>
                 <NuxtLink class="btn-link" to="/delivery/situation">
                   <span class="offscreen">예약중 목록 바로가기</span>
@@ -93,7 +93,7 @@
               <div class="bar-item">
                 <div class="alert-count-group type-delivery">
                   <span class="stext-lg-black">배송중</span>
-                  <EGoods size="md" val="2" class="fw-bold fc-spot" />
+                  <EGoods size="md" val="2" class="fw-sb fc-spot" />
                 </div>
                 <NuxtLink class="btn-link" to="/delivery/search">
                   <span class="offscreen">배송중 목록 바로가기</span>
@@ -102,7 +102,7 @@
               <div class="bar-item">
                 <div class="alert-count-group type-history">
                   <span class="stext-lg-black">이용내역</span>
-                  <EGoods size="md" val="25" class="fw-bold fc-spot" />
+                  <EGoods size="md" val="25" class="fw-sb fc-spot" />
                 </div>
                 <NuxtLink class="btn-link" to="/delivery/history">
                   <span class="offscreen">이용내역 목록 바로가기</span>
@@ -178,16 +178,14 @@
           평일 09:00~18:00 / 토요일 09:00~13:00
         </div>
       </CtitleWrap>
-      <GridListWrap gap="sm" col="2">
+      <GridListWrap col="2">
         <li class="item-grid">
           <ColorBox color="line-light-gray" class="cs-center-box" size="lg">
             <CtitleWrap size="zero">
               <div class="stext-lg-black">
                 롯데택배
               </div>
-              <div class="ctitle-lg">
-                1688-1211
-              </div>
+              <ETit size="lg" text="1688-1211" />
             </CtitleWrap>
           </ColorBox>
           <NuxtLink class="btn-link" to="tel:1688-1211">
@@ -200,9 +198,7 @@
               <div class="stext-lg-black">
                 착한택배
               </div>
-              <div class="ctitle-lg">
-                1544-0124
-              </div>
+              <ETit size="lg" text="1544-0124" />
             </CtitleWrap>
           </ColorBox>
           <NuxtLink class="btn-link" to="tel:1544-0124">
@@ -231,9 +227,7 @@
               <div class="stext-lg-black">
                 일반택배
               </div>
-              <div class="ctitle-sm">
-                1544-2548
-              </div>
+              <ETit size="sm" text="1544-2548" />
             </CtitleWrap>
           </div>
           <div class="bar-item">
@@ -241,9 +235,7 @@
               <div class="stext-lg-black">
                 착한택배
               </div>
-              <div class="ctitle-sm">
-                1544-2548
-              </div>
+              <ETit size="sm" text="1544-2548" />
             </CtitleWrap>
           </div>
           <div class="bar-item">
@@ -251,9 +243,7 @@
               <div class="stext-lg-black">
                 롯데택배
               </div>
-              <div class="ctitle-sm">
-                1544-2548
-              </div>
+              <ETit size="sm" text="1544-2548" />
             </CtitleWrap>
           </div>
         </div>

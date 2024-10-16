@@ -115,11 +115,11 @@ const openDialog = () => {
   isOpen.value = true;
 };
 
-const emit = defineEmits(['update:sta']);
+const emit = defineEmits(["update:sta"]);
 
 const isOpen = computed({
   get: () => props.sta.open,
-  set: (value) => emit('update:sta', { ...props.sta, open: value }),
+  set: (value) => emit("update:sta", { ...props.sta, open: value }),
 });
 
 const closeDialog = () => {

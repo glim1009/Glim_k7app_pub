@@ -7,7 +7,7 @@
             <button class="btn-header-back">
               <EIco name="back" />
             </button>
-            <EInputBox type="search" enterkeyhint="search" title="검색" placeholder="검색어 입력" @class-change="handleChangeClass" @clear="valueClear">
+            <EInputBox type="search" enterkeyhint="search" title="검색" placeholder="검색어 입력" @input="handlerSearchInputValue" @class-change="handleChangeClass" @clear="valueClear">
               <button type="button" class="btn-input-search">
                 <span class="offscreen">검색</span>
               </button>
@@ -82,15 +82,19 @@ const handleChangeClass = (className: string, isActive: boolean) => {
     isClassValue.value = isActive;
 };
 
+const handlerSearchInputValue = (value: any) => {
+  if (value.length === 0)
+    navigateTo("/search");
+};
+
 const isAutoComplete = computed(() => {
   return !!isClassValue.value;
 });
 
 const valueClear = async () => {
   try {
-    if (route.path.includes("/search/result")) {
-      router.push("/search");
-    }
+    if (route.path.includes("/search/result"))
+      navigateTo("/search");
   }
   catch (err) {
     console.error(err);

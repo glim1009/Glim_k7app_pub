@@ -1,15 +1,13 @@
 <template>
   <div class="cont-docker-wrap">
-      <slot />
+    <slot />
   </div>
 </template>
 
 <script setup lang="ts">
-
 onMounted(() => {
 
 });
-
 </script>
 
 <style lang="scss" scoped>

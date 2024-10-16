@@ -16,6 +16,12 @@
         margin-left: 6px;
       }
     }
+
+    .ctitle-sm {
+      display: inline-block;
+      margin-top: 1px;
+      vertical-align: top;
+    }
   }
 
   .btn-auto-wrap {
@@ -27,7 +33,6 @@
   }
 
   .payment-info-area {
-
     .flex-info-right {
       margin-left: 10px;
       .bar-group {

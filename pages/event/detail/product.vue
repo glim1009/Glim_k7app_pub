@@ -2,7 +2,7 @@
   <ContWrap type="white" class="side-zero" in-top="zero" in-bottom="zero">
     <ContBox>
       <div class="thumb-box">
-        <img src="/assets/images/temp/temp_event_detail.png" alt="기획전 이미지" />
+        <img src="/assets/images/temp/temp_event_detail.png" alt="기획전 이미지">
       </div>
     </ContBox>
   </ContWrap>
@@ -11,7 +11,7 @@
       <div class="editor-wrap">
         <!-- 개발 시 삭제 영역 -->
         <div style="height: 108px; background: rgba(255, 0, 0, .1);">
-          에디터영역 확인을 위한 임시 div입니다.<br />
+          에디터영역 확인을 위한 임시 div입니다.<br>
           개발시 해당 div 삭제 후 작업해 주세요.
         </div>
         <!-- // 개발 시 삭제 영역 -->
@@ -22,7 +22,7 @@
       <FlexGroup>
         <div class="flex-left">
           <span class="ui-chk">
-            <input id="agreeChk01" type="checkbox" />
+            <input id="agreeChk01" type="checkbox">
             <label for="agreeChk01"><span class="text-md">개인정보 수집 및 이용동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
           </span>
         </div>
@@ -44,7 +44,7 @@
                 <FlexGroup>
                   <div class="flex-left">
                     <span class="ui-chk">
-                      <input id="agreeChk02" type="checkbox" />
+                      <input id="agreeChk02" type="checkbox">
                       <label for="agreeChk02"><span class="text-md">개인정보 수집 및 이용동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
                     </span>
                   </div>
@@ -60,7 +60,7 @@
                 <FlexGroup>
                   <div class="flex-left">
                     <span class="ui-chk">
-                      <input id="agreeChk03" type="checkbox" />
+                      <input id="agreeChk03" type="checkbox">
                       <label for="agreeChk03"><span class="text-md">이벤트 참여 문자 및 이메일 마케팅 정...</span></label>
                     </span>
                   </div>
@@ -97,7 +97,7 @@
             <!-- thumb-prod-2xl -->
             <EThumbProdBox size="2xl">
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <!-- // thumb-prod-2xl -->
@@ -115,7 +115,7 @@
             <!-- thumb-prod-2xl -->
             <EThumbProdBox size="2xl">
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <!-- // thumb-prod-2xl -->
@@ -133,7 +133,7 @@
             <!-- thumb-prod-2xl -->
             <EThumbProdBox size="2xl">
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <!-- // thumb-prod-2xl -->
@@ -151,7 +151,7 @@
             <!-- thumb-prod-2xl -->
             <EThumbProdBox size="2xl">
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <!-- // thumb-prod-2xl -->
@@ -169,7 +169,7 @@
             <!-- thumb-prod-2xl -->
             <EThumbProdBox size="2xl">
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <!-- // thumb-prod-2xl -->
@@ -194,7 +194,7 @@
             <!-- thumb-prod-2xl -->
             <EThumbProdBox size="2xl">
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <!-- // thumb-prod-2xl -->
@@ -215,7 +215,7 @@
             <!-- thumb-prod-2xl -->
             <EThumbProdBox size="2xl">
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <!-- // thumb-prod-2xl -->
@@ -236,7 +236,7 @@
             <!-- thumb-prod-2xl -->
             <EThumbProdBox size="2xl">
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <!-- // thumb-prod-2xl -->
@@ -257,7 +257,7 @@
             <!-- thumb-prod-2xl -->
             <EThumbProdBox size="2xl">
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <!-- // thumb-prod-2xl -->
@@ -278,7 +278,7 @@
             <!-- thumb-prod-2xl -->
             <EThumbProdBox size="2xl">
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <!-- // thumb-prod-2xl -->
@@ -306,7 +306,7 @@
             <!-- thumb-prod-2xl -->
             <EThumbProdBox size="2xl">
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <!-- // thumb-prod-2xl -->
@@ -329,7 +329,7 @@
             <!-- thumb-prod-2xl -->
             <EThumbProdBox size="2xl">
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <!-- // thumb-prod-2xl -->
@@ -352,7 +352,7 @@
             <!-- thumb-prod-2xl -->
             <EThumbProdBox size="2xl">
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <!-- // thumb-prod-2xl -->
@@ -375,7 +375,7 @@
             <!-- thumb-prod-2xl -->
             <EThumbProdBox size="2xl">
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <!-- // thumb-prod-2xl -->
@@ -398,7 +398,7 @@
             <!-- thumb-prod-2xl -->
             <EThumbProdBox size="2xl">
               <template #thumb>
-                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
               </template>
             </EThumbProdBox>
             <!-- // thumb-prod-2xl -->
@@ -449,9 +449,7 @@
             <CtitleWrap>
               <FlexGroup>
                 <div class="flex-left">
-                  <div class="ctitle-sm">
-                    일반 스탬프
-                  </div>
+                  <ETit size="sm" text="일반 스탬프" />
                 </div>
                 <div class="flex-right">
                   <div class="goods-group">
@@ -464,62 +462,62 @@
             <ul class="my-stamp-status-list">
               <li class="item-my-stamp">
                 <span class="stamp-box">
-                  <img src="/assets/images/event/ico_stamp_def_on.png" alt="스탬프 활성화" />
+                  <img src="/assets/images/event/ico_stamp_def_on.png" alt="스탬프 활성화">
                 </span>
               </li>
               <li class="item-my-stamp">
                 <span class="stamp-box">
-                  <img src="/assets/images/event/ico_stamp_def_on.png" alt="스탬프 활성화" />
+                  <img src="/assets/images/event/ico_stamp_def_on.png" alt="스탬프 활성화">
                 </span>
               </li>
               <li class="item-my-stamp">
                 <span class="stamp-box">
-                  <img src="/assets/images/event/ico_stamp_def_on.png" alt="스탬프 활성화" />
+                  <img src="/assets/images/event/ico_stamp_def_on.png" alt="스탬프 활성화">
                 </span>
               </li>
               <li class="item-my-stamp">
                 <span class="stamp-box">
-                  <img src="/assets/images/event/ico_stamp_def_on.png" alt="스탬프 활성화" />
+                  <img src="/assets/images/event/ico_stamp_def_on.png" alt="스탬프 활성화">
                 </span>
               </li>
               <li class="item-my-stamp">
                 <span class="stamp-box">
-                  <img src="/assets/images/event/ico_stamp_def.png" alt="스탬프 비활성화" />
+                  <img src="/assets/images/event/ico_stamp_def.png" alt="스탬프 비활성화">
                 </span>
               </li>
               <li class="item-my-stamp">
                 <span class="stamp-box">
-                  <img src="/assets/images/event/ico_stamp_def.png" alt="스탬프 비활성화" />
+                  <img src="/assets/images/event/ico_stamp_def.png" alt="스탬프 비활성화">
                 </span>
               </li>
               <li class="item-my-stamp">
                 <span class="stamp-box">
-                  <img src="/assets/images/event/ico_stamp_def.png" alt="스탬프 비활성화" />
+                  <img src="/assets/images/event/ico_stamp_def.png" alt="스탬프 비활성화">
                 </span>
               </li>
               <li class="item-my-stamp">
                 <span class="stamp-box">
-                  <img src="/assets/images/event/ico_stamp_def.png" alt="스탬프 비활성화" />
+                  <img src="/assets/images/event/ico_stamp_def.png" alt="스탬프 비활성화">
                 </span>
               </li>
               <li class="item-my-stamp">
                 <span class="stamp-box">
-                  <img src="/assets/images/event/ico_stamp_def.png" alt="스탬프 비활성화" />
+                  <img src="/assets/images/event/ico_stamp_def.png" alt="스탬프 비활성화">
                 </span>
               </li>
               <li class="item-my-stamp">
                 <span class="stamp-box">
-                  <img src="/assets/images/event/ico_stamp_def.png" alt="스탬프 비활성화" />
+                  <img src="/assets/images/event/ico_stamp_def.png" alt="스탬프 비활성화">
                 </span>
               </li>
               <li class="item-my-stamp">
                 <span class="stamp-box">
-                  <img src="/assets/images/event/ico_stamp_def.png" alt="스탬프 비활성화" />
+                  <img src="/assets/images/event/ico_stamp_def.png" alt="스탬프 비활성화">
                 </span>
               </li>
               <li class="item-my-stamp">
                 <span class="stamp-box">
-                  <img src="/assets/images/event/ico_stamp_def.png" alt="스탬프 비활성화" />
+                  <img src="/assets/images/event/ico_stamp_def.png" alt="스탬프 비활성화">
                 </span>
               </li>
             </ul>
@@ -545,32 +543,32 @@
             <ul class="my-stamp-status-list">
               <li class="item-my-stamp">
                 <span class="stamp-box">
-                  <img src="/assets/images/event/ico_stamp_def_on.png" alt="스탬프 활성화" />
+                  <img src="/assets/images/event/ico_stamp_def_on.png" alt="스탬프 활성화">
                 </span>
               </li>
               <li class="item-my-stamp">
                 <span class="stamp-box">
-                  <img src="/assets/images/event/ico_stamp_def_on.png" alt="스탬프 활성화" />
+                  <img src="/assets/images/event/ico_stamp_def_on.png" alt="스탬프 활성화">
                 </span>
               </li>
               <li class="item-my-stamp">
                 <span class="stamp-box">
-                  <img src="/assets/images/event/ico_stamp_def_on.png" alt="스탬프 활성화" />
+                  <img src="/assets/images/event/ico_stamp_def_on.png" alt="스탬프 활성화">
                 </span>
               </li>
               <li class="item-my-stamp">
                 <span class="stamp-box">
-                  <img src="/assets/images/event/ico_stamp_def_on.png" alt="스탬프 활성화" />
+                  <img src="/assets/images/event/ico_stamp_def_on.png" alt="스탬프 활성화">
                 </span>
               </li>
               <li class="item-my-stamp">
                 <span class="stamp-box">
-                  <img src="/assets/images/event/ico_stamp_def.png" alt="스탬프 비활성화" />
+                  <img src="/assets/images/event/ico_stamp_def.png" alt="스탬프 비활성화">
                 </span>
               </li>
               <li class="item-my-stamp">
                 <span class="stamp-box">
-                  <img src="/assets/images/event/ico_stamp_def.png" alt="스탬프 비활성화" />
+                  <img src="/assets/images/event/ico_stamp_def.png" alt="스탬프 비활성화">
                 </span>
               </li>
             </ul>
@@ -587,13 +585,13 @@
       <RowListWrap size="md" gap="line">
         <li class="item-md">
           <div class="ui-rdo-prod">
-            <input id="eventGiftRdo01" type="radio" name="eventGiftRdo01" checked />
-            <label for="eventGiftRdo01"></label>
+            <input id="eventGiftRdo01" type="radio" name="eventGiftRdo01" checked>
+            <label for="eventGiftRdo01" />
             <!-- thumb-prod-flex -->
             <div class="thumb-prod-flex">
               <EThumbProdBox size="lg">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -610,13 +608,13 @@
         </li>
         <li class="item-md">
           <div class="ui-rdo-prod">
-            <input id="eventGiftRdo02" type="radio" name="eventGiftRdo01" disabled />
-            <label for="eventGiftRdo02"></label>
+            <input id="eventGiftRdo02" type="radio" name="eventGiftRdo01" disabled>
+            <label for="eventGiftRdo02" />
             <!-- thumb-prod-flex -->
             <div class="thumb-prod-flex">
               <EThumbProdBox size="lg">
                 <template #thumb>
-                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지" />
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                 </template>
               </EThumbProdBox>
               <div class="info-box">
@@ -670,7 +668,7 @@
   </ContDocker>
 
   <!-- pop : (공통) 약관 -->
-  <PopTermsBoTitleTerms v-model:sta="popBoTitleTerms" :pop-title="`팝업 타이틀 BO 관리`" />
+  <PopTermsBoTitleTerms v-model:sta="popBoTitleTerms" pop-title="팝업 타이틀 BO 관리" />
   <!-- // pop : (공통) 약관 -->
 
   <!-- pop : 행운의 룰렛 -->
@@ -701,7 +699,8 @@ watch(() => checkCheckBox.value, (newValue) => {
   totalCheckBox.value = checkboxes.length;
   if (newValue === totalCheckBox.value) {
     checkboxes.forEach(checkbox => checkbox.checked = true);
-  } else if (newValue === 0) {
+  }
+  else if (newValue === 0) {
     checkboxes.forEach(checkbox => checkbox.checked = false);
   }
   updateCheckCount();

@@ -30,7 +30,7 @@
         <!-- // tag-md -->
         <!-- tag-md -->
         <span class="tag-md">
-           <NuxtLink to="javascript:" class="text">카덴양념장어구이덮밥...</NuxtLink>
+          <NuxtLink to="javascript:" class="text">카덴양념장어구이덮밥...</NuxtLink>
           <button type="button" class="btn-delete">
             <EIco name="close" color="gray" size="xs">
               <span class="offscreen">최근 검색어 삭제</span>
@@ -40,7 +40,7 @@
         <!-- // tag-md -->
         <!-- tag-md -->
         <span class="tag-md">
-           <NuxtLink to="javascript:" class="text">7-SELECT</NuxtLink>
+          <NuxtLink to="javascript:" class="text">7-SELECT</NuxtLink>
           <button type="button" class="btn-delete">
             <EIco name="close" color="gray" size="xs">
               <span class="offscreen">최근 검색어 삭제</span>

@@ -55,7 +55,9 @@
                           <input :id="element.stared.chkId" type="checkbox">
                           <label :for="element.stared.chkId"><span class="offscreen">결제수단 즐겨찾기</span></label>
                         </span>
-                        <span class="ctitle-sm fc-gray90">{{ element.title }}</span>
+                        <ETit size="sm" class="fc-gray90">
+                          {{ element.title }}
+                        </ETit>
                       </CtitleWrap>
                       <FlexGroup>
                         <div class="flex-left">

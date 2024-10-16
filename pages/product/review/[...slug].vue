@@ -33,9 +33,7 @@
           <SContLineBox>
             <div class="rating-average-box">
               <CtitleWrap size="sm">
-                <div class="ctitle-xs">
-                  평균 별점
-                </div>
+                <ETit size="xs" text="평균 별점" />
               </CtitleWrap>
               <div class="bar-group">
                 <div class="bar-item">

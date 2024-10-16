@@ -17,16 +17,16 @@
   color: var(--Grayscale-100);
 }
 
-.ctitle-2xs-gray {
+.ctitle-2xs-gray70 {
   font-weight: variables.$fontWeightRegular;
   color: var(--Grayscale-70);
 }
 
-.ctitle-xs { // 14px
+[class^=ctitle-xs] { // 14px
   @extend %ctitleCommon;
   @include mixins.font_size_lg;
-  //color: var(--Grayscale-100);
-  color: var(--Grayscale-90);
+  color: var(--Grayscale-100);
+  //color: var(--Grayscale-90);
 
   .ico-arwright-xs {
     margin: {
@@ -34,6 +34,10 @@
       left: 2px;
     }
   }
+}
+
+.ctitle-2xs-gray90 {
+  color: var(--Grayscale-90);
 }
 
 .ctitle-sm { // 15px

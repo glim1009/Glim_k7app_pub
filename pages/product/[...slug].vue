@@ -131,9 +131,7 @@
       </ContBox>
       <ContBox deco="t-line" gap="sm">
         <CtitleWrap size="zero">
-          <div class="ctitle-sm">
-            할인행사
-          </div>
+          <ETit size="sm" text="할인행사" />
         </CtitleWrap>
         <ColorBox color="light-gray" size="lg">
           <p class="stext-lg-black fw-sb">
@@ -717,15 +715,15 @@
           <EBtn color="green" size="lg" @click="openProdOption">
             <span class="text">장바구니</span>
           </EBtn>
-          <!--<EBtn color="green" size="lg" @click="openAddPickupInfo">
+          <!-- <EBtn color="green" size="lg" @click="openAddPickupInfo">
             <span class="text">장바구니</span>
-          </EBtn>-->
+          </EBtn> -->
           <EBtn color="green" size="lg" @click="openAddPickupInfo">
             <span class="text">바로구매</span>
           </EBtn>
-          <!--<EBtn color="green" size="lg" @click="openAddPickupInfo">
+          <!-- <EBtn color="green" size="lg" @click="openAddPickupInfo">
             <span class="text">바로구매</span>
-          </EBtn>-->
+          </EBtn> -->
           <!-- // CTA CASE 01 : 사전예약(주석처리), 교환권, 금액권, 정기구독 상품 -->
           <!-- CTA CASE 02 : 정기구독 상품(바로구매 선택 후) -->
           <!-- <EBtn tag="a" color="green" size="lg" to="javascript:">

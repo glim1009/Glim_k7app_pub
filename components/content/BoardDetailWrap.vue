@@ -1,12 +1,12 @@
 <template>
   <div class="board-detail-wrap">
     <div class="board-detail-header">
-      <slot name="header"/>
+      <slot name="header" />
     </div>
     <div class="board-detail-content">
-      <slot name="content"/>
+      <slot name="content" />
     </div>
-    <slot/>
+    <slot />
   </div>
 </template>
 

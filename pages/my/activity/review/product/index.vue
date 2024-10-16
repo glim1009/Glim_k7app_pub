@@ -58,6 +58,9 @@
                 2024.06.28 구매
               </div>
             </div>
+            <NuxtLink class="btn-link" to="javascript:">
+              <span class="offscreen">바로가기</span>
+            </NuxtLink>
           </div>
           <!-- // thumb-prod-flex -->
           <BtnWrap size="sm">
@@ -85,6 +88,9 @@
                 2024.06.28 구매
               </div>
             </div>
+            <NuxtLink class="btn-link" to="javascript:">
+              <span class="offscreen">바로가기</span>
+            </NuxtLink>
           </div>
           <!-- // thumb-prod-flex -->
           <BtnWrap size="sm">
@@ -112,6 +118,9 @@
                 2024.06.28 선물
               </div>
             </div>
+            <NuxtLink class="btn-link" to="javascript:">
+              <span class="offscreen">바로가기</span>
+            </NuxtLink>
           </div>
           <!-- // thumb-prod-flex -->
           <BtnWrap size="sm">
@@ -139,6 +148,9 @@
                 2024.06.28 구매
               </div>
             </div>
+            <NuxtLink class="btn-link" to="javascript:">
+              <span class="offscreen">바로가기</span>
+            </NuxtLink>
           </div>
           <!-- // thumb-prod-flex -->
           <BtnWrap size="sm">

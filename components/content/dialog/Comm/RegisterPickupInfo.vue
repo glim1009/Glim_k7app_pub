@@ -111,9 +111,7 @@
                 <li class="item">
                   <div class="tag-full-box">
                     <CtitleWrap size="sm">
-                      <div class="ctitle-xs">
-                        세븐일레븐 면목점
-                      </div>
+                      <ETit size="xs" text="세븐일레븐 면목점" />
                     </CtitleWrap>
                     <FlexGroup>
                       <div class="flex-left">
@@ -135,9 +133,7 @@
                 <li class="item">
                   <div class="tag-full-box">
                     <CtitleWrap size="sm">
-                      <div class="ctitle-xs">
-                        세븐일레븐 강남점
-                      </div>
+                      <ETit size="xs" text="세븐일레븐 강남점" />
                     </CtitleWrap>
                     <FlexGroup>
                       <div class="flex-left">

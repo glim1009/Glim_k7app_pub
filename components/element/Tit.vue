@@ -20,9 +20,10 @@ const fontSizes = {
   "lg": ref<string[]>(["lgCont", "board-detail"]), // 18px
   "md": ref<string[]>(["cont", "box"]), // 16px
   "sm": ref<string[]>(["form", "sFold", "board", "place"]), // 15px
-  "xs": ref<string[]>(["prod", "goods", "account"]), // 14px
+  "xs": ref<string[]>(["prod"]), // 14px
+  "xs-gray90": ref<string[]>(["goods", "account"]), // 14px
   "2xs": ref<string[]>(["sCont"]), // 13px
-  "2xs-gray": ref<string[]>(["sGoods"]), // 13px
+  "2xs-gray70": ref<string[]>(["sGoods"]), // 13px
 };
 
 const className = computed(() => {
