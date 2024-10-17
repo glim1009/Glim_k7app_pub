@@ -3,9 +3,7 @@
     <ContWrap type="white" in-top="lg" in-bottom="md">
       <ContBox size="lg">
         <CtitleWrap size="lg">
-          <div class="ctitle-2xl">
-            L.POINT 통합 로그인
-          </div>
+          <ETit text="L.POINT 통합 로그인" size="2xl" />
           <div class="stext-lg">
             지금 로그인하고 다양한 혜택을 만나보세요!
           </div>

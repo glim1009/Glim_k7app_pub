@@ -6,18 +6,17 @@
 
 <script setup lang="ts">
 const props = withDefaults(defineProps<{
-  align?: 'start' | 'center' | 'end';
+  align?: "start" | "center" | "end";
 }>(), {
-  align: 'center',
+  align: "center",
 });
 
 const className = computed(() => {
-  let cNm = 'flex';
-  cNm += '-' + props.align;
-  cNm += '-group';
+  let cNm = "flex";
+  cNm += `-${props.align}`;
+  cNm += "-group";
   return cNm;
 });
-
 </script>
 
 <style lang="scss" scoped>

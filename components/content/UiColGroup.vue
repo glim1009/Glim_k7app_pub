@@ -1,21 +1,21 @@
 <template>
   <div :class="className">
-    <slot></slot>
+    <slot />
   </div>
 </template>
 
 <script setup lang="ts">
 const props = withDefaults(defineProps<{
-  gap?: 'sm' | 'md' | 'lg'; // sm - 6px, md - 10px, lg - 16px
+  gap?: "sm" | "md" | "lg"; // sm - 6px, md - 10px, lg - 16px
 }>(), {
-  gap: 'md',
+  gap: "md",
 });
 
 const className = computed(() => {
-  let cNm = 'ui-col';
+  let cNm = "ui-col";
   if (props.gap !== undefined)
     cNm += `-${props.gap}`;
-  cNm += '-group';
+  cNm += "-group";
   return cNm;
 });
 </script>

@@ -2,7 +2,7 @@
   <ContWrap type="white">
     <ContBox>
       <CtitleWrap>
-        <ETit type="xlCont">
+        <ETit size="2xl">
           무엇이 궁금하세요?
           <br>고객센터에서 알려드려요.
         </ETit>

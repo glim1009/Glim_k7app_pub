@@ -1,14 +1,14 @@
 <template>
   <div class="fold-overflow-box">
-    <Transition @enter="onEnter" name="fold">
+    <Transition name="fold" @enter="onEnter">
       <FoldCont ref="foldContRef" :style="customStyle" :is-open="isOpen" :class="[{ 'is-active': isOpen }, { 'is-mini': isHeightMini }]">
-        <div class="fold-cont-inner" ref="foldContInnerRef">
+        <div ref="foldContInnerRef" class="fold-cont-inner">
           <slot />
         </div>
       </FoldCont>
     </Transition>
-    <div class="fold-header" v-if="isHeightMini">
-      <EBtn color="light-gray" size="sm" :class="['btn-fold-toggle', { 'is-active': isOpen }]" @click="toggle">
+    <div v-if="isHeightMini" class="fold-header">
+      <EBtn color="light-gray" size="sm" class="btn-fold-toggle" :class="[{ 'is-active': isOpen }]" @click="toggle">
         <span v-if="isOpen" class="text">접기</span>
         <span v-else class="text">펼치기</span>
         <EIco name="arw-down" color="gray" size="xs" />
@@ -18,12 +18,12 @@
 </template>
 
 <script setup lang="ts">
-import { useElementSize } from '@vueuse/core';
+import { useElementSize } from "@vueuse/core";
 
 const props = withDefaults(defineProps<{
-  minHeight?: string
+  minHeight?: string;
 }>(), {
-  minHeight: '0'
+  minHeight: "0",
 });
 
 const isOpen = ref(false);
@@ -34,8 +34,8 @@ const foldContHeight = ref(0);
 const resizeObserver = ref<ResizeObserver | null>(null);
 
 const customStyle = computed(() => ({
-  '--content-min-height': `${props.minHeight}px`,
-  '--content-height': `${foldContHeight.value}px`
+  "--content-min-height": `${props.minHeight}px`,
+  "--content-height": `${foldContHeight.value}px`,
 }));
 
 const toggle = () => {
@@ -45,7 +45,7 @@ const toggle = () => {
 const onEnter = (el: HTMLElement, done: () => void) => {
   const { height } = useElementSize(el);
   foldContHeight.value = height.value;
-  //console.log('onEnter: ', foldContHeight.value);
+  // console.log('onEnter: ', foldContHeight.value);
   done();
 };
 
@@ -53,14 +53,14 @@ const updateHeight = () => {
   if (foldContInnerRef.value) {
     const innerHeight = foldContInnerRef.value.scrollHeight;
     foldContHeight.value = innerHeight;
-    isHeightMini.value = innerHeight > parseInt(props.minHeight);
-    //console.log('Updated height:', foldContHeight.value);
+    isHeightMini.value = innerHeight > Number.parseInt(props.minHeight);
+    // console.log('Updated height:', foldContHeight.value);
   }
 };
 
 // 컨텐츠 변경 감지를 위한 watch
 watch(() => foldContInnerRef.value?.innerHTML, () => {
-  //console.log('inner html 변경 감지');
+  // console.log('inner html 변경 감지');
   updateHeight();
 }, { deep: true });
 
@@ -95,7 +95,6 @@ onUnmounted(() => {
 watch(foldContInnerRef, () => {
   setupResizeObserver();
 });
-
 </script>
 
 <style lang="scss" scoped>

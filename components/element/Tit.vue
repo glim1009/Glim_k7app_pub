@@ -9,7 +9,7 @@
 const props = withDefaults(defineProps<{
   text?: string;
   type?: string;
-  size?: "xs" | "sm" | "md" | "lg" | "xl";
+  size?: "xs" | "sm" | "md" | "lg" | "xl" | "2xl";
 }>(), {
   type: "cont",
 });

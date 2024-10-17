@@ -14,7 +14,7 @@
                 <div class="box-prod-header">
                   <FlexGroup>
                     <div class="flex-left">
-                      <ETit text="모바일 금액권" type="form" />
+                      <ETit text="모바일 금액권" size="sm" />
                     </div>
                     <div class="flex-right">
                       <EGoods size="sm" val="100,000" unit="원" class="fw-sb" />
@@ -25,7 +25,7 @@
                   <div class="form-title">
                     <FlexGroup>
                       <div class="flex-left">
-                        <ETit type="sCont" text="사용 금액" />
+                        <ETit type="account" text="사용 금액" />
                       </div>
                       <div class="flex-right">
                         <span class="stext">
@@ -68,7 +68,7 @@
                 <div class="box-prod-header">
                   <FlexGroup>
                     <div class="flex-left">
-                      <ETit text="모바일 금액권" type="form" />
+                      <ETit text="모바일 금액권" size="sm" />
                     </div>
                     <div class="flex-right">
                       <EGoods size="sm" val="100,000" unit="원" class="fw-sb" />
@@ -79,7 +79,7 @@
                   <div class="form-title">
                     <FlexGroup>
                       <div class="flex-left">
-                        <ETit type="sCont" text="사용 금액" />
+                        <ETit type="account" text="사용 금액" />
                       </div>
                       <div class="flex-right">
                         <span class="stext">

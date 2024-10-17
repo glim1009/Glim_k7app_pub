@@ -9,28 +9,31 @@
 
 <script setup lang="ts">
 const props = withDefaults(defineProps<{
-  type?: 'row' | 'col' | 'info';
-  gap?: 'sm' | 'md' | 'lg'; // gap sm 6px, md 8px, lg 12px
-  size?: 'md' | 'lg'; // font md 13px, lg 14px
+  type?: "row" | "col" | "info";
+  gap?: "sm" | "md" | "lg"; // gap sm 6px, md 8px, lg 12px
+  size?: "md" | "lg"; // font md 13px, lg 14px
   tableName: string;
 }>(), {
-  type: 'row',
+  type: "row",
 });
 
 const className = computed(() => {
-  let cNm = 'tbl';
-  cNm += '-' + props.type;
-  if (props.type === 'info') cNm += '-' + props.gap;
-  cNm += '-wrap';
+  let cNm = "tbl";
+  cNm += `-${props.type}`;
+  if (props.type === "info")
+    cNm += `-${props.gap}`;
+  cNm += "-wrap";
   return cNm;
 });
 const tblName = computed(() => {
-  let tNm = 'tbl';
-  tNm += '-' + props.type;
-  if (props.type === 'info') tNm += '-' + props.size;
+  let tNm = "tbl";
+  tNm += `-${props.type}`;
+  if (props.type === "info")
+    tNm += `-${props.size}`;
   return tNm;
 });
 </script>
+
 <style lang="scss" scoped>
 @import url('/assets/css/components/table.scss');
 </style>

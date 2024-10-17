@@ -1,6 +1,6 @@
 <template>
   <div :class="className">
-    <slot></slot>
+    <slot />
   </div>
 </template>
 
@@ -11,7 +11,7 @@ const props = defineProps<{
 }>();
 
 const className = computed(() => {
-  let cNm = 'fold-cont';
+  let cNm = "fold-cont";
   if (props.contColor)
     cNm += `-${props.contColor}`;
   return cNm;

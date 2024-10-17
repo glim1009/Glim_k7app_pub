@@ -5,9 +5,9 @@
         <div class="title-sub-md">
           세븐일레븐 강남점
         </div>
-        <div class="ctitle-2xl">
+        <ETit size="2xl">
           당일 픽업 <span class="fc-spot">10:00</span> 예정
-        </div>
+        </ETit>
         <p class="stext-lg">
           결제 후에는 픽업시간을 변경할 수 없습니다.
         </p>
