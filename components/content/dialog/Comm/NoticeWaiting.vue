@@ -61,7 +61,7 @@ const isLogin = ref(false); // 임시 : 로그인 여부 체크를 위해 추가
 
 <style scoped lang="scss">
   .cont-white-box {
-    padding: 24px 20px;
+    padding: 20px 20px;
     text-align: center;
 
     .guide-wrap {
@@ -89,7 +89,7 @@ const isLogin = ref(false); // 임시 : 로그인 여부 체크를 위해 추가
       border-radius: 15px;
 
       .info-title {
-        font-size: 15px;
+        font-size: 14px;
         font-weight: 500;
         line-height: 20px;
         color: #000;
@@ -125,7 +125,7 @@ const isLogin = ref(false); // 임시 : 로그인 여부 체크를 위해 추가
 
     .title-wrap {
       .info-title {
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 600;
         line-height: 22px;
         color: #000;

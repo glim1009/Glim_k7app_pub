@@ -24,12 +24,12 @@
                 </li>
               </RowListWrap>
             </ColorBox>
-            <BtnWrap size="sm">
-              <EBtn tag="a" color="green" size="md" to="javascript:">
-                <span class="text">본인인증</span>
-              </EBtn>
-            </BtnWrap>
           </ContBox>
+          <BtnWrap size="sm">
+            <EBtn tag="a" color="green" size="md" to="javascript:">
+              <span class="text">본인인증</span>
+            </EBtn>
+          </BtnWrap>
         </ContWrap>
       </div>
     </template>

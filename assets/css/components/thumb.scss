@@ -223,7 +223,7 @@ $ProdSize: ('2xl': 120px, 'xl': 100px, 'lg': 80px, 'md': 60px);
 
     .dim-group {
       .text-dim {
-        @if ( $size == 'md' or $size == 'lg' ) {
+        @if ($size == 'md' or $size == 'lg') {
           @include mixins.font_size_xs('sb');
         } @else {
           @include mixins.font_size_lg('md');
@@ -251,11 +251,13 @@ $ProdSize: ('2xl': 120px, 'xl': 100px, 'lg': 80px, 'md': 60px);
 }
 
 .thumb-prod {
+  position: relative;
   @each $size, $px in $ProdSize {
     &:has(.thumb-prod-#{$size}-box) {
       width: $px;
     }
   }
+
   .info-box {
     @extend %prodInfoCommon;
     margin-top: 10px;
@@ -268,9 +270,14 @@ $ProdSize: ('2xl': 120px, 'xl': 100px, 'lg': 80px, 'md': 60px);
       }
     }
   }
+
+  .btn-link {
+    z-index: 4;
+  }
 }
 
 .thumb-prod-flex {
+  position: relative;
   @include mixins.justify_width;
 
   .info-box {
@@ -324,6 +331,10 @@ $ProdSize: ('2xl': 120px, 'xl': 100px, 'lg': 80px, 'md': 60px);
     }
   }
 
+  .btn-link {
+    z-index: 4;
+  }
+
   @each $size, $px in $ProdSize {
     &:has(.thumb-prod-#{$size}-box) {
       .info-box {
@@ -361,6 +372,7 @@ $ProdSize: ('2xl': 120px, 'xl': 100px, 'lg': 80px, 'md': 60px);
     [class^=badge][class$=group] {
       justify-content: center;
     }
+
     .stext, .stext-lg {
       text-align: center;
     }
@@ -405,6 +417,7 @@ $ProdSize: ('2xl': 120px, 'xl': 100px, 'lg': 80px, 'md': 60px);
       ~ .tbl-info-sm-wrap {
         margin-top: 24px;
       }
+
       ~ [class^=line-light-gray][class*=box] {
         &:has(.barcode-box) {
           margin-top: 10px;
@@ -535,6 +548,7 @@ $ProdSize: ('2xl': 120px, 'xl': 100px, 'lg': 80px, 'md': 60px);
 
   [class^=light-gray][class*=-md-box] {
     z-index: 5;
+
     .flex-start-group {
       .flex-right {
         margin-left: 16px;
@@ -579,7 +593,7 @@ $ProdSize: ('2xl': 120px, 'xl': 100px, 'lg': 80px, 'md': 60px);
     left: 0;
     right: 0;
     bottom: 0;
-    @include mixins.ratio_images('/assets/images/common/comm_event_noimg',cover,0 0,'','png');
+    @include mixins.ratio_images('/assets/images/common/comm_event_noimg', cover, 0 0, '', 'png');
 
     img {
       width: 100%;

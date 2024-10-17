@@ -75,6 +75,9 @@ const handleInteractOutside = (event: Event) => {
     close();
   }
 };
+watch(() => props.modelValue, (newValue) => {
+  console.log("DESC :: popup 상태 - ", newValue, "// 이 부분에 네이티브바 show/hide 처리 요청!!!");
+});
 </script>
 
 <style lang="scss">

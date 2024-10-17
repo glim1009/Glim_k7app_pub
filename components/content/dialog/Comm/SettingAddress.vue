@@ -9,13 +9,15 @@
       <div class="dialog-inner">
         <ContWrap>
           <ContBox>
-            <BtnWrap type="full">
+            <BtnWrap>
               <EBtn color="gray" @click="openAddAddress">
-                <EIco name="plus" size="sm" color="white"></EIco>
+                <EIco name="plus" color="white" size="sm" />
                 <span class="text">주소지 추가</span>
               </EBtn>
+            </BtnWrap>
+            <BtnWrap type="auto-center" size="md">
               <ETBtn tag="button" size="xs" @click="openCurrentAddress">
-                <EIco name="current-location" color="gray" size="sm"></EIco>
+                <EIco name="current-location" color="gray" size="sm" />
                 <span class="text">현재 위치를 주소에 추가</span>
               </ETBtn>
             </BtnWrap>
@@ -42,7 +44,7 @@
                         </div>
                       </div>
                       <div class="flex-right">
-                        <BtnWrap>
+                        <BtnWrap type="auto-right">
                           <EBtn color="light-gray" size="xs">
                             <EIco name="delete" color="gray" size="xs"><span class="offscreen">삭제</span></EIco>
                           </EBtn>
@@ -76,7 +78,7 @@
                         </div>
                       </div>
                       <div class="flex-right">
-                        <BtnWrap>
+                        <BtnWrap type="auto-right">
                           <EBtn color="light-gray" size="xs">
                             <EIco name="delete" color="gray" size="xs"><span class="offscreen">삭제</span></EIco>
                           </EBtn>
@@ -110,7 +112,7 @@
                         </div>
                       </div>
                       <div class="flex-right">
-                        <BtnWrap>
+                        <BtnWrap type="auto-right">
                           <EBtn color="light-gray" size="xs">
                             <EIco name="delete" color="gray" size="xs"><span class="offscreen">삭제</span></EIco>
                           </EBtn>
