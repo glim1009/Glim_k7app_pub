@@ -1,7 +1,7 @@
 <template>
   <ContWrap class="not-navbar">
     <ContBox>
-      <BtnWrap>
+      <BtnWrap type="full">
         <EBtn color="gray" @click="openAddAddress">
           <EIco name="plus" size="sm" color="white" />
           <span class="text">주소지 추가</span>
@@ -36,7 +36,7 @@
                   </div>
                 </div>
                 <div class="flex-right">
-                  <BtnWrap>
+                  <BtnWrap type="auto-right">
                     <EBtn color="light-gray" size="xs">
                       <EIco name="delete" color="gray" size="xs">
                         <span class="offscreen">삭제</span>
@@ -74,7 +74,7 @@
                   </div>
                 </div>
                 <div class="flex-right">
-                  <BtnWrap>
+                  <BtnWrap type="auto-right">
                     <EBtn color="light-gray" size="xs">
                       <EIco name="delete" color="gray" size="xs">
                         <span class="offscreen">삭제</span>
@@ -112,7 +112,7 @@
                   </div>
                 </div>
                 <div class="flex-right">
-                  <BtnWrap>
+                  <BtnWrap type="auto-right">
                     <EBtn color="light-gray" size="xs">
                       <EIco name="delete" color="gray" size="xs">
                         <span class="offscreen">삭제</span>
