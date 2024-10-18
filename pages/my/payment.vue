@@ -127,6 +127,7 @@ import draggable from "vuedraggable";
 definePageMeta({
   title: "결제수단 관리",
   hideRightHeader: ["home"],
+  notDragRefresh: true,
 });
 
 const isChangeListOrder = ref(false);

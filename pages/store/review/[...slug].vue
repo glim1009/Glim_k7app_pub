@@ -230,7 +230,7 @@
                 </SContColWrap>
               </ColorBox>
               <FoldOverflowBox min-height="60">
-                <div class="stext">
+                <div class="stext-lg">
                   점원이 친절하게 안내해 주셔서 좋았어요! 점원이 친절하게 안내해 주셔서 좋았어요! 점원이 친절하게 안내해 주셔서 좋았어요! 점원이 친절하게 안내해 주셔서 좋았어요! 점원이 친절하게 안내해 주셔서 좋았어요! 점원이 친절하게 안내해 주셔서 좋았어요! 점원이 친절하게 안내해 주셔서 좋았어요! 점원이 친절하게 안내해 주셔서 좋았어요! 점원이 친절하게 안내해 주셔서 좋았어요! 점원이 친절하게 안내해 주셔서 좋았어요!
                 </div>
               </FoldOverflowBox>
@@ -328,7 +328,7 @@
                 </SContColWrap>
               </ColorBox>
               <FoldOverflowBox min-height="60">
-                <div class="stext">
+                <div class="stext-lg">
                   점원이 친절하게 안내해 주셔서 좋았어요! 점원이 친절하게 안내해 주셔서 좋았어요! 점원이 친절하게 안내해 주셔서 좋았어요! 점원이 친절하게 안내해 주셔서 좋았어요! 점원이 친절하게 안내해 주셔서 좋았어요! 점원이 친절하게 안내해 주셔서 좋았어요! 점원이 친절하게 안내해 주셔서 좋았어요! 점원이 친절하게 안내해 주셔서 좋았어요! 점원이 친절하게 안내해 주셔서 좋았어요! 점원이 친절하게 안내해 주셔서 좋았어요!
                 </div>
               </FoldOverflowBox>
@@ -418,7 +418,7 @@ definePageMeta({
 });
 
 const isData = ref(true); // 임시 - 컨텐츠 확인을 위해 추가
-const isNoData = ref(false); // 임시 - 데이터 없음 컨텐츠 확인을 위해 추가
+const isNoData = ref(true); // 임시 - 데이터 없음 컨텐츠 확인을 위해 추가
 const isFilterNoData = ref(false); // 임시 - 필터 데이터 없음 컨텐츠 확인을 위해 추가
 
 // 리뷰작성 팝업

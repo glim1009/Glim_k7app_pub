@@ -91,7 +91,7 @@
 
             <!-- 매장 세부 정보 컨텐츠 -->
             <ColorBox color="white" size="lg" :class="{ 'is-visible': activeButton }">
-              <div class="box-info-header">
+              <div class="box-info-header address-info">
                 <FlexGroup align="start">
                   <div class="info-flex-left">
                     <ETBtn tag="a" size="lg" to="/store/detail">
@@ -124,9 +124,9 @@
                   </div>
                 </FlexGroup>
               </div>
-              <p class="stext multi-ellipsis">
-                서울특별시 종로구 12길 (관철동, 종로코아 빌딩) 서울특별시 종로구 12길 (관철동, 종로코아 빌딩) 서울특별시 종로구 12길 (관철동, 종로코아 빌딩) 서울특별시 종로구 12길 (관철동, 종로코아 빌딩)
-              </p>
+              <div class="address-info-group">
+                <div class="address">서울특별시 종로구 12길 (관철동, 종로코아 빌딩) 서울특별시 종로구 12길 (관철동, 종로코아 빌딩) 서울특별시 종로구 12길 (관철동, 종로코아 빌딩) 서울특별시 종로구 12길 (관철동, 종로코아 빌딩)</div>
+              </div>
               <BtnWrap type="full" size="md">
                 <EBtn tag="a" color="green" size="sm" to="/product/[...slug]">
                   <span class="text">구매하기</span>

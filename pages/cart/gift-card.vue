@@ -19,7 +19,7 @@
       </div>
       <ColorBox color="white" size="lg">
         <RowListWrap gap="line">
-          <!-- 할인 상품 -->
+          <!-- 일반 상품 -->
           <li class="item-thumb-prod">
             <span class="ui-chk">
               <input id="prodChk01" type="checkbox">
@@ -39,9 +39,6 @@
                 <ETit type="prod">
                   바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
                 </ETit>
-                <div class="stock">
-                  <EGoods size="sm" val="N" unit="개" /> 남음
-                </div>
               </div>
               <FlexGroup align="end">
                 <div class="flex-left">
@@ -66,8 +63,8 @@
               <span class="offscreen">바로가기</span>
             </NuxtLink>
           </li>
-          <!-- // 할인 상품 -->
-          <!-- N+N 증정 상품 (증정품 미선택) -->
+          <!-- // 일반 상품 -->
+          <!-- 1+1 교환권 (증정품 동일 상품 자동증정) -->
           <li class="item-thumb-prod">
             <span class="ui-chk">
               <input id="prodChk02" type="checkbox">
@@ -87,9 +84,6 @@
                 <ETit type="prod">
                   바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
                 </ETit>
-                <div class="stock">
-                  <EGoods size="sm" val="N" unit="개" /> 남음
-                </div>
               </div>
               <FlexGroup align="end">
                 <div class="flex-left">
@@ -108,22 +102,45 @@
                 <span class="offscreen">상품 삭제</span>
               </EIco>
             </button>
-            <ColorBox color="light-gray" size="sm" class="ta-center">
-              <p class="stext fw-md">
-                증정품을 선택해 주세요.
-              </p>
-              <BtnWrap size="sm">
-                <EBtn color="line-light-gray" size="sm" @click="openSelectFreeGift">
-                  <span class="text">증정품 선택</span>
-                </EBtn>
-              </BtnWrap>
+            <ColorBox color="light-gray" size="md">
+              <CtitleWrap size="zero">
+                <FlexGroup>
+                  <div class="flex-left">
+                    <ETit size="xs" text="증정품" />
+                  </div>
+                  <div class="flex-right">
+                    <div class="align-group">
+                      <span class="stext fw-md">1개 증정</span>
+                    </div>
+                  </div>
+                </FlexGroup>
+              </CtitleWrap>
+              <ColorBox color="white">
+                <!-- thumb-prod-flex -->
+                <div class="thumb-prod-flex">
+                  <EThumbProdBox size="md">
+                    <template #thumb>
+                      <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
+                    </template>
+                  </EThumbProdBox>
+                  <div class="info-box">
+                    <BadgeGroup gap="md">
+                      <EBadge color="gray" size="sm" badge-text="증정" />
+                    </BadgeGroup>
+                    <ETit type="prod">
+                      스페셜티 예가체프 460ml
+                    </ETit>
+                  </div>
+                </div>
+                <!-- // thumb-prod-flex -->
+              </ColorBox>
             </ColorBox>
             <NuxtLink class="btn-link" to="javascript:">
               <span class="offscreen">바로가기</span>
             </NuxtLink>
           </li>
-          <!-- // N+N 증정 상품 (증정품 미선택) -->
-          <!-- N+N 증정 상품 (증정품 선택) -->
+          <!-- // 1+1 교환권 (증정품 동일 상품 자동증정) -->
+          <!-- 1+1 교환권 (증정품 추가 시 본품 수량만큼 추가 증정) -->
           <li class="item-thumb-prod">
             <span class="ui-chk">
               <input id="prodChk03" type="checkbox">
@@ -138,14 +155,11 @@
               </EThumbProdBox>
               <div class="info-box">
                 <BadgeGroup gap="md">
-                  <EBadge color="gray" size="sm" badge-text="1+1" />
+                  <EBadge color="gray" size="sm" badge-text="2+1" />
                 </BadgeGroup>
                 <ETit type="prod">
                   바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
                 </ETit>
-                <div class="stock">
-                  <EGoods size="sm" val="N" unit="개" /> 남음
-                </div>
               </div>
               <FlexGroup align="end">
                 <div class="flex-left">
@@ -166,36 +180,45 @@
                 <span class="offscreen">상품 삭제</span>
               </EIco>
             </button>
-            <ColorBox color="light-gray" size="sm">
-              <!-- thumb-prod-flex -->
-              <div class="thumb-prod-flex">
-                <EThumbProdBox size="md">
-                  <template #thumb>
-                    <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
-                  </template>
-                </EThumbProdBox>
-                <div class="info-box">
-                  <BadgeGroup gap="md">
-                    <EBadge color="gray" size="sm" badge-text="증정" />
-                  </BadgeGroup>
-                  <ETit type="prod">
-                    바리스타 로슈거 250ml
-                  </ETit>
+            <ColorBox color="light-gray" size="md">
+              <CtitleWrap size="zero">
+                <FlexGroup>
+                  <div class="flex-left">
+                    <ETit size="xs" text="증정품" />
+                  </div>
+                  <div class="flex-right">
+                    <div class="align-group">
+                      <span class="stext fw-md">2개 증정</span>
+                    </div>
+                  </div>
+                </FlexGroup>
+              </CtitleWrap>
+              <ColorBox color="white">
+                <!-- thumb-prod-flex -->
+                <div class="thumb-prod-flex">
+                  <EThumbProdBox size="md">
+                    <template #thumb>
+                      <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
+                    </template>
+                  </EThumbProdBox>
+                  <div class="info-box">
+                    <BadgeGroup gap="md">
+                      <EBadge color="gray" size="sm" badge-text="증정" />
+                    </BadgeGroup>
+                    <ETit type="prod">
+                      스페셜티 예가체프 460ml
+                    </ETit>
+                  </div>
                 </div>
-              </div>
-              <!-- // thumb-prod-flex -->
-              <BtnWrap size="sm">
-                <EBtn color="line-light-gray" size="sm" @click="openSelectFreeGift">
-                  <span class="text">증정품 변경</span>
-                </EBtn>
-              </BtnWrap>
+                <!-- // thumb-prod-flex -->
+              </ColorBox>
             </ColorBox>
             <NuxtLink class="btn-link" to="javascript:">
               <span class="offscreen">바로가기</span>
             </NuxtLink>
           </li>
-          <!-- // N+N 증정 상품 (증정품 선택) -->
-          <!-- N+N 증정 상품 (증정 가능 상품 안내) -->
+          <!-- // 1+1 교환권 (증정품 추가 시 본품 수량만큼 추가 증정) -->
+          <!-- 2+1 교환권 (1개의 상품만 담은 경우) -->
           <li class="item-thumb-prod">
             <span class="ui-chk">
               <input id="prodChk04" type="checkbox">
@@ -210,14 +233,11 @@
               </EThumbProdBox>
               <div class="info-box">
                 <BadgeGroup gap="md">
-                  <EBadge color="gray" size="sm" badge-text="2+1" />
+                  <EBadge color="gray" size="sm" badge-text="1+1" />
                 </BadgeGroup>
                 <ETit type="prod">
                   바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
                 </ETit>
-                <div class="stock">
-                  <EGoods size="sm" val="N" unit="개" /> 남음
-                </div>
               </div>
               <FlexGroup align="end">
                 <div class="flex-left">
@@ -247,36 +267,40 @@
               <span class="offscreen">바로가기</span>
             </NuxtLink>
           </li>
-          <!-- // N+N 증정 상품 (증정 가능 상품 안내) -->
-          <!-- 주류/와인 상품 -->
+          <!-- // 2+1 교환권 (1개의 상품만 담은 경우) -->
+          <!-- 2+1 교환권 (2개를 담고 증정품 미선택한 경우) -->
           <li class="item-thumb-prod">
             <span class="ui-chk">
-              <input id="prodChk05" type="checkbox">
-              <label for="prodChk05"><span class="offscreen">상품 선택</span></label>
+              <input id="prodChk03" type="checkbox">
+              <label for="prodChk03"><span class="offscreen">상품 선택</span></label>
             </span>
             <!-- thumb-prod-flex -->
             <div class="thumb-prod-flex">
-              <EThumbProdBox size="md" dim="19">
+              <EThumbProdBox size="md">
                 <template #thumb>
                   <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
                 </template>
               </EThumbProdBox>
               <div class="info-box">
                 <BadgeGroup gap="md">
-                  <EBadge color="gray" size="sm" badge-text="할인" />
+                  <EBadge color="gray" size="sm" badge-text="2+1" />
                 </BadgeGroup>
                 <ETit type="prod">
-                  드보밀레짐빈티지14
+                  바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
                 </ETit>
-                <div class="goods-group">
-                  <EGoods type="origin" size="sm" val="3,000" unit="원" />
-                  <EGoods type="percent" size="md" val="10" unit="%" />
-                  <EGoods size="md" val="2,700" unit="원" />
-                </div>
-                <div class="stock">
-                  <EGoods size="sm" val="N" unit="개" /> 남음
-                </div>
               </div>
+              <FlexGroup align="end">
+                <div class="flex-left">
+                  <ESpinner :default-value="2" />
+                </div>
+                <div class="flex-right">
+                  <div class="goods-group">
+                    <EGoods type="origin" size="sm" val="3,000" unit="원" />
+                    <EGoods type="percent" size="md" val="10" unit="%" />
+                    <EGoods size="md" val="2,700" unit="원" />
+                  </div>
+                </div>
+              </FlexGroup>
             </div>
             <!-- // thumb-prod-flex -->
             <button type="button" class="btn-delete">
@@ -284,18 +308,129 @@
                 <span class="offscreen">상품 삭제</span>
               </EIco>
             </button>
+            <ColorBox color="light-gray" size="md">
+              <CtitleWrap size="zero">
+                <FlexGroup>
+                  <div class="flex-left">
+                    <ETit size="xs" text="증정품" />
+                  </div>
+                  <div class="flex-right">
+                    <div class="align-group">
+                      <span class="stext fw-md">1개 증정</span>
+                    </div>
+                  </div>
+                </FlexGroup>
+              </CtitleWrap>
+              <ColorBox color="white">
+                <!-- thumb-prod-flex -->
+                <div class="thumb-prod-flex">
+                  <EThumbProdBox size="md">
+                    <template #thumb>
+                      <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
+                    </template>
+                  </EThumbProdBox>
+                  <div class="info-box">
+                    <BadgeGroup gap="md">
+                      <EBadge color="gray" size="sm" badge-text="증정" />
+                    </BadgeGroup>
+                    <ETit type="prod">
+                      스페셜티 예가체프 460ml
+                    </ETit>
+                  </div>
+                </div>
+                <!-- // thumb-prod-flex -->
+              </ColorBox>
+            </ColorBox>
             <NuxtLink class="btn-link" to="javascript:">
               <span class="offscreen">바로가기</span>
             </NuxtLink>
           </li>
-          <!-- 주류/와인 상품 -->
+          <!-- // 2+1 교환권 (2개를 담고 증정품 미선택한 경우) -->
+          <!-- 2+1 교환권 (2개를 담고 증정품 선택한 경우) -->
+          <li class="item-thumb-prod">
+            <span class="ui-chk">
+              <input id="prodChk03" type="checkbox">
+              <label for="prodChk03"><span class="offscreen">상품 선택</span></label>
+            </span>
+            <!-- thumb-prod-flex -->
+            <div class="thumb-prod-flex">
+              <EThumbProdBox size="md">
+                <template #thumb>
+                  <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
+                </template>
+              </EThumbProdBox>
+              <div class="info-box">
+                <BadgeGroup gap="md">
+                  <EBadge color="gray" size="sm" badge-text="2+1" />
+                </BadgeGroup>
+                <ETit type="prod">
+                  바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
+                </ETit>
+              </div>
+              <FlexGroup align="end">
+                <div class="flex-left">
+                  <ESpinner :default-value="5" />
+                </div>
+                <div class="flex-right">
+                  <div class="goods-group">
+                    <EGoods type="origin" size="sm" val="3,000" unit="원" />
+                    <EGoods type="percent" size="md" val="10" unit="%" />
+                    <EGoods size="md" val="2,700" unit="원" />
+                  </div>
+                </div>
+              </FlexGroup>
+            </div>
+            <!-- // thumb-prod-flex -->
+            <button type="button" class="btn-delete">
+              <EIco name="close" color="gray" size="xs">
+                <span class="offscreen">상품 삭제</span>
+              </EIco>
+            </button>
+            <ColorBox color="light-gray" size="md">
+              <CtitleWrap size="zero">
+                <FlexGroup>
+                  <div class="flex-left">
+                    <ETit size="xs" text="증정품" />
+                  </div>
+                  <div class="flex-right">
+                    <div class="align-group">
+                      <span class="stext fw-md">2개 증정</span>
+                    </div>
+                  </div>
+                </FlexGroup>
+              </CtitleWrap>
+              <ColorBox color="white">
+                <!-- thumb-prod-flex -->
+                <div class="thumb-prod-flex">
+                  <EThumbProdBox size="md">
+                    <template #thumb>
+                      <img src="/assets/images/temp/temp_prod_5by5.png" alt="상품명 이미지">
+                    </template>
+                  </EThumbProdBox>
+                  <div class="info-box">
+                    <BadgeGroup gap="md">
+                      <EBadge color="gray" size="sm" badge-text="증정" />
+                    </BadgeGroup>
+                    <ETit type="prod">
+                      스페셜티 예가체프 460ml
+                    </ETit>
+                  </div>
+                </div>
+                <!-- // thumb-prod-flex -->
+              </ColorBox>
+            </ColorBox>
+            <NuxtLink class="btn-link" to="javascript:">
+              <span class="offscreen">바로가기</span>
+            </NuxtLink>
+          </li>
+          <!-- // 2+1 교환권 (2개를 담고 증정품 선택한 경우) -->
         </RowListWrap>
       </ColorBox>
     </ContBox>
     <ContBox size="sm">
       <ColorBox color="white" size="lg">
         <CtitleWrap>
-          <ETit text="1+1 추천상품" type="lgCont" />
+          <ETit text="교환권 추천상품" type="lgCont" />
         </CtitleWrap>
         <SwiperAutoWrap gap="12" class="side-zero">
           <swiper-slide>
@@ -318,9 +453,6 @@
                 <ETit type="prod">
                   바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
                 </ETit>
-                <div class="stock">
-                  <EGoods size="sm" val="N" unit="개" /> 남음
-                </div>
                 <div class="goods-group">
                   <EGoods type="origin" size="sm" val="3,000" unit="원" />
                   <EGoods type="percent" size="md" val="10" unit="%" />
@@ -359,9 +491,6 @@
                 <ETit type="prod">
                   바리스타 로슈거 250ml
                 </ETit>
-                <div class="stock">
-                  <EGoods size="sm" val="N" unit="개" /> 남음
-                </div>
                 <div class="goods-group">
                   <EGoods type="origin" size="sm" val="3,000" unit="원" />
                   <EGoods type="percent" size="md" val="10" unit="%" />
@@ -394,9 +523,6 @@
                 <ETit type="prod">
                   바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
                 </ETit>
-                <div class="stock">
-                  <EGoods size="sm" val="N" unit="개" /> 남음
-                </div>
                 <div class="goods-group">
                   <EGoods size="md" val="2,700" unit="원" />
                 </div>
@@ -433,9 +559,6 @@
                 <ETit type="prod">
                   바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
                 </ETit>
-                <div class="stock">
-                  <EGoods size="sm" val="N" unit="개" /> 남음
-                </div>
                 <div class="goods-group">
                   <EGoods type="origin" size="sm" val="3,000" unit="원" />
                   <EGoods type="percent" size="md" val="10" unit="%" />
@@ -474,9 +597,6 @@
                 <ETit type="prod">
                   바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
                 </ETit>
-                <div class="stock">
-                  <EGoods size="sm" val="N" unit="개" /> 남음
-                </div>
                 <div class="goods-group">
                   <EGoods type="origin" size="sm" val="3,000" unit="원" />
                   <EGoods type="percent" size="md" val="10" unit="%" />

@@ -204,6 +204,8 @@
   @include mixins.justify_width(center, center);
 
   [class^=stext] {
+    margin-top: 0;
+
     ~ [class^=stext] {
       margin-left: 10px;
     }
@@ -564,7 +566,7 @@
       }
     }
 
-    .light-gray-sm-box,
+    [class^=light-gray][class*=box],
     .tag-full-box {
       margin-top: 16px;
 
@@ -783,7 +785,15 @@
         left: 15px;
         right: 15px;
       };
-      box-shadow: 0 4px 10px 0 rgba(var(--Grayscale-100-RGB), 0.1);
+      box-shadow: 0 4px 20px 0 rgba(var(--Grayscale-100-RGB), 0.1);
+
+      .address-info-group {
+        margin-top: 4px;
+
+        .address {
+          @include mixins.multi_ellipsis(variables.$fontSizeLgLineHeight,2);
+        }
+      }
 
       &.is-visible {
         display: block;
@@ -1275,7 +1285,6 @@
   }
 }
 
-
 .link-service-menu {
   display: block;
   text-align: center;
@@ -1325,7 +1334,6 @@
   height: 24px;
   margin-left: 12px;
 }
-
 
 .pickup-info-wrap {
   margin-top: 16px;
@@ -1379,11 +1387,11 @@
   @include mixins.font_size_md;
 
   .number {
+    margin-right: 10px;
     font-weight: variables.$fontWeightSemibold;
     color: var(--Grayscale-90);
   }
   .address {
-    margin-left: 10px;
     color: var(--Grayscale-80);
   }
 }
@@ -1395,4 +1403,25 @@
       min-width: 37px;
     }
   }
+}
+
+// 공통 - 메인 마케팅
+.main-marketing-wrap {
+  .flex-center-group {
+    padding: {
+      top: 16px;
+      right: 16px;
+      bottom: 20px;
+      left: 16px;
+    }
+  }
+}
+
+.drag-refresh-loading {
+  position: fixed;
+  z-index: 1;
+  height: 100px;
+  top: 55px;
+  left: 0;
+  right: 0;
 }

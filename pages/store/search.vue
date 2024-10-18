@@ -64,8 +64,8 @@
         </ContWrap>
       </div>
     </template>
-    <StoreSearchList v-if="!isSearchData && !$route.path.includes('result')" @open-filter="openStoreFilterOption" />
-    <StoreSearchResult v-if="isSearchData" @open-filter="openStoreFilterOption" />
+    <StoreSearchList is-store-search v-if="!isSearchData && !$route.path.includes('result')" @open-filter="openStoreFilterOption" />
+    <StoreSearchResult is-store-search v-if="isSearchData" @open-filter="openStoreFilterOption" />
 
     <!-- pop : 매장 서비스 필터 - 필터 옵션 -->
     <PopCommFilterOption v-model:sta="popStoreFilterOption">

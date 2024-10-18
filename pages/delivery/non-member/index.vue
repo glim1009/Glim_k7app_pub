@@ -61,6 +61,7 @@
 definePageMeta({
   title: "택배 예약/배송 조회",
   hideRightHeader: ["home"],
+  notDragRefresh: true,
 });
 </script>
 

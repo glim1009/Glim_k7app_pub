@@ -111,6 +111,7 @@
 <script setup lang="ts">
 definePageMeta({
   hideRightHeader: ["chat", "search", "cart"],
+  notDragRefresh: true,
 });
 
 const isPassword = ref(true);

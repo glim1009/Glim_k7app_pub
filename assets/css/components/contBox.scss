@@ -58,6 +58,12 @@ $contGap: ('sm': 10px, 'md': 16px);
             margin-bottom: 6px;
           }
         }
+
+        @if ($gap == 'md') {
+          :deep(> .list-header) {
+            margin-bottom: -6px;
+          }
+        }
       }
     }
   }

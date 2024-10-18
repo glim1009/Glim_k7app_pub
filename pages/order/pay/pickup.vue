@@ -231,8 +231,8 @@
                     </div>
                   </FlexGroup>
                   <div class="tag-full-box cont-discount-info">
-                    <p class="stext fc-black fw-md">
-                      1,000원
+                    <p class="stext-black fw-md">
+                      1,000
                     </p>
                     <button type="button" class="btn-delete">
                       <EIco name="close" color="gray" size="xs">
@@ -256,8 +256,8 @@
                     </div>
                   </FlexGroup>
                   <div class="tag-full-box cont-discount-info">
-                    <p class="stext fc-black fw-md">
-                      1,000원
+                    <p class="stext-black fw-md">
+                      1,000
                     </p>
                     <button type="button" class="btn-delete">
                       <EIco name="close" color="gray" size="xs">
@@ -281,8 +281,8 @@
                     </div>
                   </FlexGroup>
                   <div class="tag-full-box cont-discount-info">
-                    <p class="stext fc-black fw-md">
-                      1,000원
+                    <p class="stext-black fw-md">
+                      1,000
                     </p>
                     <button type="button" class="btn-delete">
                       <EIco name="close" color="gray" size="xs">
@@ -298,7 +298,7 @@
                     </div>
                     <div class="flex-right">
                       <div class="align-group">
-                        <span class="stext">사용가능 <EGoods val="17,500" unit="P" /></span>
+                        <span class="stext">사용가능 <EGoods val="17,500" unit="원" /></span>
                         <EBtn color="line-light-gray" size="xs" @click="openSelectVoucher">
                           <span class="text">사용</span>
                         </EBtn>
@@ -306,8 +306,8 @@
                     </div>
                   </FlexGroup>
                   <div class="tag-full-box cont-discount-info">
-                    <p class="stext fc-black fw-md">
-                      1,000원
+                    <p class="stext-black fw-md">
+                      1,000
                     </p>
                     <button type="button" class="btn-delete">
                       <EIco name="close" color="gray" size="xs">
@@ -346,16 +346,16 @@
                   <ColorBox color="light-gray" size="sm">
                     <FlexGroup>
                       <div class="flex-left">
-                        <div class="stext-gray90 fw-sb">
+                        <div class="stext-lg-gray90 fw-sb">
                           개인 소득공제
                         </div>
                       </div>
                       <div class="flex-right">
                         <div class="align-group">
-                          <div class="stext">
+                          <div class="stext-lg-gray90">
                             313-31-12345
                           </div>
-                          <EBtn color="line-light-gray" size="xs">
+                          <EBtn tag="a" color="line-light-gray" size="xs" to="/my/receipt-number">
                             <span class="text">변경</span>
                           </EBtn>
                         </div>
@@ -365,16 +365,16 @@
                   <ColorBox color="light-gray" size="sm">
                     <FlexGroup>
                       <div class="flex-left">
-                        <div class="stext-gray90 fw-sb">
+                        <div class="stext-lg-gray90 fw-sb">
                           사업자 소득공제
                         </div>
                       </div>
                       <div class="flex-right">
                         <div class="align-group">
-                          <div class="stext">
+                          <div class="stext-lg-gray90">
                             313-31-12345
                           </div>
-                          <EBtn color="line-light-gray" size="xs">
+                          <EBtn tag="a" color="line-light-gray" size="xs" to="/my/receipt-number">
                             <span class="text">변경</span>
                           </EBtn>
                         </div>
@@ -382,7 +382,7 @@
                     </FlexGroup>
                   </ColorBox>
                   <BtnWrap type="full" size="md">
-                    <EBtn color="line-light-gray" size="sm">
+                    <EBtn tag="a" color="line-light-gray" size="sm" to="/my/receipt-number">
                       <span class="text">현금영수증 발급정보 등록</span>
                     </EBtn>
                   </BtnWrap>
@@ -391,12 +391,12 @@
                   <ColorBox color="light-gray" size="sm">
                     <FlexGroup>
                       <div class="flex-left">
-                        <div class="stext-gray90 fw-sb">
+                        <div class="stext-lg-gray90 fw-sb">
                           현금영수증 신청 안함
                         </div>
                       </div>
                       <div class="flex-right">
-                        <EBtn color="line-light-gray" size="xs">
+                        <EBtn tag="a" color="line-light-gray" size="xs" to="/my/receipt-number">
                           <span class="text">변경</span>
                         </EBtn>
                       </div>
@@ -417,6 +417,7 @@
           </template>
           <template #content>
             <ColorBox color="white" size="lg">
+              <!-- DESC :: 비회원일 경우 input [disabled] 속성 추가 -->
               <RowListWrap gap="line">
                 <li class="item-md">
                   <span class="ui-rdo">
@@ -457,7 +458,7 @@
                 </li>
                 <li class="item-md">
                   <span class="ui-rdo">
-                    <input id="orderPayRdo04" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payKakao" disabled>
+                    <input id="orderPayRdo04" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payKakao">
                     <label for="orderPayRdo04"><span class="text-lg">카카오페이</span></label>
                   </span>
                 </li>
@@ -564,8 +565,8 @@
                 <FlexGroup>
                   <div class="flex-left">
                     <span class="ui-chk">
-                      <input id="agreeChk02" type="checkbox">
-                      <label for="agreeChk02"><span class="text-md">개인정보 수집 및 이용동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
+                      <input id="agreeChk01" type="checkbox">
+                      <label for="agreeChk01"><span class="text-md">개인정보 수집 및 이용동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
                     </span>
                   </div>
                   <div class="flex-right">
@@ -580,8 +581,8 @@
                 <FlexGroup>
                   <div class="flex-left">
                     <span class="ui-chk">
-                      <input id="agreeChk01" type="checkbox">
-                      <label for="agreeChk01"><span class="text-md">PG사 전자금융거래 약관동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
+                      <input id="agreeChk02" type="checkbox">
+                      <label for="agreeChk02"><span class="text-md">PG사 전자금융거래 약관동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
                     </span>
                   </div>
                   <div class="flex-right">
@@ -596,8 +597,8 @@
                 <FlexGroup>
                   <div class="flex-left">
                     <span class="ui-chk">
-                      <input id="agreeChk01" type="checkbox">
-                      <label for="agreeChk01"><span class="text-md">PG사 개인정보 수집 및 이용동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
+                      <input id="agreeChk03" type="checkbox">
+                      <label for="agreeChk03"><span class="text-md">PG사 개인정보 수집 및 이용동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
                     </span>
                   </div>
                   <div class="flex-right">
@@ -612,8 +613,8 @@
                 <FlexGroup>
                   <div class="flex-left">
                     <span class="ui-chk">
-                      <input id="agreeChk01" type="checkbox">
-                      <label for="agreeChk01"><span class="text-md">PG사 개인정보 제3자 제공동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
+                      <input id="agreeChk04" type="checkbox">
+                      <label for="agreeChk04"><span class="text-md">PG사 개인정보 제3자 제공동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
                     </span>
                   </div>
                   <div class="flex-right">
@@ -666,6 +667,7 @@
 <script setup lang="ts">
 definePageMeta({
   title: "상품 결제",
+  notDragRefresh: true,
 });
 
 const orderPayRadio = ref();

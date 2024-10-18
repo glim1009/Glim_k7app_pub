@@ -6,6 +6,7 @@
 definePageMeta({
   title: "주문완료",
   hideRightHeader: ["chat", "search", "cart"],
+  notDragRefresh: true,
 });
 </script>
 

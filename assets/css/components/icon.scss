@@ -237,6 +237,13 @@
   @include mixins.svg_mask('/assets/images/common/comm_ico_delete_sm', var(--Grayscale-80));
 }
 
+.ico-check-gray-sm {
+  @extend %icon;
+  width: 18px;
+  height: 18px;
+  @include mixins.svg_mask('/assets/images/common/comm_ico_check_sm', var(--Grayscale-80));
+}
+
 .ico-check-green-sm { // green
   @extend %icon;
   width: 18px;

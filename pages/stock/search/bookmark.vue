@@ -260,7 +260,7 @@
 
 <script setup lang="ts">
 const isData = ref(true);
-const isNoData = ref(false);
+const isNoData = ref(true);
 const { $showToast } = useNuxtApp();
 
 // 즐겨찾기 등록한 경우 토스트 노출

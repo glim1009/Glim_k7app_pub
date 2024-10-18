@@ -49,9 +49,6 @@
                 <ETit type="prod">
                   바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
                 </ETit>
-                <div class="stock">
-                  <EGoods size="sm" val="N" unit="개" /> 남음
-                </div>
               </div>
               <FlexGroup align="end">
                 <div class="flex-left">
@@ -110,7 +107,7 @@
             </NuxtLink>
           </li>
           <!-- // 일반 상품 -->
-          <!-- 할인 상품 -->
+          <!-- 번들할인 상품 -->
           <li class="item-thumb-prod">
             <span class="ui-chk">
               <input id="prodChk02" type="checkbox">
@@ -125,14 +122,11 @@
               </EThumbProdBox>
               <div class="info-box">
                 <BadgeGroup gap="md">
-                  <EBadge color="gray" size="sm" badge-text="할인" />
+                  <EBadge color="gray" size="sm" badge-text="번들할인" />
                 </BadgeGroup>
                 <ETit type="prod">
-                  바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
+                  그릴스테이크&콘마요 유부초밥
                 </ETit>
-                <div class="stock">
-                  <EGoods size="sm" val="N" unit="개" /> 남음
-                </div>
               </div>
               <FlexGroup align="end">
                 <div class="flex-left">
@@ -188,17 +182,11 @@
                 </div>
               </FlexGroup>
             </ColorBox>
-            <UiColGroup>
-              <span class="ui-chk">
-                <input id="packageChk01" type="checkbox">
-                <label for="packageChk01"><span class="text-sm fc-gray80">포장봉투 (200원)</span></label>
-              </span>
-            </UiColGroup>
             <NuxtLink class="btn-link" to="javascript:">
               <span class="offscreen">바로가기</span>
             </NuxtLink>
           </li>
-          <!-- // 할인 상품 -->
+          <!-- // 번들할인 상품 -->
         </RowListWrap>
       </ColorBox>
       <ColorBox color="white" size="lg">
@@ -232,9 +220,6 @@
                 <ETit type="prod">
                   바리스타 로슈거 250ml 바리스타 로슈거 250ml
                 </ETit>
-                <div class="stock">
-                  <EGoods size="sm" val="N" unit="개" /> 남음
-                </div>
               </div>
               <FlexGroup align="end">
                 <div class="flex-left">
@@ -313,9 +298,6 @@
                 <ETit type="prod">
                   바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
                 </ETit>
-                <div class="stock">
-                  <EGoods size="sm" val="N" unit="개" /> 남음
-                </div>
               </div>
               <FlexGroup align="end">
                 <div class="flex-left">
@@ -412,9 +394,6 @@
                 <ETit type="prod">
                   드보밀레짐빈티지14
                 </ETit>
-                <div class="stock">
-                  <EGoods size="sm" val="N" unit="개" /> 남음
-                </div>
               </div>
               <FlexGroup align="end">
                 <div class="flex-left">
@@ -477,7 +456,7 @@
           <!-- // 주류/와인 상품 -->
         </RowListWrap>
       </ColorBox>
-      <BtnWrap size="md">
+      <BtnWrap>
         <EBtn tag="a" color="line-gray" size="md" to="/service/reservation">
           <EIco name="plus" color="gray" size="sm" />
           <span class="text">상품 더 담기</span>
@@ -490,7 +469,7 @@
           <div class="fold-title">
             <FlexGroup>
               <div class="flex-left">
-                <ETit text="결제예정금액" type="fold" />
+                <ETit text="결제예정 금액" type="fold" />
               </div>
               <div class="flex-right">
                 <EGoods size="xl" val="38,200" unit="원" class="fc-spot" />

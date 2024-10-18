@@ -102,6 +102,7 @@
 definePageMeta({
   title: "현금영수증 번호 관리",
   hideRightHeader: ["search", "cart"],
+  notDragRefresh: true,
 });
 
 const receiptRadio = ref();

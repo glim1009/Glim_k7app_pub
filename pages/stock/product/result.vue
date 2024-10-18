@@ -1,7 +1,7 @@
 <template>
   <!-- 검색결과 있음 -->
   <ContWrap type="white">
-    <ContBox v-if="isDataSearch" size="zero">
+    <ContBox v-if="isDataSearch && !isNoDataSearchFilter" size="zero">
       <div class="list-header">
         <div class="search-result-tit">
           <span class="fc-spot fw-sb">'초콜릿'</span> 에 대한 검색결과
@@ -36,7 +36,7 @@
           </div>
         </FlexGroup>
       </div>
-      <RowListWrap v-if="isDataSearch">
+      <RowListWrap v-if="isDataSearch" gap="lg">
         <!-- repeat -->
         <li class="item-thumb-prod">
           <!-- thumb-prod-flex -->

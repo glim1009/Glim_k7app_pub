@@ -67,6 +67,7 @@
 definePageMeta({
   title: "주문실패",
   hideRightHeader: ["chat", "search", "cart"],
+  notDragRefresh: true,
 });
 const isNoStock = ref(true);
 const isSoldOut = ref(true);

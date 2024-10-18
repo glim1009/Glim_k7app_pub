@@ -925,8 +925,8 @@
                       </div>
                     </FlexGroup>
                     <div class="tag-full-box cont-discount-info">
-                      <p class="stext fc-black fw-md">
-                        1,000원
+                      <p class="stext-black fw-md">
+                        1,000
                       </p>
                       <button type="button" class="btn-delete">
                         <EIco name="close" color="gray" size="xs">
@@ -950,8 +950,8 @@
                       </div>
                     </FlexGroup>
                     <div class="tag-full-box cont-discount-info">
-                      <p class="stext fc-black fw-md">
-                        1,000원
+                      <p class="stext-black fw-md">
+                        1,000
                       </p>
                       <button type="button" class="btn-delete">
                         <EIco name="close" color="gray" size="xs">
@@ -975,8 +975,8 @@
                       </div>
                     </FlexGroup>
                     <div class="tag-full-box cont-discount-info">
-                      <p class="stext fc-black fw-md">
-                        1,000원
+                      <p class="stext-black fw-md">
+                        1,000
                       </p>
                       <button type="button" class="btn-delete">
                         <EIco name="close" color="gray" size="xs">
@@ -1015,16 +1015,16 @@
                     <ColorBox color="light-gray" size="sm">
                       <FlexGroup>
                         <div class="flex-left">
-                          <div class="stext-gray90 fw-sb">
+                          <div class="stext-lg-gray90 fw-sb">
                             개인 소득공제
                           </div>
                         </div>
                         <div class="flex-right">
                           <div class="align-group">
-                            <div class="stext">
+                            <div class="stext-lg-gray90">
                               313-31-12345
                             </div>
-                            <EBtn color="line-light-gray" size="xs">
+                            <EBtn tag="a" color="line-light-gray" size="xs" to="/my/receipt-number">
                               <span class="text">변경</span>
                             </EBtn>
                           </div>
@@ -1034,16 +1034,16 @@
                     <ColorBox color="light-gray" size="sm">
                       <FlexGroup>
                         <div class="flex-left">
-                          <div class="stext-gray90 fw-sb">
+                          <div class="stext-lg-gray90 fw-sb">
                             사업자 소득공제
                           </div>
                         </div>
                         <div class="flex-right">
                           <div class="align-group">
-                            <div class="stext">
+                            <div class="stext-lg-gray90">
                               313-31-12345
                             </div>
-                            <EBtn color="line-light-gray" size="xs">
+                            <EBtn tag="a" color="line-light-gray" size="xs" to="/my/receipt-number">
                               <span class="text">변경</span>
                             </EBtn>
                           </div>
@@ -1051,7 +1051,7 @@
                       </FlexGroup>
                     </ColorBox>
                     <BtnWrap type="full" size="md">
-                      <EBtn color="line-light-gray" size="sm">
+                      <EBtn tag="a" color="line-light-gray" size="sm" to="/my/receipt-number">
                         <span class="text">현금영수증 발급정보 등록</span>
                       </EBtn>
                     </BtnWrap>
@@ -1060,12 +1060,12 @@
                     <ColorBox color="light-gray" size="sm">
                       <FlexGroup>
                         <div class="flex-left">
-                          <div class="stext-gray90 fw-sb">
+                          <div class="stext-lg-gray90 fw-sb">
                             현금영수증 신청 안함
                           </div>
                         </div>
                         <div class="flex-right">
-                          <EBtn color="line-light-gray" size="xs">
+                          <EBtn tag="a" color="line-light-gray" size="xs" to="/my/receipt-number">
                             <span class="text">변경</span>
                           </EBtn>
                         </div>
@@ -1417,6 +1417,7 @@
 definePageMeta({
   title: "착한택배 예약",
   hideRightHeader: false,
+  notDragRefresh: true,
 });
 
 const isMember = ref(true);

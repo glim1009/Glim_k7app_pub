@@ -2499,6 +2499,7 @@
 <script setup lang="ts">
 definePageMeta({
   layout: false,
+  notDragRefresh: true,
 });
 const { $showToast } = useNuxtApp();
 

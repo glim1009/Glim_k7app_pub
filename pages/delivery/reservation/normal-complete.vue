@@ -45,6 +45,7 @@ import { ref } from "vue";
 definePageMeta({
   title: "일반 택배예약",
   hideRightHeader: ["chat", "search", "cart"],
+  notDragRefresh: true,
 });
 
 const isMember = ref(true);

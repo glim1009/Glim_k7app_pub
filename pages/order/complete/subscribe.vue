@@ -91,6 +91,7 @@
 <script setup lang="ts">
 definePageMeta({
   title: "주문완료",
+  notDragRefresh: true,
 });
 </script>
 

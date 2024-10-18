@@ -116,6 +116,14 @@
 // ctitle-wrap 및 텍스트간 여백
 .ctitle-zero-wrap {
   @extend %ctitleWrapZero;
+
+  .flex-center-group {
+    .flex-right {
+      [class^=stext-lg] {
+        margin-top: 0;
+      }
+    }
+  }
 }
 
 .ctitle-sm-wrap {

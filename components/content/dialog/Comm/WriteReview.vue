@@ -45,7 +45,7 @@
                 </div>
                 <div class="form-cont">
                   <div class="form-input-group">
-                    <ColorBox color="line-light-gray">
+                    <ColorBox color="line-light-gray" size="lg">
                       <RowListWrap gap="line">
                         <li class="item-md">
                           <FlexGroup>
@@ -231,7 +231,7 @@
                 </div>
                 <div class="form-cont">
                   <div class="form-input-group">
-                    <ColorBox color="line-light-gray">
+                    <ColorBox color="line-light-gray" size="lg">
                       <RowListWrap gap="line">
                         <li class="item-md">
                           <FlexGroup>
@@ -342,5 +342,4 @@ const textareaEmits = ref<string | null>("");
 function handlerValue(value: any) {
   textareaEmits.value = value;
 }
-
 </script>

@@ -18,6 +18,8 @@
   }
 }
 .container-wrapper {
+  position: relative;
+  z-index: 2;
   min-height: 100dvh;
   @include mixins.justify_width(stretch, start, column);
 }

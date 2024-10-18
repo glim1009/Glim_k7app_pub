@@ -6,6 +6,7 @@
 definePageMeta({
   title: "주문결제",
   hideRightHeader: false,
+  notDragRefresh: true,
 });
 </script>
 

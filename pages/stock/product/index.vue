@@ -301,15 +301,11 @@
             <!-- // thumb-prod-2xl -->
             <div class="info-box">
               <BadgeGroup gap="md">
-                <EBadge color="light-green" size="sm" badge-text="당일픽업" />
                 <EBadge color="light-gray" size="sm" badge-text="BEST" />
               </BadgeGroup>
               <ETit type="prod">
                 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
               </ETit>
-              <div class="stext">
-                (31일간, 월 1회 30% / 총 20회)
-              </div>
               <div class="goods-group">
                 <EGoods type="origin" size="sm" val="3,000" unit="원" />
                 <EGoods type="percent" size="md" val="10" unit="%" />
@@ -349,15 +345,11 @@
             <!-- // thumb-prod-2xl -->
             <div class="info-box">
               <BadgeGroup gap="md">
-                <EBadge color="light-green" size="sm" badge-text="당일픽업" />
                 <EBadge color="light-gray" size="sm" badge-text="BEST" />
               </BadgeGroup>
               <ETit type="prod">
                 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
               </ETit>
-              <div class="stext">
-                (31일간, 월 1회 30% / 총 20회)
-              </div>
               <div class="goods-group">
                 <EGoods type="origin" size="sm" val="3,000" unit="원" />
                 <EGoods type="percent" size="md" val="10" unit="%" />
@@ -391,15 +383,11 @@
             <!-- // thumb-prod-2xl -->
             <div class="info-box">
               <BadgeGroup gap="md">
-                <EBadge color="light-green" size="sm" badge-text="당일픽업" />
                 <EBadge color="light-gray" size="sm" badge-text="BEST" />
               </BadgeGroup>
               <ETit type="prod">
                 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
               </ETit>
-              <div class="stext">
-                (31일간, 월 1회 30% / 총 20회)
-              </div>
               <div class="goods-group">
                 <EGoods type="origin" size="sm" val="3,000" unit="원" />
                 <EGoods type="percent" size="md" val="10" unit="%" />
@@ -439,15 +427,11 @@
             <!-- // thumb-prod-2xl -->
             <div class="info-box">
               <BadgeGroup gap="md">
-                <EBadge color="light-green" size="sm" badge-text="당일픽업" />
                 <EBadge color="light-gray" size="sm" badge-text="BEST" />
               </BadgeGroup>
               <ETit type="prod">
                 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
               </ETit>
-              <div class="stext">
-                (31일간, 월 1회 30% / 총 20회)
-              </div>
               <div class="goods-group">
                 <EGoods type="origin" size="sm" val="3,000" unit="원" />
                 <EGoods type="percent" size="md" val="10" unit="%" />
@@ -484,15 +468,11 @@
             <!-- // thumb-prod-2xl -->
             <div class="info-box">
               <BadgeGroup gap="md">
-                <EBadge color="light-green" size="sm" badge-text="당일픽업" />
                 <EBadge color="light-gray" size="sm" badge-text="BEST" />
               </BadgeGroup>
               <ETit type="prod">
                 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
               </ETit>
-              <div class="stext">
-                (31일간, 월 1회 30% / 총 20회)
-              </div>
               <div class="goods-group">
                 <EGoods type="origin" size="sm" val="3,000" unit="원" />
                 <EGoods type="percent" size="md" val="10" unit="%" />
@@ -529,15 +509,11 @@
             <!-- // thumb-prod-2xl -->
             <div class="info-box">
               <BadgeGroup gap="md">
-                <EBadge color="light-green" size="sm" badge-text="당일픽업" />
                 <EBadge color="light-gray" size="sm" badge-text="BEST" />
               </BadgeGroup>
               <ETit type="prod">
                 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
               </ETit>
-              <div class="stext">
-                (31일간, 월 1회 30% / 총 20회)
-              </div>
               <div class="goods-group">
                 <EGoods type="origin" size="sm" val="3,000" unit="원" />
                 <EGoods type="percent" size="md" val="10" unit="%" />
@@ -574,15 +550,11 @@
             <!-- // thumb-prod-2xl -->
             <div class="info-box">
               <BadgeGroup gap="md">
-                <EBadge color="light-green" size="sm" badge-text="당일픽업" />
                 <EBadge color="light-gray" size="sm" badge-text="BEST" />
               </BadgeGroup>
               <ETit type="prod">
                 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
               </ETit>
-              <div class="stext">
-                (31일간, 월 1회 30% / 총 20회)
-              </div>
               <div class="goods-group">
                 <EGoods type="origin" size="sm" val="3,000" unit="원" />
                 <EGoods type="percent" size="md" val="10" unit="%" />
@@ -619,15 +591,11 @@
             <!-- // thumb-prod-2xl -->
             <div class="info-box">
               <BadgeGroup gap="md">
-                <EBadge color="light-green" size="sm" badge-text="당일픽업" />
                 <EBadge color="light-gray" size="sm" badge-text="BEST" />
               </BadgeGroup>
               <ETit type="prod">
                 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
               </ETit>
-              <div class="stext">
-                (31일간, 월 1회 30% / 총 20회)
-              </div>
               <div class="goods-group">
                 <EGoods type="origin" size="sm" val="3,000" unit="원" />
                 <EGoods type="percent" size="md" val="10" unit="%" />
@@ -664,15 +632,11 @@
             <!-- // thumb-prod-2xl -->
             <div class="info-box">
               <BadgeGroup gap="md">
-                <EBadge color="light-green" size="sm" badge-text="당일픽업" />
                 <EBadge color="light-gray" size="sm" badge-text="BEST" />
               </BadgeGroup>
               <ETit type="prod">
                 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
               </ETit>
-              <div class="stext">
-                (31일간, 월 1회 30% / 총 20회)
-              </div>
               <div class="goods-group">
                 <EGoods type="origin" size="sm" val="3,000" unit="원" />
                 <EGoods type="percent" size="md" val="10" unit="%" />

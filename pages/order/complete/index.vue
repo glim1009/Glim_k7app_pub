@@ -173,6 +173,7 @@
 <script setup lang="ts">
 definePageMeta({
   title: "주문완료",
+  notDragRefresh: true,
 });
 
 const isReservation = ref(true); // 사전 예약 content 상태

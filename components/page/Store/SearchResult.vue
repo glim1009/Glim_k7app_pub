@@ -10,7 +10,7 @@
           </div>
           <div class="flex-right">
             <!-- DESC :: 활성화시 is-active 클래스 추가 -->
-            <button type="button" class="btn-filter is-active" @click="emitOpenFilter">
+            <button type="button" class="btn-filter is-active" @click="emitOpenFilter" v-if="isStoreSearch">
               <EIco name="filter" color="gray" size="xs" />
               <span class="offscreen">필터옵션</span>
             </button>
@@ -332,7 +332,7 @@
         <!-- // CASE 02 : 매장 선택인 경우 -->
       </RowListWrap>
       <InfoGuideWrap
-        v-if="isFilterNoData"
+        v-if="isFilterNoData && isStoreSearch"
         type="no-data"
         name="filter-result"
         desc="선택한 조건의 결과가 없습니다."
@@ -357,11 +357,17 @@
 </template>
 
 <script setup lang="ts">
+const props = withDefaults(defineProps<{
+  isStoreSearch?: boolean; // 임시 :: 컨텐츠 확인을 위해 추가 ( 개발시 삭제 요청 )
+}>(), {
+  isStoreSearch: false,
+});
+
 const emit = defineEmits(["openFilter"]);
 
-const isData = ref(true);
-const isFilterNoData = ref(false);
-const isNoData = ref(false);
+const isData = ref(true); // 임시 : 데이터 있음 컨텐츠 확인을 위해 추가
+const isFilterNoData = ref(false); // 임시 : 필터 조건 데이터 없음 컨텐츠 확인을 위해 추가
+const isNoData = ref(true); // 임시 : 데이터 없음 컨텐츠 확인을 위해 추가
 
 // 필터팝업 : open
 const emitOpenFilter = () => {

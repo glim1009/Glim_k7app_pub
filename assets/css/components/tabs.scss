@@ -108,6 +108,7 @@
   .swiper-auto-line-wrap,
   .tab-line-list {
     position: relative;
+    background: var(--Grayscale-0);
 
     &:after {
       content: '';

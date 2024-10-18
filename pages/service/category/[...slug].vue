@@ -124,13 +124,13 @@
                   <div class="stext">
                     (31일간, 월 1회 30% / 총 20회)
                   </div>
+                  <div class="stock">
+                    <EGoods size="sm" val="N" unit="개" /> 남음
+                  </div>
                   <div class="goods-group">
                     <EGoods type="origin" size="sm" val="3,000" unit="원" />
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
-                  </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
                   </div>
                   <div class="rating">
                     <EIco name="rating" color="gray50" size="xs">
@@ -176,13 +176,13 @@
                   <div class="stext">
                     (31일간, 월 1회 30% / 총 20회)
                   </div>
+                  <div class="stock">
+                    <EGoods size="sm" val="N" unit="개" /> 남음
+                  </div>
                   <div class="goods-group">
                     <EGoods type="origin" size="sm" val="3,000" unit="원" />
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
-                  </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
                   </div>
                   <div class="rating">
                     <EIco name="rating" color="gray50" size="xs">
@@ -231,13 +231,13 @@
                   <div class="stext">
                     (31일간, 월 1회 30% / 총 20회)
                   </div>
+                  <div class="stock">
+                    <EGoods size="sm" val="N" unit="개" /> 남음
+                  </div>
                   <div class="goods-group">
                     <EGoods type="origin" size="sm" val="3,000" unit="원" />
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
-                  </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
                   </div>
                   <div class="rating">
                     <EIco name="rating" color="gray50" size="xs">
@@ -287,13 +287,13 @@
                   <div class="stext">
                     (31일간, 월 1회 30% / 총 20회)
                   </div>
+                  <div class="stock">
+                    <EGoods size="sm" val="N" unit="개" /> 남음
+                  </div>
                   <div class="goods-group">
                     <EGoods type="origin" size="sm" val="3,000" unit="원" />
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
-                  </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
                   </div>
                   <div class="rating">
                     <EIco name="rating" color="gray50" size="xs">
@@ -342,13 +342,13 @@
                   <div class="stext">
                     (31일간, 월 1회 30% / 총 20회)
                   </div>
+                  <div class="stock">
+                    <EGoods size="sm" val="N" unit="개" /> 남음
+                  </div>
                   <div class="goods-group">
                     <EGoods type="origin" size="sm" val="3,000" unit="원" />
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
-                  </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
                   </div>
                   <div class="rating">
                     <EIco name="rating" color="gray50" size="xs">
@@ -398,13 +398,13 @@
                   <div class="stext">
                     (31일간, 월 1회 30% / 총 20회)
                   </div>
+                  <div class="stock">
+                    <EGoods size="sm" val="N" unit="개" /> 남음
+                  </div>
                   <div class="goods-group">
                     <EGoods type="origin" size="sm" val="3,000" unit="원" />
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
-                  </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
                   </div>
                   <div class="rating">
                     <EIco name="rating" color="gray50" size="xs">
@@ -452,13 +452,13 @@
                   <div class="stext">
                     (31일간, 월 1회 30% / 총 20회)
                   </div>
+                  <div class="stock">
+                    <EGoods size="sm" val="N" unit="개" /> 남음
+                  </div>
                   <div class="goods-group">
                     <EGoods type="origin" size="sm" val="3,000" unit="원" />
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
-                  </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
                   </div>
                   <div class="rating">
                     <EIco name="rating" color="gray50" size="xs">
@@ -504,13 +504,13 @@
                   <div class="stext">
                     (31일간, 월 1회 30% / 총 20회)
                   </div>
+                  <div class="stock">
+                    <EGoods size="sm" val="N" unit="개" /> 남음
+                  </div>
                   <div class="goods-group">
                     <EGoods type="origin" size="sm" val="3,000" unit="원" />
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
-                  </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
                   </div>
                   <div class="rating">
                     <EIco name="rating" color="gray50" size="xs">
@@ -556,13 +556,13 @@
                   <div class="stext">
                     (31일간, 월 1회 30% / 총 20회)
                   </div>
+                  <div class="stock">
+                    <EGoods size="sm" val="N" unit="개" /> 남음
+                  </div>
                   <div class="goods-group">
                     <EGoods type="origin" size="sm" val="3,000" unit="원" />
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
-                  </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
                   </div>
                   <div class="rating">
                     <EIco name="rating" color="gray50" size="xs">
@@ -608,13 +608,13 @@
                   <div class="stext">
                     (31일간, 월 1회 30% / 총 20회)
                   </div>
+                  <div class="stock">
+                    <EGoods size="sm" val="N" unit="개" /> 남음
+                  </div>
                   <div class="goods-group">
                     <EGoods type="origin" size="sm" val="3,000" unit="원" />
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
-                  </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
                   </div>
                   <div class="rating">
                     <EIco name="rating" color="gray50" size="xs">
@@ -662,13 +662,13 @@
                   <div class="stext">
                     (31일간, 월 1회 30% / 총 20회)
                   </div>
+                  <div class="stock">
+                    <EGoods size="sm" val="N" unit="개" /> 남음
+                  </div>
                   <div class="goods-group">
                     <EGoods type="origin" size="sm" val="3,000" unit="원" />
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
-                  </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
                   </div>
                   <div class="rating">
                     <EIco name="rating" color="gray50" size="xs">
@@ -714,13 +714,13 @@
                   <div class="stext">
                     (31일간, 월 1회 30% / 총 20회)
                   </div>
+                  <div class="stock">
+                    <EGoods size="sm" val="N" unit="개" /> 남음
+                  </div>
                   <div class="goods-group">
                     <EGoods type="origin" size="sm" val="3,000" unit="원" />
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
-                  </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
                   </div>
                   <div class="rating">
                     <EIco name="rating" color="gray50" size="xs">
@@ -766,13 +766,13 @@
                   <div class="stext">
                     (31일간, 월 1회 30% / 총 20회)
                   </div>
+                  <div class="stock">
+                    <EGoods size="sm" val="N" unit="개" /> 남음
+                  </div>
                   <div class="goods-group">
                     <EGoods type="origin" size="sm" val="3,000" unit="원" />
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
-                  </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
                   </div>
                   <div class="rating">
                     <EIco name="rating" color="gray50" size="xs">
@@ -818,13 +818,13 @@
                   <div class="stext">
                     (31일간, 월 1회 30% / 총 20회)
                   </div>
+                  <div class="stock">
+                    <EGoods size="sm" val="N" unit="개" /> 남음
+                  </div>
                   <div class="goods-group">
                     <EGoods type="origin" size="sm" val="3,000" unit="원" />
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
-                  </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
                   </div>
                   <div class="rating">
                     <EIco name="rating" color="gray50" size="xs">
@@ -872,13 +872,13 @@
                   <div class="stext">
                     (31일간, 월 1회 30% / 총 20회)
                   </div>
+                  <div class="stock">
+                    <EGoods size="sm" val="N" unit="개" /> 남음
+                  </div>
                   <div class="goods-group">
                     <EGoods type="origin" size="sm" val="3,000" unit="원" />
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
-                  </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
                   </div>
                   <div class="rating">
                     <EIco name="rating" color="gray50" size="xs">
@@ -924,13 +924,13 @@
                   <div class="stext">
                     (31일간, 월 1회 30% / 총 20회)
                   </div>
+                  <div class="stock">
+                    <EGoods size="sm" val="N" unit="개" /> 남음
+                  </div>
                   <div class="goods-group">
                     <EGoods type="origin" size="sm" val="3,000" unit="원" />
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
-                  </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
                   </div>
                   <div class="rating">
                     <EIco name="rating" color="gray50" size="xs">
@@ -976,13 +976,13 @@
                   <div class="stext">
                     (31일간, 월 1회 30% / 총 20회)
                   </div>
+                  <div class="stock">
+                    <EGoods size="sm" val="N" unit="개" /> 남음
+                  </div>
                   <div class="goods-group">
                     <EGoods type="origin" size="sm" val="3,000" unit="원" />
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
-                  </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
                   </div>
                   <div class="rating">
                     <EIco name="rating" color="gray50" size="xs">
@@ -1028,13 +1028,13 @@
                   <div class="stext">
                     (31일간, 월 1회 30% / 총 20회)
                   </div>
+                  <div class="stock">
+                    <EGoods size="sm" val="N" unit="개" /> 남음
+                  </div>
                   <div class="goods-group">
                     <EGoods type="origin" size="sm" val="3,000" unit="원" />
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
-                  </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
                   </div>
                   <div class="rating">
                     <EIco name="rating" color="gray50" size="xs">
@@ -1082,13 +1082,13 @@
                   <div class="stext">
                     (31일간, 월 1회 30% / 총 20회)
                   </div>
+                  <div class="stock">
+                    <EGoods size="sm" val="N" unit="개" /> 남음
+                  </div>
                   <div class="goods-group">
                     <EGoods type="origin" size="sm" val="3,000" unit="원" />
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
-                  </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
                   </div>
                   <div class="rating">
                     <EIco name="rating" color="gray50" size="xs">
@@ -1134,13 +1134,13 @@
                   <div class="stext">
                     (31일간, 월 1회 30% / 총 20회)
                   </div>
+                  <div class="stock">
+                    <EGoods size="sm" val="N" unit="개" /> 남음
+                  </div>
                   <div class="goods-group">
                     <EGoods type="origin" size="sm" val="3,000" unit="원" />
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
-                  </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
                   </div>
                   <div class="rating">
                     <EIco name="rating" color="gray50" size="xs">
@@ -1186,13 +1186,13 @@
                   <div class="stext">
                     (31일간, 월 1회 30% / 총 20회)
                   </div>
+                  <div class="stock">
+                    <EGoods size="sm" val="N" unit="개" /> 남음
+                  </div>
                   <div class="goods-group">
                     <EGoods type="origin" size="sm" val="3,000" unit="원" />
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
-                  </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
                   </div>
                   <div class="rating">
                     <EIco name="rating" color="gray50" size="xs">
@@ -1238,13 +1238,13 @@
                   <div class="stext">
                     (31일간, 월 1회 30% / 총 20회)
                   </div>
+                  <div class="stock">
+                    <EGoods size="sm" val="N" unit="개" /> 남음
+                  </div>
                   <div class="goods-group">
                     <EGoods type="origin" size="sm" val="3,000" unit="원" />
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
-                  </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
                   </div>
                   <div class="rating">
                     <EIco name="rating" color="gray50" size="xs">

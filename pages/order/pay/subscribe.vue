@@ -41,80 +41,9 @@
         <FoldToggleBox open>
           <template #header>
             <div class="fold-title">
-              <ETit text="결제수단" type="fold" />
-            </div>
-          </template>
-          <template #content>
-            <ColorBox color="white" size="lg">
-              <RowListWrap gap="line">
-                <li class="item-md">
-                  <span class="ui-rdo">
-                    <input id="orderPayRdo01" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payCard">
-                    <label for="orderPayRdo01"><span class="text-lg">신용(체크)카드</span></label>
-                  </span>
-                  <div v-show="orderPayRadio === 'payCard'" class="cont-pay-info">
-                    <div class="ui-select">
-                      <select title="신용(체크)카드 선택">
-                        <option>롯데카드</option>
-                        <option>현대카드</option>
-                        <option>국민카드</option>
-                      </select>
-                    </div>
-                  </div>
-                </li>
-                <li class="item-md">
-                  <span class="ui-rdo">
-                    <input id="orderPayRdo02" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payLpay">
-                    <label for="orderPayRdo02"><span class="text-lg">L.PAY</span></label>
-                  </span>
-                </li>
-                <li class="item-md">
-                  <span class="ui-rdo">
-                    <input id="orderPayRdo03" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payNaver">
-                    <label for="orderPayRdo03"><span class="text-lg">네이버 간편결제</span></label>
-                  </span>
-                  <div v-show="orderPayRadio === 'payNaver'" class="cont-pay-info">
-                    <BtnWrap>
-                      <EBtn color="line-light-gray" size="md">
-                        <span class="text">네이버 카드 결제</span>
-                      </EBtn>
-                      <EBtn color="line-light-gray" size="md">
-                        <span class="text">네이버 포인트 결제</span>
-                      </EBtn>
-                    </BtnWrap>
-                  </div>
-                </li>
-                <li class="item-md">
-                  <span class="ui-rdo">
-                    <input id="orderPayRdo04" v-model="orderPayRadio" type="radio" name="orderPayRdo01" value="payKakao" disabled>
-                    <label for="orderPayRdo04"><span class="text-lg">카카오페이</span></label>
-                  </span>
-                </li>
-                <li class="item-md">
-                  <span class="ui-chk">
-                    <input id="orderPayChk01" type="checkbox">
-                    <label for="orderPayChk01"><span class="text-sm fc-gray70">선택한 결제수단 다음에도 사용</span></label>
-                  </span>
-                </li>
-              </RowListWrap>
-              <div class="pay-benefit-info-wrap">
-                <ColorBox color="light-green" size="sm" class="ta-center">
-                  <p class="stext fw-md fc-spot">
-                    삼성카드 결제 시 1,000원 캐시백
-                  </p>
-                </ColorBox>
-              </div>
-            </ColorBox>
-          </template>
-        </FoldToggleBox>
-      </li>
-      <li class="item">
-        <FoldToggleBox open>
-          <template #header>
-            <div class="fold-title">
               <FlexGroup>
                 <div class="flex-left">
-                  <ETit text="매월결제금액" type="fold" />
+                  <ETit text="매월 결제금액" type="fold" />
                 </div>
                 <div class="flex-right">
                   <EGoods size="xl" val="6,400" unit="원" class="fw-md fc-spot" />
@@ -137,20 +66,6 @@
                     </div>
                   </FlexGroup>
                 </li>
-                <li class="item-order-info">
-                  <FlexGroup align="center">
-                    <div class="flex-left">
-                      <div class="flex-left">
-                        <ETit text="할인금액" type="goods" />
-                      </div>
-                    </div>
-                    <div class="flex-right">
-                      <ETit type="goods">
-                        <EGoods val="1,000" unit="원" class="fc-red" />
-                      </ETit>
-                    </div>
-                  </FlexGroup>
-                </li>
               </RowListWrap>
             </ColorBox>
           </template>
@@ -166,8 +81,8 @@
                 <FlexGroup>
                   <div class="flex-left">
                     <span class="ui-chk">
-                      <input id="agreeChk02" type="checkbox">
-                      <label for="agreeChk02"><span class="text-md">개인정보 수집 및 이용동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
+                      <input id="agreeChk01" type="checkbox">
+                      <label for="agreeChk01"><span class="text-md">개인정보 수집 및 이용동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
                     </span>
                   </div>
                   <div class="flex-right">
@@ -182,47 +97,9 @@
                 <FlexGroup>
                   <div class="flex-left">
                     <span class="ui-chk">
-                      <input id="agreeChk01" type="checkbox">
-                      <label for="agreeChk01"><span class="text-md">PG사 전자금융거래 약관동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
+                      <input id="agreeChk02" type="checkbox">
+                      <label for="agreeChk02"><span class="text-md">매월 정기 결제 동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
                     </span>
-                  </div>
-                  <div class="flex-right">
-                    <ETBtn tag="a" size="xs" to="javascript:">
-                      <span class="text">상세보기</span>
-                      <EIco name="arw-right" color="gray" size="xs" />
-                    </ETBtn>
-                  </div>
-                </FlexGroup>
-              </li>
-              <li class="ui-col-item">
-                <FlexGroup>
-                  <div class="flex-left">
-                    <span class="ui-chk">
-                      <input id="agreeChk01" type="checkbox">
-                      <label for="agreeChk01"><span class="text-md">PG사 개인정보 수집 및 이용동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
-                    </span>
-                  </div>
-                  <div class="flex-right">
-                    <ETBtn tag="a" size="xs" to="javascript:">
-                      <span class="text">상세보기</span>
-                      <EIco name="arw-right" color="gray" size="xs" />
-                    </ETBtn>
-                  </div>
-                </FlexGroup>
-              </li>
-              <li class="ui-col-item">
-                <FlexGroup>
-                  <div class="flex-left">
-                    <span class="ui-chk">
-                      <input id="agreeChk01" type="checkbox">
-                      <label for="agreeChk01"><span class="text-md">PG사 개인정보 제3자 제공동의<span class="required"><span class="offscreen">필수체크</span></span></span></label>
-                    </span>
-                  </div>
-                  <div class="flex-right">
-                    <ETBtn tag="a" size="xs" to="javascript:">
-                      <span class="text">상세보기</span>
-                      <EIco name="arw-right" color="gray" size="xs" />
-                    </ETBtn>
                   </div>
                 </FlexGroup>
               </li>
@@ -256,6 +133,7 @@
 <script setup lang="ts">
 definePageMeta({
   title: "정기구독",
+  notDragRefresh: true,
 });
 
 const orderPayRadio = ref();

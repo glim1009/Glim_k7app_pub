@@ -31,10 +31,10 @@
         </FlexGroup>
       </CtitleWrap>
       <div class="bar-group">
-        <div class="bar-text">
+        <div class="bar-text-sm">
           1.5M
         </div>
-        <div class="bar-text">
+        <div class="bar-text-sm">
           <div class="rating">
             <EIco name="rating" color="green" size="xs">
               <span class="offscreen">별점</span>
@@ -42,10 +42,10 @@
             <span class="score-md">4.0</span>
           </div>
         </div>
-        <div class="bar-text">
+        <div class="bar-text-sm">
           <ETBtn tag="a" size="xs" to="/store/review">
             <div class="text">
-              13개 리뷰
+              13건 리뷰
             </div>
             <EIco name="arw-right" color="gray" size="xs" />
           </ETBtn>
@@ -210,13 +210,13 @@
                   <ETit type="prod">
                     바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
                   </ETit>
+                  <div class="stock">
+                    <EGoods size="sm" val="N" unit="개" /> 남음
+                  </div>
                   <div class="goods-group">
                     <EGoods type="origin" size="sm" val="3,000" unit="원" />
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
-                  </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
                   </div>
                   <div class="rating">
                     <EIco name="rating" color="gray50" size="xs">
@@ -468,13 +468,13 @@
                   <ETit type="prod">
                     바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
                   </ETit>
+                  <div class="stock">
+                    <EGoods size="sm" val="N" unit="개" /> 남음
+                  </div>
                   <div class="goods-group">
                     <EGoods type="origin" size="sm" val="3,000" unit="원" />
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
-                  </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
                   </div>
                   <div class="rating">
                     <EIco name="rating" color="gray50" size="xs">
@@ -725,13 +725,13 @@
                   <ETit type="prod">
                     바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml 바리스타 로슈거 250ml
                   </ETit>
+                  <div class="stock">
+                    <EGoods size="sm" val="N" unit="개" /> 남음
+                  </div>
                   <div class="goods-group">
                     <EGoods type="origin" size="sm" val="3,000" unit="원" />
                     <EGoods type="percent" size="md" val="10" unit="%" />
                     <EGoods size="md" val="2,700" unit="원" />
-                  </div>
-                  <div class="stock">
-                    <EGoods size="sm" val="N" unit="개" /> 남음
                   </div>
                   <div class="rating">
                     <EIco name="rating" color="gray50" size="xs">
@@ -917,7 +917,7 @@
       </ContWrap>
     </template>
   </TabWrap>
-  <ContWrap>
+  <ContWrap in-top="lg">
     <ContBox>
       <!-- 택배 배너 노출 case 01 : 일반/착한 배너 노출되는 경우 -->
       <CtitleWrap size="sm">
@@ -974,8 +974,8 @@
           </div>
         </CtitleWrap>
         <NuxtLink class="btn-link" to="/delivery/reservation/Kind">
-            <span class="offscreen">착한택배 예약 바로가기</span>
-          </NuxtLink>
+          <span class="offscreen">착한택배 예약 바로가기</span>
+        </NuxtLink>
       </ColorBox> -->
       <!-- // 택배 배너 노출 case 03 : 착한 배너 노출되는 경우 -->
     </ContBox>

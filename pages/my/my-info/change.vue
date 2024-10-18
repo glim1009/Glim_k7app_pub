@@ -93,6 +93,7 @@
 <script setup lang="ts">
 definePageMeta({
   title: "회원 정보 변경",
+  notDragRefresh: true,
 });
 </script>
 

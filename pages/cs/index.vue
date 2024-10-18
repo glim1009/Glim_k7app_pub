@@ -276,7 +276,7 @@
         <ETit type="cont">
           문의사항 있으신 경우<br>편하게 의견 남겨주세요!
         </ETit>
-      </CtitleWrap>wks
+      </CtitleWrap>
       <ColorBox color="light-gray" size="lg">
         <div class="cs-contact-wrap">
           <CtitleWrap size="zero">

@@ -126,6 +126,7 @@ const { $showToast } = useNuxtApp();
 definePageMeta({
   title: "앱설정",
   hideRightHeader: ["home"],
+  notDragRefresh: true,
 });
 
 const marketingPush = ref<boolean>(false); // 마케팅 Push 수신 설정

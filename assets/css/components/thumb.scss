@@ -475,7 +475,7 @@ $ProdSize: ('2xl': 120px, 'xl': 100px, 'lg': 80px, 'md': 60px);
     &:has(.ui-spinner-box) {
       .flex-end-group {
         .flex-left {
-          min-height: 45px;
+          /*min-height: 45px;*/
         }
       }
     }
@@ -527,7 +527,7 @@ $ProdSize: ('2xl': 120px, 'xl': 100px, 'lg': 80px, 'md': 60px);
     }
   }
 
-  [class^=light-gray][class*=box], [class^=orange][class*=box] {
+  [class^=light-gray], [class^=orange], [class^=light-green][class*=box] {
     z-index: 5;
     width: 100%;
     margin: {
@@ -538,6 +538,13 @@ $ProdSize: ('2xl': 120px, 'xl': 100px, 'lg': 80px, 'md': 60px);
 
     .thumb-prod-flex {
       width: 100%;
+    }
+    [class^=white][class*=box] {
+      margin: {
+        left: 0 !important;
+        right: 0 !important;
+        top: 10px;
+      }
     }
   }
 

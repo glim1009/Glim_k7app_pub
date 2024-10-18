@@ -51,7 +51,7 @@
   border-radius: 22px;
 
   .text {
-    @include mixins.font_size_md;
+    @include mixins.font_size_md('sb');
 
     ~ [class^=ico] {
       margin-left: 4px;

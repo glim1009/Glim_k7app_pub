@@ -162,6 +162,7 @@
 definePageMeta({
   title: "사업자회원 증빙",
   hideRightHeader: ["home"],
+  notDragRefresh: true,
 });
 </script>
 
